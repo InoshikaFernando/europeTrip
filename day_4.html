@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 4: Burg Altpernstein — Europe Trip 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500&family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0d1b2a; --parchment: #f5efe2; --cream: #faf6ec;
+  --gold: #c89b3c; --gold-deep: #a47a23; --rose: #c44a4a;
+  --sage: #6b8e6f; --sky: #4a90b8;
+  --line: rgba(13,27,42,0.12);
+  --land: #ede4cf; --land-stroke: #c4b89e; --water: #d8e4ec;
+  --type-color: #6b8e6f;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  background: var(--parchment); color: var(--ink); line-height: 1.55;
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(200,155,60,0.06), transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(74,144,184,0.05), transparent 50%);
+}
+.topbar {
+  background: var(--ink); color: var(--cream);
+  padding: 12px 24px; text-align: center;
+  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  border-bottom: 3px solid var(--gold);
+}
+.topbar a { color: var(--gold); text-decoration: none; font-weight: 600; }
+.topbar a:hover { text-decoration: underline; }
+.container { max-width: 800px; margin: 0 auto; padding: 32px 24px; }
+.hero { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 2px solid var(--type-color); }
+.hero .day-num { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 8px; font-weight: 600; }
+.hero h1 { font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(34px, 5vw, 50px); letter-spacing: -0.025em; line-height: 1.0; color: var(--ink); margin-bottom: 10px; }
+.hero .subtitle { font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; color: var(--gold-deep); margin-bottom: 14px; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.country-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: white; background: var(--ink); padding: 6px 14px; border-radius: 100px; font-weight: 600; letter-spacing: 0.02em; }
+.country-chip .sub { opacity: 0.7; font-weight: 400; margin-left: 4px; }
+.type-chip { font-size: 12px; padding: 6px 12px; border-radius: 100px; font-weight: 600; background: var(--type-color); color: white; border: 1px solid var(--type-color); }
+.type-chip.home { color: var(--ink); border-color: var(--ink); }
+.date-chip { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.05em; padding: 6px 12px; background: var(--cream); border: 1px solid var(--line); border-radius: 4px; font-weight: 600; }
+.mini-map-card { background: var(--cream); border: 1px solid var(--line); border-radius: 6px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(13,27,42,0.06), 0 4px 12px rgba(13,27,42,0.04); overflow: hidden; }
+.mini-map-header { padding: 14px 20px 10px; border-bottom: 1px solid var(--line); }
+.mini-map-card .card-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 4px; }
+.mini-map-card .map-context { font-size: 13px; opacity: 0.7; }
+.mini-map-wrap { position: relative; width: 100%; height: 380px; background: var(--water); overflow: hidden; }
+.mini-map-wrap svg { width: 100%; height: 100%; display: block; }
+.mini-map-wrap .country { fill: var(--land); stroke: var(--land-stroke); stroke-width: 0.5; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.mini-map-wrap .country.highlight { fill: #d4c8a8; }
+.mini-map-wrap .route-line { fill: none; stroke: var(--gold-deep); stroke-width: 2; stroke-dasharray: 6 4; vector-effect: non-scaling-stroke; opacity: 0.85; pointer-events: none; }
+.mini-map-wrap .excursion-line { fill: none; stroke: var(--rose); stroke-width: 1.5; stroke-dasharray: 3 4; vector-effect: non-scaling-stroke; opacity: 0.7; pointer-events: none; }
+.mini-marker { position: absolute; border-radius: 50%; border: 2px solid white; box-shadow: 0 1px 3px rgba(13,27,42,0.4); transform: translate(-50%, -50%); cursor: pointer; }
+.mini-marker.context { width: 10px; height: 10px; opacity: 0.85; }
+.mini-marker.current { width: 18px; height: 18px; border-width: 3px; box-shadow: 0 0 0 3px rgba(200,155,60,0.4), 0 2px 6px rgba(13,27,42,0.5); z-index: 5; animation: pulse 2s ease-out infinite; }
+.mini-marker.excursion { width: 22px; height: 22px; border: 2px solid white; background: var(--rose); color: white; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; z-index: 4; }
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 3px rgba(200,155,60,0.4), 0 2px 6px rgba(13,27,42,0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(200,155,60,0.15), 0 2px 6px rgba(13,27,42,0.5); }
+  100% { box-shadow: 0 0 0 3px rgba(200,155,60,0.4), 0 2px 6px rgba(13,27,42,0.5); }
+}
+.mini-marker.confirmed { background: var(--sage); }
+.mini-marker.pending { background: var(--gold); }
+.mini-marker.day { background: var(--sky); }
+.mini-marker.sister { background: var(--rose); }
+.mini-marker.flight { background: var(--ink); }
+.mini-marker.home { background: white; border-color: var(--ink); }
+.mini-marker-label { position: absolute; background: var(--ink); color: white; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 3px; white-space: nowrap; transform: translate(-50%, calc(-100% - 14px)); pointer-events: none; z-index: 6; max-width: 140px; overflow: hidden; text-overflow: ellipsis; }
+.mini-marker-label.context { opacity: 0.7; }
+.mini-marker-label.excursion { background: var(--rose); transform: translate(-50%, calc(-100% - 18px)); }
+.mini-loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; opacity: 0.5; }
+.card { background: var(--cream); border: 1px solid var(--line); border-radius: 6px; padding: 18px 22px; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(13,27,42,0.06), 0 4px 12px rgba(13,27,42,0.04); }
+.card-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 10px; }
+.summary { font-size: 16px; line-height: 1.55; margin-bottom: 20px; }
+.hotel-card { border-left: 4px solid var(--gold); }
+.hotel-card.pending { border-left-color: rgba(200,155,60,0.4); opacity: 0.85; }
+.hotel-name { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; margin-bottom: 6px; }
+.badge-confirmed { display: inline-block; background: var(--sage); color: white; font-size: 11px; padding: 3px 10px; border-radius: 100px; margin-left: 8px; font-weight: 600; vertical-align: middle; }
+.badge-pending { display: inline-block; background: rgba(200,155,60,0.2); color: var(--gold-deep); font-size: 11px; padding: 3px 10px; border-radius: 100px; margin-left: 8px; font-weight: 600; vertical-align: middle; }
+.hotel-link a { display: inline-block; color: var(--gold-deep); font-weight: 600; text-decoration: none; margin-top: 4px; font-size: 14px; }
+.hotel-link a:hover { text-decoration: underline; }
+.travel-card { border-left: 4px solid var(--sky); font-size: 14px; }
+.travel-card div { margin: 4px 0; }
+.travel-card strong { font-weight: 600; }
+.excursions-card { border-left: 4px solid var(--rose); }
+.ex-intro { font-size: 14px; opacity: 0.75; margin-bottom: 16px; }
+.excursion-item { display: grid; grid-template-columns: 36px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px dashed rgba(13,27,42,0.1); align-items: start; }
+.excursion-item:last-child { border-bottom: none; padding-bottom: 4px; }
+.excursion-item:first-of-type { padding-top: 4px; }
+.ex-num { width: 32px; height: 32px; background: var(--rose); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; flex-shrink: 0; }
+.ex-name { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 600; margin-bottom: 2px; }
+.ex-addr { font-size: 12px; opacity: 0.65; margin-bottom: 6px; }
+.ex-note { font-size: 14px; line-height: 1.5; margin-bottom: 6px; }
+.ex-meta { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; opacity: 0.75; font-weight: 600; }
+.ex-meta span { background: var(--parchment); padding: 3px 8px; border-radius: 3px; }
+.list-card ul { list-style: none; padding: 0; }
+.list-card li { padding: 7px 0 7px 28px; position: relative; font-size: 14.5px; line-height: 1.55; border-bottom: 1px dashed rgba(13,27,42,0.08); }
+.list-card li:last-child { border-bottom: none; }
+.list-card li::before { content: '•'; position: absolute; left: 8px; top: 6px; color: var(--gold); font-size: 18px; font-weight: 700; }
+.tips-card { border-left: 4px solid var(--rose); }
+.tips-card li::before { color: var(--rose); }
+.action-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+.action-row a { flex: 1; min-width: 140px; text-align: center; display: inline-block; padding: 12px 16px; background: var(--ink); color: var(--cream); text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; transition: background 0.15s; }
+.action-row a:hover { background: var(--gold-deep); }
+.action-row a.secondary { background: var(--cream); color: var(--ink); border: 1px solid var(--line); }
+.action-row a.secondary:hover { background: var(--gold); color: white; }
+.nav-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--line); flex-wrap: wrap; }
+.nav-link { font-size: 13px; color: var(--ink); text-decoration: none; font-weight: 600; padding: 8px 14px; border: 1px solid var(--line); border-radius: 4px; transition: all 0.15s; background: var(--cream); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 45%; }
+.nav-link:hover:not(.disabled) { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.nav-link.disabled { opacity: 0.4; cursor: default; }
+.nav-home { text-align: center; background: var(--gold); color: var(--ink); border-color: var(--gold-deep); }
+.nav-home:hover { background: var(--gold-deep); color: white; }
+footer { background: var(--ink); color: var(--cream); padding: 24px; margin-top: 48px; text-align: center; font-size: 12px; opacity: 0.85; }
+footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--gold); font-size: 16px; margin-bottom: 6px; }
+@media (max-width: 600px) { .container { padding: 24px 16px; } .nav-link { font-size: 11px; padding: 6px 10px; max-width: 40%; } .action-row a { min-width: 100%; } .mini-map-wrap { height: 320px; } }
+</style>
+</head>
+<body>
+<div class="topbar"><a href="trip-map.html">← Back to interactive map</a></div>
+<div class="container">
+  <div class="hero">
+    <div class="day-num">Day 1–2 · Stop 4 of 26</div>
+    <h1>Burg Altpernstein</h1>
+    <div class="subtitle">Micheldorf, Upper Austria</div>
+    <div class="hero-meta">
+      <span class="country-chip">🇦🇹 Austria<span class="sub">· castle hotel</span></span>
+      <span class="type-chip confirmed">Hotel booked ✓</span>
+      <span class="date-chip">11–13 Jul 2026 · 2 nights</span>
+    </div>
+  </div>
+  <div class="mini-map-card">
+    <div class="mini-map-header">
+      <div class="card-label">📍 Location</div>
+      <div class="map-context">Where this stop sits in the journey (numbered red pins = day-trip excursions)</div>
+    </div>
+    <div class="mini-map-wrap" id="mini-map-wrap">
+      <svg id="mini-map-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
+      <div class="mini-loading" id="mini-loading">Loading map…</div>
+    </div>
+  </div>
+  <div class="summary">Castle hotel in Upper Austria. Two nights — relax after the long-haul, optional Hallstatt day trip Sunday.</div>
+  
+    <div class="card hotel-card">
+      <div class="card-label">🏨 Hotel</div>
+      <div class="hotel-name">Burg Altpernstein <span class="badge-confirmed">✓ Booked</span></div>
+      <div class="hotel-link"><a href="https://www.booking.com/hotel/at/burg-altpernstein.en-gb.html" target="_blank" rel="noopener">View on Booking.com →</a></div>
+    </div>
+  
+    <div class="card travel-card">
+      <div class="card-label">🚗 Travel</div>
+      <div><strong>Route:</strong> Munich Airport → Burg Altpernstein</div>
+      <div><strong>Distance:</strong> ~290 km · 3 hrs</div>
+      <div><strong>Start:</strong> Drive ~10:00 (after car pickup)</div>
+    </div>
+  
+    <div class="card excursions-card">
+      <div class="card-label">🚙 Day-trip itinerary</div>
+      <div class="ex-intro">Day-trip loop — drive between stops.</div>
+      
+      <div class="excursion-item">
+        <div class="ex-num">1</div>
+        <div class="ex-body">
+          <div class="ex-name">Hallstatt</div>
+          <div class="ex-addr">Hallstatt, Austria</div>
+          <div class="ex-note">UNESCO lake village · salt mine, lakeside, golden-hour views</div>
+          <div class="ex-meta"><span>⏱ ~1.5–2 hrs</span> <span>🚗 1.5 hrs from Burg Altpernstein</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">2</div>
+        <div class="ex-body">
+          <div class="ex-name">Salzwelten Salzburg</div>
+          <div class="ex-addr">Hallein, near Salzburg</div>
+          <div class="ex-note">Oldest salt mine in the world · underground tour with miners&#x27; slides</div>
+          <div class="ex-meta"><span>⏱ ~2 hrs (guided tour)</span> <span>🚗 ~50 min from Hallstatt</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">3</div>
+        <div class="ex-body">
+          <div class="ex-name">Schafberg</div>
+          <div class="ex-addr">Schafberg, 4866, Austria (Unterach am Attersee area)</div>
+          <div class="ex-note">Cog railway up the mountain (Schafbergbahn from St. Wolfgang) · panoramic Alpine views</div>
+          <div class="ex-meta"><span>⏱ ~2–3 hrs incl. cog railway</span> <span>🚗 ~45 min from Salzwelten</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">4</div>
+        <div class="ex-body">
+          <div class="ex-name">Back to Burg Altpernstein</div>
+          <div class="ex-addr">Altpernstein 1, 4563 Micheldorf, Austria</div>
+          <div class="ex-note">Return to castle · ~1.5 hrs drive · castle dinner</div>
+          <div class="ex-meta"><span>⏱ evening</span> <span>🚗 ~1.5 hrs from Schafberg</span></div>
+        </div>
+      </div>
+    </div>
+  <div class="card list-card">
+    <div class="card-label">⚑ Highlights</div>
+    <ul>
+      <li>Day 1 (Sat 11 Jul): arrive afternoon, check in, jet-lag rest, Saturday Vigil Mass at Spital am Pyhrn (7 PM, ~30 min south)</li>
+      <li>Day 2 (Sun 12 Jul) — full day Salzkammergut loop:</li>
+      <li>→ 09:00 Sunday Mass at Stiftskirche Spital am Pyhrn (or skip and start 08:00 if going Schafberg first)</li>
+      <li>→ 10:30 Drive to Hallstatt (~1.5 hrs) — UNESCO lake village, lakeside walk</li>
+      <li>→ 13:30 Drive to Salzwelten Salzburg (~50 min) — world&#x27;s oldest salt mine, guided tour with miners&#x27; slides</li>
+      <li>→ 16:00 Drive to Schafbergbahn (~45 min) — cog railway up Schafberg for Alpine panorama</li>
+      <li>→ 19:00 Drive back to Burg Altpernstein (~1.5 hrs) — castle dinner, sunset</li>
+    </ul>
+  </div>
+  <div class="card list-card tips-card">
+    <div class="card-label">⚠ Practical tips</div>
+    <ul>
+      <li>🎟️ Pre-book Schafbergbahn (schafbergbahn.at) — last train DOWN is ~17:30–18:30 depending on the date</li>
+      <li>🎟️ Pre-book Salzwelten salt mine tour — fills up in summer (salzwelten.at)</li>
+      <li>⏱ Honest reality check: the Sun day trip is 10–11 hrs (4.5 hrs driving) — consider dropping ONE activity with kids</li>
+      <li>If skipping one: Schafberg has the best &#x27;wow&#x27; factor (cog railway thrill + views), Hallstatt is the most photogenic, Salzwelten most kid-engaging (tunnel slides!)</li>
+      <li>🍽️ Eat lunch in Hallstatt — restaurants better there than at the salt mine</li>
+      <li>Stiftskirche Mariä Himmelfahrt — Baroque &#x27;Dom am Pyhrn&#x27; with Altomonte frescoes</li>
+      <li>Castle has goats roaming — kids will love it</li>
+      <li>200m walk uphill to castle entrance — be ready</li>
+      <li>Castle phone: +43 732 60160070</li>
+    </ul>
+  </div>
+  <div class="action-row">
+    <a href="https://www.google.com/maps/search/?api=1&query=47.8851,14.1569" target="_blank" rel="noopener">📍 Open on Google Maps</a>
+    <a href="https://www.google.com/maps/dir/48.3537,11.786/47.8851,14.1569" target="_blank" rel="noopener" class="secondary">🚗 Directions from prev stop</a>
+  </div>
+  <div class="nav-row">
+    <a href="day_3.html" class="nav-link prev">← Day 3: Munich (arrive)</a>
+    <a href="trip-map.html" class="nav-link nav-home">All days · Map</a>
+    <a href="day_5.html" class="nav-link next">Day 5: Prague →</a>
+  </div>
+</div>
+<footer>
+  <div class="mark">— The Grand Journey, 2026 —</div>
+  <div>Stop 4 of 26 · 11–13 Jul 2026 · 2 nights</div>
+</footer>
+<script src="map-data.js"></script>
+<script>
+(function() {
+  const tripStops = [{"name": "Munich (arrive)", "lat": 48.3537, "lon": 11.786, "type": "flight", "role": "prev", "i": 3}, {"name": "Burg Altpernstein", "lat": 47.8851, "lon": 14.1569, "type": "confirmed", "role": "current", "i": 4}, {"name": "Prague", "lat": 50.0903, "lon": 14.4203, "type": "confirmed", "role": "next", "i": 5}];
+  const excursions = [{"name": "Hallstatt", "lat": 47.5634, "lon": 13.6488, "order": 1}, {"name": "Salzwelten Salzburg", "lat": 47.6692, "lon": 13.0938, "order": 2}, {"name": "Schafberg", "lat": 47.798, "lon": 13.487, "order": 3}, {"name": "Back to Burg Altpernstein", "lat": 47.8851, "lon": 14.1569, "order": 4}];
+  const mapScale = "regional";
+  const ns = 'http://www.w3.org/2000/svg';
+  const svg = document.getElementById('mini-map-svg');
+  const wrap = document.getElementById('mini-map-wrap');
+  const loading = document.getElementById('mini-loading');
+  function render() {
+    if (!window.COUNTRIES) return setTimeout(render, 100);
+    loading.style.display = 'none';
+    const currentStop = tripStops.find(s => s.role === 'current');
+    let boundsPoints;
+    if (mapScale === 'city' && excursions.length > 0) {
+      boundsPoints = [currentStop, ...excursions];
+    } else {
+      boundsPoints = [...tripStops, ...excursions];
+    }
+    const projected = boundsPoints.map(s => {
+      const [x, y] = window.projectMercator(s.lon, s.lat);
+      return { ...s, x, y };
+    });
+    let minX = Math.min(...projected.map(p => p.x));
+    let maxX = Math.max(...projected.map(p => p.x));
+    let minY = Math.min(...projected.map(p => p.y));
+    let maxY = Math.max(...projected.map(p => p.y));
+    const minSpan = (mapScale === 'city') ? 0.8 : 12;
+    if (maxX - minX < minSpan) { const cx = (minX + maxX) / 2; minX = cx - minSpan/2; maxX = cx + minSpan/2; }
+    if (maxY - minY < minSpan) { const cy = (minY + maxY) / 2; minY = cy - minSpan/2; maxY = cy + minSpan/2; }
+    const padFactor = (mapScale === 'city') ? 0.7 : 0.4;
+    const padX = (maxX - minX) * padFactor;
+    const padY = (maxY - minY) * padFactor;
+    minX -= padX; maxX += padX; minY -= padY; maxY += padY;
+    const rect = wrap.getBoundingClientRect();
+    const wrapAspect = rect.width / rect.height;
+    let w = maxX - minX, h = maxY - minY;
+    if (w / h > wrapAspect) { const newH = w / wrapAspect; const cy = (minY + maxY) / 2; minY = cy - newH/2; maxY = cy + newH/2; h = newH; }
+    else { const newW = h * wrapAspect; const cx = (minX + maxX) / 2; minX = cx - newW/2; maxX = cx + newW/2; w = newW; }
+    svg.setAttribute('viewBox', minX + ' ' + minY + ' ' + w + ' ' + h);
+    const g = document.createElementNS(ns, 'g');
+    window.COUNTRIES.forEach(c => {
+      c.p.forEach(poly => {
+        let d = '', inBounds = false;
+        poly.forEach(ring => {
+          ring.forEach((pt, j) => {
+            const [x, y] = window.projectMercator(pt[0], pt[1]);
+            if (x >= minX - w*0.5 && x <= maxX + w*0.5 && y >= minY - h*0.5 && y <= maxY + h*0.5) inBounds = true;
+            d += (j === 0 ? 'M' : 'L') + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
+          });
+          d += 'Z ';
+        });
+        if (!inBounds) return;
+        const path = document.createElementNS(ns, 'path');
+        path.setAttribute('d', d);
+        path.setAttribute('class', 'country' + (window.TRIP_COUNTRIES.has(c.n) ? ' highlight' : ''));
+        path.setAttribute('fill-rule', 'evenodd');
+        g.appendChild(path);
+      });
+    });
+    svg.appendChild(g);
+    const tripProjected = tripStops.map(s => {
+      const [x, y] = window.projectMercator(s.lon, s.lat);
+      return { ...s, x, y };
+    });
+    if (tripProjected.length > 1 && mapScale !== 'city') {
+      let routeD = '';
+      tripProjected.forEach((p, j) => { routeD += (j === 0 ? 'M' : 'L') + p.x.toFixed(1) + ',' + p.y.toFixed(1) + ' '; });
+      const route = document.createElementNS(ns, 'path');
+      route.setAttribute('d', routeD);
+      route.setAttribute('class', 'route-line');
+      svg.appendChild(route);
+    }
+    if (excursions.length > 0) {
+      const exProjected = excursions.map(e => { const [x, y] = window.projectMercator(e.lon, e.lat); return { ...e, x, y }; });
+      const currentP = tripProjected.find(p => p.role === 'current');
+      let exD = '';
+      if (currentP) exD += 'M' + currentP.x.toFixed(1) + ',' + currentP.y.toFixed(1) + ' ';
+      exProjected.forEach(p => { exD += 'L' + p.x.toFixed(1) + ',' + p.y.toFixed(1) + ' '; });
+      const exLine = document.createElementNS(ns, 'path');
+      exLine.setAttribute('d', exD);
+      exLine.setAttribute('class', 'excursion-line');
+      svg.appendChild(exLine);
+    }
+    function svgToScreen(sx, sy) {
+      const scale = Math.min(rect.width / w, rect.height / h);
+      let offsetX = 0, offsetY = 0;
+      if (w / h > rect.width / rect.height) offsetY = (rect.height - h * scale) / 2;
+      else offsetX = (rect.width - w * scale) / 2;
+      return [(sx - minX) * scale + offsetX, (sy - minY) * scale + offsetY];
+    }
+    tripProjected.forEach(p => {
+      if (mapScale === 'city' && p.role !== 'current') return;
+      const [px, py] = svgToScreen(p.x, p.y);
+      if (px < -30 || px > rect.width + 30 || py < -30 || py > rect.height + 30) return;
+      const m = document.createElement('div');
+      m.className = 'mini-marker ' + p.type + (p.role === 'current' ? ' current' : ' context');
+      m.style.left = px + 'px'; m.style.top = py + 'px';
+      wrap.appendChild(m);
+      const lbl = document.createElement('div');
+      lbl.className = 'mini-marker-label' + (p.role === 'current' ? '' : ' context');
+      lbl.textContent = p.role === 'current' && p.name.length > 18 ? 'Hotel' : p.name;
+      lbl.style.left = px + 'px'; lbl.style.top = py + 'px';
+      wrap.appendChild(lbl);
+    });
+    excursions.forEach(e => {
+      const [ex, ey] = window.projectMercator(e.lon, e.lat);
+      const [px, py] = svgToScreen(ex, ey);
+      if (px < -30 || px > rect.width + 30 || py < -30 || py > rect.height + 30) return;
+      const m = document.createElement('div');
+      m.className = 'mini-marker excursion';
+      m.style.left = px + 'px'; m.style.top = py + 'px';
+      m.textContent = e.order;
+      wrap.appendChild(m);
+      const lbl = document.createElement('div');
+      lbl.className = 'mini-marker-label excursion';
+      lbl.textContent = e.name;
+      lbl.style.left = px + 'px'; lbl.style.top = py + 'px';
+      wrap.appendChild(lbl);
+    });
+  }
+  if (window.COUNTRIES) render();
+  else {
+    let tries = 0;
+    const checkInterval = setInterval(() => {
+      if (window.COUNTRIES) { clearInterval(checkInterval); render(); }
+      else if (++tries > 50) { clearInterval(checkInterval); loading.textContent = 'Map data unavailable'; }
+    }, 100);
+  }
+  window.addEventListener('resize', () => {
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    document.querySelectorAll('.mini-marker, .mini-marker-label').forEach(el => el.remove());
+    render();
+  });
+})();
+</script>
+</body>
+</html>

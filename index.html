@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Munasinghe Family Europe Trip 2026 — Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500&family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0d1b2a;
+  --parchment: #f5efe2;
+  --cream: #faf6ec;
+  --gold: #c89b3c;
+  --gold-deep: #a47a23;
+  --sky: #4a90b8;
+  --rose: #c44a4a;
+  --sage: #6b8e6f;
+  --line: rgba(13,27,42,0.12);
+  --land: #f5edd6;
+  --land-stroke: #9a8e74;
+  --water: #aac4d4;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  background: var(--parchment); color: var(--ink); overflow: hidden;
+}
+.topbar {
+  background: var(--ink); color: var(--cream);
+  padding: 10px 24px; text-align: center;
+  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  border-bottom: 3px solid var(--gold);
+}
+.topbar strong { color: var(--gold); }
+header {
+  padding: 14px 24px 10px; text-align: center;
+  background: linear-gradient(180deg, var(--parchment), var(--cream));
+  border-bottom: 1px solid var(--line);
+}
+header h1 {
+  font-family: 'Fraunces', serif; font-weight: 600;
+  font-size: clamp(20px, 3vw, 28px); letter-spacing: -0.02em; line-height: 1.05;
+}
+header h1 em {
+  font-style: italic; color: var(--gold-deep);
+  display: block; font-size: 0.5em; margin-top: 4px; font-weight: 500;
+}
+.legend-bar {
+  display: flex; flex-wrap: wrap; gap: 8px 14px; justify-content: center;
+  padding: 9px 24px; background: var(--cream);
+  border-bottom: 1px solid var(--line);
+  font-size: 11px; font-weight: 600;
+}
+.legend-bar .item { display: inline-flex; align-items: center; gap: 6px; }
+.legend-dot {
+  width: 11px; height: 11px; border-radius: 50%; display: inline-block;
+  border: 1.5px solid white; box-shadow: 0 0 0 1px var(--ink);
+}
+.dot-confirmed { background: var(--sage); }
+.dot-pending { background: var(--gold); }
+.dot-day { background: var(--sky); }
+.dot-sister { background: var(--rose); }
+.dot-flight { background: var(--ink); }
+.dot-home { background: white; box-shadow: 0 0 0 1px var(--ink); }
+
+.map-wrap {
+  position: relative; width: 100%; height: calc(100vh - 165px);
+  background: var(--water); overflow: hidden; cursor: grab;
+}
+.map-wrap.dragging { cursor: grabbing; }
+#map-svg { width: 100%; height: 100%; display: block; position: absolute; inset: 0; }
+.country {
+  fill: var(--land); stroke: var(--land-stroke);
+  stroke-width: 0.8; vector-effect: non-scaling-stroke;
+  stroke-linejoin: round;
+}
+.country.highlight {
+  fill: #e8d4a3;
+  stroke: var(--gold-deep);
+  stroke-width: 1.2;
+}
+.route-line {
+  fill: none; stroke: var(--gold-deep);
+  stroke-width: 2; stroke-dasharray: 6 4;
+  vector-effect: non-scaling-stroke;
+  opacity: 0.85; pointer-events: none;
+}
+.flight-line {
+  fill: none; stroke: var(--ink);
+  stroke-width: 1.2; stroke-dasharray: 2 5;
+  vector-effect: non-scaling-stroke;
+  opacity: 0.4; pointer-events: none;
+}
+
+.markers-layer, .labels-layer {
+  position: absolute; inset: 0; pointer-events: none;
+}
+.labels-layer { z-index: 5; }
+.markers-layer { z-index: 10; }
+
+.html-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  color: rgba(13,27,42,0.55);
+  font-style: italic;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  pointer-events: none;
+  white-space: nowrap;
+  text-shadow: 0 0 3px white, 0 0 3px white, 0 0 6px white, 0 0 8px white;
+  transition: opacity 0.15s;
+}
+
+.marker {
+  position: absolute;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(13,27,42,0.5);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.15s, box-shadow 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+  user-select: none;
+}
+/* Day stops, transits, and home: small unnumbered dots */
+.marker.day, .marker.flight, .marker.home {
+  width: 13px; height: 13px;
+  border-width: 1.5px;
+}
+.marker:hover {
+  transform: translate(-50%, -50%) scale(1.25);
+  box-shadow: 0 2px 8px rgba(13,27,42,0.6);
+  z-index: 11;
+}
+.marker.selected {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--gold-deep);
+  z-index: 11;
+}
+.marker.confirmed { background: var(--sage); }
+.marker.pending   { background: var(--gold); color: var(--ink); }
+.marker.day       { background: var(--sky); }
+.marker.sister    { background: var(--rose); }
+.marker.flight    { background: var(--ink); }
+.marker.home      { background: white; border-color: var(--ink); }
+
+.popup {
+  position: absolute; background: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgba(13,27,42,0.25);
+  padding: 16px 18px; min-width: 260px; max-width: 320px;
+  z-index: 100; pointer-events: auto;
+  animation: pop 0.15s ease-out;
+}
+@keyframes pop { from { opacity:0; transform: scale(0.95); } to { opacity:1; transform: scale(1); } }
+.popup .close {
+  position: absolute; top: 6px; right: 8px;
+  border: none; background: transparent; cursor: pointer;
+  font-size: 20px; color: var(--ink); opacity: 0.5; line-height: 1; padding: 4px;
+}
+.popup .close:hover { opacity: 1; }
+.popup .day-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--gold-deep);
+  font-weight: 600; margin-bottom: 4px;
+}
+.popup h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 22px; font-weight: 600;
+  letter-spacing: -0.01em; margin-bottom: 8px;
+}
+.popup .country-chip {
+  display: inline-block; font-size: 12px;
+  color: white; background: var(--ink);
+  padding: 4px 10px; border-radius: 100px;
+  margin-bottom: 12px; font-weight: 600;
+}
+.popup .country-chip .sub { opacity: 0.7; font-weight: 400; margin-left: 4px; }
+.popup .hotel {
+  background: rgba(200,155,60,0.12);
+  border-left: 3px solid var(--gold);
+  padding: 8px 10px; margin: 8px 0;
+  font-size: 13px; border-radius: 0 3px 3px 0;
+}
+.popup .hotel a { color: var(--gold-deep); text-decoration: underline; font-weight: 600; }
+.popup .desc { font-size: 13px; line-height: 1.5; opacity: 0.85; }
+
+.controls {
+  position: absolute; top: 12px; right: 12px;
+  background: white; padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  z-index: 50;
+}
+.controls strong {
+  display: block; margin-bottom: 6px;
+  font-family: 'Fraunces', serif; font-size: 13px;
+}
+.controls button {
+  display: block; width: 100%;
+  padding: 6px 12px; margin: 2px 0;
+  border: 1px solid var(--line); background: var(--cream);
+  font-family: inherit; font-size: 11px; font-weight: 600;
+  cursor: pointer; border-radius: 3px; text-align: left;
+  white-space: nowrap;
+}
+.controls button:hover { background: var(--gold); color: white; border-color: var(--gold-deep); }
+.controls button.active { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+
+.zoom {
+  position: absolute; top: 12px; left: 12px; z-index: 50;
+  background: white; border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  display: flex; flex-direction: column;
+}
+.zoom button {
+  width: 34px; height: 34px;
+  border: none; background: white;
+  font-size: 18px; cursor: pointer; font-weight: 600; color: var(--ink);
+}
+.zoom button:hover { background: var(--gold); color: white; }
+.zoom button:first-child { border-bottom: 1px solid var(--line); border-radius: 6px 6px 0 0; }
+.zoom button:last-child { border-radius: 0 0 6px 6px; }
+
+.tooltip {
+  position: absolute; background: var(--ink); color: white;
+  font-size: 12px; font-weight: 600;
+  padding: 4px 10px; border-radius: 4px;
+  pointer-events: none; z-index: 60;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transform: translate(-50%, calc(-100% - 16px));
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .controls { top: auto; bottom: 12px; right: 12px; padding: 6px; }
+  .controls button { font-size: 10px; padding: 4px 8px; }
+}
+</style>
+</head>
+<body>
+<div class="topbar"><strong>✈ Auckland → Beijing → Europe → Auckland</strong> · 25 nights · July–August 2026</div>
+<header><h1>The Grand Journey<em>interactive map · all 25 stops · works offline</em></h1></header>
+<div class="legend-bar">
+  <span class="item"><span class="legend-dot dot-confirmed"></span>Hotel booked ✓</span>
+  <span class="item"><span class="legend-dot dot-pending"></span>To book</span>
+  <span class="item"><span class="legend-dot dot-day"></span>Day stop only</span>
+  <span class="item"><span class="legend-dot dot-sister"></span>Gothenburg · sister 💙</span>
+  <span class="item"><span class="legend-dot dot-flight"></span>Beijing stopover</span>
+  <span class="item"><span class="legend-dot dot-home"></span>Home</span>
+</div>
+<div class="map-wrap" id="map-wrap">
+  <svg id="map-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
+  <div class="labels-layer" id="labels-layer"></div>
+  <div class="markers-layer" id="markers-layer"></div>
+  <div class="zoom"><button id="zoom-in" title="Zoom in">+</button><button id="zoom-out" title="Zoom out">−</button></div>
+  <div class="controls"><strong>View</strong><button id="btn-europe" class="active">Europe</button><button id="btn-all">Whole trip</button><button id="btn-confirmed">Booked hotels</button><button id="btn-italy">Italy run</button><hr style="border:none;border-top:1px solid var(--line);margin:8px 0;"><strong>Jump to day</strong><select id="day-select" style="width:100%;padding:6px 8px;font:inherit;font-size:11px;font-weight:600;border:1px solid var(--line);border-radius:3px;background:var(--cream);cursor:pointer;"><option value="">— choose a day —</option></select></div>
+</div>
+<script src="map-data.js"></script>
+<script>
+const COUNTRIES = window.COUNTRIES;
+const stops = [
+  { day: 'Outbound', date: 'Thu 9 Jul', name: 'Auckland', country: '🇳🇿 New Zealand', lat: -36.8485, lon: 174.7633, type: 'home',
+    desc: 'CA784 departs AKL 19:30 → Beijing 04:40 next day.' },
+  { day: 'Stopover', date: 'Fri 10 Jul', name: 'Beijing', country: '🇨🇳 China · 22hr stopover', lat: 39.9042, lon: 116.4074, type: 'flight',
+    desc: 'Forbidden City + Tiananmen Square. CA961 to Munich at 02:50.' },
+  { day: 'Day 1', date: 'Sat 11 Jul', name: 'Munich (arrive)', country: '🇩🇪 Germany · land + collect car', lat: 48.3537, lon: 11.7860, type: 'flight',
+    desc: 'CA961 lands MUC T2 07:05. Collect rental car ~09:00. Drive ~3hrs south-east into Austria. Trip starts here!' },
+  { day: 'Day 1–2', date: '11–13 Jul', name: 'Burg Altpernstein', country: '🇦🇹 Austria · castle hotel', lat: 47.8851, lon: 14.1569, type: 'confirmed',
+    hotel: 'Burg Altpernstein',
+    hotelUrl: 'https://www.booking.com/hotel/at/burg-altpernstein.en-gb.html',
+    desc: '~3hr drive from Munich Airport. Sat Vigil / Sun Mass at Spital am Pyhrn. Optional Hallstatt day trip.' },
+  { day: 'Day 3–4', date: '13–15 Jul', name: 'Prague', country: '🇨🇿 Czechia · Old Town', lat: 50.0903, lon: 14.4203, type: 'confirmed',
+    hotel: 'Gold Art Apartment',
+    hotelUrl: 'https://www.booking.com/hotel/cz/gold-art-apartment.en-gb.html',
+    desc: 'Heart of Old Town. Charles Bridge, Castle, Jewish Quarter. 🧺 First laundry at Andy\'s Laundromat.' },
+  { day: 'Day 5', date: '15–16 Jul', name: 'Vienna', country: '🇦🇹 Austria · 8th district', lat: 48.2136, lon: 16.3520, type: 'confirmed',
+    hotel: 'The Levante Laudon',
+    hotelUrl: 'https://www.booking.com/hotel/at/thelevantelaudon.en-gb.html',
+    desc: 'Schönbrunn, Naschmarkt, Sachertorte. 20 min walk to Stephansplatz.' },
+  { day: 'Day 6', date: '16–17 Jul', name: 'Budapest', country: '🇭🇺 Hungary · District VII', lat: 47.5028, lon: 19.0682, type: 'confirmed',
+    hotel: 'City Home Budapest',
+    hotelUrl: 'https://city-home.hu/',
+    desc: 'Hársfa utca 51 · garage ~€20/night. Castle Hill, Széchenyi Baths. 🧺 Wash at Dohány u. 37.' },
+  { day: 'Day 7 stop', date: 'Fri 17 Jul', name: 'Bled', country: '🇸🇮 Slovenia · 2.5hr day stop', lat: 46.3683, lon: 14.1146, type: 'day',
+    desc: 'Emerald lake, castle on a cliff, kremšnita cake. En route Budapest → Mestre.' },
+  { day: 'Day 7–8', date: '17–19 Jul', name: 'Mestre (mainland Venice)', country: '🇮🇹 Italy · Viale San Marco', lat: 45.4944, lon: 12.2444, type: 'confirmed',
+    hotel: 'QUEEN HOME Danila',
+    hotelUrl: 'https://www.booking.com/Share-O3WihJ',
+    desc: 'Free hotel parking. Train to Venezia Santa Lucia ~10 min. 🧺 BIO LAVATU 4-min walk.' },
+  { day: 'Day 9', date: '19–20 Jul', name: 'Florence', country: '🇮🇹 Italy · Campo di Marte', lat: 43.7784, lon: 11.2717, type: 'confirmed',
+    hotel: 'La Farina Apartments',
+    hotelUrl: 'https://www.lafarinaapartments.com/',
+    desc: 'Via la Farina 27. Parking. 10–15 min walk to Duomo. 🧺 Coin-op laundromat IN THE BASEMENT.' },
+  { day: 'Day 10 stop', date: 'Mon 20 Jul', name: 'Pisa', country: '🇮🇹 Italy · 1.5hr day stop', lat: 43.7228, lon: 10.4017, type: 'day',
+    desc: 'Leaning Tower, Piazza dei Miracoli. Stop on Florence → Rome drive.' },
+  { day: 'Day 10–12', date: '20–23 Jul', name: 'Rome (Aurelio)', country: '🇮🇹 Italy · west of Vatican', lat: 41.8955, lon: 12.4478, type: 'confirmed',
+    hotel: 'Il Nido di Lulu',
+    hotelUrl: 'https://www.booking.com/Share-jqWdWsP',
+    desc: 'Via Gregorio VII 108 · 17 min WALK to Vatican Museums · 5 min to Cipro metro. 3-night base.' },
+  { day: 'Day 11', date: 'Tue 21 Jul', name: 'Pompeii + Naples', country: '🇮🇹 Italy · day trip from Rome', lat: 40.7497, lon: 14.4869, type: 'day',
+    desc: 'Day trip from Rome. Pompeii ruins, Naples for pizza. ~460 km round trip.' },
+  { day: 'Day 13', date: '23–24 Jul', name: 'Milan', country: '🇮🇹 Italy', lat: 45.4642, lon: 9.1900, type: 'pending',
+    desc: 'Duomo, Galleria, Navigli canal dinner. Hotel TBD.' },
+  { day: 'Day 14', date: '24–25 Jul', name: 'Zermatt (Täsch)', country: '🇨🇭 Switzerland', lat: 46.0207, lon: 7.7491, type: 'pending',
+    desc: 'Park Täsch · car-free village · Matterhorn views. Hotel TBD.' },
+  { day: 'Day 15–16', date: '25–27 Jul', name: 'Interlaken', country: '🇨🇭 Switzerland · 2 nights', lat: 46.6863, lon: 7.8632, type: 'pending',
+    desc: 'Day 15 Gornergrat 3,089m. Day 16 Jungfraujoch 3,454m. Hotel TBD.' },
+  { day: 'Day 17', date: '27–28 Jul', name: 'Zürich', country: '🇨🇭 Switzerland', lat: 47.3769, lon: 8.5417, type: 'pending',
+    desc: 'Altstadt, lake, Bahnhofstrasse. Hotel TBD.' },
+  { day: 'Day 18', date: '28–29 Jul', name: 'Paris', country: '🇫🇷 France', lat: 48.8566, lon: 2.3522, type: 'pending',
+    desc: 'Drive Zürich → drop car at MUC → fly Paris. Hotel TBD.' },
+  { day: 'Day 19', date: '29–30 Jul', name: 'Lourdes', country: '🇫🇷 France · pilgrimage', lat: 43.0962, lon: -0.0466, type: 'pending',
+    desc: 'TGV Paris → Lourdes (~5 hrs). Sanctuary, Grotto, evening Torch Procession. Hotel TBD.' },
+  { day: 'Day 20', date: '30–31 Jul', name: 'Amsterdam', country: '🇳🇱 Netherlands · 1 night ✓', lat: 52.3676, lon: 4.9041, type: 'pending',
+    desc: 'TGV Lourdes 08:00 → Paris 13:00 → Thalys 14:13 → Amsterdam 17:32. Hotel TBD.' },
+  { day: 'Day 21–22', date: '31 Jul – 2 Aug', name: 'Berlin', country: '🇩🇪 Germany · 2 nights', lat: 52.5200, lon: 13.4050, type: 'pending',
+    desc: 'ICE train AMS → Berlin. Reichstag, Holocaust Memorial, Museum Island. Hotel TBD.' },
+  { day: 'Day 23', date: '2–3 Aug', name: 'Copenhagen', country: '🇩🇰 Denmark · 1 night ✓', lat: 55.6761, lon: 12.5683, type: 'pending',
+    desc: 'Fly BER → CPH. Nyhavn, Tivoli, Little Mermaid. Hotel TBD.' },
+  { day: 'Day 24–25', date: '3–5 Aug', name: 'Gothenburg', country: '🇸🇪 Sweden · sister 💙', lat: 57.7089, lon: 11.9746, type: 'sister',
+    desc: 'X2000 train via Øresund Bridge. Sister visit! Liseberg, Haga, Archipelago.' },
+  { day: 'Wed 5 Aug', date: '5 Aug', name: 'Munich (transit)', country: '🇩🇪 Germany · day room', lat: 48.1351, lon: 11.5820, type: 'flight',
+    desc: 'Fly GOT 06:30 → MUC 08:30. Novotel Airport before CA962.' },
+  { day: 'Stopover', date: 'Fri 7 Aug', name: 'Beijing', country: '🇨🇳 China · 19hr stopover', lat: 39.9042, lon: 116.4074, type: 'flight',
+    desc: 'CA962 lands 04:45. Great Wall at Mutianyu. Back T3 by 21:00 for CA783.' },
+  { day: 'Home 🏠', date: 'Sat 8 Aug', name: 'Auckland', country: '🇳🇿 New Zealand · CA783 16:30', lat: -36.8485, lon: 174.7633, type: 'home',
+    desc: '25 nights, 23 destinations, 2 Beijing stopovers, sister visit — welcome home.' },
+];
+
+const wrap = document.getElementById('map-wrap');
+const svg = document.getElementById('map-svg');
+const markersLayer = document.getElementById('markers-layer');
+const labelsLayer = document.getElementById('labels-layer');
+
+const W = 1000;
+function project(lon, lat) {
+  lat = Math.max(-85, Math.min(85, lat));
+  const x = ((lon + 180) / 360) * W;
+  const sinLat = Math.sin(lat * Math.PI / 180);
+  const y = (0.5 - Math.log((1 + sinLat) / (1 - sinLat)) / (4 * Math.PI)) * W;
+  return [x, y];
+}
+
+const ns = 'http://www.w3.org/2000/svg';
+
+// Country shapes
+const countriesGroup = document.createElementNS(ns, 'g');
+const tripCountries = new Set([
+  'New Zealand','China','Germany','Austria','Czechia','Hungary','Slovenia',
+  'Italy','France','Switzerland','Netherlands','Denmark','Sweden'
+]);
+COUNTRIES.forEach(c => {
+  c.p.forEach(poly => {
+    let d = '';
+    poly.forEach(ring => {
+      ring.forEach((pt, i) => {
+        const [x, y] = project(pt[0], pt[1]);
+        d += (i === 0 ? 'M' : 'L') + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
+      });
+      d += 'Z ';
+    });
+    const path = document.createElementNS(ns, 'path');
+    path.setAttribute('d', d);
+    path.setAttribute('class', 'country' + (tripCountries.has(c.n) ? ' highlight' : ''));
+    path.setAttribute('fill-rule', 'evenodd');
+    countriesGroup.appendChild(path);
+  });
+});
+svg.appendChild(countriesGroup);
+
+// Route line
+const europeStops = stops.filter(s => s.name !== 'Auckland' && s.name !== 'Beijing');
+let routePath = '';
+europeStops.forEach((s, i) => {
+  const [x, y] = project(s.lon, s.lat);
+  routePath += (i === 0 ? 'M' : 'L') + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
+});
+const routeEl = document.createElementNS(ns, 'path');
+routeEl.setAttribute('d', routePath);
+routeEl.setAttribute('class', 'route-line');
+svg.appendChild(routeEl);
+
+// Long-haul flight curves
+function flightCurve(a, b) {
+  const [x1, y1] = project(a.lon, a.lat);
+  const [x2, y2] = project(b.lon, b.lat);
+  const cx = (x1 + x2) / 2;
+  const cy = Math.min(y1, y2) - Math.abs(x2 - x1) * 0.15;
+  return 'M' + x1.toFixed(1) + ',' + y1.toFixed(1) + ' Q' + cx.toFixed(1) + ',' + cy.toFixed(1) + ' ' + x2.toFixed(1) + ',' + y2.toFixed(1);
+}
+const akl = stops[0], pek = stops[1];
+const muc = stops.find(s => s.name === 'Munich (transit)');
+[
+  flightCurve(akl, pek),
+  flightCurve(pek, stops[2]),
+  flightCurve(muc, pek),
+  flightCurve(pek, akl),
+].forEach(d => {
+  const line = document.createElementNS(ns, 'path');
+  line.setAttribute('d', d);
+  line.setAttribute('class', 'flight-line');
+  svg.appendChild(line);
+});
+
+// Country labels (HTML, fixed pixel size)
+const labelData = [
+  { name: 'GERMANY', lon: 10.4, lat: 51.2 },
+  { name: 'AUSTRIA', lon: 14.5, lat: 47.6 },
+  { name: 'CZECHIA', lon: 15.5, lat: 49.8 },
+  { name: 'HUNGARY', lon: 19.5, lat: 47.0 },
+  { name: 'ITALY', lon: 12.5, lat: 43.0 },
+  { name: 'FRANCE', lon: 2.3, lat: 47.0 },
+  { name: 'SWITZERLAND', lon: 8.2, lat: 46.8 },
+  { name: 'NETHERLANDS', lon: 5.3, lat: 52.5 },
+  { name: 'DENMARK', lon: 9.5, lat: 56.0 },
+  { name: 'SWEDEN', lon: 15.0, lat: 60.0 },
+  { name: 'SLOVENIA', lon: 14.6, lat: 46.2 },
+];
+const labelEls = [];
+labelData.forEach(l => {
+  const div = document.createElement('div');
+  div.className = 'html-label';
+  div.textContent = l.name;
+  labelsLayer.appendChild(div);
+  labelEls.push({ el: div, lon: l.lon, lat: l.lat });
+});
+
+// Markers (HTML, fixed pixel size)
+// Extract day-start number for overnight stays; day stops and transits stay unnumbered
+function dayLabel(stop) {
+  if (stop.type === 'day' || stop.type === 'flight' || stop.type === 'home') return '';
+  // Match patterns like 'Day 1', 'Day 1–2', 'Day 10–12', 'Day 24–25'
+  const m = stop.day.match(/Day\s*(\d+)/);
+  return m ? m[1] : '';
+}
+
+const markerEls = [];
+stops.forEach((stop, i) => {
+  const div = document.createElement('div');
+  div.className = 'marker ' + stop.type;
+  div.dataset.idx = i;
+  const label = dayLabel(stop);
+  if (label) div.textContent = label;
+  markersLayer.appendChild(div);
+  markerEls.push(div);
+});
+
+// View management
+let view = { x: 0, y: 0, w: W, h: W };
+function applyView() {
+  svg.setAttribute('viewBox', view.x + ' ' + view.y + ' ' + view.w + ' ' + view.h);
+  positionAll();
+}
+
+function svgToScreen(sx, sy) {
+  const wrapRect = wrap.getBoundingClientRect();
+  const viewAspect = view.w / view.h;
+  const wrapAspect = wrapRect.width / wrapRect.height;
+  let scale, offsetX = 0, offsetY = 0;
+  if (viewAspect > wrapAspect) {
+    scale = wrapRect.width / view.w;
+    offsetY = (wrapRect.height - view.h * scale) / 2;
+  } else {
+    scale = wrapRect.height / view.h;
+    offsetX = (wrapRect.width - view.w * scale) / 2;
+  }
+  return [(sx - view.x) * scale + offsetX, (sy - view.y) * scale + offsetY];
+}
+
+function positionAll() {
+  const rect = wrap.getBoundingClientRect();
+
+  // Markers
+  stops.forEach((stop, i) => {
+    const [sx, sy] = project(stop.lon, stop.lat);
+    const [px, py] = svgToScreen(sx, sy);
+    const el = markerEls[i];
+    if (px < -20 || px > rect.width + 20 || py < -20 || py > rect.height + 20) {
+      el.style.display = 'none';
+    } else {
+      el.style.display = 'block';
+      el.style.left = px + 'px';
+      el.style.top = py + 'px';
+    }
+  });
+
+  // Labels — always-fixed pixel size, fade out at city zoom level
+  const zoomLevel = W / view.w;
+  const fontSize = Math.min(14, Math.max(10, 9 + Math.log2(zoomLevel) * 0.6));
+  const showLabels = zoomLevel < 50;
+  labelEls.forEach(({ el, lon, lat }) => {
+    const [sx, sy] = project(lon, lat);
+    const [px, py] = svgToScreen(sx, sy);
+    if (!showLabels || px < -50 || px > rect.width + 50 || py < -50 || py > rect.height + 50) {
+      el.style.display = 'none';
+    } else {
+      el.style.display = 'block';
+      el.style.left = px + 'px';
+      el.style.top = py + 'px';
+      el.style.fontSize = fontSize + 'px';
+    }
+  });
+
+  positionPopup();
+}
+
+function fitToBounds(coords, padding) {
+  if (!coords.length) return;
+  if (padding === undefined) padding = 50;
+  let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+  coords.forEach(c => {
+    const [x, y] = project(c[0], c[1]);
+    if (x < minX) minX = x; if (x > maxX) maxX = x;
+    if (y < minY) minY = y; if (y > maxY) maxY = y;
+  });
+  const wrapRect = wrap.getBoundingClientRect();
+  const wrapAspect = wrapRect.width / wrapRect.height;
+  let w = (maxX - minX) + padding * 2;
+  let h = (maxY - minY) + padding * 2;
+  if (w / h > wrapAspect) h = w / wrapAspect; else w = h * wrapAspect;
+  view = {
+    x: (minX + maxX) / 2 - w / 2,
+    y: (minY + maxY) / 2 - h / 2,
+    w: w, h: h
+  };
+  applyView();
+  closePopup();
+}
+
+const buttons = {
+  europe:    document.getElementById('btn-europe'),
+  all:       document.getElementById('btn-all'),
+  confirmed: document.getElementById('btn-confirmed'),
+  italy:     document.getElementById('btn-italy'),
+};
+function setActive(b) {
+  Object.values(buttons).forEach(x => x.classList.remove('active'));
+  b.classList.add('active');
+}
+const europeCoords = europeStops.map(s => [s.lon, s.lat]);
+const allCoords = stops.map(s => [s.lon, s.lat]);
+const confirmedCoords = stops.filter(s => s.type === 'confirmed' || s.type === 'sister').map(s => [s.lon, s.lat]);
+const italyCoords = stops.filter(s => ['Mestre (mainland Venice)','Florence','Pisa','Rome (Aurelio)','Pompeii + Naples'].includes(s.name)).map(s => [s.lon, s.lat]);
+
+buttons.europe.addEventListener('click',    () => { setActive(buttons.europe);    fitToBounds(europeCoords, 50); });
+buttons.all.addEventListener('click',       () => { setActive(buttons.all);       fitToBounds(allCoords, 30); });
+buttons.confirmed.addEventListener('click', () => { setActive(buttons.confirmed); fitToBounds(confirmedCoords, 80); });
+buttons.italy.addEventListener('click',     () => { setActive(buttons.italy);     fitToBounds(italyCoords, 60); });
+
+document.getElementById('zoom-in').addEventListener('click', () => zoomBy(0.7));
+document.getElementById('zoom-out').addEventListener('click', () => zoomBy(1.4));
+function zoomBy(factor) {
+  const cx = view.x + view.w / 2;
+  const cy = view.y + view.h / 2;
+  view.w *= factor; view.h *= factor;
+  view.x = cx - view.w / 2;
+  view.y = cy - view.h / 2;
+  applyView();
+}
+wrap.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  const factor = e.deltaY > 0 ? 1.15 : 0.87;
+  const rect = wrap.getBoundingClientRect();
+  const px = (e.clientX - rect.left) / rect.width;
+  const py = (e.clientY - rect.top) / rect.height;
+  const focusX = view.x + view.w * px;
+  const focusY = view.y + view.h * py;
+  view.w *= factor; view.h *= factor;
+  view.x = focusX - view.w * px;
+  view.y = focusY - view.h * py;
+  applyView();
+}, { passive: false });
+
+let dragging = false, dragStart = null, viewStart = null;
+wrap.addEventListener('mousedown', (e) => {
+  if (e.target.closest('.marker, .popup, .controls, .zoom')) return;
+  dragging = true;
+  wrap.classList.add('dragging');
+  dragStart = { x: e.clientX, y: e.clientY };
+  viewStart = { x: view.x, y: view.y };
+});
+window.addEventListener('mousemove', (e) => {
+  if (!dragging) return;
+  const rect = wrap.getBoundingClientRect();
+  const dx = (e.clientX - dragStart.x) / rect.width * view.w;
+  const dy = (e.clientY - dragStart.y) / rect.height * view.h;
+  view.x = viewStart.x - dx;
+  view.y = viewStart.y - dy;
+  applyView();
+});
+window.addEventListener('mouseup', () => { dragging = false; wrap.classList.remove('dragging'); });
+
+wrap.addEventListener('touchstart', (e) => {
+  if (e.target.closest('.marker, .popup')) return;
+  if (e.touches.length === 1) {
+    dragging = true;
+    dragStart = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    viewStart = { x: view.x, y: view.y };
+  }
+}, { passive: true });
+wrap.addEventListener('touchmove', (e) => {
+  if (!dragging || e.touches.length !== 1) return;
+  const rect = wrap.getBoundingClientRect();
+  const dx = (e.touches[0].clientX - dragStart.x) / rect.width * view.w;
+  const dy = (e.touches[0].clientY - dragStart.y) / rect.height * view.h;
+  view.x = viewStart.x - dx;
+  view.y = viewStart.y - dy;
+  applyView();
+}, { passive: true });
+wrap.addEventListener('touchend', () => { dragging = false; }, { passive: true });
+
+// Popups
+let popupEl = null, popupForIdx = -1;
+function closePopup() {
+  if (popupEl) { popupEl.remove(); popupEl = null; popupForIdx = -1; }
+  markerEls.forEach(m => m.classList.remove('selected'));
+}
+function showPopup(idx) {
+  closePopup();
+  const stop = stops[idx];
+  markerEls[idx].classList.add('selected');
+  popupForIdx = idx;
+  const parts = stop.country.split('·').map(s => s.trim());
+  const main = parts[0];
+  const sub = parts.slice(1).join(' · ');
+  const hotelBlock = stop.hotel
+    ? '<div class="hotel"><strong>🏨 ' + stop.hotel + '</strong>' +
+      (stop.hotelUrl ? ' · <a href="' + stop.hotelUrl + '" target="_blank" rel="noopener">Booking ↗</a>' : '') + '</div>'
+    : '';
+  popupEl = document.createElement('div');
+  popupEl.className = 'popup';
+  popupEl.innerHTML =
+    '<button class="close" aria-label="Close">×</button>' +
+    '<div class="day-num">' + stop.day + ' · ' + stop.date + '</div>' +
+    '<h3>' + stop.name + '</h3>' +
+    '<div class="country-chip">' + main + (sub ? '<span class="sub">· ' + sub + '</span>' : '') + '</div>' +
+    hotelBlock +
+    '<div class="desc">' + stop.desc + '</div>' +
+    '<a href="day_' + (idx+1) + '.html" style="display:inline-block;margin-top:14px;padding:9px 16px;background:var(--ink);color:var(--cream);text-decoration:none;border-radius:4px;font-size:12px;font-weight:600;letter-spacing:0.02em;">View full day details →</a>';
+  popupEl.querySelector('.close').addEventListener('click', closePopup);
+  wrap.appendChild(popupEl);
+  positionPopup();
+}
+function positionPopup() {
+  if (!popupEl || popupForIdx < 0) return;
+  const stop = stops[popupForIdx];
+  const [sx, sy] = project(stop.lon, stop.lat);
+  const [px, py] = svgToScreen(sx, sy);
+  const rect = wrap.getBoundingClientRect();
+  const pw = popupEl.offsetWidth;
+  const ph = popupEl.offsetHeight;
+  let left = px - pw / 2;
+  let top = py - ph - 18;
+  if (left < 8) left = 8;
+  if (left + pw > rect.width - 8) left = rect.width - pw - 8;
+  if (top < 8) top = py + 18;
+  popupEl.style.left = left + 'px';
+  popupEl.style.top = top + 'px';
+}
+markerEls.forEach((m, i) => {
+  m.addEventListener('click', (e) => { e.stopPropagation(); showPopup(i); });
+});
+wrap.addEventListener('click', (e) => {
+  if (!e.target.closest('.marker, .popup')) closePopup();
+});
+
+let tooltipEl = null;
+markerEls.forEach((m, i) => {
+  m.addEventListener('mouseenter', () => {
+    const stop = stops[i];
+    const country = stop.country.split('·')[0].trim();
+    if (tooltipEl) tooltipEl.remove();
+    tooltipEl = document.createElement('div');
+    tooltipEl.className = 'tooltip';
+    tooltipEl.textContent = stop.name + ' — ' + country;
+    wrap.appendChild(tooltipEl);
+    tooltipEl.style.left = m.style.left;
+    tooltipEl.style.top = m.style.top;
+  });
+  m.addEventListener('mouseleave', () => {
+    if (tooltipEl) { tooltipEl.remove(); tooltipEl = null; }
+  });
+});
+
+// Day selector dropdown
+const daySelect = document.getElementById('day-select');
+stops.forEach((stop, i) => {
+  const opt = document.createElement('option');
+  opt.value = i + 1;
+  opt.textContent = (i+1) + '. ' + stop.name + ' — ' + stop.date;
+  daySelect.appendChild(opt);
+});
+daySelect.addEventListener('change', (e) => {
+  if (e.target.value) {
+    window.location.href = 'day_' + e.target.value + '.html';
+  }
+});
+
+window.addEventListener('resize', () => fitToBounds(europeCoords, 50));
+fitToBounds(europeCoords, 50);
+</script>
+</body>
+</html>
