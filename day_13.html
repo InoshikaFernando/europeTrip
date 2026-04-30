@@ -118,12 +118,12 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
 </style>
 </head>
 <body>
-<div class="topbar"><a href="trip-map.html">← Back to interactive map</a></div>
+<div class="topbar"><a href="index.html">← Back to interactive map</a></div>
 <div class="container">
   <div class="hero">
     <div class="day-num">Day 11 day trip · Stop 13 of 26</div>
     <h1>Pompeii + Naples</h1>
-    <div class="subtitle">Pompeii + Naples (day trip)</div>
+    <div class="subtitle">Pompeii + Naples (day trip from Rome)</div>
     <div class="hero-meta">
       <span class="country-chip">🇮🇹 Italy<span class="sub">· day trip from Rome</span></span>
       <span class="type-chip day">Day stop only</span>
@@ -133,7 +133,7 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
   <div class="mini-map-card">
     <div class="mini-map-header">
       <div class="card-label">📍 Location</div>
-      <div class="map-context">Where this stop sits in the journey</div>
+      <div class="map-context">Where this stop sits in the journey (numbered red pins = day-trip excursions)</div>
     </div>
     <div class="mini-map-wrap" id="mini-map-wrap">
       <svg id="mini-map-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
@@ -145,39 +145,111 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
   
     <div class="card travel-card">
       <div class="card-label">🚗 Travel</div>
-      <div><strong>Route:</strong> Round trip from Rome (Il Nido di Lulu)</div>
+      <div><strong>Route:</strong> Round trip from Rome (DaBrieBra Vaticano)</div>
       <div><strong>Distance:</strong> ~460 km round · 8–9 hrs</div>
       <div><strong>Start:</strong> 08:00 from Rome</div>
     </div>
   
+    <div class="card excursions-card">
+      <div class="card-label">🚙 Day-trip itinerary</div>
+      <div class="ex-intro">Day-trip loop — drive between stops.</div>
+      
+      <div class="excursion-item">
+        <div class="ex-num">1</div>
+        <div class="ex-body">
+          <div class="ex-name">DaBrieBra Vaticano (start)</div>
+          <div class="ex-addr">Via Sebastiano Ziani, Aurelio, Roma</div>
+          <div class="ex-note">Coffee + leave 07:30 · take GRA ring road south to A1 · NEVER drive into Rome ZTL</div>
+          <div class="ex-meta"><span>⏱ 07:30 departure</span> <span>🚗 —</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">2</div>
+        <div class="ex-body">
+          <div class="ex-name">Villa Balke</div>
+          <div class="ex-addr">Via Prota, 42, 80059 Torre del Greco NA</div>
+          <div class="ex-note">Coastal Naples-area lunch spot · authentic Neapolitan food · Vesuvius + bay views · 4.6★ · way better than Naples city centre with kids</div>
+          <div class="ex-meta"><span>⏱ ~1.5 hrs</span> <span>🚗 ~2.5 hrs from Rome via A1+A3</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">3</div>
+        <div class="ex-body">
+          <div class="ex-name">Pompeii archaeological site</div>
+          <div class="ex-addr">Pompei, 80045 Metropolitan City of Naples</div>
+          <div class="ex-note">Ancient Roman city frozen in volcanic ash 79 AD · UNESCO · House of the Faun, Forum, amphitheatre · pre-book ticket</div>
+          <div class="ex-meta"><span>⏱ ~2.5 hrs</span> <span>🚗 ~25 min from Villa Balke (eastward along the coast)</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">4</div>
+        <div class="ex-body">
+          <div class="ex-name">Castello di Lettere</div>
+          <div class="ex-addr">Via S. Nicola Castello, 80050 Lettere NA</div>
+          <div class="ex-note">Medieval Norman/Aragonese hilltop castle in the hills above Pompeii · panoramic Vesuvius views · quiet, off-the-tourist-trail · free entry</div>
+          <div class="ex-meta"><span>⏱ ~30 min</span> <span>🚗 ~15 min east-uphill from Pompeii</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">5</div>
+        <div class="ex-body">
+          <div class="ex-name">Back to DaBrieBra Vaticano</div>
+          <div class="ex-addr">Via Sebastiano Ziani, Aurelio, Roma</div>
+          <div class="ex-note">Drive back to Rome via A3 + A1 · ~3 hrs · light dinner near hotel</div>
+          <div class="ex-meta"><span>⏱ evening drive</span> <span>🚗 ~3 hrs from Castello di Lettere</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">6</div>
+        <div class="ex-body">
+          <div class="ex-name">Basilica of San Giovanni in Laterano</div>
+          <div class="ex-addr">Piazza San Giovanni in Laterano, 00184 Roma RM</div>
+          <div class="ex-note">Cathedral of Rome · seat of the Pope as Bishop of Rome · oldest of the four major papal basilicas · visit if any energy left after Pompeii drive</div>
+          <div class="ex-meta"><span>⏱ ~45 min</span> <span>🚗 Cipro metro Line A → San Giovanni · 30 min · or taxi 25 min from hotel</span></div>
+        </div>
+      </div>
+    </div>
   <div class="card list-card">
     <div class="card-label">⚑ Highlights</div>
     <ul>
-      <li>Drive ~2.5 hrs Rome → Pompeii via A1 + A3</li>
-      <li>Pompeii archaeological site (allow 2-3 hrs)</li>
-      <li>Drive 30 min to Naples for lunch</li>
-      <li>Authentic Neapolitan pizza (Da Michele or Sorbillo)</li>
-      <li>Drive ~2.5–3 hrs back to Rome by 18:00</li>
+      <li>Day 13 (Tue 21 Jul) — Pompeii + Naples coast + Rome basilica:</li>
+      <li>→ 07:30 Coffee + leave DaBrieBra Vaticano · GRA ring road south to A1</li>
+      <li>→ 10:30 Arrive Torre del Greco · early lunch at Villa Balke (4.6★ Neapolitan)</li>
+      <li>→ 12:00 Drive coast to Pompeii (~25 min)</li>
+      <li>→ 12:30–15:00 Pompeii archaeological site · House of the Faun, Forum, amphitheatre</li>
+      <li>→ 15:15 Drive to Castello di Lettere (~15 min east-uphill)</li>
+      <li>→ 15:45 Quick castle visit · panoramic Vesuvius photos</li>
+      <li>→ 16:30 Start drive back to Rome via A3 + A1</li>
+      <li>→ 19:30 Arrive Rome · drop bags + freshen up</li>
+      <li>→ 20:30 OPTIONAL: Cipro metro → San Giovanni (Line A) for Basilica of San Giovanni in Laterano · open &#x27;til 18:00 · or save for Day 14</li>
+      <li>→ 21:30 Light dinner near hotel · early bed for Day 14 Vatican</li>
+      <li>Reality check: 6+ hrs driving + 4 hrs sightseeing · skip San Giovanni tonight if exhausted, see Day 14 instead</li>
     </ul>
   </div>
   <div class="card list-card tips-card">
     <div class="card-label">⚠ Practical tips</div>
     <ul>
-      <li>Pompeii tickets ~€19 adults · book online</li>
-      <li>Wear walking shoes + sun hat — hot, rocky, exposed</li>
-      <li>Bring water · only one café inside Pompeii</li>
-      <li>Naples driving is chaotic — park at the periphery and walk in</li>
-      <li>Don&#x27;t try to do Vesuvius too — save for another trip</li>
+      <li>🎟️ PRE-BOOK Pompeii at pompeiisites.org · ~€19 adults · timed entry essential summer</li>
+      <li>🥾 Wear walking shoes + sun hat · Pompeii is hot, rocky, exposed · 2L water per person</li>
+      <li>🚗 Skip driving in Naples city centre — chaotic · Villa Balke at Torre del Greco is the smarter coastal lunch</li>
+      <li>⛪ Basilica of San Giovanni in Laterano: typically open 07:00–18:30 · Cathedral of Rome (older + more important than St. Peter&#x27;s technically) · Sunday Mass 10:30, daily Mass 18:00</li>
+      <li>⛪ Important: Tuesday 21 Jul is a weekday · daily Mass at 18:00 if you make it back in time</li>
+      <li>🍕 Villa Balke Torre del Greco: phone +39 081 882 1252 to reserve early lunch</li>
+      <li>🌋 Don&#x27;t add Vesuvius hike to this day — separate trip, would add 3+ hrs</li>
+      <li>🅿️ Pompeii car parks: Camping Zeus or Arena Voluptatis (~€5–10/day) — close to Porta Marina entrance</li>
+      <li>🚗 Toll cost A1 + A3 round trip ~€35–40</li>
+      <li>Castello di Lettere is FREE entry · best photographed from approach road · call +39 081 802 6111 if guard dogs concern you</li>
+      <li>Honest advice: if exhausted after Pompeii drive, skip San Giovanni and see it Day 14 morning before Vatican</li>
     </ul>
   </div>
   <div class="action-row">
     <a href="https://www.google.com/maps/search/?api=1&query=40.7497,14.4869" target="_blank" rel="noopener">📍 Open on Google Maps</a>
-    <a href="https://www.google.com/maps/dir/41.8955,12.4478/40.7497,14.4869" target="_blank" rel="noopener" class="secondary">🚗 Directions from prev stop</a>
+    <a href="https://www.google.com/maps/dir/41.9148,12.4327/40.7497,14.4869" target="_blank" rel="noopener" class="secondary">🚗 Directions from prev stop</a>
   </div>
   <div class="nav-row">
     <a href="day_12.html" class="nav-link prev">← Day 12: Rome (Aurelio)</a>
-    <a href="trip-map.html" class="nav-link nav-home">All days · Map</a>
-    <a href="day_14.html" class="nav-link next">Day 14: Milan →</a>
+    <a href="index.html" class="nav-link nav-home">All days · Map</a>
+    <a href="day_14.html" class="nav-link next">Day 14: Rome (Vatican Day) →</a>
   </div>
 </div>
 <footer>
@@ -187,8 +259,8 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
 <script src="map-data.js"></script>
 <script>
 (function() {
-  const tripStops = [{"name": "Rome (Aurelio)", "lat": 41.8955, "lon": 12.4478, "type": "confirmed", "role": "prev", "i": 12}, {"name": "Pompeii + Naples", "lat": 40.7497, "lon": 14.4869, "type": "day", "role": "current", "i": 13}, {"name": "Milan", "lat": 45.4642, "lon": 9.19, "type": "pending", "role": "next", "i": 14}];
-  const excursions = [];
+  const tripStops = [{"name": "Rome (Aurelio)", "lat": 41.9148, "lon": 12.4327, "type": "confirmed", "role": "prev", "i": 12}, {"name": "Pompeii + Naples", "lat": 40.7497, "lon": 14.4869, "type": "day", "role": "current", "i": 13}, {"name": "Rome (Vatican Day)", "lat": 41.9148, "lon": 12.4327, "type": "confirmed", "role": "next", "i": 14}];
+  const excursions = [{"name": "DaBrieBra Vaticano (start)", "lat": 41.9148, "lon": 12.4327, "order": 1}, {"name": "Villa Balke", "lat": 40.7901, "lon": 14.3607, "order": 2}, {"name": "Pompeii archaeological site", "lat": 40.7497, "lon": 14.4869, "order": 3}, {"name": "Castello di Lettere", "lat": 40.732, "lon": 14.5933, "order": 4}, {"name": "Back to DaBrieBra Vaticano", "lat": 41.9148, "lon": 12.4327, "order": 5}, {"name": "Basilica of San Giovanni in Laterano", "lat": 41.8859, "lon": 12.5057, "order": 6}];
   const mapScale = "regional";
   const ns = 'http://www.w3.org/2000/svg';
   const svg = document.getElementById('mini-map-svg');

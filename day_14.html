@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Day 14: Milan — Europe Trip 2026</title>
+<title>Day 14: Rome (Vatican Day) — Europe Trip 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500&family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -13,7 +13,7 @@
   --sage: #6b8e6f; --sky: #4a90b8;
   --line: rgba(13,27,42,0.12);
   --land: #ede4cf; --land-stroke: #c4b89e; --water: #d8e4ec;
-  --type-color: #c89b3c;
+  --type-color: #6b8e6f;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -118,80 +118,195 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
 </style>
 </head>
 <body>
-<div class="topbar"><a href="trip-map.html">← Back to interactive map</a></div>
+<div class="topbar"><a href="index.html">← Back to interactive map</a></div>
 <div class="container">
   <div class="hero">
-    <div class="day-num">Day 13 · Stop 14 of 26</div>
-    <h1>Milan</h1>
-    <div class="subtitle">Milan</div>
+    <div class="day-num">Day 12 — Rome (Vatican) · Stop 14 of 26</div>
+    <h1>Rome (Vatican Day)</h1>
+    <div class="subtitle">Rome · Vatican City + Centro Storico walking day</div>
     <div class="hero-meta">
-      <span class="country-chip">🇮🇹 Italy<span class="sub">· Duomo · Galleria · Navigli</span></span>
-      <span class="type-chip pending">Hotel TBD</span>
-      <span class="date-chip">23–24 Jul 2026 · 1 night</span>
+      <span class="country-chip">🇮🇹 Italy<span class="sub">· Vatican City + central Rome on foot</span></span>
+      <span class="type-chip confirmed">Hotel booked ✓</span>
+      <span class="date-chip">Wed 22 Jul 2026</span>
     </div>
   </div>
   <div class="mini-map-card">
     <div class="mini-map-header">
       <div class="card-label">📍 Location</div>
-      <div class="map-context">Where this stop sits in the journey</div>
+      <div class="map-context">Walking tour around the city — numbered red pins are visit order</div>
     </div>
     <div class="mini-map-wrap" id="mini-map-wrap">
       <svg id="mini-map-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
       <div class="mini-loading" id="mini-loading">Loading map…</div>
     </div>
   </div>
-  <div class="summary">Last Italian stop. Quick stop in Florence morning, drive to Milan, evening exploring.</div>
+  <div class="summary">Rome&#x27;s biggest day. Walk to Vatican (17 min), spend the morning in the Museums + Sistine Chapel + St. Peter&#x27;s. Afternoon Castel Sant&#x27;Angelo + Piazza Navona via the Centro Storico.</div>
   
-    <div class="card hotel-card pending">
+    <div class="card hotel-card">
       <div class="card-label">🏨 Hotel</div>
-      <div class="hotel-name">To be booked</div>
+      <div class="hotel-name">DaBrieBra Vaticano <span class="badge-confirmed">✓ Booked</span></div>
+      <div class="hotel-link"><a href="https://www.booking.com/hotel/it/dabriebra.en-gb.html" target="_blank" rel="noopener">View on Booking.com →</a></div>
     </div>
   
     <div class="card travel-card">
       <div class="card-label">🚗 Travel</div>
-      <div><strong>Route:</strong> Rome → Florence stop → Milan</div>
-      <div><strong>Distance:</strong> ~580 km · 6.5–7.5 hrs</div>
-      <div><strong>Start:</strong> 07:30</div>
+      <div><strong>Route:</strong> Walking day from DaBrieBra Vaticano · no driving</div>
+      <div><strong>Distance:</strong> All on foot or short metro · ~10 km walking total</div>
+      <div><strong>Start:</strong> 07:00 leave hotel for 09:00 Vatican Museums entry</div>
     </div>
   
+    <div class="card excursions-card">
+      <div class="card-label">🚶 Walking tour</div>
+      <div class="ex-intro">Walking + metro tour from the hotel — central sights are walkable, Schönbrunn is a quick metro ride.</div>
+      
+      <div class="excursion-item">
+        <div class="ex-num">1</div>
+        <div class="ex-body">
+          <div class="ex-name">DaBrieBra Vaticano (start)</div>
+          <div class="ex-addr">Via Sebastiano Ziani, Aurelio, Roma</div>
+          <div class="ex-note">Light breakfast in apartment · pack water, hat, comfortable shoes · shoulders + knees covered for St. Peter&#x27;s</div>
+          <div class="ex-meta"><span>⏱ 07:00 departure</span> <span>🚶 —</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">2</div>
+        <div class="ex-body">
+          <div class="ex-name">Vatican Museums (entry)</div>
+          <div class="ex-addr">Viale Vaticano, 00120 Città del Vaticano</div>
+          <div class="ex-note">Pre-booked 09:00 entry · museivaticani.va · 17 min walk from hotel · 4+ km of galleries</div>
+          <div class="ex-meta"><span>⏱ ~3 hrs</span> <span>🚶 17 min walk via Via Gregorio VII</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">3</div>
+        <div class="ex-body">
+          <div class="ex-name">Gallery of Maps</div>
+          <div class="ex-addr">Inside Vatican Museums</div>
+          <div class="ex-note">120m corridor of 16th-century painted topographical maps of Italy · stunning gilded ceiling · part of standard museum route</div>
+          <div class="ex-meta"><span>⏱ ~30 min within museum visit</span> <span>🚶 Inside Vatican Museums route</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">4</div>
+        <div class="ex-body">
+          <div class="ex-name">Vatican Gardens (Bust viewpoint)</div>
+          <div class="ex-addr">Vatican Gardens, 00120 Città del Vaticano</div>
+          <div class="ex-note">Garden views visible from museum corridors · separate Garden Tour requires special booking + extra €33 — skip with kids, stick to standard route</div>
+          <div class="ex-meta"><span>⏱ Skip if not pre-booked</span> <span>🚶 Inside Vatican complex</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">5</div>
+        <div class="ex-body">
+          <div class="ex-name">Sistine Chapel</div>
+          <div class="ex-addr">Sistine Chapel, 00120 Città del Vaticano</div>
+          <div class="ex-note">Michelangelo&#x27;s ceiling · NO PHOTOS · NO TALKING (enforced) · end of standard museum route · don&#x27;t miss it · use the chapel-to-basilica shortcut to enter St. Peter&#x27;s directly</div>
+          <div class="ex-meta"><span>⏱ ~30 min</span> <span>🚶 End of museum route</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">6</div>
+        <div class="ex-body">
+          <div class="ex-name">St. Peter&#x27;s Basilica</div>
+          <div class="ex-addr">Piazza San Pietro, 00120 Città del Vaticano</div>
+          <div class="ex-note">Largest church in the world · climb the dome (551 steps or lift partway) for Rome panorama · daily Mass 17:00 weekday Italian · attend if want a Mass today</div>
+          <div class="ex-meta"><span>⏱ ~1.5 hrs</span> <span>🚶 Direct from Sistine Chapel via shortcut</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">7</div>
+        <div class="ex-body">
+          <div class="ex-name">Lunch break (Borgo area)</div>
+          <div class="ex-addr">Via dei Corridori or Via della Conciliazione</div>
+          <div class="ex-note">Skip touristy options on Via della Conciliazione · walk 5 min east to Borgo Pio for actual Roman pizza al taglio + gelato</div>
+          <div class="ex-meta"><span>⏱ ~1 hr</span> <span>🚶 5 min walk east of St. Peter&#x27;s</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">8</div>
+        <div class="ex-body">
+          <div class="ex-name">Castel Sant&#x27;Angelo</div>
+          <div class="ex-addr">Lungotevere Castello, 50, 00193 Roma RM</div>
+          <div class="ex-note">Hadrian&#x27;s mausoleum-turned-papal-fortress · cross the angel-statue bridge at golden hour · climb to terrace for Tiber + St. Peter&#x27;s views</div>
+          <div class="ex-meta"><span>⏱ ~1 hr</span> <span>🚶 10 min walk along Via della Conciliazione</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">9</div>
+        <div class="ex-body">
+          <div class="ex-name">Piazza Navona</div>
+          <div class="ex-addr">Piazza Navona, 00186 Roma RM</div>
+          <div class="ex-note">Bernini&#x27;s Fountain of the Four Rivers · Sant&#x27;Agnese church · perfect for evening · gelato at Tre Scalini (truffle) · dinner in surrounding lanes</div>
+          <div class="ex-meta"><span>⏱ ~1.5 hrs incl dinner</span> <span>🚶 15 min walk south-east via Ponte Sant&#x27;Angelo</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">10</div>
+        <div class="ex-body">
+          <div class="ex-name">Back to DaBrieBra Vaticano</div>
+          <div class="ex-addr">Via Sebastiano Ziani, Aurelio, Roma</div>
+          <div class="ex-note">Taxi back ~€10–12 (legs will be done after 10+ km walking) · or Spagna metro to Cipro Line A</div>
+          <div class="ex-meta"><span>⏱ evening</span> <span>🚶 Taxi 10 min OR metro 25 min from Spagna</span></div>
+        </div>
+      </div>
+    </div>
   <div class="card list-card">
     <div class="card-label">⚑ Highlights</div>
     <ul>
-      <li>Florence morning stop ~1.5 hrs — Piazzale Michelangelo coffee + Ponte Vecchio one more time</li>
-      <li>Milan Duomo (climb the roof at sunset!)</li>
-      <li>Galleria Vittorio Emanuele II — 19th century shopping arcade</li>
-      <li>Sforza Castle exterior</li>
-      <li>Navigli canal district — aperitivo + dinner</li>
+      <li>Day 14 (Wed 22 Jul) — VATICAN DAY · the trip&#x27;s biggest single day:</li>
+      <li>→ 07:00 Light breakfast · pack water, hat, comfy shoes · shoulders + knees covered</li>
+      <li>→ 08:30 Walk 17 min to Vatican Museums (Viale Vaticano entrance, NOT St. Peter&#x27;s)</li>
+      <li>→ 09:00 Pre-booked Vatican Museums entry · Gallery of Maps + galleries</li>
+      <li>→ 11:30 Sistine Chapel · Michelangelo&#x27;s ceiling · NO PHOTOS · NO TALKING</li>
+      <li>→ 12:00 Use chapel-to-basilica shortcut · enter St. Peter&#x27;s directly · skips re-entry queue</li>
+      <li>→ 12:30 St. Peter&#x27;s Basilica · climb dome for panorama (optional)</li>
+      <li>→ 13:30 Lunch in Borgo Pio (5 min east) — skip Via della Conciliazione tourist traps</li>
+      <li>→ 15:30 Walk 10 min to Castel Sant&#x27;Angelo · cross Bridge of Angels · climb to terrace</li>
+      <li>→ 17:00 Walk via Centro Storico to Piazza Navona — Bernini fountains, Sant&#x27;Agnese</li>
+      <li>→ 19:00 Dinner around Piazza Navona · gelato at Tre Scalini (truffle gelato)</li>
+      <li>→ 21:00 Taxi back to hotel (~€10–12) — legs will be DONE after ~10 km walking</li>
+      <li>Day 15 = drive Rome → Milan (covered separately)</li>
     </ul>
   </div>
   <div class="card list-card tips-card">
     <div class="card-label">⚠ Practical tips</div>
     <ul>
-      <li>Hotel TBD — book centrally near Duomo or Navigli</li>
-      <li>Milan ZTL — check parking carefully</li>
-      <li>Aperitivo: small fee for drink, free buffet 18:00–21:00</li>
+      <li>🎟️ ABSOLUTE MUST: pre-book Vatican Museums at museivaticani.va · 09:00 first entry slot · adults €20 + €5 booking fee</li>
+      <li>🎟️ Don&#x27;t fall for skip-the-line scammers outside — they sell you tickets you could buy direct from the Vatican site for less</li>
+      <li>🚶 17 min walk from hotel — major advantage of choosing DaBrieBra Vaticano · saves 1 hr vs central Rome</li>
+      <li>👗 DRESS CODE strictly enforced: shoulders + knees covered for St. Peter&#x27;s · no shorts, miniskirts, sleeveless · bring scarf as backup</li>
+      <li>📵 NO PHOTOS in Sistine Chapel · NO TALKING · guards do enforce · expect 5+ min wait at entry to chapel</li>
+      <li>🚪 SHORTCUT: at Sistine Chapel exit, take the door for groups (right side) directly into St. Peter&#x27;s · saves you re-doing security at the basilica entry</li>
+      <li>⛪ Daily Mass at St. Peter&#x27;s Basilica: weekdays 17:00 (Italian) · attend if Mass for the day · Sunday papal blessing 12:00 from window</li>
+      <li>🍕 Lunch tip: walk 5 min east to Borgo Pio for actual pizza al taglio · skip Via della Conciliazione (overpriced tourist menus)</li>
+      <li>🍦 Tre Scalini in Piazza Navona: famous tartufo (truffle gelato) · €8 sit-down or €5 standing · worth the price</li>
+      <li>🎫 Castel Sant&#x27;Angelo separate ticket €15 · pre-book if possible · less of an issue than Vatican</li>
+      <li>💧 Bring 2L water per person · summer Rome is HOT · refill at Roman fountains (potable)</li>
+      <li>🚇 If exhausted: skip Castel Sant&#x27;Angelo / Piazza Navona, go straight back · this is a long day already</li>
+      <li>🦶 Realistic walking: ~10 km total · break the day with the lunch sit-down · don&#x27;t try to cram more sights</li>
+      <li>Vatican Gardens tour: separate booking, +€33, 2 hrs · skip with kids · standard route gives you garden views from corridors</li>
     </ul>
   </div>
   <div class="action-row">
-    <a href="https://www.google.com/maps/search/?api=1&query=45.4642,9.19" target="_blank" rel="noopener">📍 Open on Google Maps</a>
-    <a href="https://www.google.com/maps/dir/40.7497,14.4869/45.4642,9.19" target="_blank" rel="noopener" class="secondary">🚗 Directions from prev stop</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=41.9148,12.4327" target="_blank" rel="noopener">📍 Open on Google Maps</a>
+    <a href="https://www.google.com/maps/dir/40.7497,14.4869/41.9148,12.4327" target="_blank" rel="noopener" class="secondary">🚗 Directions from prev stop</a>
   </div>
   <div class="nav-row">
     <a href="day_13.html" class="nav-link prev">← Day 13: Pompeii + Naples</a>
-    <a href="trip-map.html" class="nav-link nav-home">All days · Map</a>
-    <a href="day_15.html" class="nav-link next">Day 15: Zermatt (Täsch) →</a>
+    <a href="index.html" class="nav-link nav-home">All days · Map</a>
+    <a href="day_15.html" class="nav-link next">Day 15: Milan →</a>
   </div>
 </div>
 <footer>
   <div class="mark">— The Grand Journey, 2026 —</div>
-  <div>Stop 14 of 26 · 23–24 Jul 2026 · 1 night</div>
+  <div>Stop 14 of 26 · Wed 22 Jul 2026</div>
 </footer>
 <script src="map-data.js"></script>
 <script>
 (function() {
-  const tripStops = [{"name": "Pompeii + Naples", "lat": 40.7497, "lon": 14.4869, "type": "day", "role": "prev", "i": 13}, {"name": "Milan", "lat": 45.4642, "lon": 9.19, "type": "pending", "role": "current", "i": 14}, {"name": "Zermatt (T\u00e4sch)", "lat": 46.0207, "lon": 7.7491, "type": "pending", "role": "next", "i": 15}];
-  const excursions = [];
-  const mapScale = "regional";
+  const tripStops = [{"name": "Pompeii + Naples", "lat": 40.7497, "lon": 14.4869, "type": "day", "role": "prev", "i": 13}, {"name": "Rome (Vatican Day)", "lat": 41.9148, "lon": 12.4327, "type": "confirmed", "role": "current", "i": 14}, {"name": "Milan", "lat": 45.4642, "lon": 9.19, "type": "pending", "role": "next", "i": 15}];
+  const excursions = [{"name": "DaBrieBra Vaticano (start)", "lat": 41.9148, "lon": 12.4327, "order": 1}, {"name": "Vatican Museums (entry)", "lat": 41.9065, "lon": 12.4536, "order": 2}, {"name": "Gallery of Maps", "lat": 41.9056, "lon": 12.4543, "order": 3}, {"name": "Vatican Gardens (Bust viewpoint)", "lat": 41.9039, "lon": 12.4495, "order": 4}, {"name": "Sistine Chapel", "lat": 41.9029, "lon": 12.4545, "order": 5}, {"name": "St. Peter's Basilica", "lat": 41.9022, "lon": 12.4533, "order": 6}, {"name": "Lunch break (Borgo area)", "lat": 41.902, "lon": 12.4576, "order": 7}, {"name": "Castel Sant'Angelo", "lat": 41.903, "lon": 12.4663, "order": 8}, {"name": "Piazza Navona", "lat": 41.8993, "lon": 12.4731, "order": 9}, {"name": "Back to DaBrieBra Vaticano", "lat": 41.9148, "lon": 12.4327, "order": 10}];
+  const mapScale = "city";
   const ns = 'http://www.w3.org/2000/svg';
   const svg = document.getElementById('mini-map-svg');
   const wrap = document.getElementById('mini-map-wrap');
