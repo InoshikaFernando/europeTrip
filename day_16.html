@@ -177,7 +177,7 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
     <a href="https://www.google.com/maps/dir/45.4642,9.19/46.0207,7.7491" target="_blank" rel="noopener" class="secondary">🚗 Directions from prev stop</a>
   </div>
   <div class="nav-row">
-    <a href="day_15.html" class="nav-link prev">← Day 15: Milan</a>
+    <a href="day_15.html" class="nav-link prev">← Day 15: Milan (Opera)</a>
     <a href="index.html" class="nav-link nav-home">All days · Map</a>
     <a href="day_17.html" class="nav-link next">Day 17: Interlaken →</a>
   </div>
@@ -189,7 +189,7 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
 <script src="map-data.js"></script>
 <script>
 (function() {
-  const tripStops = [{"name": "Milan", "lat": 45.4642, "lon": 9.19, "type": "pending", "role": "prev", "i": 15}, {"name": "Zermatt (T\u00e4sch)", "lat": 46.0207, "lon": 7.7491, "type": "pending", "role": "current", "i": 16}, {"name": "Interlaken", "lat": 46.6863, "lon": 7.8632, "type": "pending", "role": "next", "i": 17}];
+  const tripStops = [{"name": "Milan (Opera)", "lat": 45.4642, "lon": 9.19, "type": "family-stay", "role": "prev", "i": 15}, {"name": "Zermatt (T\u00e4sch)", "lat": 46.0207, "lon": 7.7491, "type": "pending", "role": "current", "i": 16}, {"name": "Interlaken", "lat": 46.6863, "lon": 7.8632, "type": "pending", "role": "next", "i": 17}];
   const excursions = [];
   const mapScale = "regional";
   const ns = 'http://www.w3.org/2000/svg';
@@ -214,10 +214,10 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
     let maxX = Math.max(...projected.map(p => p.x));
     let minY = Math.min(...projected.map(p => p.y));
     let maxY = Math.max(...projected.map(p => p.y));
-    const minSpan = (mapScale === 'city') ? 0.8 : 12;
+    const minSpan = (mapScale === 'city') ? 0.02 : 12;
     if (maxX - minX < minSpan) { const cx = (minX + maxX) / 2; minX = cx - minSpan/2; maxX = cx + minSpan/2; }
     if (maxY - minY < minSpan) { const cy = (minY + maxY) / 2; minY = cy - minSpan/2; maxY = cy + minSpan/2; }
-    const padFactor = (mapScale === 'city') ? 0.7 : 0.4;
+    const padFactor = (mapScale === 'city') ? 0.35 : 0.4;
     const padX = (maxX - minX) * padFactor;
     const padY = (maxY - minY) * padFactor;
     minX -= padX; maxX += padX; minY -= padY; maxY += padY;

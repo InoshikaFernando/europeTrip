@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Day 15: Milan — Europe Trip 2026</title>
+<title>Day 15: Milan (Opera) — Europe Trip 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500&family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -13,7 +13,7 @@
   --sage: #6b8e6f; --sky: #4a90b8;
   --line: rgba(13,27,42,0.12);
   --land: #ede4cf; --land-stroke: #c4b89e; --water: #d8e4ec;
-  --type-color: #c89b3c;
+  --type-color: #7ea882;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -122,54 +122,114 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
 <div class="container">
   <div class="hero">
     <div class="day-num">Day 13 · Stop 15 of 26</div>
-    <h1>Milan</h1>
-    <div class="subtitle">Milan</div>
+    <h1>Milan (Opera)</h1>
+    <div class="subtitle">Opera (Milan southern suburb)</div>
     <div class="hero-meta">
-      <span class="country-chip">🇮🇹 Italy<span class="sub">· Duomo · Galleria · Navigli</span></span>
-      <span class="type-chip pending">Hotel TBD</span>
+      <span class="country-chip">🇮🇹 Italy<span class="sub">· Cinque Terre stop · 1 night Opera</span></span>
+      <span class="type-chip family-stay">Staying with family/friend 💚</span>
       <span class="date-chip">23–24 Jul 2026 · 1 night</span>
     </div>
   </div>
   <div class="mini-map-card">
     <div class="mini-map-header">
       <div class="card-label">📍 Location</div>
-      <div class="map-context">Where this stop sits in the journey</div>
+      <div class="map-context">Where this stop sits in the journey (numbered red pins = day-trip excursions)</div>
     </div>
     <div class="mini-map-wrap" id="mini-map-wrap">
       <svg id="mini-map-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
       <div class="mini-loading" id="mini-loading">Loading map…</div>
     </div>
   </div>
-  <div class="summary">Last Italian stop. Quick stop in Florence morning, drive to Milan, evening exploring.</div>
+  <div class="summary">Travel day Rome → Cinque Terre → Milan with Rasika Ayya (friend). No hotel needed — staying with family friend. Address TBC — will adjust day plan once known. Default plan: Cinque Terre lunch stop, evening Duomo + Galleria.</div>
   
-    <div class="card hotel-card pending">
+    <div class="card hotel-card">
       <div class="card-label">🏨 Hotel</div>
-      <div class="hotel-name">To be booked</div>
+      <div class="hotel-name">Rasika Ayya&#x27;s home (friend) · address TBC <span class="badge-confirmed">✓ Booked</span></div>
+      <div class="hotel-link"></div>
     </div>
   
     <div class="card travel-card">
       <div class="card-label">🚗 Travel</div>
-      <div><strong>Route:</strong> Rome → Florence stop → Milan</div>
-      <div><strong>Distance:</strong> ~580 km · 6.5–7.5 hrs</div>
-      <div><strong>Start:</strong> 07:30</div>
+      <div><strong>Route:</strong> Rome → Cinque Terre → Opera (Milan)</div>
+      <div><strong>Distance:</strong> ~670 km · 7.5 hrs pure driving · 12+ hrs incl. stops</div>
+      <div><strong>Start:</strong> 07:30 from Rome</div>
     </div>
   
+    <div class="card excursions-card">
+      <div class="card-label">🚙 Day-trip itinerary</div>
+      <div class="ex-intro">Day-trip loop — drive between stops.</div>
+      
+      <div class="excursion-item">
+        <div class="ex-num">1</div>
+        <div class="ex-body">
+          <div class="ex-name">DaBrieBra Vaticano (start)</div>
+          <div class="ex-addr">Via Sebastiano Ziani, Aurelio, Roma</div>
+          <div class="ex-note">07:30 leave · GRA → A1 north · ZTL warning</div>
+          <div class="ex-meta"><span>⏱ 07:30 departure</span> <span>🚗 —</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">2</div>
+        <div class="ex-body">
+          <div class="ex-name">Cinque Terre (Vernazza)</div>
+          <div class="ex-addr">19018 Vernazza SP</div>
+          <div class="ex-note">Lunch on Liguria coast · park La Spezia, train to Vernazza · ~3 hrs incl. lunch · cars NOT allowed in villages</div>
+          <div class="ex-meta"><span>⏱ ~3 hrs</span> <span>🚗 ~5 hrs from Rome via A1/A12</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">3</div>
+        <div class="ex-body">
+          <div class="ex-name">Rasika Ayya&#x27;s home (Milan)</div>
+          <div class="ex-addr">TBC — confirm with Rasika</div>
+          <div class="ex-note">FRIEND&#x27;S HOME · no booking needed · confirm address + arrival time with Rasika · brings host gift (chocolates, NZ wine, kids souvenirs)</div>
+          <div class="ex-meta"><span>⏱ settle / dinner with friend</span> <span>🚗 ~2.5 hrs from Cinque Terre</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">4</div>
+        <div class="ex-body">
+          <div class="ex-name">Duomo di Milano (optional evening)</div>
+          <div class="ex-addr">Piazza del Duomo, 20122 Milano</div>
+          <div class="ex-note">Italy&#x27;s largest Gothic cathedral · floodlit at night · skip if dinner with friend runs late</div>
+          <div class="ex-meta"><span>⏱ optional 1 hr</span> <span>🚗 depends on Rasika&#x27;s location</span></div>
+        </div>
+      </div>
+      <div class="excursion-item">
+        <div class="ex-num">5</div>
+        <div class="ex-body">
+          <div class="ex-name">Galleria Vittorio Emanuele II (optional)</div>
+          <div class="ex-addr">20123 Milano</div>
+          <div class="ex-note">Iconic glass arcade · next to Duomo · spin on bull mosaic for luck</div>
+          <div class="ex-meta"><span>⏱ optional 30 min</span> <span>🚗 1 min from Duomo</span></div>
+        </div>
+      </div>
+    </div>
   <div class="card list-card">
     <div class="card-label">⚑ Highlights</div>
     <ul>
-      <li>Florence morning stop ~1.5 hrs — Piazzale Michelangelo coffee + Ponte Vecchio one more time</li>
-      <li>Milan Duomo (climb the roof at sunset!)</li>
-      <li>Galleria Vittorio Emanuele II — 19th century shopping arcade</li>
-      <li>Sforza Castle exterior</li>
-      <li>Navigli canal district — aperitivo + dinner</li>
+      <li>Day 15 (Thu 23 Jul) — Rome → Cinque Terre → Milan (with Rasika Ayya):</li>
+      <li>💚 STAYING WITH FRIEND — no hotel booking needed · big trip saving</li>
+      <li>→ 07:30 leave DaBrieBra Vaticano · A1 north</li>
+      <li>→ 12:30 arrive La Spezia · regional train to Vernazza</li>
+      <li>→ 13:00 lunch Vernazza · harbourfront seafood · let kids enjoy beach</li>
+      <li>→ 15:30 train back · drive to Milan · ~2.5 hrs</li>
+      <li>→ 18:00-19:00 arrive Rasika Ayya&#x27;s place · settle · dinner with friend</li>
+      <li>→ Evening Duomo + Galleria optional (depends on host plans)</li>
+      <li>→ Bring host gift: NZ chocolates, wine, or kids&#x27; souvenirs</li>
+      <li>⚠️ Confirm with Rasika: address, arrival time, dinner plans, parking advice</li>
     </ul>
   </div>
   <div class="card list-card tips-card">
     <div class="card-label">⚠ Practical tips</div>
     <ul>
-      <li>Hotel TBD — book centrally near Duomo or Navigli</li>
-      <li>Milan ZTL — check parking carefully</li>
-      <li>Aperitivo: small fee for drink, free buffet 18:00–21:00</li>
+      <li>💚 STAYING WITH FRIENDS = priceless · accept their dinner invitation, don&#x27;t insist on going out · bring NZ gift</li>
+      <li>📞 CALL Rasika 1-2 days before arrival to confirm timing · share Italian SIM number</li>
+      <li>🚗 PARKING: ask Rasika about street parking + ZTL · Milan central ZTL fines €100+ unauthorized</li>
+      <li>🛒 OFFER to bring groceries/wine · €30-50 contribution feels right for 1 night stay</li>
+      <li>🍝 DON&#x27;T expect to leave for Milan centro late · plan around host&#x27;s schedule</li>
+      <li>🚗 NEXT DAY (24 Jul Zermatt): leave 09:00 · ~4 hrs drive · breakfast with Rasika first</li>
+      <li>🚉 If Rasika lives far from centro and Duomo evening matters: skip it · prioritise quality time with friend</li>
     </ul>
   </div>
   <div class="action-row">
@@ -189,8 +249,8 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
 <script src="map-data.js"></script>
 <script>
 (function() {
-  const tripStops = [{"name": "Rome (Vatican Day)", "lat": 41.9148, "lon": 12.4327, "type": "confirmed", "role": "prev", "i": 14}, {"name": "Milan", "lat": 45.4642, "lon": 9.19, "type": "pending", "role": "current", "i": 15}, {"name": "Zermatt (T\u00e4sch)", "lat": 46.0207, "lon": 7.7491, "type": "pending", "role": "next", "i": 16}];
-  const excursions = [];
+  const tripStops = [{"name": "Rome (Vatican Day)", "lat": 41.9148, "lon": 12.4327, "type": "confirmed", "role": "prev", "i": 14}, {"name": "Milan (Opera)", "lat": 45.4642, "lon": 9.19, "type": "family-stay", "role": "current", "i": 15}, {"name": "Zermatt (T\u00e4sch)", "lat": 46.0207, "lon": 7.7491, "type": "pending", "role": "next", "i": 16}];
+  const excursions = [{"name": "DaBrieBra Vaticano (start)", "lat": 41.9148, "lon": 12.4327, "order": 1}, {"name": "Cinque Terre (Vernazza)", "lat": 44.1357, "lon": 9.6843, "order": 2}, {"name": "Rasika Ayya's home (Milan)", "lat": 45.4642, "lon": 9.19, "order": 3}, {"name": "Duomo di Milano (optional evening)", "lat": 45.464, "lon": 9.1916, "order": 4}, {"name": "Galleria Vittorio Emanuele II (optional)", "lat": 45.4659, "lon": 9.1898, "order": 5}];
   const mapScale = "regional";
   const ns = 'http://www.w3.org/2000/svg';
   const svg = document.getElementById('mini-map-svg');
@@ -214,10 +274,10 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
     let maxX = Math.max(...projected.map(p => p.x));
     let minY = Math.min(...projected.map(p => p.y));
     let maxY = Math.max(...projected.map(p => p.y));
-    const minSpan = (mapScale === 'city') ? 0.8 : 12;
+    const minSpan = (mapScale === 'city') ? 0.02 : 12;
     if (maxX - minX < minSpan) { const cx = (minX + maxX) / 2; minX = cx - minSpan/2; maxX = cx + minSpan/2; }
     if (maxY - minY < minSpan) { const cy = (minY + maxY) / 2; minY = cy - minSpan/2; maxY = cy + minSpan/2; }
-    const padFactor = (mapScale === 'city') ? 0.7 : 0.4;
+    const padFactor = (mapScale === 'city') ? 0.35 : 0.4;
     const padX = (maxX - minX) * padFactor;
     const padY = (maxY - minY) * padFactor;
     minX -= padX; maxX += padX; minY -= padY; maxY += padY;

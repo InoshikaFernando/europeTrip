@@ -191,7 +191,7 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
 <script src="map-data.js"></script>
 <script>
 (function() {
-  const tripStops = [{"name": "Paris", "lat": 48.8566, "lon": 2.3522, "type": "pending", "role": "prev", "i": 19}, {"name": "Lourdes", "lat": 43.0962, "lon": -0.0466, "type": "pending", "role": "current", "i": 20}, {"name": "Amsterdam", "lat": 52.3676, "lon": 4.9041, "type": "pending", "role": "next", "i": 21}];
+  const tripStops = [{"name": "Paris", "lat": 48.8566, "lon": 2.3522, "type": "pending", "role": "prev", "i": 19}, {"name": "Lourdes", "lat": 43.0962, "lon": -0.0466, "type": "pending", "role": "current", "i": 20}, {"name": "Amsterdam", "lat": 52.3676, "lon": 4.9041, "type": "family-stay", "role": "next", "i": 21}];
   const excursions = [];
   const mapScale = "regional";
   const ns = 'http://www.w3.org/2000/svg';
@@ -216,10 +216,10 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
     let maxX = Math.max(...projected.map(p => p.x));
     let minY = Math.min(...projected.map(p => p.y));
     let maxY = Math.max(...projected.map(p => p.y));
-    const minSpan = (mapScale === 'city') ? 0.8 : 12;
+    const minSpan = (mapScale === 'city') ? 0.02 : 12;
     if (maxX - minX < minSpan) { const cx = (minX + maxX) / 2; minX = cx - minSpan/2; maxX = cx + minSpan/2; }
     if (maxY - minY < minSpan) { const cy = (minY + maxY) / 2; minY = cy - minSpan/2; maxY = cy + minSpan/2; }
-    const padFactor = (mapScale === 'city') ? 0.7 : 0.4;
+    const padFactor = (mapScale === 'city') ? 0.35 : 0.4;
     const padX = (maxX - minX) * padFactor;
     const padY = (maxY - minY) * padFactor;
     minX -= padX; maxX += padX; minY -= padY; maxY += padY;
