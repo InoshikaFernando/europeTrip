@@ -65,9 +65,51 @@ header h1 em {
 .dot-home { background: white; box-shadow: 0 0 0 1px var(--ink); }
 
 .map-wrap {
-  position: relative; width: 100%; height: calc(100vh - 165px);
+  position: relative; width: 100%; height: 560px;
   background: var(--water); overflow: hidden; cursor: grab;
+  margin: 0 auto; max-width: 1200px;
 }
+@media (max-width: 700px) { .map-wrap { height: 420px; } }
+/* Day cards */
+.cards-section { max-width: 1080px; margin: 28px auto 60px; padding: 0 16px; }
+.cards-section h2 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 26px; color: var(--ink); text-align: center; margin-bottom: 6px; letter-spacing: -0.01em; }
+.cards-section .sub-h2 { text-align: center; font-size: 12px; color: var(--gold-deep); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 22px; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+.leg { margin-bottom: 32px; }
+.leg-hd { display: flex; align-items: center; gap: 10px; padding-bottom: 8px; border-bottom: 2px solid var(--line); margin-bottom: 14px; flex-wrap: wrap; }
+.leg-badge { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; color: white; }
+.leg-badge.flight { background: var(--ink); }
+.leg-badge.road { background: var(--rose); }
+.leg-badge.rail { background: var(--sage); }
+.leg-title { font-family: 'Fraunces', serif; font-style: italic; font-size: 16px; color: var(--gold-deep); flex: 1; }
+.leg-dates { font-size: 11px; color: var(--ink); opacity: 0.6; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.04em; }
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.day-card { background: var(--cream); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; transition: transform 0.15s, box-shadow 0.15s; display: flex; flex-direction: column; }
+.day-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(13,27,42,0.08); }
+.day-card .top-bar { height: 3px; background: var(--gold); }
+.day-card.confirmed .top-bar { background: var(--sage); }
+.day-card.pending .top-bar { background: var(--gold); }
+.day-card.day .top-bar { background: var(--sky); }
+.day-card.sister .top-bar { background: var(--rose); }
+.day-card.flight .top-bar { background: var(--ink); }
+.day-card.home .top-bar { background: linear-gradient(90deg, var(--sage), var(--gold)); }
+.day-card.family-stay .top-bar { background: var(--sage); }
+.dc-head { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px 8px; border-bottom: 1px solid rgba(13,27,42,0.06); }
+.dc-num { font-family: 'Fraunces', serif; font-size: 26px; font-weight: 700; line-height: 0.9; color: var(--gold-deep); min-width: 26px; }
+.day-card.confirmed .dc-num { color: var(--sage); }
+.day-card.day .dc-num { color: var(--sky); }
+.day-card.sister .dc-num { color: var(--rose); }
+.dc-info { flex: 1; }
+.dc-date { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); opacity: 0.55; font-family: 'JetBrains Mono', monospace; }
+.dc-name { font-family: 'Fraunces', serif; font-weight: 600; font-size: 15px; line-height: 1.25; margin-top: 2px; color: var(--ink); }
+.dc-flag { font-size: 18px; line-height: 1; }
+.dc-body { padding: 10px 14px 8px; font-size: 13px; line-height: 1.55; color: var(--ink); flex: 1; }
+.dc-body .hotel { display: block; margin-top: 6px; font-size: 12px; color: var(--gold-deep); font-weight: 600; }
+.dc-actions { display: flex; gap: 6px; padding: 8px 12px 12px; border-top: 1px dashed rgba(13,27,42,0.08); }
+.dc-actions a { flex: 1; text-align: center; padding: 7px 10px; font-size: 11px; font-weight: 600; text-decoration: none; border-radius: 3px; letter-spacing: 0.05em; transition: background 0.12s; }
+.dc-actions a.maps { background: var(--ink); color: var(--cream); }
+.dc-actions a.maps:hover { background: var(--gold-deep); }
+.dc-actions a.details { background: var(--cream); color: var(--ink); border: 1px solid var(--line); }
+.dc-actions a.details:hover { background: var(--gold); border-color: var(--gold-deep); color: white; }
 .map-wrap.dragging { cursor: grabbing; }
 #map-svg { width: 100%; height: 100%; display: block; position: absolute; inset: 0; }
 .country {
@@ -732,9 +774,64 @@ stops.forEach((stop, i) => {
 });
 daySelect.addEventListener('change', (e) => {
   if (e.target.value) {
-    window.location.href = 'day_' + e.target.value + '.html';
+    const stop = stops[parseInt(e.target.value, 10) - 1];
+    window.location.href = (stop && stop.file) ? stop.file : 'day_' + e.target.value + '.html';
   }
 });
+
+// ---- Day cards section ----
+(function buildDayCards() {
+  const legs = [
+    { badge: 'flight', badgeText: '✈ Outbound', title: 'Auckland → Beijing → Munich', range: [0, 2], dates: '9–11 Jul' },
+    { badge: 'road', badgeText: '🚗 Road Trip', title: 'Munich · Burg Altpernstein · Prague · Vienna · Budapest', range: [3, 6], dates: '11–17 Jul' },
+    { badge: 'road', badgeText: '🚗 Road Trip', title: 'Bled · Mestre · Florence · Rome · Pompeii · Vatican · Milan', range: [7, 14], dates: '17–24 Jul' },
+    { badge: 'road', badgeText: '🏔 Swiss Alps', title: 'Stalden · Moléson · Geneva day · Zürich (via Bern)', range: [15, 18], dates: '24–28 Jul' },
+    { badge: 'flight', badgeText: '✈ + 🚆 Rail', title: 'Paris · Lourdes · Amsterdam · Berlin · Copenhagen · Gothenburg', range: [19, 24], dates: '28 Jul – 5 Aug' },
+    { badge: 'flight', badgeText: '✈ Inbound', title: 'Munich → Beijing → Auckland (Home)', range: [25, 27], dates: '5–8 Aug' }
+  ];
+  const section = document.createElement('section');
+  section.className = 'cards-section';
+  section.innerHTML = '<h2>Day-by-day</h2><div class="sub-h2">Every stop · click "Maps" for Google Maps · "Details" for the full day page</div>';
+  legs.forEach(leg => {
+    const legDiv = document.createElement('div');
+    legDiv.className = 'leg';
+    legDiv.innerHTML =
+      '<div class="leg-hd">' +
+        '<span class="leg-badge ' + leg.badge + '">' + leg.badgeText + '</span>' +
+        '<span class="leg-title">' + leg.title + '</span>' +
+        '<span class="leg-dates">' + leg.dates + '</span>' +
+      '</div>' +
+      '<div class="cards-grid"></div>';
+    const grid = legDiv.querySelector('.cards-grid');
+    for (let i = leg.range[0]; i <= leg.range[1] && i < stops.length; i++) {
+      const s = stops[i];
+      const flag = (s.country.match(/[\u{1F1E6}-\u{1F1FF}]{2}/u) || [''])[0];
+      const file = s.file || ('day_' + (i+1) + '.html');
+      const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + s.lat + ',' + s.lon;
+      const hotelLine = s.hotel ? '<span class="hotel">🏨 ' + s.hotel + '</span>' : '';
+      const card = document.createElement('div');
+      card.className = 'day-card ' + s.type;
+      card.innerHTML =
+        '<div class="top-bar"></div>' +
+        '<div class="dc-head">' +
+          '<div class="dc-num">' + (i+1) + '</div>' +
+          '<div class="dc-info">' +
+            '<div class="dc-date">' + s.date + '</div>' +
+            '<div class="dc-name">' + s.name + '</div>' +
+          '</div>' +
+          '<div class="dc-flag">' + flag + '</div>' +
+        '</div>' +
+        '<div class="dc-body">' + s.desc + hotelLine + '</div>' +
+        '<div class="dc-actions">' +
+          '<a class="maps" href="' + mapsUrl + '" target="_blank" rel="noopener">📍 Maps ↗</a>' +
+          '<a class="details" href="' + file + '">Day details →</a>' +
+        '</div>';
+      grid.appendChild(card);
+    }
+    section.appendChild(legDiv);
+  });
+  document.body.appendChild(section);
+})();
 
 window.addEventListener('resize', () => fitToBounds(europeCoords, 50));
 fitToBounds(europeCoords, 50);
