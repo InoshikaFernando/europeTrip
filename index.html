@@ -320,12 +320,12 @@ header h1 em {
     <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:10px;">🚗 View driving routes in Google Maps</div>
     <div style="display:flex;flex-wrap:wrap;gap:8px;">
       <a href="https://www.google.com/maps/dir/48.3537,11.7860/47.8851,14.1569/50.0903,14.4203/48.2136,16.3520/47.5028,19.0682/46.3683,14.1146/45.4843,12.2415/43.7800,11.2580/43.7228,10.4017/41.9020,12.4350" target="_blank" rel="noopener" style="flex:1;min-width:240px;text-align:center;padding:10px 14px;background:var(--ink);color:var(--cream);text-decoration:none;border-radius:4px;font-size:13px;font-weight:600;">Outbound: Munich → Rome →</a>
-      <a href="https://www.google.com/maps/dir/41.9020,12.4350/45.4642,9.1900/46.2333,7.8722/46.5497,7.0247/46.2044,6.1432/46.9480,7.4474/47.3769,8.5417/48.3538,11.7861" target="_blank" rel="noopener" style="flex:1;min-width:240px;text-align:center;padding:10px 14px;background:var(--ink);color:var(--cream);text-decoration:none;border-radius:4px;font-size:13px;font-weight:600;">Return: Rome → Zürich → MUC →</a>
+      <a href="https://www.google.com/maps/dir/41.9020,12.4350/45.4642,9.1900/46.2333,7.8722/46.5497,7.0247/46.2044,6.1432/46.9480,7.4474/47.9421,10.2986/48.3538,11.7861" target="_blank" rel="noopener" style="flex:1;min-width:240px;text-align:center;padding:10px 14px;background:var(--ink);color:var(--cream);text-decoration:none;border-radius:4px;font-size:13px;font-weight:600;">Return: Rome → Ottobeuren → MUC →</a>
     </div>
     <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:8px;">
       <a href="https://www.google.com/maps/dir/48.3537,11.7860/47.8851,14.1569/50.0903,14.4203/48.2136,16.3520/47.5028,19.0682" target="_blank" rel="noopener" style="flex:1;min-width:180px;text-align:center;padding:8px 12px;background:var(--cream);color:var(--ink);border:1px solid var(--line);text-decoration:none;border-radius:4px;font-size:12px;font-weight:600;">Leg 1: Munich → Budapest</a>
       <a href="https://www.google.com/maps/dir/47.5028,19.0682/46.3683,14.1146/45.4843,12.2415/43.7800,11.2580/43.7228,10.4017/41.9020,12.4350" target="_blank" rel="noopener" style="flex:1;min-width:180px;text-align:center;padding:8px 12px;background:var(--cream);color:var(--ink);border:1px solid var(--line);text-decoration:none;border-radius:4px;font-size:12px;font-weight:600;">Leg 2: Budapest → Rome (via Bled)</a>
-      <a href="https://www.google.com/maps/dir/41.9020,12.4350/45.4642,9.1900/46.2333,7.8722/46.5497,7.0247/47.3769,8.5417" target="_blank" rel="noopener" style="flex:1;min-width:180px;text-align:center;padding:8px 12px;background:var(--cream);color:var(--ink);border:1px solid var(--line);text-decoration:none;border-radius:4px;font-size:12px;font-weight:600;">Leg 3: Rome → Milan → Swiss → Zürich</a>
+      <a href="https://www.google.com/maps/dir/41.9020,12.4350/45.4642,9.1900/46.2333,7.8722/46.5497,7.0247/47.9421,10.2986" target="_blank" rel="noopener" style="flex:1;min-width:180px;text-align:center;padding:8px 12px;background:var(--cream);color:var(--ink);border:1px solid var(--line);text-decoration:none;border-radius:4px;font-size:12px;font-weight:600;">Leg 3: Rome → Milan → Swiss → Ottobeuren</a>
     </div>
     <div style="margin-top:8px;font-size:11px;color:var(--ink);opacity:0.6;">Opens in Google Maps with full driving directions, live traffic &amp; alternates. Day-trips (Pompeii, Geneva) and Bern stop are included as waypoints.</div>
   </div>
@@ -398,8 +398,10 @@ const stops = [
     desc: 'Route de Moléson 228, 1663. Train Stalden→Zermatt→Gornergrat (3,089m) AM, drive Stalden→Moléson via A9 PM (~190 km, 2.5–3 hrs). Optional Maison Cailler chocolate factory at Broc en route.' },
   { day: 'Day 16', date: 'Sun 26 Jul', name: 'Geneva (day trip)', country: '🇨🇭 Switzerland · day trip from Moléson', lat: 46.2044, lon: 6.1432, type: 'day', file: 'day_17b.html',
     desc: '10:15 Mass at Basilique Notre-Dame (Pl. de Cornavin). Old Town, Cathédrale Saint-Pierre, Jet d\'Eau, Jardin Anglais, Mouettes ferry, Bains des Pâquis, Reformation Wall. Return to Moléson by ~19:00. ~80 km / 1h 15min each way.' },
-  { day: 'Day 17', date: '27–28 Jul', name: 'Zürich', country: '🇨🇭 Switzerland · via Bern stop', lat: 47.3769, lon: 8.5417, type: 'pending', file: 'day_18.html',
-    desc: 'Drive Moléson → Bern (~1 hr) for 3-hr stop: Zytglogge, Kramgasse, Münster, BärenPark, lunch. Continue Bern → Zürich (~1.5 hrs). Evening: Niederdorf, Grossmünster, Lindenhof, lake, Bahnhofstrasse. Dinner at Zeughauskeller or Swiss Chuchi. Hotel TBD.' },
+  { day: 'Day 17', date: '27–28 Jul', name: 'Ottobeuren (Bavaria)', country: '🇩🇪 Germany · via 🇨🇭 Bern stop', lat: 47.9421, lon: 10.2986, type: 'confirmed', file: 'day_18.html',
+    hotel: 'Hotel Hirsch · 9.0/10 (1,877 reviews)',
+    hotelUrl: 'https://www.booking.com/hotel/de/hirsch-ottobeuren.en-gb.html',
+    desc: 'Drive Moléson → Bern (~1 hr) for 3-hr stop: Zytglogge, Kramgasse, Münster, BärenPark, lunch. Continue Bern → Ottobeuren via Zürich bypass (~4 hrs). Visit Ottobeuren Abbey — one of Germany\'s great Baroque churches. Bavarian dinner at Hirsch. Cost-effective last night before MUC drop.' },
   { day: 'Day 18', date: '28–29 Jul', name: 'Paris', country: '🇫🇷 France', lat: 48.8566, lon: 2.3522, type: 'pending', file: 'day_19.html',
     desc: 'Drive Zürich → drop car at MUC → fly Paris. Hotel TBD.' },
   { day: 'Day 19', date: '29–30 Jul', name: 'Lourdes', country: '🇫🇷 France · pilgrimage', lat: 43.0962, lon: -0.0466, type: 'pending', file: 'day_20.html',
@@ -797,7 +799,7 @@ daySelect.addEventListener('change', (e) => {
     { badge: 'flight', badgeText: '✈ Outbound', title: 'Auckland → Beijing → Munich', range: [0, 2], dates: '9–11 Jul' },
     { badge: 'road', badgeText: '🚗 Road Trip', title: 'Munich · Burg Altpernstein · Prague · Vienna · Budapest', range: [3, 6], dates: '11–17 Jul' },
     { badge: 'road', badgeText: '🚗 Road Trip', title: 'Bled · Mestre · Florence · Rome · Pompeii · Vatican · Milan', range: [7, 14], dates: '17–24 Jul' },
-    { badge: 'road', badgeText: '🏔 Swiss Alps', title: 'Stalden · Moléson · Geneva day · Zürich (via Bern)', range: [15, 18], dates: '24–28 Jul' },
+    { badge: 'road', badgeText: '🏔 Swiss Alps + Bavaria', title: 'Stalden · Moléson · Geneva day · Bern stop · Ottobeuren', range: [15, 18], dates: '24–28 Jul' },
     { badge: 'flight', badgeText: '✈ + 🚆 Rail', title: 'Paris · Lourdes · Amsterdam · Berlin · Copenhagen · Gothenburg', range: [19, 24], dates: '28 Jul – 5 Aug' },
     { badge: 'flight', badgeText: '✈ Inbound', title: 'Munich → Beijing → Auckland (Home)', range: [25, 27], dates: '5–8 Aug' }
   ];
