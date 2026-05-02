@@ -123,7 +123,7 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
   <div class="hero">
     <div class="day-num">Day 9 · Stop 10 of 26</div>
     <h1>Florence</h1>
-    <div class="subtitle">Florence · Campo di Marte</div>
+    <div class="subtitle">Florence · San Gallo / Campo Grande</div>
     <div class="hero-meta">
       <span class="country-chip">🇮🇹 Italy<span class="sub">· Renaissance heart of Tuscany</span></span>
       <span class="type-chip confirmed">Hotel booked ✓</span>
@@ -140,12 +140,12 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
       <div class="mini-loading" id="mini-loading">Loading map…</div>
     </div>
   </div>
-  <div class="summary">Travel day Mestre → Padua → Florence. Stop at Basilica of Saint Anthony (St Anthony) in Padua for Sunday Mass before continuing to Florence. Garden Blue apartment in central Florence (San Marco / Santissima Annunziata district).</div>
+  <div class="summary">Travel day Mestre → Padua → Florence. Stop at Basilica of Saint Anthony (St Anthony) in Padua for Sunday Mass before continuing to Florence. Garden Blue apartment in central Florence — San Gallo district, breakfast included, paid on-site parking, 15-min walk to Palazzo Vecchio, close to Galleria dell'Accademia.</div>
   
     <div class="card hotel-card">
       <div class="card-label">🏨 Hotel</div>
-      <div class="hotel-name">Garden Blue · San Marco / Santissima Annunziata <span class="badge-confirmed">✓ Booked</span></div>
-      <div class="hotel-link"><a href="https://www.booking.com/" target="_blank" rel="noopener">View on Booking.com →</a></div>
+      <div class="hotel-name">Garden Blue <span class="badge-confirmed">✓ Booked</span></div>
+      <div class="hotel-link"><a href="https://www.booking.com/hotel/it/garden-blue.en-gb.html" target="_blank" rel="noopener">View on Booking.com →</a></div>
     </div>
   
     <div class="card travel-card">
@@ -265,8 +265,8 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
 <script src="map-data.js"></script>
 <script>
 (function() {
-  const tripStops = [{"name": "Mestre (mainland Venice)", "lat": 45.4843, "lon": 12.2415, "type": "confirmed", "role": "prev", "i": 9}, {"name": "Florence", "lat": 43.779, "lon": 11.2613, "type": "confirmed", "role": "current", "i": 10}, {"name": "Pisa", "lat": 43.7228, "lon": 10.4017, "type": "day", "role": "next", "i": 11}];
-  const excursions = [{"name": "Mestre \u00b7 07:00 leave", "lat": 45.4843, "lon": 12.2415, "order": 1}, {"name": "Basilica di Sant'Antonio (Padua) \u2014 Mass", "lat": 45.4014, "lon": 11.88, "order": 2}, {"name": "Drive Padua \u2192 Florence", "lat": 44.5, "lon": 11.5, "order": 3}, {"name": "Garden Blue (check in)", "lat": 43.779, "lon": 11.2613, "order": 4}, {"name": "Galleria dell'Accademia (David)", "lat": 43.7767, "lon": 11.2589, "order": 5}, {"name": "Duomo + Ponte Vecchio + Piazzale Michelangelo (sunset)", "lat": 43.77, "lon": 11.258, "order": 6}];
+  const tripStops = [{"name": "Mestre (mainland Venice)", "lat": 45.4843, "lon": 12.2415, "type": "confirmed", "role": "prev", "i": 9}, {"name": "Florence", "lat": 43.78, "lon": 11.258, "type": "confirmed", "role": "current", "i": 10}, {"name": "Pisa", "lat": 43.7228, "lon": 10.4017, "type": "day", "role": "next", "i": 11}];
+  const excursions = [{"name": "Mestre \u00b7 07:00 leave", "lat": 45.4843, "lon": 12.2415, "order": 1}, {"name": "Basilica di Sant'Antonio (Padua) \u2014 Mass", "lat": 45.4014, "lon": 11.88, "order": 2}, {"name": "Drive Padua \u2192 Florence", "lat": 44.5, "lon": 11.5, "order": 3}, {"name": "Garden Blue (check in)", "lat": 43.78, "lon": 11.258, "order": 4}, {"name": "Galleria dell'Accademia (David)", "lat": 43.7767, "lon": 11.2589, "order": 5}, {"name": "Duomo + Ponte Vecchio + Piazzale Michelangelo (sunset)", "lat": 43.77, "lon": 11.258, "order": 6}];
   const mapScale = "regional";
   const ns = 'http://www.w3.org/2000/svg';
   const svg = document.getElementById('mini-map-svg');
