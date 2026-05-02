@@ -104,12 +104,24 @@ header h1 em {
 .dc-flag { font-size: 18px; line-height: 1; }
 .dc-body { padding: 10px 14px 8px; font-size: 13px; line-height: 1.55; color: var(--ink); flex: 1; }
 .dc-body .hotel { display: block; margin-top: 6px; font-size: 12px; color: var(--gold-deep); font-weight: 600; }
-.dc-actions { display: flex; gap: 6px; padding: 8px 12px 12px; border-top: 1px dashed rgba(13,27,42,0.08); }
+.dc-actions { display: flex; gap: 6px; padding: 8px 12px 10px; border-top: 1px dashed rgba(13,27,42,0.08); }
 .dc-actions a { flex: 1; text-align: center; padding: 7px 10px; font-size: 11px; font-weight: 600; text-decoration: none; border-radius: 3px; letter-spacing: 0.05em; transition: background 0.12s; }
 .dc-actions a.maps { background: var(--ink); color: var(--cream); }
 .dc-actions a.maps:hover { background: var(--gold-deep); }
 .dc-actions a.details { background: var(--cream); color: var(--ink); border: 1px solid var(--line); }
 .dc-actions a.details:hover { background: var(--gold); border-color: var(--gold-deep); color: white; }
+.dc-mini-map { position: relative; width: 100%; height: 130px; background: #f0e8d8; overflow: hidden; border-top: 1px solid var(--line); }
+.dc-mini-map iframe { width: 100%; height: 100%; border: 0; display: block; filter: saturate(0.85); }
+.dc-mini-map .map-pill { position: absolute; left: 8px; top: 8px; background: rgba(13,27,42,0.92); color: var(--cream); padding: 4px 10px; border-radius: 3px; font-size: 11px; font-weight: 600; text-decoration: none; letter-spacing: 0.04em; box-shadow: 0 1px 4px rgba(0,0,0,0.3); transition: background 0.12s; }
+.dc-mini-map .map-pill:hover { background: var(--gold-deep); }
+.dc-tags { display: flex; flex-wrap: wrap; gap: 4px; padding: 0 14px 10px; }
+.dc-tags .chip { font-size: 10px; padding: 3px 8px; border-radius: 3px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; background: rgba(74,144,184,0.12); color: var(--sky); border: 1px solid rgba(74,144,184,0.3); }
+.dc-tags .chip.gold { background: rgba(200,155,60,0.14); color: var(--gold-deep); border-color: rgba(200,155,60,0.35); }
+.dc-tags .chip.rose { background: rgba(196,74,74,0.12); color: var(--rose); border-color: rgba(196,74,74,0.3); }
+.dc-tags .chip.sage { background: rgba(107,142,111,0.14); color: var(--sage); border-color: rgba(107,142,111,0.35); }
+.callout { background: #fbeaea; border: 1px dashed var(--rose); border-radius: 4px; padding: 12px 16px; margin-bottom: 22px; font-size: 13px; line-height: 1.6; color: #6b2222; }
+.callout .cl-tag { display: inline-block; font-weight: 700; color: var(--rose); letter-spacing: 0.1em; font-size: 11px; padding: 2px 6px; background: rgba(196,74,74,0.14); border-radius: 2px; margin-right: 6px; }
+.callout strong { color: #4a1818; }
 .map-wrap.dragging { cursor: grabbing; }
 #map-svg { width: 100%; height: 100%; display: block; position: absolute; inset: 0; }
 .country {
@@ -791,7 +803,13 @@ daySelect.addEventListener('change', (e) => {
   ];
   const section = document.createElement('section');
   section.className = 'cards-section';
-  section.innerHTML = '<h2>Day-by-day</h2><div class="sub-h2">Every stop · click "Maps" for Google Maps · "Details" for the full day page</div>';
+  section.innerHTML =
+    '<h2>Day-by-day</h2>' +
+    '<div class="sub-h2">Every stop · live Google Maps preview · click for full day details</div>' +
+    '<div class="callout">' +
+      '<span class="cl-tag">🇨🇳 CN</span>' +
+      '<strong>Beijing outbound (22 hrs · Fri 10 Jul):</strong> Land 04:40. Rest at Novotel T3 airside (~3 hrs, no visa needed). Airport Express 08:00 → Dongzhimen (45 min, ¥35). <strong>Tiananmen Square + Forbidden City</strong> (opens 08:30, allow 4 hrs). Wangfujing lunch. Back T3 by midnight. CA961 departs 02:50. <strong>Apply 144-hr Visa-Free Transit before leaving Auckland.</strong>' +
+    '</div>';
   legs.forEach(leg => {
     const legDiv = document.createElement('div');
     legDiv.className = 'leg';
@@ -808,7 +826,18 @@ daySelect.addEventListener('change', (e) => {
       const flag = (s.country.match(/[\u{1F1E6}-\u{1F1FF}]{2}/u) || [''])[0];
       const file = s.file || ('day_' + (i+1) + '.html');
       const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + s.lat + ',' + s.lon;
+      const embedUrl = 'https://maps.google.com/maps?q=' + s.lat + ',' + s.lon + '&z=' + (s.type === 'day' ? 13 : 11) + '&output=embed';
       const hotelLine = s.hotel ? '<span class="hotel">🏨 ' + s.hotel + '</span>' : '';
+      // Auto-tags
+      const tags = [];
+      if (s.type === 'confirmed') tags.push('<span class="chip sage">✓ Hotel booked</span>');
+      else if (s.type === 'pending') tags.push('<span class="chip gold">Hotel TBD</span>');
+      else if (s.type === 'day') tags.push('<span class="chip">Day stop</span>');
+      else if (s.type === 'sister') tags.push('<span class="chip rose">Sister stay 💙</span>');
+      else if (s.type === 'family-stay') tags.push('<span class="chip sage">Friend stay 💚</span>');
+      else if (s.type === 'flight') tags.push('<span class="chip">✈ Transit</span>');
+      else if (s.type === 'home') tags.push('<span class="chip gold">🏠 Home</span>');
+      const tagsHtml = tags.length ? '<div class="dc-tags">' + tags.join('') + '</div>' : '';
       const card = document.createElement('div');
       card.className = 'day-card ' + s.type;
       card.innerHTML =
@@ -822,9 +851,13 @@ daySelect.addEventListener('change', (e) => {
           '<div class="dc-flag">' + flag + '</div>' +
         '</div>' +
         '<div class="dc-body">' + s.desc + hotelLine + '</div>' +
+        tagsHtml +
         '<div class="dc-actions">' +
-          '<a class="maps" href="' + mapsUrl + '" target="_blank" rel="noopener">📍 Maps ↗</a>' +
           '<a class="details" href="' + file + '">Day details →</a>' +
+        '</div>' +
+        '<div class="dc-mini-map">' +
+          '<a class="map-pill" href="' + mapsUrl + '" target="_blank" rel="noopener">📍 Maps ↗</a>' +
+          '<iframe loading="lazy" src="' + embedUrl + '" referrerpolicy="no-referrer-when-downgrade"></iframe>' +
         '</div>';
       grid.appendChild(card);
     }

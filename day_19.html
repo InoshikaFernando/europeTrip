@@ -234,7 +234,7 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
         poly.forEach(ring => {
           ring.forEach((pt, j) => {
             const [x, y] = window.projectMercator(pt[0], pt[1]);
-            if (x >= minX - w*0.5 && x <= maxX + w*0.5 && y >= minY - h*0.5 && y <= maxY + h*0.5) inBounds = true;
+            if (x >= minX - w*10 && x <= maxX + w*10 && y >= minY - h*10 && y <= maxY + h*10) inBounds = true;
             d += (j === 0 ? 'M' : 'L') + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
           });
           d += 'Z ';
