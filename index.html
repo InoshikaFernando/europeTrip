@@ -110,10 +110,16 @@ header h1 em {
 .dc-actions a.maps:hover { background: var(--gold-deep); }
 .dc-actions a.details { background: var(--cream); color: var(--ink); border: 1px solid var(--line); }
 .dc-actions a.details:hover { background: var(--gold); border-color: var(--gold-deep); color: white; }
-.dc-mini-map { position: relative; width: 100%; height: 130px; background: #f0e8d8; overflow: hidden; border-top: 1px solid var(--line); }
+.dc-mini-map { position: relative; width: 100%; height: 160px; background: #f0e8d8; overflow: hidden; border-top: 1px solid var(--line); }
 .dc-mini-map iframe { width: 100%; height: 100%; border: 0; display: block; filter: saturate(0.85); }
-.dc-mini-map .map-pill { position: absolute; left: 8px; top: 8px; background: rgba(13,27,42,0.92); color: var(--cream); padding: 4px 10px; border-radius: 3px; font-size: 11px; font-weight: 600; text-decoration: none; letter-spacing: 0.04em; box-shadow: 0 1px 4px rgba(0,0,0,0.3); transition: background 0.12s; }
-.dc-mini-map .map-pill:hover { background: var(--gold-deep); }
+.dc-mini-map .map-pill { position: absolute; left: 8px; top: 8px; background: rgba(255,255,255,0.95); color: var(--sky); padding: 4px 10px; border-radius: 3px; font-size: 11px; font-weight: 700; text-decoration: none; letter-spacing: 0.04em; box-shadow: 0 1px 4px rgba(0,0,0,0.3); transition: background 0.12s; z-index: 2; }
+.dc-mini-map .map-pill:hover { background: var(--gold); color: white; }
+.dc-route-btn { display: block; padding: 10px 14px; background: var(--rose); color: white; text-align: center; text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: 0.04em; transition: background 0.12s; }
+.dc-route-btn:hover { background: #a13838; }
+.dc-route-btn.walking { background: var(--sage); }
+.dc-route-btn.walking:hover { background: #4a6a4d; }
+.dc-route-btn.flight { background: var(--ink); }
+.dc-route-btn.flight:hover { background: #2a3548; }
 .dc-tags { display: flex; flex-wrap: wrap; gap: 4px; padding: 0 14px 10px; }
 .dc-tags .chip { font-size: 10px; padding: 3px 8px; border-radius: 3px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; background: rgba(74,144,184,0.12); color: var(--sky); border: 1px solid rgba(74,144,184,0.3); }
 .dc-tags .chip.gold { background: rgba(200,155,60,0.14); color: var(--gold-deep); border-color: rgba(200,155,60,0.35); }
@@ -832,12 +838,27 @@ daySelect.addEventListener('change', (e) => {
     const grid = legDiv.querySelector('.cards-grid');
     for (let i = leg.range[0]; i <= leg.range[1] && i < stops.length; i++) {
       const s = stops[i];
-      const flag = (s.country.match(/[\u{1F1E6}-\u{1F1FF}]{2}/u) || [''])[0];
+      const prev = i > 0 ? stops[i-1] : null;
+      // Country code from emoji+name (DE / AT / CZ etc)
+      const countryCodes = { '🇩🇪':'DE', '🇦🇹':'AT', '🇨🇿':'CZ', '🇭🇺':'HU', '🇸🇮':'SI', '🇮🇹':'IT', '🇫🇷':'FR', '🇨🇭':'CH', '🇳🇱':'NL', '🇧🇪':'BE', '🇩🇰':'DK', '🇸🇪':'SE', '🇨🇳':'CN', '🇳🇿':'NZ' };
+      let cc = '';
+      for (const flag of Object.keys(countryCodes)) { if (s.country.indexOf(flag) >= 0) { cc = countryCodes[flag]; break; } }
       const file = s.file || ('day_' + (i+1) + '.html');
       const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=' + s.lat + ',' + s.lon;
-      const embedUrl = 'https://maps.google.com/maps?q=' + s.lat + ',' + s.lon + '&z=' + (s.type === 'day' ? 13 : 11) + '&output=embed';
+      // Movement check: route map if prev exists, different coords, and within Europe range
+      const sameLoc = prev && Math.abs(prev.lat - s.lat) < 0.05 && Math.abs(prev.lon - s.lon) < 0.05;
+      const isFlightLeg = s.type === 'flight' || (prev && prev.type === 'flight') || s.type === 'home';
+      const useRoute = prev && !sameLoc && !isFlightLeg;
+      let embedUrl, dirsUrl;
+      if (useRoute) {
+        embedUrl = 'https://maps.google.com/maps?saddr=' + prev.lat + ',' + prev.lon + '&daddr=' + s.lat + ',' + s.lon + '&output=embed';
+        dirsUrl = 'https://www.google.com/maps/dir/' + prev.lat + ',' + prev.lon + '/' + s.lat + ',' + s.lon;
+      } else {
+        embedUrl = 'https://maps.google.com/maps?q=' + s.lat + ',' + s.lon + '&z=' + (s.type === 'day' ? 13 : 11) + '&output=embed';
+        dirsUrl = mapsUrl;
+      }
       const hotelLine = s.hotel ? '<span class="hotel">🏨 ' + s.hotel + '</span>' : '';
-      // Auto-tags
+      // Auto-tags + descriptive secondary tag from name/desc
       const tags = [];
       if (s.type === 'confirmed') tags.push('<span class="chip sage">✓ Hotel booked</span>');
       else if (s.type === 'pending') tags.push('<span class="chip gold">Hotel TBD</span>');
@@ -846,7 +867,25 @@ daySelect.addEventListener('change', (e) => {
       else if (s.type === 'family-stay') tags.push('<span class="chip sage">Friend stay 💚</span>');
       else if (s.type === 'flight') tags.push('<span class="chip">✈ Transit</span>');
       else if (s.type === 'home') tags.push('<span class="chip gold">🏠 Home</span>');
+      // Special-cue tags by name/desc
+      const lower = (s.name + ' ' + s.desc).toLowerCase();
+      if (lower.indexOf('mass') >= 0 || lower.indexOf('vigil') >= 0) tags.push('<span class="chip rose">⛪ Mass / Vigil</span>');
+      if (lower.indexOf('procession') >= 0) tags.push('<span class="chip rose">🕯️ Procession</span>');
+      if (lower.indexOf('day-trip') >= 0 || lower.indexOf('day trip') >= 0) tags.push('<span class="chip">Day trip</span>');
+      if (lower.indexOf('ca784') >= 0 || lower.indexOf('ca961') >= 0 || lower.indexOf('ca962') >= 0 || lower.indexOf('ca783') >= 0) tags.push('<span class="chip gold">✈ Air China</span>');
+      if (lower.indexOf('train') >= 0 || lower.indexOf('tgv') >= 0 || lower.indexOf('eurostar') >= 0 || lower.indexOf('x2000') >= 0) tags.push('<span class="chip">🚆 Train</span>');
       const tagsHtml = tags.length ? '<div class="dc-tags">' + tags.join('') + '</div>' : '';
+
+      // Route action button
+      let routeBtn = '';
+      if (useRoute) {
+        routeBtn = '<a class="dc-route-btn" href="' + dirsUrl + '" target="_blank" rel="noopener">🚗 Drive ' + (prev.name) + ' → ' + s.name + ' →</a>';
+      } else if (s.type === 'flight') {
+        routeBtn = '<a class="dc-route-btn flight" href="' + mapsUrl + '" target="_blank" rel="noopener">✈ View ' + s.name + ' on Maps →</a>';
+      } else if (sameLoc || s.type === 'day') {
+        routeBtn = '<a class="dc-route-btn walking" href="' + mapsUrl + '" target="_blank" rel="noopener">🚶 Explore ' + s.name + ' →</a>';
+      }
+
       const card = document.createElement('div');
       card.className = 'day-card ' + s.type;
       card.innerHTML =
@@ -855,9 +894,9 @@ daySelect.addEventListener('change', (e) => {
           '<div class="dc-num">' + (i+1) + '</div>' +
           '<div class="dc-info">' +
             '<div class="dc-date">' + s.date + '</div>' +
-            '<div class="dc-name">' + s.name + '</div>' +
+            '<div class="dc-name">' + (useRoute && prev ? (prev.name + ' → ' + s.name) : s.name) + '</div>' +
           '</div>' +
-          '<div class="dc-flag">' + flag + '</div>' +
+          '<div class="dc-flag" title="' + cc + '">' + (cc || '🌐') + '</div>' +
         '</div>' +
         '<div class="dc-body">' + s.desc + hotelLine + '</div>' +
         tagsHtml +
@@ -865,14 +904,21 @@ daySelect.addEventListener('change', (e) => {
           '<a class="details" href="' + file + '">Day details →</a>' +
         '</div>' +
         '<div class="dc-mini-map">' +
-          '<a class="map-pill" href="' + mapsUrl + '" target="_blank" rel="noopener">📍 Maps ↗</a>' +
+          '<a class="map-pill" href="' + dirsUrl + '" target="_blank" rel="noopener">Maps ↗</a>' +
           '<iframe loading="lazy" src="' + embedUrl + '" referrerpolicy="no-referrer-when-downgrade"></iframe>' +
-        '</div>';
+        '</div>' +
+        routeBtn;
       grid.appendChild(card);
     }
     section.appendChild(legDiv);
   });
-  document.body.appendChild(section);
+  // Insert directly after the big map-wrap (instead of at end of body)
+  const mapWrap = document.getElementById('map-wrap');
+  if (mapWrap && mapWrap.parentNode) {
+    mapWrap.parentNode.insertBefore(section, mapWrap.nextSibling);
+  } else {
+    document.body.appendChild(section);
+  }
 })();
 
 window.addEventListener('resize', () => fitToBounds(europeCoords, 50));
