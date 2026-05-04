@@ -490,7 +490,7 @@ function flightCurve(a, b) {
   return 'M' + x1.toFixed(1) + ',' + y1.toFixed(1) + ' Q' + cx.toFixed(1) + ',' + cy.toFixed(1) + ' ' + x2.toFixed(1) + ',' + y2.toFixed(1);
 }
 const akl = stops[0], pek = stops[1];
-const muc = stops.find(s => s.name === 'Munich (transit)');
+const muc = stops.find(s => s.name === 'Munich (pre-flight)' || s.name === 'Munich (transit)');
 [
   flightCurve(akl, pek),
   flightCurve(pek, stops[2]),
