@@ -119,6 +119,29 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
 .back .grid > div { padding:6px 8px; background:white; border-radius:4px; border-left:2px solid var(--gold); }
 .back .grid b { display:block; font-size:11px; color:var(--gold-deep); }
 
+
+.day-page .main-moment {
+  background:linear-gradient(135deg, rgba(200,155,60,0.18), rgba(200,155,60,0.06));
+  border:1.5px solid rgba(200,155,60,0.45); border-radius:6px;
+  padding:8px 11px; margin:7px 0 4px;
+  position:relative;
+}
+.day-page .main-moment::before {
+  content:'✨'; position:absolute; top:6px; right:8px; font-size:14px; opacity:0.4;
+}
+.day-page .main-moment .mm-label {
+  font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.18em;
+  text-transform:uppercase; color:var(--gold-deep); font-weight:700; display:block;
+  margin-bottom:3px;
+}
+.day-page .main-moment .mm-title {
+  font-family:'Fraunces',serif; font-size:13px; font-weight:700; color:var(--ink);
+  line-height:1.2; margin-bottom:3px;
+}
+.day-page .main-moment .mm-desc {
+  font-size:9.5px; line-height:1.4; color:var(--ink); opacity:0.78;
+}
+
 /* ===== SCREEN PREVIEW MODE ===== */
 @media screen {
   body { padding:20px; background:#aaa; }
@@ -225,9 +248,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>CA784</b> flies non-stop AKL → Beijing for ~10,260 km over the Pacific Ocean. You'll cross the international dateline AND lose 4 hours!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">First long-haul flight to Europe ✈</div><div class="mm-desc">Your very first flight to Europe — into the night, over the Pacific, dinner on a tray.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL · KIDS DRAW HERE</div>
-    <div class="journal-box"><i>What I'll miss from home:</i></div>
+    <div class="journal-box"><i>What I'll miss most from home (and why):</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Land Beijing 04:40 · Atour Hotel + Forbidden City tour.</div>
@@ -272,9 +295,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact">The <b>Forbidden City has 980 buildings</b> and was off-limits to commoners for 500 years! Today over 14 million people visit annually.</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Walking the Forbidden City 🏯</div><div class="mm-desc">You stood where the Chinese emperors stood — 980 buildings, 600 years of secrets.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The biggest thing I saw at the Forbidden City:</i></div>
+    <div class="journal-box"><i>Why did the Forbidden City feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Land Munich 07:05 · drive via Salzburg to Burg Altpernstein.</div>
@@ -319,9 +342,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>Stiftskeller St. Peter</b> is the oldest restaurant in Europe — open since the year <b>803 AD</b>. That's 1,223 years of dinners!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Mirabell Gardens "Do-Re-Mi" steps 🎼</div><div class="mm-desc">The actual staircase where Maria sings with the Von Trapp children. Same fountain. Same view.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The Do-Re-Mi steps were:</i></div>
+    <div class="journal-box"><i>Why did Salzburg feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Hallstatt lake village day-trip from castle.</div>
@@ -367,9 +390,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact">Hallstatt is so beautiful that <b>China built an exact replica</b> of the entire village in Guangdong Province!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Hallstatt — the lake village so pretty China copied it 🏔</div><div class="mm-desc">UNESCO-protected. 7,000 years old (oldest salt mine in Europe). Best Instagram photo of the trip.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The colour of Hallstatt lake was:</i></div>
+    <div class="journal-box"><i>Why did Hallstatt feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Long drive Burg → Prague · 430 km · 5 hrs.</div>
@@ -414,9 +437,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact">Prague's <b>Astronomical Clock has been ticking since 1410</b>. That's 615 years of perfect time!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Charles Bridge at golden hour 🌉</div><div class="mm-desc">600-year-old bridge with 30 saint statues. Walk it slowly at sunset — the best light of the day.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The first thing I noticed about Prague:</i></div>
+    <div class="journal-box"><i>Why did Prague feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Prague Castle + Jewish Quarter + Vltava river cruise.</div>
@@ -461,9 +484,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>Prague Castle</b> is the largest ancient castle in the world (~70,000 m²) — Guinness World Records confirms it!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Prague Castle — the biggest in the world 🏰</div><div class="mm-desc">Guinness World Records confirms it. Over 70,000 m² of palaces, churches, gardens, towers.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>My favourite part of Prague Castle:</i></div>
+    <div class="journal-box"><i>Why did Prague Castle feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Drive Prague → Vienna · 320 km · 3.5–4 hrs.</div>
@@ -508,9 +531,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>Vienna's Schönbrunn Palace has 1,441 rooms</b> · the Habsburg emperors used it as a summer residence. Mozart performed here at age 6!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Sachertorte at Café Sacher 🍰</div><div class="mm-desc">The original chocolate-apricot cake invented in 1832. Eat it in the same room where emperors did.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>Sachertorte tastes like:</i></div>
+    <div class="journal-box"><i>Why did Vienna feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Drive Vienna → Budapest · 270 km · Hungarian thermal baths!</div>
@@ -556,9 +579,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact">Budapest is <b>actually TWO cities</b> — hilly <b>Buda</b> on the west, flat <b>Pest</b> on the east. They merged in 1873!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Splashing in Széchenyi Thermal Baths 🛁</div><div class="mm-desc">18 pools at different temperatures. The outdoor one is steaming hot even in summer. Pure joy.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The thermal bath water felt:</i></div>
+    <div class="journal-box"><i>Why did the Budapest baths feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Big drive Budapest → Bled (SI) → Venice/Mestre · 530 km · 8 hrs.</div>
@@ -603,9 +626,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>Lake Bled's island has a wishing bell</b> · ring it 3 times for your wish to come true · but climb 99 steps first!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Bled's wishing bell on the island ⛪</div><div class="mm-desc">99 steps up to the church. Ring the bell 3 times — your wish comes true (so the legend goes).</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>If I rang the Bled wishing bell, I would wish for:</i></div>
+    <div class="journal-box"><i>If I rang the Bled bell, my wish would be:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Full day on Venice islands · 17:00 ⛪ Sat Vigil at San Marco.</div>
@@ -651,9 +674,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact">Venice is built on <b>118 small islands</b> connected by ~400 bridges · zero cars · the buses are boats (vaporetti)!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Gondola ride on Venice canals 🚤</div><div class="mm-desc">A wooden boat older than your grandparents, on water in a city without streets. Sing if your gondolier sings!</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>Burano's brightest house was:</i></div>
+    <div class="journal-box"><i>Why did the Venice gondola feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Drive Mestre → Florence · 270 km · No Mass needed (Vigil done).</div>
@@ -698,9 +721,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>Florence's Duomo</b> dome was the largest in the world for 400 years · Brunelleschi engineered it in 1436 without using scaffolding from below!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Sunset at Piazzale Michelangelo 🌅</div><div class="mm-desc">The view EVERY postcard of Florence is taken from. Duomo on the left, Arno river below, hills rolling away.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The Duomo dome made me feel:</i></div>
+    <div class="journal-box"><i>Why did Florence feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Florence → Pisa → Perugia → Rome · 570 km · long day.</div>
@@ -745,9 +768,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>The Pisa Tower leans 3.97°</b> (~3.9m off vertical) · it began tilting during construction in 1173 because of soft ground · still standing 850+ years later!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Holding up the Pisa Tower for a photo 📸</div><div class="mm-desc">The classic Instagram pose. Tower has been leaning for 850 years — and is now propped back up by 4° just for you.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>How I "held up" the Pisa Tower for the photo:</i></div>
+    <div class="journal-box"><i>Why did the Pisa Tower feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Day trip from Rome — Pompeii + Vesuvius!</div>
@@ -792,9 +815,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>Mount Vesuvius erupted in 79 AD</b>, burying Pompeii under ash for 1,700 years · the people of Naples still live in its shadow today!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Walking the streets of Pompeii 🌋</div><div class="mm-desc">Real ancient Romans walked here 2,000 years ago. The grooves in the stones are from chariot wheels. Vesuvius watches above.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The scariest thing I learned about Pompeii:</i></div>
+    <div class="journal-box"><i>Why did Pompeii feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Vatican Day · Sistine Chapel · St. Peter's · Castel Sant'Angelo.</div>
@@ -841,9 +864,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact">Vatican City is the <b>smallest country in the world</b> — only <b>0.49 km²</b>. You could walk across it in 20 minutes!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Standing under the Sistine Chapel ceiling 🎨</div><div class="mm-desc">Michelangelo painted it lying on his back for 4 years. THE most famous ceiling in the world. No photos allowed — burn it into your memory.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The Sistine Chapel ceiling looked:</i></div>
+    <div class="journal-box"><i>Why did the Vatican feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Drive Rome → Florence stop → Milan (friend stay).</div>
@@ -889,9 +912,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact">Milan's <b>Duomo cathedral has 3,400 statues</b> on it · took <b>nearly 600 years</b> to build (1386 to 1965).</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Climbing to the Milan Duomo rooftop 🏛</div><div class="mm-desc">3,400 statues at touching distance. Walking among Gothic spires above one of Europe&#39;s biggest cathedrals.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The Duomo terrace view was:</i></div>
+    <div class="journal-box"><i>Why did the Milan Duomo feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Milan morning · drive Simplon Pass to Stalden (Swiss Alps!).</div>
@@ -936,9 +959,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact">Switzerland has <b>7,000 named lakes</b> · 4 official languages · and so many cows they outnumber people in some Alpine valleys.</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Crossing the Simplon Pass into the Alps 🏔</div><div class="mm-desc">Driving 2,000m up through twisting mountain roads from Italy into Switzerland. Snowy peaks even in July.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The Simplon Pass mountains were:</i></div>
+    <div class="journal-box"><i>Why did the Alps feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Gornergrat train (3,089m) · then drive to Moléson. Sat Vigil at Gruyères.</div>
@@ -984,9 +1007,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>The Matterhorn</b> is one of the most photographed mountains in the world · its perfect pyramid shape inspired the Toblerone chocolate logo!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Matterhorn at 3,089m on Gornergrat ⛰</div><div class="mm-desc">Switzerland&#39;s most photographed mountain. The shape that inspired Toblerone. You&#39;re higher than most clouds.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The view from Gornergrat:</i></div>
+    <div class="journal-box"><i>Why did the Matterhorn feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Geneva day-trip · sightseeing only (Sat Vigil done).</div>
@@ -1032,9 +1055,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>Geneva's Jet d'Eau</b> shoots water <b>140m into the sky</b> · originally a safety valve for water pressure in 1886, now the city's icon.</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Jet d'Eau spraying 140m into the sky ⛲</div><div class="mm-desc">500 litres of Lake Geneva water per second, shot straight up. Walk into the spray on a hot day — instant cool-down.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>Best moment in Geneva:</i></div>
+    <div class="journal-box"><i>Why did Geneva feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Drive Moléson → Bern (3 hr stop) → Ottobeuren Bavaria.</div>
@@ -1080,9 +1103,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>Bern's Zytglogge clock</b> has been telling time since the 13th century · its astronomical display is the inspiration behind the more famous Prague version.</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">3-hour stop in Bern, Switzerland&#39;s capital 🐻</div><div class="mm-desc">The Zytglogge clock has been ticking since the 1200s. Watch the figurines come out on the hour.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The Bern bears were:</i></div>
+    <div class="journal-box"><i>Why did Bern feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> BIG day! Drop car at MUC · KLM to Toulouse · drive to Lourdes · Torch Procession.</div>
@@ -1128,9 +1151,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>The Lourdes Sanctuary</b> receives 6 million pilgrims a year · the Torch Procession is held EVERY night from April to October at 21:00.</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Torch Procession at Lourdes Sanctuary 🕯</div><div class="mm-desc">21:00 every night. Thousands of candles. Salve Regina sung in every language. The most magical pilgrimage moment.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The Torch Procession candles looked like:</i></div>
+    <div class="journal-box"><i>Why did the Torch Procession feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Big train day. Lourdes → Toulouse → Paris → Amsterdam (~14 hrs total).</div>
@@ -1176,9 +1199,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>The TGV is the world's fastest scheduled train</b> · reaching 320 km/h on commercial routes · the record is 574.8 km/h set in 2007!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">TGV racing 320 km/h through France 🚄</div><div class="mm-desc">The world&#39;s fastest scheduled train. Window-watching through 5 hours of countryside, vineyards, towns flying past.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The fastest the TGV went today:</i></div>
+    <div class="journal-box"><i>Why did the TGV feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> AMS → Brussels stop (Grand Place!) → Paris Le Kremlin-Bicêtre.</div>
@@ -1225,9 +1248,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>The Eiffel Tower grows 15 cm taller in summer</b> · metal expands in heat. At sunset it sparkles for 5 minutes on the hour (every hour after dark).</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Eiffel Tower lit up at night 🗼</div><div class="mm-desc">The hourly sparkle show — 20,000 lights flashing for 5 minutes every hour after dark. Pure Paris magic.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The Eiffel Tower at night looked:</i></div>
+    <div class="journal-box"><i>Why did the Eiffel Tower feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Paris morning (Louvre · Sainte-Chapelle) · drive back to AMS afternoon.</div>
@@ -1274,9 +1297,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>The Louvre is the world's largest art museum</b> · 615,000 works · if you spent 30 seconds at each painting it would take you over 100 days to see them all!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Looking the Mona Lisa in the eye 👁</div><div class="mm-desc">Smaller than you think (77 × 53 cm). Painted by Leonardo da Vinci in 1503. The most famous painting on Earth.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The Mona Lisa was smaller / bigger / same as I thought:</i></div>
+    <div class="journal-box"><i>Why did the Mona Lisa feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> AMS REST day with cousin · Sat Vigil 17:00 at Sint-Nicolaaskerk.</div>
@@ -1322,9 +1345,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>Amsterdam has more bicycles than people</b> · about 880,000 bikes for 870,000 people · and 165 canals!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Walking Amsterdam's UNESCO canal rings 🚲</div><div class="mm-desc">17th-century engineering. 165 canals. 1,500 bridges. More bikes than people. Stroopwafels fresh off the iron.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The first thing I'd do if I lived in Amsterdam:</i></div>
+    <div class="journal-box"><i>Why did Amsterdam feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Morning flight AMS → Copenhagen · full Tivoli afternoon!</div>
@@ -1370,9 +1393,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>Lego was invented in Denmark in 1932</b> · the name comes from Danish <b>"leg godt"</b> meaning "play well" · over 600 billion bricks made.</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Tivoli Gardens at dusk 🎢</div><div class="mm-desc">World&#39;s 2nd oldest amusement park (1843). Where Walt Disney got his idea for Disneyland. Magical fairy lights.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The best Tivoli ride was:</i></div>
+    <div class="journal-box"><i>Why did Tivoli feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> X2000 train across Øresund Bridge to Gothenburg!</div>
@@ -1417,9 +1440,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>The Øresund Bridge is 8 km long</b> · the train goes UNDERWATER for 4 km then climbs up to a bridge with massive cable-stayed towers. Engineering wow!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Riding the X2000 underwater + over Øresund 🌉</div><div class="mm-desc">The train goes UNDERWATER for 4km, then climbs to a massive bridge with sky-high cables. Engineering wonder.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The Øresund Bridge crossing felt:</i></div>
+    <div class="journal-box"><i>Why did the Øresund crossing feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Full sister day · Liseberg amusement park · Haga · archipelago boat.</div>
@@ -1465,9 +1488,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact">Swedes are the <b>most cashless people in the world</b> · they pay for everything by card or phone · only 1% of all transactions use cash.</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">The GIANT cinnamon bun at Café Husaren 🥐</div><div class="mm-desc">Bigger than your head. Sticky, cinnamon-y, perfect. World&#39;s biggest kanelbulle. You earned it.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The Café Husaren cinnamon bun was:</i></div>
+    <div class="journal-box"><i>Why did the cinnamon bun feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Fly GOT → MUC evening · last European hotel.</div>
@@ -1512,9 +1535,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>Lufthansa's mascot</b> is a crane in flight · since 1918. The name "Lufthansa" combines "Luft" (air) + "Hansa" (German trade guild).</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Last European sunset 🌇</div><div class="mm-desc">25 nights, 15 countries, 5 family members. The sun setting on this trip — but new memories rising forever.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>Saying goodbye to sister + grandparents felt:</i></div>
+    <div class="journal-box"><i>What I&#39;ll miss most about Europe:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> CA962 MUC → Beijing 13:00 · 9h 45m · the long way home begins.</div>
@@ -1559,9 +1582,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>Polar route</b> · CA962 flies over Russia and Mongolia at ~10,000m altitude. The temperature outside the window is around <b>−55°C</b> · colder than Antarctica!</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Polar route over Mongolia at -55°C ❄</div><div class="mm-desc">10,000m up. Outside is colder than Antarctica. Below you: endless steppes, lakes, mountains. Window seat = magic.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>What I'm most looking forward to back home:</i></div>
+    <div class="journal-box"><i>What I dreamed about on the flight:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> Beijing layover 2 · MUTIANYU GREAT WALL DAY!</div>
@@ -1608,9 +1631,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact">The Great Wall is over <b>21,196 km long</b> · longer than the Earth's equator! Mutianyu section was built in the 14th century during the Ming Dynasty.</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">TOBOGGAN down the Great Wall 🛷</div><div class="mm-desc">Cable car up. Climb a section of the longest wall on Earth (21,000+ km!). Then slide DOWN on a toboggan track.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The toboggan ride down felt:</i></div>
+    <div class="journal-box"><i>Why did the Great Wall feel special to me:</i></div>
   </div>
 
   <div class="tomorrow"><b>🔮 Tomorrow:</b> CA783 → AKL · HOME 🏠 · 12h 25m to Auckland.</div>
@@ -1656,9 +1679,9 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--
     <div class="fun-fact"><b>Travelling east to west across the dateline</b> you arrive "earlier" than you left! You did Beijing → Auckland in 12h 25m but the clock says only ~16h passed. Time-bending magic.</div>
   </div>
 
-  <div class="section" style="margin-top:auto;">
+  <div class="main-moment"><span class="mm-label">✨ Today's Main Moment</span><div class="mm-title">Arriving HOME after 31 days 🏠</div><div class="mm-desc">Your own bed. Familiar food. Friends to tell stories to. The trip is over but the memories last forever.</div></div><div class="section" style="margin-top:auto;">
     <div class="label">✏️ JOURNAL</div>
-    <div class="journal-box"><i>The first thing I want to do at home:</i></div>
+    <div class="journal-box"><i>Best moment of the whole 31 days was:</i></div>
   </div>
 
   <div class="tomorrow"><b>🎉 The Grand Journey ends here.</b> 25 nights, 15 countries, 5 family members, infinite memories. Welcome home!</div>
