@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎨 Kids Zone — Europe Trip 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pink:#ff6b9d; --yellow:#ffd93d; --green:#6cc644; --blue:#4dabf7;
+  --purple:#c084fc; --orange:#ff8a4c; --cream:#fff7e6; --ink:#2d3142;
+  --line:rgba(45,49,66,0.12);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Fredoka',sans-serif; background:var(--cream); color:var(--ink);
+  background-image:
+    radial-gradient(circle at 10% 15%, rgba(255,107,157,0.08), transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(255,217,61,0.12), transparent 40%),
+    radial-gradient(circle at 30% 85%, rgba(108,198,68,0.08), transparent 40%),
+    radial-gradient(circle at 75% 90%, rgba(77,171,247,0.08), transparent 40%);
+  min-height:100vh;
+}
+.topbar {
+  background:var(--ink); color:white; padding:12px 24px; text-align:center;
+  font-size:13px; font-weight:600;
+}
+.topbar a { color:var(--yellow); text-decoration:none; }
+.container { max-width:980px; margin:0 auto; padding:32px 20px 80px; }
+.hero {
+  text-align:center; margin-bottom:40px; padding:32px 20px;
+  background:linear-gradient(135deg, var(--pink), var(--orange));
+  border-radius:24px; color:white;
+  box-shadow:0 8px 24px rgba(255,107,157,0.3);
+  transform:rotate(-0.5deg);
+}
+.hero h1 {
+  font-size:clamp(38px, 7vw, 64px); font-weight:700;
+  text-shadow:3px 3px 0 rgba(0,0,0,0.15);
+  margin-bottom:10px;
+}
+.hero p { font-size:20px; opacity:0.95; font-family:'Caveat',cursive; }
+
+.kid-pick {
+  display:flex; gap:14px; flex-wrap:wrap; justify-content:center; margin-bottom:40px;
+}
+.kid-pick a {
+  flex:1; min-width:220px; padding:22px; border-radius:20px;
+  text-decoration:none; color:white; text-align:center;
+  box-shadow:0 6px 0 rgba(0,0,0,0.1), 0 8px 18px rgba(0,0,0,0.15);
+  transition:transform 0.15s ease;
+  font-weight:600;
+}
+.kid-pick a:hover { transform:translateY(-4px); }
+.kid-pick a:active { transform:translateY(2px); box-shadow:0 2px 0 rgba(0,0,0,0.1); }
+.kid-pick .lourdes { background:linear-gradient(135deg, #ff8db8, #ff6b9d); }
+.kid-pick .aviann  { background:linear-gradient(135deg, #ffe66d, #ffb84d); color:#5d4037; text-shadow:none; }
+.kid-pick .avin    { background:linear-gradient(135deg, #6dd5ed, #4dabf7); }
+.kid-pick .age { font-size:13px; opacity:0.9; font-weight:400; margin-top:4px; display:block; }
+.kid-pick .name { font-size:30px; font-family:'Caveat',cursive; font-weight:600; }
+.kid-pick .label { font-size:14px; margin-top:6px; opacity:0.95; }
+.kid-pick .emoji { font-size:42px; display:block; margin-bottom:6px; }
+
+.section { margin-bottom:48px; }
+.section-title {
+  font-size:24px; font-weight:700; margin-bottom:20px; display:flex;
+  align-items:center; gap:10px;
+}
+.section-title .underline {
+  display:block; height:8px; width:80px; background:var(--yellow); border-radius:4px;
+  margin-top:-12px; margin-left:34px;
+}
+
+.card-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:18px; }
+.card {
+  background:white; padding:22px; border-radius:18px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.06);
+  position:relative; overflow:hidden;
+  transition:transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card:hover { transform:translateY(-3px); box-shadow:0 8px 22px rgba(0,0,0,0.12); }
+.card .icon { font-size:48px; line-height:1; margin-bottom:10px; }
+.card h3 { font-size:20px; margin-bottom:8px; font-weight:700; }
+.card p { font-size:14px; opacity:0.75; line-height:1.5; margin-bottom:14px; }
+.card .age-badge {
+  position:absolute; top:14px; right:14px;
+  background:var(--yellow); color:#5d4037; font-size:11px;
+  padding:3px 10px; border-radius:100px; font-weight:700;
+}
+.card a.btn {
+  display:inline-block; padding:8px 18px; background:var(--ink);
+  color:white; text-decoration:none; border-radius:100px;
+  font-size:13px; font-weight:600;
+}
+.card.theme-pink   { background:linear-gradient(135deg,#fff5f8,#ffe4ed); border:3px solid #ffc1d6; }
+.card.theme-yellow { background:linear-gradient(135deg,#fffce8,#fff5b8); border:3px solid #ffe066; }
+.card.theme-blue   { background:linear-gradient(135deg,#e8f4ff,#cfe8ff); border:3px solid #91c8f5; }
+.card.theme-green  { background:linear-gradient(135deg,#eefae5,#d4f0c0); border:3px solid #a3d977; }
+.card.theme-purple { background:linear-gradient(135deg,#f6ecff,#e6d4ff); border:3px solid #c8a8f5; }
+.card.theme-orange { background:linear-gradient(135deg,#fff0e0,#ffe1b8); border:3px solid #ffc580; }
+
+.bingo {
+  display:grid; grid-template-columns:repeat(5,1fr); gap:6px;
+  margin-top:10px; font-size:11px; text-align:center;
+}
+.bingo div {
+  aspect-ratio:1; background:white; border:2px dashed var(--ink);
+  border-radius:8px; display:flex; align-items:center; justify-content:center;
+  padding:4px; font-weight:600;
+}
+.bingo div.free { background:var(--yellow); border-style:solid; }
+
+.countries-strip {
+  display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;
+}
+.country-pill {
+  display:inline-flex; align-items:center; gap:6px;
+  background:white; padding:6px 12px; border-radius:100px;
+  border:2px solid var(--line); font-size:12px; font-weight:600;
+}
+
+.phrase-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin-top:14px; }
+.phrase {
+  background:white; padding:12px 14px; border-radius:12px; border-left:4px solid var(--green);
+  font-size:12px;
+}
+.phrase .country { font-weight:700; font-size:13px; margin-bottom:4px; }
+.phrase .hello { display:block; font-size:18px; color:var(--green); font-family:'Caveat',cursive; font-weight:600; }
+.phrase .thanks { display:block; font-size:14px; color:var(--blue); font-family:'Caveat',cursive; font-weight:600; margin-top:4px; }
+.phrase .said { display:block; font-size:10px; opacity:0.6; font-style:italic; margin-top:4px; }
+
+footer { text-align:center; padding:20px; font-size:13px; opacity:0.6; }
+footer a { color:var(--ink); }
+</style>
+</head>
+<body>
+<div class="topbar"><a href="index.html">← Back to map</a> · <a href="https://drive.google.com/drive/folders/1OOqIZz21cSFfno5vlhUAMOdVEo8mn66q?usp=sharing" target="_blank" rel="noopener">📁 Trip docs</a></div>
+
+<div class="container">
+  <div class="hero">
+    <h1>🎨 Kids Zone! 🎨</h1>
+    <p>Coloring, writing, spotting, exploring · Europe 2026</p>
+  </div>
+
+  <!-- Pick your kid -->
+  <div class="kid-pick">
+    <a class="lourdes" href="#lourdes">
+      <span class="emoji">🦄</span>
+      <span class="name">Lourdes</span>
+      <span class="age">4 years old</span>
+      <span class="label">🎨 Coloring + stickers + games</span>
+    </a>
+    <a class="aviann" href="#aviann">
+      <span class="emoji">✍️</span>
+      <span class="name">Aviann</span>
+      <span class="age">8 years old</span>
+      <span class="label">📓 Writing journal + word hunts</span>
+    </a>
+    <a class="avin" href="#avin">
+      <span class="emoji">🗺️</span>
+      <span class="name">Avin</span>
+      <span class="age">11 years old</span>
+      <span class="label">🧭 Explorer missions + photo quests</span>
+    </a>
+  </div>
+
+  <!-- ===== LOURDES 4yo ===== -->
+  <div class="section" id="lourdes">
+    <h2 class="section-title">🦄 Lourdes (4) — Coloring Corner</h2>
+    <div class="underline" style="background:var(--pink);"></div>
+    <div class="card-grid">
+      <div class="card theme-pink">
+        <span class="age-badge">Age 4+</span>
+        <div class="icon">🗼</div>
+        <h3>Color the Famous Places!</h3>
+        <p>Eiffel Tower, Big castles, Great Wall, Venice boats, Mickey-style domes</p>
+        <a class="btn" href="https://www.supercoloring.com/coloring-pages/landmarks-and-architecture" target="_blank" rel="noopener">🎨 Free pages →</a>
+      </div>
+      <div class="card theme-pink">
+        <span class="age-badge">Age 4+</span>
+        <div class="icon">🎨</div>
+        <h3>Color the Country Flags</h3>
+        <p>Germany, Italy, France, Switzerland, China, Sweden and more. One per country!</p>
+        <a class="btn" href="https://www.coloring.ws/flags.htm" target="_blank" rel="noopener">🚩 Flag pages →</a>
+      </div>
+      <div class="card theme-pink">
+        <span class="age-badge">Age 4+</span>
+        <div class="icon">🐻</div>
+        <h3>European Animal Friends</h3>
+        <p>Bern bears, Swiss cows, Italian cats, Dutch ducks, panda bears in Beijing</p>
+        <a class="btn" href="https://www.crayola.com/featured/free-coloring-pages/" target="_blank" rel="noopener">🐾 Animals →</a>
+      </div>
+      <div class="card theme-yellow">
+        <span class="age-badge">Age 4+</span>
+        <div class="icon">🌟</div>
+        <h3>Sticker Collection</h3>
+        <p>Get one sticker in EVERY country. Stick them in your kid's journal as you go!</p>
+      </div>
+      <div class="card theme-yellow">
+        <span class="age-badge">Age 4+</span>
+        <div class="icon">🎫</div>
+        <h3>Ticket Stub Album</h3>
+        <p>Save every museum, train, gondola, cable car ticket. Tape them in a special book.</p>
+      </div>
+      <div class="card theme-pink">
+        <span class="age-badge">Age 4+</span>
+        <div class="icon">🦊</div>
+        <h3>Connect-the-Dots</h3>
+        <p>Trace from Munich → Vienna → Rome on a giant map. Color every country you visit!</p>
+        <a class="btn" href="https://www.education.com/worksheets/europe/" target="_blank" rel="noopener">🗺️ Free maps →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== AVIANN 8yo ===== -->
+  <div class="section" id="aviann">
+    <h2 class="section-title">✍️ Aviann (8) — Writer's Backpack</h2>
+    <div class="underline" style="background:var(--yellow);"></div>
+    <div class="card-grid">
+      <div class="card theme-yellow">
+        <span class="age-badge">Age 6-10</span>
+        <div class="icon">📓</div>
+        <h3>Daily Travel Journal</h3>
+        <p>Every night: write the date, where you slept, 1 thing you saw, 1 word for the day.</p>
+        <a class="btn" href="https://drive.google.com/drive/folders/1OOqIZz21cSFfno5vlhUAMOdVEo8mn66q" target="_blank" rel="noopener">📁 Get journal pages →</a>
+      </div>
+      <div class="card theme-yellow">
+        <span class="age-badge">Age 6-10</span>
+        <div class="icon">📮</div>
+        <h3>Postcard Writing</h3>
+        <p>Buy 1 postcard per city. Write a sentence about your day. Mail it to yourself at home!</p>
+      </div>
+      <div class="card theme-yellow">
+        <span class="age-badge">Age 6-10</span>
+        <div class="icon">🍕</div>
+        <h3>Food Tracker</h3>
+        <p>Rate every new food you try out of 5 stars. Best gelato? Best schnitzel? Best dumpling?</p>
+      </div>
+      <div class="card theme-green">
+        <span class="age-badge">Age 6-10</span>
+        <div class="icon">🪙</div>
+        <h3>Coin Collection</h3>
+        <p>Save one €1 coin from each EU country, plus a Swiss franc and Chinese yuan.</p>
+      </div>
+      <div class="card theme-green">
+        <span class="age-badge">Age 6-10</span>
+        <div class="icon">🚙</div>
+        <h3>License Plate Bingo</h3>
+        <p>Spot a license plate from each country we drive through. Tick them off!</p>
+      </div>
+      <div class="card theme-yellow">
+        <span class="age-badge">Age 6-10</span>
+        <div class="icon">🎨</div>
+        <h3>Draw What You Saw</h3>
+        <p>One small drawing per day in your journal. Even just the castle or the cathedral roof.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== AVIN 11yo ===== -->
+  <div class="section" id="avin">
+    <h2 class="section-title">🗺️ Avin (11) — Explorer Missions</h2>
+    <div class="underline" style="background:var(--blue);"></div>
+    <div class="card-grid">
+      <div class="card theme-blue">
+        <span class="age-badge">Age 10+</span>
+        <div class="icon">📷</div>
+        <h3>Photographer of the Day</h3>
+        <p>Be in charge of taking 1 great photo each day. Bring back 25+ family photos at the end!</p>
+      </div>
+      <div class="card theme-blue">
+        <span class="age-badge">Age 10+</span>
+        <div class="icon">🧭</div>
+        <h3>Navigator Mission</h3>
+        <p>Use a paper map (not phone!) to direct mum/dad through one drive. Read road signs.</p>
+      </div>
+      <div class="card theme-blue">
+        <span class="age-badge">Age 10+</span>
+        <div class="icon">💰</div>
+        <h3>Currency Master</h3>
+        <p>Track exchange rates. Calculate how much a €5 gelato costs in NZD. Be the family economist!</p>
+      </div>
+      <div class="card theme-purple">
+        <span class="age-badge">Age 10+</span>
+        <div class="icon">🍝</div>
+        <h3>Restaurant Critic</h3>
+        <p>Pick one restaurant per city. Rate the food, vibe, service out of 10. Write a "review".</p>
+      </div>
+      <div class="card theme-purple">
+        <span class="age-badge">Age 10+</span>
+        <div class="icon">🎵</div>
+        <h3>Country Playlist</h3>
+        <p>Find one song from each country on the trip. Build a family playlist for the road!</p>
+      </div>
+      <div class="card theme-blue">
+        <span class="age-badge">Age 10+</span>
+        <div class="icon">📜</div>
+        <h3>History Quiz Master</h3>
+        <p>Learn 3 facts about each place BEFORE we get there. Quiz the family during long drives!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SHARED: TRAVEL BINGO ===== -->
+  <div class="section">
+    <h2 class="section-title">🎯 Travel Bingo — Spot These!</h2>
+    <div class="underline" style="background:var(--green);"></div>
+    <div class="card theme-green" style="text-align:center;">
+      <p style="font-size:14px;margin-bottom:14px;">Tick off when you spot each one across the trip. Get a full line — win a treat from mum &amp; dad!</p>
+      <div class="bingo">
+        <div>🏰 Castle</div>
+        <div>🚲 Bike with basket</div>
+        <div>🐄 Cow in field</div>
+        <div>⛪ Cathedral</div>
+        <div>🎻 Street musician</div>
+        <div>🐦 Pigeons in square</div>
+        <div>🍦 Gelato shop</div>
+        <div>🚊 Tram</div>
+        <div>🌷 Flower market</div>
+        <div>🥨 Pretzel</div>
+        <div>🍕 Pizza</div>
+        <div>⛵ Boat / gondola</div>
+        <div class="free">⭐ FREE<br>SPACE</div>
+        <div>🏔️ Snow on mountain</div>
+        <div>🌉 Big bridge</div>
+        <div>🥐 Bakery shop</div>
+        <div>🦢 Swan on water</div>
+        <div>🎨 Street painter</div>
+        <div>🚖 Yellow taxi</div>
+        <div>🐎 Horse-drawn cart</div>
+        <div>🏯 Asian roof (Beijing)</div>
+        <div>🌹 Rose garden</div>
+        <div>📜 Old map</div>
+        <div>🦞 Lobster</div>
+        <div>🎢 Theme park ride</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== LANGUAGES ===== -->
+  <div class="section">
+    <h2 class="section-title">🗣️ Say Hello in 8 Languages!</h2>
+    <div class="underline" style="background:var(--purple);"></div>
+    <div class="card theme-purple">
+      <p style="font-size:13px;margin-bottom:6px;">Try to learn one new "hello" + "thank you" each country. Locals love it!</p>
+      <div class="phrase-grid">
+        <div class="phrase"><div class="country">🇨🇳 Chinese</div><span class="hello">Nǐ hǎo!</span><span class="thanks">Xièxie</span><span class="said">"nee how" / "shieh-shieh"</span></div>
+        <div class="phrase"><div class="country">🇩🇪 German</div><span class="hello">Hallo!</span><span class="thanks">Danke</span><span class="said">"hah-lo" / "dahn-keh"</span></div>
+        <div class="phrase"><div class="country">🇨🇿 Czech</div><span class="hello">Ahoj!</span><span class="thanks">Děkuji</span><span class="said">"ah-hoy" / "dyeh-koo-yi"</span></div>
+        <div class="phrase"><div class="country">🇭🇺 Hungarian</div><span class="hello">Szia!</span><span class="thanks">Köszönöm</span><span class="said">"see-yah" / "ker-ser-nerm"</span></div>
+        <div class="phrase"><div class="country">🇮🇹 Italian</div><span class="hello">Ciao!</span><span class="thanks">Grazie</span><span class="said">"chow" / "graht-see-eh"</span></div>
+        <div class="phrase"><div class="country">🇫🇷 French</div><span class="hello">Bonjour!</span><span class="thanks">Merci</span><span class="said">"bohn-zhoor" / "mehr-see"</span></div>
+        <div class="phrase"><div class="country">🇳🇱 Dutch</div><span class="hello">Hallo!</span><span class="thanks">Dank je</span><span class="said">"hah-loh" / "dank-yeh"</span></div>
+        <div class="phrase"><div class="country">🇩🇰 Danish</div><span class="hello">Hej!</span><span class="thanks">Tak</span><span class="said">"hi" / "tahk"</span></div>
+        <div class="phrase"><div class="country">🇸🇪 Swedish</div><span class="hello">Hej!</span><span class="thanks">Tack</span><span class="said">"hay" / "tahk"</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== COUNTRIES VISITED ===== -->
+  <div class="section">
+    <h2 class="section-title">🌍 Countries You'll Visit</h2>
+    <div class="underline" style="background:var(--orange);"></div>
+    <div class="card theme-orange">
+      <p style="font-size:13px;margin-bottom:10px;">Color or check off each country as you arrive. Try to fill them all!</p>
+      <div class="countries-strip">
+        <span class="country-pill">🇳🇿 NZ (start &amp; end)</span>
+        <span class="country-pill">🇨🇳 China</span>
+        <span class="country-pill">🇩🇪 Germany</span>
+        <span class="country-pill">🇦🇹 Austria</span>
+        <span class="country-pill">🇨🇿 Czech</span>
+        <span class="country-pill">🇭🇺 Hungary</span>
+        <span class="country-pill">🇸🇮 Slovenia</span>
+        <span class="country-pill">🇮🇹 Italy</span>
+        <span class="country-pill">🇻🇦 Vatican</span>
+        <span class="country-pill">🇨🇭 Switzerland</span>
+        <span class="country-pill">🇫🇷 France</span>
+        <span class="country-pill">🇧🇪 Belgium</span>
+        <span class="country-pill">🇳🇱 Netherlands</span>
+        <span class="country-pill">🇩🇰 Denmark</span>
+        <span class="country-pill">🇸🇪 Sweden</span>
+      </div>
+      <p style="font-size:14px;margin-top:14px;font-weight:600;">15 countries · including your home country! 🎉</p>
+    </div>
+  </div>
+
+  <!-- ===== PHOTO SCAVENGER HUNT ===== -->
+  <div class="section">
+    <h2 class="section-title">📸 Photo Scavenger Hunt</h2>
+    <div class="underline" style="background:var(--blue);"></div>
+    <div class="card theme-blue">
+      <p style="font-size:13px;margin-bottom:12px;">Try to take a photo of EVERY ONE of these by the end of the trip. Avin in charge!</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;font-size:13px;">
+        <div>📸 The whole family in front of Eiffel Tower</div>
+        <div>📸 Someone eating pizza in Italy</div>
+        <div>📸 A cat in a Greek-style courtyard</div>
+        <div>📸 A flag of every country we visit</div>
+        <div>📸 A cathedral spire (any city)</div>
+        <div>📸 Mum with a gelato</div>
+        <div>📸 Dad on a bike (Amsterdam!)</div>
+        <div>📸 You jumping in front of a castle</div>
+        <div>📸 A Swiss cow with a bell</div>
+        <div>📸 A Venice gondola</div>
+        <div>📸 The Great Wall horizon</div>
+        <div>📸 Lourdes asleep on a train</div>
+        <div>📸 A funny street name</div>
+        <div>📸 Sunrise OR sunset over Europe</div>
+        <div>📸 5 different sandwiches</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FUN FACTS ===== -->
+  <div class="section">
+    <h2 class="section-title">🤓 Did You Know?</h2>
+    <div class="underline" style="background:var(--green);"></div>
+    <div class="card-grid">
+      <div class="card theme-green">
+        <h3>🇩🇪 Germany</h3>
+        <p><strong>You'll cross the Autobahn</strong> — parts have NO speed limit! Don't get scared if cars zoom past.</p>
+      </div>
+      <div class="card theme-green">
+        <h3>🇦🇹 Austria · Hallstatt</h3>
+        <p>Hallstatt is so pretty <strong>China built an exact copy of it</strong> in Guangdong!</p>
+      </div>
+      <div class="card theme-green">
+        <h3>🇨🇿 Czech Prague</h3>
+        <p>The Astronomical Clock has been working <strong>since 1410</strong> — that's 615+ years!</p>
+      </div>
+      <div class="card theme-green">
+        <h3>🇭🇺 Budapest</h3>
+        <p>Budapest is actually TWO cities: <strong>Buda</strong> (hilly) + <strong>Pest</strong> (flat).</p>
+      </div>
+      <div class="card theme-green">
+        <h3>🇮🇹 Venice</h3>
+        <p>Venice has <strong>118 small islands</strong> and ZERO cars. Everyone uses boats!</p>
+      </div>
+      <div class="card theme-green">
+        <h3>🇻🇦 Vatican</h3>
+        <p>The smallest country in the world — only <strong>0.49 km²</strong>. You can walk across it in 20 mins!</p>
+      </div>
+      <div class="card theme-green">
+        <h3>🇨🇭 Swiss Alps</h3>
+        <p>Switzerland has so many cows, they outnumber people in some valleys!</p>
+      </div>
+      <div class="card theme-green">
+        <h3>🇫🇷 Eiffel Tower</h3>
+        <p>The Eiffel Tower <strong>grows 15 cm taller</strong> in summer because metal expands in heat!</p>
+      </div>
+      <div class="card theme-green">
+        <h3>🇳🇱 Amsterdam</h3>
+        <p>There are <strong>more bicycles than people</strong> in Amsterdam (~880,000 bikes!).</p>
+      </div>
+      <div class="card theme-green">
+        <h3>🇩🇰 Copenhagen</h3>
+        <p>Lego was invented in Denmark! The name means <strong>"play well"</strong> in Danish.</p>
+      </div>
+      <div class="card theme-green">
+        <h3>🇸🇪 Sweden</h3>
+        <p>Swedes are the <strong>most cashless people in the world</strong> — they pay everything by card or phone!</p>
+      </div>
+      <div class="card theme-green">
+        <h3>🇨🇳 China · Great Wall</h3>
+        <p>The Great Wall is over <strong>21,000 km long</strong> — longer than the equator!</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Made with 💛 for Lourdes, Aviann, and Avin · Trip July–August 2026 · <a href="index.html">Back to trip map</a>
+</footer>
+
+</body>
+</html>
