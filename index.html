@@ -312,6 +312,224 @@ header h1 em {
 </head>
 <body>
 <div class="topbar"><strong>✈ Auckland → Beijing → Europe → Auckland</strong> · 25 nights · July–August 2026 · <a href="https://drive.google.com/drive/folders/1OOqIZz21cSFfno5vlhUAMOdVEo8mn66q?usp=sharing" target="_blank" rel="noopener">📁 All trip docs</a></div>
+
+<!-- ==== REMINDERS BANNER ==== -->
+<div id="reminders-banner" style="display:none;max-width:1080px;margin:14px auto 0;padding:0 16px;">
+  <div style="background:linear-gradient(135deg,rgba(196,74,74,0.15),rgba(196,74,74,0.05));border:1px solid rgba(196,74,74,0.4);border-left:5px solid var(--rose);border-radius:6px;box-shadow:0 2px 10px rgba(196,74,74,0.12);overflow:hidden;">
+    <div id="rb-header" style="background:var(--rose);color:white;padding:8px 16px;display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;">
+      <span>🚨 Next Action — Don't Forget</span>
+      <span id="rb-counter" style="background:rgba(255,255,255,0.25);padding:3px 10px;border-radius:100px;font-size:10px;">0/0</span>
+    </div>
+    <div id="rb-body" style="padding:16px 20px;"></div>
+    <div id="rb-toggle-wrap" style="border-top:1px dashed rgba(196,74,74,0.3);padding:10px 16px;background:rgba(196,74,74,0.04);text-align:center;display:none;">
+      <a href="javascript:void(0)" onclick="toggleAllReminders()" id="rb-toggle-link" style="font-size:12px;color:var(--rose);font-weight:600;text-decoration:none;">Show all pending tasks ▼</a>
+    </div>
+    <div id="rb-all-list" style="display:none;padding:0 16px 16px;"></div>
+  </div>
+</div>
+<script>
+// === REMINDERS DATA ===
+// Edit deadlines + done state via UI · localStorage persists 'done' flags
+const REMINDERS = [
+  {
+    id: 'eiffel-release',
+    icon: '🗼',
+    title: 'Eiffel Tower 2nd floor — release moment',
+    deadline: '2026-05-30T19:00:00+12:00',
+    deadlineLabel: 'Sat 30 May 2026 · 19:00 NZST',
+    detail: 'Tickets release at 09:00 Paris for Thu 30 Jul evening · 60-day rule · set phone alarm',
+    actionLabel: 'Open toureiffel.paris',
+    actionUrl: 'https://www.toureiffel.paris/'
+  },
+  {
+    id: 'email-budget-munich',
+    icon: '📧',
+    title: 'Email Budget Munich — 3 child seats',
+    deadline: '2026-06-01T17:00:00+12:00',
+    deadlineLabel: 'By Mon 1 Jun (3 weeks before pickup)',
+    detail: 'Request 1× Group 1 car seat (Avin 4yo · 106cm) + 2× high-back boosters (Aviann 8yo · 122cm, Avisha 11yo · 129cm). Phone +49 69 7104 45596',
+    actionLabel: 'Booking.com inbox',
+    actionUrl: 'https://www.booking.com/inbox.html'
+  },
+  {
+    id: 'vatican-museums',
+    icon: '⛪',
+    title: 'Book Vatican Museums + Sistine Chapel',
+    deadline: '2026-06-05T20:00:00+12:00',
+    deadlineLabel: 'By Fri 5 Jun 2026 · 20:00 NZ',
+    detail: 'Wed 22 Jul morning slot · sells out 3–4 weeks ahead in July · €25/adult',
+    actionLabel: 'Open museivaticani.va',
+    actionUrl: 'https://www.museivaticani.va/'
+  },
+  {
+    id: 'crit-air',
+    icon: '🚗',
+    title: "Order Crit'Air sticker for cousin's car",
+    deadline: '2026-06-12T10:00:00+12:00',
+    deadlineLabel: 'By Fri 12 Jun 2026',
+    detail: '4-week processing time · for Paris ZFE entry · €4 · ask cousin for vehicle registration (Carte Grise)',
+    actionLabel: 'Open certificat-air.gouv.fr',
+    actionUrl: 'https://www.certificat-air.gouv.fr/'
+  },
+  {
+    id: 'email-avis-tls',
+    icon: '📧',
+    title: 'Email Avis Toulouse — 2 extra boosters',
+    deadline: '2026-06-15T17:00:00+12:00',
+    deadlineLabel: 'By Mon 15 Jun',
+    detail: 'Add 2 boosters for Aviann 8yo (122cm) + Avisha 11yo (129cm). Phone +33 820 611 678',
+    actionLabel: 'Booking.com inbox',
+    actionUrl: 'https://www.booking.com/inbox.html'
+  },
+  {
+    id: 'mutianyu-tour',
+    icon: '🏯',
+    title: 'Book Mutianyu Great Wall private tour',
+    deadline: '2026-06-20T12:00:00+12:00',
+    deadlineLabel: 'By Sat 20 Jun 2026',
+    detail: 'For Fri 7 Aug Beijing return · 5-seater + English driver · pickup Atour 07:30 · CNY 1,800–2,500',
+    actionLabel: 'Klook search',
+    actionUrl: 'https://www.klook.com/search/?keyword=Mutianyu+private+tour'
+  },
+  {
+    id: 'x2000-train',
+    icon: '🚆',
+    title: 'Book X2000 train Copenhagen → Gothenburg',
+    deadline: '2026-07-01T12:00:00+12:00',
+    deadlineLabel: 'By Wed 1 Jul 2026',
+    detail: 'Mon 3 Aug 13:00 CPH Central → 16:40 Gothenburg via Øresund Bridge · 3h 40m',
+    actionLabel: 'Open sj.se',
+    actionUrl: 'https://www.sj.se/en/home.html'
+  }
+];
+
+// === RENDER ===
+function getDoneIds() {
+  try { return JSON.parse(localStorage.getItem('tripReminders_done') || '[]'); }
+  catch (e) { return []; }
+}
+function setDone(id) {
+  const done = getDoneIds();
+  if (!done.includes(id)) done.push(id);
+  localStorage.setItem('tripReminders_done', JSON.stringify(done));
+  renderReminders();
+}
+function setUndone(id) {
+  const done = getDoneIds().filter(d => d !== id);
+  localStorage.setItem('tripReminders_done', JSON.stringify(done));
+  renderReminders();
+}
+function pendingReminders() {
+  const done = getDoneIds();
+  return REMINDERS.filter(r => !done.includes(r.id))
+    .sort((a, b) => new Date(a.deadline) - new Date(b.deadline));
+}
+function daysUntil(iso) {
+  const ms = new Date(iso) - new Date();
+  return Math.ceil(ms / (1000 * 60 * 60 * 24));
+}
+function urgencyColor(days) {
+  if (days <= 7) return '#c44a4a';   // hard red
+  if (days <= 21) return '#d97740';  // orange
+  return '#a47a23';                  // gold
+}
+
+function renderReminders() {
+  const banner = document.getElementById('reminders-banner');
+  const body = document.getElementById('rb-body');
+  const counter = document.getElementById('rb-counter');
+  const toggleWrap = document.getElementById('rb-toggle-wrap');
+  const allList = document.getElementById('rb-all-list');
+
+  const pending = pendingReminders();
+  if (pending.length === 0) { banner.style.display = 'none'; return; }
+
+  banner.style.display = 'block';
+  counter.textContent = '1/' + pending.length;
+
+  // Render top (next) reminder
+  const next = pending[0];
+  const days = daysUntil(next.deadline);
+  const urgentText = days < 0 ? 'OVERDUE by ' + Math.abs(days) + ' days' :
+                     days === 0 ? 'TODAY' :
+                     days === 1 ? 'TOMORROW' :
+                     'in ' + days + ' days';
+  const uColor = urgencyColor(days);
+
+  body.innerHTML =
+    '<div style="display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap;">' +
+      '<div style="font-size:30px;line-height:1;">' + next.icon + '</div>' +
+      '<div style="flex:1;min-width:240px;">' +
+        '<div style="font-family:\'Fraunces\',serif;font-size:18px;font-weight:600;color:var(--ink);margin-bottom:4px;">' + next.title + '</div>' +
+        '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;font-size:12px;align-items:center;">' +
+          '<span style="background:' + uColor + ';color:white;padding:3px 10px;border-radius:100px;font-weight:700;letter-spacing:0.04em;">' + urgentText + '</span>' +
+          '<span style="opacity:0.7;">' + next.deadlineLabel + '</span>' +
+        '</div>' +
+        '<div style="font-size:13px;line-height:1.5;color:var(--ink);opacity:0.85;margin-bottom:10px;">' + next.detail + '</div>' +
+        '<div style="display:flex;flex-wrap:wrap;gap:8px;">' +
+          '<a href="' + next.actionUrl + '" target="_blank" rel="noopener" style="background:var(--rose);color:white;padding:8px 16px;border-radius:4px;text-decoration:none;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:4px;">→ ' + next.actionLabel + '</a>' +
+          '<button onclick="setDone(\'' + next.id + '\')" style="background:var(--sage);color:white;border:none;padding:8px 16px;border-radius:4px;font-size:13px;font-weight:600;cursor:pointer;">✓ Mark done</button>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+
+  if (pending.length > 1) {
+    toggleWrap.style.display = 'block';
+    document.getElementById('rb-toggle-link').textContent = 'Show all ' + pending.length + ' pending tasks ▼';
+
+    allList.innerHTML = '<div style="font-family:\'JetBrains Mono\',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin:8px 0;">All pending</div>' +
+      pending.slice(1).map(r => {
+        const d = daysUntil(r.deadline);
+        const u = d < 0 ? 'OVERDUE ' + Math.abs(d) + 'd' : d === 0 ? 'TODAY' : 'in ' + d + 'd';
+        const c = urgencyColor(d);
+        return '<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px dashed rgba(196,74,74,0.2);font-size:12px;">' +
+          '<span style="font-size:18px;">' + r.icon + '</span>' +
+          '<div style="flex:1;">' +
+            '<div style="font-weight:600;color:var(--ink);">' + r.title + '</div>' +
+            '<div style="opacity:0.6;font-size:11px;">' + r.deadlineLabel + '</div>' +
+          '</div>' +
+          '<span style="background:' + c + ';color:white;padding:2px 8px;border-radius:100px;font-size:10px;font-weight:700;">' + u + '</span>' +
+          '<button onclick="setDone(\'' + r.id + '\')" style="background:none;border:1px solid var(--sage);color:var(--sage);padding:4px 10px;border-radius:4px;font-size:11px;font-weight:600;cursor:pointer;">✓</button>' +
+        '</div>';
+      }).join('');
+
+    // Done section
+    const doneIds = getDoneIds();
+    const doneReminders = REMINDERS.filter(r => doneIds.includes(r.id));
+    if (doneReminders.length) {
+      allList.innerHTML += '<div style="font-family:\'JetBrains Mono\',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--sage);font-weight:600;margin:14px 0 8px;">✓ Done (' + doneReminders.length + ')</div>' +
+        doneReminders.map(r =>
+          '<div style="display:flex;align-items:center;gap:10px;padding:6px 0;font-size:12px;opacity:0.55;">' +
+            '<span style="font-size:16px;">' + r.icon + '</span>' +
+            '<div style="flex:1;text-decoration:line-through;">' + r.title + '</div>' +
+            '<button onclick="setUndone(\'' + r.id + '\')" style="background:none;border:1px solid var(--line);color:var(--ink);padding:3px 8px;border-radius:4px;font-size:10px;cursor:pointer;">Undo</button>' +
+          '</div>'
+        ).join('');
+    }
+  } else {
+    toggleWrap.style.display = 'none';
+    allList.style.display = 'none';
+  }
+}
+
+function toggleAllReminders() {
+  const allList = document.getElementById('rb-all-list');
+  const link = document.getElementById('rb-toggle-link');
+  const open = allList.style.display !== 'none';
+  if (open) {
+    allList.style.display = 'none';
+    link.textContent = link.textContent.replace('▲', '▼');
+  } else {
+    allList.style.display = 'block';
+    link.textContent = link.textContent.replace('▼', '▲');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', renderReminders);
+// Re-render every 60s so "X days" stays current if the page is left open
+setInterval(renderReminders, 60000);
+</script>
+
 <header><h1>The Grand Journey<em>interactive map · all 25 stops · works offline</em></h1></header>
 <div class="legend-bar">
   <span class="item"><span class="legend-dot dot-confirmed"></span>Hotel booked ✓</span>
