@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>🌍 Munasinghe Family Europe Trip 2026 — Booklet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+/* ============ A5 BOOKLET PRINT-FRIENDLY ============ */
+:root {
+  --ink:#0d1b2a; --cream:#fdfaf2; --sky:#4a90b8; --rose:#c44a4a;
+  --sage:#6b8e6f; --gold:#c89b3c; --gold-deep:#a47a23; --line:rgba(13,27,42,0.15);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:var(--ink); padding:20px; }
+@page { size: A5 portrait; margin:0; }
+
+.page {
+  width:148mm; height:210mm; padding:14mm;
+  background:var(--cream); margin:8px auto;
+  box-shadow:0 4px 20px rgba(0,0,0,0.2);
+  position:relative; overflow:hidden;
+  break-after:page; page-break-after:always;
+  display:flex; flex-direction:column;
+}
+.page:last-child { break-after:auto; page-break-after:auto; }
+
+/* ===== COVER ===== */
+.cover {
+  background:linear-gradient(135deg, #1d3557 0%, #2a4d6e 50%, #c89b3c 100%);
+  color:white;
+  text-align:center; justify-content:center; align-items:center;
+}
+.cover h1 {
+  font-family:'Fraunces',serif; font-weight:700;
+  font-size:42px; line-height:1.1; margin-bottom:8px;
+  text-shadow:2px 2px 0 rgba(0,0,0,0.2);
+}
+.cover .sub { font-family:'Caveat',cursive; font-size:28px; opacity:0.95; margin-bottom:30px; }
+.cover .family { font-size:18px; font-weight:600; margin-bottom:6px; }
+.cover .dates { font-family:'JetBrains Mono',monospace; font-size:14px; opacity:0.9; }
+.cover .countries-strip { margin-top:30px; display:flex; flex-wrap:wrap; gap:6px; justify-content:center; max-width:80%; }
+.cover .countries-strip span { background:rgba(255,255,255,0.18); padding:5px 10px; border-radius:100px; font-size:11px; backdrop-filter:blur(8px); }
+.cover .nights { margin-top:24px; font-family:'Caveat',cursive; font-size:24px; opacity:0.92; }
+.cover .footer { position:absolute; bottom:14mm; left:0; right:0; text-align:center; font-size:10px; opacity:0.7; }
+
+/* ===== INTRO ===== */
+.intro h2 { font-family:'Fraunces',serif; font-size:24px; margin-bottom:14px; color:var(--gold-deep); }
+.intro p { font-size:12px; line-height:1.6; margin-bottom:10px; opacity:0.85; }
+.intro ul { font-size:12px; line-height:1.8; padding-left:20px; }
+.intro .stats { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin:14px 0; }
+.intro .stats div { background:rgba(74,144,184,0.1); padding:10px 12px; border-radius:6px; border-left:3px solid var(--sky); }
+.intro .stats div b { font-size:18px; font-family:'Fraunces',serif; display:block; }
+.intro .stats div span { font-size:10px; opacity:0.7; }
+
+/* ===== DAY PAGE ===== */
+.day-page { font-size:11px; }
+.day-page .day-num { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.15em; color:var(--gold-deep); font-weight:700; }
+.day-page h2 { font-family:'Fraunces',serif; font-size:22px; line-height:1.15; margin:4px 0 6px; color:var(--ink); }
+.day-page .date { font-family:'JetBrains Mono',monospace; font-size:11px; background:var(--ink); color:var(--cream); display:inline-block; padding:4px 10px; border-radius:3px; letter-spacing:0.04em; }
+.day-page .route { font-family:'Caveat',cursive; font-size:18px; color:var(--gold-deep); margin-top:8px; line-height:1.2; }
+.day-page .where-tonight { margin-top:8px; padding:8px 10px; background:rgba(107,142,111,0.13); border-left:3px solid var(--sage); font-size:10px; border-radius:0 4px 4px 0; }
+.day-page .where-tonight b { color:var(--sage); }
+
+.day-page .section { margin-top:10px; }
+.day-page .label {
+  font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.12em;
+  text-transform:uppercase; color:var(--gold-deep); font-weight:700;
+  margin-bottom:5px; display:flex; align-items:center; gap:5px;
+}
+.day-page .label::after { content:''; flex:1; height:1px; background:var(--line); margin-left:6px; }
+.day-page ul { padding-left:14px; font-size:10.5px; line-height:1.55; }
+.day-page ul li { margin-bottom:2px; }
+
+.day-page .specialty {
+  background:linear-gradient(to right, rgba(200,155,60,0.12), transparent);
+  padding:6px 10px; border-radius:4px; border-left:3px solid var(--gold);
+  font-size:10.5px; line-height:1.45;
+}
+.day-page .specialty b { color:var(--gold-deep); }
+
+.day-page .spot-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:5px; }
+.day-page .spot {
+  background:white; border:1px dashed var(--line);
+  border-radius:4px; padding:5px 6px; font-size:9px; text-align:center;
+}
+.day-page .spot::before { content:''; display:inline-block; width:8px; height:8px; border:1px solid var(--ink); margin-right:3px; vertical-align:middle; }
+
+.day-page .fun-fact {
+  background:linear-gradient(135deg, rgba(196,74,74,0.08), rgba(196,74,74,0.04));
+  padding:7px 10px; border-radius:4px; font-size:10px; line-height:1.4;
+  border-left:3px solid var(--rose);
+}
+.day-page .fun-fact b { color:var(--rose); }
+
+.day-page .journal-box {
+  border:1.5px dashed var(--gold); border-radius:6px; padding:6px 8px;
+  font-size:10px; min-height:36px; margin-top:auto;
+  background:rgba(200,155,60,0.05);
+}
+.day-page .journal-box i { font-family:'Caveat',cursive; font-size:13px; color:var(--gold-deep); display:block; margin-bottom:2px; }
+
+.day-page .page-num {
+  position:absolute; bottom:6mm; left:0; right:0; text-align:center;
+  font-family:'JetBrains Mono',monospace; font-size:8px; opacity:0.5;
+}
+
+.day-page .tomorrow {
+  margin-top:6px; padding:5px 8px; background:rgba(74,144,184,0.08); border-radius:3px;
+  font-size:9px; color:var(--sky); font-style:italic;
+}
+.day-page .tomorrow b { font-style:normal; color:var(--ink); }
+
+/* ===== BACK ===== */
+.back { text-align:center; justify-content:center; }
+.back h2 { font-family:'Fraunces',serif; font-size:28px; color:var(--gold-deep); margin-bottom:14px; }
+.back p { font-family:'Caveat',cursive; font-size:24px; margin:18px 0; line-height:1.3; }
+.back .grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; text-align:left; font-size:9px; margin-top:14px; }
+.back .grid > div { padding:6px 8px; background:white; border-radius:4px; border-left:2px solid var(--gold); }
+.back .grid b { display:block; font-size:11px; color:var(--gold-deep); }
+
+/* ===== SCREEN PREVIEW MODE ===== */
+@media screen {
+  body { padding:20px; background:#aaa; }
+  .toolbar {
+    position:fixed; top:10px; right:10px; background:white; padding:8px 14px;
+    border-radius:6px; box-shadow:0 2px 12px rgba(0,0,0,0.2); font-size:13px;
+    display:flex; gap:10px; align-items:center; z-index:100;
+  }
+  .toolbar a, .toolbar button { background:var(--ink); color:white; padding:6px 12px; border:0; border-radius:4px; cursor:pointer; text-decoration:none; font-size:12px; font-weight:600; font-family:inherit; }
+}
+
+@media print {
+  body { background:white; padding:0; margin:0; }
+  .toolbar { display:none; }
+  .page { margin:0; box-shadow:none; }
+}
+
+/* No-print elements */
+.no-print { display:none; }
+@media screen { .no-print { display:block; } }
+</style>
+</head>
+<body>
+
+<div class="toolbar no-print">
+  <span>📖 Booklet preview · A5</span>
+  <a href="index.html">← Back to map</a>
+  <button onclick="window.print()">🖨 Print / Save PDF</button>
+</div>
+
+<!-- ============ COVER ============ -->
+<div class="page cover">
+  <h1>The Grand Journey</h1>
+  <div class="sub">Europe Trip Booklet 🌍</div>
+  <div class="family">Munasinghe Family</div>
+  <div class="dates">9 July – 8 August 2026</div>
+  <div class="countries-strip">
+    <span>🇳🇿 New Zealand</span><span>🇨🇳 China</span><span>🇩🇪 Germany</span><span>🇦🇹 Austria</span>
+    <span>🇨🇿 Czech</span><span>🇭🇺 Hungary</span><span>🇸🇮 Slovenia</span><span>🇮🇹 Italy</span>
+    <span>🇻🇦 Vatican</span><span>🇨🇭 Switzerland</span><span>🇫🇷 France</span><span>🇧🇪 Belgium</span>
+    <span>🇳🇱 Netherlands</span><span>🇩🇰 Denmark</span><span>🇸🇪 Sweden</span>
+  </div>
+  <div class="nights">25 nights · 15 countries · 1 family · ∞ memories</div>
+  <div class="footer">Navin · Inoshika · Avin (4) · Lourdes/Aviann (8) · Ivan/Avisha (11)</div>
+</div>
+
+<!-- ============ INTRO ============ -->
+<div class="page intro">
+  <h2>📋 The Plan</h2>
+  <p><b>31 days of travel.</b> Auckland to Beijing (overnight stop) to Munich, through 8 European countries by road and rail, then home via Beijing again with a Great Wall day. Family visits in Amsterdam, Milan, Gothenburg. Pilgrimage day in Lourdes. Mass every weekend.</p>
+
+  <div class="stats">
+    <div><b>25</b><span>Nights in Europe</span></div>
+    <div><b>15</b><span>Countries</span></div>
+    <div><b>3,800 km</b><span>Driving (DE → IT → FR)</span></div>
+    <div><b>8</b><span>Flights</span></div>
+    <div><b>3</b><span>Trains (TGV, Eurostar, X2000)</span></div>
+    <div><b>2</b><span>Beijing layovers</span></div>
+  </div>
+
+  <h2 style="font-size:18px;margin-top:6px;">🗺 The Big Phases</h2>
+  <ul>
+    <li><b>Phase 1 · Austria + East</b> (11–17 Jul) — Burg Altpernstein, Prague, Vienna, Budapest. Salzburg Sound of Music + Hallstatt.</li>
+    <li><b>Phase 2 · Italy</b> (17–23 Jul) — Bled stop, Venice, Florence, Pisa, Rome (Pompeii + Vatican).</li>
+    <li><b>Phase 3 · Swiss Alps + Bavaria</b> (23–28 Jul) — Milan friend stay, Gornergrat, Moléson, Geneva, Ottobeuren.</li>
+    <li><b>Phase 4 · Lourdes pilgrimage</b> (28 Jul) — Torch Procession at Sanctuary.</li>
+    <li><b>Phase 5 · Northern Europe</b> (29 Jul – 4 Aug) — Amsterdam hub, Brussels stop, Paris, Copenhagen, Gothenburg sister visit.</li>
+    <li><b>Phase 6 · Home via Beijing</b> (5–8 Aug) — Munich pre-flight, Great Wall at Mutianyu, Auckland.</li>
+  </ul>
+
+  <h2 style="font-size:18px;margin-top:6px;">⛪ Mass Strategy</h2>
+  <p style="font-size:11px;">Saturday Vigil PRIMARY every weekend (covers Sunday). Locations: Spital am Pyhrn · San Marco Venice · Église Saint-Théodule Gruyères · Sint-Nicolaaskerk Amsterdam. Confirm times the night before.</p>
+</div>
+
+<!-- ============ DAY 01 — AKL DEPARTURE ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 01 · DEPARTURE DAY</div>
+  <h2>Auckland → Beijing</h2>
+  <div class="date">THU · 9 JUL 2026</div>
+  <div class="route">🛫 AKL → PEK · 13h 10m flight</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Asleep on CA784 over Asia. Arrive Beijing 04:40 Fri.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>Final pack · all 5 passports + visas double-checked</li>
+      <li>Print boarding passes · save PDFs offline</li>
+      <li>AKL airport by 16:30 for CA784 19:30 dep</li>
+      <li>Eat dinner at airport · settle kids on flight</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🛂 Stamp</div>
+      <div class="spot">✈ Wing view</div>
+      <div class="spot">🌅 Sunset</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>CA784</b> flies non-stop AKL → Beijing for ~10,260 km over the Pacific Ocean. You'll cross the international dateline AND lose 4 hours!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL · KIDS DRAW HERE</div>
+    <div class="journal-box"><i>What I'll miss from home:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Land Beijing 04:40 · Atour Hotel + Forbidden City tour.</div>
+  <div class="page-num">— 1 —</div>
+</div>
+
+<!-- ============ DAY 02 — BEIJING LAYOVER 1 ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 02 · BEIJING LAYOVER 1</div>
+  <h2>Forbidden City Day</h2>
+  <div class="date">FRI · 10 JUL 2026</div>
+  <div class="route">🛬 Land PEK 04:40 · Atour Hotel · 🎟 Forbidden City + Tian'anmen</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Atour Hotel Beijing Capital Airport (rest, then back to T3 ~22:00 for CA961 02:50 Sat).</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>04:40 land · 05:45 Atour shuttle from T3 Gate 12 (Departures)</li>
+      <li>06:30 hotel · breakfast · shower · brief rest</li>
+      <li>09:30 🎟 Forbidden City Guided Tour @ Lao She's Teahouse</li>
+      <li>12:30 tour ends · Wangfujing Street lunch · back hotel 15:00</li>
+      <li>21:30 leave hotel → T3 → CA961 02:50</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Peking Duck</b> at Quanjude or Da Dong · crispy skin wrapped in pancake with hoisin sauce. Or <b>Jianbing</b> (savoury Chinese crêpe) for breakfast street food!</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🏯 Red rooftops</div>
+      <div class="spot">🐉 Dragon carving</div>
+      <div class="spot">🦁 Stone lion</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact">The <b>Forbidden City has 980 buildings</b> and was off-limits to commoners for 500 years! Today over 14 million people visit annually.</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The biggest thing I saw at the Forbidden City:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Land Munich 07:05 · drive via Salzburg to Burg Altpernstein.</div>
+  <div class="page-num">— 2 —</div>
+</div>
+
+<!-- ============ DAY 03 — MUC + SALZBURG + BURG ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 03 · TRIP DAY 1 · EUROPE BEGINS</div>
+  <h2>Munich → Salzburg → Burg Altpernstein</h2>
+  <div class="date">SAT · 11 JUL 2026</div>
+  <div class="route">🛬 MUC 07:05 · 🚗 290 km · 🎼 Sound of Music stop</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Burg Altpernstein castle · 2 nights · Sat Vigil 19:00 at Stiftskirche Spital am Pyhrn.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>07:05 land MUC · 08:30 Budget rental pickup · 09:00 drive A8</li>
+      <li>10:30–13:30 Salzburg: Mirabell Gardens · Mozart · Residenzplatz · lunch Stiftskeller St. Peter</li>
+      <li>15:00 ✅ check in Burg Altpernstein</li>
+      <li>18:00 drive to Stiftskirche Spital am Pyhrn · 19:00 Vigil Mass</li>
+      <li>20:30 castle dinner · early bed</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Mozartkugel</b> · Salzburg's famous pistachio-marzipan chocolate ball (invented 1890). Plus <b>Salzburger Nockerl</b> — fluffy soufflé dessert shaped like the city's three hills.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🌹 Mirabell rose</div>
+      <div class="spot">🐎 Horse statue</div>
+      <div class="spot">⛪ Castle on cliff</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>Stiftskeller St. Peter</b> is the oldest restaurant in Europe — open since the year <b>803 AD</b>. That's 1,223 years of dinners!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The Do-Re-Mi steps were:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Hallstatt lake village day-trip from castle.</div>
+  <div class="page-num">— 3 —</div>
+</div>
+
+<!-- ============ DAY 04 — HALLSTATT ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 04 · TRIP DAY 2</div>
+  <h2>Hallstatt Lake Village</h2>
+  <div class="date">SUN · 12 JUL 2026</div>
+  <div class="route">🚗 Burg ↔ Hallstatt · ~1.5h each way</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Back at Burg Altpernstein. No Mass needed (Sat Vigil covered it!).</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>09:00 sleep-in breakfast · jet-lag recovery</li>
+      <li>10:30 leave for Hallstatt · 12:00 arrive (P1 parking ~€10)</li>
+      <li>Pfarrkirche Mariä Himmelfahrt + Bone House + Skywalk photo</li>
+      <li>13:30 lakeside lunch (Seehotel Grüner Baum)</li>
+      <li>15:00 optional lake boat (~30min, €10 pp)</li>
+      <li>17:30 back at castle · rest before tomorrow's drive</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Hallstätter Saibling</b> (Alpine char fish) fresh from the lake. Or <b>Kaiserschmarrn</b> — fluffy shredded pancake with raisins and powdered sugar.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🦢 Swan on lake</div>
+      <div class="spot">⛵ Wooden boat</div>
+      <div class="spot">💀 Painted skull</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact">Hallstatt is so beautiful that <b>China built an exact replica</b> of the entire village in Guangdong Province!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The colour of Hallstatt lake was:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Long drive Burg → Prague · 430 km · 5 hrs.</div>
+  <div class="page-num">— 4 —</div>
+</div>
+
+<!-- ============ DAY 05 — PRAGUE ARRIVAL ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 05 · TRIP DAY 3</div>
+  <h2>Drive to Prague</h2>
+  <div class="date">MON · 13 JUL 2026</div>
+  <div class="route">🚗 Burg → Prague · 430 km · ~5 hrs · 🇨🇿 Czechia 🆕</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Gold Art Apartment · Prague Old Town · 2 nights.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>08:00 leave Burg · drive north (Czech vignette at border)</li>
+      <li>Mid-afternoon arrive Prague · check in Gold Art Apartment</li>
+      <li>🧺 First trip laundry drop at Andy's Laundromat (Korunní 14)</li>
+      <li>Evening: Charles Bridge at golden hour</li>
+      <li>Old Town Square + Czech beer hall dinner</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Svíčková</b> · marinated beef sirloin with creamy vegetable sauce + bread dumplings. Pair with a Pilsner. <b>Trdelník</b> sweet rolled pastry for dessert!</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🌉 Saint statue</div>
+      <div class="spot">🕰 Astronomical clock</div>
+      <div class="spot">🧸 Marionette puppet</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact">Prague's <b>Astronomical Clock has been ticking since 1410</b>. That's 615 years of perfect time!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The first thing I noticed about Prague:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Prague Castle + Jewish Quarter + Vltava river cruise.</div>
+  <div class="page-num">— 5 —</div>
+</div>
+
+<!-- ============ DAY 06 — PRAGUE FULL DAY ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 06 · TRIP DAY 4</div>
+  <h2>Prague Full Day</h2>
+  <div class="date">TUE · 14 JUL 2026</div>
+  <div class="route">🚶 Walking + tram · Old Town · Castle · Jewish Quarter</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Gold Art Apartment · 2nd night.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>Prague Castle + St. Vitus Cathedral (open 09:00)</li>
+      <li>Walk down to Lesser Town · Charles Bridge again</li>
+      <li>Jewish Quarter (Josefov) · Old-New Synagogue</li>
+      <li>Wenceslas Square · National Museum exterior</li>
+      <li>Vltava river evening cruise (~1 hr · sunset)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Goulash in a bread bowl</b> · classic Bohemian comfort food. Try <b>Smažený sýr</b> (fried cheese) — kids will love it.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">⚔ Castle guard</div>
+      <div class="spot">🎷 Street musician</div>
+      <div class="spot">🚊 Red tram</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>Prague Castle</b> is the largest ancient castle in the world (~70,000 m²) — Guinness World Records confirms it!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>My favourite part of Prague Castle:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Drive Prague → Vienna · 320 km · 3.5–4 hrs.</div>
+  <div class="page-num">— 6 —</div>
+</div>
+
+<!-- ============ DAY 07 — VIENNA ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 07 · TRIP DAY 5</div>
+  <h2>Drive to Vienna</h2>
+  <div class="date">WED · 15 JUL 2026</div>
+  <div class="route">🚗 Prague → Vienna · 320 km · 🇦🇹 back to Austria</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> The Levante Laudon Vienna · 1 night.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>Morning Prague Castle area · 11:00 leave</li>
+      <li>~15:00 arrive Vienna · check in The Levante Laudon</li>
+      <li>Schönbrunn Palace grounds · Gloriette viewpoint</li>
+      <li>Ringstrasse stroll · Stephansplatz cathedral</li>
+      <li>Naschmarkt for street food · Sachertorte at Café Sacher</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Wiener Schnitzel</b> · crispy breaded veal cutlet (Figlmüller is famous). And of course <b>Sachertorte</b> — dark chocolate cake with apricot jam, with whipped cream.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🐎 Lipizzaner horse</div>
+      <div class="spot">🎼 Music statue</div>
+      <div class="spot">🍰 Cake shop</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>Vienna's Schönbrunn Palace has 1,441 rooms</b> · the Habsburg emperors used it as a summer residence. Mozart performed here at age 6!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>Sachertorte tastes like:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Drive Vienna → Budapest · 270 km · Hungarian thermal baths!</div>
+  <div class="page-num">— 7 —</div>
+</div>
+
+<!-- ============ DAY 08 — BUDAPEST ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 08 · TRIP DAY 6</div>
+  <h2>Drive to Budapest</h2>
+  <div class="date">THU · 16 JUL 2026</div>
+  <div class="route">🚗 Vienna → Budapest · 270 km · 🇭🇺 Hungary 🆕</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> City Home Budapest · Erzsébetváros · 1 night.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>10:00 leave Vienna (Hungarian e-vignette online)</li>
+      <li>~14:00 arrive Budapest · 🧺 laundry drop Dohány u. 37</li>
+      <li>Castle Hill via Chain Bridge · funicular up</li>
+      <li>Fisherman's Bastion · Matthias Church · Buda Castle exterior</li>
+      <li>Széchenyi Thermal Baths via M1 metro · Goulash dinner</li>
+      <li>Parliament view from Buda side at sunset</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Goulash</b> · Hungary's national paprika beef stew · the real one is a soup! Plus <b>Kürtőskalács</b> · cinnamon chimney cake. The kids will fight over this.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🛁 Thermal bath</div>
+      <div class="spot">🐉 Buda dragon</div>
+      <div class="spot">🌶 Paprika braid</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact">Budapest is <b>actually TWO cities</b> — hilly <b>Buda</b> on the west, flat <b>Pest</b> on the east. They merged in 1873!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The thermal bath water felt:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Big drive Budapest → Bled (SI) → Venice/Mestre · 530 km · 8 hrs.</div>
+  <div class="page-num">— 8 —</div>
+</div>
+
+<!-- ============ DAY 09 — BLED + MESTRE ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 09 · TRIP DAY 7</div>
+  <h2>Budapest → Bled → Venice</h2>
+  <div class="date">FRI · 17 JUL 2026</div>
+  <div class="route">🚗 530 km · 🇸🇮 Slovenia 🆕 + 🇮🇹 Italy 🆕</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Trilocale Venezia Mestre · 5 min from Mestre station · 2 nights.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>07:30 leave Budapest · early start for long day</li>
+      <li>~13:00 arrive Bled · 2.5 hr stop · castle + emerald lake</li>
+      <li>Try kremšnita cream cake at Park Hotel</li>
+      <li>~16:00 leave Bled · drive to Mestre</li>
+      <li>~19:00 check in · evening train into Venezia Santa Lucia for first taste</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Kremšnita</b> at Bled · vanilla custard cream slice on flaky puff pastry, invented at Hotel Park 1953. Once in Venice: <b>Cicchetti</b> (Venetian tapas) + spritz.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🏰 Cliff castle</div>
+      <div class="spot">⛪ Island church</div>
+      <div class="spot">⛵ Pletna boat</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>Lake Bled's island has a wishing bell</b> · ring it 3 times for your wish to come true · but climb 99 steps first!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>If I rang the Bled wishing bell, I would wish for:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Full day on Venice islands · 17:00 ⛪ Sat Vigil at San Marco.</div>
+  <div class="page-num">— 9 —</div>
+</div>
+
+<!-- ============ DAY 10 — VENICE ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 10 · TRIP DAY 8</div>
+  <h2>Venice Full Day</h2>
+  <div class="date">SAT · 18 JUL 2026</div>
+  <div class="route">🚆 Mestre ↔ Santa Lucia · 🚤 Burano · ⛪ San Marco</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Trilocale Venezia Mestre · 2nd night.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>Morning train to Venezia Santa Lucia (10 min, €1.45)</li>
+      <li>Piazza San Marco · Doge's Palace · Bridge of Sighs</li>
+      <li>Vaporetto to Burano (colourful houses) · lunch lagoon-side</li>
+      <li>Rialto Bridge · gondola ride (~€80/30 min)</li>
+      <li><b>17:00 ⛪ Saturday Vigil at Basilica San Marco</b> (covers Sun!)</li>
+      <li>Evening cicchetti crawl · back to Mestre</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Sarde in saor</b> · sweet-sour sardines with pine nuts. <b>Risotto al nero di seppia</b> · black squid-ink risotto. Kid favourite: <b>tramezzini</b> (Venice's white-bread sandwiches).</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🚤 Gondola</div>
+      <div class="spot">🎭 Carnival mask</div>
+      <div class="spot">🏘 Burano house</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact">Venice is built on <b>118 small islands</b> connected by ~400 bridges · zero cars · the buses are boats (vaporetti)!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>Burano's brightest house was:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Drive Mestre → Florence · 270 km · No Mass needed (Vigil done).</div>
+  <div class="page-num">— 10 —</div>
+</div>
+
+<!-- ============ DAY 11 — FLORENCE ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 11 · TRIP DAY 9</div>
+  <h2>Drive to Florence</h2>
+  <div class="date">SUN · 19 JUL 2026</div>
+  <div class="route">🚗 Mestre → Florence · 270 km · 3–3.5 hrs · Tuscan hills</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Garden Blue (San Marco district) · 1 night · paid €165.60.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>10:00 leave Mestre · ~13:30 arrive Florence</li>
+      <li>Check in 14:00 · 4th floor reception · ⚠ ZTL zone — park garage €30/24h</li>
+      <li>Duomo + Baptistery · Ponte Vecchio · Uffizi area</li>
+      <li>Piazzale Michelangelo at golden hour (~19:30)</li>
+      <li>Bistecca alla Fiorentina dinner</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Bistecca alla Fiorentina</b> · massive T-bone steak from Chianina cattle, grilled rare. <b>Gelato</b> at Vivoli or Perché No! · the original Florentine art form. <b>Cantuccini</b> with Vin Santo for dessert.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🌷 Lily symbol</div>
+      <div class="spot">🎨 Fresco wall</div>
+      <div class="spot">🌉 Old bridge shops</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>Florence's Duomo</b> dome was the largest in the world for 400 years · Brunelleschi engineered it in 1436 without using scaffolding from below!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The Duomo dome made me feel:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Florence → Pisa → Perugia → Rome · 570 km · long day.</div>
+  <div class="page-num">— 11 —</div>
+</div>
+
+<!-- ============ DAY 12 — ROME ARRIVAL ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 12 · TRIP DAY 10</div>
+  <h2>Florence → Pisa → Rome</h2>
+  <div class="date">MON · 20 JUL 2026</div>
+  <div class="route">🚗 570 km · Tuscany + Umbria · Pisa Tower stop</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Auri apartment (Aurelio, west of Vatican) · 3 nights · paid €1,162.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>09:00 leave Florence · ~10:30 Pisa Tower (1 hr photo)</li>
+      <li>Castello di Montecchio Vesponi (30 min) · Perugia (1 hr)</li>
+      <li>~19:30 arrive Rome · check in Auri apartment</li>
+      <li>Evening: metro to Spagna → Trevi Fountain at night (less crowded)</li>
+      <li>⚠ Hosts meet on-site — message them arrival time ahead</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Cacio e pepe</b> · Roman 3-ingredient pasta (pecorino + black pepper). <b>Carbonara</b> · the original from Rome. <b>Supplì</b> · fried rice ball with mozzarella heart.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🏛 Roman column</div>
+      <div class="spot">🦅 Eagle statue</div>
+      <div class="spot">⛲ Trevi coin</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>The Pisa Tower leans 3.97°</b> (~3.9m off vertical) · it began tilting during construction in 1173 because of soft ground · still standing 850+ years later!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>How I "held up" the Pisa Tower for the photo:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Day trip from Rome — Pompeii + Vesuvius!</div>
+  <div class="page-num">— 12 —</div>
+</div>
+
+<!-- ============ DAY 13 — POMPEII ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 13 · TRIP DAY 11</div>
+  <h2>Pompeii + Naples Day Trip</h2>
+  <div class="date">TUE · 21 JUL 2026</div>
+  <div class="route">🚗 480 km round · Rome → Vesuvius coast → Rome</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Auri apartment · 2nd night.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>07:30 leave Rome · 10:30 Villa Balke lunch (Torre del Greco)</li>
+      <li>12:30–15:00 Pompeii archaeological site (pre-book pompeiisites.org)</li>
+      <li>15:30 Castello di Lettere — Vesuvius views</li>
+      <li>~16:30 drive back · ~20:00 Rome</li>
+      <li>Evening: dinner Trastevere area · gelato</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Pizza Napoletana</b> · the original! Da Michele or Sorbillo for authentic Neapolitan pizza. <b>Sfogliatella</b> · ricotta-filled shell pastry · invented in Campania.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🌋 Vesuvius</div>
+      <div class="spot">🐕 Pompeii dog cast</div>
+      <div class="spot">⚱ Ancient amphora</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>Mount Vesuvius erupted in 79 AD</b>, burying Pompeii under ash for 1,700 years · the people of Naples still live in its shadow today!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The scariest thing I learned about Pompeii:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Vatican Day · Sistine Chapel · St. Peter's · Castel Sant'Angelo.</div>
+  <div class="page-num">— 13 —</div>
+</div>
+
+<!-- ============ DAY 14 — VATICAN ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 14 · TRIP DAY 12</div>
+  <h2>Vatican Day · St. Peter's</h2>
+  <div class="date">WED · 22 JUL 2026</div>
+  <div class="route">🚶 ~10 km walking · 🇻🇦 Vatican City 🆕</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Auri apartment · last Rome night.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>07:00 leave hotel · 08:30 walk 17min to Vatican Museums entry</li>
+      <li><b>09:00 Vatican Museums (pre-booked)</b> · Gallery of Maps · Sistine Chapel</li>
+      <li>Chapel-to-basilica shortcut into St. Peter's</li>
+      <li>Lunch in Borgo Pio</li>
+      <li>Castel Sant'Angelo + Bridge of Angels</li>
+      <li>Piazza Navona evening · dinner · gelato Tre Scalini</li>
+      <li><b>17:00 Daily Mass at St. Peter's</b> (Italian) for today's obligation</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Saltimbocca alla Romana</b> · veal with prosciutto and sage. <b>Maritozzo</b> · sweet brioche bun filled with whipped cream · Roman breakfast.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🗝 Pope's key symbol</div>
+      <div class="spot">⛲ St. Peter's fountain</div>
+      <div class="spot">🛡 Swiss Guard</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact">Vatican City is the <b>smallest country in the world</b> — only <b>0.49 km²</b>. You could walk across it in 20 minutes!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The Sistine Chapel ceiling looked:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Drive Rome → Florence stop → Milan (friend stay).</div>
+  <div class="page-num">— 14 —</div>
+</div>
+
+<!-- ============ DAY 15 — MILAN ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 15 · TRIP DAY 13</div>
+  <h2>Rome → Milan</h2>
+  <div class="date">THU · 23 JUL 2026</div>
+  <div class="route">🚗 580 km · 6.5–7.5 hrs · stop in Florence</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Rasika Ayya's home 💚 · friend stay · 1 night.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>07:30 leave Rome</li>
+      <li>Florence stop ~1.5 hr · coffee at Piazzale Michelangelo</li>
+      <li>~15:00 arrive Milan</li>
+      <li>Duomo + rooftop terrace · Galleria Vittorio Emanuele II</li>
+      <li>Castello Sforzesco courtyards · Navigli canal dinner</li>
+      <li>Family time with Rasika Ayya</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Risotto alla Milanese</b> · saffron-yellow rice, super creamy. <b>Cotoletta alla Milanese</b> · breaded veal cutlet. <b>Panettone</b> Christmas cake originated here!</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">👗 Fashion shop</div>
+      <div class="spot">⛪ Duomo spire</div>
+      <div class="spot">🚊 Tram orange</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact">Milan's <b>Duomo cathedral has 3,400 statues</b> on it · took <b>nearly 600 years</b> to build (1386 to 1965).</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The Duomo terrace view was:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Milan morning · drive Simplon Pass to Stalden (Swiss Alps!).</div>
+  <div class="page-num">— 15 —</div>
+</div>
+
+<!-- ============ DAY 16 — STALDEN ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 16 · TRIP DAY 14</div>
+  <h2>Milan → Stalden (Swiss Alps)</h2>
+  <div class="date">FRI · 24 JUL 2026</div>
+  <div class="route">🚗 290 km · 3.5–4 hrs · 🇨🇭 Switzerland 🆕 (CHF vignette!)</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Postman 8 B&B · Stalden · 1 night · Heinz Clemenz.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>08:30 Milan Duomo morning · 14:30 leave Milan</li>
+      <li>Drive Simplon Pass through the Alps · ~17:30 arrive Stalden</li>
+      <li>Park at village city hall · Heinz shows free parking</li>
+      <li>Stalden village walk · alpine fresh air</li>
+      <li>Buy snacks at supermarket BEFORE 18:30 close (Sun closed!)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Raclette</b> · melted cheese scraped over potatoes + cornichons. <b>Rösti</b> · crispy Swiss hash brown. Walliser <b>Trockenfleisch</b> · cured dried meat.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🐄 Bell cow</div>
+      <div class="spot">🏔 Snow peak</div>
+      <div class="spot">🚂 Mountain train</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact">Switzerland has <b>7,000 named lakes</b> · 4 official languages · and so many cows they outnumber people in some Alpine valleys.</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The Simplon Pass mountains were:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Gornergrat train (3,089m) · then drive to Moléson. Sat Vigil at Gruyères.</div>
+  <div class="page-num">— 16 —</div>
+</div>
+
+<!-- ============ DAY 17 — GORNERGRAT + MOLÉSON ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 17 · TRIP DAY 15</div>
+  <h2>Gornergrat → Moléson</h2>
+  <div class="date">SAT · 25 JUL 2026</div>
+  <div class="route">🚂 Stalden → Zermatt → Gornergrat (3,089m!) · 🚗 → Moléson</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> La Pierre à Catillon · Moléson-sur-Gruyères · 2 nights.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>~07:00 walk to Stalden-Saas station · train to Zermatt</li>
+      <li>Gornergrat cogwheel up to 3,089m · MATTERHORN face-to-face!</li>
+      <li>Back Stalden ~12:00 · 13:00 drive A9 to Moléson</li>
+      <li>~16:00 arrive Moléson · check in La Pierre</li>
+      <li><b>17:30 ⛪ Sat Vigil</b> at Église Saint-Théodule Gruyères (5km) or Bulle (8km)</li>
+      <li>Optional Maison Cailler chocolate factory at Broc on way</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Gruyère cheese</b> · made here for 900+ years. <b>Fondue moitié-moitié</b> · half Gruyère, half Vacherin. <b>Cailler chocolate</b> at Broc · oldest Swiss chocolate brand.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">⛰ Matterhorn</div>
+      <div class="spot">🐐 Alpine goat</div>
+      <div class="spot">🧀 Cheese wheel</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>The Matterhorn</b> is one of the most photographed mountains in the world · its perfect pyramid shape inspired the Toblerone chocolate logo!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The view from Gornergrat:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Geneva day-trip · sightseeing only (Sat Vigil done).</div>
+  <div class="page-num">— 17 —</div>
+</div>
+
+<!-- ============ DAY 18 — GENEVA ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 18 · TRIP DAY 16</div>
+  <h2>Geneva Day Trip</h2>
+  <div class="date">SUN · 26 JUL 2026</div>
+  <div class="route">🚗 Moléson ↔ Geneva · 80 km each way · 1h 15m</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> La Pierre à Catillon · 2nd night · NO Mass needed.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>10:00 relaxed leave Moléson</li>
+      <li>~11:15 Geneva · Old Town walk · Cathédrale Saint-Pierre</li>
+      <li>Jet d'Eau fountain (140m water jet!)</li>
+      <li>Mouettes ferry across the lake</li>
+      <li>Bains des Pâquis lunch · Reformation Wall</li>
+      <li>~17:00 leave · ~19:00 back Moléson</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Filets de perche</b> · Lake Geneva perch fish, pan-fried. <b>Longeole</b> Genevan sausage with cumin. <b>Chocolate</b> at Auer or Sucré · world-class.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">⛲ Jet d'Eau spray</div>
+      <div class="spot">⏰ Flower clock</div>
+      <div class="spot">🇺🇳 UN building</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>Geneva's Jet d'Eau</b> shoots water <b>140m into the sky</b> · originally a safety valve for water pressure in 1886, now the city's icon.</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>Best moment in Geneva:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Drive Moléson → Bern (3 hr stop) → Ottobeuren Bavaria.</div>
+  <div class="page-num">— 18 —</div>
+</div>
+
+<!-- ============ DAY 19 — OTTOBEUREN ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 19 · TRIP DAY 17</div>
+  <h2>Moléson → Bern → Ottobeuren</h2>
+  <div class="date">MON · 27 JUL 2026</div>
+  <div class="route">🚗 480 km · 5h drive + 3h Bern stop · 🇩🇪 back to Germany</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> AKZENT Brauerei Hotel Hirsch · Ottobeuren Bavaria · 1 night.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>08:00 leave Moléson · ~09:00 Bern arrival</li>
+      <li>3-hr Bern stop: Zytglogge clock tower, Kramgasse, Münster cathedral, BärenPark</li>
+      <li>Lunch in Bern · 12:30 leave</li>
+      <li>Cross Swiss-German border at Bargen</li>
+      <li>~17:00 arrive Ottobeuren · visit Abbey if open</li>
+      <li>Bavarian dinner at Hotel Hirsch</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Schweinshaxe</b> · Bavarian crispy roast pork knuckle. <b>Weißwurst</b> with sweet mustard and pretzel · the breakfast classic. <b>Kaiserschmarrn</b> for dessert (back to Austrian roots).</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🐻 Bern bear</div>
+      <div class="spot">🍺 Beer stein</div>
+      <div class="spot">🥨 Big pretzel</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>Bern's Zytglogge clock</b> has been telling time since the 13th century · its astronomical display is the inspiration behind the more famous Prague version.</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The Bern bears were:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> BIG day! Drop car at MUC · KLM to Toulouse · drive to Lourdes · Torch Procession.</div>
+  <div class="page-num">— 19 —</div>
+</div>
+
+<!-- ============ DAY 20 — LOURDES ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 20 · TRIP DAY 18</div>
+  <h2>Ottobeuren → MUC → TLS → Lourdes</h2>
+  <div class="date">TUE · 28 JUL 2026</div>
+  <div class="route">🚗 145 km + ✈ KLM 4h25m + 🚗 150 km</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Hôtel Atrium · 9 rue des Pèlerins, Lourdes · 1 night.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>09:00 leave Ottobeuren · drop Budget rental at MUC ~10:45</li>
+      <li>11:50 KL 1852 MUC → AMS · 13:20 AMS</li>
+      <li>14:25 KL 1453 AMS → TLS · 16:15 land Toulouse</li>
+      <li>16:30 pickup Avis rental at TLS</li>
+      <li>17:00 drive A64 south · ~19:00 Lourdes</li>
+      <li><b>21:00 🕯 TORCH PROCESSION</b> at Sanctuary of Our Lady of Lourdes</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Garbure</b> · hearty Pyrenean cabbage + ham + duck soup. <b>Foie gras</b> on toast. <b>Gâteau à la broche</b> · spiked pyramid cake unique to Bigorre region.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🕯 Candle</div>
+      <div class="spot">⛪ Domed basilica</div>
+      <div class="spot">🌹 Rose statue</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>The Lourdes Sanctuary</b> receives 6 million pilgrims a year · the Torch Procession is held EVERY night from April to October at 21:00.</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The Torch Procession candles looked like:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Big train day. Lourdes → Toulouse → Paris → Amsterdam (~14 hrs total).</div>
+  <div class="page-num">— 20 —</div>
+</div>
+
+<!-- ============ DAY 21 — TGV TRAIN DAY ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 21 · TRIP DAY 19</div>
+  <h2>Lourdes → Amsterdam (Train Day)</h2>
+  <div class="date">WED · 29 JUL 2026</div>
+  <div class="route">🚆 TGV + Eurostar · €591 booked · ~14 hrs</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Cousin's home, Amsterdam 💚 · 1st night with family · 4 nights total.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>05:00 wake · 06:00 leave Lourdes · drive 2 hrs to TLS</li>
+      <li>08:00 drop Avis rental at TLS · tram to Toulouse Matabiau</li>
+      <li>10:20 TGV sncf 8508 → Paris Montparnasse 14:55 (4h 35m)</li>
+      <li>Cross Paris: Métro Line 4 or Uber to Gare du Nord (1h 30m)</li>
+      <li>16:25 Eurostar Red 9463 → Schiphol Airport 19:33</li>
+      <li>20:00 train Schiphol → AMS Centraal · cousin pickup</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Train picnic</b>! Grab French baguette + cheese + jambon at Lourdes shops night before. Buy <b>macarons</b> at Paris Gare du Nord. Snack on <b>stroopwafel</b> from Schiphol shop.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🚄 Speed counter</div>
+      <div class="spot">🐄 Window cow</div>
+      <div class="spot">🌻 Sunflowers</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>The TGV is the world's fastest scheduled train</b> · reaching 320 km/h on commercial routes · the record is 574.8 km/h set in 2007!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The fastest the TGV went today:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> AMS → Brussels stop (Grand Place!) → Paris Le Kremlin-Bicêtre.</div>
+  <div class="page-num">— 21 —</div>
+</div>
+
+<!-- ============ DAY 22 — AMS-BRUSSELS-PARIS ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 22 · TRIP DAY 20</div>
+  <h2>AMS → Brussels → Paris (LK-B)</h2>
+  <div class="date">THU · 30 JUL 2026</div>
+  <div class="route">🚗 520 km · 🇧🇪 Belgium 🆕 (2hr stop) · Eiffel evening</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> ibis budget Paris Porte d'Italie Ouest · Le Kremlin-Bicêtre · paid.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>08:00 leave AMS (cousin's car)</li>
+      <li>10:15 arrive Brussels · 2 hr stop · Grand Place · Manneken Pis · waffles</li>
+      <li>12:30 leave · drive south to Paris</li>
+      <li>15:30 arrive ibis budget LK-B · FREE parking · check in 2 rooms</li>
+      <li>16:30 Métro Line 7 → Paris centre</li>
+      <li>Eiffel Tower from Trocadéro · 🗼 2nd floor lift (pre-booked!) · Seine cruise</li>
+      <li>Latin Quarter dinner</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty">Brussels: <b>Belgian waffle</b> + <b>frites with mayo</b> + <b>chocolate praline</b>. Paris: <b>croissant</b> at Du Pain et des Idées · <b>steak frites</b> · <b>crêpe au sucre</b> for kids.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🗼 Eiffel sparkle</div>
+      <div class="spot">🚲 Paris bike</div>
+      <div class="spot">🥐 Croissant</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>The Eiffel Tower grows 15 cm taller in summer</b> · metal expands in heat. At sunset it sparkles for 5 minutes on the hour (every hour after dark).</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The Eiffel Tower at night looked:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Paris morning (Louvre · Sainte-Chapelle) · drive back to AMS afternoon.</div>
+  <div class="page-num">— 22 —</div>
+</div>
+
+<!-- ============ DAY 23 — PARIS LOUVRE ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 23 · TRIP DAY 21</div>
+  <h2>Paris Day → Drive AMS</h2>
+  <div class="date">FRI · 31 JUL 2026</div>
+  <div class="route">🚶 Paris morning · 🚗 510 km Paris → AMS</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Cousin's home Amsterdam · 2nd night.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>Sleep-in at ibis budget LK-B</li>
+      <li>09:00 Métro to Paris centre</li>
+      <li>10:00 Louvre (pre-book €22 · 2.5 hr · Mona Lisa · Venus de Milo)</li>
+      <li>12:30 Tuileries Garden lunch</li>
+      <li>14:00 Sainte-Chapelle (Gothic stained glass)</li>
+      <li>Notre-Dame exterior + Île de la Cité + Berthillon ice cream</li>
+      <li>16:00 pickup car · 5 hr drive to AMS · 21:00 cousin's</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Macarons</b> at Ladurée · choose 6 colours/flavours. <b>Hot chocolate</b> at Angelina · so thick a spoon stands up. <b>Berthillon ice cream</b> · best in Paris since 1954.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🎨 Mona Lisa</div>
+      <div class="spot">⛪ Stained glass</div>
+      <div class="spot">🐦 Notre-Dame gargoyle</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>The Louvre is the world's largest art museum</b> · 615,000 works · if you spent 30 seconds at each painting it would take you over 100 days to see them all!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The Mona Lisa was smaller / bigger / same as I thought:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> AMS REST day with cousin · Sat Vigil 17:00 at Sint-Nicolaaskerk.</div>
+  <div class="page-num">— 23 —</div>
+</div>
+
+<!-- ============ DAY 24 — AMS REST ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 24 · TRIP DAY 22</div>
+  <h2>Amsterdam Rest Day</h2>
+  <div class="date">SAT · 1 AUG 2026</div>
+  <div class="route">🚶 AMS local · canals · museums · Sat Vigil</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Cousin's home · 3rd night with family.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>Sleep in · long breakfast with cousin's family</li>
+      <li>Optional: Anne Frank House (pre-book essential)</li>
+      <li>Rijksmuseum · Vondelpark walk · Jordaan canals</li>
+      <li>Albert Cuypmarkt for stroopwafels fresh off the iron</li>
+      <li><b>17:00 ⛪ Sat Vigil</b> at Sint-Nicolaaskerk (Prins Hendrikkade 73)</li>
+      <li>Family dinner with cousin · last full evening together</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Stroopwafel</b> · syrup waffle, best fresh and warm. <b>Bitterballen</b> · crispy meat ragout balls (pub classic). <b>Haring</b> · raw herring with onion · brave it!</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🌷 Tulip stall</div>
+      <div class="spot">🚲 Bike pile</div>
+      <div class="spot">🚤 House boat</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>Amsterdam has more bicycles than people</b> · about 880,000 bikes for 870,000 people · and 165 canals!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The first thing I'd do if I lived in Amsterdam:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Morning flight AMS → Copenhagen · full Tivoli afternoon!</div>
+  <div class="page-num">— 24 —</div>
+</div>
+
+<!-- ============ DAY 25 — COPENHAGEN ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 25 · TRIP DAY 23</div>
+  <h2>AMS → Copenhagen</h2>
+  <div class="date">SUN · 2 AUG 2026</div>
+  <div class="route">✈ Norwegian D8 3539 · 10:20 AMS → 11:40 CPH · 🇩🇰 Denmark 🆕</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Danhostel Copenhagen City · FAMILY REUNION (sister + parents joining!).</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>06:00 wake at cousin's · coffee + croissant</li>
+      <li>06:30 cousin drops to Schiphol · 07:30 check in</li>
+      <li>10:20 fly AMS → CPH (1h 20m, conf YDEBI7)</li>
+      <li>12:30 hotel check in</li>
+      <li>13:00 lunch · 14:00 Nyhavn colourful harbour · Tivoli Gardens · Little Mermaid</li>
+      <li>Evening: family dinner with sister + parents</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Smørrebrød</b> · open-faced rye sandwich (try with herring or shrimp). <b>Frikadeller</b> · Danish meatballs. <b>Pølser</b> · the famous red hot dog from a kiosk.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🚲 Cargo bike</div>
+      <div class="spot">🎢 Tivoli ride</div>
+      <div class="spot">🧜 Mermaid statue</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>Lego was invented in Denmark in 1932</b> · the name comes from Danish <b>"leg godt"</b> meaning "play well" · over 600 billion bricks made.</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The best Tivoli ride was:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> X2000 train across Øresund Bridge to Gothenburg!</div>
+  <div class="page-num">— 25 —</div>
+</div>
+
+<!-- ============ DAY 26 — GOTHENBURG ARRIVAL ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 26 · TRIP DAY 24</div>
+  <h2>CPH → Gothenburg</h2>
+  <div class="date">MON · 3 AUG 2026</div>
+  <div class="route">🚆 X2000 · 13:00 CPH → 16:40 Gothenburg · 🇸🇪 Sweden 🆕</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Sister's place Gothenburg 💚 · 1st of 2 nights with sister.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>Morning Copenhagen: Nyhavn photos · maybe quick Tivoli return</li>
+      <li>13:00 X2000 train CPH Central → Gothenburg via Øresund Bridge</li>
+      <li>Cross the 8 km bridge!</li>
+      <li>16:40 arrive Gothenburg · sister pickup</li>
+      <li>Family dinner at sister's home</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Kanelbulle</b> · Swedish cinnamon bun (giant!) at Café Husaren in Haga · the biggest in the world. <b>Köttbullar</b> · Swedish meatballs with lingonberry. <b>Janssons frestelse</b> · creamy potato anchovy bake.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🌉 Øresund Bridge</div>
+      <div class="spot">🚊 Blue tram</div>
+      <div class="spot">🦌 Reindeer souvenir</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>The Øresund Bridge is 8 km long</b> · the train goes UNDERWATER for 4 km then climbs up to a bridge with massive cable-stayed towers. Engineering wow!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The Øresund Bridge crossing felt:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Full sister day · Liseberg amusement park · Haga · archipelago boat.</div>
+  <div class="page-num">— 26 —</div>
+</div>
+
+<!-- ============ DAY 27 — GOTHENBURG SISTER DAY ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 27 · TRIP DAY 25 · LAST EU DAY</div>
+  <h2>Gothenburg Sister Day</h2>
+  <div class="date">TUE · 4 AUG 2026</div>
+  <div class="route">🎢 Liseberg · 🥐 Haga · ⛵ Archipelago boat</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Sister's place · LAST night in Europe! 💚</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>Slow morning · big family breakfast</li>
+      <li>Liseberg amusement park (Europe's best · ~5 hrs · pre-book Pass Plus)</li>
+      <li>Haga district · 17th-century wooden houses</li>
+      <li><b>Café Husaren</b> · the GIANT cinnamon bun</li>
+      <li>Optional: archipelago boat from Saltholmen</li>
+      <li>Family dinner · long Swedish summer evening light til 22:00</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty"><b>Fika</b> · the sacred Swedish coffee+cake break, anytime. <b>Toast Skagen</b> · prawns on toast. <b>Princess Cake</b> · green marzipan dome cake.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🎢 Liseberg rollercoaster</div>
+      <div class="spot">🥐 Giant kanelbulle</div>
+      <div class="spot">⛵ Archipelago boat</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact">Swedes are the <b>most cashless people in the world</b> · they pay for everything by card or phone · only 1% of all transactions use cash.</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The Café Husaren cinnamon bun was:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Fly GOT → MUC evening · last European hotel.</div>
+  <div class="page-num">— 27 —</div>
+</div>
+
+<!-- ============ DAY 28 — GOT-MUC ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 28 · TRIP DAY 26</div>
+  <h2>Gothenburg → Munich</h2>
+  <div class="date">WED · 5 AUG 2026</div>
+  <div class="route">✈ Lufthansa VL2431 · 18:35 GOT → 20:30 MUC</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> AKZENT Hotel Aufkirchen · 5 km from MUC airport · last European night.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>Full morning + early afternoon with sister + parents</li>
+      <li>~16:30 to airport (Booking ref 88AVRS)</li>
+      <li>18:35 VL2431 GOT → MUC T2 20:30 (1h 55m)</li>
+      <li>~21:00 taxi to Aufkirchen hotel (~€20, 10 min)</li>
+      <li>21:30 check in · light dinner near hotel · early bed</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty">Last European meal! <b>Bavarian schnitzel + spätzle</b> if you can find a hotel-near restaurant. Or just airport-style sausage + beer for the dad, kids' meals for the rest.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">✈ Lufthansa logo</div>
+      <div class="spot">🏠 Bavarian roof</div>
+      <div class="spot">🌅 Sunset over alps</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>Lufthansa's mascot</b> is a crane in flight · since 1918. The name "Lufthansa" combines "Luft" (air) + "Hansa" (German trade guild).</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>Saying goodbye to sister + grandparents felt:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> CA962 MUC → Beijing 13:00 · 9h 45m · the long way home begins.</div>
+  <div class="page-num">— 28 —</div>
+</div>
+
+<!-- ============ DAY 29 — MUC-PEK ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 29 · IN TRANSIT</div>
+  <h2>Munich → Beijing</h2>
+  <div class="date">THU · 6 AUG 2026</div>
+  <div class="route">✈ CA962 · 13:00 MUC → 04:45 Fri PEK · 9h 45m</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Sleeping on CA962 over Russia/Mongolia.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>09:00 leave Aufkirchen hotel · 10 min taxi to MUC</li>
+      <li>10:30 MUC T2 check-in for CA962</li>
+      <li>11:00 boarding · 13:00 departure</li>
+      <li>9h 45m flight · sleep, movies, kids' activities</li>
+      <li>04:45 Fri morning · land Beijing</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty">In-flight! Air China cuisine: <b>Asian meal</b> option with rice + protein. Stock up snacks at MUC: pretzels, German chocolate, fruit.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">☁ Cloud shape</div>
+      <div class="spot">🌍 Map screen</div>
+      <div class="spot">😴 Sleeping passenger</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>Polar route</b> · CA962 flies over Russia and Mongolia at ~10,000m altitude. The temperature outside the window is around <b>−55°C</b> · colder than Antarctica!</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>What I'm most looking forward to back home:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> Beijing layover 2 · MUTIANYU GREAT WALL DAY!</div>
+  <div class="page-num">— 29 —</div>
+</div>
+
+<!-- ============ DAY 30 — GREAT WALL ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 30 · BEIJING LAYOVER 2</div>
+  <h2>Great Wall at Mutianyu!</h2>
+  <div class="date">FRI · 7 AUG 2026</div>
+  <div class="route">🛬 PEK 04:45 · 🏯 Mutianyu cable car + toboggan</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> Atour Hotel · back to T3 ~21:00 for CA783 00:05 Sat.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>04:45 land · 06:00 Atour shuttle</li>
+      <li>~07:00 rest + breakfast at hotel</li>
+      <li>~08:00 driver pickup · 1.5 hr to Mutianyu (~80 km north)</li>
+      <li>~10:00 cable car UP the wall · walk a section · iconic photos</li>
+      <li>~13:00 lunch on the wall or in village</li>
+      <li>~14:00 🛷 TOBOGGAN slide DOWN — best part!</li>
+      <li>~17:00 back at Atour · rest · 21:00 shuttle to T3</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty">Mutianyu village: <b>Hand-pulled noodles</b> · made fresh. <b>Dumplings (jiaozi)</b> · pork-chive or shrimp. At airport later: <b>moon cakes</b> for the flight home.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🛷 Toboggan track</div>
+      <div class="spot">🏯 Watchtower</div>
+      <div class="spot">🐉 Dragon stair carving</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact">The Great Wall is over <b>21,196 km long</b> · longer than the Earth's equator! Mutianyu section was built in the 14th century during the Ming Dynasty.</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The toboggan ride down felt:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🔮 Tomorrow:</b> CA783 → AKL · HOME 🏠 · 12h 25m to Auckland.</div>
+  <div class="page-num">— 30 —</div>
+</div>
+
+<!-- ============ DAY 31 — HOME ============ -->
+<div class="page day-page">
+  <div class="day-num">DAY 31 · HOME 🏠</div>
+  <h2>Beijing → Auckland</h2>
+  <div class="date">SAT · 8 AUG 2026</div>
+  <div class="route">✈ CA783 · 00:05 PEK → 16:30 AKL · 12h 25m</div>
+  <div class="where-tonight"><b>🌙 Tonight:</b> 🛋 YOUR OWN BED! ⭐ 25 nights · 15 countries · DONE.</div>
+
+  <div class="section">
+    <div class="label">🎯 TODAY'S PLAN</div>
+    <ul>
+      <li>00:05 CA783 departs Beijing</li>
+      <li>Long flight south · sleep, eat, watch movies</li>
+      <li>Cross international dateline · gain time</li>
+      <li>16:30 land Auckland</li>
+      <li>Customs · find friend/family pickup</li>
+      <li>HOME by 18:00 · pizza in pyjamas · stories to tell</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="label">🍴 LOCAL SPECIALTY</div>
+    <div class="specialty">First NZ meal: <b>Hot chips with tomato sauce</b> + <b>L&P</b> for the kids. Welcome home! The kettle, the couch, and a real flat white tomorrow morning.</div>
+  </div>
+
+  <div class="section">
+    <div class="label">👀 SPOT THESE</div>
+    <div class="spot-grid">
+      <div class="spot">🇳🇿 Silver fern</div>
+      <div class="spot">🐑 First sheep</div>
+      <div class="spot">🏠 Your front door</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">🤓 FUN FACT</div>
+    <div class="fun-fact"><b>Travelling east to west across the dateline</b> you arrive "earlier" than you left! You did Beijing → Auckland in 12h 25m but the clock says only ~16h passed. Time-bending magic.</div>
+  </div>
+
+  <div class="section" style="margin-top:auto;">
+    <div class="label">✏️ JOURNAL</div>
+    <div class="journal-box"><i>The first thing I want to do at home:</i></div>
+  </div>
+
+  <div class="tomorrow"><b>🎉 The Grand Journey ends here.</b> 25 nights, 15 countries, 5 family members, infinite memories. Welcome home!</div>
+  <div class="page-num">— 31 —</div>
+</div>
+
+<!-- ============ BACK COVER ============ -->
+<div class="page back">
+  <h2>🎉 The End 🎉</h2>
+  <p>"We travel not to escape life, but for life not to escape us."</p>
+
+  <div class="grid">
+    <div>
+      <b>🛂 NZ passports</b>
+      Navin · Inoshika · Avin · Lourdes · Ivan
+    </div>
+    <div>
+      <b>🆘 EU emergency</b>
+      Dial <b>112</b> anywhere in Europe
+    </div>
+    <div>
+      <b>🆘 China emergency</b>
+      Police <b>110</b> · Ambulance <b>120</b>
+    </div>
+    <div>
+      <b>🌐 Trip website</b>
+      inoshikafernando.github.io<br>/europeTrip/
+    </div>
+    <div>
+      <b>📁 All trip docs</b>
+      Google Drive (in your email)
+    </div>
+    <div>
+      <b>🎨 Kids Zone</b>
+      /kids.html (offline-ready)
+    </div>
+  </div>
+
+  <p style="font-size:14px;margin-top:20px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;opacity:0.7;">Munasinghe Family Europe Trip · July–August 2026</p>
+</div>
+
+</body>
+</html>
