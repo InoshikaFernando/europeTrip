@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>✍️ Aviann's Travel Journal</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Fredoka',sans-serif; background:#aaa; color:#2d3142; padding:20px; }
+@page { size:A5 portrait; margin:0; }
+.page {
+  width:148mm; height:210mm; padding:12mm;
+  background:#fdfaf2; margin:8px auto;
+  box-shadow:0 4px 20px rgba(0,0,0,0.2);
+  position:relative; overflow:hidden;
+  break-after:page; page-break-after:always;
+  display:flex; flex-direction:column;
+}
+.page:last-child { break-after:auto; page-break-after:auto; }
+.toolbar {
+  position:fixed; top:10px; right:10px; background:white; padding:8px 14px;
+  border-radius:6px; box-shadow:0 2px 12px rgba(0,0,0,0.2); font-size:13px;
+  display:flex; gap:10px; align-items:center; z-index:100;
+}
+.toolbar a, .toolbar button {
+  background:#0d1b2a; color:white; padding:6px 12px; border:0; border-radius:4px;
+  cursor:pointer; text-decoration:none; font-size:12px; font-weight:600; font-family:inherit;
+}
+@media print {
+  body { background:white; padding:0; margin:0; }
+  .toolbar { display:none; }
+  .page { margin:0; box-shadow:none; }
+}
+
+body { background:#fff5b8; }
+.page { font-family:'Plus Jakarta Sans',sans-serif; }
+.cover-aviann {
+  background:linear-gradient(135deg, #ffe066 0%, #ffb84d 50%, #ff8a4c 100%);
+  color:#5d4037; text-align:center; justify-content:center; align-items:center;
+}
+.cover-aviann .big-emoji { font-size:96px; margin-bottom:14px; line-height:1; }
+.cover-aviann .cover-title { font-family:'Fraunces',serif; font-weight:700; font-size:54px; line-height:1.05; text-shadow:2px 2px 0 rgba(0,0,0,0.1); margin-bottom:20px; }
+.cover-aviann .cover-sub { font-family:'Caveat',cursive; font-weight:600; font-size:24px; margin-bottom:24px; opacity:0.85; }
+.cover-aviann .cover-name { background:rgba(255,255,255,0.4); padding:8px 20px; border-radius:100px; font-size:14px; font-weight:600; margin-bottom:8px; }
+.cover-aviann .cover-trip { font-family:'JetBrains Mono',monospace; font-size:12px; opacity:0.7; }
+
+.aviann-page { font-size:11px; }
+.aviann-header { border-bottom:2.5px solid var(--accent); padding-bottom:5px; margin-bottom:6px; }
+.day-strip { display:flex; gap:8px; align-items:center; margin-bottom:3px; }
+.day-num { background:var(--accent); color:white; padding:3px 9px; border-radius:100px; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:700; }
+.day-date { font-family:'JetBrains Mono',monospace; font-size:10px; opacity:0.7; }
+.day-flag { font-size:16px; margin-left:auto; }
+.loc { font-family:'Fraunces',serif; font-weight:700; font-size:19px; line-height:1.1; color:#2d3142; }
+
+.moment-box { background:linear-gradient(135deg, var(--accent), rgba(255,255,255,0)); background-color:rgba(255,255,255,0.4); border:1.5px solid var(--accent); border-radius:6px; padding:7px 10px; margin-bottom:6px; }
+.mb-label { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.15em; color:var(--accent); font-weight:700; }
+.mb-title { font-family:'Fraunces',serif; font-size:13px; font-weight:700; margin:2px 0; line-height:1.2; }
+.mb-desc { font-size:9.5px; line-height:1.35; opacity:0.8; }
+
+.two-col { display:grid; grid-template-columns:1.2fr 1fr; gap:8px; margin-bottom:6px; }
+.col { background:white; padding:6px 8px; border-radius:5px; border-left:3px solid var(--accent); }
+.lbl { font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.15em; color:var(--accent); font-weight:700; margin-bottom:3px; }
+.plan-list { padding-left:13px; font-size:9.5px; line-height:1.4; }
+.food { font-size:9.5px; font-weight:600; line-height:1.3; }
+.rate { font-size:9px; margin-top:2px; color:#5d4037; letter-spacing:1px; }
+.lang { font-family:'Caveat',cursive; font-size:14px; font-weight:600; color:#5d4037; line-height:1.2; }
+
+.spot-row { margin-bottom:6px; }
+.spot-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:4px; }
+.spot-pill { background:white; padding:4px 7px; border-radius:4px; border:1px solid #ccc; font-size:9px; text-align:center; }
+
+.fact-box { background:#fff5e0; border-left:3px solid #c89b3c; padding:6px 10px; border-radius:0 4px 4px 0; font-size:10px; line-height:1.4; margin-bottom:6px; display:flex; gap:6px; }
+.fact-icon { font-size:18px; }
+.fact-text { flex:1; }
+
+.journal { flex:1; display:flex; flex-direction:column; }
+.journal .lbl { margin-bottom:4px; }
+.lines { flex:1; background:repeating-linear-gradient(to bottom, transparent 0, transparent 7mm, rgba(45,49,66,0.2) 7mm, rgba(45,49,66,0.2) 7.3mm); border-radius:4px; min-height:30mm; }
+
+.page-num { position:absolute; bottom:5mm; left:0; right:0; text-align:center; font-family:'JetBrains Mono',monospace; font-size:9px; opacity:0.55; color:var(--accent); font-weight:700; }
+</style></head><body>
+<div class="toolbar"><span>✍️ Aviann's Journal (8yo)</span><a href="booklet.html">📖 Parents</a><a href="booklet-avin.html">🦄 Avin</a><a href="booklet-avisha.html">🗺️ Avisha</a><a href="index.html">← Map</a><button onclick="window.print()">🖨 Print PDF</button></div>
+
+<div class="page cover-aviann">
+  <div class="big-emoji">✍️</div>
+  <div class="cover-title">Aviann's<br>Travel<br>Journal</div>
+  <div class="cover-sub">My 31-Day Adventure across 15 Countries</div>
+  <div class="cover-name">Lourdes "Aviann" Munasinghe · age 8</div>
+  <div class="cover-trip">9 July – 8 August 2026</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#4dabf7;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 01</span>
+      <span class="day-date">THU 9 JUL</span>
+      <span class="day-flag">🇳🇿</span>
+    </div>
+    <h2 class="loc">Auckland → Beijing</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">First long-haul flight to Europe</div>
+    <div class="mb-desc">Into the night, over the Pacific Ocean, dinner on a tray.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>Final pack · all 5 passports</li><li>AKL airport by 16:30</li><li>CA784 19:30 takeoff</li><li>Dinner over Pacific Ocean</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Airplane meal</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Kia ora! (hello, NZ Māori)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🛂 Passport stamp</div><div class="spot-pill">☐ ✈️ Wing view</div><div class="spot-pill">☐ 🌅 Sunset</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">CA784 flies ~10,260 km AKL→Beijing across the Pacific. You cross the international dateline!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 1 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#ff6b9d;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 02</span>
+      <span class="day-date">FRI 10 JUL</span>
+      <span class="day-flag">🇨🇳</span>
+    </div>
+    <h2 class="loc">Beijing Layover · Forbidden City</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Walking through the Forbidden City</div>
+    <div class="mb-desc">You stood where the Chinese emperors stood — 980 buildings, 600 years of secrets.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>04:40 land Beijing PEK</li><li>06:00 Atour Hotel shuttle</li><li>09:30 Forbidden City tour</li><li>12:30 Wangfujing lunch</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Peking Duck or Jianbing crêpe</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Nǐ hǎo! (hello)  ·  Xièxie (thank you)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🏯 Red rooftop</div><div class="spot-pill">☐ 🐉 Dragon carving</div><div class="spot-pill">☐ 🦁 Stone lion</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">The Forbidden City has 980 buildings and was off-limits to commoners for 500 years!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 2 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#c084fc;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 03</span>
+      <span class="day-date">SAT 11 JUL</span>
+      <span class="day-flag">🇦🇹</span>
+    </div>
+    <h2 class="loc">MUC → Salzburg → Burg Altpernstein</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Mirabell Gardens "Do-Re-Mi" steps</div>
+    <div class="mb-desc">The actual staircase where Maria sings with the Von Trapp children.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>07:05 land Munich</li><li>08:30 rental car pickup</li><li>10:30-13:30 Salzburg Sound of Music</li><li>15:00 Burg Altpernstein check-in</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Mozartkugel chocolate or Salzburger Nockerl</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Hallo! (hello)  ·  Danke (thank you)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🌹 Mirabell rose</div><div class="spot-pill">☐ 🐎 Horse statue</div><div class="spot-pill">☐ 🏰 Castle on cliff</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Stiftskeller St. Peter in Salzburg is the OLDEST restaurant in Europe — open since 803 AD!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 3 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#6cc644;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 04</span>
+      <span class="day-date">SUN 12 JUL</span>
+      <span class="day-flag">🇦🇹</span>
+    </div>
+    <h2 class="loc">Hallstatt Lake Village</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Hallstatt — the village so pretty China copied it</div>
+    <div class="mb-desc">UNESCO-protected. 7,000 years old. Best Instagram photo of the trip.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>09:00 sleep-in breakfast</li><li>10:30 drive to Hallstatt</li><li>12:00 Pfarrkirche + Bone House</li><li>13:30 lakeside lunch</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Hallstätter Saibling (lake fish) or Kaiserschmarrn</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Grüß Gott! (hello in Austria)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🦢 Swan on lake</div><div class="spot-pill">☐ ⛵ Wooden boat</div><div class="spot-pill">☐ 💀 Painted skull (Bone House!)</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Hallstatt is so beautiful that China built an EXACT copy in Guangdong Province!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 4 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#ff8a4c;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 05</span>
+      <span class="day-date">MON 13 JUL</span>
+      <span class="day-flag">🇨🇿</span>
+    </div>
+    <h2 class="loc">Drive to Prague</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Charles Bridge at golden hour</div>
+    <div class="mb-desc">600-year-old bridge with 30 saint statues. Walk slowly at sunset.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>08:00 leave Burg</li><li>Cross Czech border (e-vignette!)</li><li>Mid-afternoon Prague</li><li>Charles Bridge golden hour</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Svíčková (creamy beef) or Trdelník pastry</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Ahoj! (hello)  ·  Děkuji (thank you)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🌉 Saint statue</div><div class="spot-pill">☐ 🕰 Astronomical clock</div><div class="spot-pill">☐ 🧸 Marionette puppet</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Prague Astronomical Clock has been ticking since 1410 — 615 years!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 5 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#ff6b9d;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 06</span>
+      <span class="day-date">TUE 14 JUL</span>
+      <span class="day-flag">🇨🇿</span>
+    </div>
+    <h2 class="loc">Prague Full Day</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Prague Castle — biggest in the world</div>
+    <div class="mb-desc">Guinness World Records confirms it. 70,000 m² of palaces and towers.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>Prague Castle + St. Vitus</li><li>Lesser Town walk</li><li>Jewish Quarter</li><li>Wenceslas Square</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Goulash in a bread bowl</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Dobré ráno! (good morning)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ ⚔ Castle guard</div><div class="spot-pill">☐ 🎷 Street musician</div><div class="spot-pill">☐ 🚊 Red tram</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Prague Castle is the LARGEST ancient castle in the world (70,000 m²)!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 6 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#ffd93d;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 07</span>
+      <span class="day-date">WED 15 JUL</span>
+      <span class="day-flag">🇦🇹</span>
+    </div>
+    <h2 class="loc">Drive to Vienna</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Sachertorte at Café Sacher</div>
+    <div class="mb-desc">The original chocolate-apricot cake from 1832. Eat in the same room emperors did.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>Morning Prague Castle</li><li>11:00 leave Prague</li><li>15:00 Vienna</li><li>Schönbrunn + Ringstrasse</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Wiener Schnitzel or Sachertorte</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Servus! (casual Austrian hello)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🐎 Lipizzaner horse</div><div class="spot-pill">☐ 🎼 Music statue</div><div class="spot-pill">☐ 🍰 Cake shop</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Schönbrunn Palace has 1,441 rooms! Mozart performed here at age 6.</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 7 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#c44a4a;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 08</span>
+      <span class="day-date">THU 16 JUL</span>
+      <span class="day-flag">🇭🇺</span>
+    </div>
+    <h2 class="loc">Drive to Budapest</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Splashing in Széchenyi Thermal Baths</div>
+    <div class="mb-desc">18 pools at different temperatures. Outdoor one steaming hot in summer.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>10:00 leave Vienna</li><li>Hungarian e-vignette online</li><li>~14:00 Budapest</li><li>Castle Hill funicular</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Goulash soup or Kürtőskalács chimney cake</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Szia! (hello)  ·  Köszönöm (thank you)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🛁 Thermal bath</div><div class="spot-pill">☐ 🐉 Buda dragon</div><div class="spot-pill">☐ 🌶 Paprika braid</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Budapest is actually TWO cities — Buda (hilly) + Pest (flat). They merged in 1873!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 8 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#6cc644;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 09</span>
+      <span class="day-date">FRI 17 JUL</span>
+      <span class="day-flag">🇸🇮</span>
+    </div>
+    <h2 class="loc">Budapest → Bled → Mestre</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Bled's wishing bell on the island</div>
+    <div class="mb-desc">99 steps up to the church. Ring 3 times — your wish comes true!</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>07:30 leave Budapest</li><li>13:00 Bled lake 2.5hr stop</li><li>Castle + emerald lake</li><li>16:00 leave for Mestre</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Kremšnita cream cake at Hotel Park</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Živjo! (Slovenian hello)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🏰 Cliff castle</div><div class="spot-pill">☐ ⛪ Island church</div><div class="spot-pill">☐ ⛵ Pletna boat</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">The wishing bell at Bled — ring it 3 times and your wish comes true. Climb 99 steps first!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 9 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#4dabf7;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 10</span>
+      <span class="day-date">SAT 18 JUL</span>
+      <span class="day-flag">🇮🇹</span>
+    </div>
+    <h2 class="loc">Venice Full Day</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Gondola ride on Venice canals</div>
+    <div class="mb-desc">A wooden boat older than your grandparents, on water in a city without streets.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>Train Mestre → Santa Lucia</li><li>Piazza San Marco</li><li>Doge&#39;s Palace</li><li>Vaporetto to Burano</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Cicchetti (Venetian tapas) + risotto al nero</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Ciao! (hello)  ·  Grazie (thank you)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🚤 Gondola</div><div class="spot-pill">☐ 🎭 Carnival mask</div><div class="spot-pill">☐ 🏘 Burano colored house</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Venice is built on 118 small islands · ZERO cars · the buses are boats (vaporetti)!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 10 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#ff8a4c;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 11</span>
+      <span class="day-date">SUN 19 JUL</span>
+      <span class="day-flag">🇮🇹</span>
+    </div>
+    <h2 class="loc">Drive to Florence</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Sunset at Piazzale Michelangelo</div>
+    <div class="mb-desc">The view EVERY postcard of Florence is taken from. Duomo + Arno river + Tuscan hills.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>10:00 leave Mestre</li><li>13:30 Florence</li><li>Garden Blue check-in</li><li>Duomo + Baptistery</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Bistecca alla Fiorentina (T-bone steak) + gelato</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Buongiorno! (good day)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🌷 Lily symbol</div><div class="spot-pill">☐ 🎨 Fresco wall</div><div class="spot-pill">☐ 🌉 Old bridge shops</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Florence&#39;s Duomo dome was the largest in the world for 400 years — built without scaffolding from below in 1436!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 11 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#ffd93d;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 12</span>
+      <span class="day-date">MON 20 JUL</span>
+      <span class="day-flag">🇮🇹</span>
+    </div>
+    <h2 class="loc">Florence → Pisa → Rome</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Holding up the Pisa Tower for a photo</div>
+    <div class="mb-desc">Tower has leaned for 850 years. Now propped back up by 4° just for you.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>09:00 leave Florence</li><li>10:30 Pisa Tower photo</li><li>13:00 Castello Montecchio</li><li>15:00 Perugia</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Cacio e pepe pasta or Carbonara</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Andiamo! (let&#39;s go!)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🗼 Leaning Tower</div><div class="spot-pill">☐ ⛲ Trevi coin</div><div class="spot-pill">☐ 🏛 Roman column</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">The Pisa Tower has leaned for 850 YEARS — it began tilting in 1173 during construction due to soft ground!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 12 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#c44a4a;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 13</span>
+      <span class="day-date">TUE 21 JUL</span>
+      <span class="day-flag">🇮🇹</span>
+    </div>
+    <h2 class="loc">Pompeii + Naples Day Trip</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Walking the streets of Pompeii</div>
+    <div class="mb-desc">Real ancient Romans walked here 2,000 years ago. Grooves in stones from chariot wheels.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>07:30 leave Rome</li><li>10:30 lunch Torre del Greco</li><li>12:30 Pompeii (pre-booked)</li><li>15:30 Castello di Lettere</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Pizza Napoletana (the ORIGINAL!) or Sfogliatella</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Mamma mia! (oh my gosh)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🌋 Mount Vesuvius</div><div class="spot-pill">☐ 🐕 Pompeii dog cast</div><div class="spot-pill">☐ ⚱ Ancient amphora</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Mount Vesuvius erupted 79 AD, burying Pompeii under ash for 1,700 years!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 13 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#a47a23;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 14</span>
+      <span class="day-date">WED 22 JUL</span>
+      <span class="day-flag">🇻🇦</span>
+    </div>
+    <h2 class="loc">Vatican Day · Sistine Chapel</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Standing under the Sistine Chapel ceiling</div>
+    <div class="mb-desc">Michelangelo painted it lying on his back for 4 YEARS. No photos allowed — burn it into memory.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>07:00 walk to Vatican</li><li>09:00 Vatican Museums</li><li>11:30 Sistine Chapel</li><li>12:30 St. Peter&#39;s</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Saltimbocca alla Romana or Maritozzo cream bun</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Pax tecum (peace be with you - Latin)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🗝 Pope&#39;s key symbol</div><div class="spot-pill">☐ 🛡 Swiss Guard</div><div class="spot-pill">☐ ⛲ St. Peter&#39;s fountain</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Vatican City is the SMALLEST country in the world — only 0.49 km²! Walk across in 20 minutes.</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 14 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#4dabf7;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 15</span>
+      <span class="day-date">THU 23 JUL</span>
+      <span class="day-flag">🇮🇹</span>
+    </div>
+    <h2 class="loc">Rome → Milan</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Climbing to the Milan Duomo rooftop</div>
+    <div class="mb-desc">3,400 statues at touching distance. Walk among Gothic spires above the cathedral.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>07:30 leave Rome</li><li>Florence quick stop</li><li>15:00 arrive Milan</li><li>Friend stay with Rasika Ayya</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Risotto Milanese (saffron yellow) or Cotoletta</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Belissimo! (beautiful)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 👗 Fashion shop</div><div class="spot-pill">☐ ⛪ Duomo spire</div><div class="spot-pill">☐ 🚊 Orange tram</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Milan&#39;s Duomo has 3,400 STATUES — took 600 years to build (1386-1965)!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 15 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#6cc644;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 16</span>
+      <span class="day-date">FRI 24 JUL</span>
+      <span class="day-flag">🇨🇭</span>
+    </div>
+    <h2 class="loc">Milan → Stalden (Alps)</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Crossing the Simplon Pass into the Alps</div>
+    <div class="mb-desc">Driving 2,000m up through twisting roads from Italy into Switzerland. Snowy peaks even in July.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>08:30 Milan Duomo</li><li>14:30 leave Milan</li><li>Drive Simplon Pass</li><li>17:30 Stalden</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Raclette or Rösti hash browns</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Grüezi! (Swiss German hello)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🐄 Bell cow</div><div class="spot-pill">☐ 🏔 Snow peak</div><div class="spot-pill">☐ 🚂 Mountain train</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Switzerland has 7,000 named lakes, 4 official languages, and SO many cows!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 16 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#ff6b9d;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 17</span>
+      <span class="day-date">SAT 25 JUL</span>
+      <span class="day-flag">🇨🇭</span>
+    </div>
+    <h2 class="loc">Gornergrat → Moléson</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Matterhorn at 3,089m on Gornergrat</div>
+    <div class="mb-desc">Switzerland's most photographed mountain. Shape inspired Toblerone logo. Higher than most clouds.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>07:00 train Stalden→Zermatt</li><li>Gornergrat cogwheel 3,089m</li><li>12:00 back Stalden</li><li>13:00 drive Moléson</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Gruyère cheese fondue + Cailler chocolate</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Merci! (thanks in French Switzerland)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ ⛰ Matterhorn</div><div class="spot-pill">☐ 🐐 Alpine goat</div><div class="spot-pill">☐ 🧀 Cheese wheel</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">The Matterhorn shape inspired the Toblerone chocolate logo!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 17 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#4dabf7;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 18</span>
+      <span class="day-date">SUN 26 JUL</span>
+      <span class="day-flag">🇨🇭</span>
+    </div>
+    <h2 class="loc">Geneva Day Trip</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Jet d'Eau spraying 140m into the sky</div>
+    <div class="mb-desc">500 litres of Lake Geneva water per second, shot straight up. Walk in the spray to cool down!</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>10:00 leave Moléson</li><li>11:15 Geneva</li><li>Old Town + Cathédrale Saint-Pierre</li><li>Jet d&#39;Eau + Mouettes ferry</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Filets de perche (lake fish) + Auer chocolate</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Bonjour! (good day)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ ⛲ Jet d&#39;Eau spray</div><div class="spot-pill">☐ ⏰ Flower clock</div><div class="spot-pill">☐ 🇺🇳 UN building</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Geneva's Jet d'Eau shoots water 140m up — was originally just a safety valve in 1886!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 18 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#a47a23;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 19</span>
+      <span class="day-date">MON 27 JUL</span>
+      <span class="day-flag">🇩🇪</span>
+    </div>
+    <h2 class="loc">Moléson → Bern → Ottobeuren</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">3-hour stop in Bern, Switzerland's capital</div>
+    <div class="mb-desc">The Zytglogge clock has been ticking since the 1200s. Watch figurines come out on the hour.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>08:00 leave Moléson</li><li>09:00 Bern arrival</li><li>3-hr stop: Zytglogge, BärenPark</li><li>12:30 leave Bern</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Bavarian Schweinshaxe (pork knuckle) + Weißwurst</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Auf Wiedersehen! (goodbye)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🐻 Bern bear</div><div class="spot-pill">☐ 🍺 Beer stein</div><div class="spot-pill">☐ 🥨 Big pretzel</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Bern's Zytglogge clock has been telling time since the 13th century!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 19 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#c44a4a;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 20</span>
+      <span class="day-date">TUE 28 JUL</span>
+      <span class="day-flag">🇫🇷</span>
+    </div>
+    <h2 class="loc">Lourdes Pilgrimage</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Torch Procession at Lourdes Sanctuary</div>
+    <div class="mb-desc">21:00 every night. Thousands of candles. Salve Regina in every language. Magical pilgrimage moment.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>09:00 leave Ottobeuren</li><li>Drop Munich rental MUC</li><li>11:50 KLM via AMS to TLS</li><li>16:30 Avis rental</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Garbure (Pyrenean soup) + Foie gras</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Notre Dame! (Our Lady)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🕯 Lit candle</div><div class="spot-pill">☐ ⛪ Domed basilica</div><div class="spot-pill">☐ 🌹 Rose statue</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">The Lourdes Sanctuary receives 6 MILLION pilgrims every year. The Procession is held every night April-October!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 20 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#4dabf7;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 21</span>
+      <span class="day-date">WED 29 JUL</span>
+      <span class="day-flag">🇫🇷</span>
+    </div>
+    <h2 class="loc">Train Day · Lourdes → Amsterdam</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">TGV racing 320 km/h through France</div>
+    <div class="mb-desc">World's fastest scheduled train. 5 hours of countryside, vineyards, towns flying past.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>05:00 wake Lourdes</li><li>06:00 leave for Toulouse</li><li>10:20 TGV → Paris 14:55</li><li>Métro to Gare du Nord</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">French baguette + cheese + jambon picnic</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Merci beaucoup! (thanks very much)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🚄 Speed counter</div><div class="spot-pill">☐ 🐄 Window cow</div><div class="spot-pill">☐ 🌻 Sunflowers</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">TGV is the world&#39;s fastest scheduled train — 320 km/h on commercial routes (record 574.8 km/h)!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 21 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#c084fc;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 22</span>
+      <span class="day-date">THU 30 JUL</span>
+      <span class="day-flag">🇫🇷</span>
+    </div>
+    <h2 class="loc">AMS → Brussels → Paris</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Eiffel Tower lit up at night</div>
+    <div class="mb-desc">The hourly sparkle show — 20,000 lights flashing 5 minutes every hour after dark.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>08:00 leave AMS</li><li>10:15 Brussels Grand Place</li><li>12:30 leave Brussels</li><li>15:30 Paris hotel</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Belgian waffles + frites with mayo + Parisian crêpe</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Bonjour Paris!</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🗼 Eiffel sparkle</div><div class="spot-pill">☐ 🚲 Paris bike</div><div class="spot-pill">☐ 🥐 Croissant</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">The Eiffel Tower GROWS 15 cm taller in summer because metal expands in heat!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 22 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#ffd93d;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 23</span>
+      <span class="day-date">FRI 31 JUL</span>
+      <span class="day-flag">🇫🇷</span>
+    </div>
+    <h2 class="loc">Paris → Amsterdam</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Looking the Mona Lisa in the eye</div>
+    <div class="mb-desc">Smaller than you think (77×53cm). Painted by Leonardo 1503. Most famous painting on Earth.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>09:00 sleep-in</li><li>10:00 Louvre (pre-booked)</li><li>12:30 Tuileries lunch</li><li>14:00 Sainte-Chapelle</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Macarons + hot chocolate Angelina + Berthillon ice cream</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Au revoir! (goodbye)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🎨 Mona Lisa</div><div class="spot-pill">☐ ⛪ Stained glass</div><div class="spot-pill">☐ 🐦 Notre-Dame gargoyle</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">The Louvre has 615,000 works — if you spent 30 seconds at each it would take 100 days to see them all!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 23 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#ff8a4c;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 24</span>
+      <span class="day-date">SAT 1 AUG</span>
+      <span class="day-flag">🇳🇱</span>
+    </div>
+    <h2 class="loc">Amsterdam Rest Day</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Walking Amsterdam's UNESCO canal rings</div>
+    <div class="mb-desc">17th-century engineering. 165 canals. 1,500 bridges. More bikes than people. Stroopwafels.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>Sleep in with cousin</li><li>Optional Anne Frank House</li><li>Vondelpark walk</li><li>Albert Cuypmarkt stroopwafels</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Stroopwafel fresh off iron + Bitterballen + Haring</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Hallo! (hello)  ·  Dank je (thanks)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🌷 Tulip stall</div><div class="spot-pill">☐ 🚲 Bike pile</div><div class="spot-pill">☐ 🚤 House boat</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Amsterdam has MORE bicycles than people — about 880,000 bikes for 870,000 people!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 24 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#ff6b9d;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 25</span>
+      <span class="day-date">SUN 2 AUG</span>
+      <span class="day-flag">🇩🇰</span>
+    </div>
+    <h2 class="loc">AMS → Copenhagen</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Tivoli Gardens at dusk</div>
+    <div class="mb-desc">World's 2nd oldest amusement park (1843). Where Walt Disney got his idea. Magical fairy lights.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>06:00 wake at cousin&#39;s</li><li>06:30 to Schiphol</li><li>10:20 Norwegian D8 → CPH</li><li>11:40 land</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Smørrebrød + Frikadeller meatballs + Pølser hot dog</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Hej! (hello)  ·  Tak (thanks)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🚲 Cargo bike</div><div class="spot-pill">☐ 🎢 Tivoli ride</div><div class="spot-pill">☐ 🧜 Mermaid statue</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Lego was invented in Denmark — name means "leg godt" or PLAY WELL in Danish!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 25 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#4dabf7;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 26</span>
+      <span class="day-date">MON 3 AUG</span>
+      <span class="day-flag">🇸🇪</span>
+    </div>
+    <h2 class="loc">CPH → Gothenburg</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Riding X2000 underwater + over Øresund</div>
+    <div class="mb-desc">The train goes UNDERWATER for 4km, then climbs to a massive bridge. Engineering wonder.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>Morning Copenhagen Nyhavn</li><li>13:00 X2000 train</li><li>Cross Øresund Bridge</li><li>16:40 Gothenburg arrival</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Kanelbulle (cinnamon bun) + Köttbullar meatballs</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Hej! (hello)  ·  Tack (thanks)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🌉 Øresund Bridge</div><div class="spot-pill">☐ 🚊 Blue tram</div><div class="spot-pill">☐ 🦌 Reindeer souvenir</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">The Øresund Bridge is 8 km long — train goes UNDERWATER for 4 km then climbs to a sky-high bridge!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 26 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#6cc644;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 27</span>
+      <span class="day-date">TUE 4 AUG</span>
+      <span class="day-flag">🇸🇪</span>
+    </div>
+    <h2 class="loc">Gothenburg Sister Day</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">The GIANT cinnamon bun at Café Husaren</div>
+    <div class="mb-desc">Bigger than your head. Sticky, cinnamon-y, perfect. World's biggest kanelbulle. You earned it.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>Slow morning family breakfast</li><li>Liseberg amusement park (~5hrs)</li><li>Haga district 17th century houses</li><li>Café Husaren GIANT cinnamon bun</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Café Husaren GIANT kanelbulle + Fika coffee + Princess Cake</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Tack så mycket! (thanks so much)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🎢 Liseberg rollercoaster</div><div class="spot-pill">☐ 🥐 Giant kanelbulle</div><div class="spot-pill">☐ ⛵ Archipelago boat</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Swedes are the MOST cashless people in the world — only 1% of transactions use cash!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 27 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#ff8a4c;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 28</span>
+      <span class="day-date">WED 5 AUG</span>
+      <span class="day-flag">🇩🇪</span>
+    </div>
+    <h2 class="loc">Gothenburg → Munich</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Last European sunset</div>
+    <div class="mb-desc">25 nights, 15 countries, 5 family members. The sun setting on this trip.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>Morning with sister + parents</li><li>16:30 to airport</li><li>18:35 Lufthansa VL2431 GOT → MUC</li><li>20:30 land Munich</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Last Bavarian schnitzel + spätzle</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Auf Wiedersehen Europa!</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ ✈ Lufthansa crane logo</div><div class="spot-pill">☐ 🏠 Bavarian roof</div><div class="spot-pill">☐ 🌅 Sunset over Alps</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Lufthansa's mascot is a crane in flight, since 1918!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 28 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#c084fc;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 29</span>
+      <span class="day-date">THU 6 AUG</span>
+      <span class="day-flag">✈️</span>
+    </div>
+    <h2 class="loc">Munich → Beijing</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Polar route over Mongolia at -55°C</div>
+    <div class="mb-desc">10,000m up. Outside colder than Antarctica. Below: endless steppes, lakes, mountains.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>09:00 leave Aufkirchen</li><li>10:30 MUC T2 check-in</li><li>13:00 CA962 → Beijing</li><li>9h 45m flight</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Air China in-flight meal</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Bon voyage!</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ ☁ Cloud shape</div><div class="spot-pill">☐ 🌍 Map screen</div><div class="spot-pill">☐ 😴 Sleeping passenger</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">At 10,000m altitude the outside temperature is around -55°C — colder than Antarctica!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 29 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#c44a4a;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 30</span>
+      <span class="day-date">FRI 7 AUG</span>
+      <span class="day-flag">🇨🇳</span>
+    </div>
+    <h2 class="loc">Mutianyu Great Wall!</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">TOBOGGAN down the Great Wall</div>
+    <div class="mb-desc">Cable car up. Climb a section. Then SLIDE DOWN on a toboggan track. Best part of the trip!</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>04:45 land Beijing</li><li>06:00 Atour Hotel</li><li>08:00 driver to Mutianyu</li><li>10:00 cable car UP</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">Hand-pulled noodles + dumplings (jiaozi)</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Wǒ ài Zhōngguó (I love China)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🛷 Toboggan track</div><div class="spot-pill">☐ 🏯 Watchtower</div><div class="spot-pill">☐ 🐉 Dragon stair carving</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">The Great Wall is over 21,000 km long — LONGER than the Earth&#39;s equator!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 30 —</div>
+</div>
+
+
+<div class="page aviann-page" style="--accent:#6cc644;">
+  <div class="aviann-header">
+    <div class="day-strip">
+      <span class="day-num">DAY 31</span>
+      <span class="day-date">SAT 8 AUG</span>
+      <span class="day-flag">🇳🇿</span>
+    </div>
+    <h2 class="loc">Beijing → HOME 🏠</h2>
+  </div>
+
+  <div class="moment-box">
+    <div class="mb-label">✨ TODAY'S BIG MOMENT</div>
+    <div class="mb-title">Arriving HOME after 31 days</div>
+    <div class="mb-desc">Your own bed. Familiar food. Friends to tell. Trip is over — but memories last forever.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <div class="lbl">🎯 PLAN</div>
+      <ul class="plan-list"><li>00:05 CA783 departs Beijing</li><li>12h 25m to Auckland</li><li>Cross dateline · gain time</li><li>16:30 land AKL</li></ul>
+    </div>
+    <div class="col">
+      <div class="lbl">🍴 I'LL TRY</div>
+      <div class="food">NZ hot chips + L&P + Mum&#39;s home cooking</div>
+      <div class="rate">My rating: ☆ ☆ ☆ ☆ ☆</div>
+      <div class="lbl" style="margin-top:6px;">🗣 NEW WORDS</div>
+      <div class="lang">Kia ora! (HOME!)</div>
+    </div>
+  </div>
+
+  <div class="spot-row">
+    <div class="lbl">👀 SPOT THESE</div>
+    <div class="spot-grid"><div class="spot-pill">☐ 🇳🇿 Silver fern</div><div class="spot-pill">☐ 🐑 First sheep</div><div class="spot-pill">☐ 🏠 Your front door</div></div>
+  </div>
+
+  <div class="fact-box">
+    <span class="fact-icon">🤓</span>
+    <span class="fact-text">Travelling east across dateline you arrive "earlier" than you left — time-bending magic!</span>
+  </div>
+
+  <div class="journal">
+    <div class="lbl">✏️ WHY DID THIS FEEL SPECIAL TO ME?</div>
+    <div class="lines"></div>
+  </div>
+
+  <div class="page-num">— 31 —</div>
+</div>
+
+</body></html>

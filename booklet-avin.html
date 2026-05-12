@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>🦄 Avin's Big Adventure</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Fredoka',sans-serif; background:#aaa; color:#2d3142; padding:20px; }
+@page { size:A5 portrait; margin:0; }
+.page {
+  width:148mm; height:210mm; padding:12mm;
+  background:#fdfaf2; margin:8px auto;
+  box-shadow:0 4px 20px rgba(0,0,0,0.2);
+  position:relative; overflow:hidden;
+  break-after:page; page-break-after:always;
+  display:flex; flex-direction:column;
+}
+.page:last-child { break-after:auto; page-break-after:auto; }
+.toolbar {
+  position:fixed; top:10px; right:10px; background:white; padding:8px 14px;
+  border-radius:6px; box-shadow:0 2px 12px rgba(0,0,0,0.2); font-size:13px;
+  display:flex; gap:10px; align-items:center; z-index:100;
+}
+.toolbar a, .toolbar button {
+  background:#0d1b2a; color:white; padding:6px 12px; border:0; border-radius:4px;
+  cursor:pointer; text-decoration:none; font-size:12px; font-weight:600; font-family:inherit;
+}
+@media print {
+  body { background:white; padding:0; margin:0; }
+  .toolbar { display:none; }
+  .page { margin:0; box-shadow:none; }
+}
+
+body { background:#ffe4ed; }
+.cover-avin {
+  background:linear-gradient(135deg, #ff6b9d 0%, #ffd93d 50%, #4dabf7 100%);
+  color:white; text-align:center; justify-content:center; align-items:center;
+}
+.cover-avin .big-emoji { font-size:120px; margin-bottom:10px; line-height:1; }
+.cover-avin .cover-title { font-family:'Fredoka',sans-serif; font-size:60px; font-weight:700; line-height:1.05; text-shadow:4px 4px 0 rgba(0,0,0,0.15); margin-bottom:20px; }
+.cover-avin .cover-sub { font-family:'Caveat',cursive; font-size:32px; opacity:0.95; margin-bottom:30px; }
+.cover-avin .cover-stickers { font-size:42px; letter-spacing:8px; }
+
+.avin-page { background:linear-gradient(180deg, var(--accent) 0%, var(--accent) 12%, #fff7e6 12%, #fff7e6 100%); padding:0 !important; }
+.avin-header {
+  padding:10mm 10mm 4mm;
+  display:flex; justify-content:space-between; align-items:center;
+  color:white;
+}
+.avin-day { font-family:'Fredoka',sans-serif; font-weight:700; font-size:14px; }
+.avin-date { font-family:'Fredoka',sans-serif; font-weight:600; font-size:13px; }
+.avin-icon { text-align:center; font-size:80px; line-height:1; margin-top:4mm; }
+.avin-flag { text-align:center; font-size:32px; margin-top:2mm; }
+.avin-title {
+  text-align:center; font-family:'Fredoka',sans-serif; font-weight:700;
+  font-size:32px; line-height:1.1; margin:4mm 8mm; color:#2d3142;
+}
+
+.avin-mood {
+  margin:5mm 10mm; padding:6mm 4mm; background:white; border-radius:14px;
+  border:3px solid var(--accent); text-align:center;
+}
+.mood-label { font-family:'Caveat',cursive; font-weight:700; font-size:18px; color:#2d3142; margin-bottom:5px; }
+.mood-faces { font-size:32px; letter-spacing:8px; }
+
+.avin-draw { margin:4mm 10mm 0; }
+.draw-label { font-family:'Caveat',cursive; font-weight:700; font-size:20px; color:#2d3142; margin-bottom:4px; }
+.draw-box { height:55mm; background:white; border:3px dashed var(--accent); border-radius:10px; }
+
+.avin-sticker { margin:4mm 10mm; display:flex; align-items:center; gap:8mm; }
+.sticker-label { font-family:'Caveat',cursive; font-weight:700; font-size:18px; color:#2d3142; }
+.sticker-box { flex:1; height:18mm; background:white; border:3px dashed var(--accent); border-radius:50%; min-width:18mm; max-width:24mm; aspect-ratio:1; }
+
+.page-num { position:absolute; bottom:5mm; left:0; right:0; text-align:center; font-family:'Fredoka',sans-serif; font-weight:700; font-size:14px; color:var(--accent); }
+</style></head><body>
+<div class="toolbar"><span>🦄 Avin's Booklet (4yo)</span><a href="booklet.html">📖 Parents</a><a href="booklet-aviann.html">✍️ Aviann</a><a href="booklet-avisha.html">🗺️ Avisha</a><a href="index.html">← Map</a><button onclick="window.print()">🖨 Print PDF</button></div>
+
+<div class="page cover-avin">
+  <div class="big-emoji">🦄</div>
+  <div class="cover-title">AVIN's<br>BIG<br>ADVENTURE!</div>
+  <div class="cover-sub">31 days · 15 countries · ME!</div>
+  <div class="cover-stickers">✈️ 🏰 🗼 🌋 🎢 🏯 ⛪ 🚂 🛷</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#4dabf7;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 01</div>
+    <div class="avin-date">THU 9 JUL</div>
+  </div>
+  <div class="avin-icon">✈️</div>
+  <div class="avin-flag">🇳🇿</div>
+  <div class="avin-title">Auckland</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">1</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#ff6b9d;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 02</div>
+    <div class="avin-date">FRI 10 JUL</div>
+  </div>
+  <div class="avin-icon">🏯</div>
+  <div class="avin-flag">🇨🇳</div>
+  <div class="avin-title">Beijing Layover · Forbidden City</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">2</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#c084fc;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 03</div>
+    <div class="avin-date">SAT 11 JUL</div>
+  </div>
+  <div class="avin-icon">🏰</div>
+  <div class="avin-flag">🇦🇹</div>
+  <div class="avin-title">MUC</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">3</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#6cc644;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 04</div>
+    <div class="avin-date">SUN 12 JUL</div>
+  </div>
+  <div class="avin-icon">⛪</div>
+  <div class="avin-flag">🇦🇹</div>
+  <div class="avin-title">Hallstatt Lake Village</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">4</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#ff8a4c;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 05</div>
+    <div class="avin-date">MON 13 JUL</div>
+  </div>
+  <div class="avin-icon">🌉</div>
+  <div class="avin-flag">🇨🇿</div>
+  <div class="avin-title">Drive to Prague</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">5</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#ff6b9d;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 06</div>
+    <div class="avin-date">TUE 14 JUL</div>
+  </div>
+  <div class="avin-icon">🏰</div>
+  <div class="avin-flag">🇨🇿</div>
+  <div class="avin-title">Prague Full Day</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">6</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#ffd93d;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 07</div>
+    <div class="avin-date">WED 15 JUL</div>
+  </div>
+  <div class="avin-icon">🍰</div>
+  <div class="avin-flag">🇦🇹</div>
+  <div class="avin-title">Drive to Vienna</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">7</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#c44a4a;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 08</div>
+    <div class="avin-date">THU 16 JUL</div>
+  </div>
+  <div class="avin-icon">🛁</div>
+  <div class="avin-flag">🇭🇺</div>
+  <div class="avin-title">Drive to Budapest</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">8</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#6cc644;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 09</div>
+    <div class="avin-date">FRI 17 JUL</div>
+  </div>
+  <div class="avin-icon">⛪</div>
+  <div class="avin-flag">🇸🇮</div>
+  <div class="avin-title">Budapest</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">9</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#4dabf7;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 10</div>
+    <div class="avin-date">SAT 18 JUL</div>
+  </div>
+  <div class="avin-icon">🚤</div>
+  <div class="avin-flag">🇮🇹</div>
+  <div class="avin-title">Venice Full Day</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">10</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#ff8a4c;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 11</div>
+    <div class="avin-date">SUN 19 JUL</div>
+  </div>
+  <div class="avin-icon">🌅</div>
+  <div class="avin-flag">🇮🇹</div>
+  <div class="avin-title">Drive to Florence</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">11</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#ffd93d;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 12</div>
+    <div class="avin-date">MON 20 JUL</div>
+  </div>
+  <div class="avin-icon">🗼</div>
+  <div class="avin-flag">🇮🇹</div>
+  <div class="avin-title">Florence</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">12</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#c44a4a;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 13</div>
+    <div class="avin-date">TUE 21 JUL</div>
+  </div>
+  <div class="avin-icon">🌋</div>
+  <div class="avin-flag">🇮🇹</div>
+  <div class="avin-title">Pompeii + Naples Day Trip</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">13</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#a47a23;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 14</div>
+    <div class="avin-date">WED 22 JUL</div>
+  </div>
+  <div class="avin-icon">⛪</div>
+  <div class="avin-flag">🇻🇦</div>
+  <div class="avin-title">Vatican Day · Sistine Chapel</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">14</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#4dabf7;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 15</div>
+    <div class="avin-date">THU 23 JUL</div>
+  </div>
+  <div class="avin-icon">🏛</div>
+  <div class="avin-flag">🇮🇹</div>
+  <div class="avin-title">Rome</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">15</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#6cc644;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 16</div>
+    <div class="avin-date">FRI 24 JUL</div>
+  </div>
+  <div class="avin-icon">🏔</div>
+  <div class="avin-flag">🇨🇭</div>
+  <div class="avin-title">Milan</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">16</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#ff6b9d;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 17</div>
+    <div class="avin-date">SAT 25 JUL</div>
+  </div>
+  <div class="avin-icon">⛰</div>
+  <div class="avin-flag">🇨🇭</div>
+  <div class="avin-title">Gornergrat</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">17</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#4dabf7;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 18</div>
+    <div class="avin-date">SUN 26 JUL</div>
+  </div>
+  <div class="avin-icon">⛲</div>
+  <div class="avin-flag">🇨🇭</div>
+  <div class="avin-title">Geneva Day Trip</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">18</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#a47a23;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 19</div>
+    <div class="avin-date">MON 27 JUL</div>
+  </div>
+  <div class="avin-icon">🐻</div>
+  <div class="avin-flag">🇩🇪</div>
+  <div class="avin-title">Moléson</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">19</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#c44a4a;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 20</div>
+    <div class="avin-date">TUE 28 JUL</div>
+  </div>
+  <div class="avin-icon">🕯</div>
+  <div class="avin-flag">🇫🇷</div>
+  <div class="avin-title">Lourdes Pilgrimage</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">20</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#4dabf7;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 21</div>
+    <div class="avin-date">WED 29 JUL</div>
+  </div>
+  <div class="avin-icon">🚄</div>
+  <div class="avin-flag">🇫🇷</div>
+  <div class="avin-title">Train Day · Lourdes</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">21</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#c084fc;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 22</div>
+    <div class="avin-date">THU 30 JUL</div>
+  </div>
+  <div class="avin-icon">🗼</div>
+  <div class="avin-flag">🇫🇷</div>
+  <div class="avin-title">AMS</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">22</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#ffd93d;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 23</div>
+    <div class="avin-date">FRI 31 JUL</div>
+  </div>
+  <div class="avin-icon">🎨</div>
+  <div class="avin-flag">🇫🇷</div>
+  <div class="avin-title">Paris</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">23</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#ff8a4c;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 24</div>
+    <div class="avin-date">SAT 1 AUG</div>
+  </div>
+  <div class="avin-icon">🚲</div>
+  <div class="avin-flag">🇳🇱</div>
+  <div class="avin-title">Amsterdam Rest Day</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">24</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#ff6b9d;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 25</div>
+    <div class="avin-date">SUN 2 AUG</div>
+  </div>
+  <div class="avin-icon">🎢</div>
+  <div class="avin-flag">🇩🇰</div>
+  <div class="avin-title">AMS</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">25</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#4dabf7;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 26</div>
+    <div class="avin-date">MON 3 AUG</div>
+  </div>
+  <div class="avin-icon">🌉</div>
+  <div class="avin-flag">🇸🇪</div>
+  <div class="avin-title">CPH</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">26</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#6cc644;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 27</div>
+    <div class="avin-date">TUE 4 AUG</div>
+  </div>
+  <div class="avin-icon">🎢</div>
+  <div class="avin-flag">🇸🇪</div>
+  <div class="avin-title">Gothenburg Sister Day</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">27</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#ff8a4c;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 28</div>
+    <div class="avin-date">WED 5 AUG</div>
+  </div>
+  <div class="avin-icon">🌇</div>
+  <div class="avin-flag">🇩🇪</div>
+  <div class="avin-title">Gothenburg</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">28</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#c084fc;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 29</div>
+    <div class="avin-date">THU 6 AUG</div>
+  </div>
+  <div class="avin-icon">☁</div>
+  <div class="avin-flag">✈️</div>
+  <div class="avin-title">Munich</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">29</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#c44a4a;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 30</div>
+    <div class="avin-date">FRI 7 AUG</div>
+  </div>
+  <div class="avin-icon">🏯</div>
+  <div class="avin-flag">🇨🇳</div>
+  <div class="avin-title">Mutianyu Great Wall!</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">30</div>
+</div>
+
+
+<div class="page avin-page" style="--accent:#6cc644;">
+  <div class="avin-header">
+    <div class="avin-day">DAY 31</div>
+    <div class="avin-date">SAT 8 AUG</div>
+  </div>
+  <div class="avin-icon">🏠</div>
+  <div class="avin-flag">🇳🇿</div>
+  <div class="avin-title">Beijing</div>
+
+  <div class="avin-mood">
+    <div class="mood-label">How do I feel?</div>
+    <div class="mood-faces">😢 😐 🙂 😄 😍</div>
+  </div>
+
+  <div class="avin-draw">
+    <div class="draw-label">🎨 Draw what I saw today!</div>
+    <div class="draw-box"></div>
+  </div>
+
+  <div class="avin-sticker">
+    <div class="sticker-label">⭐ My sticker today:</div>
+    <div class="sticker-box"></div>
+  </div>
+
+  <div class="page-num">31</div>
+</div>
+
+</body></html>
