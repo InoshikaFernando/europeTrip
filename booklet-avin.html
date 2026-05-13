@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><title>🦄 Avin's Big Adventure</title>
+<html><head><meta charset="UTF-8"><title>✈️ Avin's Big Adventure</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <style>
 
@@ -30,10 +30,17 @@ body { font-family:'Fredoka',sans-serif; background:#aaa; color:#2d3142; padding
   .page { margin:0; box-shadow:none; }
 }
 
-body { background:#ffe4ed; }
+body { background:#cfe8ff; }
 .cover-avin {
-  background:linear-gradient(135deg, #ff6b9d 0%, #ffd93d 50%, #4dabf7 100%);
+  background:linear-gradient(135deg, #1d3557 0%, #4dabf7 40%, #87ceeb 70%, #fff7e6 100%);
   color:white; text-align:center; justify-content:center; align-items:center;
+  position:relative;
+}
+.cover-avin::before {
+  content:'☁️ ☁️ ☁️'; position:absolute; top:15%; left:5%; font-size:30px; opacity:0.6; letter-spacing:20px;
+}
+.cover-avin::after {
+  content:'☁️ ☁️'; position:absolute; bottom:20%; right:5%; font-size:24px; opacity:0.5; letter-spacing:15px;
 }
 .cover-avin .big-emoji { font-size:120px; margin-bottom:10px; line-height:1; }
 .cover-avin .cover-title { font-family:'Fredoka',sans-serif; font-size:60px; font-weight:700; line-height:1.05; text-shadow:4px 4px 0 rgba(0,0,0,0.15); margin-bottom:20px; }
@@ -72,13 +79,13 @@ body { background:#ffe4ed; }
 
 .page-num { position:absolute; bottom:5mm; left:0; right:0; text-align:center; font-family:'Fredoka',sans-serif; font-weight:700; font-size:14px; color:var(--accent); }
 </style></head><body>
-<div class="toolbar"><span>🦄 Avin's Booklet (4yo)</span><a href="booklet.html">📖 Parents</a><a href="booklet-aviann.html">✍️ Aviann</a><a href="booklet-avisha.html">🗺️ Avisha</a><a href="index.html">← Map</a><button onclick="window.print()">🖨 Print PDF</button></div>
+<div class="toolbar"><span>✈️ Avin's Booklet (4yo)</span><a href="booklet.html">📖 Parents</a><a href="booklet-aviann.html">✍️ Aviann</a><a href="booklet-avisha.html">🗺️ Avisha</a><a href="index.html">← Map</a><button onclick="window.print()">🖨 Print PDF</button></div>
 
 <div class="page cover-avin">
-  <div class="big-emoji">🦄</div>
-  <div class="cover-title">AVIN's<br>BIG<br>ADVENTURE!</div>
-  <div class="cover-sub">31 days · 15 countries · ME!</div>
-  <div class="cover-stickers">✈️ 🏰 🗼 🌋 🎢 🏯 ⛪ 🚂 🛷</div>
+  <div class="big-emoji">✈️</div>
+  <div class="cover-title">AVIN's<br>BIG<br>TRIP!</div>
+  <div class="cover-sub">31 days · 15 countries · 8 flights!</div>
+  <div class="cover-stickers">✈️ 🚂 🚀 🛫 🚗 🚆 ⛵ 🚁 🛬</div>
 </div>
 
 
