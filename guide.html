@@ -52,7 +52,8 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
 
 .visits {margin-bottom:12px;}
 .visits .label {font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:var(--rose); font-weight:700; margin-bottom:8px;}
-.visit-grid {display:grid; grid-template-columns:1fr 1fr; gap:8px;}
+.visit-grid {display:grid; grid-template-columns:repeat(auto-fill, minmax(160px, 1fr)); gap:8px;}
+@media print { .visit-grid {grid-template-columns:repeat(3, 1fr);} }
 .visit-card {background:white; border-radius:6px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,0.06); display:flex; flex-direction:column;}
 .visit-card .visit-img {background:#e8dcc0; aspect-ratio:16/10; display:flex; align-items:center; justify-content:center; color:#a47a23; font-size:10px; font-weight:600; text-align:center; padding:8px; font-family:'JetBrains Mono',monospace; position:relative; overflow:hidden;}
 .visit-card .visit-img img {width:100%; height:100%; object-fit:cover;}
@@ -612,7 +613,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
   </div>
 
   <div class="visits">
-    <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
+    <div class="label">📍 WHAT WE&#39;RE VISITING (7 stops)</div>
     <div class="visit-grid">
     <div class="visit-card">
       <div class="visit-img">
@@ -640,37 +641,61 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
     <div class="visit-card">
       <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-06/03-jewish-quarter.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
-        <img src="images/day-06/03-jewish-quarter.jpg" data-alt-src="images/day-06/03-jewish-quarter.jpeg" alt="Jewish Quarter (Josefov)"
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-06/03-astronomical-clock-show.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-06/03-astronomical-clock-show.jpg" data-alt-src="images/day-06/03-astronomical-clock-show.jpeg" alt="Astronomical Clock show"
           onload="this.parentElement.querySelector('.placeholder').style.display='none'"
           onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
       </div>
       <div class="visit-body">
-        <h4>3. Jewish Quarter (Josefov)</h4>
+        <h4>3. Astronomical Clock show</h4>
+        <p>Top-of-hour figurines · Old Town Square · arrive 5 min early</p>
+      </div>
+    </div>
+    <div class="visit-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-06/04-jewish-quarter.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-06/04-jewish-quarter.jpg" data-alt-src="images/day-06/04-jewish-quarter.jpeg" alt="Jewish Quarter (Josefov)"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="visit-body">
+        <h4>4. Jewish Quarter (Josefov)</h4>
         <p>Old-New Synagogue · Jewish Cemetery · combined ticket €18</p>
       </div>
     </div>
     <div class="visit-card">
       <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-06/04-wenceslas-square.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
-        <img src="images/day-06/04-wenceslas-square.jpg" data-alt-src="images/day-06/04-wenceslas-square.jpeg" alt="Wenceslas Square"
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-06/05-wenceslas-square.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-06/05-wenceslas-square.jpg" data-alt-src="images/day-06/05-wenceslas-square.jpeg" alt="Wenceslas Square"
           onload="this.parentElement.querySelector('.placeholder').style.display='none'"
           onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
       </div>
       <div class="visit-body">
-        <h4>4. Wenceslas Square</h4>
+        <h4>5. Wenceslas Square</h4>
         <p>National Museum · velvet revolution site</p>
       </div>
     </div>
     <div class="visit-card">
       <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-06/05-vltava-river-cruise.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
-        <img src="images/day-06/05-vltava-river-cruise.jpg" data-alt-src="images/day-06/05-vltava-river-cruise.jpeg" alt="Vltava river cruise"
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-06/06-klementinum-baroque-library.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-06/06-klementinum-baroque-library.jpg" data-alt-src="images/day-06/06-klementinum-baroque-library.jpeg" alt="Klementinum baroque library"
           onload="this.parentElement.querySelector('.placeholder').style.display='none'"
           onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
       </div>
       <div class="visit-body">
-        <h4>5. Vltava river cruise</h4>
+        <h4>6. Klementinum baroque library</h4>
+        <p>Most beautiful library in the world · tour €11</p>
+      </div>
+    </div>
+    <div class="visit-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-06/07-vltava-river-cruise.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-06/07-vltava-river-cruise.jpg" data-alt-src="images/day-06/07-vltava-river-cruise.jpeg" alt="Vltava river cruise"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="visit-body">
+        <h4>7. Vltava river cruise</h4>
         <p>1hr sunset cruise · ~€18pp · floating Prague view</p>
       </div>
     </div>
@@ -717,7 +742,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
   </div>
 
   <div class="visits">
-    <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
+    <div class="label">📍 WHAT WE&#39;RE VISITING (7 stops)</div>
     <div class="visit-grid">
     <div class="visit-card">
       <div class="visit-img">
@@ -745,37 +770,61 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
     <div class="visit-card">
       <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-07/03-stephansplatz-stephansdom.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
-        <img src="images/day-07/03-stephansplatz-stephansdom.jpg" data-alt-src="images/day-07/03-stephansplatz-stephansdom.jpeg" alt="Stephansplatz + Stephansdom"
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-07/03-gloriette-viewpoint.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-07/03-gloriette-viewpoint.jpg" data-alt-src="images/day-07/03-gloriette-viewpoint.jpeg" alt="Gloriette viewpoint"
           onload="this.parentElement.querySelector('.placeholder').style.display='none'"
           onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
       </div>
       <div class="visit-body">
-        <h4>3. Stephansplatz + Stephansdom</h4>
+        <h4>3. Gloriette viewpoint</h4>
+        <p>Top of Schönbrunn hill · panoramic Vienna view · FREE</p>
+      </div>
+    </div>
+    <div class="visit-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-07/04-stephansplatz-stephansdom.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-07/04-stephansplatz-stephansdom.jpg" data-alt-src="images/day-07/04-stephansplatz-stephansdom.jpeg" alt="Stephansplatz + Stephansdom"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="visit-body">
+        <h4>4. Stephansplatz + Stephansdom</h4>
         <p>Vienna's soul · cathedral spire · main pedestrian square</p>
       </div>
     </div>
     <div class="visit-card">
       <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-07/04-naschmarkt.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
-        <img src="images/day-07/04-naschmarkt.jpg" data-alt-src="images/day-07/04-naschmarkt.jpeg" alt="Naschmarkt"
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-07/05-hofburg-palace.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-07/05-hofburg-palace.jpg" data-alt-src="images/day-07/05-hofburg-palace.jpeg" alt="Hofburg Palace"
           onload="this.parentElement.querySelector('.placeholder').style.display='none'"
           onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
       </div>
       <div class="visit-body">
-        <h4>4. Naschmarkt</h4>
-        <p>Famous food market · sausages + Sachertorte</p>
+        <h4>5. Hofburg Palace</h4>
+        <p>Habsburg imperial residence · Sisi Museum + Crown Jewels</p>
       </div>
     </div>
     <div class="visit-card">
       <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-07/05-cafe-sacher.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
-        <img src="images/day-07/05-cafe-sacher.jpg" data-alt-src="images/day-07/05-cafe-sacher.jpeg" alt="Café Sacher"
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-07/06-naschmarkt.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-07/06-naschmarkt.jpg" data-alt-src="images/day-07/06-naschmarkt.jpeg" alt="Naschmarkt"
           onload="this.parentElement.querySelector('.placeholder').style.display='none'"
           onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
       </div>
       <div class="visit-body">
-        <h4>5. Café Sacher</h4>
+        <h4>6. Naschmarkt</h4>
+        <p>Famous food market · sausages + global street food</p>
+      </div>
+    </div>
+    <div class="visit-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-07/07-cafe-sacher.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-07/07-cafe-sacher.jpg" data-alt-src="images/day-07/07-cafe-sacher.jpeg" alt="Café Sacher"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="visit-body">
+        <h4>7. Café Sacher</h4>
         <p>Original Sachertorte 1832 · plan for queue</p>
       </div>
     </div>
@@ -1032,7 +1081,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
   </div>
 
   <div class="visits">
-    <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
+    <div class="label">📍 WHAT WE&#39;RE VISITING (7 stops)</div>
     <div class="visit-grid">
     <div class="visit-card">
       <div class="visit-img">
@@ -1060,37 +1109,61 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
     <div class="visit-card">
       <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-10/03-rialto-bridge.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
-        <img src="images/day-10/03-rialto-bridge.jpg" data-alt-src="images/day-10/03-rialto-bridge.jpeg" alt="Rialto Bridge"
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-10/03-doges-palace-interior.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-10/03-doges-palace-interior.jpg" data-alt-src="images/day-10/03-doges-palace-interior.jpeg" alt="Doge's Palace interior"
           onload="this.parentElement.querySelector('.placeholder').style.display='none'"
           onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
       </div>
       <div class="visit-body">
-        <h4>3. Rialto Bridge</h4>
-        <p>16th-century white stone arch · markets nearby</p>
+        <h4>3. Doge's Palace interior</h4>
+        <p>Bridge of Sighs · Council chambers · €30 · book ahead</p>
       </div>
     </div>
     <div class="visit-card">
       <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-10/04-burano-island.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
-        <img src="images/day-10/04-burano-island.jpg" data-alt-src="images/day-10/04-burano-island.jpeg" alt="Burano island (vaporetto)"
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-10/04-rialto-bridge-market.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-10/04-rialto-bridge-market.jpg" data-alt-src="images/day-10/04-rialto-bridge-market.jpeg" alt="Rialto Bridge + market"
           onload="this.parentElement.querySelector('.placeholder').style.display='none'"
           onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
       </div>
       <div class="visit-body">
-        <h4>4. Burano island (vaporetto)</h4>
+        <h4>4. Rialto Bridge + market</h4>
+        <p>16th-century white stone arch · fish market AM</p>
+      </div>
+    </div>
+    <div class="visit-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-10/05-gondola-ride.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-10/05-gondola-ride.jpg" data-alt-src="images/day-10/05-gondola-ride.jpeg" alt="Gondola ride"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="visit-body">
+        <h4>5. Gondola ride</h4>
+        <p>€80 daytime · 30 min · use only OFFICIAL stations</p>
+      </div>
+    </div>
+    <div class="visit-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-10/06-burano-island.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-10/06-burano-island.jpg" data-alt-src="images/day-10/06-burano-island.jpeg" alt="Burano island (vaporetto)"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="visit-body">
+        <h4>6. Burano island (vaporetto)</h4>
         <p>Colorful houses · 45 min vaporetto from San Marco</p>
       </div>
     </div>
     <div class="visit-card">
       <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-10/05-basilica-san-marco-vigil-1700.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
-        <img src="images/day-10/05-basilica-san-marco-vigil-1700.jpg" data-alt-src="images/day-10/05-basilica-san-marco-vigil-1700.jpeg" alt="🎻 Basilica San Marco Vigil 17:00"
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-10/07-basilica-san-marco-vigil-1700.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-10/07-basilica-san-marco-vigil-1700.jpg" data-alt-src="images/day-10/07-basilica-san-marco-vigil-1700.jpeg" alt="🎻 Basilica San Marco Vigil 17:00"
           onload="this.parentElement.querySelector('.placeholder').style.display='none'"
           onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
       </div>
       <div class="visit-body">
-        <h4>5. 🎻 Basilica San Marco Vigil 17:00</h4>
+        <h4>7. 🎻 Basilica San Marco Vigil 17:00</h4>
         <p>Saturday Vigil Mass · covers Sunday</p>
       </div>
     </div>
@@ -1137,7 +1210,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
   </div>
 
   <div class="visits">
-    <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
+    <div class="label">📍 WHAT WE&#39;RE VISITING (8 stops)</div>
     <div class="visit-grid">
     <div class="visit-card">
       <div class="visit-img">
@@ -1165,37 +1238,73 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
     <div class="visit-card">
       <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-11/03-ponte-vecchio.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
-        <img src="images/day-11/03-ponte-vecchio.jpg" data-alt-src="images/day-11/03-ponte-vecchio.jpeg" alt="Ponte Vecchio"
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-11/03-climb-duomo-dome.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-11/03-climb-duomo-dome.jpg" data-alt-src="images/day-11/03-climb-duomo-dome.jpeg" alt="Climb Duomo dome (Cupola)"
           onload="this.parentElement.querySelector('.placeholder').style.display='none'"
           onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
       </div>
       <div class="visit-body">
-        <h4>3. Ponte Vecchio</h4>
+        <h4>3. Climb Duomo dome (Cupola)</h4>
+        <p>463 steps · €30 combo · panoramic views of Florence</p>
+      </div>
+    </div>
+    <div class="visit-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-11/04-uffizi-gallery.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-11/04-uffizi-gallery.jpg" data-alt-src="images/day-11/04-uffizi-gallery.jpeg" alt="Uffizi Gallery (BOOK AHEAD)"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="visit-body">
+        <h4>4. Uffizi Gallery (BOOK AHEAD)</h4>
+        <p>Renaissance masterpieces · €26 · sells out summer</p>
+      </div>
+    </div>
+    <div class="visit-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-11/05-ponte-vecchio.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-11/05-ponte-vecchio.jpg" data-alt-src="images/day-11/05-ponte-vecchio.jpeg" alt="Ponte Vecchio"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="visit-body">
+        <h4>5. Ponte Vecchio</h4>
         <p>Old bridge with jewelry shops · sunset photo</p>
       </div>
     </div>
     <div class="visit-card">
       <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-11/04-piazzale-michelangelo.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
-        <img src="images/day-11/04-piazzale-michelangelo.jpg" data-alt-src="images/day-11/04-piazzale-michelangelo.jpeg" alt="Piazzale Michelangelo"
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-11/06-piazza-della-signoria.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-11/06-piazza-della-signoria.jpg" data-alt-src="images/day-11/06-piazza-della-signoria.jpeg" alt="Piazza della Signoria"
           onload="this.parentElement.querySelector('.placeholder').style.display='none'"
           onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
       </div>
       <div class="visit-body">
-        <h4>4. Piazzale Michelangelo</h4>
+        <h4>6. Piazza della Signoria</h4>
+        <p>Open-air sculpture gallery · Palazzo Vecchio</p>
+      </div>
+    </div>
+    <div class="visit-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-11/07-piazzale-michelangelo.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-11/07-piazzale-michelangelo.jpg" data-alt-src="images/day-11/07-piazzale-michelangelo.jpeg" alt="Piazzale Michelangelo"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="visit-body">
+        <h4>7. Piazzale Michelangelo</h4>
         <p>Sunset viewpoint over all of Florence · 25 min walk uphill</p>
       </div>
     </div>
     <div class="visit-card">
       <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-11/05-dinner-around-san-lorenzo.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
-        <img src="images/day-11/05-dinner-around-san-lorenzo.jpg" data-alt-src="images/day-11/05-dinner-around-san-lorenzo.jpeg" alt="Dinner around San Lorenzo"
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-11/08-dinner-around-san-lorenzo.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-11/08-dinner-around-san-lorenzo.jpg" data-alt-src="images/day-11/08-dinner-around-san-lorenzo.jpeg" alt="Dinner around San Lorenzo"
           onload="this.parentElement.querySelector('.placeholder').style.display='none'"
           onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
       </div>
       <div class="visit-body">
-        <h4>5. Dinner around San Lorenzo</h4>
+        <h4>8. Dinner around San Lorenzo</h4>
         <p>Bistecca alla Fiorentina · or simpler family trattoria</p>
       </div>
     </div>
@@ -1452,7 +1561,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
   </div>
 
   <div class="visits">
-    <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
+    <div class="label">📍 WHAT WE&#39;RE VISITING (8 stops)</div>
     <div class="visit-grid">
     <div class="visit-card">
       <div class="visit-img">
@@ -1468,50 +1577,86 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
     <div class="visit-card">
       <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-14/02-sistine-chapel.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
-        <img src="images/day-14/02-sistine-chapel.jpg" data-alt-src="images/day-14/02-sistine-chapel.jpeg" alt="Sistine Chapel"
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-14/02-gallery-of-maps.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-14/02-gallery-of-maps.jpg" data-alt-src="images/day-14/02-gallery-of-maps.jpeg" alt="Gallery of Maps"
           onload="this.parentElement.querySelector('.placeholder').style.display='none'"
           onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
       </div>
       <div class="visit-body">
-        <h4>2. Sistine Chapel</h4>
+        <h4>2. Gallery of Maps</h4>
+        <p>Stunning hand-painted Italian maps · part of Museums tour</p>
+      </div>
+    </div>
+    <div class="visit-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-14/03-sistine-chapel.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-14/03-sistine-chapel.jpg" data-alt-src="images/day-14/03-sistine-chapel.jpeg" alt="Sistine Chapel"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="visit-body">
+        <h4>3. Sistine Chapel</h4>
         <p>Michelangelo ceiling · NO PHOTOS allowed</p>
       </div>
     </div>
     <div class="visit-card">
       <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-14/03-st-peters-basilica.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
-        <img src="images/day-14/03-st-peters-basilica.jpg" data-alt-src="images/day-14/03-st-peters-basilica.jpeg" alt="St. Peter's Basilica"
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-14/04-st-peters-basilica.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-14/04-st-peters-basilica.jpg" data-alt-src="images/day-14/04-st-peters-basilica.jpeg" alt="St. Peter's Basilica"
           onload="this.parentElement.querySelector('.placeholder').style.display='none'"
           onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
       </div>
       <div class="visit-body">
-        <h4>3. St. Peter's Basilica</h4>
+        <h4>4. St. Peter's Basilica</h4>
         <p>Chapel-to-basilica shortcut · skip security re-entry</p>
       </div>
     </div>
     <div class="visit-card">
       <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-14/04-lunch-borgo-pio.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
-        <img src="images/day-14/04-lunch-borgo-pio.jpg" data-alt-src="images/day-14/04-lunch-borgo-pio.jpeg" alt="Lunch Borgo Pio (skip tourist Via della Conciliazione)"
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-14/05-st-peters-square-swiss-guards.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-14/05-st-peters-square-swiss-guards.jpg" data-alt-src="images/day-14/05-st-peters-square-swiss-guards.jpeg" alt="St. Peter's Square + Swiss Guards"
           onload="this.parentElement.querySelector('.placeholder').style.display='none'"
           onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
       </div>
       <div class="visit-body">
-        <h4>4. Lunch Borgo Pio (skip tourist Via della Conciliazione)</h4>
-        <p>Side streets cheaper + better</p>
+        <h4>5. St. Peter's Square + Swiss Guards</h4>
+        <p>Bernini's colonnade · classic family photo</p>
       </div>
     </div>
     <div class="visit-card">
       <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-14/05-castel-santangelo-bridge-of-angels.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
-        <img src="images/day-14/05-castel-santangelo-bridge-of-angels.jpg" data-alt-src="images/day-14/05-castel-santangelo-bridge-of-angels.jpeg" alt="Castel Sant'Angelo + Bridge of Angels"
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-14/06-lunch-borgo-pio.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-14/06-lunch-borgo-pio.jpg" data-alt-src="images/day-14/06-lunch-borgo-pio.jpeg" alt="Lunch Borgo Pio"
           onload="this.parentElement.querySelector('.placeholder').style.display='none'"
           onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
       </div>
       <div class="visit-body">
-        <h4>5. Castel Sant'Angelo + Bridge of Angels</h4>
-        <p>Outside walk · sunset photos · Piazza Navona dinner</p>
+        <h4>6. Lunch Borgo Pio</h4>
+        <p>Side streets cheaper + better than Via della Conciliazione</p>
+      </div>
+    </div>
+    <div class="visit-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-14/07-castel-santangelo-bridge-of-angels.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-14/07-castel-santangelo-bridge-of-angels.jpg" data-alt-src="images/day-14/07-castel-santangelo-bridge-of-angels.jpeg" alt="Castel Sant'Angelo + Bridge of Angels"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="visit-body">
+        <h4>7. Castel Sant'Angelo + Bridge of Angels</h4>
+        <p>Bernini's 10 angels · sunset photos</p>
+      </div>
+    </div>
+    <div class="visit-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/day-14/08-piazza-navona-tre-scalini-gelato.jpg</span><span class="ph-name" style="font-size:8px;opacity:0.6;">or .jpeg</span></div>
+        <img src="images/day-14/08-piazza-navona-tre-scalini-gelato.jpg" data-alt-src="images/day-14/08-piazza-navona-tre-scalini-gelato.jpeg" alt="Piazza Navona + Tre Scalini gelato"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="visit-body">
+        <h4>8. Piazza Navona + Tre Scalini gelato</h4>
+        <p>Bernini's Fountain of Four Rivers · truffle gelato</p>
       </div>
     </div>
     </div>
