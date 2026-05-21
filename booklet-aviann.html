@@ -108,6 +108,60 @@ body { background:#fff5b8; } .page { font-family:'Plus Jakarta Sans',sans-serif;
   font-family:'Caveat',cursive; font-size:18px; color:var(--accent);
   text-align:center; margin:2px 0;
 }
+
+/* ===== Food Champion pages ===== */
+.food-champ-cover {
+  background:linear-gradient(135deg,#fffbf0 0%,#fff3cd 60%,#ffe4a0 100%);
+  justify-content:center; align-items:center; text-align:center; padding:10mm 8mm;
+}
+.fcc-badge { background:#c8973c; color:white; font-family:'JetBrains Mono',monospace;
+  font-size:9px; font-weight:700; letter-spacing:0.08em; padding:3px 12px;
+  border-radius:100px; margin-bottom:6mm; display:inline-block; text-transform:uppercase; }
+.fcc-title { font-family:'Fredoka',sans-serif; font-size:36px; font-weight:700;
+  color:#2d3142; line-height:1.1; margin-bottom:3mm; }
+.fcc-sub { font-family:'Caveat',cursive; font-size:22px; color:#c8973c; margin-bottom:5mm; }
+.fcc-rules { background:white; border-radius:10px; border:2px solid #ffd93d;
+  padding:6px 10px; margin:0 4mm 5mm; text-align:left; }
+.fcc-rule { display:flex; align-items:center; gap:6px; font-size:10px;
+  color:#2d3142; padding:3px 0; border-bottom:1px solid #f0e8c0; font-family:'Fredoka',sans-serif; }
+.fcc-rule:last-child { border-bottom:none; }
+.fcc-rule .ri { font-size:16px; }
+.fcc-score { display:flex; flex-direction:column; gap:3px; margin:0 4mm; }
+.fcc-tier { display:flex; justify-content:space-between; align-items:center;
+  background:white; border-radius:8px; padding:4px 8px; font-family:'Fredoka',sans-serif; }
+.fcc-tier .tl { font-size:10px; color:#2d3142; }
+.fcc-tier .tr { font-size:9px; font-weight:700; background:#ffd93d; color:#5d4037;
+  padding:2px 8px; border-radius:100px; }
+.fcc-tier.top .tr { background:#c8973c; color:white; }
+
+/* Checklist page */
+.food-list-page { padding:6mm 8mm; }
+.flp-header { margin-bottom:3mm; display:flex; align-items:center; gap:6px; }
+.flp-title { font-family:'Fredoka',sans-serif; font-size:18px; font-weight:700; color:#2d3142; flex:1; }
+.flp-count { font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:700;
+  background:#c8973c; color:white; padding:2px 8px; border-radius:100px; }
+.food-cl-grid { display:grid; grid-template-columns:1fr 1fr; gap:3px; }
+.food-cl-item { display:flex; align-items:center; gap:4px; padding:3px 5px;
+  border-radius:6px; border:1.5px solid #e8d9a0; background:#fffbf0;
+  cursor:pointer; transition:background 0.15s; }
+.food-cl-item:has(input:checked) { background:#d4f5b0; border-color:#6cc644; }
+.food-cl-item:has(input:checked) .fc-name { text-decoration:line-through; opacity:0.7; }
+.food-cl-item input[type=checkbox] { width:13px; height:13px; accent-color:#6cc644;
+  flex-shrink:0; cursor:pointer; }
+.food-cl-item .fc-e { font-size:18px; line-height:1; flex-shrink:0; }
+.food-cl-item .fc-txt { flex:1; min-width:0; }
+.food-cl-item .fc-name { font-family:'Fredoka',sans-serif; font-size:10px; font-weight:600;
+  color:#2d3142; line-height:1.2; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.food-cl-item .fc-flag { font-size:8px; color:#888; line-height:1.3; }
+.food-cl-item .fc-price { font-size:7px; font-family:'JetBrains Mono',monospace;
+  background:rgba(200,151,60,0.15); color:#a07020; padding:1px 4px;
+  border-radius:100px; font-weight:700; white-space:nowrap; }
+.food-cl-pg-num { position:absolute; bottom:5mm; left:0; right:0; text-align:center;
+  font-weight:700; font-size:13px; color:#c8973c; font-family:'Fredoka',sans-serif; }
+@media print {
+  .food-cl-item { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+}
+
 </style></head><body>
 <div class="toolbar"><span>✍️ Aviann (8yo) · 2pp/day</span><a href="booklet.html">📖 Parents</a><a href="booklet-avin.html">✈️ Avin</a><a href="booklet-avisha.html">🗺️ Avisha</a><a href="index.html">← Map</a><button onclick="window.print()">🖨 Print</button></div>
 <div class="page cover-aviann">
@@ -1325,4 +1379,54 @@ body { background:#fff5b8; } .page { font-family:'Plus Jakarta Sans',sans-serif;
     <div class="lines"></div>
   </div>
   <div class="page-num">— 62 —</div>
+
+<div class="page food-champ-cover" style="--accent:#c8973c;">
+  <div class="fcc-badge">🍴 Food Champion Challenge</div>
+  <div style="font-size:64px;margin-bottom:4mm;">🏆</div>
+  <div class="fcc-title">✍️ Aviann's<br>Food Quest!</div>
+  <div class="fcc-sub">Try one must-eat dish in every country</div>
+  <div class="fcc-rules">
+    <div class="fcc-rule"><span class="ri">☑</span> Tick off each food when you eat it</div>
+    <div class="fcc-rule"><span class="ri">⭐</span> Rate it 1–5 stars in your journal</div>
+    <div class="fcc-rule"><span class="ri">😬</span> Even try the scary ones — be brave!</div>
+    <div class="fcc-rule"><span class="ri">📝</span> Remember the food you liked MOST</div>
+  </div>
+  <div class="fcc-score">
+    <div class="fcc-tier"><span class="tl">🌱 1–4 tried</span><span class="tr">Curious Taster</span></div>
+    <div class="fcc-tier"><span class="tl">🌍 5–8 tried</span><span class="tr">Food Adventurer</span></div>
+    <div class="fcc-tier"><span class="tl">⭐ 9–12 tried</span><span class="tr">World Foodie</span></div>
+    <div class="fcc-tier top"><span class="tl">🏆 All 13!</span><span class="tr">FOOD CHAMPION 🎉</span></div>
+  </div>
+  <div class="food-cl-pg-num">63</div>
+</div>
+
+<div class="page food-list-page" style="--accent:#c8973c;">
+  <div class="flp-header">
+    <span class="flp-title">🍕 Tick off as you try!</span>
+    <span class="flp-count">13 foods</span>
+  </div>
+  <div class="food-cl-grid">
+    <div style="display:flex;flex-direction:column;gap:3px;"><label class="food-cl-item"><input type="checkbox"><span class="fc-e">🫔</span><span class="fc-txt"><span class="fc-name">Jianbing 煎饼</span><span class="fc-flag">🇨🇳 China · Day 2</span><span class="fc-price">¥8–15</span></span></label>
+<label class="food-cl-item"><input type="checkbox"><span class="fc-e">🥨</span><span class="fc-txt"><span class="fc-name">Weisswurst + Brezel</span><span class="fc-flag">🇩🇪 Germany · Day 3</span><span class="fc-price">€6–10</span></span></label>
+<label class="food-cl-item"><input type="checkbox"><span class="fc-e">🍖</span><span class="fc-txt"><span class="fc-name">Wiener Schnitzel</span><span class="fc-flag">🇦🇹 Austria · Day 4</span><span class="fc-price">€12–18</span></span></label>
+<label class="food-cl-item"><input type="checkbox"><span class="fc-e">🥩</span><span class="fc-txt"><span class="fc-name">Svíčková</span><span class="fc-flag">🇨🇿 Czechia · Day 5</span><span class="fc-price">€8–12</span></span></label>
+<label class="food-cl-item"><input type="checkbox"><span class="fc-e">🫓</span><span class="fc-txt"><span class="fc-name">Lángos</span><span class="fc-flag">🇭🇺 Hungary · Day 7</span><span class="fc-price">€2–4</span></span></label>
+<label class="food-cl-item"><input type="checkbox"><span class="fc-e">🍰</span><span class="fc-txt"><span class="fc-name">Kremšnita</span><span class="fc-flag">🇸🇮 Slovenia · Day 8</span><span class="fc-price">€4–6</span></span></label>
+<label class="food-cl-item"><input type="checkbox"><span class="fc-e">🍕</span><span class="fc-txt"><span class="fc-name">Pizza Margherita</span><span class="fc-flag">🇮🇹 Italy · Day 13</span><span class="fc-price">€5–7</span></span></label></div>
+    <div style="display:flex;flex-direction:column;gap:3px;"><label class="food-cl-item"><input type="checkbox"><span class="fc-e">🍦</span><span class="fc-txt"><span class="fc-name">Gelato</span><span class="fc-flag">🇮🇹 Italy · Day 9–16</span><span class="fc-price">€2–4</span></span></label>
+<label class="food-cl-item"><input type="checkbox"><span class="fc-e">🧀</span><span class="fc-txt"><span class="fc-name">Gruyère Fondue</span><span class="fc-flag">🇨🇭 Switzerland</span><span class="fc-price">CHF 22–28</span></span></label>
+<label class="food-cl-item"><input type="checkbox"><span class="fc-e">🥞</span><span class="fc-txt"><span class="fc-name">Crêpe</span><span class="fc-flag">🇫🇷 France · Day 19</span><span class="fc-price">€3–6</span></span></label>
+<label class="food-cl-item"><input type="checkbox"><span class="fc-e">🧇</span><span class="fc-txt"><span class="fc-name">Liège Waffle</span><span class="fc-flag">🇧🇪 Belgium</span><span class="fc-price">€2–4</span></span></label>
+<label class="food-cl-item"><input type="checkbox"><span class="fc-e">🥐</span><span class="fc-txt"><span class="fc-name">Wienerbrød</span><span class="fc-flag">🇩🇰 Denmark · Day 23</span><span class="fc-price">DKK 25–40</span></span></label>
+<label class="food-cl-item"><input type="checkbox"><span class="fc-e">🍝</span><span class="fc-txt"><span class="fc-name">Köttbullar</span><span class="fc-flag">🇸🇪 Sweden · Day 24</span><span class="fc-price">€9–14</span></span></label></div>
+  </div>
+  <div style="margin-top:4mm;background:#fffbf0;border:1.5px solid #e8d9a0;border-radius:8px;padding:6px 10px;">
+    <div style="font-family:'Fredoka',sans-serif;font-size:10px;font-weight:700;color:#c8973c;margin-bottom:3px;">⭐ My favourite food on the whole trip:</div>
+    <div style="border-bottom:1px solid #ddd;height:14px;margin-bottom:4px;"></div>
+    <div style="font-family:'Fredoka',sans-serif;font-size:10px;font-weight:700;color:#c8973c;margin-bottom:3px;">😬 The bravest thing I tasted:</div>
+    <div style="border-bottom:1px solid #ddd;height:14px;"></div>
+  </div>
+  <div class="food-cl-pg-num">64</div>
+</div>
+
 </div></body></html>
