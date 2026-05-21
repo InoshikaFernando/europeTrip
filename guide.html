@@ -71,6 +71,20 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
 .sleep-block .sleep-addr {font-size:10px; color:var(--ink); opacity:0.8;}
 
 .footer {margin-top:auto; padding-top:8px; border-top:1px dashed var(--line); font-size:9px; color:var(--ink); opacity:0.5; text-align:center; font-family:'JetBrains Mono',monospace;}
+
+/* === Food page === */
+.food-page {font-size:12px;}
+.food-hdr {border-bottom:3px solid var(--gold); padding-bottom:10px; margin-bottom:14px;}
+.food-hdr h2 {font-family:'Fraunces',serif; font-size:26px; font-weight:700; color:var(--ink); margin-bottom:4px;}
+.food-sub {font-size:11px; color:var(--gold-deep); opacity:0.8; font-style:italic;}
+.food-grid {display:grid; grid-template-columns:repeat(4,1fr); gap:9px; margin-bottom:12px;}
+.food-card {background:white; border-radius:6px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.07); display:flex; flex-direction:column;}
+.food-card .visit-img {aspect-ratio:4/3;}
+.food-body {padding:7px 9px; flex:1;}
+.food-country {font-size:8.5px; font-weight:700; font-family:'JetBrains Mono',monospace; color:var(--gold-deep); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:2px;}
+.food-card h4 {font-size:11px; font-weight:700; line-height:1.2; margin-bottom:3px; color:var(--ink);}
+.food-card p {font-size:8.5px; line-height:1.35; opacity:0.75; color:var(--ink);}
+.food-card .where {font-size:8px; color:var(--sky); margin-top:4px; font-style:italic;}
 </style>
 </head><body>
 <div class="toolbar"><span>📘 Trip Guide · 32 pages · A4</span><a href="index.html">← Map</a><button onclick="window.print()">🖨 Print / Save PDF</button></div><div class="page cover">
@@ -86,6 +100,219 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     <div class="stat"><span class="n">8</span><span class="l">Flights</span></div>
     <div class="stat"><span class="n">3</span><span class="l">Trains</span></div>
   </div>
+</div><div class="page food-page">
+  <div class="food-hdr">
+    <h2>🍽️ Must-Try Foods by Country</h2>
+    <div class="food-sub">13 iconic dishes to seek out across 13 countries · Page 1 of 2</div>
+  </div>
+  <div class="food-grid">
+
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/01-austria-wiener-schnitzel.jpg</span></div>
+        <img src="images/food/01-austria-wiener-schnitzel.jpg" data-alt-src="images/food/01-austria-wiener-schnitzel.jpeg" alt="Wiener Schnitzel"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇦🇹 Austria</div>
+        <h4>Wiener Schnitzel</h4>
+        <p>Thin veal cutlet breaded and pan-fried golden. Austria's national dish — served with lemon and lingonberry jam.</p>
+        <div class="where">📍 Gasthaus in Vienna · Day 3</div>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/02-czechia-svickova.jpg</span></div>
+        <img src="images/food/02-czechia-svickova.jpg" data-alt-src="images/food/02-czechia-svickova.jpeg" alt="Svíčková"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇨🇿 Czechia</div>
+        <h4>Svíčková</h4>
+        <p>Braised beef in creamy root vegetable sauce with bread dumplings, cranberry jam, and a lemon slice.</p>
+        <div class="where">📍 Lokál Dlouhááá, Prague · Day 5</div>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/03-hungary-langos.jpg</span></div>
+        <img src="images/food/03-hungary-langos.jpg" data-alt-src="images/food/03-hungary-langos.jpeg" alt="Lángos"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇭🇺 Hungary</div>
+        <h4>Lángos</h4>
+        <p>Deep-fried dough slathered with sour cream and grated cheese. Budapest's favourite street snack.</p>
+        <div class="where">📍 Street stalls, Budapest · Day 7</div>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/04-slovenia-kremsnita.jpg</span></div>
+        <img src="images/food/04-slovenia-kremsnita.jpg" data-alt-src="images/food/04-slovenia-kremsnita.jpeg" alt="Kremšnita"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇸🇮 Slovenia</div>
+        <h4>Kremšnita</h4>
+        <p>Crisp pastry with vanilla custard and whipped cream — the legendary cream cake of Lake Bled.</p>
+        <div class="where">📍 Hotel Park café, Bled · Day 8</div>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/05-italy-gelato.jpg</span></div>
+        <img src="images/food/05-italy-gelato.jpg" data-alt-src="images/food/05-italy-gelato.jpeg" alt="Gelato"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇮🇹 Italy</div>
+        <h4>Gelato</h4>
+        <p>Dense slow-churned Italian ice cream, richer than regular. Try pistachio, stracciatella, or tiramisù.</p>
+        <div class="where">📍 Every Italian city · Days 10–14</div>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/06-switzerland-fondue.jpg</span></div>
+        <img src="images/food/06-switzerland-fondue.jpg" data-alt-src="images/food/06-switzerland-fondue.jpeg" alt="Gruyère Fondue"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇨🇭 Switzerland</div>
+        <h4>Gruyère Fondue</h4>
+        <p>Melted Gruyère with white wine and garlic — swirl your bread cube and enjoy the alpine surroundings.</p>
+        <div class="where">📍 Gruyères village · Day 17</div>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/07-germany-weisswurst.jpg</span></div>
+        <img src="images/food/07-germany-weisswurst.jpg" data-alt-src="images/food/07-germany-weisswurst.jpeg" alt="Weisswurst"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇩🇪 Germany</div>
+        <h4>Weisswurst + Brezel</h4>
+        <p>White veal sausage with sweet mustard and a warm soft pretzel. The classic Bavarian breakfast.</p>
+        <div class="where">📍 Café near Ottobeuren · Day 18</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer">Munasinghe Family · Europe Trip 2026 · Must-Try Foods — Page 1 of 2</div>
+</div><div class="page food-page">
+  <div class="food-hdr">
+    <h2>🍽️ Must-Try Foods by Country</h2>
+    <div class="food-sub">13 iconic dishes to seek out across 13 countries · Page 2 of 2</div>
+  </div>
+  <div class="food-grid">
+
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/08-france-crepes.jpg</span></div>
+        <img src="images/food/08-france-crepes.jpg" data-alt-src="images/food/08-france-crepes.jpeg" alt="Crêpes"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇫🇷 France</div>
+        <h4>Crêpes</h4>
+        <p>Paper-thin French pancakes with Nutella, jam, or lemon-sugar, eaten fresh off a street griddle.</p>
+        <div class="where">📍 Lourdes street stalls · Days 15–16</div>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/09-netherlands-poffertjes.jpg</span></div>
+        <img src="images/food/09-netherlands-poffertjes.jpg" data-alt-src="images/food/09-netherlands-poffertjes.jpeg" alt="Poffertjes"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇳🇱 Netherlands</div>
+        <h4>Poffertjes</h4>
+        <p>Tiny fluffy Dutch pancakes dusted with powdered sugar and a knob of butter. A perfect Amsterdam snack.</p>
+        <div class="where">📍 Amsterdam street stalls · Days 20–23</div>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/10-belgium-waffle.jpg</span></div>
+        <img src="images/food/10-belgium-waffle.jpg" data-alt-src="images/food/10-belgium-waffle.jpeg" alt="Liège Waffle"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇧🇪 Belgium</div>
+        <h4>Liège Waffle</h4>
+        <p>Dense caramelised waffle made with pearl sugar that creates crispy pockets. Far richer than Brussels waffles.</p>
+        <div class="where">📍 Bruges stalls · Day 15</div>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/11-denmark-wienerbrod.jpg</span></div>
+        <img src="images/food/11-denmark-wienerbrod.jpg" data-alt-src="images/food/11-denmark-wienerbrod.jpeg" alt="Wienerbrød"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇩🇰 Denmark</div>
+        <h4>Wienerbrød</h4>
+        <p>Buttery flaky pastry in many shapes — what the world calls a "Danish". Best warm from a Copenhagen bakery.</p>
+        <div class="where">📍 Copenhagen bakery · Day 28</div>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/12-sweden-kottbullar.jpg</span></div>
+        <img src="images/food/12-sweden-kottbullar.jpg" data-alt-src="images/food/12-sweden-kottbullar.jpeg" alt="Köttbullar"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇸🇪 Sweden</div>
+        <h4>Köttbullar</h4>
+        <p>Swedish meatballs in cream sauce with mashed potato, lingonberry jam, and pickled cucumber.</p>
+        <div class="where">📍 Sister's home or café, Gothenburg · Days 25–27</div>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/13-china-peking-duck.jpg</span></div>
+        <img src="images/food/13-china-peking-duck.jpg" data-alt-src="images/food/13-china-peking-duck.jpeg" alt="Peking Duck"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇨🇳 China</div>
+        <h4>Peking Duck · 北京烤鸭</h4>
+        <p>Slow-roasted whole duck with lacquered crispy skin. Wrap slices in thin pancakes with spring onion and hoisin.</p>
+        <div class="where">📍 Beijing restaurant · Day 2</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer">Munasinghe Family · Europe Trip 2026 · Must-Try Foods — Page 2 of 2</div>
 </div><div class="page day-page">
   <div class="day-header">
     <div class="day-num">DAY 01</div>
