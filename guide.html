@@ -115,9 +115,19 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
 .day-food-wrap .food-card .visit-img {
   width:130px; min-width:130px; flex-shrink:0;
   aspect-ratio:unset !important; height:100%; align-self:stretch;
+  position:relative; overflow:hidden;
+  background:#e8dcc0; display:flex; align-items:center; justify-content:center;
+  color:#a47a23; font-size:8px; font-weight:600; text-align:center;
+  font-family:'JetBrains Mono',monospace;
 }
 .day-food-wrap .food-card .visit-img img { object-fit:cover; width:100%; height:100%; }
-.day-food-wrap .food-card .visit-img .placeholder { position:absolute; inset:0; }
+.day-food-wrap .food-card .visit-img .placeholder {
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  flex-direction:column; gap:3px;
+  background:repeating-linear-gradient(45deg, #e8dcc0 0 10px, #ddd1b3 10px 20px);
+}
+.day-food-wrap .food-card .visit-img .placeholder .ph-name { font-size:7px; opacity:0.8; }
 .day-food-wrap .food-card .food-body { padding:9px 13px; flex:1; min-width:0; overflow:hidden; }
 .day-food-wrap .food-card .food-country { font-size:9px; }
 .day-food-wrap .food-card h4 { font-size:14px; }
