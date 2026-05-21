@@ -86,7 +86,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
 .food-card p {font-size:8.5px; line-height:1.35; opacity:0.75; color:var(--ink);}
 .food-card .where {font-size:8px; color:var(--sky); margin-top:4px; font-style:italic;}
 
-/* ── Guide day food card ── */
+
 .guide-food-card {
   display:flex; align-items:center; gap:12px;
   background:linear-gradient(135deg,#fffbf0 0%,#fff3cd 100%);
@@ -104,6 +104,24 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
 .gfc-tag   { font-family:'JetBrains Mono',monospace; font-size:9px; font-weight:700;
   color:var(--gold-deep); text-align:right; flex-shrink:0; line-height:1.5; }
 
+
+/* ── Food card embedded in day page ── */
+.day-food-wrap { margin-bottom:12px; }
+.day-food-wrap .food-card {
+  flex-direction:row; font-size:12px;
+  box-shadow:0 1px 6px rgba(200,155,60,0.15);
+  border:1.5px solid var(--gold);
+}
+.day-food-wrap .food-card .visit-img {
+  width:110px; flex-shrink:0;
+  aspect-ratio:4/3 !important;
+}
+.day-food-wrap .food-card .food-body { padding:9px 13px; }
+.day-food-wrap .food-card .food-country { font-size:9px; }
+.day-food-wrap .food-card h4 { font-size:14px; }
+.day-food-wrap .food-card p { font-size:10px; }
+.day-food-wrap .food-card .where { font-size:9px; }
+
 </style>
 </head><body>
 <div class="toolbar"><span>📘 Trip Guide · 32 pages · A4</span><a href="index.html">← Map</a><button onclick="window.print()">🖨 Print / Save PDF</button></div><div class="page cover">
@@ -119,219 +137,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     <div class="stat"><span class="n">8</span><span class="l">Flights</span></div>
     <div class="stat"><span class="n">3</span><span class="l">Trains</span></div>
   </div>
-</div><div class="page food-page">
-  <div class="food-hdr">
-    <h2>🍽️ Must-Try Foods by Country</h2>
-    <div class="food-sub">13 iconic dishes to seek out across 13 countries · Page 1 of 2</div>
-  </div>
-  <div class="food-grid">
-
-    <div class="food-card">
-      <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/01-austria-wiener-schnitzel.jpg</span></div>
-        <img src="images/food/01-austria-wiener-schnitzel.jpg" data-alt-src="images/food/01-austria-wiener-schnitzel.jpeg" alt="Wiener Schnitzel"
-          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
-          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
-      </div>
-      <div class="food-body">
-        <div class="food-country">🇦🇹 Austria</div>
-        <h4>Wiener Schnitzel</h4>
-        <p>Thin veal cutlet breaded and pan-fried golden. Austria's national dish — served with lemon and lingonberry jam.</p>
-        <div class="where">📍 Gasthaus in Vienna · Day 3</div>
-      </div>
-    </div>
-
-    <div class="food-card">
-      <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/02-czechia-svickova.jpg</span></div>
-        <img src="images/food/02-czechia-svickova.jpg" data-alt-src="images/food/02-czechia-svickova.jpeg" alt="Svíčková"
-          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
-          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
-      </div>
-      <div class="food-body">
-        <div class="food-country">🇨🇿 Czechia</div>
-        <h4>Svíčková</h4>
-        <p>Braised beef in creamy root vegetable sauce with bread dumplings, cranberry jam, and a lemon slice.</p>
-        <div class="where">📍 Lokál Dlouhááá, Prague · Day 5</div>
-      </div>
-    </div>
-
-    <div class="food-card">
-      <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/03-hungary-langos.jpg</span></div>
-        <img src="images/food/03-hungary-langos.jpg" data-alt-src="images/food/03-hungary-langos.jpeg" alt="Lángos"
-          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
-          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
-      </div>
-      <div class="food-body">
-        <div class="food-country">🇭🇺 Hungary</div>
-        <h4>Lángos</h4>
-        <p>Deep-fried dough slathered with sour cream and grated cheese. Budapest's favourite street snack.</p>
-        <div class="where">📍 Street stalls, Budapest · Day 7</div>
-      </div>
-    </div>
-
-    <div class="food-card">
-      <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/04-slovenia-kremsnita.jpg</span></div>
-        <img src="images/food/04-slovenia-kremsnita.jpg" data-alt-src="images/food/04-slovenia-kremsnita.jpeg" alt="Kremšnita"
-          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
-          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
-      </div>
-      <div class="food-body">
-        <div class="food-country">🇸🇮 Slovenia</div>
-        <h4>Kremšnita</h4>
-        <p>Crisp pastry with vanilla custard and whipped cream — the legendary cream cake of Lake Bled.</p>
-        <div class="where">📍 Hotel Park café, Bled · Day 8</div>
-      </div>
-    </div>
-
-    <div class="food-card">
-      <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/05-italy-gelato.jpg</span></div>
-        <img src="images/food/05-italy-gelato.jpg" data-alt-src="images/food/05-italy-gelato.jpeg" alt="Gelato"
-          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
-          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
-      </div>
-      <div class="food-body">
-        <div class="food-country">🇮🇹 Italy</div>
-        <h4>Gelato</h4>
-        <p>Dense slow-churned Italian ice cream, richer than regular. Try pistachio, stracciatella, or tiramisù.</p>
-        <div class="where">📍 Every Italian city · Days 10–14</div>
-      </div>
-    </div>
-
-    <div class="food-card">
-      <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/06-switzerland-fondue.jpg</span></div>
-        <img src="images/food/06-switzerland-fondue.jpg" data-alt-src="images/food/06-switzerland-fondue.jpeg" alt="Gruyère Fondue"
-          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
-          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
-      </div>
-      <div class="food-body">
-        <div class="food-country">🇨🇭 Switzerland</div>
-        <h4>Gruyère Fondue</h4>
-        <p>Melted Gruyère with white wine and garlic — swirl your bread cube and enjoy the alpine surroundings.</p>
-        <div class="where">📍 Gruyères village · Day 17</div>
-      </div>
-    </div>
-
-    <div class="food-card">
-      <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/07-germany-weisswurst.jpg</span></div>
-        <img src="images/food/07-germany-weisswurst.jpg" data-alt-src="images/food/07-germany-weisswurst.jpeg" alt="Weisswurst"
-          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
-          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
-      </div>
-      <div class="food-body">
-        <div class="food-country">🇩🇪 Germany</div>
-        <h4>Weisswurst + Brezel</h4>
-        <p>White veal sausage with sweet mustard and a warm soft pretzel. The classic Bavarian breakfast.</p>
-        <div class="where">📍 Munich · Day 28</div>
-      </div>
-    </div>
-
-  </div>
-  <div class="footer">Munasinghe Family · Europe Trip 2026 · Must-Try Foods — Page 1 of 2</div>
-</div><div class="page food-page">
-  <div class="food-hdr">
-    <h2>🍽️ Must-Try Foods by Country</h2>
-    <div class="food-sub">13 iconic dishes to seek out across 13 countries · Page 2 of 2</div>
-  </div>
-  <div class="food-grid">
-
-    <div class="food-card">
-      <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/08-france-crepes.jpg</span></div>
-        <img src="images/food/08-france-crepes.jpg" data-alt-src="images/food/08-france-crepes.jpeg" alt="Crêpes"
-          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
-          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
-      </div>
-      <div class="food-body">
-        <div class="food-country">🇫🇷 France</div>
-        <h4>Crêpes</h4>
-        <p>Paper-thin French pancakes with Nutella, jam, or lemon-sugar, eaten fresh off a street griddle.</p>
-        <div class="where">📍 Lourdes street stalls · Days 15–16</div>
-      </div>
-    </div>
-
-    <div class="food-card">
-      <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/09-netherlands-poffertjes.jpg</span></div>
-        <img src="images/food/09-netherlands-poffertjes.jpg" data-alt-src="images/food/09-netherlands-poffertjes.jpeg" alt="Poffertjes"
-          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
-          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
-      </div>
-      <div class="food-body">
-        <div class="food-country">🇳🇱 Netherlands</div>
-        <h4>Poffertjes</h4>
-        <p>Tiny fluffy Dutch pancakes dusted with powdered sugar and a knob of butter. A perfect Amsterdam snack.</p>
-        <div class="where">📍 Amsterdam street stalls · Days 20–23</div>
-      </div>
-    </div>
-
-    <div class="food-card">
-      <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/10-belgium-waffle.jpg</span></div>
-        <img src="images/food/10-belgium-waffle.jpg" data-alt-src="images/food/10-belgium-waffle.jpeg" alt="Liège Waffle"
-          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
-          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
-      </div>
-      <div class="food-body">
-        <div class="food-country">🇧🇪 Belgium</div>
-        <h4>Liège Waffle</h4>
-        <p>Dense caramelised waffle made with pearl sugar that creates crispy pockets. Far richer than Brussels waffles.</p>
-        <div class="where">📍 Bruges stalls · Day 15</div>
-      </div>
-    </div>
-
-    <div class="food-card">
-      <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/11-denmark-wienerbrod.jpg</span></div>
-        <img src="images/food/11-denmark-wienerbrod.jpg" data-alt-src="images/food/11-denmark-wienerbrod.jpeg" alt="Wienerbrød"
-          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
-          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
-      </div>
-      <div class="food-body">
-        <div class="food-country">🇩🇰 Denmark</div>
-        <h4>Wienerbrød</h4>
-        <p>Buttery flaky pastry in many shapes — what the world calls a "Danish". Best warm from a Copenhagen bakery.</p>
-        <div class="where">📍 Copenhagen bakery · Day 28</div>
-      </div>
-    </div>
-
-    <div class="food-card">
-      <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/12-sweden-kottbullar.jpg</span></div>
-        <img src="images/food/12-sweden-kottbullar.jpg" data-alt-src="images/food/12-sweden-kottbullar.jpeg" alt="Köttbullar"
-          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
-          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
-      </div>
-      <div class="food-body">
-        <div class="food-country">🇸🇪 Sweden</div>
-        <h4>Köttbullar</h4>
-        <p>Swedish meatballs in cream sauce with mashed potato, lingonberry jam, and pickled cucumber.</p>
-        <div class="where">📍 Sister's home or café, Gothenburg · Days 25–27</div>
-      </div>
-    </div>
-
-    <div class="food-card">
-      <div class="visit-img">
-        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/13-china-peking-duck.jpg</span></div>
-        <img src="images/food/13-china-peking-duck.jpg" data-alt-src="images/food/13-china-peking-duck.jpeg" alt="Peking Duck"
-          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
-          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
-      </div>
-      <div class="food-body">
-        <div class="food-country">🇨🇳 China</div>
-        <h4>Peking Duck · 北京烤鸭</h4>
-        <p>Slow-roasted whole duck with lacquered crispy skin. Wrap slices in thin pancakes with spring onion and hoisin.</p>
-        <div class="where">📍 Beijing restaurant · Day 2</div>
-      </div>
-    </div>
-
-  </div>
-  <div class="footer">Munasinghe Family · Europe Trip 2026 · Must-Try Foods — Page 2 of 2</div>
 </div><div class="page day-page">
   <div class="day-header">
     <div class="day-num">DAY 01</div>
@@ -369,8 +174,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">Standard airport precautions · keep passports + cards in front pocket · don't accept help with bags from strangers.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🥝</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Farewell Pavlova</div><div class="gfc-desc">Creamy meringue + kiwifruit — NZ send-off before the big adventure!</div></div><div class="gfc-tag">🇳🇿 NZ<br>NZ$8–14</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (3 stops)</div>
     <div class="visit-grid">
@@ -444,6 +247,22 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="day-food-wrap">
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/13-china-peking-duck.jpg</span></div>
+        <img src="images/food/13-china-peking-duck.jpg" data-alt-src="images/food/13-china-peking-duck.jpeg" alt="Peking Duck"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇨🇳 China</div>
+        <h4>Peking Duck · 北京烤鸭</h4>
+        <p>Slow-roasted whole duck with lacquered crispy skin. Wrap slices in thin pancakes with spring onion and hoisin.</p>
+        <div class="where">📍 Beijing hutong stall · Day 2</div>
+      </div>
+  </div>
+
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Atour Hotel Beijing Capital Airport NIEC</div>
@@ -460,8 +279,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ MODERATE pickpocket risk in tourist areas · taxi scams common (use Didi or hotel shuttle) · fake guides at FC entrance · DON'T use unmarked taxis · keep wallet in front pocket.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🫔</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Jianbing 煎饼</div><div class="gfc-desc">Egg crêpe, crispy wonton, chilli sauce, spring onion — Beijing's best street breakfast.</div></div><div class="gfc-tag">🇨🇳 Beijing<br>¥8–15</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -561,6 +378,22 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="day-food-wrap">
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/07-germany-weisswurst.jpg</span></div>
+        <img src="images/food/07-germany-weisswurst.jpg" data-alt-src="images/food/07-germany-weisswurst.jpeg" alt="Weisswurst"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇩🇪 Germany</div>
+        <h4>Weisswurst + Brezel</h4>
+        <p>White veal sausage with sweet mustard and a warm soft pretzel. The classic Bavarian breakfast.</p>
+        <div class="where">📍 Café near Munich or Salzburg · Day 3</div>
+      </div>
+  </div>
+
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Burg Altpernstein (medieval castle hotel)</div>
@@ -577,8 +410,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ LOW risk · Salzburg + Bavaria very safe · normal precautions · watch handbag at busy Mirabell Gardens. No pickpocket hotspots.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🥨</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Weisswurst + Brezel</div><div class="gfc-desc">White veal sausage with sweet mustard + giant pretzel — eat before noon, 500-year Bavarian rule!</div></div><div class="gfc-tag">🇩🇪 Munich<br>€6–10</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -678,6 +509,22 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="day-food-wrap">
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/01-austria-wiener-schnitzel.jpg</span></div>
+        <img src="images/food/01-austria-wiener-schnitzel.jpg" data-alt-src="images/food/01-austria-wiener-schnitzel.jpeg" alt="Wiener Schnitzel"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇦🇹 Austria</div>
+        <h4>Wiener Schnitzel</h4>
+        <p>Thin veal cutlet breaded and pan-fried golden. Austria's national dish — served with lemon and lingonberry jam.</p>
+        <div class="where">📍 Gasthaus in Hallstatt or Vienna · Day 4</div>
+      </div>
+  </div>
+
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Burg Altpernstein (2nd night)</div>
@@ -694,8 +541,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">LOW risk · UNESCO village · busy with tourists · watch for crowds near Skywalk viewpoint · slippery cobblestones if raining.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🍖</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Wiener Schnitzel</div><div class="gfc-desc">Veal cutlet hammered flat, fried golden, squeeze lemon on top — Austria's national dish.</div></div><div class="gfc-tag">🇦🇹 Austria<br>€12–18</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -811,8 +656,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ HIGH pickpocket risk in Prague Old Town · Charles Bridge · trams to Castle · Wenceslas Square. Use crossbody bag · NEVER back pocket wallet · watch for "distraction" tactics. Currency exchange scams — only use Akcenta, eXchange or KB Bank · NEVER street kiosks.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🥩</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Svíčková</div><div class="gfc-desc">Beef sirloin in creamy sauce with bread dumplings + cranberry jam — Czech comfort at its finest.</div></div><div class="gfc-tag">🇨🇿 Prague<br>€8–12</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -912,6 +755,22 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="day-food-wrap">
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/02-czechia-svickova.jpg</span></div>
+        <img src="images/food/02-czechia-svickova.jpg" data-alt-src="images/food/02-czechia-svickova.jpeg" alt="Svíčková"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇨🇿 Czechia</div>
+        <h4>Svíčková</h4>
+        <p>Braised beef in creamy root vegetable sauce with bread dumplings, cranberry jam, and a lemon slice.</p>
+        <div class="where">📍 Lokál Dlouhááá, Prague · Day 6</div>
+      </div>
+  </div>
+
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Gold Art Apartment Prague (2nd night)</div>
@@ -928,8 +787,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ Same as Day 5 · highest pickpocket density at Castle gates · St Vitus interior · Charles Bridge. Watch for fake police asking to see your wallet/passport — REAL Czech police never check tourists' cash. Walk away or say "Embassy".</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🥐</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Trdelník</div><div class="gfc-desc">Grilled spiral pastry rolled in cinnamon sugar — fresh and hot from a Prague street stall.</div></div><div class="gfc-tag">🇨🇿 Prague<br>€2–3</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (7 stops)</div>
     <div class="visit-grid">
@@ -1071,8 +928,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">LOW risk in Vienna · safe city · normal alertness at Stephansplatz + Schönbrunn crowds.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🎂</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Sachertorte</div><div class="gfc-desc">Vienna's dense chocolate cake with a secret layer of apricot jam — invented here in 1832.</div></div><div class="gfc-tag">🇦🇹 Vienna<br>€7–9</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (7 stops)</div>
     <div class="visit-grid">
@@ -1198,6 +1053,22 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="day-food-wrap">
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/03-hungary-langos.jpg</span></div>
+        <img src="images/food/03-hungary-langos.jpg" data-alt-src="images/food/03-hungary-langos.jpeg" alt="Lángos"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇭🇺 Hungary</div>
+        <h4>Lángos</h4>
+        <p>Deep-fried dough slathered with sour cream and grated cheese. Budapest's favourite street snack.</p>
+        <div class="where">📍 Street stalls near Széchenyi Baths, Budapest · Day 8</div>
+      </div>
+  </div>
+
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">City Home Budapest</div>
@@ -1214,8 +1085,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ MODERATE pickpocket risk · Castle Hill funicular line · busy trams · Astoria area · M3 metro line · ATM skimming common — use bank branches only · aggressive restaurant touts on Váci utca.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🫓</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Lángos</div><div class="gfc-desc">Deep-fried dough slathered in sour cream & cheese — Budapest street food at its finest.</div></div><div class="gfc-tag">🇭🇺 Budapest<br>€2–4</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (7 stops)</div>
     <div class="visit-grid">
@@ -1341,6 +1210,22 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="day-food-wrap">
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/04-slovenia-kremsnita.jpg</span></div>
+        <img src="images/food/04-slovenia-kremsnita.jpg" data-alt-src="images/food/04-slovenia-kremsnita.jpeg" alt="Kremšnita"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇸🇮 Slovenia</div>
+        <h4>Kremšnita</h4>
+        <p>Crisp pastry with vanilla custard and whipped cream — the legendary cream cake of Lake Bled.</p>
+        <div class="where">📍 Hotel Park café, Bled · Day 9</div>
+      </div>
+  </div>
+
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Trilocale Venezia Mestre · 5 min Stazione</div>
@@ -1357,8 +1242,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ LOW risk Bled (very safe) · MODERATE at Slovenian-Italian border crossings (legitimate police checks). Buy Slovenian e-vignette €16/7-day before crossing.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🍰</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Kremšnita</div><div class="gfc-desc">Thick vanilla custard + fluffy cream between pastry sheets — the legendary Lake Bled cream cake!</div></div><div class="gfc-tag">🇸🇮 Bled<br>€4–6</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -1458,6 +1341,22 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="day-food-wrap">
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/05-italy-gelato.jpg</span></div>
+        <img src="images/food/05-italy-gelato.jpg" data-alt-src="images/food/05-italy-gelato.jpeg" alt="Gelato"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇮🇹 Italy</div>
+        <h4>Gelato</h4>
+        <p>Dense slow-churned Italian ice cream, richer than regular. Try pistachio, stracciatella, or tiramisù.</p>
+        <div class="where">📍 Any gelateria in Venice · Day 10</div>
+      </div>
+  </div>
+
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Trilocale Venezia Mestre (2nd night)</div>
@@ -1474,8 +1373,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ HIGH pickpocket risk · Piazza San Marco · Rialto Bridge · vaporetto stops · narrow alleyways with crowds. Watch for "ring drop" scam · fake petition signers · child pickpockets. Crossbody bag in front.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🍢</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Cicchetti</div><div class="gfc-desc">Venetian bar snacks on bread — try 3–4 for €1–3 each along the Ruga degli Orefici.</div></div><div class="gfc-tag">🇮🇹 Venice<br>€1–3 ea.</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (7 stops)</div>
     <div class="visit-grid">
@@ -1617,8 +1514,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ HIGH pickpocket risk · Santa Maria Novella station · Duomo plaza · Ponte Vecchio · in crowds at sunset Piazzale Michelangelo. ZTL ZONE — DON'T drive into Old Town · €100+ fines per camera trigger.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🥪</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Lampredotto sandwich</div><div class="gfc-desc">Florentine braised tripe sandwich from a market cart — sounds brave, tastes incredible.</div></div><div class="gfc-tag">🇮🇹 Florence<br>€4–6</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (8 stops)</div>
     <div class="visit-grid">
@@ -1773,8 +1668,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ VERY HIGH pickpocket in Rome · Termini station · metro Line A · bus 64/40 ("Vatican bus") · Trevi Fountain · Spanish Steps. Watch for petition scams · "found ring" scam · gladiator photo demands. Driver — Rome ZTL · DON'T enter. Park outside, Metro in.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🫓</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Cecina</div><div class="gfc-desc">Thin crispy chickpea pancake from Pisa street stalls — perfect pit stop food.</div></div><div class="gfc-tag">🇮🇹 Pisa<br>€2–3</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -1890,8 +1783,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ HIGH at Pompeii entrance · fake guides demanding payment · aggressive vendors. Naples streets have HIGH pickpocket + bag-snatch risk · stay near tourist areas only.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🍕</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Pizza Margherita</div><div class="gfc-desc">L'Antica Pizzeria da Michele: thin crust, San Marzano tomatoes, fresh buffalo mozzarella.</div></div><div class="gfc-tag">🇮🇹 Naples<br>€5–7</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -1994,8 +1885,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ EXTREME pickpocket density · St Peter's queue is famous · Vatican Museums entry · cleaning fake clergy try to bless you then ask for "donation". Walk fast through bus 64 area. Use crossbody bag.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🫙</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Trapizzino</div><div class="gfc-desc">Triangular pizza pocket stuffed with braised meats — Rome's tastiest street invention.</div></div><div class="gfc-tag">🇮🇹 Rome<br>€3–5</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (8 stops)</div>
     <div class="visit-grid">
@@ -2150,8 +2039,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ MODERATE pickpocket Milan · Duomo plaza · Galleria Vittorio · trams · aggressive selfie-stick vendors at Duomo. Friend stay = safer evening.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🫔</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Panzerotti at Luini</div><div class="gfc-desc">Fried pizza pocket with tomato & mozzarella — there's always a queue, always worth it.</div></div><div class="gfc-tag">🇮🇹 Milan<br>€3–4</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -2254,8 +2141,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">LOW risk · safe Alpine route · weather threats: alpine thunderstorms possible afternoons · check before driving.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🍦</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Gelato · Stresa stop</div><div class="gfc-desc">Artisan gelato on the Lake Maggiore lakefront — try pistachio + stracciatella before the Alps!</div></div><div class="gfc-tag">🇮🇹 Stresa<br>€2–4</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -2355,6 +2240,22 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="day-food-wrap">
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/06-switzerland-fondue.jpg</span></div>
+        <img src="images/food/06-switzerland-fondue.jpg" data-alt-src="images/food/06-switzerland-fondue.jpeg" alt="Gruyère Fondue"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇨🇭 Switzerland</div>
+        <h4>Gruyère Fondue</h4>
+        <p>Melted Gruyère with white wine and garlic — swirl your bread cube and enjoy the alpine surroundings.</p>
+        <div class="where">📍 Restaurant in Gruyères village · Day 17</div>
+      </div>
+  </div>
+
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">La Pierre à Catillon</div>
@@ -2371,8 +2272,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">LOW risk Switzerland · weather is the main threat: thunderstorms can develop at altitude · check forecast before Gornergrat trip · cold (5-10°C) at 3,089m even in July.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🧀</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Gruyère Fondue</div><div class="gfc-desc">Melted cheese in a pot — drop your bread and you buy everyone dessert. That's the rule!</div></div><div class="gfc-tag">🇨🇭 Gruyères<br>CHF 22–28</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -2488,8 +2387,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">LOW risk · Geneva very safe · normal alertness at Gare Cornavin train station.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🍫</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Swiss Chocolate</div><div class="gfc-desc">Läderach or Lindt store tasting in Geneva — try the dark sea-salt slab.</div></div><div class="gfc-tag">🇨🇭 Geneva<br>CHF 5–15</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -2605,8 +2502,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">LOW risk · Bern Old Town very safe · normal precautions in main pedestrian zones.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🌭</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Weisswurst + Brezel</div><div class="gfc-desc">Back in Bavaria for one night — another round before France tomorrow!</div></div><div class="gfc-tag">🇩🇪 Ottobeuren<br>€6–10</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -2706,6 +2601,22 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="day-food-wrap">
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/08-france-crepes.jpg</span></div>
+        <img src="images/food/08-france-crepes.jpg" data-alt-src="images/food/08-france-crepes.jpeg" alt="Crêpes"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇫🇷 France</div>
+        <h4>Crêpes</h4>
+        <p>Paper-thin French pancakes with Nutella, jam, or lemon-sugar, eaten fresh off a street griddle.</p>
+        <div class="where">📍 Street crêperie, Lourdes · Day 20</div>
+      </div>
+  </div>
+
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Hôtel Atrium · Lourdes</div>
@@ -2722,8 +2633,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ MODERATE at airports for pickpockets · LOW in Lourdes (pilgrim site, very safe). Watch handbag during procession crowds.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🥞</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Crêpe</div><div class="gfc-desc">The thinnest pancake ever — Nutella or lemon-sugar from a Lourdes street crêperie.</div></div><div class="gfc-tag">🇫🇷 Lourdes<br>€3–6</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -2839,8 +2748,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ HIGH pickpocket on Paris transfer (Métro Line 4) and Gare du Nord · CDG/Gare du Nord notorious. Eurostar/Schiphol — keep tickets accessible AND passports.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🧇</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Stroopwafel</div><div class="gfc-desc">Caramel waffle sandwich — hold it over a hot drink for 1 min to melt the middle. Magic!</div></div><div class="gfc-tag">🇳🇱 Amsterdam<br>€2–3</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -2940,6 +2847,22 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="day-food-wrap">
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/10-belgium-waffle.jpg</span></div>
+        <img src="images/food/10-belgium-waffle.jpg" data-alt-src="images/food/10-belgium-waffle.jpeg" alt="Liège Waffle"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇧🇪 Belgium</div>
+        <h4>Liège Waffle</h4>
+        <p>Dense caramelised waffle made with pearl sugar that creates crispy pockets. Far richer than Brussels waffles.</p>
+        <div class="where">📍 Brussels street stall · Day 22</div>
+      </div>
+  </div>
+
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">ibis budget Paris Porte d'Italie Ouest</div>
@@ -2956,8 +2879,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ HIGH pickpocket Brussels Grand Place + Manneken Pis crowds. ⚠ EXTREME Paris pickpocket density · all metro lines · Trocadéro · Eiffel base · Champs-Élysées. AVOID "petition" scam · "found ring" scam · "friendship bracelet" scam at Eiffel base.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🧇</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Belgian Liège Waffle</div><div class="gfc-desc">Thick waffle with crunchy sugar crystals baked into it — Brussels stop, eat it plain.</div></div><div class="gfc-tag">🇧🇪 Brussels<br>€2–4</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -3073,8 +2994,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ EXTREME pickpocket Louvre area · ALL Métro lines · Tuileries · Île de la Cité. Watch for stroller-aimed thieves · keep bags zipped + crossbody.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🥐</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Croissant + café crème</div><div class="gfc-desc">Flaky butter croissant at a Parisian pavement café — sit, don't rush, watch the city.</div></div><div class="gfc-tag">🇫🇷 Paris<br>€3–5</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -3174,6 +3093,22 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="day-food-wrap">
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/09-netherlands-poffertjes.jpg</span></div>
+        <img src="images/food/09-netherlands-poffertjes.jpg" data-alt-src="images/food/09-netherlands-poffertjes.jpeg" alt="Poffertjes"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇳🇱 Netherlands</div>
+        <h4>Poffertjes</h4>
+        <p>Tiny fluffy Dutch pancakes dusted with powdered sugar and a knob of butter. A perfect Amsterdam snack.</p>
+        <div class="where">📍 Albert Cuyp Market, Amsterdam · Day 24</div>
+      </div>
+  </div>
+
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Cousin's home (Amsterdam) ?? (3rd of 4 nights)</div>
@@ -3190,8 +3125,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ MODERATE pickpocket Central Station + Damrak · LOW in residential canal areas. Watch out for SILENT BIKES — they'll hit you. Always look both ways. SKIP Red Light District with kids.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🐟</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Hollandse Nieuwe Haring</div><div class="gfc-desc">Raw pickled herring held by the tail and eaten whole — Amsterdam's bravest street snack.</div></div><div class="gfc-tag">🇳🇱 Amsterdam<br>€3–5</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -3291,6 +3224,22 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="day-food-wrap">
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/11-denmark-wienerbrod.jpg</span></div>
+        <img src="images/food/11-denmark-wienerbrod.jpg" data-alt-src="images/food/11-denmark-wienerbrod.jpeg" alt="Wienerbrød"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇩🇰 Denmark</div>
+        <h4>Wienerbrød</h4>
+        <p>Buttery flaky pastry in many shapes — what the world calls a "Danish". Best warm from a Copenhagen bakery.</p>
+        <div class="where">📍 Konditori bakery, Copenhagen · Day 25</div>
+      </div>
+  </div>
+
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Danhostel Copenhagen City & Apartments</div>
@@ -3307,8 +3256,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">LOW risk Copenhagen · one of the safest cities in Europe · normal precautions only.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🥐</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Wienerbrød</div><div class="gfc-desc">The real Danish pastry from a konditori — so buttery and flaky it shatters when you bite.</div></div><div class="gfc-tag">🇩🇰 Copenhagen<br>DKK 25–45</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -3424,8 +3371,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">LOW risk Sweden · safe trains · normal precautions only.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🍝</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Köttbullar</div><div class="gfc-desc">Swedish meatballs with creamy gravy, mash & lingonberry — way better than IKEA!</div></div><div class="gfc-tag">🇸🇪 Gothenburg<br>€9–14</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -3525,6 +3470,22 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="day-food-wrap">
+    <div class="food-card">
+      <div class="visit-img">
+        <div class="placeholder"><span>📷</span><span class="ph-name">images/food/12-sweden-kottbullar.jpg</span></div>
+        <img src="images/food/12-sweden-kottbullar.jpg" data-alt-src="images/food/12-sweden-kottbullar.jpeg" alt="Köttbullar"
+          onload="this.parentElement.querySelector('.placeholder').style.display='none'"
+          onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc='';}else{this.style.display='none';}">
+      </div>
+      <div class="food-body">
+        <div class="food-country">🇸🇪 Sweden</div>
+        <h4>Köttbullar</h4>
+        <p>Swedish meatballs in cream sauce with mashed potato, lingonberry jam, and pickled cucumber.</p>
+        <div class="where">📍 Sister's home or café, Gothenburg · Day 27</div>
+      </div>
+  </div>
+
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Sister's home ?? (2nd of 2 nights)</div>
@@ -3541,8 +3502,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">LOW risk · family time · safe city.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🦐</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Räkmacka</div><div class="gfc-desc">Open shrimp sandwich on rye with dill & mayo — Gothenburg's classic café lunch.</div></div><div class="gfc-tag">🇸🇪 Gothenburg<br>€12–18</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -3658,8 +3617,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">LOW risk Aufkirchen (Bavarian village near MUC). MUC T2 normal precautions.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🥨</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Brezel + Weisswurst</div><div class="gfc-desc">Final Bavarian breakfast in Munich before the long drive back.</div></div><div class="gfc-tag">🇩🇪 Munich<br>€6–9</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -3775,8 +3732,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">Standard precautions · MUC T2 check-in only.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">✈️</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Airport Laugenstange</div><div class="gfc-desc">Soft pretzel roll from the Munich airport bakery — perfect snack for the Beijing flight.</div></div><div class="gfc-tag">🇩🇪 MUC Airport<br>€3–5</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -3892,8 +3847,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">⚠ MODERATE at Mutianyu — pickpockets in cable car queue · aggressive vendors at exits demanding payment. Driver scams — book via Klook only · don't pay extra "tip" requested mid-tour.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🦆</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Peking Duck 北京烤鸭</div><div class="gfc-desc">Whole lacquered duck in tiny pancakes with spring onion & plum sauce — Beijing's finest.</div></div><div class="gfc-tag">🇨🇳 Beijing<br>¥200–400</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -4009,8 +3962,6 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       <div class="content">Standard airport precautions. AKL is safe.</div>
     </div>
   </div>
-
-  <div class="guide-food-card"><span class="gfc-emoji">🥝</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Pavlova — home!</div><div class="gfc-desc">Meringue, whipped cream, fresh kiwifruit — someone make this the moment we land!</div></div><div class="gfc-tag">🇳🇿 New Zealand 🏡</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
