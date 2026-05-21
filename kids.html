@@ -132,6 +132,45 @@ body {
 
 footer { text-align:center; padding:20px; font-size:13px; opacity:0.6; }
 footer a { color:var(--ink); }
+
+/* === Food Adventure === */
+.food-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; margin-bottom:4px; }
+.food-try-card {
+  background:var(--c, #fff8e6); border:3px solid var(--b, #ffd93d);
+  border-radius:20px; padding:18px; cursor:pointer;
+  display:flex; flex-direction:column; gap:6px;
+  transition:transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow:0 4px 12px rgba(0,0,0,0.06);
+  position:relative; overflow:hidden;
+}
+.food-try-card:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.12); }
+.food-check { position:absolute; opacity:0; width:0; height:0; }
+.food-try-card:has(.food-check:checked) {
+  background:linear-gradient(135deg,#d4f5b0,#b8eea0) !important;
+  border-color:var(--green) !important;
+  box-shadow:0 4px 14px rgba(108,198,68,0.3);
+}
+.food-try-card:has(.food-check:checked) .ftc-tick { content:'✅'; font-size:24px; }
+.food-try-card:has(.food-check:checked)::after {
+  content:'✅ TRIED IT!';
+  position:absolute; top:10px; right:10px;
+  background:var(--green); color:white;
+  font-size:11px; font-weight:700; padding:3px 10px;
+  border-radius:100px; letter-spacing:0.05em;
+}
+.ftc-top { display:flex; justify-content:space-between; align-items:center; }
+.ftc-flag { font-size:13px; font-weight:700; color:var(--ink); opacity:0.7; }
+.ftc-tick { font-size:22px; line-height:1; transition:transform 0.2s ease; }
+.ftc-emoji { font-size:44px; line-height:1; margin:4px 0; }
+.ftc-name { font-size:18px; font-weight:700; color:var(--ink); line-height:1.2; }
+.ftc-desc { font-size:13px; opacity:0.8; line-height:1.5; flex:1; }
+.ftc-meta { display:flex; gap:8px; flex-wrap:wrap; margin-top:4px; }
+.ftc-brave { font-size:11px; font-weight:700; padding:3px 10px; border-radius:100px; }
+.ftc-brave.easy { background:#e8ffd4; color:#3d7a00; }
+.ftc-brave.medium { background:#fff3cd; color:#8a5c00; }
+.ftc-price { font-size:11px; font-weight:700; padding:3px 10px; border-radius:100px;
+  background:rgba(0,0,0,0.07); color:var(--ink); }
+@media (max-width:500px) { .food-grid { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
@@ -464,6 +503,150 @@ footer a { color:var(--ink); }
         <h3>🇨🇳 China · Great Wall</h3>
         <p>The Great Wall is over <strong>21,000 km long</strong> — longer than the equator!</p>
       </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOD ADVENTURE ===== -->
+  <div class="section">
+    <h2 class="section-title">🍕 Food Adventure — Dare to Try!</h2>
+    <div class="underline" style="background:var(--orange);"></div>
+
+    <div class="card theme-orange" style="text-align:center;margin-bottom:20px;">
+      <div class="icon">🏆</div>
+      <h3>The Food Champion Challenge!</h3>
+      <p>One must-try food in every country. <strong>Tick each one off as you eat it.</strong><br>
+      Try 10 or more → you're a Food Champion! Rate each one ⭐⭐⭐⭐⭐ in your journal.</p>
+    </div>
+
+    <div class="food-grid">
+
+      <label class="food-try-card" style="--c:#ffecd2;--b:#ff8a4c;">
+        <input type="checkbox" class="food-check">
+        <div class="ftc-top"><span class="ftc-flag">🇦🇹 Austria</span><span class="ftc-tick">☐</span></div>
+        <div class="ftc-emoji">🍖</div>
+        <div class="ftc-name">Wiener Schnitzel</div>
+        <div class="ftc-desc">A giant piece of veal hammered flat and fried golden crispy. Squeeze lemon on top. Basically a mega-nugget — you'll love it!</div>
+        <div class="ftc-meta"><span class="ftc-brave easy">😊 Easy</span><span class="ftc-price">€12–18</span></div>
+      </label>
+
+      <label class="food-try-card" style="--c:#f0e6ff;--b:#c084fc;">
+        <input type="checkbox" class="food-check">
+        <div class="ftc-top"><span class="ftc-flag">🇨🇿 Czechia</span><span class="ftc-tick">☐</span></div>
+        <div class="ftc-emoji">🥩</div>
+        <div class="ftc-name">Svíčková</div>
+        <div class="ftc-desc">Soft beef in creamy sauce with bread dumplings and cranberry jam on top. It looks like gravy and tastes incredible. Tonight's Prague dinner!</div>
+        <div class="ftc-meta"><span class="ftc-brave easy">😊 Easy</span><span class="ftc-price">€8–12</span></div>
+      </label>
+
+      <label class="food-try-card" style="--c:#fff3cd;--b:#ffd93d;">
+        <input type="checkbox" class="food-check">
+        <div class="ftc-top"><span class="ftc-flag">🇭🇺 Hungary</span><span class="ftc-tick">☐</span></div>
+        <div class="ftc-emoji">🫓</div>
+        <div class="ftc-name">Lángos</div>
+        <div class="ftc-desc">Deep-fried bread dough covered in sour cream and cheese. Imagine a pizza that swam in a fryer. Super hot and crispy — the BEST street snack!</div>
+        <div class="ftc-meta"><span class="ftc-brave easy">😊 Easy</span><span class="ftc-price">€2–4 · Cheap!</span></div>
+      </label>
+
+      <label class="food-try-card" style="--c:#e8f4ff;--b:#4dabf7;">
+        <input type="checkbox" class="food-check">
+        <div class="ftc-top"><span class="ftc-flag">🇸🇮 Slovenia</span><span class="ftc-tick">☐</span></div>
+        <div class="ftc-emoji">🍰</div>
+        <div class="ftc-name">Kremšnita</div>
+        <div class="ftc-desc">Thick vanilla custard and fluffy whipped cream sandwiched between pastry sheets. The legendary Lake Bled cream cake. One bite = memory forever.</div>
+        <div class="ftc-meta"><span class="ftc-brave easy">😊 Easy</span><span class="ftc-price">€4–6</span></div>
+      </label>
+
+      <label class="food-try-card" style="--c:#ffe4ed;--b:#ff6b9d;">
+        <input type="checkbox" class="food-check">
+        <div class="ftc-top"><span class="ftc-flag">🇮🇹 Italy</span><span class="ftc-tick">☐</span></div>
+        <div class="ftc-emoji">🍦</div>
+        <div class="ftc-name">Gelato</div>
+        <div class="ftc-desc">Italian ice cream that's creamier and more intense than anything at home. You get to try it in EVERY Italian city! Start with pistachio + stracciatella.</div>
+        <div class="ftc-meta"><span class="ftc-brave easy">😊 Easy</span><span class="ftc-price">€2–4 per scoop</span></div>
+      </label>
+
+      <label class="food-try-card" style="--c:#fff3cd;--b:#ffd93d;">
+        <input type="checkbox" class="food-check">
+        <div class="ftc-top"><span class="ftc-flag">🇨🇭 Switzerland</span><span class="ftc-tick">☐</span></div>
+        <div class="ftc-emoji">🧀</div>
+        <div class="ftc-name">Gruyère Fondue</div>
+        <div class="ftc-desc">Melted cheese in a pot! You dip bread on a long fork and swirl it around. Drop your bread = you buy everyone dessert. That's the rule!</div>
+        <div class="ftc-meta"><span class="ftc-brave easy">😊 Easy</span><span class="ftc-price">CHF 22–28 pp</span></div>
+      </label>
+
+      <label class="food-try-card" style="--c:#eefae5;--b:#6cc644;">
+        <input type="checkbox" class="food-check">
+        <div class="ftc-top"><span class="ftc-flag">🇩🇪 Germany</span><span class="ftc-tick">☐</span></div>
+        <div class="ftc-emoji">🌭</div>
+        <div class="ftc-name">Weisswurst + Brezel</div>
+        <div class="ftc-desc">A white sausage — you peel the skin off or suck it out (locals argue which is right!). Eat it BEFORE noon. That's the 500-year-old Bavarian rule!</div>
+        <div class="ftc-meta"><span class="ftc-brave medium">😅 Brave!</span><span class="ftc-price">€6–10</span></div>
+      </label>
+
+      <label class="food-try-card" style="--c:#ffe4ed;--b:#ff6b9d;">
+        <input type="checkbox" class="food-check">
+        <div class="ftc-top"><span class="ftc-flag">🇫🇷 France</span><span class="ftc-tick">☐</span></div>
+        <div class="ftc-emoji">🥞</div>
+        <div class="ftc-name">Crêpe</div>
+        <div class="ftc-desc">The thinnest pancake ever — filled with Nutella, jam or lemon-sugar. Fresh off the hot plate from a street stall in Lourdes. Get two. Or three.</div>
+        <div class="ftc-meta"><span class="ftc-brave easy">😊 Easy</span><span class="ftc-price">€3–6</span></div>
+      </label>
+
+      <label class="food-try-card" style="--c:#ffecd2;--b:#ff8a4c;">
+        <input type="checkbox" class="food-check">
+        <div class="ftc-top"><span class="ftc-flag">🇳🇱 Netherlands</span><span class="ftc-tick">☐</span></div>
+        <div class="ftc-emoji">🧇</div>
+        <div class="ftc-name">Poffertjes</div>
+        <div class="ftc-desc">Tiny fluffy mini-pancake balls buried in powdered sugar with a blob of melting butter. You'll eat at least 15 before you want to stop. Dutch street magic!</div>
+        <div class="ftc-meta"><span class="ftc-brave easy">😊 Easy</span><span class="ftc-price">€6–8</span></div>
+      </label>
+
+      <label class="food-try-card" style="--c:#fff3cd;--b:#ffd93d;">
+        <input type="checkbox" class="food-check">
+        <div class="ftc-top"><span class="ftc-flag">🇧🇪 Belgium</span><span class="ftc-tick">☐</span></div>
+        <div class="ftc-emoji">🧇</div>
+        <div class="ftc-name">Liège Waffle</div>
+        <div class="ftc-desc">A thick, heavy waffle with crunchy sugar crystals BAKED INTO IT. Way better than a regular waffle. Eat it plain — it's already perfect exactly as it is.</div>
+        <div class="ftc-meta"><span class="ftc-brave easy">😊 Easy</span><span class="ftc-price">€2–4 · Cheap!</span></div>
+      </label>
+
+      <label class="food-try-card" style="--c:#e8f4ff;--b:#4dabf7;">
+        <input type="checkbox" class="food-check">
+        <div class="ftc-top"><span class="ftc-flag">🇩🇰 Denmark</span><span class="ftc-tick">☐</span></div>
+        <div class="ftc-emoji">🥐</div>
+        <div class="ftc-name">Wienerbrød</div>
+        <div class="ftc-desc">The REAL Danish pastry — so buttery and flaky it shatters when you bite it. Much better than anything at home. Try the cinnamon swirl. Then the custard one.</div>
+        <div class="ftc-meta"><span class="ftc-brave easy">😊 Easy</span><span class="ftc-price">DKK 25–40 (~€3–5)</span></div>
+      </label>
+
+      <label class="food-try-card" style="--c:#eefae5;--b:#6cc644;">
+        <input type="checkbox" class="food-check">
+        <div class="ftc-top"><span class="ftc-flag">🇸🇪 Sweden</span><span class="ftc-tick">☐</span></div>
+        <div class="ftc-emoji">🍝</div>
+        <div class="ftc-name">Köttbullar</div>
+        <div class="ftc-desc">Swedish meatballs — the REAL home-cooked version! Way better than IKEA. With cream sauce, mashed potato and lingonberry jam. Maybe aunt makes them for us! 🤞</div>
+        <div class="ftc-meta"><span class="ftc-brave easy">😊 Easy</span><span class="ftc-price">Free at aunt's! · €9–14 café</span></div>
+      </label>
+
+      <label class="food-try-card" style="--c:#ffecd2;--b:#ff8a4c;">
+        <input type="checkbox" class="food-check">
+        <div class="ftc-top"><span class="ftc-flag">🇨🇳 China</span><span class="ftc-tick">☐</span></div>
+        <div class="ftc-emoji">🦆</div>
+        <div class="ftc-name">Peking Duck · 北京烤鸭</div>
+        <div class="ftc-desc">Whole roasted duck with super-crispy lacquered skin. You wrap slices in tiny pancakes with spring onion and plum sauce. It's Beijing's most famous dish — try it on Day 2!</div>
+        <div class="ftc-meta"><span class="ftc-brave medium">😅 Brave!</span><span class="ftc-price">¥200–400 pp</span></div>
+      </label>
+
+    </div>
+
+    <div class="card theme-green" style="text-align:center;margin-top:20px;">
+      <h3>🏅 Your Food Score</h3>
+      <p style="margin-top:6px;">
+        <strong>1–4 tried:</strong> Curious Taster 🌱 &nbsp;|&nbsp;
+        <strong>5–8 tried:</strong> Food Adventurer 🌍 &nbsp;|&nbsp;
+        <strong>9–12 tried:</strong> World Foodie ⭐ &nbsp;|&nbsp;
+        <strong>All 13:</strong> FOOD CHAMPION 🏆🎉
+      </p>
     </div>
   </div>
 
