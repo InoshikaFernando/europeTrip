@@ -122,6 +122,26 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
 .day-food-wrap .food-card p { font-size:10px; }
 .day-food-wrap .food-card .where { font-size:9px; }
 
+
+/* ── Compact info strip (sleep + wear + safety in one row) ── */
+.info-strip {
+  display:flex; gap:7px; margin-bottom:12px; align-items:stretch;
+}
+.info-strip .sleep-block {
+  flex:1.5; margin-bottom:0;
+  background:white; border-radius:5px; border:1px solid var(--line);
+  padding:6px 10px;
+}
+.info-strip .sleep-block .label { font-size:7px; margin-bottom:2px; }
+.info-strip .sleep-block .sleep-name { font-size:11px; font-weight:700; line-height:1.2; }
+.info-strip .sleep-block .sleep-addr { font-size:8px; opacity:0.75; line-height:1.3; margin-top:2px; }
+.info-strip .two-col {
+  flex:1; display:flex; flex-direction:column; gap:5px; margin-bottom:0;
+}
+.info-strip .two-col .box { padding:5px 9px; }
+.info-strip .two-col .label { font-size:7px; margin-bottom:2px; }
+.info-strip .two-col .content { font-size:9px; line-height:1.35; }
+
 </style>
 </head><body>
 <div class="toolbar"><span>📘 Trip Guide · 32 pages · A4</span><a href="index.html">← Map</a><button onclick="window.print()">🖨 Print / Save PDF</button></div><div class="page cover">
@@ -158,15 +178,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">On board CA784 (Air China)</div>
     <div class="sleep-addr">📍 B787-900 · 13h 10m flight · AKL → PEK</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">P (pants) + tee + light jacket + Skechers. Plane is cold AC.</div>
     </div>
     <div class="box safety">
@@ -263,15 +284,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Atour Hotel Beijing Capital Airport NIEC</div>
     <div class="sleep-addr">📍 F1-8, 101, Building 2, No. 28 Tianzhu Street, Shunyi, 100000 Beijing · +86 10 89176789</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">S1 + tee + sun hat + Skechers. Beijing July 31°C + humid. Shorts beat active wear in heat.</div>
     </div>
     <div class="box safety">
@@ -394,15 +416,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Burg Altpernstein (medieval castle hotel)</div>
     <div class="sleep-addr">📍 Altpernstein 1, 4563 Micheldorf, Austria · +43 664 131 3930 · 2 nights</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">F1 (frock) + cardigan + Dress shoes for Sat Vigil. Cool morning, warm by lunch.</div>
     </div>
     <div class="box safety">
@@ -525,15 +548,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Burg Altpernstein (2nd night)</div>
     <div class="sleep-addr">📍 Altpernstein 1, 4563 Micheldorf, Austria · +43 664 131 3930</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">A (active wear) + Skechers + light jacket. Mountain lake breeze cool.</div>
     </div>
     <div class="box safety">
@@ -640,15 +664,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Gold Art Apartment Prague</div>
     <div class="sleep-addr">📍 U Sv. Ducha 110/9, 110 00 Staré Město, Prague · Old Town · 2 nights</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">S2 + tee + Skechers. Travel day.</div>
     </div>
     <div class="box safety">
@@ -771,15 +796,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Gold Art Apartment Prague (2nd night)</div>
     <div class="sleep-addr">📍 U Sv. Ducha 110/9, 110 00 Staré Město, Prague</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">F1 (cleaned) + cardigan + Skechers for castle hill walking.</div>
     </div>
     <div class="box safety">
@@ -912,15 +938,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">The Levante Laudon Vienna</div>
     <div class="sleep-addr">📍 Laudongasse 8, 1080 Vienna, 8th district · 1 night</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">S1 (cleaned) + Skechers for park walking.</div>
     </div>
     <div class="box safety">
@@ -1069,15 +1096,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">City Home Budapest</div>
     <div class="sleep-addr">📍 Hársfa utca 51, 1074 Budapest · District VII (Erzsébetváros) · underground garage</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">S2 + tee + Skechers + dress shoes for evening. NO swimsuit (Széchenyi SKIPPED).</div>
     </div>
     <div class="box safety">
@@ -1226,15 +1254,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Trilocale Venezia Mestre · 5 min Stazione</div>
     <div class="sleep-addr">📍 Via Podgora 6/1, 30171 Venezia · +39 327 128 6016 · 2 nights · 2 rooms</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">S2 (cleaned) + tee + Skechers. Cool morning, hot Italian afternoon.</div>
     </div>
     <div class="box safety">
@@ -1357,15 +1386,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Trilocale Venezia Mestre (2nd night)</div>
     <div class="sleep-addr">📍 Via Podgora 6/1, 30171 Venezia</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">F2 (frock) + cardigan + Skechers + dress shoes for Vigil at San Marco.</div>
     </div>
     <div class="box safety">
@@ -1498,15 +1528,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Garden Blue · San Marco / SS Annunziata</div>
     <div class="sleep-addr">📍 18b Via Venezia, 4° piano, 50121 Florence · +39 055 906 4222 · 1 night · Family Room</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">S1 + tee + sun hat + Skechers. Florence hot July ~32°C.</div>
     </div>
     <div class="box safety">
@@ -1652,15 +1683,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Auri Vatican apartment (Aurelio)</div>
     <div class="sleep-addr">📍 9 Via Giovanni Aurispa, Aurelio, 00167 Rome · +39 339 540 0907 · 3 nights · 2 bed / 2 bath</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">A (active wear) + sun hat + Skechers + sunscreen. Pisa hot + Rome hotter.</div>
     </div>
     <div class="box safety">
@@ -1767,15 +1799,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Auri Vatican apartment (2nd night)</div>
     <div class="sleep-addr">📍 9 Via Giovanni Aurispa, Aurelio, 00167 Rome</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">S2 + tee + SUN HAT + sunscreen + Skechers. Pompeii BRUTAL hot (35°C+, zero shade).</div>
     </div>
     <div class="box safety">
@@ -1869,15 +1902,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Auri Vatican apartment (3rd night)</div>
     <div class="sleep-addr">📍 9 Via Giovanni Aurispa, Aurelio, 00167 Rome</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">F1 (cleaned) + dress shoes + cardigan/shawl ⚠ Vatican STRICT dress code: shoulders + knees covered ALL DAY.</div>
     </div>
     <div class="box safety">
@@ -2023,15 +2057,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Rasika Ayya's home (friend stay ??)</div>
     <div class="sleep-addr">📍 Milan area · address TBC from Rasika · 1 night</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">S1 + tee + Skechers.</div>
     </div>
     <div class="box safety">
@@ -2125,15 +2160,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Postman 8 · Bed and Breakfast (host Heinz Clemenz)</div>
     <div class="sleep-addr">📍 Kirchweg 8, 3922 Stalden, Switzerland · +41 79 232 50 87 · 1 night · 2 rooms</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">A morning Milan → P (pants) + jacket Stalden evening. Buy Swiss vignette CHF 40 at border.</div>
     </div>
     <div class="box safety">
@@ -2256,15 +2292,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">La Pierre à Catillon</div>
     <div class="sleep-addr">📍 Route de Moléson 228, 1663 Moléson-sur-Gruyères · +41 26 921 1041 · 2 nights</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">P + thermal + jacket morning Gornergrat → change to F2 + dress shoes for Vigil at Gruyères. Snow at summit!</div>
     </div>
     <div class="box safety">
@@ -2371,15 +2408,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">La Pierre à Catillon (2nd night)</div>
     <div class="sleep-addr">📍 Route de Moléson 228, 1663 Moléson-sur-Gruyères</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">S2 + tee + cardigan + Skechers. Lake breeze cool.</div>
     </div>
     <div class="box safety">
@@ -2486,15 +2524,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">AKZENT Brauerei Hotel Hirsch · Ottobeuren</div>
     <div class="sleep-addr">📍 Marktplatz 12, 87724 Ottobeuren, Bavaria · +49 176 8642 5962 · 1 night · Suite</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">S1 + Skechers. Cool morning.</div>
     </div>
     <div class="box safety">
@@ -2617,15 +2656,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Hôtel Atrium · Lourdes</div>
     <div class="sleep-addr">📍 9 rue des Pèlerins, 65100 Lourdes · +33 5 62 94 27 28 · 1 night · 2 rooms</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">F1 (modest) + cardigan + dress shoes for Sanctuary + Torch Procession.</div>
     </div>
     <div class="box safety">
@@ -2732,15 +2772,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Cousin's home (Amsterdam) ??</div>
     <div class="sleep-addr">📍 Amsterdam · cousin's address (private) · 1st of 4 nights with cousin</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">S2 + tee + cardigan + Skechers + P (pants) optional for long AC train.</div>
     </div>
     <div class="box safety">
@@ -2863,15 +2904,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">ibis budget Paris Porte d'Italie Ouest</div>
     <div class="sleep-addr">📍 9-15 Rue Élisée Reclus, 94270 Le Kremlin-Bicêtre · +33 8 92 68 09 46 · 1 night · 2 rooms · FREE parking</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">A (cleaned) + Skechers · jacket for Eiffel evening.</div>
     </div>
     <div class="box safety">
@@ -2978,15 +3020,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Cousin's home (Amsterdam) ?? (2nd of 4 nights)</div>
     <div class="sleep-addr">📍 Amsterdam · cousin's address (private)</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">F2 (cleaned) + Skechers + dress shoes for late Mass if needed.</div>
     </div>
     <div class="box safety">
@@ -3109,15 +3152,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Cousin's home (Amsterdam) ?? (3rd of 4 nights)</div>
     <div class="sleep-addr">📍 Amsterdam · cousin's address (private)</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">S1 daytime → F1 + dress shoes for 17:00 Vigil at Sint-Nicolaaskerk.</div>
     </div>
     <div class="box safety">
@@ -3240,15 +3284,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Danhostel Copenhagen City & Apartments</div>
     <div class="sleep-addr">📍 H.C. Andersens Boulevard 50, 1553 Copenhagen · +45 33 11 85 85 · 1 night · 10-bedded room (FAMILY REUNION)</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">S2 + tee + comfy shoes. Cool Nordic summer ~22°C.</div>
     </div>
     <div class="box safety">
@@ -3355,15 +3400,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Sister's home ??</div>
     <div class="sleep-addr">📍 Gothenburg · sister's address (private) · 1st of 2 nights</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">A + cardigan + Skechers. Cool train.</div>
     </div>
     <div class="box safety">
@@ -3486,15 +3532,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
       </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Sister's home ?? (2nd of 2 nights)</div>
     <div class="sleep-addr">📍 Gothenburg · sister's address (private)</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">A + sunscreen + Skechers. Long summer day · light til 22:00.</div>
     </div>
     <div class="box safety">
@@ -3601,15 +3648,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">AKZENT Hotel Aufkirchen</div>
     <div class="sleep-addr">📍 Dorfstrasse 15A, 85445 Aufkirchen · +49 8122 8670 · 1 night · 2 rooms · ~5km from MUC</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">S1 + light jacket + Skechers. Evening cool.</div>
     </div>
     <div class="box safety">
@@ -3716,15 +3764,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">On board CA962 (Air China)</div>
     <div class="sleep-addr">📍 9h 45m flight · polar route over Mongolia · land Beijing 04:45 Friday</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">P (pants) + tee + cardigan + Skechers. Long cold flight.</div>
     </div>
     <div class="box safety">
@@ -3831,15 +3880,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">Atour Hotel Beijing Capital Airport NIEC</div>
     <div class="sleep-addr">📍 F1-8, 101, Building 2, No. 28 Tianzhu Street, Shunyi, 100000 Beijing · +86 10 89176789 · 1 night (return)</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">A + sun hat + sunscreen + Skechers (best grip you have for stone steps).</div>
     </div>
     <div class="box safety">
@@ -3946,15 +3996,16 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="info-strip">
   <div class="sleep-block">
     <div class="label">🛏️ TONIGHT WE SLEEP AT</div>
     <div class="sleep-name">?? HOME · your own bed</div>
     <div class="sleep-addr">📍 Auckland, NZ · 25 nights done · 15 countries · welcome home</div>
   </div>
-
   <div class="two-col">
     <div class="box wear">
       <div class="label">👕 WHAT TO WEAR</div>
+  </div>
       <div class="content">P (pants) + softest tee + cardigan + Skechers. Sleep-friendly comfy.</div>
     </div>
     <div class="box safety">
