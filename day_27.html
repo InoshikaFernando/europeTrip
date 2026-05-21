@@ -115,6 +115,104 @@ body {
 footer { background: var(--ink); color: var(--cream); padding: 24px; margin-top: 48px; text-align: center; font-size: 12px; opacity: 0.85; }
 footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--gold); font-size: 16px; margin-bottom: 6px; }
 @media (max-width: 600px) { .container { padding: 24px 16px; } .nav-link { font-size: 11px; padding: 6px 10px; max-width: 40%; } .action-row a { min-width: 100%; } .mini-map-wrap { height: 320px; } }
+
+/* === Daily food spotlight === */
+.food-spotlight {
+  background: linear-gradient(135deg, #fffbf0 0%, #fef3d0 100%);
+  border: 1.5px solid var(--gold);
+  border-left: 5px solid var(--gold);
+  border-radius: 8px;
+  padding: 18px 22px 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 14px rgba(200,155,60,0.18), 0 1px 3px rgba(200,155,60,0.08);
+  position: relative;
+  overflow: hidden;
+}
+.food-spotlight::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 0; bottom: 0;
+  width: 38%;
+  background: linear-gradient(to left, rgba(200,155,60,0.09), transparent);
+  pointer-events: none;
+}
+.food-spotlight .fs-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--gold);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 12px 4px 10px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+  font-family: 'JetBrains Mono', monospace;
+}
+.food-spotlight .fs-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.food-spotlight .fs-emoji {
+  font-size: 44px;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+.food-spotlight .fs-content { flex: 1; min-width: 0; }
+.food-spotlight .fs-name {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+  line-height: 1.1;
+}
+.food-spotlight .fs-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.food-spotlight .fs-tag {
+  background: rgba(200,155,60,0.15);
+  color: var(--gold-deep);
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.03em;
+}
+.food-spotlight .fs-tag.highlight {
+  background: var(--gold);
+  color: white;
+}
+.food-spotlight .fs-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink);
+  opacity: 0.85;
+  margin-bottom: 10px;
+}
+.food-spotlight .fs-where {
+  font-size: 12.5px;
+  color: var(--gold-deep);
+  font-weight: 600;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+.food-spotlight .fs-where::before { content: '📍'; flex-shrink: 0; }
+@media (max-width: 520px) {
+  .food-spotlight .fs-emoji { font-size: 32px; }
+  .food-spotlight .fs-name  { font-size: 18px; }
+  .food-spotlight .fs-desc  { font-size: 13px; }
+}
 </style>
 </head>
 <body>
@@ -141,6 +239,19 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
     </div>
   </div>
   <div class="summary">The journey home spans 3 days. <strong>Wed 5 Aug:</strong> Fly GOT → MUC early, day room near MUC airport, rest. <strong>Thu 6 Aug:</strong> CA962 13:00 → Beijing. <strong>Fri 7 Aug:</strong> 19-hr Beijing stopover, Great Wall at Mutianyu. <strong>Sat 8 Aug:</strong> CA783 → AKL 16:30. Welcome home. 25 nights, 22 destinations, sister visit.</div>
+  <div class="food-spotlight">
+    <div class="fs-badge">🍴 Must-Try Food · 🇩🇪 Germany · Day 27 (Munich → home)</div>
+    <div class="fs-main">
+      <div class="fs-emoji">🥨</div>
+      <div class="fs-content">
+        <div class="fs-name">Brezel + Weisswurst</div>
+        <div class="fs-meta"><span class="fs-tag highlight">€6–9</span><span class="fs-tag highlight">Last European meal</span><span class="fs-tag">Munich airport</span><span class="fs-tag">Send-off</span></div>
+        <div class="fs-desc">Your last taste of Europe before the long flight home. A warm giant Bavarian Brezel with butter, or the full Weisswurst breakfast if time allows. The perfect Munich send-off — savour it.</div>
+        <div class="fs-where">Wirtshaus im Viktualienmarkt, Munich city · or Munich Airport Terminal 2 · Airbräu Brewery restaurant</div>
+      </div>
+    </div>
+  </div>
+
 
     <div class="card hotel-card">
       <div class="card-label">🏨 Hotels (return journey)</div>
