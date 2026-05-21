@@ -85,6 +85,25 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
 .food-card h4 {font-size:11px; font-weight:700; line-height:1.2; margin-bottom:3px; color:var(--ink);}
 .food-card p {font-size:8.5px; line-height:1.35; opacity:0.75; color:var(--ink);}
 .food-card .where {font-size:8px; color:var(--sky); margin-top:4px; font-style:italic;}
+
+/* ── Guide day food card ── */
+.guide-food-card {
+  display:flex; align-items:center; gap:12px;
+  background:linear-gradient(135deg,#fffbf0 0%,#fff3cd 100%);
+  border:1.5px solid var(--gold); border-left:5px solid var(--gold);
+  border-radius:8px; padding:9px 14px; margin-bottom:12px;
+  box-shadow:0 1px 6px rgba(200,155,60,0.12);
+}
+.gfc-emoji { font-size:30px; line-height:1; flex-shrink:0; }
+.gfc-body  { flex:1; min-width:0; }
+.gfc-label { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.12em;
+  color:var(--gold-deep); font-weight:700; text-transform:uppercase; margin-bottom:2px; }
+.gfc-name  { font-family:'Fraunces',serif; font-size:15px; font-weight:700;
+  color:var(--ink); line-height:1.1; }
+.gfc-desc  { font-size:10px; color:var(--ink); opacity:0.78; line-height:1.35; margin-top:2px; }
+.gfc-tag   { font-family:'JetBrains Mono',monospace; font-size:9px; font-weight:700;
+  color:var(--gold-deep); text-align:right; flex-shrink:0; line-height:1.5; }
+
 </style>
 </head><body>
 <div class="toolbar"><span>📘 Trip Guide · 32 pages · A4</span><a href="index.html">← Map</a><button onclick="window.print()">🖨 Print / Save PDF</button></div><div class="page cover">
@@ -351,6 +370,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🥝</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Farewell Pavlova</div><div class="gfc-desc">Creamy meringue + kiwifruit — NZ send-off before the big adventure!</div></div><div class="gfc-tag">🇳🇿 NZ<br>NZ$8–14</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (3 stops)</div>
     <div class="visit-grid">
@@ -441,6 +461,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🫔</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Jianbing 煎饼</div><div class="gfc-desc">Egg crêpe, crispy wonton, chilli sauce, spring onion — Beijing's best street breakfast.</div></div><div class="gfc-tag">🇨🇳 Beijing<br>¥8–15</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -557,6 +578,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🥨</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Weisswurst + Brezel</div><div class="gfc-desc">White veal sausage with sweet mustard + giant pretzel — eat before noon, 500-year Bavarian rule!</div></div><div class="gfc-tag">🇩🇪 Munich<br>€6–10</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -673,6 +695,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🍖</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Wiener Schnitzel</div><div class="gfc-desc">Veal cutlet hammered flat, fried golden, squeeze lemon on top — Austria's national dish.</div></div><div class="gfc-tag">🇦🇹 Austria<br>€12–18</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -789,6 +812,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🥩</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Svíčková</div><div class="gfc-desc">Beef sirloin in creamy sauce with bread dumplings + cranberry jam — Czech comfort at its finest.</div></div><div class="gfc-tag">🇨🇿 Prague<br>€8–12</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -905,6 +929,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🥐</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Trdelník</div><div class="gfc-desc">Grilled spiral pastry rolled in cinnamon sugar — fresh and hot from a Prague street stall.</div></div><div class="gfc-tag">🇨🇿 Prague<br>€2–3</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (7 stops)</div>
     <div class="visit-grid">
@@ -1047,6 +1072,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🎂</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Sachertorte</div><div class="gfc-desc">Vienna's dense chocolate cake with a secret layer of apricot jam — invented here in 1832.</div></div><div class="gfc-tag">🇦🇹 Vienna<br>€7–9</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (7 stops)</div>
     <div class="visit-grid">
@@ -1189,6 +1215,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🫓</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Lángos</div><div class="gfc-desc">Deep-fried dough slathered in sour cream & cheese — Budapest street food at its finest.</div></div><div class="gfc-tag">🇭🇺 Budapest<br>€2–4</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (7 stops)</div>
     <div class="visit-grid">
@@ -1331,6 +1358,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🍰</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Kremšnita</div><div class="gfc-desc">Thick vanilla custard + fluffy cream between pastry sheets — the legendary Lake Bled cream cake!</div></div><div class="gfc-tag">🇸🇮 Bled<br>€4–6</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -1447,6 +1475,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🍢</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Cicchetti</div><div class="gfc-desc">Venetian bar snacks on bread — try 3–4 for €1–3 each along the Ruga degli Orefici.</div></div><div class="gfc-tag">🇮🇹 Venice<br>€1–3 ea.</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (7 stops)</div>
     <div class="visit-grid">
@@ -1589,6 +1618,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🥪</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Lampredotto sandwich</div><div class="gfc-desc">Florentine braised tripe sandwich from a market cart — sounds brave, tastes incredible.</div></div><div class="gfc-tag">🇮🇹 Florence<br>€4–6</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (8 stops)</div>
     <div class="visit-grid">
@@ -1744,6 +1774,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🫓</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Cecina</div><div class="gfc-desc">Thin crispy chickpea pancake from Pisa street stalls — perfect pit stop food.</div></div><div class="gfc-tag">🇮🇹 Pisa<br>€2–3</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -1860,6 +1891,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🍕</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Pizza Margherita</div><div class="gfc-desc">L'Antica Pizzeria da Michele: thin crust, San Marzano tomatoes, fresh buffalo mozzarella.</div></div><div class="gfc-tag">🇮🇹 Naples<br>€5–7</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -1963,6 +1995,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🫙</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Trapizzino</div><div class="gfc-desc">Triangular pizza pocket stuffed with braised meats — Rome's tastiest street invention.</div></div><div class="gfc-tag">🇮🇹 Rome<br>€3–5</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (8 stops)</div>
     <div class="visit-grid">
@@ -2118,6 +2151,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🫔</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Panzerotti at Luini</div><div class="gfc-desc">Fried pizza pocket with tomato & mozzarella — there's always a queue, always worth it.</div></div><div class="gfc-tag">🇮🇹 Milan<br>€3–4</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -2221,6 +2255,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🍦</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Gelato · Stresa stop</div><div class="gfc-desc">Artisan gelato on the Lake Maggiore lakefront — try pistachio + stracciatella before the Alps!</div></div><div class="gfc-tag">🇮🇹 Stresa<br>€2–4</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -2337,6 +2372,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🧀</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Gruyère Fondue</div><div class="gfc-desc">Melted cheese in a pot — drop your bread and you buy everyone dessert. That's the rule!</div></div><div class="gfc-tag">🇨🇭 Gruyères<br>CHF 22–28</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -2453,6 +2489,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🍫</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Swiss Chocolate</div><div class="gfc-desc">Läderach or Lindt store tasting in Geneva — try the dark sea-salt slab.</div></div><div class="gfc-tag">🇨🇭 Geneva<br>CHF 5–15</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -2569,6 +2606,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🌭</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Weisswurst + Brezel</div><div class="gfc-desc">Back in Bavaria for one night — another round before France tomorrow!</div></div><div class="gfc-tag">🇩🇪 Ottobeuren<br>€6–10</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -2685,6 +2723,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🥞</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Crêpe</div><div class="gfc-desc">The thinnest pancake ever — Nutella or lemon-sugar from a Lourdes street crêperie.</div></div><div class="gfc-tag">🇫🇷 Lourdes<br>€3–6</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -2801,6 +2840,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🧇</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Stroopwafel</div><div class="gfc-desc">Caramel waffle sandwich — hold it over a hot drink for 1 min to melt the middle. Magic!</div></div><div class="gfc-tag">🇳🇱 Amsterdam<br>€2–3</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -2917,6 +2957,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🧇</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Belgian Liège Waffle</div><div class="gfc-desc">Thick waffle with crunchy sugar crystals baked into it — Brussels stop, eat it plain.</div></div><div class="gfc-tag">🇧🇪 Brussels<br>€2–4</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -3033,6 +3074,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🥐</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Croissant + café crème</div><div class="gfc-desc">Flaky butter croissant at a Parisian pavement café — sit, don't rush, watch the city.</div></div><div class="gfc-tag">🇫🇷 Paris<br>€3–5</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -3149,6 +3191,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🐟</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Hollandse Nieuwe Haring</div><div class="gfc-desc">Raw pickled herring held by the tail and eaten whole — Amsterdam's bravest street snack.</div></div><div class="gfc-tag">🇳🇱 Amsterdam<br>€3–5</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -3265,6 +3308,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🥐</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Wienerbrød</div><div class="gfc-desc">The real Danish pastry from a konditori — so buttery and flaky it shatters when you bite.</div></div><div class="gfc-tag">🇩🇰 Copenhagen<br>DKK 25–45</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -3381,6 +3425,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🍝</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Köttbullar</div><div class="gfc-desc">Swedish meatballs with creamy gravy, mash & lingonberry — way better than IKEA!</div></div><div class="gfc-tag">🇸🇪 Gothenburg<br>€9–14</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -3497,6 +3542,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🦐</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Räkmacka</div><div class="gfc-desc">Open shrimp sandwich on rye with dill & mayo — Gothenburg's classic café lunch.</div></div><div class="gfc-tag">🇸🇪 Gothenburg<br>€12–18</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -3613,6 +3659,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🥨</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Brezel + Weisswurst</div><div class="gfc-desc">Final Bavarian breakfast in Munich before the long drive back.</div></div><div class="gfc-tag">🇩🇪 Munich<br>€6–9</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -3729,6 +3776,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">✈️</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Airport Laugenstange</div><div class="gfc-desc">Soft pretzel roll from the Munich airport bakery — perfect snack for the Beijing flight.</div></div><div class="gfc-tag">🇩🇪 MUC Airport<br>€3–5</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -3845,6 +3893,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🦆</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Peking Duck 北京烤鸭</div><div class="gfc-desc">Whole lacquered duck in tiny pancakes with spring onion & plum sauce — Beijing's finest.</div></div><div class="gfc-tag">🇨🇳 Beijing<br>¥200–400</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
@@ -3961,6 +4010,7 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
     </div>
   </div>
 
+  <div class="guide-food-card"><span class="gfc-emoji">🥝</span><div class="gfc-body"><div class="gfc-label">🍴 Must-try food today</div><div class="gfc-name">Pavlova — home!</div><div class="gfc-desc">Meringue, whipped cream, fresh kiwifruit — someone make this the moment we land!</div></div><div class="gfc-tag">🇳🇿 New Zealand 🏡</div></div>
   <div class="visits">
     <div class="label">📍 WHAT WE&#39;RE VISITING (5 stops)</div>
     <div class="visit-grid">
