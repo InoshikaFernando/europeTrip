@@ -123,12 +123,13 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
 .day-food-wrap .food-card .where { font-size:9px; }
 
 
-/* ── Compact info strip (sleep + wear + safety in one row) ── */
+/* ── Compact info strip (sleep | wear | safety — 3 columns) ── */
 .info-strip {
-  display:flex; gap:7px; margin-bottom:12px; align-items:stretch;
+  display:grid; grid-template-columns:1.5fr 1fr 1fr;
+  gap:7px; margin-bottom:12px; align-items:stretch;
 }
 .info-strip .sleep-block {
-  flex:1.5; margin-bottom:0;
+  margin-bottom:0;
   background:white; border-radius:5px; border:1px solid var(--line);
   padding:6px 10px;
 }
@@ -136,9 +137,9 @@ body {font-family:'Plus Jakarta Sans',sans-serif; background:#888; color:var(--i
 .info-strip .sleep-block .sleep-name { font-size:11px; font-weight:700; line-height:1.2; }
 .info-strip .sleep-block .sleep-addr { font-size:8px; opacity:0.75; line-height:1.3; margin-top:2px; }
 .info-strip .two-col {
-  flex:1; display:flex; flex-direction:column; gap:5px; margin-bottom:0;
+  display:contents;
 }
-.info-strip .two-col .box { padding:5px 9px; }
+.info-strip .two-col .box { padding:5px 9px; margin-bottom:0; }
 .info-strip .two-col .label { font-size:7px; margin-bottom:2px; }
 .info-strip .two-col .content { font-size:9px; line-height:1.35; }
 
