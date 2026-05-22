@@ -196,7 +196,7 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
 }
 
 
-/* ── Flag images (pgA) ── */
+*/
 .big-flag { display:flex; flex-direction:column; align-items:center; gap:5px; font-size:32px; }
 .fi-row { display:flex; gap:8px; justify-content:center; }
 .fi-box { display:flex; flex-direction:column; align-items:center; gap:2px; }
@@ -207,6 +207,18 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
 .fi-path { font-size:5.5px; opacity:0.85; word-break:break-all; }
 .fi-label { font-size:7px; font-weight:700; color:#a47a23; font-family:'JetBrains Mono',monospace; }
 .fi-outline img { border:1.5px dashed #bbb; }
+
+
+/* ── Flag images (pgA) ── */
+.big-flag { display:flex; flex-direction:column; align-items:center; gap:5px; font-size:32px; }
+.fi-row { display:flex; gap:8px; justify-content:center; }
+.fi-box { display:flex; flex-direction:column; align-items:center; gap:3px; }
+.fi-label { font-size:7px; font-weight:700; color:#a47a23; font-family:'JetBrains Mono',monospace; }
+.fi-ph { width:32mm; height:21mm; display:flex; flex-direction:column; align-items:center;
+  justify-content:center; gap:3px; border-radius:3px; font-size:6px;
+  color:#a47a23; font-family:'JetBrains Mono',monospace; text-align:center; padding:4px; }
+.fi-path { font-size:5.5px; opacity:0.85; word-break:break-all; }
+.fi-box img { width:32mm; height:auto; border-radius:3px; border:1px solid #ccc; }
 
 </style></head><body>
 <div class="toolbar"><span>✈️ Avin (4yo) · 2pp/day</span><a href="booklet.html">📖 Parents</a><a href="booklet-aviann.html">✍️ Aviann</a><a href="booklet-avisha.html">🗺️ Avisha</a><a href="index.html">← Map</a><button onclick="window.print()">🖨 Print</button></div>
@@ -225,7 +237,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">✈️</div>
   <div class="big-flag">🇳🇿
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/NZ.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/NZ.jpg" data-alt-src="images/flags/NZ.jpeg" alt="NZ flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/NZ.jpg</span></div><img src="images/flags/NZ.jpg" alt="NZ flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/NZ-outline.png</span></div><img src="images/flags/NZ-outline.png" alt="NZ flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/NZ.jpg" data-alt-src="images/flags/NZ.jpeg" alt="NZ flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/NZ-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/NZ-outline.png" alt="NZoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -256,7 +271,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🏯</div>
   <div class="big-flag">🇨🇳
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/CN.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/CN.jpg" data-alt-src="images/flags/CN.jpeg" alt="CN flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/CN.jpg</span></div><img src="images/flags/CN.jpg" alt="CN flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/CN-outline.png</span></div><img src="images/flags/CN-outline.png" alt="CN flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/CN.jpg" data-alt-src="images/flags/CN.jpeg" alt="CN flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/CN-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/CN-outline.png" alt="CNoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -287,7 +305,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🏰</div>
   <div class="big-flag">🇦🇹
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/AT.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/AT.jpg" data-alt-src="images/flags/AT.jpeg" alt="AT flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/AT.jpg</span></div><img src="images/flags/AT.jpg" alt="AT flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/AT-outline.png</span></div><img src="images/flags/AT-outline.png" alt="AT flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/AT.jpg" data-alt-src="images/flags/AT.jpeg" alt="AT flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/AT-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/AT-outline.png" alt="AToutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -318,7 +339,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">⛪</div>
   <div class="big-flag">🇦🇹
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/AT.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/AT.jpg" data-alt-src="images/flags/AT.jpeg" alt="AT flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/AT.jpg</span></div><img src="images/flags/AT.jpg" alt="AT flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/AT-outline.png</span></div><img src="images/flags/AT-outline.png" alt="AT flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/AT.jpg" data-alt-src="images/flags/AT.jpeg" alt="AT flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/AT-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/AT-outline.png" alt="AToutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -349,7 +373,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🌉</div>
   <div class="big-flag">🇨🇿
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/CZ.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/CZ.jpg" data-alt-src="images/flags/CZ.jpeg" alt="CZ flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/CZ.jpg</span></div><img src="images/flags/CZ.jpg" alt="CZ flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/CZ-outline.png</span></div><img src="images/flags/CZ-outline.png" alt="CZ flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/CZ.jpg" data-alt-src="images/flags/CZ.jpeg" alt="CZ flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/CZ-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/CZ-outline.png" alt="CZoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -380,7 +407,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🏰</div>
   <div class="big-flag">🇨🇿
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/CZ.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/CZ.jpg" data-alt-src="images/flags/CZ.jpeg" alt="CZ flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/CZ.jpg</span></div><img src="images/flags/CZ.jpg" alt="CZ flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/CZ-outline.png</span></div><img src="images/flags/CZ-outline.png" alt="CZ flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/CZ.jpg" data-alt-src="images/flags/CZ.jpeg" alt="CZ flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/CZ-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/CZ-outline.png" alt="CZoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -411,7 +441,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🍰</div>
   <div class="big-flag">🇦🇹
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/AT.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/AT.jpg" data-alt-src="images/flags/AT.jpeg" alt="AT flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/AT.jpg</span></div><img src="images/flags/AT.jpg" alt="AT flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/AT-outline.png</span></div><img src="images/flags/AT-outline.png" alt="AT flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/AT.jpg" data-alt-src="images/flags/AT.jpeg" alt="AT flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/AT-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/AT-outline.png" alt="AToutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -442,7 +475,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🛁</div>
   <div class="big-flag">🇭🇺
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/HU.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/HU.jpg" data-alt-src="images/flags/HU.jpeg" alt="HU flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/HU.jpg</span></div><img src="images/flags/HU.jpg" alt="HU flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/HU-outline.png</span></div><img src="images/flags/HU-outline.png" alt="HU flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/HU.jpg" data-alt-src="images/flags/HU.jpeg" alt="HU flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/HU-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/HU-outline.png" alt="HUoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -473,7 +509,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">⛪</div>
   <div class="big-flag">🇸🇮
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/SI.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/SI.jpg" data-alt-src="images/flags/SI.jpeg" alt="SI flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/SI.jpg</span></div><img src="images/flags/SI.jpg" alt="SI flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/SI-outline.png</span></div><img src="images/flags/SI-outline.png" alt="SI flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/SI.jpg" data-alt-src="images/flags/SI.jpeg" alt="SI flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/SI-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/SI-outline.png" alt="SIoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -504,7 +543,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🚤</div>
   <div class="big-flag">🇮🇹
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/IT.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/IT.jpg" data-alt-src="images/flags/IT.jpeg" alt="IT flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/IT.jpg</span></div><img src="images/flags/IT.jpg" alt="IT flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/IT-outline.png</span></div><img src="images/flags/IT-outline.png" alt="IT flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/IT.jpg" data-alt-src="images/flags/IT.jpeg" alt="IT flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/IT-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/IT-outline.png" alt="IToutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -535,7 +577,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🌅</div>
   <div class="big-flag">🇮🇹
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/IT.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/IT.jpg" data-alt-src="images/flags/IT.jpeg" alt="IT flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/IT.jpg</span></div><img src="images/flags/IT.jpg" alt="IT flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/IT-outline.png</span></div><img src="images/flags/IT-outline.png" alt="IT flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/IT.jpg" data-alt-src="images/flags/IT.jpeg" alt="IT flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/IT-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/IT-outline.png" alt="IToutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -566,7 +611,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🗼</div>
   <div class="big-flag">🇮🇹
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/IT.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/IT.jpg" data-alt-src="images/flags/IT.jpeg" alt="IT flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/IT.jpg</span></div><img src="images/flags/IT.jpg" alt="IT flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/IT-outline.png</span></div><img src="images/flags/IT-outline.png" alt="IT flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/IT.jpg" data-alt-src="images/flags/IT.jpeg" alt="IT flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/IT-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/IT-outline.png" alt="IToutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -597,7 +645,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🌋</div>
   <div class="big-flag">🇮🇹
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/IT.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/IT.jpg" data-alt-src="images/flags/IT.jpeg" alt="IT flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/IT.jpg</span></div><img src="images/flags/IT.jpg" alt="IT flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/IT-outline.png</span></div><img src="images/flags/IT-outline.png" alt="IT flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/IT.jpg" data-alt-src="images/flags/IT.jpeg" alt="IT flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/IT-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/IT-outline.png" alt="IToutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -628,7 +679,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">⛪</div>
   <div class="big-flag">🇻🇦
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/VA.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/VA.jpg" data-alt-src="images/flags/VA.jpeg" alt="VA flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/VA.jpg</span></div><img src="images/flags/VA.jpg" alt="VA flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/VA-outline.png</span></div><img src="images/flags/VA-outline.png" alt="VA flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/VA.jpg" data-alt-src="images/flags/VA.jpeg" alt="VA flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/VA-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/VA-outline.png" alt="VAoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -659,7 +713,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🏛</div>
   <div class="big-flag">🇮🇹
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/IT.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/IT.jpg" data-alt-src="images/flags/IT.jpeg" alt="IT flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/IT.jpg</span></div><img src="images/flags/IT.jpg" alt="IT flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/IT-outline.png</span></div><img src="images/flags/IT-outline.png" alt="IT flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/IT.jpg" data-alt-src="images/flags/IT.jpeg" alt="IT flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/IT-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/IT-outline.png" alt="IToutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -690,7 +747,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🏔</div>
   <div class="big-flag">🇨🇭
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/CH.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/CH.jpg" data-alt-src="images/flags/CH.jpeg" alt="CH flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/CH.jpg</span></div><img src="images/flags/CH.jpg" alt="CH flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/CH-outline.png</span></div><img src="images/flags/CH-outline.png" alt="CH flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/CH.jpg" data-alt-src="images/flags/CH.jpeg" alt="CH flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/CH-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/CH-outline.png" alt="CHoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -721,7 +781,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">⛰</div>
   <div class="big-flag">🇨🇭
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/CH.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/CH.jpg" data-alt-src="images/flags/CH.jpeg" alt="CH flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/CH.jpg</span></div><img src="images/flags/CH.jpg" alt="CH flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/CH-outline.png</span></div><img src="images/flags/CH-outline.png" alt="CH flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/CH.jpg" data-alt-src="images/flags/CH.jpeg" alt="CH flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/CH-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/CH-outline.png" alt="CHoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -752,7 +815,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">⛲</div>
   <div class="big-flag">🇨🇭
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/CH.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/CH.jpg" data-alt-src="images/flags/CH.jpeg" alt="CH flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/CH.jpg</span></div><img src="images/flags/CH.jpg" alt="CH flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/CH-outline.png</span></div><img src="images/flags/CH-outline.png" alt="CH flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/CH.jpg" data-alt-src="images/flags/CH.jpeg" alt="CH flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/CH-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/CH-outline.png" alt="CHoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -783,7 +849,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🐻</div>
   <div class="big-flag">🇩🇪
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/DE.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/DE.jpg" data-alt-src="images/flags/DE.jpeg" alt="DE flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/DE.jpg</span></div><img src="images/flags/DE.jpg" alt="DE flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/DE-outline.png</span></div><img src="images/flags/DE-outline.png" alt="DE flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/DE.jpg" data-alt-src="images/flags/DE.jpeg" alt="DE flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/DE-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/DE-outline.png" alt="DEoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -814,7 +883,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🕯</div>
   <div class="big-flag">🇫🇷
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/FR.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/FR.jpg" data-alt-src="images/flags/FR.jpeg" alt="FR flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/FR.jpg</span></div><img src="images/flags/FR.jpg" alt="FR flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/FR-outline.png</span></div><img src="images/flags/FR-outline.png" alt="FR flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/FR.jpg" data-alt-src="images/flags/FR.jpeg" alt="FR flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/FR-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/FR-outline.png" alt="FRoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -845,7 +917,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🚄</div>
   <div class="big-flag">🇫🇷
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/FR.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/FR.jpg" data-alt-src="images/flags/FR.jpeg" alt="FR flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/FR.jpg</span></div><img src="images/flags/FR.jpg" alt="FR flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/FR-outline.png</span></div><img src="images/flags/FR-outline.png" alt="FR flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/FR.jpg" data-alt-src="images/flags/FR.jpeg" alt="FR flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/FR-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/FR-outline.png" alt="FRoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -876,7 +951,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🗼</div>
   <div class="big-flag">🇫🇷
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/FR.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/FR.jpg" data-alt-src="images/flags/FR.jpeg" alt="FR flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/FR.jpg</span></div><img src="images/flags/FR.jpg" alt="FR flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/FR-outline.png</span></div><img src="images/flags/FR-outline.png" alt="FR flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/FR.jpg" data-alt-src="images/flags/FR.jpeg" alt="FR flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/FR-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/FR-outline.png" alt="FRoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -907,7 +985,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🎨</div>
   <div class="big-flag">🇫🇷
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/FR.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/FR.jpg" data-alt-src="images/flags/FR.jpeg" alt="FR flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/FR.jpg</span></div><img src="images/flags/FR.jpg" alt="FR flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/FR-outline.png</span></div><img src="images/flags/FR-outline.png" alt="FR flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/FR.jpg" data-alt-src="images/flags/FR.jpeg" alt="FR flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/FR-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/FR-outline.png" alt="FRoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -938,7 +1019,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🚲</div>
   <div class="big-flag">🇳🇱
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/NL.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/NL.jpg" data-alt-src="images/flags/NL.jpeg" alt="NL flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/NL.jpg</span></div><img src="images/flags/NL.jpg" alt="NL flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/NL-outline.png</span></div><img src="images/flags/NL-outline.png" alt="NL flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/NL.jpg" data-alt-src="images/flags/NL.jpeg" alt="NL flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/NL-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/NL-outline.png" alt="NLoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -969,7 +1053,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🎢</div>
   <div class="big-flag">🇩🇰
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/DK.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/DK.jpg" data-alt-src="images/flags/DK.jpeg" alt="DK flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/DK.jpg</span></div><img src="images/flags/DK.jpg" alt="DK flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/DK-outline.png</span></div><img src="images/flags/DK-outline.png" alt="DK flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/DK.jpg" data-alt-src="images/flags/DK.jpeg" alt="DK flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/DK-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/DK-outline.png" alt="DKoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -1000,7 +1087,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🌉</div>
   <div class="big-flag">🇸🇪
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/SE.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/SE.jpg" data-alt-src="images/flags/SE.jpeg" alt="SE flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/SE.jpg</span></div><img src="images/flags/SE.jpg" alt="SE flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/SE-outline.png</span></div><img src="images/flags/SE-outline.png" alt="SE flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/SE.jpg" data-alt-src="images/flags/SE.jpeg" alt="SE flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/SE-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/SE-outline.png" alt="SEoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -1031,7 +1121,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🎢</div>
   <div class="big-flag">🇸🇪
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/SE.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/SE.jpg" data-alt-src="images/flags/SE.jpeg" alt="SE flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/SE.jpg</span></div><img src="images/flags/SE.jpg" alt="SE flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/SE-outline.png</span></div><img src="images/flags/SE-outline.png" alt="SE flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/SE.jpg" data-alt-src="images/flags/SE.jpeg" alt="SE flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/SE-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/SE-outline.png" alt="SEoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -1062,7 +1155,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🌇</div>
   <div class="big-flag">🇩🇪
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/DE.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/DE.jpg" data-alt-src="images/flags/DE.jpeg" alt="DE flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/DE.jpg</span></div><img src="images/flags/DE.jpg" alt="DE flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/DE-outline.png</span></div><img src="images/flags/DE-outline.png" alt="DE flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/DE.jpg" data-alt-src="images/flags/DE.jpeg" alt="DE flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/DE-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/DE-outline.png" alt="DEoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -1119,7 +1215,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🏯</div>
   <div class="big-flag">🇨🇳
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/CN.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/CN.jpg" data-alt-src="images/flags/CN.jpeg" alt="CN flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/CN.jpg</span></div><img src="images/flags/CN.jpg" alt="CN flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/CN-outline.png</span></div><img src="images/flags/CN-outline.png" alt="CN flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/CN.jpg" data-alt-src="images/flags/CN.jpeg" alt="CN flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/CN-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/CN-outline.png" alt="CNoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
@@ -1150,7 +1249,10 @@ body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
   <div class="big-icon">🏠</div>
   <div class="big-flag">🇳🇿
   <div class="fi-row">
-    <div class="fi-box"><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/NZ.jpg</span></div><div class="fi-label">🌏 Real flag</div><img src="images/flags/NZ.jpg" data-alt-src="images/flags/NZ.jpeg" alt="NZ flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
+    <div class="fi-box"><div class="fi-label">🌏 Real flag</div><div class="fi-ph" style="background:repeating-linear-gradient(45deg,#e8dcc0 0 6px,#ddd1b3 6px 12px);"><span>📷</span><span class="fi-path">images/flags/NZ.jpg</span></div><img src="images/flags/NZ.jpg" alt="NZ flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+    <div class="fi-box fi-outline"><div class="fi-label">✏️ Colour me!</div><div class="fi-ph" style="background:white;border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/NZ-outline.png</span></div><img src="images/flags/NZ-outline.png" alt="NZ flag" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none';" onerror="this.style.display='none';"></div>
+  </div>
+</div><div class="fi-label">🌏 Real flag</div><img src="images/flags/NZ.jpg" data-alt-src="images/flags/NZ.jpeg" alt="NZ flag" onload="this.previousElementSibling.style.display='none'" onerror="if(this.dataset.altSrc){this.src=this.dataset.altSrc;this.dataset.altSrc="";}else{this.style.display="none";}"></div>
     <div class="fi-box fi-outline"><div class="fi-ph" style="background:white; border:1.5px dashed #bbb;"><span>✏️</span><span class="fi-path">images/flags/NZ-outline.png</span></div><div class="fi-label">✏️ Colour me!</div><img src="images/flags/NZ-outline.png" alt="NZoutline flag" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display="none";"></div>
   </div>
 </div>
