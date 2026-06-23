@@ -334,20 +334,20 @@ const REMINDERS = [
   {
     id: 'louvre-paris',
     icon: '🎨',
-    title: 'Book Louvre tickets — Paris (Fri 31 Jul · 09:00 slot)',
-    deadline: '2026-07-01T08:00:00+12:00',
-    deadlineLabel: 'Tue 1 Jul 2026 (30-day release)',
-    detail: '2 adults €22 + 3 free kid tickets (under 18). BOOK 09:00 SLOT for empty galleries · Mona Lisa with no crowd. Free child tickets still need to be booked.',
+    title: 'Book Louvre tickets — Paris (Thu 30 Jul · afternoon slot)',
+    deadline: '2026-06-30T08:00:00+12:00',
+    deadlineLabel: 'Tue 30 Jun 2026 (30-day release)',
+    detail: 'Day 22 afternoon · 2 adults €22 + 3 free kid tickets (under 18). After Versailles/morning Eiffel stops · pyramid courtyard + interior optional. Free child tickets still need to be booked.',
     actionLabel: 'Open louvre.fr',
     actionUrl: 'https://www.louvre.fr/en/visit/hours-admission/buy-a-ticket'
   },
   {
     id: 'sainte-chapelle',
     icon: '⛪',
-    title: 'Book Sainte-Chapelle tickets — Paris (Fri 31 Jul · 14:00)',
-    deadline: '2026-07-05T08:00:00+12:00',
-    deadlineLabel: 'By Sat 5 Jul 2026',
-    detail: '€13 adult · kids 0-17 FREE but ticket required. Stunning Gothic stained-glass · 2.5h slot · book direct',
+    title: 'Book Sainte-Chapelle tickets — Paris (Thu 30 Jul · 11:00)',
+    deadline: '2026-07-04T08:00:00+12:00',
+    deadlineLabel: 'By Sat 4 Jul 2026',
+    detail: 'Day 22 morning stop · €13 adult · kids 0-17 FREE but ticket required. Stunning Gothic stained-glass · 30 min slot · book direct',
     actionLabel: 'Open sainte-chapelle.fr',
     actionUrl: 'https://www.sainte-chapelle.fr/en/'
   },
@@ -364,12 +364,13 @@ const REMINDERS = [
   {
     id: 'eiffel-release',
     icon: '🗼',
-    title: 'Eiffel Tower 2nd floor — release moment',
+    title: '✅ Eiffel Tower — BOOKED · Wed 29 Jul 22:30 · 5 tickets',
     deadline: '2026-05-30T19:00:00+12:00',
-    deadlineLabel: 'Sat 30 May 2026 · 19:00 NZST',
-    detail: 'Tickets release at 09:00 Paris for Thu 30 Jul evening · 60-day rule · set phone alarm',
-    actionLabel: 'Open toureiffel.paris',
-    actionUrl: 'https://www.toureiffel.paris/'
+    deadlineLabel: 'BOOKED · Wed 29 Jul 2026 · 22:30 · 2nd floor by lift',
+    detail: '✅ DONE · 5 tickets (2 adults × €23.50 + 3 children 4-11 × €6.00) = €65.00 (NZD $134.76) · 2nd floor by lift · Purchase #262010328650 · QR codes will be scanned at entrance · PDF in Day 21 Drive folder · arrive ~22:00 for 22:00 sparkle show first, then ride up at 22:30',
+    actionLabel: '📎 Open Drive folder',
+    actionUrl: 'https://drive.google.com/drive/u/0/folders/1CuB4i6hZnuqjQUtDhz3dwmXm0OmPSS3g',
+    done: true
   },
   {
     id: 'email-enterprise-munich',
@@ -384,10 +385,10 @@ const REMINDERS = [
   {
     id: 'anne-frank',
     icon: '📔',
-    title: 'Book Anne Frank House — Amsterdam',
+    title: 'Book Anne Frank House — Amsterdam (Sat 1 Aug)',
     deadline: '2026-06-01T08:00:00+12:00',
     deadlineLabel: 'NOW · sells out 6+ wks ahead',
-    detail: 'Optional Sat 1 Aug morning · €16/€8/free · timed entry · annefrank.org · CRITICAL: sells out fast in summer',
+    detail: 'Day 24 (AMS rest day) Sat 1 Aug morning · €16/€8/free · timed entry · annefrank.org · CRITICAL: sells out fast in summer · release exactly 6 wks before',
     actionLabel: 'Open annefrank.org',
     actionUrl: 'https://www.annefrank.org/en/museum/tickets/'
   },
@@ -434,12 +435,24 @@ const REMINDERS = [
   {
     id: 'vatican-museums',
     icon: '⛪',
-    title: 'Book Vatican Museums + Sistine Chapel',
+    title: '✅ Vatican Museums — BOOKED · Wed 22 Jul 10:30 · 5 pax',
     deadline: '2026-06-05T20:00:00+12:00',
-    deadlineLabel: 'By Fri 5 Jun 2026 · 20:00 NZ',
-    detail: 'Wed 22 Jul morning slot · sells out 3–4 weeks ahead in July · €25/adult',
-    actionLabel: 'Open museivaticani.va',
-    actionUrl: 'https://www.museivaticani.va/'
+    deadlineLabel: 'BOOKED · Wed 22 Jul 2026 · 10:30 · Open Bus Gardens + self-guided Museums',
+    detail: '✅ DONE · "Open Bus Gardens" package = 45-min open-bus ride through Vatican Gardens (audio incl.) + self-guided Vatican Museums + Sistine Chapel admission (no audio inside — use phone app) · 22 Jul 10:30 slot (08:30–10:00 sold out) · 5 pax (2 full + 3 reduced incl. Avin — bus needs a seat per head so no free under-7) · €170.00 VISA · NON-REFUNDABLE · Order No 2L2NF52D19XTF1U5O1 · Transaction Ref SIV001-20260623-101417-40378620 · paid 23 Jun 2026 10:14 via official Vatican EPay (net.va) · 🎫 e-ticket PDF (QR) saved — show QR at entrance, print a paper backup · 📎 Day 14 Drive folder: https://drive.google.com/drive/folders/1UiwiSjQeex6IdXb6UERv1lD-5JXwpnDt?usp=drive_link',
+    actionLabel: '🎫 Open Vatican e-ticket (QR)',
+    actionUrl: 'https://drive.google.com/file/d/1PlQiNvoS9KrABbk_5l69HXbY7g7gtIvn/view?usp=drive_link',
+    done: true
+  },
+  {
+    id: 'st-peters-basilica',
+    icon: '⛪',
+    title: "✅ St Peter's Basilica — BOOKED · Wed 22 Jul 08:00 · 5 pax",
+    deadline: '2026-06-05T20:00:00+12:00',
+    deadlineLabel: "BOOKED · Wed 22 Jul 2026 · 08:00 · reserved entry + audioguide",
+    detail: "✅ DONE · St Peter's Basilica reserved entry (do FIRST, before the 10:30 museum slot) · 08:00 · includes personalized time + self-guided route + digital audioguide · 5 pax (2 Intero adults + 2 Ridotto Aviann/Avisha + Avin free Gratuito 0–6) · NON-REFUNDABLE · Voucher 681056 · paid via Stripe (ref pi_3TlRDeB18mH0F3Ta0vfAU9iB) · ⚠ DOME CLIMB NOT included — separate ~€10 ticket if wanted · St Peter's Square, Vatican City · 🎫 voucher PDF saved — show at entrance, print a paper backup · 📎 Day 14 Drive folder: https://drive.google.com/drive/folders/1UiwiSjQeex6IdXb6UERv1lD-5JXwpnDt?usp=drive_link",
+    actionLabel: "🎫 Open St Peter's voucher (681056)",
+    actionUrl: 'https://drive.google.com/file/d/16AykmMajC_Q0QHy1NXu1KwYEEh0-N8rQ/view?usp=drive_link',
+    done: true
   },
   {
     id: 'crit-air',
@@ -480,6 +493,166 @@ const REMINDERS = [
     detail: 'Mon 3 Aug 13:00 CPH Central → 16:40 Gothenburg via Øresund Bridge · 3h 40m',
     actionLabel: 'Open sj.se',
     actionUrl: 'https://www.sj.se/en/home.html'
+  },
+  {
+    id: 'versailles',
+    icon: '👑',
+    title: 'Book Versailles Palace ticket — (Thu 30 Jul · 09:30 slot)',
+    deadline: '2026-07-05T08:00:00+12:00',
+    deadlineLabel: 'By Sat 5 Jul · timed slots sell out 3-4 wks ahead in summer',
+    detail: 'CONFIRMED Day 22 morning · Palace-only ticket €21 (State Apartments + Hall of Mirrors) · kids 0-17 FREE but ticket required · pick the 09:30 timed slot · RER C "Versailles Château Rive Gauche" (~55 min from central Paris) OR Transilien N to Versailles-Chantiers · NOTE: books months ahead, NOT a 60-day release · skipping gardens/Trianon to keep it ~2h before the Paris afternoon + Eurostar',
+    actionLabel: 'Open chateauversailles.fr',
+    actionUrl: 'https://en.chateauversailles.fr/plan-your-visit/admissions-and-prices'
+  },
+  {
+    id: 'atomium-brussels',
+    icon: '⚛️',
+    title: 'Book Atomium + Mini-Europe — Brussels (Fri 31 Jul)',
+    deadline: '2026-07-15T08:00:00+12:00',
+    deadlineLabel: 'By Wed 15 Jul · skip-queue saves 1hr',
+    detail: 'Day 23 Brussels day-trip from Amsterdam · €27.50 adult / €15.50 child combo · pre-book online for skip-queue · kids LOVE Mini-Europe',
+    actionLabel: 'Open atomium.be',
+    actionUrl: 'https://atomium.be/en'
+  },
+  {
+    id: 'schonbrunn-vienna',
+    icon: '👑',
+    title: 'Book Schönbrunn Palace — Vienna (Wed 15 Jul)',
+    deadline: '2026-07-08T08:00:00+12:00',
+    deadlineLabel: 'By Wed 8 Jul · timed slots sell out in summer',
+    detail: 'Day 07 · Grand Tour with audioguide €27/adult · kids under 19 cheaper · choose a timed entry slot · the Habsburg summer palace · 1,441 rooms · gardens free',
+    actionLabel: 'Open schoenbrunn.at',
+    actionUrl: 'https://www.schoenbrunn.at/en/'
+  },
+  {
+    id: 'prague-castle',
+    icon: '🏰',
+    title: 'Book Prague Castle circuit — Prague (Tue 14 Jul)',
+    deadline: '2026-07-07T08:00:00+12:00',
+    deadlineLabel: 'By Tue 7 Jul · or buy at gate (queues)',
+    detail: 'Day 06 · Circuit B €15/adult · includes St Vitus Cathedral, Old Royal Palace, Golden Lane · world\\'s largest castle complex · pre-book to skip the security queue',
+    actionLabel: 'Open hrad.cz',
+    actionUrl: 'https://www.hrad.cz/en'
+  },
+  {
+    id: 'doges-palace-venice',
+    icon: '🦁',
+    title: 'Book Doge\\'s Palace — Venice (Sat 18 Jul)',
+    deadline: '2026-07-04T08:00:00+12:00',
+    deadlineLabel: 'By Sat 4 Jul · sells out 2 wks ahead in July',
+    detail: 'Day 10 · €30/adult · includes the Bridge of Sighs + the prisons · pre-book a timed entry · the seat of the Venetian Republic · combine with St Mark\\'s Square',
+    actionLabel: 'Open palazzoducale.visitmuve.it',
+    actionUrl: 'https://palazzoducale.visitmuve.it/en/home/'
+  },
+  {
+    id: 'duomo-florence',
+    icon: '⛪',
+    title: 'Book Brunelleschi Pass (Duomo dome) — Florence (Sun 19 Jul)',
+    deadline: '2026-06-20T08:00:00+12:00',
+    deadlineLabel: 'NOW · dome climb sells out 3-4 WEEKS ahead',
+    detail: 'Day 11 · Brunelleschi Pass €30 · the ONLY ticket with the dome climb (463 steps, timed slot) · also covers Baptistery, Campanile, Crypt, Museum · CRITICAL: the dome climb is the first thing to sell out in Florence',
+    actionLabel: 'Open duomo.firenze.it',
+    actionUrl: 'https://duomo.firenze.it/en/home'
+  },
+  {
+    id: 'pisa-tower',
+    icon: '🗼',
+    title: 'Book Leaning Tower climb — Pisa (Mon 20 Jul)',
+    deadline: '2026-07-06T08:00:00+12:00',
+    deadlineLabel: 'By Mon 6 Jul · timed slots, kids under 8 NOT allowed up',
+    detail: 'Day 12 · €20/adult to climb the tower (251 steps, timed slot, 8yo+ only) · Avin (4) cannot climb · Cathedral entry is free with timed ticket · book the climb slot online',
+    actionLabel: 'Open opapisa.it',
+    actionUrl: 'https://www.opapisa.it/en/'
+  },
+  {
+    id: 'rijksmuseum',
+    icon: '🖼️',
+    title: 'Book Rijksmuseum — Amsterdam (Sat 1 Aug)',
+    deadline: '2026-07-15T08:00:00+12:00',
+    deadlineLabel: 'By Wed 15 Jul · timed entry recommended',
+    detail: 'Day 24 (optional) · €22.50/adult · kids under 18 FREE but need ticket · Rembrandt\\'s Night Watch + Vermeer · pre-book a timed slot to skip the queue',
+    actionLabel: 'Open rijksmuseum.nl',
+    actionUrl: 'https://www.rijksmuseum.nl/en'
+  },
+  {
+    id: 'bled-pletna',
+    icon: '🛶',
+    title: 'Lake Bled pletna boat — Slovenia (Fri 17 Jul)',
+    deadline: '2026-07-16T20:00:00+12:00',
+    deadlineLabel: 'Buy on the day · no pre-booking needed',
+    detail: 'Day 09 · €18/adult round trip to Bled Island by traditional pletna boat · buy at the lakeside dock · ring the wish-bell at the church (99 steps up) · just turn up',
+    actionLabel: 'Info bled.si',
+    actionUrl: 'https://www.bled.si/en/'
+  },
+  {
+    id: 'st-stephens-budapest',
+    icon: '⛪',
+    title: 'St Stephen\\'s Basilica dome — Budapest (Thu 16 Jul)',
+    deadline: '2026-07-15T20:00:00+12:00',
+    deadlineLabel: 'Buy on the day · no pre-booking',
+    detail: 'Day 08 · €8/adult for the dome panorama lift + stairs · best rooftop view of Pest · the Holy Right Hand relic inside · just buy at the entrance',
+    actionLabel: 'Open bazilika.biz',
+    actionUrl: 'https://www.bazilika.biz/en/'
+  },
+  {
+    id: 'eklo-luggage-check',
+    icon: '🧳',
+    title: 'CONFIRM luggage storage — Eklo Paris + Gare du Nord (Day 22)',
+    deadline: '2026-07-20T08:00:00+12:00',
+    deadlineLabel: 'By Mon 20 Jul · message the hotel',
+    detail: 'Day 22 plan needs somewhere to leave bags after 11:00 checkout while we do Versailles + Paris. PRIMARY: Gare du Nord left-luggage lockers (consigne, ~€7.50/bag, reliable, open 06:15-23:15). BACKUP: ask Eklo if they have a luggage room after checkout — message host +33 1 84 19 00 00 / via Booking.com. Confirm at least one works before the trip.',
+    actionLabel: 'Message Eklo (Booking.com)',
+    actionUrl: 'https://www.booking.com/hotel/fr/eklo-paris-porte-de-versailles.en-gb.html'
+  },
+  {
+    id: 'vignette-czech',
+    icon: '🛣',
+    title: 'Buy Czech e-vignette — BEFORE Day 5 (Burg → Prague)',
+    deadline: '2026-07-12T20:00:00+12:00',
+    deadlineLabel: 'By Sun 12 Jul · register online before crossing',
+    detail: '🇨🇿 €13 / 10-day e-vignette · register your plate online at edalnice.cz (or app) — Czech is fully electronic, no physical sticker · needed the moment you cross AT→CZ on the Burg Altpernstein → Prague drive.',
+    actionLabel: 'Open edalnice.cz',
+    actionUrl: 'https://edalnice.cz/en/'
+  },
+  {
+    id: 'vignette-hungary',
+    icon: '🛣',
+    title: 'Buy Hungary e-matrica — BEFORE Day 8 (Vienna → Budapest)',
+    deadline: '2026-07-15T20:00:00+12:00',
+    deadlineLabel: 'By Wed 15 Jul · buy online or at the border',
+    detail: '🇭🇺 ~€13 / 10-day e-matrica (electronic) · buy online at ematrica.nemzetiutdij.hu, app, or any petrol station near the AT→HU border · register your plate · needed on the Vienna → Budapest motorway.',
+    actionLabel: 'Open nemzetiutdij.hu',
+    actionUrl: 'https://ematrica.nemzetiutdij.hu/'
+  },
+  {
+    id: 'vignette-slovenia',
+    icon: '🛣',
+    title: 'Buy Slovenia e-vignette — BEFORE Day 9 (Bled stop)',
+    deadline: '2026-07-16T20:00:00+12:00',
+    deadlineLabel: 'By Thu 16 Jul · buy online before the border',
+    detail: '🇸🇮 €16 / 7-day e-vignette (electronic since 2021) · buy at evinjeta.dars.si or app · needed even for the short Budapest → Bled → Italy crossing (Slovenia tolls all motorways).',
+    actionLabel: 'Open evinjeta.dars.si',
+    actionUrl: 'https://evinjeta.dars.si/'
+  },
+  {
+    id: 'vignette-switzerland',
+    icon: '🛣',
+    title: 'Buy Switzerland Vignette — BEFORE Day 16 (Milan → Stalden)',
+    deadline: '2026-07-22T20:00:00+12:00',
+    deadlineLabel: 'By Wed 22 Jul · ONLY annual option exists',
+    detail: '🇨🇭 CHF 40 — the ONLY option (no short-term Swiss vignette exists) · valid all of 2026 · buy the e-vignette at via.admin.ch OR a physical sticker at the border/petrol station · covers Day 16 Milan→Stalden (Simplon Pass) + Day 19 Moléson→Bern→Ottobeuren.',
+    actionLabel: 'Open via.admin.ch',
+    actionUrl: 'https://via.admin.ch/'
+  },
+  {
+    id: 'vignette-austria',
+    icon: '🛣',
+    title: 'Buy Austria Pickerl — at first AT service station (Day 3)',
+    deadline: '2026-07-11T12:00:00+12:00',
+    deadlineLabel: 'Sat 11 Jul · buy on arrival, no advance needed',
+    detail: '🇦🇹 €11.50 / 10-day "Pickerl" · buy the digital vignette at asfinag.at/app OR a physical sticker at the first Austrian petrol station / border shop as you enter AT (Salzburg arrival, Day 3). Stick it on the windscreen before joining the motorway.',
+    actionLabel: 'Open asfinag.at',
+    actionUrl: 'https://www.asfinag.at/en/toll/vignette/'
   }
 ];
 
@@ -690,7 +863,7 @@ const stops = [
   { day: 'Day 12', date: 'Wed 22 Jul', name: 'Rome (Vatican Day)', country: '🇮🇹 Italy · Vatican walking day', lat: 41.9065, lon: 12.4536, type: 'confirmed',
     hotel: 'Auri apartment',
     hotelUrl: 'https://www.booking.com/hotel/it/auri-apartment.en-gb.html',
-    desc: 'Vatican Museums + Sistine Chapel + St. Peter\'s Basilica · Castel Sant\'Angelo · Piazza Navona · ~10 km walking · pre-book at museivaticani.va.' },
+    desc: '✅ BOOKED: 08:00 St. Peter\'s Basilica (Voucher 681056) → 10:30 Open Bus Gardens + Vatican Museums + Sistine Chapel (Order 2L2NF52D19XTF1U5O1) · then Castel Sant\'Angelo · Piazza Navona · ~10 km walking · both tickets NON-REFUNDABLE · dome climb optional (separate ~€10).' },
   { day: 'Day 13', date: '23–24 Jul', name: 'Milan', country: '🇮🇹 Italy · with Rasika Ayya', lat: 45.4642, lon: 9.1900, dep: 1784784600, type: 'confirmed',
     hotel: "Rasika Ayya's home (friend) · 💚 no booking needed",
     desc: 'Staying with friend Rasika Ayya. Address TBC. Stop at Cinque Terre (Vernazza) en route from Rome.' },
@@ -712,30 +885,28 @@ const stops = [
     hotel: 'Hôtel Atrium Mondial',
     hotelUrl: 'https://www.booking.com/hotel/fr/atrium-mondial.en-gb.html',
     desc: 'Drop MUC car · fly MUC → Toulouse · pick up TLS rental · drive 2 hrs to Lourdes. 21:00 🕯️ Torch Procession at the Sanctuary. Sleep Hôtel Atrium Mondial (19 Av. du Paradis · ~10 min walk to Sanctuary, uphill back).' },
-  { day: 'Day 19', date: 'Wed 29 Jul', name: 'Amsterdam (arrive)', country: '🇳🇱 Netherlands · with cousin 💚', lat: 52.3676, lon: 4.9041, type: 'confirmed', file: 'day_20.html',
-    hotel: "Cousin's home · 💚 no booking needed",
-    desc: '🚆 BIG TRAIN DAY · 05:00 wake-up · drive Lourdes → TLS airport (drop rental ~08:00) · tram to Toulouse Matabiau · 10:20 TGV Toulouse → Paris Montparnasse (~4h 15m) · cross Paris to Gare du Nord · Eurostar Paris → Amsterdam (~3h 20m) · arrive AMS ~19:00–20:00 · cousin pickup. Total ~14h door-to-door but cheaper + kids stretch out.' },
-  { day: 'Day 20 stop', date: 'Thu 30 Jul', name: 'Brussels (Belgium stop)', country: '🇧🇪 Belgium · 2hr stop · Grand Place, waffles, Manneken Pis', lat: 50.8466, lon: 4.3528, dep: 1785391200, type: 'day',
-    desc: '🇧🇪 Brief stop en route AMS → Paris · 10:15–12:30 (~2 hrs) · Grand Place · Manneken Pis · Belgian waffle / fries break · ~210 km from AMS / 2h 15m drive · then continue 310 km / 3h 10m to Le Kremlin-Bicêtre.' },
-  { day: 'Day 20', date: 'Thu 30 Jul', name: 'Paris (LK-B) via Brussels', country: '🇳🇱 → 🇧🇪 → 🇫🇷', lat: 48.8169, lon: 2.3597, dep: 1785407400, type: 'confirmed', file: 'day_21.html',
-    hotel: 'ibis budget Paris Porte d\'Italie Ouest · 2 rooms · FREE parking',
-    hotelUrl: 'https://www.booking.com/hotel/fr/ibis-budget-porte-d-italie-ouest.en-gb.html',
-    desc: 'AMS 08:00 → Brussels 2hr stop → Paris suburb Le Kremlin-Bicêtre (just outside périphérique) ~15:30 arrive. Free private parking · 5 min walk to Métro Line 7 (25 min to Louvre). Afternoon Métro to Eiffel + Seine cruise + Latin Quarter dinner. Sleep ibis budget LK-B · 2 rooms booked.' },
-  { day: 'Day 21', date: 'Fri 31 Jul', name: 'Paris day → AMS', country: '🇫🇷 → 🇳🇱', lat: 52.3676, lon: 4.9041, dep: 1785499200, type: 'confirmed', file: 'day_22.html',
-    hotel: "Cousin's home · 💚",
-    desc: 'Sleep-in at Hôtel Home Latin · 10:00 Louvre (pre-book) · Tuileries lunch · Sainte-Chapelle · Île de la Cité walk · Berthillon ice cream · 16:00 leave Paris · drive Paris → AMS (5h via E19) · arrive cousin\'s 21:00.' },
-  { day: 'Day 22', date: 'Sat 1 Aug', name: 'Amsterdam (rest day)', country: '🇳🇱 Netherlands · rest with cousin', lat: 52.3676, lon: 4.9041, type: 'confirmed', file: 'day_23.html',
-    hotel: "Cousin's home · 💚",
-    desc: 'AMS rest day with cousin. Optional sights: canals, Anne Frank House (pre-book), Vondelpark, Jordaan. ⛪ Sat 17:00 Vigil at Sint-Nicolaaskerk Amsterdam (Prins Hendrikkade 73 · opposite Centraal · covers Sun obligation).' },
-  { day: 'Day 23', date: 'Sun 2 Aug', name: 'Amsterdam → Copenhagen', country: '🇳🇱→🇩🇰 · fly evening', lat: 55.6761, lon: 12.5683, type: 'confirmed', file: 'day_24.html',
+  { day: 'Day 21', date: 'Wed 29 Jul', name: 'Paris (arrive)', country: '🇫🇷 France · arrive Paris evening', lat: 48.8198, lon: 2.2968, type: 'confirmed', file: 'day_21.html',
+    hotel: 'Eklo Hotels Paris Porte de Versailles · Family Room (6 pax) Eiffel Tower view',
+    hotelUrl: 'https://www.booking.com/hotel/fr/eklo-paris-porte-de-versailles.en-gb.html',
+    desc: '🚆 TGV DAY · 06:15 wake · drive Lourdes → TLS airport (drop Avis ~08:00) · tram T2 to Gare Matabiau (~09:15) · 10:20 TGV 8508 (Coach 12 · Seats 224-229 · Booking Z272DK) → Paris Montparnasse 14:55 (4h 35m) · Métro 12 to Porte de Versailles → Eklo (top floor confirmed) · evening Eiffel Tower + Champ de Mars + Notre-Dame exterior + Saint-Germain dinner + 22:00 Eiffel sparkle from Trocadéro. NO AMS today — full Paris day tomorrow.' },
+  { day: 'Day 22', date: 'Thu 30 Jul', name: 'Versailles + Paris → AMS (Eurostar evening)', country: '🇫🇷 → 🇳🇱 · Versailles + Eurostar 9387', lat: 48.8049, lon: 2.1204, dep: 1785436920, type: 'confirmed', file: 'day_22.html',
+    hotel: "Cousin's home Amsterdam · 💚 (1st of 3 nights)",
+    desc: '👑 VERSAILLES + PARIS DAY · 07:00 wake · 08:00 checkout · drop bags at Gare du Nord lockers · RER C to Versailles · 10:00 Palace + Hall of Mirrors (palace-only €21, ~2h) · back to Paris · lunch Latin Quarter · Sainte-Chapelle · Luxembourg Gardens (toy boats!) · Sacré-Cœur & Montmartre (last stop, near Gare du Nord) · collect bags · 🚄 Eurostar 9387 · 20:22 → 23:33 AMS · Coach 13 · Seats 72-76 · cousin pickup.' },
+  { day: 'Day 23', date: 'Fri 31 Jul', name: 'Brussels day trip', country: '🇧🇪 Belgium · day trip from AMS', lat: 50.8466, lon: 4.3528, type: 'confirmed', file: 'day_21.html',
+    hotel: "Cousin's home Amsterdam · 💚 (2nd of 3 nights)",
+    desc: '🇧🇪 Brussels day trip · 07:00 depart with cousin (driving) · ~2h via A4/E19 · Grand Place + Manneken Pis + Sablon chocolate + Royal Palace (summer-only) + MIM + Atomium + Mini-Europe + moules-frites lunch · return ~18:00 · back at cousin\'s ~20:00.' },
+  { day: 'Day 24', date: 'Sat 1 Aug', name: 'Amsterdam rest day', country: '🇳🇱 Netherlands · rest with cousin', lat: 52.3676, lon: 4.9041, type: 'confirmed', file: 'day_24.html',
+    hotel: "Cousin's home · 💚 (3rd of 3 nights)",
+    desc: 'Slow morning at cousin\'s · Anne Frank House (PRE-BOOK 6+ wks ahead) · Rijksmuseum + Vondelpark · Albert Cuypmarkt (Stroopwafel!) · 17:00 Sat Vigil at Sint-Nicolaaskerk Amsterdam (Prins Hendrikkade 73 · opposite Centraal).' },
+  { day: 'Day 25', date: 'Sun 2 Aug', name: 'Amsterdam → Copenhagen', country: '🇳🇱→🇩🇰 · fly evening', lat: 55.6761, lon: 12.5683, type: 'confirmed', file: 'day_25.html',
     hotel: 'Danhostel Copenhagen City',
     hotelUrl: 'https://www.booking.com/hotel/dk/danhostel-copenhagen-city.en-gb.html',
     desc: 'Easy Sun morning at cousin\'s — NO Mass (Sat Vigil at Bruges Heilig-Bloed yesterday covered Sun). Brunch · return cousin\'s car · fly AMS → CPH (KLM, ~1h 25min). Sleep Danhostel Copenhagen City (H. C. Andersens Boulevard 50, central · 5 min to Tivoli).' },
-  { day: 'Day 24', date: 'Mon 3 Aug', name: 'Gothenburg (arrive)', country: '🇸🇪 Sweden · sister 💙', lat: 57.7089, lon: 11.9746, type: 'sister', file: 'day_25.html',
+  { day: 'Day 26', date: 'Mon 3 Aug', name: 'Gothenburg (arrive)', country: '🇸🇪 Sweden · sister 💙', lat: 57.7089, lon: 11.9746, type: 'sister', file: 'day_25.html',
     desc: 'CPH morning · Nyhavn + Tivoli + Little Mermaid · X2000 train CPH → Gothenburg via Øresund Bridge (~3h 40min) · arrive afternoon · sister visit!' },
-  { day: 'Day 25', date: 'Tue 4 Aug', name: 'Gothenburg (sister day)', country: '🇸🇪 Sweden · sister 💙', lat: 57.7089, lon: 11.9746, type: 'sister', file: 'day_26.html',
+  { day: 'Day 27', date: 'Tue 4 Aug', name: 'Gothenburg (sister day)', country: '🇸🇪 Sweden · sister 💙', lat: 57.7089, lon: 11.9746, type: 'sister', file: 'day_26.html',
     desc: 'Full day with sister · Liseberg, Haga, Archipelago boat. Family time before flying south.' },
-  { day: 'Day 26', date: 'Wed 5 Aug', name: 'Munich (pre-flight)', country: '🇩🇪 Germany · Hilton MUC Airport (TBD)', lat: 48.3537, lon: 11.7860, type: 'flight', file: 'day_27.html',
+  { day: 'Day 28', date: 'Wed 5 Aug', name: 'Munich (pre-flight)', country: '🇩🇪 Germany · Hilton MUC Airport (TBD)', lat: 48.3537, lon: 11.7860, type: 'flight', file: 'day_27.html',
     desc: 'Fly GOT 06:30 → MUC 08:30. Hilton Munich Airport (in-airport, TBD) or Premier Inn Flughafen Ost. Light Munich day before CA962.' },
   { day: 'Stopover', date: 'Fri 7 Aug', name: 'Beijing', country: '🇨🇳 China · 19hr stopover', lat: 39.9042, lon: 116.4074, type: 'flight', file: 'day_27.html',
     desc: 'CA962 lands 04:45. Great Wall at Mutianyu. Back T3 by 21:00 for CA783.' },
@@ -1117,13 +1288,13 @@ daySelect.addEventListener('change', (e) => {
 (function buildDayCards() {
   const legs = [
     { badge: 'flight', badgeText: '✈ Outbound', title: 'Auckland → Beijing → Munich', range: [0, 2], dates: '9–11 Jul' },
-    { badge: 'road', badgeText: '🚗 Road Trip', title: 'Munich · Burg Altpernstein · Prague · Vienna · Budapest', range: [3, 6], dates: '11–17 Jul' },
-    { badge: 'road', badgeText: '🚗 Road Trip', title: 'Bled · Mestre · Florence · Rome · Pompeii · Vatican · Milan', range: [7, 14], dates: '17–24 Jul' },
-    { badge: 'road', badgeText: '🏔 Swiss Alps + Bavaria', title: 'Stalden · Moléson · Geneva day · Bern stop · Ottobeuren', range: [15, 18], dates: '24–28 Jul' },
-    { badge: 'flight', badgeText: '🇫🇷 Pilgrimage', title: 'Lourdes · Torch Procession', range: [19, 19], dates: '28 Jul' },
-    { badge: 'rail', badgeText: '🇳🇱 AMS Hub', title: 'Amsterdam (cousin) · Belgium day · Caen overnight · Copenhagen', range: [20, 24], dates: '29 Jul – 2 Aug' },
-    { badge: 'rail', badgeText: '💙 Sister', title: 'Gothenburg ×2 · sister visit', range: [25, 26], dates: '3–4 Aug' },
-    { badge: 'flight', badgeText: '✈ Inbound', title: 'Munich pre-flight → Beijing → Auckland (Home)', range: [27, 29], dates: '5–8 Aug' }
+    { badge: 'road', badgeText: '🚗 Road Trip', title: 'Salzburg · Burg Altpernstein · Prague · Vienna · Budapest', range: [3, 7], dates: '11–17 Jul' },
+    { badge: 'road', badgeText: '🚗 Road Trip', title: 'Bled · Venice · Florence · Pisa · Rome · Pompeii · Vatican · Milan', range: [8, 15], dates: '17–24 Jul' },
+    { badge: 'road', badgeText: '🏔 Swiss Alps + Bavaria', title: 'Stalden · Moléson · Geneva · Ottobeuren', range: [16, 19], dates: '24–28 Jul' },
+    { badge: 'flight', badgeText: '🇫🇷 Pilgrimage', title: 'Lourdes · Torch Procession', range: [20, 20], dates: '28 Jul' },
+    { badge: 'rail', badgeText: '🚄 Paris + AMS Hub', title: 'Paris · Eurostar · Brussels day trip · Amsterdam (cousin) · Copenhagen', range: [21, 25], dates: '29 Jul – 2 Aug' },
+    { badge: 'rail', badgeText: '💙 Sister', title: 'Gothenburg ×2 · sister visit', range: [26, 27], dates: '3–4 Aug' },
+    { badge: 'flight', badgeText: '✈ Inbound', title: 'Munich pre-flight → Beijing → Auckland (Home)', range: [28, 30], dates: '5–8 Aug' }
   ];
   const section = document.createElement('section');
   section.className = 'cards-section';
@@ -1188,7 +1359,7 @@ daySelect.addEventListener('change', (e) => {
       // Route action button
       let routeBtn = '';
       if (useRoute) {
-        routeBtn = '<a class="dc-route-btn" href="' + dirsUrl + '" target="_blank" rel="noopener">🚗 Drive ' + (prev.name) + ' → ' + s.name + ' →</a>';
+        routeBtn = '<a class="dc-route-btn" href="' + dirsUrl + '" target="_blank" rel="noopener">🚗 Drive to ' + s.name + ' →</a>';
       } else if (s.type === 'flight') {
         routeBtn = '<a class="dc-route-btn flight" href="' + mapsUrl + '" target="_blank" rel="noopener">✈ View ' + s.name + ' on Maps →</a>';
       } else if (sameLoc || s.type === 'day') {
@@ -1203,7 +1374,7 @@ daySelect.addEventListener('change', (e) => {
           '<div class="dc-num">' + (i+1) + '</div>' +
           '<div class="dc-info">' +
             '<div class="dc-date">' + s.date + '</div>' +
-            '<div class="dc-name">' + (useRoute && prev ? (prev.name + ' → ' + s.name) : s.name) + '</div>' +
+            '<div class="dc-name">' + s.name + '</div>' +
           '</div>' +
           '<div class="dc-flag" title="' + cc + '">' + (cc || '🌐') + '</div>' +
         '</div>' +

@@ -1,540 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Day 20: AMS → Brussels stop → Paris — Europe Trip 2026</title>
+<title>Day 23: 🇧🇪 Brussels day trip — Europe Trip 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500&family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --ink: #0d1b2a; --parchment: #f5efe2; --cream: #faf6ec;
-  --gold: #c89b3c; --gold-deep: #a47a23; --rose: #c44a4a;
-  --sage: #6b8e6f; --sky: #4a90b8;
-  --line: rgba(13,27,42,0.12);
-  --land: #ede4cf; --land-stroke: #c4b89e; --water: #d8e4ec;
-  --type-color: #7ea882;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
-  background: var(--parchment); color: var(--ink); line-height: 1.55;
-  background-image:
-    radial-gradient(circle at 20% 10%, rgba(200,155,60,0.06), transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(74,144,184,0.05), transparent 50%);
-}
-.topbar {
-  background: var(--ink); color: var(--cream);
-  padding: 12px 24px; text-align: center;
-  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
-  border-bottom: 3px solid var(--gold);
-}
-.topbar a { color: var(--gold); text-decoration: none; font-weight: 600; }
-.topbar a:hover { text-decoration: underline; }
-.container { max-width: 800px; margin: 0 auto; padding: 32px 24px; }
-.hero { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 2px solid var(--type-color); }
-.hero .day-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink); opacity: 0.45; margin-bottom: 6px; font-weight: 500; }
-.hero h1 { font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(34px, 5vw, 50px); letter-spacing: -0.025em; line-height: 1.0; color: var(--ink); margin-bottom: 10px; }
-.hero .subtitle { font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; color: var(--gold-deep); margin-bottom: 14px; }
-.hero-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.country-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: white; background: var(--ink); padding: 6px 14px; border-radius: 100px; font-weight: 600; letter-spacing: 0.02em; }
-.country-chip .sub { opacity: 0.7; font-weight: 400; margin-left: 4px; }
-.type-chip { font-size: 12px; padding: 6px 12px; border-radius: 100px; font-weight: 600; background: var(--type-color); color: white; border: 1px solid var(--type-color); }
-.type-chip.home { color: var(--ink); border-color: var(--ink); }
-.date-chip { font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.04em; padding: 8px 16px; background: var(--ink); color: var(--cream); border: 1px solid var(--ink); border-radius: 4px; font-weight: 700; }
-.mini-map-card { background: var(--cream); border: 1px solid var(--line); border-radius: 6px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(13,27,42,0.06), 0 4px 12px rgba(13,27,42,0.04); overflow: hidden; }
-.mini-map-header { padding: 14px 20px 10px; border-bottom: 1px solid var(--line); }
-.mini-map-card .card-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 4px; }
-.mini-map-card .map-context { font-size: 13px; opacity: 0.7; }
-.mini-map-wrap { position: relative; width: 100%; height: 380px; background: var(--water); overflow: hidden; }
-.mini-map-wrap svg { width: 100%; height: 100%; display: block; }
-.mini-map-wrap .country { fill: var(--land); stroke: var(--land-stroke); stroke-width: 0.5; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
-.mini-map-wrap .country.highlight { fill: #d4c8a8; }
-.mini-map-wrap .route-line { fill: none; stroke: var(--gold-deep); stroke-width: 2; stroke-dasharray: 6 4; vector-effect: non-scaling-stroke; opacity: 0.85; pointer-events: none; }
-.mini-map-wrap .excursion-line { fill: none; stroke: var(--rose); stroke-width: 1.5; stroke-dasharray: 3 4; vector-effect: non-scaling-stroke; opacity: 0.7; pointer-events: none; }
-.mini-marker { position: absolute; border-radius: 50%; border: 2px solid white; box-shadow: 0 1px 3px rgba(13,27,42,0.4); transform: translate(-50%, -50%); cursor: pointer; }
-.mini-marker.context { width: 10px; height: 10px; opacity: 0.85; }
-.mini-marker.current { width: 18px; height: 18px; border-width: 3px; box-shadow: 0 0 0 3px rgba(200,155,60,0.4), 0 2px 6px rgba(13,27,42,0.5); z-index: 5; animation: pulse 2s ease-out infinite; }
-.mini-marker.excursion { width: 22px; height: 22px; border: 2px solid white; background: var(--rose); color: white; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; z-index: 4; }
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 3px rgba(200,155,60,0.4), 0 2px 6px rgba(13,27,42,0.5); }
-  50% { box-shadow: 0 0 0 8px rgba(200,155,60,0.15), 0 2px 6px rgba(13,27,42,0.5); }
-  100% { box-shadow: 0 0 0 3px rgba(200,155,60,0.4), 0 2px 6px rgba(13,27,42,0.5); }
-}
-.mini-marker.confirmed { background: var(--sage); }
-.mini-marker.pending { background: var(--gold); }
-.mini-marker.day { background: var(--sky); }
-.mini-marker.sister { background: var(--rose); }
-.mini-marker.flight { background: var(--ink); }
-.mini-marker.home { background: white; border-color: var(--ink); }
-.mini-marker-label { position: absolute; background: var(--ink); color: white; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 3px; white-space: nowrap; transform: translate(-50%, calc(-100% - 14px)); pointer-events: none; z-index: 6; max-width: 140px; overflow: hidden; text-overflow: ellipsis; }
-.mini-marker-label.context { opacity: 0.7; }
-.mini-marker-label.excursion { background: var(--rose); transform: translate(-50%, calc(-100% - 18px)); }
-.mini-loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; opacity: 0.5; }
-.card { background: var(--cream); border: 1px solid var(--line); border-radius: 6px; padding: 18px 22px; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(13,27,42,0.06), 0 4px 12px rgba(13,27,42,0.04); }
-.card-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 10px; }
-.summary { font-size: 16px; line-height: 1.55; margin-bottom: 20px; }
-.hotel-card { border-left: 4px solid var(--gold); }
-.hotel-card.pending { border-left-color: rgba(200,155,60,0.4); opacity: 0.85; }
-.hotel-name { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; margin-bottom: 6px; }
-.badge-confirmed { display: inline-block; background: var(--sage); color: white; font-size: 11px; padding: 3px 10px; border-radius: 100px; margin-left: 8px; font-weight: 600; vertical-align: middle; }
-.badge-pending { display: inline-block; background: rgba(200,155,60,0.2); color: var(--gold-deep); font-size: 11px; padding: 3px 10px; border-radius: 100px; margin-left: 8px; font-weight: 600; vertical-align: middle; }
-.hotel-link a { display: inline-block; color: var(--gold-deep); font-weight: 600; text-decoration: none; margin-top: 4px; font-size: 14px; }
-.hotel-link a:hover { text-decoration: underline; }
-.travel-card { border-left: 4px solid var(--sky); font-size: 14px; }
-.travel-card div { margin: 4px 0; }
-.travel-card strong { font-weight: 600; }
-.excursions-card { border-left: 4px solid var(--rose); }
-.ex-intro { font-size: 14px; opacity: 0.75; margin-bottom: 16px; }
-.excursion-item { display: grid; grid-template-columns: 36px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px dashed rgba(13,27,42,0.1); align-items: start; }
-.excursion-item:last-child { border-bottom: none; padding-bottom: 4px; }
-.excursion-item:first-of-type { padding-top: 4px; }
-.ex-num { width: 32px; height: 32px; background: var(--rose); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; flex-shrink: 0; }
-.ex-name { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 600; margin-bottom: 2px; }
-.ex-addr { font-size: 12px; opacity: 0.65; margin-bottom: 6px; }
-.ex-note { font-size: 14px; line-height: 1.5; margin-bottom: 6px; }
-.ex-meta { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; opacity: 0.75; font-weight: 600; }
-.ex-meta span { background: var(--parchment); padding: 3px 8px; border-radius: 3px; }
-.list-card ul { list-style: none; padding: 0; }
-.list-card li { padding: 7px 0 7px 28px; position: relative; font-size: 14.5px; line-height: 1.55; border-bottom: 1px dashed rgba(13,27,42,0.08); }
-.list-card li:last-child { border-bottom: none; }
-.list-card li::before { content: '•'; position: absolute; left: 8px; top: 6px; color: var(--gold); font-size: 18px; font-weight: 700; }
-.tips-card { border-left: 4px solid var(--rose); }
-.tips-card li::before { color: var(--rose); }
-.action-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
-.action-row a { flex: 1; min-width: 140px; text-align: center; display: inline-block; padding: 12px 16px; background: var(--ink); color: var(--cream); text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; transition: background 0.15s; }
-.action-row a:hover { background: var(--gold-deep); }
-.action-row a.secondary { background: var(--cream); color: var(--ink); border: 1px solid var(--line); }
-.action-row a.secondary:hover { background: var(--gold); color: white; }
-.nav-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--line); flex-wrap: wrap; }
-.nav-link { font-size: 13px; color: var(--ink); text-decoration: none; font-weight: 600; padding: 8px 14px; border: 1px solid var(--line); border-radius: 4px; transition: all 0.15s; background: var(--cream); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 45%; }
-.nav-link:hover:not(.disabled) { background: var(--ink); color: var(--cream); border-color: var(--ink); }
-.nav-link.disabled { opacity: 0.4; cursor: default; }
-.nav-home { text-align: center; background: var(--gold); color: var(--ink); border-color: var(--gold-deep); }
-.nav-home:hover { background: var(--gold-deep); color: white; }
-footer { background: var(--ink); color: var(--cream); padding: 24px; margin-top: 48px; text-align: center; font-size: 12px; opacity: 0.85; }
-footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--gold); font-size: 16px; margin-bottom: 6px; }
-@media (max-width: 600px) { .container { padding: 24px 16px; } .nav-link { font-size: 11px; padding: 6px 10px; max-width: 40%; } .action-row a { min-width: 100%; } .mini-map-wrap { height: 320px; } }
-
-/* === Daily food spotlight === */
-.food-spotlight {
-  background: linear-gradient(135deg, #fffbf0 0%, #fef3d0 100%);
-  border: 1.5px solid var(--gold);
-  border-left: 5px solid var(--gold);
-  border-radius: 8px;
-  padding: 18px 22px 16px;
-  margin-bottom: 14px;
-  box-shadow: 0 2px 14px rgba(200,155,60,0.18), 0 1px 3px rgba(200,155,60,0.08);
-  position: relative;
-  overflow: hidden;
-}
-.food-spotlight::after {
-  content: '';
-  position: absolute;
-  right: 0; top: 0; bottom: 0;
-  width: 38%;
-  background: linear-gradient(to left, rgba(200,155,60,0.09), transparent);
-  pointer-events: none;
-}
-.food-spotlight .fs-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  background: var(--gold);
-  color: white;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 4px 12px 4px 10px;
-  border-radius: 100px;
-  margin-bottom: 14px;
-  font-family: 'JetBrains Mono', monospace;
-}
-.food-spotlight .fs-main {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-.food-spotlight .fs-emoji {
-  font-size: 44px;
-  line-height: 1;
-  flex-shrink: 0;
-  margin-top: 2px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-}
-.food-spotlight .fs-content { flex: 1; min-width: 0; }
-.food-spotlight .fs-name {
-  font-family: 'Fraunces', serif;
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 6px;
-  line-height: 1.1;
-}
-.food-spotlight .fs-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-bottom: 10px;
-}
-.food-spotlight .fs-tag {
-  background: rgba(200,155,60,0.15);
-  color: var(--gold-deep);
-  font-size: 10.5px;
-  font-weight: 700;
-  padding: 2px 9px;
-  border-radius: 4px;
-  font-family: 'JetBrains Mono', monospace;
-  letter-spacing: 0.03em;
-}
-.food-spotlight .fs-tag.highlight {
-  background: var(--gold);
-  color: white;
-}
-.food-spotlight .fs-desc {
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--ink);
-  opacity: 0.85;
-  margin-bottom: 10px;
-}
-.food-spotlight .fs-where {
-  font-size: 12.5px;
-  color: var(--gold-deep);
-  font-weight: 600;
-  display: flex;
-  align-items: flex-start;
-  gap: 5px;
-}
-.food-spotlight .fs-where::before { content: '📍'; flex-shrink: 0; }
-@media (max-width: 520px) {
-  .food-spotlight .fs-emoji { font-size: 32px; }
-  .food-spotlight .fs-name  { font-size: 18px; }
-  .food-spotlight .fs-desc  { font-size: 13px; }
-}
-</style>
-</head>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Plus Jakarta Sans',sans-serif; background:#f4f1ea; color:#2c2418; line-height:1.5; }
+.wrap { max-width:920px; margin:0 auto; padding:20px; }
+.daynum { font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.2em; color:#a02828; font-weight:700; }
+h1 { font-family:'Fraunces',serif; font-size:38px; line-height:1.1; color:#1a1a1a; margin:4px 0; }
+.route { font-family:'JetBrains Mono',monospace; font-size:13px; color:#7a6a4a; margin-bottom:14px; }
+.map-wrap { width:100%; height:300px; background:#c9dae8; border-radius:10px; overflow:hidden; margin-bottom:16px; border:2px solid #a0282833; }
+.map-wrap img { width:100%; height:100%; object-fit:cover; display:block; }
+.food-card { display:flex; gap:14px; align-items:center; background:#fff8ec; border:1px solid #e8d6a8; border-radius:10px; padding:10px 14px; margin-bottom:16px; }
+.food-card .food-img { width:90px; height:64px; border-radius:6px; overflow:hidden; flex-shrink:0; background:#e8dcc0; }
+.food-card .food-img img { width:100%; height:100%; object-fit:cover; }
+.food-label { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; color:#a02828; text-transform:uppercase; }
+.food-name { font-family:'Fraunces',serif; font-size:20px; font-weight:700; }
+.stops-title { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#a02828; border-bottom:2px solid #a02828; padding-bottom:6px; margin-bottom:12px; }
+.stop { display:flex; gap:12px; padding:10px 0; border-bottom:1px dashed #d8cba8; }
+.stop-num { font-family:'Fraunces',serif; font-size:22px; font-weight:700; color:#a02828; min-width:28px; }
+.stop-title { font-family:'Fraunces',serif; font-size:17px; font-weight:700; color:#1a1a1a; }
+.stop-addr { font-size:11px; color:#a02828; font-style:italic; margin:2px 0; }
+.stop-desc { font-size:13px; color:#4a3f2a; }
+.sleep { background:#fff; border-left:4px solid #a02828; border-radius:0 8px 8px 0; padding:10px 14px; margin:16px 0; }
+.sleep-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.15em; color:#a02828; text-transform:uppercase; }
+.sleep-name { font-family:'Fraunces',serif; font-size:16px; font-weight:700; }
+.sleep-addr { font-size:11px; color:#7a6a4a; }
+.nav { display:flex; justify-content:space-between; gap:10px; margin-top:24px; padding-top:16px; border-top:1px solid #d8cba8; }
+.nav a { font-family:'JetBrains Mono',monospace; font-size:12px; color:#a02828; text-decoration:none; font-weight:700; padding:8px 14px; border:1px solid #a0282855; border-radius:6px; }
+.nav a.home { background:#a02828; color:#fff; }
+.nav a:hover { background:#a0282822; }
+</style></head>
 <body>
-<div class="topbar"><a href="index.html">← Back to interactive map</a> · <a href="https://drive.google.com/drive/folders/1OOqIZz21cSFfno5vlhUAMOdVEo8mn66q?usp=sharing" target="_blank" rel="noopener">📁 Trip docs</a></div>
-<div class="container">
-  <div class="hero">
-    <div class="day-num">Day 20 · Stop 21 of 28</div>
-    <h1>AMS → Brussels stop → Paris</h1>
-    <div class="subtitle">Belgium en route · arrive Paris evening · Eiffel + Seine cruise</div>
-    <div class="hero-meta">
-      <span class="country-chip">🇳🇱 → 🇧🇪 → 🇫🇷<span class="sub">· 3 countries · 1 night Paris</span></span>
-      <span class="type-chip pending">Hotel TBD (Paris with parking)</span>
-      <span class="date-chip">Thu 30 Jul 2026 · 1 night Paris</span>
-    </div>
-  </div>
-  <div class="mini-map-card">
-    <div class="mini-map-header">
-      <div class="card-label">📍 Location</div>
-      <div class="map-context">Where this stop sits in the journey</div>
-    </div>
-    <div class="mini-map-wrap" id="mini-map-wrap">
-      <svg id="mini-map-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
-      <div class="mini-loading" id="mini-loading">Loading map…</div>
-    </div>
-  </div>
-  <div class="summary">Drive AMS 08:00 → Brussels 10:15 (2h 15m) for a 2-hour Belgium taste (Grand Place, Manneken Pis, waffles), then Brussels 12:30 → Le Kremlin-Bicêtre 15:30 (~3h 10m). Check in 2 rooms · Métro Line 7 to Paris centre. Eiffel Tower from Trocadéro + Seine cruise + Latin Quarter dinner. Sleep Paris suburb (zero périphérique driving). Tomorrow: Paris morning + drive to AMS afternoon.</div>
-  <div class="food-spotlight">
-    <div class="fs-badge">🍴 Must-Try Food · 🇧🇪 Belgium · Day 21 (Brussels stop)</div>
-    <div class="fs-main">
-      <div class="fs-emoji">🍟</div>
-      <div class="fs-content">
-        <div class="fs-name">Belgian Frites</div>
-        <div class="fs-meta"><span class="fs-tag highlight">€3–5</span><span class="fs-tag highlight">Brussels stop</span><span class="fs-tag highlight">Street food</span><span class="fs-tag">Cheap!</span></div>
-        <div class="fs-desc">Real Belgian fries are double-fried in beef tallow — far crispier than anything else. Served in a paper cone with andalouse, samurai or classic mayo. Belgium invented the 'French' fry and has never let anyone forget it.</div>
-        <div class="fs-where">Maison Antoine · Place Jourdan 1, Brussels · Brussels' most famous friterie since 1948 · open daily</div>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+  <div class="daynum">DAY 23 OF 31</div>
+  <h1>🇧🇪 Brussels day trip</h1>
+  <div class="route">Fri 31 Jul 2026</div>
+  <div class="map-wrap"><img src="images/day-23/map.jpg" alt="Day 23 map" onerror="if(this.dataset.t){this.style.display='none'}else{this.dataset.t=1;this.src=this.src.replace(/\.jpg$/,'.jpeg')}"></div>
 
-
-    <div class="card hotel-card">
-      <div class="card-label">🏨 Hotel</div>
-      <div class="hotel-name">ibis budget Paris Porte d'Italie Ouest <span class="badge-confirmed">✓ Booked</span></div>
-      <div class="hotel-link"><a href="https://www.booking.com/hotel/fr/ibis-budget-porte-d-italie-ouest.en-gb.html" target="_blank" rel="noopener">View on Booking.com →</a></div>
-      <div style="margin-top:6px;font-size:14px;color:var(--ink);opacity:0.75;">9-15 Rue Élisée Reclus, 94270 Le Kremlin-Bicêtre · <strong>2 rooms</strong> for family of 5 · 🅿️ <strong>FREE private parking</strong> · 5 min walk to Le Kremlin-Bicêtre Métro (Line 7) · 25 min Métro to Louvre</div>
-      <div style="margin-top:10px;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13px;color:var(--ink);">
-        <div style="opacity:0.6;">Booking #:</div><div><strong>5359693043</strong></div>
-        <div style="opacity:0.6;">Phone:</div><div><a href="tel:+33892680946" style="color:var(--gold-deep);font-weight:600;">+33 8 92 68 09 46</a> <span style="font-size:11px;opacity:0.6;">(Accor central · €0.40/min — premium)</span></div>
-        <div style="opacity:0.6;">Check-in:</div><div><strong>Thu 30 Jul · from 13:00</strong></div>
-        <div style="opacity:0.6;">Check-out:</div><div><strong>Fri 31 Jul · by 12:00</strong></div>
-        <div style="opacity:0.6;">Paid:</div><div><strong>€188.47</strong> on 6 May 2026 (€171.34 rooms + €17.13 VAT)</div>
-        <div style="opacity:0.6;">On-site:</div><div><strong>€16.25 city tax</strong> · also bring guarantee card · property may take refundable deposit</div>
-        <div style="opacity:0.6;">Total trip:</div><div>€204.72 (paid €188.47 + on-site €16.25)</div>
-        <div style="opacity:0.6;">Free cancel:</div><div>Until <strong>1 day before arrival</strong> · within 1 day = first-night charge</div>
-        <div style="opacity:0.6;">⚠ ID:</div><div>Police registration required at check-in (passport for all 5)</div>
-      </div>
-      <div style="margin-top:10px;padding:8px 12px;background:rgba(74,144,184,0.12);border-left:3px solid var(--sky);font-size:12px;">⚠️ Confirm at check-in: car can stay in parking until ~16:00 Fri (we leave for AMS in afternoon)</div>
+    <div class="food-card">
+      <div class="food-img"><img src="images/food/10-belgium-moules-frites.jpg" alt="Moules-frites" onerror="if(this.dataset.t){this.style.display='none'}else{this.dataset.t=1;this.src=this.src.replace(/\.jpg$/,'.jpeg')}"></div>
+      <div class="food-info"><div class="food-label">🍴 Must-try today</div><div class="food-name">Moules-frites</div></div>
     </div>
-
-    <div class="card travel-card">
-      <div class="card-label">🚗 Travel (cousin's car) — NO Paris driving!</div>
-      <div><strong>Route:</strong> AMS → Brussels stop → Paris suburb (Le Kremlin-Bicêtre · just off périphérique)</div>
-      <div><strong>Distance:</strong> ~520 km · ~5h 25min driving + 2h Brussels stop</div>
-      <div><strong>Schedule:</strong> <strong>08:00 leave AMS</strong> · 10:15 arrive Brussels · 10:15–12:30 Brussels (Grand Place, waffles, Manneken Pis) · <strong>12:30 leave</strong> · 15:30 arrive Le Kremlin-Bicêtre · 16:00 check in 2 rooms · 16:30 Métro Line 7 → Paris</div>
-      <div><strong>Paris activities:</strong> Métro (NOT cousin's car) — saves driving stress</div>
-    </div>
-
-    <div class="card excursions-card">
-      <div class="card-label">🚙 Day itinerary</div>
-      <div class="ex-intro">3 countries, Belgium taste en route, evening Paris</div>
-
-      <div class="excursion-item">
-        <div class="ex-num">1</div>
-        <div class="ex-body">
-          <div class="ex-name">🇧🇪 Brussels (2-hr stop)</div>
-          <div class="ex-addr">Grand Place, 1000 Bruxelles</div>
-          <div class="ex-note">Park outskirts P+R + tram in (centre restricted) · Grand Place (most beautiful square in Europe) · Manneken Pis (kids will laugh) · Belgian waffle stop (Maison Dandoy or street) · skip Atomium</div>
-          <div class="ex-meta"><span>⏱ 10:00–12:00 (2 hrs)</span> <span>🅿️ Parking 58 or P+R outskirts</span></div>
+  <div class="stops-title">📍 What we're visiting (9 stops)</div>
+  <div class="stops">
+      <div class="stop">
+        <div class="stop-num">1</div>
+        <div class="stop-body">
+          <div class="stop-title">1. 🚗 Drive · Amsterdam → Brussels (cousin drives)</div>
+          <div class="stop-addr">📍 Cousin's home · ~210 km via A4/E19 · ~2h drive · no tolls in NL, small tolls in BE</div>
+          <div class="stop-desc">Cousin drives the family · 07:00 depart · easy motorway via Antwerp · arrive Brussels centre ~09:00–09:30 · park at Q-Park Grand Place (€15-20/day) or street parking blue zone · no train tickets to book — much easier with kids + luggage stays in car</div>
         </div>
       </div>
-      <div class="excursion-item">
-        <div class="ex-num">2</div>
-        <div class="ex-body">
-          <div class="ex-name">🇫🇷 ibis budget Le Kremlin-Bicêtre check-in</div>
-          <div class="ex-addr">9-15 Rue Élisée Reclus, 94270 Le Kremlin-Bicêtre · just outside Paris périphérique</div>
-          <div class="ex-note">Park in private parking (FREE) · check in 2 rooms · drop bags · 30 min · confirm car can stay tomorrow until 16:00</div>
-          <div class="ex-meta"><span>⏱ 14:00–14:30</span> <span>🅿️ Free private parking</span></div>
+      <div class="stop">
+        <div class="stop-num">2</div>
+        <div class="stop-body">
+          <div class="stop-title">2. Grand Place + Manneken Pis</div>
+          <div class="stop-addr">📍 Grand Place, 1000 Brussels · Manneken Pis 2 min walk</div>
+          <div class="stop-desc">UNESCO World Heritage gilded square — stunning Gothic Town Hall · Manneken Pis (small but iconic!) · waffle + chocolate shops surrounding the square · free to walk · 45 min</div>
         </div>
       </div>
-      <div class="excursion-item">
-        <div class="ex-num">2b</div>
-        <div class="ex-body">
-          <div class="ex-name">🚇 Métro Line 7 to Paris</div>
-          <div class="ex-addr">Le Kremlin-Bicêtre Métro · 5 min walk from hotel</div>
-          <div class="ex-note">Buy Mobilis day passes (€10/adult, €5/kid 4-9, free under 4) ~€30 family · Line 7 direct to Pyramides (Louvre area) or Châtelet · 25-30 min to centre</div>
-          <div class="ex-meta"><span>⏱ 14:30–15:30</span> <span>🎫 Mobilis day pass</span></div>
+      <div class="stop">
+        <div class="stop-num">3</div>
+        <div class="stop-body">
+          <div class="stop-title">3. Belgian Chocolate + Sablon quarter</div>
+          <div class="stop-addr">📍 Place du Grand Sablon, 1000 Brussels · 10 min walk from Grand Place</div>
+          <div class="stop-desc">Neuhaus, Godiva, Pierre Marcolini — the world's best chocolate · buy a box to take home · Sablon antique market on weekends · gorgeous Art Nouveau architecture · kids love the chocolate smells</div>
         </div>
       </div>
-      <div class="excursion-item">
-        <div class="ex-num">3</div>
-        <div class="ex-body">
-          <div class="ex-name">🗼 Eiffel Tower from Trocadéro</div>
-          <div class="ex-addr">Place du Trocadéro, 75016 Paris</div>
-          <div class="ex-note">THE iconic photo angle · free · walk over Pont d'Iéna for closer view · climb optional (€30 lift, queue 1+ hr · book ahead)</div>
-          <div class="ex-meta"><span>⏱ 17:00–19:00</span> <span>🚇 Trocadéro M6/M9</span></div>
+      <div class="stop">
+        <div class="stop-num">4</div>
+        <div class="stop-body">
+          <div class="stop-title">4. Royal Palace of Brussels 👑</div>
+          <div class="stop-addr">📍 Place des Palais 7, 1000 Bruxelles · 10 min walk from Sablon · Metro Trône</div>
+          <div class="stop-desc">🇧🇪 SUMMER-ONLY OPENING (22 Jul–7 Sep) — perfect timing for 1 Aug · FREE entry · official palace of King Philippe · sumptuous Throne Room · Mirror Room with 1.4 million BEETLE WING ceiling · ~1h visit · adjacent Parc de Bruxelles for kids</div>
         </div>
       </div>
-      <div class="excursion-item">
-        <div class="ex-num">4</div>
-        <div class="ex-body">
-          <div class="ex-name">🚢 Seine cruise (sunset)</div>
-          <div class="ex-addr">Bateaux Mouches · Pont de l'Alma OR Bateaux Parisiens · Eiffel side</div>
-          <div class="ex-note">1 hr · €18 adult / €9 kid · sunset = magical · monuments lit up · kids LOVE the boat ride · sit-down rest after Eiffel walking</div>
-          <div class="ex-meta"><span>⏱ 19:30–20:30</span> <span>🚢 €18/€9 · book online</span></div>
+      <div class="stop">
+        <div class="stop-num">5</div>
+        <div class="stop-body">
+          <div class="stop-title">5. MIM — Musée des Instruments de Musique 🎶</div>
+          <div class="stop-addr">📍 Rue Montagne de la Cour 2, 1000 Brussels · 3 min walk from Royal Palace · Metro Gare Centrale</div>
+          <div class="stop-desc">🇧🇪 ART NOUVEAU GEM — housed in the gorgeous 1899 Old England building (iron + glass facade) · 1,500+ musical instruments from all over the world · audioguide automatically plays each instrument's sound as you approach 🎧 (kids LOVE this) · €15/adult · €5 child (6-18) · free under 6 · 1.5h visit · 🍽️ rooftop restaurant with panoramic view</div>
         </div>
       </div>
-      <div class="excursion-item">
-        <div class="ex-num">5</div>
-        <div class="ex-body">
-          <div class="ex-name">🍷 Family dinner</div>
-          <div class="ex-addr">Latin Quarter or Champ de Mars cafés</div>
-          <div class="ex-note">Late dinner Paris-style · classic bistro: croque-monsieur, steak frites, crêpes · Berthillon ice cream on Île Saint-Louis if walking past</div>
-          <div class="ex-meta"><span>⏱ 21:00 onwards</span></div>
+      <div class="stop">
+        <div class="stop-num">6</div>
+        <div class="stop-body">
+          <div class="stop-title">6. Atomium ⚛️</div>
+          <div class="stop-addr">📍 Square de l'Atomium 1, 1020 Brussels · Metro 6 to Heysel</div>
+          <div class="stop-desc">Iconic 102m steel structure from 1958 World Expo · 9 stainless-steel spheres connected by tubes · elevator to the TOP sphere for 360° Brussels view · panorama restaurant inside · €16/adult · €8.50 child · 1h visit</div>
         </div>
       </div>
-    </div>
-
-  <div class="card list-card">
-    <div class="card-label">⚑ Highlights</div>
-    <ul>
-      <li>→ <strong>08:00 leave AMS</strong> (cousin's car)</li>
-      <li>→ 10:15 arrive <strong>Brussels</strong> · park outskirts + tram in</li>
-      <li>→ 10:00–12:00 Grand Place + Manneken Pis + waffle stop</li>
-      <li>→ <strong>12:30 leave Brussels</strong> · drive south to Paris (~3h 10m via E19/A1)</li>
-      <li>→ ~13:30 lunch stop near Mons or Saint-Quentin</li>
-      <li>→ <strong>15:30 arrive ibis budget Le Kremlin-Bicêtre</strong> · park in FREE private parking · check in 2 rooms</li>
-      <li>→ 14:30 confirm with reception: car can stay after checkout until 16:00 Friday</li>
-      <li>→ 16:30 walk 5 min to Le Kremlin-Bicêtre Métro · buy Mobilis day passes</li>
-      <li>→ 15:30 Métro Line 7 → Châtelet · transfer to Line 6 → Trocadéro · 35 min total</li>
-      <li>→ 16:00 <strong>Trocadéro photo</strong> (free · iconic Eiffel angle)</li>
-      <li>→ 16:15 walk over Pont d'Iéna to Eiffel base (10 min)</li>
-      <li>→ 16:30 security check · <strong>pre-booked Eiffel 2nd floor lift slot 16:45</strong></li>
-      <li>→ 16:45–18:15 <strong>Eiffel Tower 2nd floor</strong> (lift up · time at platform · descend · ~1.5h · €47 family)</li>
-      <li>→ 18:30 walk to Pont de l'Alma · <strong>Seine sunset cruise</strong> (1 hr · €60 family)</li>
-      <li>→ 19:30 Métro Line 1 → Châtelet → Line 4 → Saint-Michel (Latin Quarter)</li>
-      <li>→ 20:00 dinner Latin Quarter (steak frites · crêpes · Rue de la Huchette)</li>
-      <li>→ 21:30 Métro Line 4 → Châtelet → Line 7 → Le Kremlin-Bicêtre</li>
-      <li>→ 22:30 back at hotel · sleep · NO driving in Paris ✓</li>
-    </ul>
+      <div class="stop">
+        <div class="stop-num">7</div>
+        <div class="stop-body">
+          <div class="stop-title">7. Mini-Europe — all of Europe in miniature 🇪🇺</div>
+          <div class="stop-addr">📍 Bruparck, Avenue du Football 1, 1020 Brussels · next to Atomium</div>
+          <div class="stop-desc">350 miniature monuments at 1:25 scale — Eiffel Tower, Big Ben, Parthenon, Vesuvius eruption, Berlin Wall fall · kids LOVE this · interactive animations + sound · €19.10 adult · €14.50 child (6-11) · €11.10 (under 6) · 1.5h walk-through</div>
+        </div>
+      </div>
+      <div class="stop">
+        <div class="stop-num">8</div>
+        <div class="stop-body">
+          <div class="stop-title">8. Moules-frites lunch 🦪</div>
+          <div class="stop-addr">📍 Chez Léon or similar brasserie, Rue des Bouchers, Brussels</div>
+          <div class="stop-desc">Classic Belgian moules-frites (mussels + fries) at a Brussels brasserie · €20-25pp · the kids get frites (best fries in Europe) · Rue des Bouchers is lined with seafood restaurants</div>
+        </div>
+      </div>
+      <div class="stop">
+        <div class="stop-num">9</div>
+        <div class="stop-body">
+          <div class="stop-title">9. 🚗 Drive · Brussels → Amsterdam (cousin)</div>
+          <div class="stop-addr">📍 Brussels centre · ~210 km return · A12/E19 back via Antwerp</div>
+          <div class="stop-desc">Cousin drives back ~17:00–18:00 · ~2h on motorway · home by ~20:00 for family dinner · kids likely asleep in car · no train station rush — flexible timing</div>
+        </div>
+      </div>
   </div>
-  <div class="card list-card tips-card">
-    <div class="card-label">⚠ Practical tips</div>
-    <ul>
-      <li>⚠️ Driving day ~5.5h · 2 rest stops minimum · screens for kids</li>
-      <li>🔔 <strong>PRE-BOOK ASAP</strong>: <strong>Louvre</strong> louvre.fr (book now · €22 adult, kids free) · <strong>Sainte-Chapelle</strong> monuments-nationaux.fr (€12) · <strong>Seine cruise</strong> bateaux-mouches.fr (€60 family)</li>
-      <li>🔔🗼 <strong>EIFFEL TOWER 2nd FLOOR · BOOK 30 MAY 2026 09:00 SHARP</strong> at toureiffel.paris · €47 family lift · 60-day advance release · sells out within hours in summer · set phone alarm</li>
-      <li>🅿️ <strong>FREE PRIVATE PARKING at ibis budget</strong> · drive direct to hotel (off Porte d'Italie périphérique exit) · no Paris driving stress at all</li>
-      <li>🚇 <strong>Métro tickets:</strong> Mobilis day pass Zone 1-3 ~€10/adult, €5/kid 4-9, free under 4 = ~€30 family/day · or T+ carnet (10 tickets €17.35) for fewer trips · buy at Le Kremlin-Bicêtre Métro station</li>
-      <li>🚇 Le Kremlin-Bicêtre Métro Line 7 = TERMINUS · direct to Pyramides (Louvre) Châtelet, Opéra, Gare de l'Est · ~25 min to centre</li>
-      <li>📱 <strong>Île-de-France Mobilités app</strong> for Métro live times + buy tickets digitally</li>
-      <li>🅿️ <strong>Brussels parking</strong>: Parking 58 (in centre, €25/day) OR P+R Stockel + tram (cheaper, ~€5)</li>
-      <li>🇧🇪 Brussels = euros · Belgium · short stop, manage expectations · grand-place plus a waffle = enough</li>
-      <li>🗼 <strong>Eiffel</strong>: pre-book elevator tickets toureiffel.paris · summer queues 1+ hr without booking · €30 adult lift to summit</li>
-      <li>🚢 <strong>Seine cruise</strong>: book online (€18/€9) · Bateaux Mouches departs Pont de l'Alma (M9 Alma-Marceau) every 30 min · sunset slot 19:30 in summer = magical</li>
-      <li>🥖 Berthillon ice cream on Île Saint-Louis = the best in Paris · perfect post-dinner</li>
-      <li>📅 NEXT DAY (Fri): two options:<br>
-        &nbsp;&nbsp;Paris morning (Louvre, Sainte-Chapelle, Île de la Cité, Tuileries) · 16:00 leave Paris · drive ~5h to AMS · 21:00 arrive cousin's home<br>
-        &nbsp;&nbsp;Caen day-trip dropped (was earlier plan)</li>
-      <li>📱 Download offline maps for France/Belgium</li>
-    </ul>
+  <div class="sleep">
+    <div class="sleep-label">🛏️ Tonight we sleep at</div>
+    <div class="sleep-name">Cousin's home (Amsterdam) 💚 (2nd of 3 nights)</div>
+    <div class="sleep-addr">📍 Amsterdam · cousin's address (private)</div>
   </div>
-  <div class="action-row">
-    <a href="https://www.google.com/maps/search/?api=1&query=52.3676,4.9041" target="_blank" rel="noopener">📍 Open on Google Maps</a>
-    <a href="https://www.google.com/maps/search/?api=1&query=48.8566,2.3522" target="_blank" rel="noopener">📍 Open Paris on Google Maps</a>
-    <a href="https://www.google.com/maps/dir/52.3676,4.9041/50.8503,4.3517/48.8566,2.3522" target="_blank" rel="noopener" class="secondary">🚗 AMS → Brussels → Paris</a>
-  </div>
-  <div class="nav-row">
-    <a href="day_20.html" class="nav-link prev">← Day 19: Amsterdam (arrive)</a>
-    <a href="index.html" class="nav-link nav-home">All days · Map</a>
-    <a href="day_22.html" class="nav-link next">Day 21: Paris → (optional Caen) → AMS →</a>
-  </div>
+  <div class="nav"><a href="day_22.html">← Day 22</a><a href="index.html" class="home">All days</a><a href="day_23.html">Day 24 →</a></div>
 </div>
-<footer>
-  <div class="mark">— The Grand Journey, 2026 —</div>
-  <div>Stop 21 of 28 · Thu 30 Jul 2026 · AMS → Brussels stop → Paris · Eiffel + Seine cruise · 1 night Paris</div>
-</footer>
-<script src="map-data.js"></script>
-<script>
-(function() {
-  const tripStops = [{"name": "Amsterdam (arrive)", "lat": 52.3676, "lon": 4.9041, "type": "confirmed", "role": "prev", "i": 20}, {"name": "AMS → Brussels → Paris", "lat": 48.8566, "lon": 2.3522, "type": "pending", "role": "current", "i": 21}, {"name": "Paris → AMS (opt Caen)", "lat": 52.3676, "lon": 4.9041, "type": "confirmed", "role": "next", "i": 22}];
-  const excursions = [{"name": "Brussels stop", "lat": 50.8503, "lon": 4.3517, "order": 1}, {"name": "Eiffel + Seine cruise", "lat": 48.8584, "lon": 2.2945, "order": 2}];
-  const mapScale = "regional";
-  const ns = 'http://www.w3.org/2000/svg';
-  const svg = document.getElementById('mini-map-svg');
-  const wrap = document.getElementById('mini-map-wrap');
-  const loading = document.getElementById('mini-loading');
-  function render() {
-    if (!window.COUNTRIES) return setTimeout(render, 100);
-    loading.style.display = 'none';
-    const currentStop = tripStops.find(s => s.role === 'current');
-    let boundsPoints;
-    if (mapScale === 'city' && excursions.length > 0) {
-      boundsPoints = [currentStop, ...excursions];
-    } else {
-      boundsPoints = [...tripStops, ...excursions];
-    }
-    const projected = boundsPoints.map(s => {
-      const [x, y] = window.projectMercator(s.lon, s.lat);
-      return { ...s, x, y };
-    });
-    let minX = Math.min(...projected.map(p => p.x));
-    let maxX = Math.max(...projected.map(p => p.x));
-    let minY = Math.min(...projected.map(p => p.y));
-    let maxY = Math.max(...projected.map(p => p.y));
-    const minSpan = (mapScale === 'city') ? 0.02 : 12;
-    if (maxX - minX < minSpan) { const cx = (minX + maxX) / 2; minX = cx - minSpan/2; maxX = cx + minSpan/2; }
-    if (maxY - minY < minSpan) { const cy = (minY + maxY) / 2; minY = cy - minSpan/2; maxY = cy + minSpan/2; }
-    const padFactor = (mapScale === 'city') ? 0.35 : 0.4;
-    const padX = (maxX - minX) * padFactor;
-    const padY = (maxY - minY) * padFactor;
-    minX -= padX; maxX += padX; minY -= padY; maxY += padY;
-    const rect = wrap.getBoundingClientRect();
-    const wrapAspect = rect.width / rect.height;
-    let w = maxX - minX, h = maxY - minY;
-    if (w / h > wrapAspect) { const newH = w / wrapAspect; const cy = (minY + maxY) / 2; minY = cy - newH/2; maxY = cy + newH/2; h = newH; }
-    else { const newW = h * wrapAspect; const cx = (minX + maxX) / 2; minX = cx - newW/2; maxX = cx + newW/2; w = newW; }
-    svg.setAttribute('viewBox', minX + ' ' + minY + ' ' + w + ' ' + h);
-    const g = document.createElementNS(ns, 'g');
-    window.COUNTRIES.forEach(c => {
-      c.p.forEach(poly => {
-        let d = '', inBounds = false;
-        poly.forEach(ring => {
-          ring.forEach((pt, j) => {
-            const [x, y] = window.projectMercator(pt[0], pt[1]);
-            if (x >= minX - w*10 && x <= maxX + w*10 && y >= minY - h*10 && y <= maxY + h*10) inBounds = true;
-            d += (j === 0 ? 'M' : 'L') + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
-          });
-          d += 'Z ';
-        });
-        if (!inBounds) return;
-        const path = document.createElementNS(ns, 'path');
-        path.setAttribute('d', d);
-        path.setAttribute('class', 'country' + (window.TRIP_COUNTRIES.has(c.n) ? ' highlight' : ''));
-        path.setAttribute('fill-rule', 'evenodd');
-        g.appendChild(path);
-      });
-    });
-    svg.appendChild(g);
-    const tripProjected = tripStops.map(s => {
-      const [x, y] = window.projectMercator(s.lon, s.lat);
-      return { ...s, x, y };
-    });
-    if (tripProjected.length > 1 && mapScale !== 'city') {
-      let routeD = '';
-      tripProjected.forEach((p, j) => { routeD += (j === 0 ? 'M' : 'L') + p.x.toFixed(1) + ',' + p.y.toFixed(1) + ' '; });
-      const route = document.createElementNS(ns, 'path');
-      route.setAttribute('d', routeD);
-      route.setAttribute('class', 'route-line');
-      svg.appendChild(route);
-    }
-    if (excursions.length > 0) {
-      const exProjected = excursions.map(e => { const [x, y] = window.projectMercator(e.lon, e.lat); return { ...e, x, y }; });
-      const currentP = tripProjected.find(p => p.role === 'current');
-      let exD = '';
-      if (currentP) exD += 'M' + currentP.x.toFixed(1) + ',' + currentP.y.toFixed(1) + ' ';
-      exProjected.forEach(p => { exD += 'L' + p.x.toFixed(1) + ',' + p.y.toFixed(1) + ' '; });
-      const exLine = document.createElementNS(ns, 'path');
-      exLine.setAttribute('d', exD);
-      exLine.setAttribute('class', 'excursion-line');
-      svg.appendChild(exLine);
-    }
-    function svgToScreen(sx, sy) {
-      const scale = Math.min(rect.width / w, rect.height / h);
-      let offsetX = 0, offsetY = 0;
-      if (w / h > rect.width / rect.height) offsetY = (rect.height - h * scale) / 2;
-      else offsetX = (rect.width - w * scale) / 2;
-      return [(sx - minX) * scale + offsetX, (sy - minY) * scale + offsetY];
-    }
-    tripProjected.forEach(p => {
-      if (mapScale === 'city' && p.role !== 'current') return;
-      const [px, py] = svgToScreen(p.x, p.y);
-      if (px < -30 || px > rect.width + 30 || py < -30 || py > rect.height + 30) return;
-      const m = document.createElement('div');
-      m.className = 'mini-marker ' + p.type + (p.role === 'current' ? ' current' : ' context');
-      m.style.left = px + 'px'; m.style.top = py + 'px';
-      wrap.appendChild(m);
-      const lbl = document.createElement('div');
-      lbl.className = 'mini-marker-label' + (p.role === 'current' ? '' : ' context');
-      lbl.textContent = p.role === 'current' && p.name.length > 18 ? 'Hotel' : p.name;
-      lbl.style.left = px + 'px'; lbl.style.top = py + 'px';
-      wrap.appendChild(lbl);
-    });
-    excursions.forEach(e => {
-      const [ex, ey] = window.projectMercator(e.lon, e.lat);
-      const [px, py] = svgToScreen(ex, ey);
-      if (px < -30 || px > rect.width + 30 || py < -30 || py > rect.height + 30) return;
-      const m = document.createElement('div');
-      m.className = 'mini-marker excursion';
-      m.style.left = px + 'px'; m.style.top = py + 'px';
-      m.textContent = e.order;
-      wrap.appendChild(m);
-      const lbl = document.createElement('div');
-      lbl.className = 'mini-marker-label excursion';
-      lbl.textContent = e.name;
-      lbl.style.left = px + 'px'; lbl.style.top = py + 'px';
-      wrap.appendChild(lbl);
-    });
-  }
-  if (window.COUNTRIES) render();
-  else {
-    let tries = 0;
-    const checkInterval = setInterval(() => {
-      if (window.COUNTRIES) { clearInterval(checkInterval); render(); }
-      else if (++tries > 50) { clearInterval(checkInterval); loading.textContent = 'Map data unavailable'; }
-    }, 100);
-  }
-  window.addEventListener('resize', () => {
-    while (svg.firstChild) svg.removeChild(svg.firstChild);
-    document.querySelectorAll('.mini-marker, .mini-marker-label').forEach(el => el.remove());
-    render();
-  });
-})();
-</script>
-</body>
-</html>
+</body></html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<title>Munasinghe Travel Magazine · DENMARK Issue · July 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+@page { size:A4 portrait; margin:0; }
+html, body { font-family:'Plus Jakarta Sans', sans-serif; background:#222; color:#1a1a1a; }
+body { padding:20px; }
+.mag-page { width:210mm; height:295mm; background:#fefcf7; margin:14px auto; box-shadow:0 8px 32px rgba(0,0,0,0.25); position:relative; overflow:hidden; page-break-after:always; break-after:page; }
+.mag-page:last-child { page-break-after:auto; }
+.mag-cover { background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.7) 100%), url('../images/denmark/cover.jpg') center/cover #5c0a0a; color:white; display:flex; flex-direction:column; padding:18mm 16mm; position:relative; }
+.mag-cover::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 20% 80%, #0e4d6e40, transparent 50%); pointer-events:none; }
+.cv-issue { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:rgba(255,255,255,0.85); margin-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:4px; display:flex; justify-content:space-between; }
+.cv-flag { font-size:14px; }
+.cv-brand { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:18px; color:rgba(255,255,255,0.95); letter-spacing:0.05em; margin-bottom:auto; }
+.cv-title { font-family:'Fraunces', serif; font-weight:700; font-size:96px; line-height:0.9; color:white; margin-bottom:6px; letter-spacing:-0.02em; text-shadow:2px 4px 12px rgba(0,0,0,0.4); }
+.cv-sub { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:24px; color:rgba(255,255,255,0.95); margin-bottom:24px; text-shadow:1px 2px 8px rgba(0,0,0,0.5); }
+.cv-tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+.cv-tag { background:rgba(255,255,255,0.15); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.3); border-radius:100px; padding:5px 14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.15em; text-transform:uppercase; }
+.cv-features { font-family:'Fraunces', serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.9); border-top:1px solid rgba(255,255,255,0.3); padding-top:12px; margin-top:8px; }
+.cv-features b { font-weight:700; color:#f0d68c; }
+.cv-meta { position:absolute; bottom:14mm; right:16mm; text-align:right; font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; color:rgba(255,255,255,0.7); }
+.mag-welcome { padding:22mm 18mm; }
+.wl-num { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:14px; color:#c8102e; margin-bottom:4px; }
+.wl-title { font-family:'Fraunces', serif; font-weight:700; font-size:56px; line-height:1; color:#1a1a1a; margin-bottom:24px; letter-spacing:-0.02em; }
+.wl-divider { width:60px; height:3px; background:#0e4d6e; margin-bottom:24px; }
+.wl-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; column-count:2; column-gap:14mm; column-rule:1px solid #e8d6a8; color:#3d3024; max-width:100%; margin-bottom:24mm; }
+.wl-body p { margin-bottom:10px; text-align:justify; }
+.wl-body p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:62px; float:left; line-height:0.9; padding:2px 8px 0 0; color:#c8102e; }
+.toc-title { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#c8102e; border-bottom:2px solid #c8102e; padding-bottom:8px; margin-bottom:14px; }
+.toc-list { list-style:none; column-count:2; column-gap:14mm; font-family:'Fraunces', serif; font-size:13px; line-height:1.8; }
+.toc-list li { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px dotted #0e4d6e40; padding:4px 0; break-inside:avoid; }
+.toc-list .toc-name { font-style:italic; }
+.toc-list .toc-page { font-family:'JetBrains Mono', monospace; font-size:10px; color:#8b6914; font-weight:700; }
+.mag-spread { padding:14mm 16mm; display:flex; flex-direction:column; }
+.sp-eyebrow { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#c8102e; margin-bottom:8px; }
+.sp-headline { font-family:'Fraunces', serif; font-weight:700; font-size:38px; line-height:0.95; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.01em; }
+.sp-deck { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:15px; line-height:1.4; color:#5a4a3a; margin-bottom:10px; max-width:92%; }
+.sp-meta { display:flex; gap:14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; border-top:1px solid #0e4d6e; padding-top:8px; margin-bottom:14px; }
+.sp-hero { width:100%; height:64mm; background:#e8dcc0; background-size:cover; background-position:center; margin-bottom:6px; position:relative; border-radius:2px; }
+.sp-hero .ph-name { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:repeating-linear-gradient(45deg,#e8dcc0 0 10px,#ddd1b3 10px 20px); font-family:'JetBrains Mono', monospace; font-size:10px; color:#8b6914; }
+.sp-hero .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
+.sp-caption { font-family:'Fraunces', serif; font-style:italic; font-size:9.5px; color:#5a4a3a; margin-bottom:10px; padding-left:12px; border-left:2px solid #0e4d6e; }
+.sp-cols { column-count:2; column-gap:10mm; column-rule:0; }
+.sp-cols p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; margin-bottom:7px; }
+.sp-cols p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:38px; float:left; line-height:0.9; padding:2px 6px 0 0; color:#c8102e; }
+.sp-quote { break-inside:avoid; font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:14px; line-height:1.4; color:#c8102e; text-align:center; padding:10px 12px; border-top:1px solid #0e4d6e; border-bottom:1px solid #0e4d6e; margin:10px 0; }
+.sp-quote::before, .sp-quote::after { content:'"'; font-size:30px; line-height:0; vertical-align:-12px; color:#0e4d6e; padding:0 3px; }
+.mag-duo { padding:14mm 16mm; display:flex; flex-direction:column; gap:6mm; }
+.duo-row { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
+.duo-row.alt { grid-template-columns:2fr 1fr; }
+.duo-photo { background:#e8dcc0; aspect-ratio:4/5; position:relative; border-radius:2px; overflow:hidden; background-size:cover; background-position:center; }
+.duo-photo.wide { aspect-ratio:16/10; }
+.duo-photo .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
+.duo-photo > .ph-name { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; background:repeating-linear-gradient(45deg, #e8dcc0 0 8px, #ddd1b3 8px 16px); font-family:'JetBrains Mono', monospace; font-size:8px; color:#8b6914; text-align:center; padding:8px; gap:4px; }
+.duo-text { display:flex; flex-direction:column; justify-content:center; padding:0 4mm; }
+.duo-text h3 { font-family:'Fraunces', serif; font-weight:700; font-size:28px; line-height:1; color:#1a1a1a; margin-bottom:8px; }
+.duo-text p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; }
+.duo-text .kicker { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.3em; text-transform:uppercase; color:#c8102e; margin-bottom:6px; }
+.mag-food { padding:18mm 16mm; }
+.fd-headline { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.02em; }
+.fd-headline em { font-style:italic; font-weight:400; color:#c8102e; }
+.fd-deck { font-family:'Fraunces', serif; font-style:italic; font-size:16px; color:#5a4a3a; margin-bottom:18px; border-bottom:2px solid #0e4d6e; padding-bottom:14px; }
+.fd-grid { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
+.fd-card { background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; overflow:hidden; }
+.fd-card .fd-img { width:100%; aspect-ratio:5/3; background:#e8dcc0; position:relative; display:flex; align-items:center; justify-content:center; background-image:repeating-linear-gradient(45deg, #e8dcc0 0 8px, #ddd1b3 8px 16px); }
+.fd-card .fd-img .ph { font-family:'JetBrains Mono', monospace; font-size:8px; color:#8b6914; text-align:center; padding:8px; }
+.fd-card .fd-body { padding:10px 14px 14px; }
+.fd-card .fd-num { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:22px; color:#c8102e; line-height:1; }
+.fd-card .fd-name { font-family:'Fraunces', serif; font-weight:700; font-size:18px; line-height:1.1; color:#1a1a1a; margin:4px 0 6px; }
+.fd-card .fd-desc { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.5; color:#5a4a3a; margin-bottom:5px; }
+.fd-card .fd-where { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.15em; color:#8b6914; text-transform:uppercase; }
+.mag-reflection { background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%); padding:24mm 22mm; display:flex; flex-direction:column; }
+.rf-eyebrow { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#c8102e; margin-bottom:8px; }
+.rf-headline { font-family:'Fraunces', serif; font-weight:700; font-size:54px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
+.rf-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; color:#3d3024; margin-bottom:24px; max-width:85%; }
+.rf-body p { margin-bottom:12px; }
+.rf-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:6mm; margin-bottom:16px; }
+.rf-card { background:rgba(255,255,255,0.6); padding:14px 16px; border-left:3px solid #c8102e; }
+.rf-card .rf-label { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#c8102e; margin-bottom:4px; }
+.rf-card .rf-value { font-family:'Fraunces', serif; font-size:13px; line-height:1.4; color:#3d3024; }
+.rf-signoff { margin-top:auto; padding-top:18mm; font-family:'Fraunces', serif; font-style:italic; font-size:13px; color:#c8102e; text-align:right; }
+.mag-back { background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%), url('../images/denmark/back-cover.jpg') center/cover #5c0a0a; color:white; display:flex; flex-direction:column; justify-content:flex-end; padding:24mm 20mm; }
+.bc-next { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:6px; }
+.bc-country { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:white; margin-bottom:8px; }
+.bc-tagline { font-family:'Fraunces', serif; font-style:italic; font-size:18px; color:rgba(255,255,255,0.9); border-top:1px solid rgba(255,255,255,0.4); padding-top:14px; margin-bottom:12px; max-width:70%; }
+.bc-mag { position:absolute; top:20mm; left:20mm; font-family:'Fraunces', serif; font-style:italic; font-weight:300; font-size:16px; color:rgba(255,255,255,0.9); letter-spacing:0.05em; }
+.bc-issue { position:absolute; top:20mm; right:20mm; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; color:rgba(255,255,255,0.7); }
+.mag-page .folio { position:absolute; bottom:4mm; left:0; right:0; text-align:center; font-family:'Fraunces', serif; font-style:italic; font-size:8.5px; color:#8b6914; }
+@media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
+</style></head>
+<body>
+
+<div class="mag-page mag-cover">
+  <div class="cv-issue"><span>Issue 12 · 2026</span><span class="cv-flag">🇩🇰 DENMARK</span></div>
+  <div class="cv-brand">Munasinghe Travel Magazine</div>
+  <div>
+    <div class="cv-title">DENMARK</div>
+    <div class="cv-sub">Copenhagen · Bikes, canals, hygge</div>
+    <div class="cv-tags">
+      <span class="cv-tag">★ World's Happiest City</span>
+      <span class="cv-tag">🚲 380 km of Bike Lanes</span>
+      <span class="cv-tag">🌈 Colourful Nyhavn</span>
+    </div>
+    <div class="cv-features">INSIDE: <b>Nyhavn at sunset</b> — the colourful waterfront · <b>Tivoli Gardens</b> — the world's 2nd oldest amusement park · <b>The Little Mermaid</b> statue · <b>Smørrebrød</b> open sandwiches · <b>Danish hygge</b></div>
+  </div>
+  <div class="cv-meta">Munasinghe Family · Sun 2 — Mon 3 Aug 2026</div>
+</div>
+
+<div class="mag-page mag-welcome">
+  <div class="wl-num">No. 12 · A Letter from the Road</div>
+  <div class="wl-title">Welcome to<br>hygge.</div>
+  <div class="wl-divider"></div>
+  <div class="wl-body">
+    <p>Copenhagen was a one-night stop on the way to the sister visit in Gothenburg. We arrived on a Sunday evening and left on a Monday afternoon. In between we packed in the things you cannot miss: Nyhavn, the Little Mermaid, the Strøget shopping street, Tivoli Gardens, and as much smørrebrød as we could manage.</p>
+    <p>The city is small. 660,000 people. 380 km of bicycle lanes. The bike rate is 62% (compared to 38% in Amsterdam). Copenhagen has been voted the world's happiest city more times than any other city, and you can feel why within ten minutes: it is clean, it is calm, the architecture is colourful but never garish, and people smile at you on the bus.</p>
+    <p>This issue is a short one. We were in Copenhagen for 22 hours. We made them count.</p>
+    <p style="font-style:italic; color:#c8102e; text-align:right; margin-top:14px;">— The Munasinghes, 2026</p>
+  </div>
+  <div class="toc-title">In this issue</div>
+  <ul class="toc-list">
+    <li><span class="toc-name">Welcome — Hygge</span><span class="toc-page">02</span></li>
+    <li><span class="toc-name">Nyhavn at Sunset</span><span class="toc-page">03</span></li>
+    <li><span class="toc-name">Tivoli Gardens</span><span class="toc-page">04</span></li>
+    <li><span class="toc-name">The Little Mermaid + Strøget</span><span class="toc-page">05</span></li>
+    <li><span class="toc-name">Tastes of Denmark</span><span class="toc-page">06</span></li>
+    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">07</span></li>
+  </ul>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">COVER STORY · NYHAVN · DAY 25</div>
+  <div class="sp-headline">A canal of<br>painted houses.</div>
+  <div class="sp-deck">Nyhavn — "New Harbour" — was built in the 1670s by Danish sailors and pirates. Today its colourful 17th-century townhouses, packed restaurants, and old wooden boats are the most photographed view in Denmark.</div>
+  <div class="sp-meta"><span>Sun 2 Aug 2026</span><span>Nyhavn, Inner Harbour</span><span>90 min · canal walk + dinner</span></div>
+  <div class="sp-hero" style="background-image:url('../images/denmark/day-25-nyhavn-sunset.jpg');">
+    <div class="ph-name">📷 images/denmark/day-25-nyhavn-sunset.jpg</div>
+    <div class="ph-info">HERO PHOTO · TBD</div>
+  </div>
+  <div class="sp-caption">Nyhavn at 19:00 — the painted 17th-century townhouses turn gold in the low Danish sun. Hans Christian Andersen lived at no. 67.</div>
+  <div class="sp-cols">
+    <p>Nyhavn was a working harbour for three centuries. Sailors arrived here from across the Baltic. Hans Christian Andersen lived in three of these houses (numbers 18, 20, and 67) at different points in his life. The canal was dug by Swedish prisoners of war. By the 1960s the area was so rough that the cafés closed by 8pm. In the 1980s it was restored, repainted, pedestrianised. Today it is the postcard Copenhagen — and yes, it is touristy, and yes, the restaurants are expensive, but the colour is unbelievable, and the wooden boats moored along the canal are 100+ years old.</p>
+    <div class="sp-quote">More bikes than cars, more parks than shopping malls, and the colour-coded waterfront of Nyhavn.</div>
+    <p>We ate dinner at a canal-side table — smørrebrød open sandwiches, a beer for me, a sparkling elderflower for Lana, sodas for the kids — and watched the sky go from pale blue to peach to deep gold. Tour boats passed slowly. Cyclists chimed their bells. A jazz duo played at the end of the dock. The kids ran along the cobblestones and threw imaginary pebbles into the water. It was, in a word, hygge.</p>
+  </div>
+  <div class="folio">— Issue 12 · DENMARK · 03 —</div>
+</div>
+
+<div class="mag-page mag-duo">
+  <div class="sp-eyebrow" style="margin-bottom:4px;">TIVOLI GARDENS · DAY 25</div>
+  <div class="sp-headline" style="font-size:38px; margin-bottom:14px;">170 years<br><em>of magic.</em></div>
+  <div class="duo-row alt">
+    <div class="duo-photo wide" style="background-image:url('../images/denmark/day-25-tivoli-entrance.jpg');">
+      <div class="ph-name">📷 images/denmark/day-25-tivoli-entrance.jpg</div>
+      <div class="ph-info">PHOTO · TBD</div>
+    </div>
+    <div class="duo-text">
+      <div class="kicker">★ Opened 1843</div>
+      <h3>2nd oldest in the world</h3>
+      <p>Tivoli Gardens is the world's second-oldest amusement park (after Dyrehavsbakken in Copenhagen — which is the actual oldest, 1583). Walt Disney visited Tivoli in 1951 and used it as inspiration for Disneyland.</p>
+    </div>
+  </div>
+
+  <div class="duo-row">
+    <div class="duo-photo" style="background-image:url('../images/denmark/day-25-tivoli-tower.jpg');">
+      <div class="ph-name">📷 images/denmark/day-25-tivoli-tower.jpg</div>
+      <div class="ph-info">PHOTO · TBD</div>
+    </div>
+    <div class="duo-photo" style="background-image:url('../images/denmark/day-25-tivoli-flying-trunk.jpg');">
+      <div class="ph-name">📷 images/denmark/day-25-tivoli-flying-trunk.jpg</div>
+      <div class="ph-info">PHOTO · TBD</div>
+    </div>
+  </div>
+
+  <div class="duo-row alt" style="grid-template-columns:1fr 2fr;">
+    <div class="duo-text" style="text-align:right; padding-right:6mm;">
+      <div class="kicker" style="text-align:right;">★ Hans Christian Andersen</div>
+      <h3 style="font-size:22px;">Was a regular</h3>
+      <p>Andersen loved Tivoli and wrote one of his fairy tales — "The Nightingale" — after watching the gardens' bird life. The Nightingale ride still operates in the park.</p>
+    </div>
+    <div class="duo-photo wide" style="background-image:url('../images/denmark/day-25-tivoli-night.jpg');">
+      <div class="ph-name">📷 images/denmark/day-25-tivoli-night.jpg</div>
+      <div class="ph-info">PHOTO · TBD</div>
+    </div>
+  </div>
+  <div class="folio">— Issue 12 · DENMARK · 04 —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">STRØGET + LITTLE MERMAID · DAY 26</div>
+  <div class="sp-headline">The walking street<br>+ the smallest landmark.</div>
+  <div class="sp-deck">Strøget is one of Europe's longest pedestrian shopping streets. The Little Mermaid is a 1.25-metre-tall bronze statue on a rock, easily one of the world's least impressive famous landmarks. We loved both.</div>
+  <div class="sp-meta"><span>Mon 3 Aug 2026</span><span>Strøget → Langelinie</span><span>3 hrs · walk + statue + train station</span></div>
+  <div class="sp-hero" style="background-image:url('../images/denmark/day-26-stroget-morning.jpg');">
+    <div class="ph-name">📷 images/denmark/day-26-stroget-morning.jpg</div>
+    <div class="ph-info">HERO PHOTO · TBD</div>
+  </div>
+  <div class="sp-caption">Strøget at 09:30 — 1.1km of pedestrian street, lined with cafés and Scandinavian design shops. The morning light slants down between the buildings.</div>
+  <div class="sp-cols">
+    <p>The Little Mermaid statue sits on a rock in the harbour. She is 1.25 metres tall. She has been beheaded twice. She has been blown up once. She has been painted red, painted pink, dressed in a hijab, dressed in a niqab, draped with sex-toys (twice), labelled "racist fish" by activists. Every time, Copenhagen restores her. Every time, tourists come back. She has sat there since 1913. Sculpted by Edvard Eriksen. Inspired by the Hans Christian Andersen fairy tale and modelled (allegedly) on Eriksen's wife.</p>
+    <div class="sp-quote">The world's most photographed disappointment. — and we mean that with affection.</div>
+    <p>Strøget, by contrast, was a delight. 1.1 kilometres of pedestrian shopping street. Royal Copenhagen porcelain. Bang & Olufsen. Lego flagship store. The kids took twenty minutes inside Lego to build a small Copenhagen-themed model. Then we ate cinnamon buns and walked back via the city hall square. By noon we were at the central station, boarding the X2000 train south to Sweden, via the Øresund Bridge.</p>
+  </div>
+  <div class="folio">— Issue 12 · DENMARK · 05 —</div>
+</div>
+
+<div class="mag-page mag-food">
+  <div class="sp-eyebrow">★ TASTES OF THE TRIP</div>
+  <div class="fd-headline">Six things <em>we ate</em><br>and won't forget.</div>
+  <div class="fd-deck">From morning coffee to evening pastries — the flavours that defined this leg.</div>
+  <div class="fd-grid">
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/denmark/food-01-smorrebrod.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/denmark/food-01-smorrebrod.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">01</div>
+        <div class="fd-name">Smørrebrød</div>
+        <div class="fd-desc">Open sandwich on dense buttered rye. Topped with herring, salmon, roast beef, liver paté, egg, or shrimp. The Danish national lunch.</div>
+        <div class="fd-where">📍 Aamanns 1921 · 95 DKK · Day 25</div>
+      </div>
+    </div>
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/denmark/food-02-frikadeller.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/denmark/food-02-frikadeller.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">02</div>
+        <div class="fd-name">Frikadeller</div>
+        <div class="fd-desc">Pan-fried pork-and-veal meatballs with potatoes and brown gravy. Danish comfort food. Served at every kro (inn) in the country.</div>
+        <div class="fd-where">📍 Restaurant Schønnemann · 150 DKK · Day 25</div>
+      </div>
+    </div>
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/denmark/food-03-rugbrod.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/denmark/food-03-rugbrod.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">03</div>
+        <div class="fd-name">Rugbrød</div>
+        <div class="fd-desc">Dense, dark, sour rye bread. Lasts a week. Eaten with butter and cheese. The base of every smørrebrød.</div>
+        <div class="fd-where">📍 Bakery · 35 DKK loaf · Day 25</div>
+      </div>
+    </div>
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/denmark/food-04-pastry.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/denmark/food-04-pastry.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">04</div>
+        <div class="fd-name">Danish Pastry</div>
+        <div class="fd-desc">In Denmark, it's called wienerbrød ("Vienna bread") — because Danish bakers learned the technique from Austrian pastry chefs in the 1850s. Glazed, fruit-filled, flaky.</div>
+        <div class="fd-where">📍 Lagkagehuset · 30 DKK · Day 25</div>
+      </div>
+    </div>
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/denmark/food-05-aebleskiver.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/denmark/food-05-aebleskiver.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">05</div>
+        <div class="fd-name">Æbleskiver</div>
+        <div class="fd-desc">Spherical pancake balls cooked in a special pan with hemispherical wells. Dusted with icing sugar, dipped in raspberry jam.</div>
+        <div class="fd-where">📍 Tivoli Gardens · 55 DKK · Day 25</div>
+      </div>
+    </div>
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/denmark/food-06-carlsberg.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/denmark/food-06-carlsberg.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">06</div>
+        <div class="fd-name">Carlsberg</div>
+        <div class="fd-desc">Brewed in Copenhagen since 1847. Pale, crisp, ubiquitous. Probably the best beer in the world, according to Carlsberg.</div>
+        <div class="fd-where">📍 Anywhere · 55 DKK · Daily</div>
+      </div>
+    </div>
+  </div>
+  <div class="folio">— Issue 12 · DENMARK · 06 —</div>
+</div>
+
+<div class="mag-page mag-reflection">
+  <div class="rf-eyebrow">REFLECTIONS · DENMARK</div>
+  <div class="rf-headline">Painted houses,<br>cinnamon buns,<br>a small bronze mermaid.</div>
+  <div class="rf-body">
+    <p>Copenhagen was the calmest stop of the trip. Even the bicycles seem calmer. The colours of Nyhavn at sunset will stay with us. The smørrebrød lunches. The hygge of the city — that untranslatable Danish word for cosy contentment.</p>
+    <p>We will come back, probably in winter, to walk Strøget when the Christmas markets are open and the streets are lined with lanterns. Tivoli at Christmas is meant to be one of the best things in Europe. We saw it in summer; the kids want to see it lit up.</p>
+  </div>
+  <div class="rf-grid">
+    <div class="rf-card">
+      <div class="rf-label">Favourite moment</div>
+      <div class="rf-value">Nyhavn at golden hour. The painted houses, the boats, the jazz duo at the end of the dock.</div>
+    </div>
+    <div class="rf-card">
+      <div class="rf-label">Hardest moment</div>
+      <div class="rf-value">The Little Mermaid was disappointingly small. The kids laughed at her.</div>
+    </div>
+    <div class="rf-card">
+      <div class="rf-label">If we come back…</div>
+      <div class="rf-value">Christmas in Tivoli. Skagen in summer. Aarhus.</div>
+    </div>
+  </div>
+  <div class="rf-signoff">— Navin, Lana, Avisha, Aviann & Avin Munasinghe<br>Copenhagen · 2–3 August 2026</div>
+</div>
+
+<div class="mag-page mag-back">
+  <div class="bc-mag">Munasinghe Travel Magazine</div>
+  <div class="bc-issue">No. 12 · One of Fifteen</div>
+  <div class="bc-next">★ NEXT ISSUE ★</div>
+  <div class="bc-country">SWEDEN</div>
+  <div class="bc-tagline">Gothenburg with the sister we hadn't seen in years. Two days of family.</div>
+</div>
+
+</body></html>

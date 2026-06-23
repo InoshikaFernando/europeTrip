@@ -136,8 +136,8 @@ footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--
       <div class="map-context">Where this stop sits in the journey</div>
     </div>
     <div class="mini-map-wrap" id="mini-map-wrap">
-      <svg id="mini-map-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
-      <div class="mini-loading" id="mini-loading">Loading map…</div>
+      <img src="images/day-01/map.jpg" alt="Day 1 map" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="if(this.dataset.t){this.style.display='none'}else{this.dataset.t=1;this.src=this.src.replace(/\.jpg$/,'.jpeg')}">
+    </div>
     </div>
   </div>
   <div class="summary">Trip starts. CA784 to Beijing leaves AKL 19:30 → arrives Beijing 04:40 next morning.</div>

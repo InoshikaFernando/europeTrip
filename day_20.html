@@ -1,515 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Day 19: Amsterdam (arrive) — Europe Trip 2026</title>
+<title>Day 21: 🇫🇷 Lourdes → TLS → Paris Montparnasse — Europe Trip 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500&family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --ink: #0d1b2a; --parchment: #f5efe2; --cream: #faf6ec;
-  --gold: #c89b3c; --gold-deep: #a47a23; --rose: #c44a4a;
-  --sage: #6b8e6f; --sky: #4a90b8;
-  --line: rgba(13,27,42,0.12);
-  --land: #ede4cf; --land-stroke: #c4b89e; --water: #d8e4ec;
-  --type-color: #c89b3c;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
-  background: var(--parchment); color: var(--ink); line-height: 1.55;
-  background-image:
-    radial-gradient(circle at 20% 10%, rgba(200,155,60,0.06), transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(74,144,184,0.05), transparent 50%);
-}
-.topbar {
-  background: var(--ink); color: var(--cream);
-  padding: 12px 24px; text-align: center;
-  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
-  border-bottom: 3px solid var(--gold);
-}
-.topbar a { color: var(--gold); text-decoration: none; font-weight: 600; }
-.topbar a:hover { text-decoration: underline; }
-.container { max-width: 800px; margin: 0 auto; padding: 32px 24px; }
-.hero { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 2px solid var(--type-color); }
-.hero .day-num { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink); opacity: 0.45; margin-bottom: 6px; font-weight: 500; }
-.hero h1 { font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(34px, 5vw, 50px); letter-spacing: -0.025em; line-height: 1.0; color: var(--ink); margin-bottom: 10px; }
-.hero .subtitle { font-family: 'Fraunces', serif; font-style: italic; font-size: 18px; color: var(--gold-deep); margin-bottom: 14px; }
-.hero-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.country-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: white; background: var(--ink); padding: 6px 14px; border-radius: 100px; font-weight: 600; letter-spacing: 0.02em; }
-.country-chip .sub { opacity: 0.7; font-weight: 400; margin-left: 4px; }
-.type-chip { font-size: 12px; padding: 6px 12px; border-radius: 100px; font-weight: 600; background: var(--type-color); color: white; border: 1px solid var(--type-color); }
-.type-chip.home { color: var(--ink); border-color: var(--ink); }
-.date-chip { font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.04em; padding: 8px 16px; background: var(--ink); color: var(--cream); border: 1px solid var(--ink); border-radius: 4px; font-weight: 700; }
-.mini-map-card { background: var(--cream); border: 1px solid var(--line); border-radius: 6px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(13,27,42,0.06), 0 4px 12px rgba(13,27,42,0.04); overflow: hidden; }
-.mini-map-header { padding: 14px 20px 10px; border-bottom: 1px solid var(--line); }
-.mini-map-card .card-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 4px; }
-.mini-map-card .map-context { font-size: 13px; opacity: 0.7; }
-.mini-map-wrap { position: relative; width: 100%; height: 380px; background: var(--water); overflow: hidden; }
-.mini-map-wrap svg { width: 100%; height: 100%; display: block; }
-.mini-map-wrap .country { fill: var(--land); stroke: var(--land-stroke); stroke-width: 0.5; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
-.mini-map-wrap .country.highlight { fill: #d4c8a8; }
-.mini-map-wrap .route-line { fill: none; stroke: var(--gold-deep); stroke-width: 2; stroke-dasharray: 6 4; vector-effect: non-scaling-stroke; opacity: 0.85; pointer-events: none; }
-.mini-map-wrap .excursion-line { fill: none; stroke: var(--rose); stroke-width: 1.5; stroke-dasharray: 3 4; vector-effect: non-scaling-stroke; opacity: 0.7; pointer-events: none; }
-.mini-marker { position: absolute; border-radius: 50%; border: 2px solid white; box-shadow: 0 1px 3px rgba(13,27,42,0.4); transform: translate(-50%, -50%); cursor: pointer; }
-.mini-marker.context { width: 10px; height: 10px; opacity: 0.85; }
-.mini-marker.current { width: 18px; height: 18px; border-width: 3px; box-shadow: 0 0 0 3px rgba(200,155,60,0.4), 0 2px 6px rgba(13,27,42,0.5); z-index: 5; animation: pulse 2s ease-out infinite; }
-.mini-marker.excursion { width: 22px; height: 22px; border: 2px solid white; background: var(--rose); color: white; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; z-index: 4; }
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 3px rgba(200,155,60,0.4), 0 2px 6px rgba(13,27,42,0.5); }
-  50% { box-shadow: 0 0 0 8px rgba(200,155,60,0.15), 0 2px 6px rgba(13,27,42,0.5); }
-  100% { box-shadow: 0 0 0 3px rgba(200,155,60,0.4), 0 2px 6px rgba(13,27,42,0.5); }
-}
-.mini-marker.confirmed { background: var(--sage); }
-.mini-marker.pending { background: var(--gold); }
-.mini-marker.day { background: var(--sky); }
-.mini-marker.sister { background: var(--rose); }
-.mini-marker.flight { background: var(--ink); }
-.mini-marker.home { background: white; border-color: var(--ink); }
-.mini-marker-label { position: absolute; background: var(--ink); color: white; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 3px; white-space: nowrap; transform: translate(-50%, calc(-100% - 14px)); pointer-events: none; z-index: 6; max-width: 140px; overflow: hidden; text-overflow: ellipsis; }
-.mini-marker-label.context { opacity: 0.7; }
-.mini-marker-label.excursion { background: var(--rose); transform: translate(-50%, calc(-100% - 18px)); }
-.mini-loading { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; opacity: 0.5; }
-.card { background: var(--cream); border: 1px solid var(--line); border-radius: 6px; padding: 18px 22px; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(13,27,42,0.06), 0 4px 12px rgba(13,27,42,0.04); }
-.card-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 10px; }
-.summary { font-size: 16px; line-height: 1.55; margin-bottom: 20px; }
-.hotel-card { border-left: 4px solid var(--gold); }
-.hotel-card.pending { border-left-color: rgba(200,155,60,0.4); opacity: 0.85; }
-.hotel-name { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 600; margin-bottom: 6px; }
-.badge-confirmed { display: inline-block; background: var(--sage); color: white; font-size: 11px; padding: 3px 10px; border-radius: 100px; margin-left: 8px; font-weight: 600; vertical-align: middle; }
-.badge-pending { display: inline-block; background: rgba(200,155,60,0.2); color: var(--gold-deep); font-size: 11px; padding: 3px 10px; border-radius: 100px; margin-left: 8px; font-weight: 600; vertical-align: middle; }
-.hotel-link a { display: inline-block; color: var(--gold-deep); font-weight: 600; text-decoration: none; margin-top: 4px; font-size: 14px; }
-.hotel-link a:hover { text-decoration: underline; }
-.travel-card { border-left: 4px solid var(--sky); font-size: 14px; }
-.travel-card div { margin: 4px 0; }
-.travel-card strong { font-weight: 600; }
-.excursions-card { border-left: 4px solid var(--rose); }
-.ex-intro { font-size: 14px; opacity: 0.75; margin-bottom: 16px; }
-.excursion-item { display: grid; grid-template-columns: 36px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px dashed rgba(13,27,42,0.1); align-items: start; }
-.excursion-item:last-child { border-bottom: none; padding-bottom: 4px; }
-.excursion-item:first-of-type { padding-top: 4px; }
-.ex-num { width: 32px; height: 32px; background: var(--rose); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 16px; font-weight: 600; flex-shrink: 0; }
-.ex-name { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 600; margin-bottom: 2px; }
-.ex-addr { font-size: 12px; opacity: 0.65; margin-bottom: 6px; }
-.ex-note { font-size: 14px; line-height: 1.5; margin-bottom: 6px; }
-.ex-meta { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; opacity: 0.75; font-weight: 600; }
-.ex-meta span { background: var(--parchment); padding: 3px 8px; border-radius: 3px; }
-.list-card ul { list-style: none; padding: 0; }
-.list-card li { padding: 7px 0 7px 28px; position: relative; font-size: 14.5px; line-height: 1.55; border-bottom: 1px dashed rgba(13,27,42,0.08); }
-.list-card li:last-child { border-bottom: none; }
-.list-card li::before { content: '•'; position: absolute; left: 8px; top: 6px; color: var(--gold); font-size: 18px; font-weight: 700; }
-.tips-card { border-left: 4px solid var(--rose); }
-.tips-card li::before { color: var(--rose); }
-.action-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
-.action-row a { flex: 1; min-width: 140px; text-align: center; display: inline-block; padding: 12px 16px; background: var(--ink); color: var(--cream); text-decoration: none; border-radius: 4px; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; transition: background 0.15s; }
-.action-row a:hover { background: var(--gold-deep); }
-.action-row a.secondary { background: var(--cream); color: var(--ink); border: 1px solid var(--line); }
-.action-row a.secondary:hover { background: var(--gold); color: white; }
-.nav-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--line); flex-wrap: wrap; }
-.nav-link { font-size: 13px; color: var(--ink); text-decoration: none; font-weight: 600; padding: 8px 14px; border: 1px solid var(--line); border-radius: 4px; transition: all 0.15s; background: var(--cream); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 45%; }
-.nav-link:hover:not(.disabled) { background: var(--ink); color: var(--cream); border-color: var(--ink); }
-.nav-link.disabled { opacity: 0.4; cursor: default; }
-.nav-home { text-align: center; background: var(--gold); color: var(--ink); border-color: var(--gold-deep); }
-.nav-home:hover { background: var(--gold-deep); color: white; }
-footer { background: var(--ink); color: var(--cream); padding: 24px; margin-top: 48px; text-align: center; font-size: 12px; opacity: 0.85; }
-footer .mark { font-family: 'Fraunces', serif; font-style: italic; color: var(--gold); font-size: 16px; margin-bottom: 6px; }
-@media (max-width: 600px) { .container { padding: 24px 16px; } .nav-link { font-size: 11px; padding: 6px 10px; max-width: 40%; } .action-row a { min-width: 100%; } .mini-map-wrap { height: 320px; } }
-
-/* === Daily food spotlight === */
-.food-spotlight {
-  background: linear-gradient(135deg, #fffbf0 0%, #fef3d0 100%);
-  border: 1.5px solid var(--gold);
-  border-left: 5px solid var(--gold);
-  border-radius: 8px;
-  padding: 18px 22px 16px;
-  margin-bottom: 14px;
-  box-shadow: 0 2px 14px rgba(200,155,60,0.18), 0 1px 3px rgba(200,155,60,0.08);
-  position: relative;
-  overflow: hidden;
-}
-.food-spotlight::after {
-  content: '';
-  position: absolute;
-  right: 0; top: 0; bottom: 0;
-  width: 38%;
-  background: linear-gradient(to left, rgba(200,155,60,0.09), transparent);
-  pointer-events: none;
-}
-.food-spotlight .fs-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  background: var(--gold);
-  color: white;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 4px 12px 4px 10px;
-  border-radius: 100px;
-  margin-bottom: 14px;
-  font-family: 'JetBrains Mono', monospace;
-}
-.food-spotlight .fs-main {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-.food-spotlight .fs-emoji {
-  font-size: 44px;
-  line-height: 1;
-  flex-shrink: 0;
-  margin-top: 2px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-}
-.food-spotlight .fs-content { flex: 1; min-width: 0; }
-.food-spotlight .fs-name {
-  font-family: 'Fraunces', serif;
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 6px;
-  line-height: 1.1;
-}
-.food-spotlight .fs-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-bottom: 10px;
-}
-.food-spotlight .fs-tag {
-  background: rgba(200,155,60,0.15);
-  color: var(--gold-deep);
-  font-size: 10.5px;
-  font-weight: 700;
-  padding: 2px 9px;
-  border-radius: 4px;
-  font-family: 'JetBrains Mono', monospace;
-  letter-spacing: 0.03em;
-}
-.food-spotlight .fs-tag.highlight {
-  background: var(--gold);
-  color: white;
-}
-.food-spotlight .fs-desc {
-  font-size: 14px;
-  line-height: 1.6;
-  color: var(--ink);
-  opacity: 0.85;
-  margin-bottom: 10px;
-}
-.food-spotlight .fs-where {
-  font-size: 12.5px;
-  color: var(--gold-deep);
-  font-weight: 600;
-  display: flex;
-  align-items: flex-start;
-  gap: 5px;
-}
-.food-spotlight .fs-where::before { content: '📍'; flex-shrink: 0; }
-@media (max-width: 520px) {
-  .food-spotlight .fs-emoji { font-size: 32px; }
-  .food-spotlight .fs-name  { font-size: 18px; }
-  .food-spotlight .fs-desc  { font-size: 13px; }
-}
-</style>
-</head>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Plus Jakarta Sans',sans-serif; background:#f4f1ea; color:#2c2418; line-height:1.5; }
+.wrap { max-width:920px; margin:0 auto; padding:20px; }
+.daynum { font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.2em; color:#1c4a7a; font-weight:700; }
+h1 { font-family:'Fraunces',serif; font-size:38px; line-height:1.1; color:#1a1a1a; margin:4px 0; }
+.route { font-family:'JetBrains Mono',monospace; font-size:13px; color:#7a6a4a; margin-bottom:14px; }
+.map-wrap { width:100%; height:300px; background:#c9dae8; border-radius:10px; overflow:hidden; margin-bottom:16px; border:2px solid #1c4a7a33; }
+.map-wrap img { width:100%; height:100%; object-fit:cover; display:block; }
+.food-card { display:flex; gap:14px; align-items:center; background:#fff8ec; border:1px solid #e8d6a8; border-radius:10px; padding:10px 14px; margin-bottom:16px; }
+.food-card .food-img { width:90px; height:64px; border-radius:6px; overflow:hidden; flex-shrink:0; background:#e8dcc0; }
+.food-card .food-img img { width:100%; height:100%; object-fit:cover; }
+.food-label { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.1em; color:#1c4a7a; text-transform:uppercase; }
+.food-name { font-family:'Fraunces',serif; font-size:20px; font-weight:700; }
+.stops-title { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#1c4a7a; border-bottom:2px solid #1c4a7a; padding-bottom:6px; margin-bottom:12px; }
+.stop { display:flex; gap:12px; padding:10px 0; border-bottom:1px dashed #d8cba8; }
+.stop-num { font-family:'Fraunces',serif; font-size:22px; font-weight:700; color:#1c4a7a; min-width:28px; }
+.stop-title { font-family:'Fraunces',serif; font-size:17px; font-weight:700; color:#1a1a1a; }
+.stop-addr { font-size:11px; color:#1c4a7a; font-style:italic; margin:2px 0; }
+.stop-desc { font-size:13px; color:#4a3f2a; }
+.sleep { background:#fff; border-left:4px solid #1c4a7a; border-radius:0 8px 8px 0; padding:10px 14px; margin:16px 0; }
+.sleep-label { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.15em; color:#1c4a7a; text-transform:uppercase; }
+.sleep-name { font-family:'Fraunces',serif; font-size:16px; font-weight:700; }
+.sleep-addr { font-size:11px; color:#7a6a4a; }
+.nav { display:flex; justify-content:space-between; gap:10px; margin-top:24px; padding-top:16px; border-top:1px solid #d8cba8; }
+.nav a { font-family:'JetBrains Mono',monospace; font-size:12px; color:#1c4a7a; text-decoration:none; font-weight:700; padding:8px 14px; border:1px solid #1c4a7a55; border-radius:6px; }
+.nav a.home { background:#1c4a7a; color:#fff; }
+.nav a:hover { background:#1c4a7a22; }
+</style></head>
 <body>
-<div class="topbar"><a href="index.html">← Back to interactive map</a> · <a href="https://drive.google.com/drive/folders/1OOqIZz21cSFfno5vlhUAMOdVEo8mn66q?usp=sharing" target="_blank" rel="noopener">📁 Trip docs</a> · <a href="https://drive.google.com/drive/folders/1CuB4i6hZnuqjQUtDhz3dwmXm0OmPSS3g?usp=sharing" target="_blank" rel="noopener">📁 Day 21 folder</a></div>
-<div class="container">
-  <div class="hero">
-    <div class="day-num">Day 19 · Stop 20 of 28</div>
-    <h1>Amsterdam (arrive)</h1>
-    <div class="subtitle">Lourdes morning · fly TLS → AMS · cousin pickup</div>
-    <div class="hero-meta">
-      <span class="country-chip">🇳🇱 Netherlands<span class="sub">· staying with cousin 💚 · 3 nights AMS hub</span></span>
-      <span class="type-chip confirmed">Family stay 💚</span>
-      <span class="date-chip">29–30 Jul 2026 · 1 night</span>
-    </div>
-  </div>
-  <div class="mini-map-card">
-    <div class="mini-map-header">
-      <div class="card-label">📍 Location</div>
-      <div class="map-context">Where this stop sits in the journey</div>
-    </div>
-    <div class="mini-map-wrap" id="mini-map-wrap">
-      <svg id="mini-map-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"></svg>
-      <div class="mini-loading" id="mini-loading">Loading map…</div>
-    </div>
-  </div>
-  <div class="summary">🚆 <strong>Big train day · 14 hrs total</strong>. Early 05:00 start at Lourdes · drive 2h to Toulouse airport · drop TLS rental · tram to Toulouse Matabiau station · <strong>10:20 TGV Toulouse → Paris Montparnasse</strong> (~4h 15m) · cross Paris to Gare du Nord · <strong>Eurostar Paris → Amsterdam</strong> (~3h 20m) · arrive AMS Centraal ~19:00–20:00 · cousin pickup · light dinner at cousin's. Saves €500+ vs flying with kids comfortable in train seats.</div>
-  <div class="food-spotlight">
-    <div class="fs-badge">🍴 Must-Try Food · 🇳🇱 Netherlands · Day 20 (Amsterdam arrives)</div>
-    <div class="fs-main">
-      <div class="fs-emoji">🧇</div>
-      <div class="fs-content">
-        <div class="fs-name">Stroopwafel</div>
-        <div class="fs-meta"><span class="fs-tag highlight">€2–3</span><span class="fs-tag highlight">Dutch classic</span><span class="fs-tag">Street snack</span><span class="fs-tag">Sweet</span></div>
-        <div class="fs-desc">Two thin waffle discs sandwiched with a caramel syrup filling. Hold it over a hot coffee or tea for 30 seconds — the caramel softens and oozes. The best Dutch souvenir that never makes it home.</div>
-        <div class="fs-where">Albert Heijn supermarkets for the fresh-baked version · or street market stalls at Albert Cuyp Markt</div>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+  <div class="daynum">DAY 21 OF 31</div>
+  <h1>🇫🇷 Lourdes → TLS → Paris Montparnasse</h1>
+  <div class="route">Wed 29 Jul 2026</div>
+  <div class="map-wrap"><img src="images/day-21/map.jpg" alt="Day 21 map" onerror="if(this.dataset.t){this.style.display='none'}else{this.dataset.t=1;this.src=this.src.replace(/\.jpg$/,'.jpeg')}"></div>
 
-
-    <div class="card hotel-card">
-      <div class="card-label">🏨 Hotel</div>
-      <div class="hotel-name">Cousin's home <span class="badge-confirmed">💚 Family stay</span></div>
-      <div style="margin-top:6px;font-size:14px;color:var(--ink);opacity:0.75;">No booking needed · staying with cousin · address TBC · 3 nights AMS</div>
+    <div class="food-card">
+      <div class="food-img"><img src="images/food/08c-france-jambon-beurre.jpg" alt="Jambon-Beurre" onerror="if(this.dataset.t){this.style.display='none'}else{this.dataset.t=1;this.src=this.src.replace(/\.jpg$/,'.jpeg')}"></div>
+      <div class="food-info"><div class="food-label">🍴 Must-try today</div><div class="food-name">Jambon-Beurre</div></div>
     </div>
-
-    <div class="card travel-card">
-      <div class="card-label">🚆 Travel — TRAIN DAY ✓ BOOKED</div>
-      <div><strong>Route:</strong> Lourdes → drive TLS airport (drop rental) → tram to Matabiau → <strong>10:20 TGV</strong> → Paris Montparnasse → cross to Gare du Nord → <strong>16:25 Eurostar</strong> → Schiphol Airport → train to AMS Centraal → cousin pickup</div>
-      <div><strong>Distance:</strong> 150 km drive + 4h 35m TGV + 1h 30m Paris transfer + 3h 08m Eurostar + 15m Schiphol→Centraal</div>
-      <div><strong>Total trains paid:</strong> €591 for 5 pax (€480 tickets + €91 class upgrade + €20 service fee)</div>
-    </div>
-
-    <div class="card travel-card" style="border-left-color: var(--sky);">
-      <div class="card-label">🚆 Train booking ✓ BOOKED · 5 pax · €591 total</div>
-      <div style="margin-bottom:10px;"><a href="https://drive.google.com/drive/folders/1CuB4i6hZnuqjQUtDhz3dwmXm0OmPSS3g?usp=drive_link" target="_blank" rel="noopener" style="display:inline-block;background:var(--gold-deep);color:white;padding:6px 14px;border-radius:4px;text-decoration:none;font-size:13px;font-weight:600;">📁 Open tickets in Drive →</a></div>
-      <div style="margin-top:6px;padding:10px 14px;background:var(--cream);border:1px solid var(--line);border-radius:4px;">
-        <div style="font-weight:700;font-size:14px;margin-bottom:4px;">Leg 1 · TGV · sncf 8508</div>
-        <div style="font-size:13px;"><strong>Toulouse Matabiau · 10:20</strong> → Paris Montparnasse · 14:55</div>
-        <div style="font-size:11px;opacity:0.7;margin-top:4px;">4h 35m · class upgrade paid</div>
-      </div>
-      <div style="margin-top:8px;padding:10px 14px;background:var(--cream);border:1px solid var(--line);border-radius:4px;">
-        <div style="font-weight:700;font-size:14px;margin-bottom:4px;">Paris transfer · 1h 30m</div>
-        <div style="font-size:13px;">Montparnasse 14:55 → Gare du Nord by 16:25</div>
-        <div style="font-size:11px;opacity:0.7;margin-top:4px;">Métro Line 4 ~25min · or Uber XL ~€25 (faster with 5 pax + luggage) · ARRIVE Gare du Nord 16:00 latest for Eurostar security</div>
-      </div>
-      <div style="margin-top:8px;padding:10px 14px;background:var(--cream);border:1px solid var(--line);border-radius:4px;">
-        <div style="font-weight:700;font-size:14px;margin-bottom:4px;">Leg 2 · Eurostar Red (Thalys) · 9463</div>
-        <div style="font-size:13px;"><strong>Paris Gare du Nord · 16:25</strong> → Schiphol Airport · 19:33</div>
-        <div style="font-size:11px;opacity:0.7;margin-top:4px;">3h 08m · stops at Brussels-Midi · ⚠ terminates at Schiphol Airport, NOT Centraal</div>
-      </div>
-      <div style="margin-top:8px;padding:10px 14px;background:rgba(255,200,80,0.18);border-left:3px solid var(--gold);border-radius:4px;">
-        <div style="font-weight:700;font-size:14px;margin-bottom:4px;">Final leg · Schiphol → AMS Centraal</div>
-        <div style="font-size:13px;">NS train Schiphol → Amsterdam Centraal · ~15 min · €5/pp · runs every 10 min · arrive Centraal ~19:55</div>
-        <div style="font-size:11px;opacity:0.7;margin-top:4px;">⚠ Confirm with cousin: pickup at Schiphol (~19:33) or at Centraal (~19:55)</div>
-      </div>
-    </div>
-
-    <div class="card excursions-card">
-      <div class="card-label">🚆 Train segments</div>
-      <div class="ex-intro">Two train legs with a Paris cross-station transfer in the middle. Pre-buy snacks for the train.</div>
-
-      <div class="excursion-item">
-        <div class="ex-num">1</div>
-        <div class="ex-body">
-          <div class="ex-name">TGV Toulouse Matabiau → Paris Montparnasse</div>
-          <div class="ex-addr">Toulouse Matabiau station · 64 Bd Pierre Sémard, 31500 Toulouse</div>
-          <div class="ex-note">10:20 departure · arrives Paris Montparnasse ~14:35 · 4h 15min direct · café-bar on board · seats reclining · kids can walk in carriages</div>
-          <div class="ex-meta"><span>⏱ 10:20–14:35</span> <span>🎫 SNCF / Trainline pre-booked</span></div>
+  <div class="stops-title">📍 What we're visiting (7 stops)</div>
+  <div class="stops">
+      <div class="stop">
+        <div class="stop-num">1</div>
+        <div class="stop-body">
+          <div class="stop-title">1. Drive Lourdes → TLS airport</div>
+          <div class="stop-addr">📍 Lourdes → Toulouse-Blagnac · A64 motorway · ~1h 30min</div>
+          <div class="stop-desc">Leave Lourdes 07:30 · Drop Avis at TLS ~09:00</div>
         </div>
       </div>
-      <div class="excursion-item">
-        <div class="ex-num">2</div>
-        <div class="ex-body">
-          <div class="ex-name">Paris cross-station: Montparnasse → Gare du Nord</div>
-          <div class="ex-addr">~6 km · across Paris</div>
-          <div class="ex-note">Métro line 4 direct (~25 min · €1.90 each) OR Uber XL with luggage (~€20–25 · faster, less stress with kids) OR taxi from rank · arrive Gare du Nord 30 min before Eurostar</div>
-          <div class="ex-meta"><span>⏱ ~40 min total</span> <span>🚇 Métro 4 OR Uber</span></div>
+      <div class="stop">
+        <div class="stop-num">2</div>
+        <div class="stop-body">
+          <div class="stop-title">2. Tram T2 Toulouse Matabiau</div>
+          <div class="stop-addr">📍 TLS Airport tram stop → Gare Toulouse Matabiau · ~35 min</div>
+          <div class="stop-desc">Depart TLS ~09:15 · arrive Matabiau ~09:50 · ~€2pp · T2 line</div>
         </div>
       </div>
-      <div class="excursion-item">
-        <div class="ex-num">3</div>
-        <div class="ex-body">
-          <div class="ex-name">Eurostar Paris Nord → Amsterdam Centraal</div>
-          <div class="ex-addr">Gare du Nord, 18 Rue de Dunkerque, 75010 Paris</div>
-          <div class="ex-note">Departs ~16:00 (depending on connection) · arrives Amsterdam Centraal ~19:20 · 3h 20min direct · stops at Brussels-Midi · Wi-Fi on board · plug sockets · kids' compartment family-friendly</div>
-          <div class="ex-meta"><span>⏱ ~3h 20m</span> <span>🎫 Eurostar pre-booked</span></div>
+      <div class="stop">
+        <div class="stop-num">3</div>
+        <div class="stop-body">
+          <div class="stop-title">3. TGV sncf 8508 Toulouse → Paris Montparnasse</div>
+          <div class="stop-addr">📍 Gare Toulouse Matabiau · Coach 12 · Seats 224, 225, 226, 228, 229</div>
+          <div class="stop-desc">Departs 10:20 · arrives Paris Montparnasse 14:55 · 4h 35m · Booking Z272DK · 📎 Day 21 tickets folder (TGV + 🗼 Eiffel)</div>
         </div>
       </div>
-    </div>
-
-  <div class="card list-card">
-    <div class="card-label">⚑ Highlights</div>
-    <ul>
-      <li>→ 05:00 wake up Lourdes · pack out · light breakfast (or grab pastries to-go)</li>
-      <li>→ 06:00 leave Lourdes · drive A64 north to Toulouse (~2 hrs)</li>
-      <li>→ 08:00 TLS airport · drop French rental car (allow 30 min)</li>
-      <li>→ 08:30 tram T2 from TLS airport → Toulouse Matabiau (~30 min, €1.70 pp)</li>
-      <li>→ 09:30 arrive Matabiau · grab snacks for TGV at station shops</li>
-      <li>→ <strong>10:20 TGV sncf 8508 Toulouse → Paris Montparnasse</strong> (4h 35m)</li>
-      <li>→ 14:55 land Paris Montparnasse · light lunch in station</li>
-      <li>→ 15:15 Métro line 4 OR Uber XL to Gare du Nord (~25–40 min with luggage)</li>
-      <li>→ 16:00 arrive Gare du Nord · queue Eurostar security/passport check (allow 25 min)</li>
-      <li>→ <strong>16:25 Eurostar Red 9463 Paris → Schiphol Airport</strong> (3h 08m · stops at Brussels-Midi)</li>
-      <li>→ 19:33 arrive Schiphol Airport · NS train Schiphol → AMS Centraal (~15 min) · cousin pickup at Centraal ~19:55</li>
-      <li>→ 20:00 at cousin's · light dinner · early bed (long day for kids)</li>
-      <li>💚 BIG WIN: cousin's home for next 4 nights — no booking, family time, free</li>
-    </ul>
+      <div class="stop">
+        <div class="stop-num">4</div>
+        <div class="stop-body">
+          <div class="stop-title">4. Paris Hotel Check-in</div>
+          <div class="stop-addr">📍 Eklo Hotels Paris Porte de Versailles · 1 Rue du Moulin, 92170 Vanves · Métro Porte de Versailles (Line 12)</div>
+          <div class="stop-desc">Métro Line 12 from Gare Montparnasse → Porte de Versailles (~12 min) · Family room (6 pax) with Eiffel Tower view, top floor · 2 singles + 1 sofa bed + 1 large double · check-in 15:00–00:00 · ~25 min walk or Tram T3a to Eiffel Tower · Conf #5763500807 · PIN 1117 · Hotel +33 1 84 19 00 00 · 🏨 Booking.com</div>
+        </div>
+      </div>
+      <div class="stop">
+        <div class="stop-num">5</div>
+        <div class="stop-body">
+          <div class="stop-title">5. Eiffel Tower &amp; Champ de Mars</div>
+          <div class="stop-addr">📍 Champ de Mars, Paris 7e</div>
+          <div class="stop-desc">Arrive ~17:00 · walk freely around the park · cross to Trocadéro for the iconic photo angle · golden hour view · free entry</div>
+        </div>
+      </div>
+      <div class="stop">
+        <div class="stop-num">6</div>
+        <div class="stop-body">
+          <div class="stop-title">6. Notre-Dame + Seine Riverside Walk</div>
+          <div class="stop-addr">📍 Île de la Cité · Notre-Dame de Paris · Paris 4e</div>
+          <div class="stop-desc">Notre-Dame exterior fully restored 2024 · walk Pont de la Tournelle → Pont des Arts → evening golden river light · ~2 km stroll</div>
+        </div>
+      </div>
+      <div class="stop">
+        <div class="stop-num">7</div>
+        <div class="stop-body">
+          <div class="stop-title">7. Saint-Germain dinner + Eiffel 22:00 sparkle ✨</div>
+          <div class="stop-addr">📍 Saint-Germain-des-Prés (Latin Quarter) · then Eiffel Tower</div>
+          <div class="stop-desc">Dinner in Saint-Germain brasserie (~20:00) · steak frites, soupe à l'oignon, crêpes · walk to Pont d'Iéna or Trocadéro for 22:00 Eiffel Tower SPARKLE + 22:30 SUMMIT 2nd-floor lift ✅ BOOKED (5 tickets · #262010328650 · €65 · QR codes in PDF) (5 min light show, every hour 22:00–01:00) · kids LOVE this · Métro Line 12 from Trocadéro → Porte de Versailles back to hotel</div>
+        </div>
+      </div>
   </div>
-  <div class="card list-card tips-card">
-    <div class="card-label">⚠ Practical tips</div>
-    <ul>
-      <li>🧺 <strong>LAUNDRY STOP #6 — Amsterdam (cousin's)</strong> · ASK COUSIN on arrival if their washing machine is free tonight or tomorrow morning · Moléson laundry was ~3-4 days ago · DO THIS WITHIN 4 DAYS OF MOLÉSON (by 30 Jul) or add a laundromat in Lourdes/Toulouse area on Day 18</li>
-      <li>⚠️ <strong>14-HR DAY</strong> · pre-pack snacks/screens/headphones · 4yo will nap on TGV (lifesaver)</li>
-      <li>🚗 RETURN TLS RENTAL: drop at airport before 09:00 · allow 30 min for paperwork + walk to terminal</li>
-      <li>🚊 TLS airport → Matabiau: tram T2 every 15 min · €1.70 each · ~30 min · final stop is Matabiau</li>
-      <li>🎫 PRINT all tickets + save in app · backup if data fails</li>
-      <li>🛂 EUROSTAR: passport check + security at Gare du Nord (like a flight) · arrive 30 min before · French + UK officers (since Eurostar uses UK system)</li>
-      <li>🚇 PARIS TRANSFER: Métro line 4 from Montparnasse to Gare du Nord direct · 11 stops · ~25 min · platform access with luggage tricky · consider Uber XL for ~€25 if exhausted</li>
-      <li>🍱 EAT on the train · TGV bar carriage has snacks · Eurostar serves food in Premier (extra cost in Standard)</li>
-      <li>📞 CONFIRM cousin pickup time after Lourdes leaves · WhatsApp · share train tracking link</li>
-      <li>🏠 Bring host gift — NZ chocolates, wine, kids' souvenirs from Bavaria/Switzerland/Lourdes</li>
-      <li>💶 NL/BE/FR all euros · no currency change all day</li>
-      <li>🌡️ Amsterdam summer ~22°C · cooler than southern France · light jacket evenings</li>
-    </ul>
+  <div class="sleep">
+    <div class="sleep-label">🛏️ Tonight we sleep at</div>
+    <div class="sleep-name">Eklo Hotels Paris Porte de Versailles · Family Room (6 pax) with Eiffel Tower View</div>
+    <div class="sleep-addr">📍 1 Rue du Moulin, 92170 Vanves (just south of Paris 15e) · Métro Porte de Versailles (Line 12) · Conf #5763500807 · PIN 1117 · Hotel +33 1 84 19 00 00 · 2 singles + 1 sofa bed + 1 large double · top floor confirmed ·</div>
   </div>
-  <div class="action-row">
-    <a href="https://www.google.com/maps/search/?api=1&query=52.3676,4.9041" target="_blank" rel="noopener">📍 Open Amsterdam on Google Maps</a>
-    <a href="https://www.google.com/maps/dir/43.0962,-0.0466/43.6294,1.3636" target="_blank" rel="noopener" class="secondary">🚗 Lourdes → TLS airport (drop)</a>
-    <a href="https://www.thetrainline.com" target="_blank" rel="noopener" class="secondary">🚆 Trainline (TGV + Eurostar)</a>
-  </div>
-  <div class="nav-row">
-    <a href="day_19.html" class="nav-link prev">← Day 18: Lourdes</a>
-    <a href="index.html" class="nav-link nav-home">All days · Map</a>
-    <a href="day_21.html" class="nav-link next">Day 20: Paris brief + Caen →</a>
-  </div>
+  <div class="nav"><a href="day_19.html">← Day 20</a><a href="index.html" class="home">All days</a><a href="day_22.html">Day 22 →</a></div>
 </div>
-<footer>
-  <div class="mark">— The Grand Journey, 2026 —</div>
-  <div>Stop 20 of 28 · Wed 29 Jul 2026 · Lourdes → AMS · 1 night with cousin</div>
-</footer>
-<script src="map-data.js"></script>
-<script>
-(function() {
-  const tripStops = [{"name": "Lourdes", "lat": 43.0962, "lon": -0.0466, "type": "pending", "role": "prev", "i": 19}, {"name": "Amsterdam (arrive)", "lat": 52.3676, "lon": 4.9041, "type": "confirmed", "role": "current", "i": 20}, {"name": "Paris brief + Caen", "lat": 49.1829, "lon": -0.3707, "type": "pending", "role": "next", "i": 21}];
-  const excursions = [];
-  const mapScale = "regional";
-  const ns = 'http://www.w3.org/2000/svg';
-  const svg = document.getElementById('mini-map-svg');
-  const wrap = document.getElementById('mini-map-wrap');
-  const loading = document.getElementById('mini-loading');
-  function render() {
-    if (!window.COUNTRIES) return setTimeout(render, 100);
-    loading.style.display = 'none';
-    const currentStop = tripStops.find(s => s.role === 'current');
-    let boundsPoints;
-    if (mapScale === 'city' && excursions.length > 0) {
-      boundsPoints = [currentStop, ...excursions];
-    } else {
-      boundsPoints = [...tripStops, ...excursions];
-    }
-    const projected = boundsPoints.map(s => {
-      const [x, y] = window.projectMercator(s.lon, s.lat);
-      return { ...s, x, y };
-    });
-    let minX = Math.min(...projected.map(p => p.x));
-    let maxX = Math.max(...projected.map(p => p.x));
-    let minY = Math.min(...projected.map(p => p.y));
-    let maxY = Math.max(...projected.map(p => p.y));
-    const minSpan = (mapScale === 'city') ? 0.02 : 12;
-    if (maxX - minX < minSpan) { const cx = (minX + maxX) / 2; minX = cx - minSpan/2; maxX = cx + minSpan/2; }
-    if (maxY - minY < minSpan) { const cy = (minY + maxY) / 2; minY = cy - minSpan/2; maxY = cy + minSpan/2; }
-    const padFactor = (mapScale === 'city') ? 0.35 : 0.4;
-    const padX = (maxX - minX) * padFactor;
-    const padY = (maxY - minY) * padFactor;
-    minX -= padX; maxX += padX; minY -= padY; maxY += padY;
-    const rect = wrap.getBoundingClientRect();
-    const wrapAspect = rect.width / rect.height;
-    let w = maxX - minX, h = maxY - minY;
-    if (w / h > wrapAspect) { const newH = w / wrapAspect; const cy = (minY + maxY) / 2; minY = cy - newH/2; maxY = cy + newH/2; h = newH; }
-    else { const newW = h * wrapAspect; const cx = (minX + maxX) / 2; minX = cx - newW/2; maxX = cx + newW/2; w = newW; }
-    svg.setAttribute('viewBox', minX + ' ' + minY + ' ' + w + ' ' + h);
-    const g = document.createElementNS(ns, 'g');
-    window.COUNTRIES.forEach(c => {
-      c.p.forEach(poly => {
-        let d = '', inBounds = false;
-        poly.forEach(ring => {
-          ring.forEach((pt, j) => {
-            const [x, y] = window.projectMercator(pt[0], pt[1]);
-            if (x >= minX - w*10 && x <= maxX + w*10 && y >= minY - h*10 && y <= maxY + h*10) inBounds = true;
-            d += (j === 0 ? 'M' : 'L') + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
-          });
-          d += 'Z ';
-        });
-        if (!inBounds) return;
-        const path = document.createElementNS(ns, 'path');
-        path.setAttribute('d', d);
-        path.setAttribute('class', 'country' + (window.TRIP_COUNTRIES.has(c.n) ? ' highlight' : ''));
-        path.setAttribute('fill-rule', 'evenodd');
-        g.appendChild(path);
-      });
-    });
-    svg.appendChild(g);
-    const tripProjected = tripStops.map(s => {
-      const [x, y] = window.projectMercator(s.lon, s.lat);
-      return { ...s, x, y };
-    });
-    if (tripProjected.length > 1 && mapScale !== 'city') {
-      let routeD = '';
-      tripProjected.forEach((p, j) => { routeD += (j === 0 ? 'M' : 'L') + p.x.toFixed(1) + ',' + p.y.toFixed(1) + ' '; });
-      const route = document.createElementNS(ns, 'path');
-      route.setAttribute('d', routeD);
-      route.setAttribute('class', 'route-line');
-      svg.appendChild(route);
-    }
-    if (excursions.length > 0) {
-      const exProjected = excursions.map(e => { const [x, y] = window.projectMercator(e.lon, e.lat); return { ...e, x, y }; });
-      const currentP = tripProjected.find(p => p.role === 'current');
-      let exD = '';
-      if (currentP) exD += 'M' + currentP.x.toFixed(1) + ',' + currentP.y.toFixed(1) + ' ';
-      exProjected.forEach(p => { exD += 'L' + p.x.toFixed(1) + ',' + p.y.toFixed(1) + ' '; });
-      const exLine = document.createElementNS(ns, 'path');
-      exLine.setAttribute('d', exD);
-      exLine.setAttribute('class', 'excursion-line');
-      svg.appendChild(exLine);
-    }
-    function svgToScreen(sx, sy) {
-      const scale = Math.min(rect.width / w, rect.height / h);
-      let offsetX = 0, offsetY = 0;
-      if (w / h > rect.width / rect.height) offsetY = (rect.height - h * scale) / 2;
-      else offsetX = (rect.width - w * scale) / 2;
-      return [(sx - minX) * scale + offsetX, (sy - minY) * scale + offsetY];
-    }
-    tripProjected.forEach(p => {
-      if (mapScale === 'city' && p.role !== 'current') return;
-      const [px, py] = svgToScreen(p.x, p.y);
-      if (px < -30 || px > rect.width + 30 || py < -30 || py > rect.height + 30) return;
-      const m = document.createElement('div');
-      m.className = 'mini-marker ' + p.type + (p.role === 'current' ? ' current' : ' context');
-      m.style.left = px + 'px'; m.style.top = py + 'px';
-      wrap.appendChild(m);
-      const lbl = document.createElement('div');
-      lbl.className = 'mini-marker-label' + (p.role === 'current' ? '' : ' context');
-      lbl.textContent = p.role === 'current' && p.name.length > 18 ? 'Hotel' : p.name;
-      lbl.style.left = px + 'px'; lbl.style.top = py + 'px';
-      wrap.appendChild(lbl);
-    });
-    excursions.forEach(e => {
-      const [ex, ey] = window.projectMercator(e.lon, e.lat);
-      const [px, py] = svgToScreen(ex, ey);
-      if (px < -30 || px > rect.width + 30 || py < -30 || py > rect.height + 30) return;
-      const m = document.createElement('div');
-      m.className = 'mini-marker excursion';
-      m.style.left = px + 'px'; m.style.top = py + 'px';
-      m.textContent = e.order;
-      wrap.appendChild(m);
-      const lbl = document.createElement('div');
-      lbl.className = 'mini-marker-label excursion';
-      lbl.textContent = e.name;
-      lbl.style.left = px + 'px'; lbl.style.top = py + 'px';
-      wrap.appendChild(lbl);
-    });
-  }
-  if (window.COUNTRIES) render();
-  else {
-    let tries = 0;
-    const checkInterval = setInterval(() => {
-      if (window.COUNTRIES) { clearInterval(checkInterval); render(); }
-      else if (++tries > 50) { clearInterval(checkInterval); loading.textContent = 'Map data unavailable'; }
-    }, 100);
-  }
-  window.addEventListener('resize', () => {
-    while (svg.firstChild) svg.removeChild(svg.firstChild);
-    document.querySelectorAll('.mini-marker, .mini-marker-label').forEach(el => el.remove());
-    render();
-  });
-})();
-</script>
-</body>
-</html>
+</body></html>

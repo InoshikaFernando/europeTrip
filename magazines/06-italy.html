@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<title>Munasinghe Travel Magazine · ITALY Issue · July 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+@page { size:A4 portrait; margin:0; }
+html, body { font-family:'Plus Jakarta Sans', sans-serif; background:#222; color:#1a1a1a; }
+body { padding:20px; }
+.mag-page { width:210mm; height:295mm; background:#fefcf7; margin:14px auto; box-shadow:0 8px 32px rgba(0,0,0,0.25); position:relative; overflow:hidden; page-break-after:always; break-after:page; }
+.mag-page:last-child { page-break-after:auto; }
+.mag-cover { background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.7) 100%), url('../images/italy/cover.jpg') center/cover #3a1f0a; color:white; display:flex; flex-direction:column; padding:18mm 16mm; position:relative; }
+.mag-cover::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 20% 80%, #1e6e4a40, transparent 50%); pointer-events:none; }
+.cv-issue { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:rgba(255,255,255,0.85); margin-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:4px; display:flex; justify-content:space-between; }
+.cv-flag { font-size:14px; }
+.cv-brand { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:18px; color:rgba(255,255,255,0.95); letter-spacing:0.05em; margin-bottom:auto; }
+.cv-title { font-family:'Fraunces', serif; font-weight:700; font-size:96px; line-height:0.9; color:white; margin-bottom:6px; letter-spacing:-0.02em; text-shadow:2px 4px 12px rgba(0,0,0,0.4); }
+.cv-sub { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:24px; color:rgba(255,255,255,0.95); margin-bottom:24px; text-shadow:1px 2px 8px rgba(0,0,0,0.5); }
+.cv-tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+.cv-tag { background:rgba(255,255,255,0.15); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.3); border-radius:100px; padding:5px 14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.15em; text-transform:uppercase; }
+.cv-features { font-family:'Fraunces', serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.9); border-top:1px solid rgba(255,255,255,0.3); padding-top:12px; margin-top:8px; }
+.cv-features b { font-weight:700; color:#f0d68c; }
+.cv-meta { position:absolute; bottom:14mm; right:16mm; text-align:right; font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; color:rgba(255,255,255,0.7); }
+.mag-welcome { padding:22mm 18mm; }
+.wl-num { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:14px; color:#7a4a2e; margin-bottom:4px; }
+.wl-title { font-family:'Fraunces', serif; font-weight:700; font-size:56px; line-height:1; color:#1a1a1a; margin-bottom:24px; letter-spacing:-0.02em; }
+.wl-divider { width:60px; height:3px; background:#1e6e4a; margin-bottom:24px; }
+.wl-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; column-count:2; column-gap:14mm; column-rule:1px solid #e8d6a8; color:#3d3024; max-width:100%; margin-bottom:24mm; }
+.wl-body p { margin-bottom:10px; text-align:justify; }
+.wl-body p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:62px; float:left; line-height:0.9; padding:2px 8px 0 0; color:#7a4a2e; }
+.toc-title { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#7a4a2e; border-bottom:2px solid #7a4a2e; padding-bottom:8px; margin-bottom:14px; }
+.toc-list { list-style:none; column-count:2; column-gap:14mm; font-family:'Fraunces', serif; font-size:13px; line-height:1.8; }
+.toc-list li { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px dotted #1e6e4a40; padding:4px 0; break-inside:avoid; }
+.toc-list .toc-name { font-style:italic; }
+.toc-list .toc-page { font-family:'JetBrains Mono', monospace; font-size:10px; color:#8b6914; font-weight:700; }
+.mag-spread { padding:14mm 16mm; display:flex; flex-direction:column; }
+.sp-eyebrow { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#7a4a2e; margin-bottom:8px; }
+.sp-headline { font-family:'Fraunces', serif; font-weight:700; font-size:38px; line-height:0.95; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.01em; }
+.sp-deck { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:15px; line-height:1.4; color:#5a4a3a; margin-bottom:10px; max-width:92%; }
+.sp-meta { display:flex; gap:14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; border-top:1px solid #1e6e4a; padding-top:8px; margin-bottom:14px; }
+.sp-hero { width:100%; height:64mm; background:#e8dcc0; background-size:cover; background-position:center; margin-bottom:6px; position:relative; border-radius:2px; }
+.sp-hero .ph-name { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:repeating-linear-gradient(45deg,#e8dcc0 0 10px,#ddd1b3 10px 20px); font-family:'JetBrains Mono', monospace; font-size:10px; color:#8b6914; }
+.sp-hero .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
+.sp-caption { font-family:'Fraunces', serif; font-style:italic; font-size:9.5px; color:#5a4a3a; margin-bottom:10px; padding-left:12px; border-left:2px solid #1e6e4a; }
+.sp-cols { column-count:2; column-gap:10mm; column-rule:0; }
+.sp-cols p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; margin-bottom:7px; }
+.sp-cols p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:38px; float:left; line-height:0.9; padding:2px 6px 0 0; color:#7a4a2e; }
+.sp-quote { break-inside:avoid; font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:14px; line-height:1.4; color:#7a4a2e; text-align:center; padding:10px 12px; border-top:1px solid #1e6e4a; border-bottom:1px solid #1e6e4a; margin:10px 0; }
+.sp-quote::before, .sp-quote::after { content:'"'; font-size:30px; line-height:0; vertical-align:-12px; color:#1e6e4a; padding:0 3px; }
+.mag-duo { padding:14mm 16mm; display:flex; flex-direction:column; gap:6mm; }
+.duo-row { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
+.duo-row.alt { grid-template-columns:2fr 1fr; }
+.duo-photo { background:#e8dcc0; aspect-ratio:4/5; position:relative; border-radius:2px; overflow:hidden; background-size:cover; background-position:center; }
+.duo-photo.wide { aspect-ratio:16/10; }
+.duo-photo .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
+.duo-photo > .ph-name { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; background:repeating-linear-gradient(45deg, #e8dcc0 0 8px, #ddd1b3 8px 16px); font-family:'JetBrains Mono', monospace; font-size:8px; color:#8b6914; text-align:center; padding:8px; gap:4px; }
+.duo-text { display:flex; flex-direction:column; justify-content:center; padding:0 4mm; }
+.duo-text h3 { font-family:'Fraunces', serif; font-weight:700; font-size:28px; line-height:1; color:#1a1a1a; margin-bottom:8px; }
+.duo-text p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; }
+.duo-text .kicker { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.3em; text-transform:uppercase; color:#7a4a2e; margin-bottom:6px; }
+.mag-food { padding:18mm 16mm; }
+.fd-headline { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.02em; }
+.fd-headline em { font-style:italic; font-weight:400; color:#7a4a2e; }
+.fd-deck { font-family:'Fraunces', serif; font-style:italic; font-size:16px; color:#5a4a3a; margin-bottom:18px; border-bottom:2px solid #1e6e4a; padding-bottom:14px; }
+.fd-grid { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
+.fd-card { background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; overflow:hidden; }
+.fd-card .fd-img { width:100%; aspect-ratio:5/3; background:#e8dcc0; position:relative; display:flex; align-items:center; justify-content:center; background-image:repeating-linear-gradient(45deg, #e8dcc0 0 8px, #ddd1b3 8px 16px); }
+.fd-card .fd-img .ph { font-family:'JetBrains Mono', monospace; font-size:8px; color:#8b6914; text-align:center; padding:8px; }
+.fd-card .fd-body { padding:10px 14px 14px; }
+.fd-card .fd-num { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:22px; color:#7a4a2e; line-height:1; }
+.fd-card .fd-name { font-family:'Fraunces', serif; font-weight:700; font-size:18px; line-height:1.1; color:#1a1a1a; margin:4px 0 6px; }
+.fd-card .fd-desc { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.5; color:#5a4a3a; margin-bottom:5px; }
+.fd-card .fd-where { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.15em; color:#8b6914; text-transform:uppercase; }
+.mag-reflection { background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%); padding:24mm 22mm; display:flex; flex-direction:column; }
+.rf-eyebrow { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#7a4a2e; margin-bottom:8px; }
+.rf-headline { font-family:'Fraunces', serif; font-weight:700; font-size:54px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
+.rf-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; color:#3d3024; margin-bottom:24px; max-width:85%; }
+.rf-body p { margin-bottom:12px; }
+.rf-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:6mm; margin-bottom:16px; }
+.rf-card { background:rgba(255,255,255,0.6); padding:14px 16px; border-left:3px solid #7a4a2e; }
+.rf-card .rf-label { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#7a4a2e; margin-bottom:4px; }
+.rf-card .rf-value { font-family:'Fraunces', serif; font-size:13px; line-height:1.4; color:#3d3024; }
+.rf-signoff { margin-top:auto; padding-top:18mm; font-family:'Fraunces', serif; font-style:italic; font-size:13px; color:#7a4a2e; text-align:right; }
+.mag-back { background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%), url('../images/italy/back-cover.jpg') center/cover #3a1f0a; color:white; display:flex; flex-direction:column; justify-content:flex-end; padding:24mm 20mm; }
+.bc-next { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:6px; }
+.bc-country { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:white; margin-bottom:8px; }
+.bc-tagline { font-family:'Fraunces', serif; font-style:italic; font-size:18px; color:rgba(255,255,255,0.9); border-top:1px solid rgba(255,255,255,0.4); padding-top:14px; margin-bottom:12px; max-width:70%; }
+.bc-mag { position:absolute; top:20mm; left:20mm; font-family:'Fraunces', serif; font-style:italic; font-weight:300; font-size:16px; color:rgba(255,255,255,0.9); letter-spacing:0.05em; }
+.bc-issue { position:absolute; top:20mm; right:20mm; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; color:rgba(255,255,255,0.7); }
+.mag-page .folio { position:absolute; bottom:4mm; left:0; right:0; text-align:center; font-family:'Fraunces', serif; font-style:italic; font-size:8.5px; color:#8b6914; }
+@media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
+</style></head>
+<body>
+
+<div class="mag-page mag-cover">
+  <div class="cv-issue"><span>Issue 06 · 2026</span><span class="cv-flag">🇮🇹 ITALY</span></div>
+  <div class="cv-brand">Munasinghe Travel Magazine</div>
+  <div>
+    <div class="cv-title">ITALY</div>
+    <div class="cv-sub">Venice · Florence · Rome · Naples · Milan · Vatican</div>
+    <div class="cv-tags">
+      <span class="cv-tag">★ 6 Cities · 1 Week</span>
+      <span class="cv-tag">🎨 Renaissance + Roman</span>
+      <span class="cv-tag">🍝 Tortellini to Tiramisu</span>
+    </div>
+    <div class="cv-features">INSIDE: <b>Venice's 400 bridges</b> at sunrise · <b>Florence's Duomo</b> and the Medici · <b>Rome's Colosseum</b> and the Vatican Museums · <b>Pompeii frozen at 79 AD</b> · <b>Milan</b> and Leonardo's Last Supper</div>
+  </div>
+  <div class="cv-meta">Munasinghe Family · Fri 17 Jul — Wed 22 Jul 2026</div>
+</div>
+
+<div class="mag-page mag-welcome">
+  <div class="wl-num">No. 06 · A Letter from the Road</div>
+  <div class="wl-title">Welcome to<br>everything at once.</div>
+  <div class="wl-divider"></div>
+  <div class="wl-body">
+    <p>Italy was the engine of the trip. We had six days, six cities, six wildly different histories, and three children who fell in love with gelato early and never recovered. We crossed the Alps from Slovenia. We arrived in Venice on a hot Friday. By the time we left Naples on the following Wednesday, we had walked through more Roman ruins, more Renaissance frescoes, more medieval churches, and more pasta plates than the rest of the trip combined.</p>
+    <p>This is the longest issue of the magazine, because Italy refused to be smaller.</p>
+    <p>You will find inside: the Doge's Palace, the dome of Brunelleschi, the Sistine Chapel, the ruins of Pompeii frozen in 79 AD, and the world's finest pizza arguments. We could not put it all here. We tried.</p>
+    <p style="font-style:italic; color:#7a4a2e; text-align:right; margin-top:14px;">— The Munasinghes, 2026</p>
+  </div>
+  <div class="toc-title">In this issue</div>
+  <ul class="toc-list">
+    <li><span class="toc-name">Welcome — Everything at Once</span><span class="toc-page">02</span></li>
+    <li><span class="toc-name">Venice — A City Floating</span><span class="toc-page">03</span></li>
+    <li><span class="toc-name">Florence — Where the Renaissance Began</span><span class="toc-page">04</span></li>
+    <li><span class="toc-name">Rome + Vatican — The Eternal City</span><span class="toc-page">05</span></li>
+    <li><span class="toc-name">Tastes of Italy</span><span class="toc-page">06</span></li>
+    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">07</span></li>
+  </ul>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">COVER STORY · VENICE · DAY 10</div>
+  <div class="sp-headline">A city built<br>on stilts<br>by refugees.</div>
+  <div class="sp-deck">Venice was founded by people fleeing barbarian invasions in the 5th century. They chose 118 muddy islands in a lagoon because they were impossible to attack. Then they built one of the richest cities in human history on top of them.</div>
+  <div class="sp-meta"><span>Sat 18 Jul 2026</span><span>San Marco, Doge's Palace, Grand Canal</span><span>10 hrs · walk + vaporetto + gondola</span></div>
+  <div class="sp-hero" style="background-image:url('../images/italy/day-10-venice-grand-canal-dawn.jpg');">
+    <div class="ph-name">📷 images/italy/day-10-venice-grand-canal-dawn.jpg</div>
+    <div class="ph-info">HERO PHOTO · TBD</div>
+  </div>
+  <div class="sp-caption">Sunrise on the Grand Canal. Venice's palaces rise directly from the water — no curb, no foundation visible, just marble meeting tide.</div>
+  <div class="sp-cols">
+    <p>You arrive in Venice and you immediately abandon your assumptions about what a city is. There are no cars. There are no streets in the usual sense. The Piazza San Marco is the only piazza, and everything else is a calle (alley), a campo (square), or a fondamenta (waterfront). The Grand Canal does what Broadway and the Champs-Élysées do in other cities: it is the artery, the stage, the spine. Vaporetti — water buses — chug past every five minutes. Gondolas slip silently between them.</p>
+    <div class="sp-quote">A city without roads — built on 118 islands and 400 bridges. Sinking by 2mm a year. Fought for, stone by stone.</div>
+    <p>We did Venice in one full day, which is heresy but inevitable. We took a vaporetto down the Grand Canal in the morning. We climbed the Campanile in San Marco for the view. We toured the Doge's Palace, walked the Bridge of Sighs, and got lost (deliberately) in Cannaregio. We took a gondola at sunset — overpriced, magical, photographed by every tourist on every bridge as we passed under them. Avin sat in the gondolier's lap. He had to be peeled off, screaming, when the trip ended.</p>
+  </div>
+  <div class="folio">— Issue 06 · ITALY · 03 —</div>
+</div>
+
+<div class="mag-page mag-duo">
+  <div class="sp-eyebrow" style="margin-bottom:4px;">FLORENCE · DAY 11</div>
+  <div class="sp-headline" style="font-size:38px; margin-bottom:14px;">Where the Renaissance<br><em>became inevitable.</em></div>
+  <div class="duo-row alt">
+    <div class="duo-photo wide" style="background-image:url('../images/italy/day-11-florence-duomo.jpg');">
+      <div class="ph-name">📷 images/italy/day-11-florence-duomo.jpg</div>
+      <div class="ph-info">PHOTO · TBD</div>
+    </div>
+    <div class="duo-text">
+      <div class="kicker">★ Built 1296-1436</div>
+      <h3>The Duomo</h3>
+      <p>Brunelleschi's dome — the largest masonry dome in the world. He invented new construction methods to build it. No one had managed it for 140 years before him.</p>
+    </div>
+  </div>
+
+  <div class="duo-row">
+    <div class="duo-photo" style="background-image:url('../images/italy/day-11-ponte-vecchio.jpg');">
+      <div class="ph-name">📷 images/italy/day-11-ponte-vecchio.jpg</div>
+      <div class="ph-info">PHOTO · TBD</div>
+    </div>
+    <div class="duo-photo" style="background-image:url('../images/italy/day-11-david-replica.jpg');">
+      <div class="ph-name">📷 images/italy/day-11-david-replica.jpg</div>
+      <div class="ph-info">PHOTO · TBD</div>
+    </div>
+  </div>
+
+  <div class="duo-row alt" style="grid-template-columns:1fr 2fr;">
+    <div class="duo-text" style="text-align:right; padding-right:6mm;">
+      <div class="kicker" style="text-align:right;">★ Bridge of Gold</div>
+      <h3 style="font-size:22px;">Ponte Vecchio</h3>
+      <p>The only bridge in Florence not destroyed by retreating Germans in 1944. Built 1345. Still lined with goldsmith shops. Still survives every Arno flood.</p>
+    </div>
+    <div class="duo-photo wide" style="background-image:url('../images/italy/day-11-uffizi-corridor.jpg');">
+      <div class="ph-name">📷 images/italy/day-11-uffizi-corridor.jpg</div>
+      <div class="ph-info">PHOTO · TBD</div>
+    </div>
+  </div>
+  <div class="folio">— Issue 06 · ITALY · 04 —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">ROME + VATICAN · DAYS 12-14</div>
+  <div class="sp-headline">A city the<br>Romans built,<br>the popes kept.</div>
+  <div class="sp-deck">Three days in Rome was not enough. The Colosseum, the Forum, the Pantheon, the Vatican Museums, the Sistine Chapel, the Spanish Steps, the Trevi Fountain — every corner had something 2,000 years old.</div>
+  <div class="sp-meta"><span>Mon 20 — Wed 22 Jul 2026</span><span>Rome + Vatican City</span><span>3 days · 30 km walked</span></div>
+  <div class="sp-hero" style="background-image:url('../images/italy/day-12-colosseum-interior.jpg');">
+    <div class="ph-name">📷 images/italy/day-12-colosseum-interior.jpg</div>
+    <div class="ph-info">HERO PHOTO · TBD</div>
+  </div>
+  <div class="sp-caption">Inside the Colosseum — completed 80 AD, held 65,000 spectators, hosted 400 years of gladiator combat.</div>
+  <div class="sp-cols">
+    <p>You cannot understand Rome in three days. We did not try. We picked five sites — the Colosseum and Forum, the Pantheon, the Spanish Steps, the Vatican Museums, and the Trevi Fountain — and we walked between them slowly, eating gelato every three streets to keep the kids motivated. The Vatican Day deserves its own issue: four hours in the Vatican Museums (we cried looking at the Sistine Chapel), an hour in St Peter's Basilica, lunch in Borgo Pio, the Castel Sant'Angelo, gelato at Piazza Navona.</p>
+    <div class="sp-quote">All roads lead to Rome. And they really did: 80,000 km of Roman roads still shape Europe today.</div>
+    <p>On Day 13 we did the Pompeii day trip. The drive from Rome takes 2.5 hours. Pompeii was buried by Vesuvius in 79 AD and forgotten for 1,700 years. Walking its streets is the closest thing to time travel humans have managed. We stood inside a baker's shop and looked at the oven where bread was still inside on the morning the volcano erupted.</p>
+  </div>
+  <div class="folio">— Issue 06 · ITALY · 05 —</div>
+</div>
+
+<div class="mag-page mag-food">
+  <div class="sp-eyebrow">★ TASTES OF THE TRIP</div>
+  <div class="fd-headline">Six things <em>we ate</em><br>and won't forget.</div>
+  <div class="fd-deck">From morning coffee to evening pastries — the flavours that defined this leg.</div>
+  <div class="fd-grid">
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/italy/food-01-pizza.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/italy/food-01-pizza.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">01</div>
+        <div class="fd-name">Pizza Margherita</div>
+        <div class="fd-desc">Naples' gift to the world. Tomato, mozzarella, basil — invented in 1889 for Queen Margherita of Savoy. Wood-fired, eaten folded.</div>
+        <div class="fd-where">📍 L'Antica Pizzeria da Michele · €5 · Day 13</div>
+      </div>
+    </div>
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/italy/food-02-cacio-pepe.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/italy/food-02-cacio-pepe.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">02</div>
+        <div class="fd-name">Cacio e Pepe</div>
+        <div class="fd-desc">Three ingredients: spaghetti, pecorino romano, black pepper. Trust the technique. Roman comfort food.</div>
+        <div class="fd-where">📍 Roscioli · €18 · Day 12</div>
+      </div>
+    </div>
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/italy/food-03-fiorentina.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/italy/food-03-fiorentina.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">03</div>
+        <div class="fd-name">Bistecca alla Fiorentina</div>
+        <div class="fd-desc">A T-bone steak from Tuscan Chianina cattle, cooked rare over charcoal. Served by weight (€8/100g). Eat with both hands.</div>
+        <div class="fd-where">📍 Trattoria Mario · €45 · Day 11</div>
+      </div>
+    </div>
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/italy/food-04-tiramisu.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/italy/food-04-tiramisu.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">04</div>
+        <div class="fd-name">Tiramisu</div>
+        <div class="fd-desc">"Pick me up" — espresso-soaked savoiardi, mascarpone cream, cocoa. The right one is wet, cool, and barely holds its shape.</div>
+        <div class="fd-where">📍 Pompi · €5 · Day 12</div>
+      </div>
+    </div>
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/italy/food-05-gelato.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/italy/food-05-gelato.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">05</div>
+        <div class="fd-name">Gelato (Pistacchio)</div>
+        <div class="fd-desc">Made with Sicilian Bronte pistachios. The bright-green stuff is fake. The real gelato is brown-green and tastes like ground nuts.</div>
+        <div class="fd-where">📍 Gelateria del Teatro · €4 · Day 12</div>
+      </div>
+    </div>
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/italy/food-06-espresso.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/italy/food-06-espresso.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">06</div>
+        <div class="fd-name">Espresso</div>
+        <div class="fd-desc">At a counter, standing up, in twenty seconds. €1. Bitter. Hot. The right way to end every Italian meal.</div>
+        <div class="fd-where">📍 Any bar · €1 · Daily</div>
+      </div>
+    </div>
+  </div>
+  <div class="folio">— Issue 06 · ITALY · 06 —</div>
+</div>
+
+<div class="mag-page mag-reflection">
+  <div class="rf-eyebrow">REFLECTIONS · ITALY</div>
+  <div class="rf-headline">Two thousand years<br>in seven days.</div>
+  <div class="rf-body">
+    <p>Italy was the longest, hottest, most exhausting, most rewarding week of the trip. We walked an average of 18 kilometres a day. We ate gelato three times a day. We saw the Sistine Chapel, the Mona Lisa's sister-painting at the Uffizi, the throne where Caesar was killed, the inn where Caravaggio brawled, the oven where Pompeii's bread is still burning.</p>
+    <p>The kids will remember the volume. The volume of stone, of frescoes, of statues, of churches, of food. Italy is a country that does not edit. It piles up its history on the streets and asks you to walk through it.</p>
+  </div>
+  <div class="rf-grid">
+    <div class="rf-card">
+      <div class="rf-label">Favourite moment</div>
+      <div class="rf-value">Sistine Chapel. We all cried. So did half the room.</div>
+    </div>
+    <div class="rf-card">
+      <div class="rf-label">Hardest moment</div>
+      <div class="rf-value">Rome at 35°C in mid-July. We bought four water bottles per person per day.</div>
+    </div>
+    <div class="rf-card">
+      <div class="rf-label">If we come back…</div>
+      <div class="rf-value">A week each for Florence, Rome, and the Amalfi Coast. Sicily next. Then Puglia.</div>
+    </div>
+  </div>
+  <div class="rf-signoff">— Navin, Lana, Avisha, Aviann & Avin Munasinghe<br>Venice → Florence → Rome → Pompeii → Vatican → Milan · 17–22 July 2026</div>
+</div>
+
+<div class="mag-page mag-back">
+  <div class="bc-mag">Munasinghe Travel Magazine</div>
+  <div class="bc-issue">No. 06 · One of Fifteen</div>
+  <div class="bc-next">★ NEXT ISSUE ★</div>
+  <div class="bc-country">SWITZERLAND</div>
+  <div class="bc-tagline">The Matterhorn, the Glacier Express, and 700 years of staying out of everyone else's wars.</div>
+</div>
+
+</body></html>

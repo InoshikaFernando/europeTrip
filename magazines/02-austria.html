@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<title>Munasinghe Travel Magazine · AUSTRIA Issue · July 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+@page { size:A4 portrait; margin:0; }
+html, body { font-family:'Plus Jakarta Sans', sans-serif; background:#222; color:#1a1a1a; }
+body { padding:20px; }
+.mag-page { width:210mm; height:295mm; background:#fefcf7; margin:14px auto; box-shadow:0 8px 32px rgba(0,0,0,0.25); position:relative; overflow:hidden; page-break-after:always; break-after:page; }
+.mag-page:last-child { page-break-after:auto; }
+.mag-cover { background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.7) 100%), url('../images/austria/cover.jpg') center/cover #1a3a5c; color:white; display:flex; flex-direction:column; padding:18mm 16mm; position:relative; }
+.mag-cover::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 20% 80%, #c89b3c40, transparent 50%); pointer-events:none; }
+.cv-issue { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:rgba(255,255,255,0.85); margin-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:4px; display:flex; justify-content:space-between; }
+.cv-flag { font-size:14px; }
+.cv-brand { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:18px; color:rgba(255,255,255,0.95); letter-spacing:0.05em; margin-bottom:auto; }
+.cv-title { font-family:'Fraunces', serif; font-weight:700; font-size:96px; line-height:0.9; color:white; margin-bottom:6px; letter-spacing:-0.02em; text-shadow:2px 4px 12px rgba(0,0,0,0.4); }
+.cv-sub { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:24px; color:rgba(255,255,255,0.95); margin-bottom:24px; text-shadow:1px 2px 8px rgba(0,0,0,0.5); }
+.cv-tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+.cv-tag { background:rgba(255,255,255,0.15); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.3); border-radius:100px; padding:5px 14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.15em; text-transform:uppercase; }
+.cv-features { font-family:'Fraunces', serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.9); border-top:1px solid rgba(255,255,255,0.3); padding-top:12px; margin-top:8px; }
+.cv-features b { font-weight:700; color:#f0d68c; }
+.cv-meta { position:absolute; bottom:14mm; right:16mm; text-align:right; font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; color:rgba(255,255,255,0.7); }
+.mag-welcome { padding:22mm 18mm; }
+.wl-num { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:14px; color:#28508c; margin-bottom:4px; }
+.wl-title { font-family:'Fraunces', serif; font-weight:700; font-size:56px; line-height:1; color:#1a1a1a; margin-bottom:24px; letter-spacing:-0.02em; }
+.wl-divider { width:60px; height:3px; background:#c89b3c; margin-bottom:24px; }
+.wl-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; column-count:2; column-gap:14mm; column-rule:1px solid #e8d6a8; color:#3d3024; max-width:100%; margin-bottom:24mm; }
+.wl-body p { margin-bottom:10px; text-align:justify; }
+.wl-body p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:62px; float:left; line-height:0.9; padding:2px 8px 0 0; color:#28508c; }
+.toc-title { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#28508c; border-bottom:2px solid #28508c; padding-bottom:8px; margin-bottom:14px; }
+.toc-list { list-style:none; column-count:2; column-gap:14mm; font-family:'Fraunces', serif; font-size:13px; line-height:1.8; }
+.toc-list li { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px dotted #c89b3c40; padding:4px 0; break-inside:avoid; }
+.toc-list .toc-name { font-style:italic; }
+.toc-list .toc-page { font-family:'JetBrains Mono', monospace; font-size:10px; color:#8b6914; font-weight:700; }
+.mag-spread { padding:14mm 16mm; display:flex; flex-direction:column; }
+.sp-eyebrow { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#28508c; margin-bottom:8px; }
+.sp-headline { font-family:'Fraunces', serif; font-weight:700; font-size:38px; line-height:0.95; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.01em; }
+.sp-deck { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:15px; line-height:1.4; color:#5a4a3a; margin-bottom:10px; max-width:92%; }
+.sp-meta { display:flex; gap:14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; border-top:1px solid #c89b3c; padding-top:8px; margin-bottom:14px; }
+.sp-hero { width:100%; height:64mm; background:#e8dcc0; background-size:cover; background-position:center; margin-bottom:6px; position:relative; border-radius:2px; }
+.sp-hero .ph-name { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:repeating-linear-gradient(45deg,#e8dcc0 0 10px,#ddd1b3 10px 20px); font-family:'JetBrains Mono', monospace; font-size:10px; color:#8b6914; }
+.sp-hero .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
+.sp-caption { font-family:'Fraunces', serif; font-style:italic; font-size:9.5px; color:#5a4a3a; margin-bottom:10px; padding-left:12px; border-left:2px solid #c89b3c; }
+.sp-cols { column-count:2; column-gap:10mm; column-rule:0; }
+.sp-cols p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; margin-bottom:7px; }
+.sp-cols p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:38px; float:left; line-height:0.9; padding:2px 6px 0 0; color:#28508c; }
+.sp-quote { break-inside:avoid; font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:14px; line-height:1.4; color:#28508c; text-align:center; padding:10px 12px; border-top:1px solid #c89b3c; border-bottom:1px solid #c89b3c; margin:10px 0; }
+.sp-quote::before, .sp-quote::after { content:'"'; font-size:30px; line-height:0; vertical-align:-12px; color:#c89b3c; padding:0 3px; }
+.mag-duo { padding:14mm 16mm; display:flex; flex-direction:column; gap:6mm; }
+.duo-row { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
+.duo-row.alt { grid-template-columns:2fr 1fr; }
+.duo-photo { background:#e8dcc0; aspect-ratio:4/5; position:relative; border-radius:2px; overflow:hidden; background-size:cover; background-position:center; }
+.duo-photo.wide { aspect-ratio:16/10; }
+.duo-photo .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
+.duo-photo > .ph-name { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; background:repeating-linear-gradient(45deg, #e8dcc0 0 8px, #ddd1b3 8px 16px); font-family:'JetBrains Mono', monospace; font-size:8px; color:#8b6914; text-align:center; padding:8px; gap:4px; }
+.duo-text { display:flex; flex-direction:column; justify-content:center; padding:0 4mm; }
+.duo-text h3 { font-family:'Fraunces', serif; font-weight:700; font-size:28px; line-height:1; color:#1a1a1a; margin-bottom:8px; }
+.duo-text p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; }
+.duo-text .kicker { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.3em; text-transform:uppercase; color:#28508c; margin-bottom:6px; }
+.mag-food { padding:18mm 16mm; }
+.fd-headline { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.02em; }
+.fd-headline em { font-style:italic; font-weight:400; color:#28508c; }
+.fd-deck { font-family:'Fraunces', serif; font-style:italic; font-size:16px; color:#5a4a3a; margin-bottom:18px; border-bottom:2px solid #c89b3c; padding-bottom:14px; }
+.fd-grid { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
+.fd-card { background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; overflow:hidden; }
+.fd-card .fd-img { width:100%; aspect-ratio:5/3; background:#e8dcc0; position:relative; display:flex; align-items:center; justify-content:center; background-image:repeating-linear-gradient(45deg, #e8dcc0 0 8px, #ddd1b3 8px 16px); }
+.fd-card .fd-img .ph { font-family:'JetBrains Mono', monospace; font-size:8px; color:#8b6914; text-align:center; padding:8px; }
+.fd-card .fd-body { padding:10px 14px 14px; }
+.fd-card .fd-num { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:22px; color:#28508c; line-height:1; }
+.fd-card .fd-name { font-family:'Fraunces', serif; font-weight:700; font-size:18px; line-height:1.1; color:#1a1a1a; margin:4px 0 6px; }
+.fd-card .fd-desc { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.5; color:#5a4a3a; margin-bottom:5px; }
+.fd-card .fd-where { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.15em; color:#8b6914; text-transform:uppercase; }
+.mag-reflection { background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%); padding:24mm 22mm; display:flex; flex-direction:column; }
+.rf-eyebrow { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#28508c; margin-bottom:8px; }
+.rf-headline { font-family:'Fraunces', serif; font-weight:700; font-size:54px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
+.rf-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; color:#3d3024; margin-bottom:24px; max-width:85%; }
+.rf-body p { margin-bottom:12px; }
+.rf-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:6mm; margin-bottom:16px; }
+.rf-card { background:rgba(255,255,255,0.6); padding:14px 16px; border-left:3px solid #28508c; }
+.rf-card .rf-label { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#28508c; margin-bottom:4px; }
+.rf-card .rf-value { font-family:'Fraunces', serif; font-size:13px; line-height:1.4; color:#3d3024; }
+.rf-signoff { margin-top:auto; padding-top:18mm; font-family:'Fraunces', serif; font-style:italic; font-size:13px; color:#28508c; text-align:right; }
+.mag-back { background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%), url('../images/austria/back-cover.jpg') center/cover #1a3a5c; color:white; display:flex; flex-direction:column; justify-content:flex-end; padding:24mm 20mm; }
+.bc-next { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:6px; }
+.bc-country { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:white; margin-bottom:8px; }
+.bc-tagline { font-family:'Fraunces', serif; font-style:italic; font-size:18px; color:rgba(255,255,255,0.9); border-top:1px solid rgba(255,255,255,0.4); padding-top:14px; margin-bottom:12px; max-width:70%; }
+.bc-mag { position:absolute; top:20mm; left:20mm; font-family:'Fraunces', serif; font-style:italic; font-weight:300; font-size:16px; color:rgba(255,255,255,0.9); letter-spacing:0.05em; }
+.bc-issue { position:absolute; top:20mm; right:20mm; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; color:rgba(255,255,255,0.7); }
+.mag-page .folio { position:absolute; bottom:4mm; left:0; right:0; text-align:center; font-family:'Fraunces', serif; font-style:italic; font-size:8.5px; color:#8b6914; }
+@media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
+</style></head>
+<body>
+
+<div class="mag-page mag-cover">
+  <div class="cv-issue"><span>Issue 02 · 2026</span><span class="cv-flag">🇦🇹 AUSTRIA</span></div>
+  <div class="cv-brand">Munasinghe Travel Magazine</div>
+  <div>
+    <div class="cv-title">AUSTRIA</div>
+    <div class="cv-sub">Hallstatt · Salzburg · Vienna</div>
+    <div class="cv-tags">
+      <span class="cv-tag">★ 600 Years of Habsburgs</span>
+      <span class="cv-tag">🎼 Mozart's Birthplace</span>
+      <span class="cv-tag">🏔 Salt + the Alps</span>
+    </div>
+    <div class="cv-features">INSIDE: <b>Hallstatt's 7,000-year-old salt mines</b> · <b>Mozart's 1756 birthplace</b> in Salzburg · <b>Schönbrunn Palace</b> in Vienna · <b>The Sound of Music hills</b> and a lakeside pletna boat ride</div>
+  </div>
+  <div class="cv-meta">Munasinghe Family · Sat 11 Jul — Wed 15 Jul 2026</div>
+</div>
+
+<div class="mag-page mag-welcome">
+  <div class="wl-num">No. 02 · A Letter from the Road</div>
+  <div class="wl-title">Welcome to<br>the Salt Country</div>
+  <div class="wl-divider"></div>
+  <div class="wl-body">
+    <p>In one country we saw three radically different Austrias. Hallstatt was the oldest — a lakeside village whose salt mines named an entire Iron Age culture. Salzburg was the most musical — where a four-year-old Mozart began composing in a yellow townhouse off Getreidegasse. Vienna was the most imperial — where six hundred years of Habsburg power left palaces in every direction.</p>
+    <p>These three cities are bound by mountains, by lakes, by the Danube and the Salzach, and — quietly, in the way Austria does these things — by classical music piped from every café terrace.</p>
+    <p>This issue is about what happens when one small country gives you a salt mine, a Sound of Music tour, a Mozart concert, and an emperor's palace, all within four hundred kilometres of each other.</p>
+    <p style="font-style:italic; color:#28508c; text-align:right; margin-top:14px;">— The Munasinghes, 2026</p>
+  </div>
+  <div class="toc-title">In this issue</div>
+  <ul class="toc-list">
+    <li><span class="toc-name">Welcome to the Salt Country</span><span class="toc-page">02</span></li>
+    <li><span class="toc-name">Hallstatt — Lake & Salt</span><span class="toc-page">03</span></li>
+    <li><span class="toc-name">Salzburg in Three Squares</span><span class="toc-page">04</span></li>
+    <li><span class="toc-name">Vienna — Habsburg Forever</span><span class="toc-page">05</span></li>
+    <li><span class="toc-name">Tastes of Austria</span><span class="toc-page">06</span></li>
+    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">07</span></li>
+  </ul>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">FEATURE · HALLSTATT · DAY 04</div>
+  <div class="sp-headline">A lake, a village,<br>a 7,000-year story.</div>
+  <div class="sp-deck">Hallstatt is the oldest continuously inhabited place in Europe. Its salt mines named an entire age. We came for the views — and stayed for the prehistoric tombs under the church.</div>
+  <div class="sp-meta"><span>Sun 12 Jul 2026</span><span>Hallstatt, Salzkammergut</span><span>5 hrs · pletna boat + funicular</span></div>
+  <div class="sp-hero" style="background-image:url('../images/austria/day-04-hallstatt-village-from-lake.jpg');">
+    <div class="ph-name">📷 images/austria/day-04-hallstatt-village-from-lake.jpg</div>
+    <div class="ph-info">HERO PHOTO · TBD</div>
+  </div>
+  <div class="sp-caption">Hallstatt from the eastern shore — pastel houses cling to the cliff above the Hallstättersee, exactly as they have since the 1500s.</div>
+  <div class="sp-cols">
+    <p>Hallstatt sits in a crook of the Salzkammergut, wedged between a deep alpine lake and a mountain so steep there is no room for a single street parallel to it. Until 1875 the village could only be reached by boat. Even today the train station is on the wrong side of the lake — you arrive, look across the water at the postcard, and take a small ferry to get there. The effect is theatrical: as you cross, the whole village reveals itself in slow zoom, pastel houses stacked impossibly above an emerald-coloured lake.</p>
+    <div class="sp-quote">White gold of the Alps. Salt mined here was more precious than coins in the ancient world.</div>
+    <p>The salt mines began producing around 5000 BC. By 800 BC the wealth from this trade had grown so vast that archaeologists later named an entire early European civilisation — the Hallstatt Culture — after the village. We rode the funicular up, walked through a 19th-century mining tunnel, and slid down a 60-metre wooden miner's slide in pitch darkness. The kids screamed. They were the only people on the mountain who didn't look slightly stunned by the silence.</p>
+  </div>
+  <div class="folio">— Issue 02 · AUSTRIA · 03 —</div>
+</div>
+
+<div class="mag-page mag-duo">
+  <div class="sp-eyebrow" style="margin-bottom:4px;">CITY OF MOZART · DAY 03</div>
+  <div class="sp-headline" style="font-size:38px; margin-bottom:14px;">Salzburg<br><em>in three squares.</em></div>
+  <div class="duo-row alt">
+    <div class="duo-photo wide" style="background-image:url('../images/austria/day-03-mozart-birthplace.jpg');">
+      <div class="ph-name">📷 images/austria/day-03-mozart-birthplace.jpg</div>
+      <div class="ph-info">PHOTO · TBD</div>
+    </div>
+    <div class="duo-text">
+      <div class="kicker">★ Where Mozart Was Born</div>
+      <h3>1756</h3>
+      <p>Wolfgang Amadeus Mozart was born in this yellow townhouse on Getreidegasse 9. He composed his first piece at age five. The room is unchanged.</p>
+    </div>
+  </div>
+
+  <div class="duo-row">
+    <div class="duo-photo" style="background-image:url('../images/austria/day-03-hohensalzburg-fortress.jpg');">
+      <div class="ph-name">📷 images/austria/day-03-hohensalzburg-fortress.jpg</div>
+      <div class="ph-info">PHOTO · TBD</div>
+    </div>
+    <div class="duo-photo" style="background-image:url('../images/austria/day-03-mirabell-gardens.jpg');">
+      <div class="ph-name">📷 images/austria/day-03-mirabell-gardens.jpg</div>
+      <div class="ph-info">PHOTO · TBD</div>
+    </div>
+  </div>
+
+  <div class="duo-row alt" style="grid-template-columns:1fr 2fr;">
+    <div class="duo-text" style="text-align:right; padding-right:6mm;">
+      <div class="kicker" style="text-align:right;">★ The Hills Are Alive</div>
+      <h3 style="font-size:22px;">Mirabell Gardens</h3>
+      <p>Where Maria and the von Trapp children danced "Do-Re-Mi" around the Pegasus Fountain. We did it too. Avin tripped at "Tea, a drink with jam and bread."</p>
+    </div>
+    <div class="duo-photo wide" style="background-image:url('../images/austria/day-03-sound-of-music-tour.jpg');">
+      <div class="ph-name">📷 images/austria/day-03-sound-of-music-tour.jpg</div>
+      <div class="ph-info">PHOTO · TBD</div>
+    </div>
+  </div>
+  <div class="folio">— Issue 02 · AUSTRIA · 04 —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">IMPERIAL VIENNA · DAY 07</div>
+  <div class="sp-headline">The Habsburgs built<br>a city for themselves.</div>
+  <div class="sp-deck">Six hundred years of empire left Vienna with more palaces per square kilometre than any other European city. We saw two: Hofburg in the morning, Schönbrunn in the afternoon.</div>
+  <div class="sp-meta"><span>Wed 15 Jul 2026</span><span>Vienna, 1st & 13th districts</span><span>8 hrs · tram + foot</span></div>
+  <div class="sp-hero" style="background-image:url('../images/austria/day-07-schoenbrunn-palace.jpg');">
+    <div class="ph-name">📷 images/austria/day-07-schoenbrunn-palace.jpg</div>
+    <div class="ph-info">HERO PHOTO · TBD</div>
+  </div>
+  <div class="sp-caption">Schönbrunn Palace — 1,441 rooms, completed under Maria Theresa in 1740. The Habsburgs lived here until 1918.</div>
+  <div class="sp-cols">
+    <p>You cannot understand Vienna without understanding the Habsburgs. From 1278 until 1918 — six hundred and forty years — this family ran an empire that at various points included Austria, Hungary, Bohemia, Croatia, parts of Italy, parts of Poland, all of the Holy Roman Empire, and (for a few decades) Spain and Mexico. They built like people who knew they would never leave. The Hofburg in central Vienna alone has 2,600 rooms. Schönbrunn, their summer palace, has 1,441.</p>
+    <div class="sp-quote">Vienna is the city of dreams. — Sigmund Freud, who lived three streets away from the imperial palaces.</div>
+    <p>We walked the Schönbrunn gardens in the afternoon heat, climbed the Gloriette for the view back over the city, and watched Avin chase butterflies through baroque parterres designed by Maria Theresa's personal gardener in 1750. In the evening we listened to a Mozart-and-Strauss concert in the Orangery. Avin fell asleep during Eine kleine Nachtmusik. We took it as the highest possible compliment to Mozart's craft.</p>
+  </div>
+  <div class="folio">— Issue 02 · AUSTRIA · 05 —</div>
+</div>
+
+<div class="mag-page mag-food">
+  <div class="sp-eyebrow">★ TASTES OF THE TRIP</div>
+  <div class="fd-headline">Six things <em>we ate</em><br>and won't forget.</div>
+  <div class="fd-deck">From morning coffee to evening pastries — the flavours that defined this leg.</div>
+  <div class="fd-grid">
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/austria/food-01-schnitzel.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/austria/food-01-schnitzel.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">01</div>
+        <div class="fd-name">Wiener Schnitzel</div>
+        <div class="fd-desc">Veal cutlet pounded paper-thin, breaded, fried in butter until the breading puffs into a golden cloud. Served with lemon and lingonberry jam. The dish that defined Vienna.</div>
+        <div class="fd-where">📍 Figlmüller · €25 · Day 07</div>
+      </div>
+    </div>
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/austria/food-02-sachertorte.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/austria/food-02-sachertorte.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">02</div>
+        <div class="fd-name">Sachertorte</div>
+        <div class="fd-desc">Dense chocolate sponge filled with apricot jam, glazed in dark chocolate. Slice with the side of a fork. Eat with whipped cream.</div>
+        <div class="fd-where">📍 Café Sacher · €8.50 · Day 07</div>
+      </div>
+    </div>
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/austria/food-03-kasekrainer.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/austria/food-03-kasekrainer.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">03</div>
+        <div class="fd-name">Käsekrainer</div>
+        <div class="fd-desc">Sausage embedded with melted cheese, grilled at a Würstelstand, served on bread with mustard. Aviann ate three.</div>
+        <div class="fd-where">📍 Bitzinger stand · €5 · Day 07</div>
+      </div>
+    </div>
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/austria/food-04-nockerl.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/austria/food-04-nockerl.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">04</div>
+        <div class="fd-name">Salzburger Nockerl</div>
+        <div class="fd-desc">Three soufflé peaks shaped like the mountains around Salzburg, dusted with powdered sugar. Sweet, eggy, fluffy.</div>
+        <div class="fd-where">📍 Café Tomaselli · €18 · Day 03</div>
+      </div>
+    </div>
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/austria/food-05-strudel.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/austria/food-05-strudel.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">05</div>
+        <div class="fd-name">Apfelstrudel</div>
+        <div class="fd-desc">Paper-thin pastry around buttered apples, raisins, and cinnamon. Eaten warm with vanilla custard at every café in the country.</div>
+        <div class="fd-where">📍 Café Central · €6 · Day 07</div>
+      </div>
+    </div>
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/austria/food-06-kaiserschmarrn.jpg'); background-size:cover; background-position:center;">
+        <div class="ph">📷 images/austria/food-06-kaiserschmarrn.jpg</div>
+      </div>
+      <div class="fd-body">
+        <div class="fd-num">06</div>
+        <div class="fd-name">Kaiserschmarrn</div>
+        <div class="fd-desc">"Emperor's mess" — fluffy shredded pancake with caramelised sugar, raisins, served with plum compote. Beloved by Franz Joseph I.</div>
+        <div class="fd-where">📍 Hallstatt restaurant · €10 · Day 04</div>
+      </div>
+    </div>
+  </div>
+  <div class="folio">— Issue 02 · AUSTRIA · 06 —</div>
+</div>
+
+<div class="mag-page mag-reflection">
+  <div class="rf-eyebrow">REFLECTIONS · AUSTRIA</div>
+  <div class="rf-headline">A salt mine,<br>a Mozart sonata,<br>an emperor's ballroom.</div>
+  <div class="rf-body">
+    <p>Austria is small. You can drive its width in three hours. But it punches above its weight in cultural density: every single city we visited had a UNESCO World Heritage centre, every single café served a different cake on a porcelain plate, every single street corner had a busker playing something baroque on a violin.</p>
+    <p>What we will carry home: the smell of pine on the Hallstatt funicular, the silence inside the Salzburg Cathedral, the sound of Avin asking "is THIS a palace too?" outside every building taller than a tram stop in Vienna.</p>
+  </div>
+  <div class="rf-grid">
+    <div class="rf-card">
+      <div class="rf-label">Favourite moment</div>
+      <div class="rf-value">Sliding down the 60-metre miner's slide at Hallstatt in pitch darkness. Avin screamed so loud the guide laughed.</div>
+    </div>
+    <div class="rf-card">
+      <div class="rf-label">Hardest moment</div>
+      <div class="rf-value">Schönbrunn's heat at 14:00. We bought ice cream and sat under a 250-year-old tree.</div>
+    </div>
+    <div class="rf-card">
+      <div class="rf-label">If we come back…</div>
+      <div class="rf-value">Innsbruck and the Tyrolean Alps. A Christmas-market trip in December. Aviann wants to ski.</div>
+    </div>
+  </div>
+  <div class="rf-signoff">— Navin, Lana, Avisha, Aviann & Avin Munasinghe<br>Burg Altpernstein → Salzburg → Hallstatt → Vienna · 11–15 July 2026</div>
+</div>
+
+<div class="mag-page mag-back">
+  <div class="bc-mag">Munasinghe Travel Magazine</div>
+  <div class="bc-issue">No. 02 · One of Fifteen</div>
+  <div class="bc-next">★ NEXT ISSUE ★</div>
+  <div class="bc-country">CZECH REPUBLIC</div>
+  <div class="bc-tagline">Charles Bridge at dawn, Prague Castle on a hill, and a beer hall older than most of America.</div>
+</div>
+
+</body></html>
