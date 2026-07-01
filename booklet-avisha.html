@@ -560,6 +560,7 @@ body { background:#cfe8ff; } .page { font-family:'Plus Jakarta Sans',sans-serif;
 .fi { font-size:18px; }
 
 .photo-box { background:white; padding:6px 8px; border-radius:5px; border:1.5px dashed var(--accent); margin-bottom:7px; }
+.photo-paste { min-height:32mm; border:1px dashed rgba(45,49,66,0.3); border-radius:4px; background:#fdfbf5; display:flex; align-items:center; justify-content:center; color:rgba(45,49,66,0.34); font-size:8.5px; letter-spacing:0.12em; text-transform:uppercase; margin:4px 0; }
 .cap-lines { background:repeating-linear-gradient(to bottom, transparent 0, transparent 5mm, rgba(45,49,66,0.18) 5mm, rgba(45,49,66,0.18) 5.2mm); min-height:12mm; border-radius:3px; margin-top:3px; }
 
 .journal { flex:1; display:flex; flex-direction:column; }
@@ -1003,6 +1004,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>CA784 flies ~10,260 km AKL→Beijing across the Pacific. You cross the international dateline!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -1141,6 +1143,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>The Forbidden City has 980 buildings and was off-limits to commoners for 500 years!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -1279,6 +1282,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Stiftskeller St. Peter in Salzburg is the OLDEST restaurant in Europe — open since 803 AD!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -1355,6 +1359,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Hallstatt is so beautiful that China built an EXACT copy in Guangdong Province!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -1489,6 +1494,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Prague Astronomical Clock has been ticking since 1410!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -1538,6 +1544,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Prague Castle is the LARGEST ancient castle in the world!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -1619,6 +1626,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Schönbrunn Palace has 1,441 rooms! Mozart played here at age 6.</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -1756,6 +1764,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Budapest is TWO cities — Buda + Pest. They merged in 1873!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -1917,6 +1926,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Ring the wishing bell at Bled 3 times — climb 99 steps first!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -2053,6 +2063,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Venice is built on 118 small islands · ZERO cars · the buses are boats!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="arch-fact"><span class="arch-fi">🌊</span><span><b>Architecture Link — Canals:</b> Venice built its city ON water — 118 islands, canals instead of streets, boats instead of buses. You'll see almost exactly the same idea in Amsterdam (Day 24)! Both cities used water to protect against invaders. Spot the tall narrow houses along the waterfront in both cities.</span></div>
@@ -2133,6 +2144,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Florence's Duomo dome was the world's largest for 400 years — built without scaffolding 1436!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="arch-fact"><span class="arch-fi">🌉</span><span><b>Bridge Builders — Florence &amp; Paris:</b> Florence's <b>Ponte Vecchio</b> (built 1345) has GOLD JEWELLERY SHOPS built right on top of the bridge — a covered market on a bridge for 700 years! Paris did the same thing. Until 1786, Paris bridges were LINED with houses and shops. When you cross the Seine in Paris, you're crossing what was once a busy, crowded street of buildings — just like this!</span></div>
@@ -2215,6 +2227,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>The Pisa Tower has leaned for 850 YEARS — began tilting 1173!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -2293,6 +2306,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Mount Vesuvius erupted 79 AD, burying Pompeii under ash for 1,700 years!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -2372,6 +2386,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Vatican City is the SMALLEST country in the world — only 0.49 km²!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -2421,6 +2436,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Milan's Duomo has 3,400 STATUES — took 600 years to build!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -2556,6 +2572,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Switzerland has 7,000 named lakes and 4 official languages!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -2605,6 +2622,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>The Matterhorn shape inspired the Toblerone chocolate logo!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -2654,6 +2672,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Geneva's Jet d'Eau shoots water 140m up!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -2789,6 +2808,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Bern's Zytglogge clock has been telling time since the 13th century!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -2922,6 +2942,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Lourdes Sanctuary receives 6 MILLION pilgrims every year!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -3003,6 +3024,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>TGV is the world's fastest scheduled train — 320 km/h!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="arch-fact"><span class="arch-fi">🌉</span><span><b>Bridge Connection — Paris &amp; Florence:</b> Paris's oldest standing bridge, <b>Pont Neuf</b> (1607), looks plain today — but until 1786 it was PACKED with shops, houses, and market stalls built on top, just like Florence's Ponte Vecchio! Paris eventually cleared them all away. Florence kept theirs. Same brilliant medieval idea — two different choices!</span></div>
@@ -3053,6 +3075,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Amsterdam has MORE bicycles than people — 900,000 bikes for 800,000 residents!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -3185,6 +3208,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>The Eiffel Tower GROWS 15 cm taller in summer!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -3267,6 +3291,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Belgium makes 220,000 TONNES of chocolate per year — more than any other country!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="arch-fact"><span class="arch-fi">🏠</span><span><b>Tall &amp; Thin Houses:</b> Amsterdam's canal houses look unusually narrow — because city taxes were based on how WIDE your house frontage was! So everyone built TALL and THIN instead. Notice the hooks at the very top of each house — furniture was too big for the steep stairs, so they lifted it through the windows with ropes! Same clever workaround as Venice's canal logistics.</span></div>
@@ -3403,6 +3428,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Lego was invented in Denmark — "leg godt" means PLAY WELL!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -3540,6 +3566,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Øresund Bridge is 8 km long — 4 km UNDERWATER!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -3589,6 +3616,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Swedes are the MOST cashless people in the world!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -3638,6 +3666,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Lufthansa's mascot is a crane in flight, since 1918!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -3687,6 +3716,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>At 10,000m altitude outside is -55°C — colder than Antarctica!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -3766,6 +3796,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>The Great Wall is over 21,000 km long — LONGER than Earth's equator!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
@@ -3815,6 +3846,7 @@ window.imgFallback = function(img) {
   <div class="fact-box"><span class="fi">🤓</span><span>Travelling east across dateline you arrive "earlier" than you left!</span></div>
   <div class="photo-box">
     <div class="lbl">📷 PHOTO OF THE DAY · caption</div>
+    <div class="photo-paste">📌 paste your photo here</div>
     <div class="cap-lines"></div>
   </div>
   <div class="journal">
