@@ -333,6 +333,16 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:#2d314
   .toolbar { display:none !important; }
   .page { margin:0 !important; box-shadow:none !important; page-break-inside:avoid !important; break-inside:avoid !important; }
   .page:last-child { page-break-after:auto !important; break-after:auto !important; }
+
+  /* ── TONER-SAVER: only the COVER prints in colour; every other page prints black-on-white ── */
+  body { background:#fff !important; }
+  .page:not(.cover-avin), .page:not(.cover-avin) * {
+    background-color:#fff !important;
+    background-image:none !important;
+    color:#1a1a1a !important;
+    box-shadow:none !important;
+    text-shadow:none !important;
+  }
 }
 
 body { background:#cfe8ff; } .page { font-family:'Fredoka',sans-serif; }
