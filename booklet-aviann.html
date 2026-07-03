@@ -284,6 +284,25 @@ body { font-family:'Plus Jakarta Sans',sans-serif; background:#aaa; color:#2d314
 .aviann-hist.aviann-hist-combined .hist-section-2 > .hist-section-label::before {
   content: "⚔️ ";
 }
+/* ── FIT: keep the dense combined-history page on ONE A4 (readable but compact) ── */
+.aviann-hist.aviann-hist-combined { padding: 9mm 13mm !important; }
+.aviann-hist.aviann-hist-combined .hist-section-1,
+.aviann-hist.aviann-hist-combined .hist-section-2 { margin-bottom: 4px !important; }
+.aviann-hist.aviann-hist-combined .hist-section-2 { margin-top: 5px !important; padding-top: 5px !important; }
+.aviann-hist.aviann-hist-combined .hist-timeline { margin-bottom: 3px !important; }
+.aviann-hist.aviann-hist-combined .hist-section-2 > div[style*="margin-bottom"] { margin-bottom: 4px !important; }
+.aviann-hist.aviann-hist-combined .hist-section-label,
+.aviann-hist.aviann-hist-combined .war-sec-lbl,
+.aviann-hist.aviann-hist-combined .hist-sec-lbl { font-size: 12px !important; margin-bottom: 3px !important; }
+.aviann-hist.aviann-hist-combined .hist-why-text,
+.aviann-hist.aviann-hist-combined .war-tl-item,
+.aviann-hist.aviann-hist-combined .war-year,
+.aviann-hist.aviann-hist-combined .war-event,
+.aviann-hist.aviann-hist-combined .hist-tl-item,
+.aviann-hist.aviann-hist-combined .hist-fact { font-size: 12.5px !important; line-height: 1.28 !important; margin-bottom: 2px !important; }
+.aviann-hist.aviann-hist-combined .war-loss,
+.aviann-hist.aviann-hist-combined .war-rebuild,
+.aviann-hist.aviann-hist-combined .war-story { font-size: 12.5px !important; line-height: 1.28 !important; padding: 3px 7px !important; margin-bottom: 3px !important; }
 
 /* ── Task 5: Unified country band across page types ── */
 .aviann-pgA .ah,
