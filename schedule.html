@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Munasinghe Family — Daily Navigator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root { --ink:#1a1a1a; --accent:#1c6dd0; --line:#d8d8d8; --time:#0b4a9c; }
+  body { font-family:'Fredoka',sans-serif; color:var(--ink); background:#e9edf2; }
+  .sheet {
+    width:210mm; min-height:297mm; margin:8mm auto; background:#fff; padding:16mm 15mm;
+    box-shadow:0 2px 14px rgba(0,0,0,0.14); position:relative;
+  }
+  .top { display:flex; justify-content:space-between; align-items:flex-start; border-bottom:3px solid var(--accent); padding-bottom:8px; }
+  .daynum { font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:0.15em; color:var(--accent); font-weight:700; }
+  h1 { font-size:30px; font-weight:700; line-height:1.05; margin:2px 0 3px; }
+  .date { font-size:15px; color:#555; font-weight:500; }
+  .flag { font-size:40px; line-height:1; }
+  .navigator { margin:12px 0 14px; font-size:16px; font-weight:600; background:#eaf2fd; border:2px dashed var(--accent); border-radius:12px; padding:9px 14px; }
+  .navigator .blank { display:inline-block; min-width:150px; border-bottom:2px solid #9bbbe6; margin-left:6px; }
+  ul.plan { list-style:none; }
+  ul.plan li { display:flex; align-items:flex-start; gap:12px; padding:9px 0; border-bottom:1px dashed var(--line); }
+  .box { flex-shrink:0; width:22px; height:22px; border:2.5px solid var(--accent); border-radius:6px; margin-top:2px; }
+  .t { flex-shrink:0; width:70px; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:16px; color:var(--time); margin-top:1px; }
+  .what { font-size:17px; font-weight:500; line-height:1.3; }
+  .what .em { font-weight:700; color:var(--accent); }
+  .star { color:#e8a400; }
+  .foot { position:absolute; bottom:9mm; left:15mm; right:15mm; text-align:center; font-size:12px; color:#999; border-top:1px solid var(--line); padding-top:6px; font-weight:500; }
+  @media print {
+    body { background:#fff; }
+    .sheet { margin:0; box-shadow:none; width:auto; min-height:auto; page-break-after:always; }
+    @page { size:A4 portrait; margin:0; }
+  }
+</style></head>
+<body>
+<!-- DAY 1 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 1 OF 31</div>
+      <h1>Auckland to Beijing</h1>
+      <div class="date">Thursday &middot; 9 July 2026</div>
+    </div>
+    <div class="flag">🇳🇿🇨🇳</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; MOVING DAY! Long flight — bring your comfy stuff 🧸</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">15:30</span><span class="what">Leave home 🏠 · ~1 hr drive to Auckland Airport 🚗</span></li>
+    <li><span class="box"></span><span class="t">16:30</span><span class="what">Arrive <span class=em>Auckland Airport</span> · check in (Air China), bags, security — 3 hrs before ✈️</span></li>
+    <li><span class="box"></span><span class="t">19:30</span><span class="what">Fly <span class=em>Auckland &rarr; Beijing</span> (CA784 · ~13 hours!) 😴</span></li>
+    <li><span class="box"></span><span class="t">—</span><span class="what">On the plane: dinner, movies, SLEEP · cross the Date Line 🌏</span></li>
+    <li><span class="box"></span><span class="t">&rarr;</span><span class="what">Land Beijing 04:40 tomorrow morning</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 2 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 2 OF 31</div>
+      <h1>Beijing Stopover</h1>
+      <div class="date">Friday &middot; 10 July 2026</div>
+    </div>
+    <div class="flag">🇨🇳</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Big city, big day — stay close together 🤝</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">04:40</span><span class="what">Land in <span class=em>Beijing</span> ✈️ · immigration + bags</span></li>
+    <li><span class="box"></span><span class="t">06:00</span><span class="what">Freshen up · <span class=em>baozi</span> steamed-bun breakfast 🥟</span></li>
+    <li><span class="box"></span><span class="t">09:00</span><span class="what"><span class=em>Forbidden City</span> 🏯 — 600-year-old palace</span></li>
+    <li><span class="box"></span><span class="t">12:00</span><span class="what"><span class=em>Tiananmen Square</span> — one of the biggest squares in the world</span></li>
+    <li><span class="box"></span><span class="t">—</span><span class="what">Spot the Great Wall in the distance 🧱</span></li>
+    <li><span class="box"></span><span class="t">Eve</span><span class="what">Back to the airport · night flight <span class=em>Beijing &rarr; Munich</span> 😴</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 3 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 3 OF 31</div>
+      <h1>Munich to Salzburg to Castle</h1>
+      <div class="date">Saturday &middot; 11 July 2026</div>
+    </div>
+    <div class="flag">🇩🇪🇦🇹</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Tick each box as we finish it!</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">07:05</span><span class="what">Land in <span class=em>Munich</span> ✈️ — passports, bags, bathroom</span></li>
+    <li><span class="box"></span><span class="t">09:00</span><span class="what">Pick up the <span class=em>rental car</span> 🚗 · drive to Salzburg</span></li>
+    <li><span class="box"></span><span class="t">10:30</span><span class="what"><span class=em>Mirabell Gardens</span> — the Do-Re-Mi steps 🎵</span></li>
+    <li><span class="box"></span><span class="t">11:30</span><span class="what"><span class=em>Hellbrunn</span> trick fountains 💦 (you WILL get splashed!)</span></li>
+    <li><span class="box"></span><span class="t">13:00</span><span class="what">Lunch 🥨</span></li>
+    <li><span class="box"></span><span class="t">13:30</span><span class="what">Drive to <span class=em>Burg Altpernstein</span> — our castle! 🏰</span></li>
+    <li><span class="box"></span><span class="t">15:00</span><span class="what">Check in · explore the castle · nap 😴</span></li>
+    <li><span class="box"></span><span class="t">18:00</span><span class="what">Leave for evening <span class=em>Vigil Mass</span> ⛪</span></li>
+    <li><span class="box"></span><span class="t">20:30</span><span class="what">Castle dinner 🍽️ then sleep — huge day done!</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 4 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 4 OF 31</div>
+      <h1>Hallstatt Lake Day</h1>
+      <div class="date">Sunday &middot; 12 July 2026</div>
+    </div>
+    <div class="flag">🇦🇹</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Sleep-in first — you earned it 😴</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">09:00</span><span class="what">Sleep-in breakfast at the castle</span></li>
+    <li><span class="box"></span><span class="t">10:30</span><span class="what">Drive to <span class=em>Hallstatt</span> — the prettiest lake village 🏔️</span></li>
+    <li><span class="box"></span><span class="t">12:00</span><span class="what">Arrive · walk up to the church + <span class=em>Skywalk</span> viewpoint 📸</span></li>
+    <li><span class="box"></span><span class="t">13:30</span><span class="what">Lakeside lunch 🐟</span></li>
+    <li><span class="box"></span><span class="t">15:00</span><span class="what"><span class=em>Lake boat ride</span> ⛵ (the famous view!)</span></li>
+    <li><span class="box"></span><span class="t">16:00</span><span class="what">Head back</span></li>
+    <li><span class="box"></span><span class="t">17:30</span><span class="what">Back at the castle · sunset · dinner</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 5 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 5 OF 31</div>
+      <h1>Castle to Prague</h1>
+      <div class="date">Monday &middot; 13 July 2026</div>
+    </div>
+    <div class="flag">🇦🇹🇨🇿</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Travel day — car games! 🎲</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">09:00</span><span class="what">Breakfast · check out of the castle</span></li>
+    <li><span class="box"></span><span class="t">09:30</span><span class="what">Drive to <span class=em>Prague</span> (cross into Czechia) 🚗 ~4.5 hrs</span></li>
+    <li><span class="box"></span><span class="t">14:30</span><span class="what">Arrive Prague · check in · rest</span></li>
+    <li><span class="box"></span><span class="t">17:00</span><span class="what">First look at the <span class=em>Old Town</span> · dinner</span></li>
+    <li><span class="box"></span><span class="t">—</span><span class="what">Early night — big Prague day tomorrow</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 6 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 6 OF 31</div>
+      <h1>Prague Full Day</h1>
+      <div class="date">Tuesday &middot; 14 July 2026</div>
+    </div>
+    <div class="flag">🇨🇿</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Lots of walking — comfy shoes! 👟</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">09:45</span><span class="what"><span class=em>Old Town Square</span> — catch the <span class=em>Astronomical Clock</span> at 10:00 🕰️</span></li>
+    <li><span class="box"></span><span class="t">10:30</span><span class="what">Walk across <span class=em>Charles Bridge</span> 🌉 (statues everywhere)</span></li>
+    <li><span class="box"></span><span class="t">11:30</span><span class="what">Up to <span class=em>Prague Castle</span> + St Vitus Cathedral 🏰</span></li>
+    <li><span class="box"></span><span class="t">13:00</span><span class="what">Czech lunch 🥟</span></li>
+    <li><span class="box"></span><span class="t">14:30</span><span class="what"><span class=em>Josefov</span> — the old Jewish Quarter</span></li>
+    <li><span class="box"></span><span class="t">16:30</span><span class="what"><span class=em>River cruise</span> on the Vltava 🚤 (rest your legs!)</span></li>
+    <li><span class="box"></span><span class="t">19:00</span><span class="what">Dinner · trdelnik treat 🍩</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 7 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 7 OF 31</div>
+      <h1>Prague to Vienna</h1>
+      <div class="date">Wednesday &middot; 15 July 2026</div>
+    </div>
+    <div class="flag">🇨🇿🇦🇹</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Palace day! Dress a bit smart 👗</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">11:00</span><span class="what">Leave Prague · drive to <span class=em>Vienna</span> 🚗</span></li>
+    <li><span class="box"></span><span class="t">15:00</span><span class="what">Arrive Vienna · quick check in</span></li>
+    <li><span class="box"></span><span class="t">16:00</span><span class="what">👑 <span class=em>Schonbrunn Palace</span> (booked!) — 40 rooms of gold ✨</span></li>
+    <li><span class="box"></span><span class="t">17:30</span><span class="what"><span class=em>Gloriette</span> hilltop view + gardens</span></li>
+    <li><span class="box"></span><span class="t">18:30</span><span class="what"><span class=em>St Stephen's Cathedral</span> ⛪</span></li>
+    <li><span class="box"></span><span class="t">19:30</span><span class="what">Dinner at Naschmarkt · <span class=em>Sachertorte</span> cake 🍰</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 8 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 8 OF 31</div>
+      <h1>Vienna to Budapest</h1>
+      <div class="date">Thursday &middot; 16 July 2026</div>
+    </div>
+    <div class="flag">🇦🇹🇭🇺</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Boat cruise tonight — stay up! ✨</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">14:30</span><span class="what">Arrive <span class=em>Budapest</span> · check in</span></li>
+    <li><span class="box"></span><span class="t">15:30</span><span class="what">Walk to the <span class=em>Chain Bridge</span> 🌉</span></li>
+    <li><span class="box"></span><span class="t">16:00</span><span class="what"><span class=em>Funicular</span> up Castle Hill 🚡</span></li>
+    <li><span class="box"></span><span class="t">16:15</span><span class="what"><span class=em>Fisherman's Bastion</span> — white fairytale towers 🏰</span></li>
+    <li><span class="box"></span><span class="t">17:00</span><span class="what"><span class=em>Matthias Church</span> + castle streets</span></li>
+    <li><span class="box"></span><span class="t">18:30</span><span class="what"><span class=em>St Stephen's Basilica</span> ⛪</span></li>
+    <li><span class="box"></span><span class="t">20:30</span><span class="what">🚢 <span class=em>Danube Legend cruise</span> — city all lit up! (Dock 7)</span></li>
+    <li><span class="box"></span><span class="t">21:30</span><span class="what">Dinner 🍲 goulash + chimney cake 😋</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 9 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 9 OF 31</div>
+      <h1>Budapest to Bled to Venice</h1>
+      <div class="date">Friday &middot; 17 July 2026</div>
+    </div>
+    <div class="flag">🇭🇺🇸🇮🇮🇹</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Longest drive — snacks + naps 🍪</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">07:30</span><span class="what">Leave Budapest early 🚗</span></li>
+    <li><span class="box"></span><span class="t">12:00</span><span class="what">Stop at <span class=em>Lake Bled</span>, Slovenia 💙 — like a fairytale</span></li>
+    <li><span class="box"></span><span class="t">12:30</span><span class="what"><span class=em>Pletna boat</span> to the island church ⛪ (ring the wish bell!)</span></li>
+    <li><span class="box"></span><span class="t">13:30</span><span class="what">Bled cream cake 🍰 · quick lunch</span></li>
+    <li><span class="box"></span><span class="t">14:30</span><span class="what">Drive on to <span class=em>Venice</span>, Italy</span></li>
+    <li><span class="box"></span><span class="t">19:30</span><span class="what">Arrive · check in · dinner 🍝</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 10 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 10 OF 31</div>
+      <h1>Venice</h1>
+      <div class="date">Saturday &middot; 18 July 2026</div>
+    </div>
+    <div class="flag">🇮🇹</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Leave the car — today we WALK + boat! 🚤</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">07:00</span><span class="what">Train from Mestre to <span class=em>Venice island</span> 🚆</span></li>
+    <li><span class="box"></span><span class="t">09:00</span><span class="what"><span class=em>Piazza San Marco</span> + Basilica</span></li>
+    <li><span class="box"></span><span class="t">10:30</span><span class="what">👑 <span class=em>Doge's Palace</span> + Bridge of Sighs (booked!)</span></li>
+    <li><span class="box"></span><span class="t">13:00</span><span class="what"><span class=em>Rialto Bridge</span> + market · cicchetti lunch</span></li>
+    <li><span class="box"></span><span class="t">14:30</span><span class="what"><span class=em>Burano</span> island 🌈 — rainbow houses (boat ride)</span></li>
+    <li><span class="box"></span><span class="t">18:45</span><span class="what">⛪ <span class=em>Saturday Vigil Mass</span> at St Mark's</span></li>
+    <li><span class="box"></span><span class="t">20:00</span><span class="what">Gelato + sunset on the water 🍦</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 11 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 11 OF 31</div>
+      <h1>Venice to Padua to Florence</h1>
+      <div class="date">Sunday &middot; 19 July 2026</div>
+    </div>
+    <div class="flag">🇮🇹</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Early start — tower climb at 14:15 sharp! ⏰</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">07:00</span><span class="what">Leave Mestre 🚗</span></li>
+    <li><span class="box"></span><span class="t">07:30</span><span class="what"><span class=em>Padua</span> — pray at St Anthony's tomb 🕯️</span></li>
+    <li><span class="box"></span><span class="t">08:30</span><span class="what">Drive to <span class=em>Florence</span> (~3 hrs)</span></li>
+    <li><span class="box"></span><span class="t">11:45</span><span class="what">Arrive · park · light lunch</span></li>
+    <li><span class="box"></span><span class="t">14:15</span><span class="what">🔔 <span class=em>Bell Tower climb</span> — 414 steps! (Giotto Pass)</span></li>
+    <li><span class="box"></span><span class="t">16:15</span><span class="what">🎨 <span class=em>Uffizi Gallery</span> (booked) — Botticelli + Leonardo</span></li>
+    <li><span class="box"></span><span class="t">18:15</span><span class="what"><span class=em>Duomo</span> + Ponte Vecchio bridge</span></li>
+    <li><span class="box"></span><span class="t">19:30</span><span class="what"><span class=em>Piazzale Michelangelo</span> — sunset over Florence 🌅</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 12 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 12 OF 31</div>
+      <h1>Florence to Pisa to Perugia to Rome</h1>
+      <div class="date">Monday &middot; 20 July 2026</div>
+    </div>
+    <div class="flag">🇮🇹</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; BIG driving day — lots of car time 🚗</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">06:30</span><span class="what">(Optional) sunrise at Piazzale Michelangelo 🌅</span></li>
+    <li><span class="box"></span><span class="t">09:00</span><span class="what">Check out · pack the car</span></li>
+    <li><span class="box"></span><span class="t">10:30</span><span class="what"><span class=em>Pisa</span> — hold up the Leaning Tower photo! 🤳 + free Cathedral</span></li>
+    <li><span class="box"></span><span class="t">13:00</span><span class="what">(Maybe) Montecchio castle · lunch</span></li>
+    <li><span class="box"></span><span class="t">15:30</span><span class="what"><span class=em>Perugia</span> — hilltop town + Etruscan arch</span></li>
+    <li><span class="box"></span><span class="t">17:00</span><span class="what">Drive to <span class=em>Rome</span> (~2.5 hrs)</span></li>
+    <li><span class="box"></span><span class="t">19:30</span><span class="what">Arrive Rome · check in</span></li>
+    <li><span class="box"></span><span class="t">21:30</span><span class="what"><span class=em>Trevi Fountain</span> at night — toss a coin! 🪙</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 13 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 13 OF 31</div>
+      <h1>Rome to Pompeii to Naples</h1>
+      <div class="date">Tuesday &middot; 21 July 2026</div>
+    </div>
+    <div class="flag">🇮🇹</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Hot day — hat, sunscreen, LOTS of water! 💧</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">07:30</span><span class="what">Coffee + leave Rome 🚗</span></li>
+    <li><span class="box"></span><span class="t">11:00</span><span class="what"><span class=em>Naples</span> — the world's most famous pizza 🍕</span></li>
+    <li><span class="box"></span><span class="t">13:00</span><span class="what"><span class=em>Pompeii</span> (booked) — a whole city frozen by a volcano 🌋</span></li>
+    <li><span class="box"></span><span class="t">15:45</span><span class="what">Castle viewpoint of Vesuvius 📸</span></li>
+    <li><span class="box"></span><span class="t">16:30</span><span class="what">Drive back to Rome</span></li>
+    <li><span class="box"></span><span class="t">19:30</span><span class="what">Arrive Rome · dinner · early bed</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 14 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 14 OF 31</div>
+      <h1>Vatican Day</h1>
+      <div class="date">Wednesday &middot; 22 July 2026</div>
+    </div>
+    <div class="flag">⛪</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Dress code today: shoulders + knees covered!</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">07:00</span><span class="what">Breakfast · pack water, hats, comfy shoes 👟</span></li>
+    <li><span class="box"></span><span class="t">08:00</span><span class="what"><span class=em>St Peter's Basilica</span> (booked — go first!) ⛪</span></li>
+    <li><span class="box"></span><span class="t">10:30</span><span class="what"><span class=em>Vatican Museums</span> — Open Bus Gardens ride 🚌 (booked)</span></li>
+    <li><span class="box"></span><span class="t">12:30</span><span class="what"><span class=em>Sistine Chapel</span> — look UP! 🎨 (no photos, whisper)</span></li>
+    <li><span class="box"></span><span class="t">13:30</span><span class="what">Lunch in Borgo Pio 🍕</span></li>
+    <li><span class="box"></span><span class="t">15:30</span><span class="what"><span class=em>Castel Sant'Angelo</span> — the castle bridge 👼</span></li>
+    <li><span class="box"></span><span class="t">17:00</span><span class="what"><span class=em>Piazza Navona</span> — fountains + gelato 🍦</span></li>
+    <li><span class="box"></span><span class="t">21:00</span><span class="what">Taxi back — tired legs (10 km walked!) 🦵</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 15 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 15 OF 31</div>
+      <h1>Rome to Milan</h1>
+      <div class="date">Thursday &middot; 23 July 2026</div>
+    </div>
+    <div class="flag">🇮🇹</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Long drive, then relax — palace is TOMORROW</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">07:30</span><span class="what">Leave Rome 🚗 · long drive north</span></li>
+    <li><span class="box"></span><span class="t">~13:00</span><span class="what">Quick stop + lunch on the way</span></li>
+    <li><span class="box"></span><span class="t">~16:00</span><span class="what">Arrive <span class=em>Milan</span> · check in with our friends</span></li>
+    <li><span class="box"></span><span class="t">Eve</span><span class="what">Easy evening: <span class=em>Galleria</span> arcade + Castello + dinner 🍝</span></li>
+    <li><span class="box"></span><span class="t">—</span><span class="what">Save your energy — Duomo rooftop is tomorrow morning!</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 16 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 16 OF 31</div>
+      <h1>Milan to Stalden (Alps)</h1>
+      <div class="date">Friday &middot; 24 July 2026</div>
+    </div>
+    <div class="flag">🇮🇹🇨🇭</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Rooftop first — cover shoulders + knees!</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">09:00</span><span class="what">🏰 <span class=em>Milan Duomo ROOFTOP</span> (booked, by LIFT) — walk among the spires!</span></li>
+    <li><span class="box"></span><span class="t">10:30</span><span class="what">Breakfast in Brera</span></li>
+    <li><span class="box"></span><span class="t">13:30</span><span class="what">Drive toward Switzerland 🚗</span></li>
+    <li><span class="box"></span><span class="t">14:30</span><span class="what"><span class=em>Lake Maggiore</span> (Stresa) — lakefront + islands view 💙</span></li>
+    <li><span class="box"></span><span class="t">16:00</span><span class="what">Cross the <span class=em>Simplon Pass</span> 🏔️ — hairpin bends, maybe snow!</span></li>
+    <li><span class="box"></span><span class="t">18:00</span><span class="what">Arrive <span class=em>Stalden</span> · meet host · village walk + dinner</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 17 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 17 OF 31</div>
+      <h1>Gornergrat to Gruyeres</h1>
+      <div class="date">Saturday &middot; 25 July 2026</div>
+    </div>
+    <div class="flag">🇨🇭</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; MATTERHORN day! Warm layers — snow up top ❄️</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">07:30</span><span class="what">Train to <span class=em>Zermatt</span> 🚆 (no cars allowed there)</span></li>
+    <li><span class="box"></span><span class="t">09:00</span><span class="what">🚞 <span class=em>Gornergrat cog railway</span> up to 3,089 m (booked)</span></li>
+    <li><span class="box"></span><span class="t">—</span><span class="what"><span class=em>Matterhorn</span> face to face! ⛰️ snowball fight?</span></li>
+    <li><span class="box"></span><span class="t">13:00</span><span class="what">Back down · drive to <span class=em>Gruyeres</span> 🧀</span></li>
+    <li><span class="box"></span><span class="t">16:00</span><span class="what">Cheese village + castle</span></li>
+    <li><span class="box"></span><span class="t">Eve</span><span class="what">⛪ <span class=em>Vigil Mass</span> · dinner at Moleson</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 18 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 18 OF 31</div>
+      <h1>Geneva Day Trip</h1>
+      <div class="date">Sunday &middot; 26 July 2026</div>
+    </div>
+    <div class="flag">🇨🇭</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Relaxed day by the lake 🏊</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">10:00</span><span class="what">Drive to <span class=em>Geneva</span> 🚗</span></li>
+    <li><span class="box"></span><span class="t">11:30</span><span class="what">Old Town + <span class=em>Cathedrale Saint-Pierre</span> tower ⛪</span></li>
+    <li><span class="box"></span><span class="t">13:00</span><span class="what">Lunch in the old square</span></li>
+    <li><span class="box"></span><span class="t">14:30</span><span class="what"><span class=em>Jet d'Eau</span> — giant water fountain 💦 + Flower Clock 🌸</span></li>
+    <li><span class="box"></span><span class="t">15:30</span><span class="what">Little <span class=em>ferry boat</span> across the lake ⛴️</span></li>
+    <li><span class="box"></span><span class="t">16:00</span><span class="what">Swim at Bains des Paquis (if hot!) 🏊</span></li>
+    <li><span class="box"></span><span class="t">18:00</span><span class="what">Drive back · dinner</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 19 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 19 OF 31</div>
+      <h1>Moleson to Bern to Ottobeuren</h1>
+      <div class="date">Monday &middot; 27 July 2026</div>
+    </div>
+    <div class="flag">🇨🇭🇩🇪</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Travel day · one pretty stop 🐻</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">08:00</span><span class="what">Leave Moleson 🚗</span></li>
+    <li><span class="box"></span><span class="t">~10:00</span><span class="what"><span class=em>Bern</span> — the bear city 🐻 + clock tower</span></li>
+    <li><span class="box"></span><span class="t">12:30</span><span class="what">Drive on into <span class=em>Germany</span></span></li>
+    <li><span class="box"></span><span class="t">17:00</span><span class="what">Arrive <span class=em>Ottobeuren</span> · check in · rest</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 20 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 20 OF 31</div>
+      <h1>Fly to Lourdes</h1>
+      <div class="date">Tuesday &middot; 28 July 2026</div>
+    </div>
+    <div class="flag">🇩🇪🇫🇷</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; 2 flights + torch parade tonight 🕯️</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">06:15</span><span class="what">Early start · drive to Munich airport ✈️</span></li>
+    <li><span class="box"></span><span class="t">10:10</span><span class="what">Fly <span class=em>Munich &rarr; Paris</span> (CDG)</span></li>
+    <li><span class="box"></span><span class="t">14:05</span><span class="what">Fly <span class=em>Paris &rarr; Toulouse</span> · land 15:30</span></li>
+    <li><span class="box"></span><span class="t">16:00</span><span class="what">Pick up car · drive to <span class=em>Lourdes</span> 🚗</span></li>
+    <li><span class="box"></span><span class="t">18:00</span><span class="what">Arrive Lourdes · dinner 🍽️</span></li>
+    <li><span class="box"></span><span class="t">21:00</span><span class="what">🕯️ <span class=em>Torch Procession</span> — candles in the dark, in your pyjamas! ✨</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 21 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 21 OF 31</div>
+      <h1>Lourdes to Paris</h1>
+      <div class="date">Wednesday &middot; 29 July 2026</div>
+    </div>
+    <div class="flag">🇫🇷</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Travel morning, then PARIS by night 🗼</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">07:30</span><span class="what">Leave Lourdes · drive to Toulouse airport 🚗</span></li>
+    <li><span class="box"></span><span class="t">09:00</span><span class="what">Drop the car · tram to the station</span></li>
+    <li><span class="box"></span><span class="t">10:20</span><span class="what">🚄 <span class=em>Fast train (TGV)</span> to Paris · arrive 14:55</span></li>
+    <li><span class="box"></span><span class="t">15:10</span><span class="what">Metro to hotel · drop bags</span></li>
+    <li><span class="box"></span><span class="t">16:30</span><span class="what">🎨 <span class=em>Louvre</span> (booked) — Mona Lisa! 🖼️</span></li>
+    <li><span class="box"></span><span class="t">20:00</span><span class="what">Dinner in Saint-Germain 🥖</span></li>
+    <li><span class="box"></span><span class="t">22:00</span><span class="what">🗼 <span class=em>Eiffel Tower sparkle</span> ✨ + go up to the top! (booked 22:30)</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 22 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 22 OF 31</div>
+      <h1>Versailles to Amsterdam</h1>
+      <div class="date">Thursday &middot; 30 July 2026</div>
+    </div>
+    <div class="flag">🇫🇷🇳🇱</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; MOVING DAY! Keep your bag close 🎒</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">08:00</span><span class="what">Breakfast · check out of the Paris hotel</span></li>
+    <li><span class="box"></span><span class="t">08:15</span><span class="what">Drop ALL bags at <span class=em>Gare du Nord</span> lockers 🧳</span></li>
+    <li><span class="box"></span><span class="t">09:30</span><span class="what">👑 <span class=em>Versailles</span> — the Hall of Mirrors! (booked)</span></li>
+    <li><span class="box"></span><span class="t">12:30</span><span class="what">Back to Paris · lunch in the Latin Quarter 🥐</span></li>
+    <li><span class="box"></span><span class="t">14:30</span><span class="what">⛪ <span class=em>Sainte-Chapelle</span> — rainbow glass 🌈 (booked)</span></li>
+    <li><span class="box"></span><span class="t">15:30</span><span class="what"><span class=em>Luxembourg Gardens</span> — sail the toy boats ⛵</span></li>
+    <li><span class="box"></span><span class="t">16:30</span><span class="what"><span class=em>Sacre-Coeur</span> + Montmartre hill</span></li>
+    <li><span class="box"></span><span class="t">19:52</span><span class="what">Be at Gare du Nord — grab bags, get on the train!</span></li>
+    <li><span class="box"></span><span class="t">20:22</span><span class="what">🚄 <span class=em>Eurostar to Amsterdam</span></span></li>
+    <li><span class="box"></span><span class="t">23:33</span><span class="what">Arrive Amsterdam · cousin pickup! 🎉</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 23 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 23 OF 31</div>
+      <h1>Brussels Day Trip</h1>
+      <div class="date">Friday &middot; 31 July 2026</div>
+    </div>
+    <div class="flag">🇧🇪</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Waffles + a giant metal ball! 🧇</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">~09:30</span><span class="what">Travel to <span class=em>Brussels</span>, Belgium 🚄</span></li>
+    <li><span class="box"></span><span class="t">11:00</span><span class="what"><span class=em>Grand-Place</span> — the fanciest square ever ✨</span></li>
+    <li><span class="box"></span><span class="t">11:30</span><span class="what"><span class=em>Manneken-Pis</span> — the tiny statue 😄</span></li>
+    <li><span class="box"></span><span class="t">12:30</span><span class="what"><span class=em>Liege waffle</span> 🧇 + Carbonnade lunch</span></li>
+    <li><span class="box"></span><span class="t">14:30</span><span class="what">🔵 <span class=em>Atomium</span> — a giant atom you go inside! + Mini-Europe</span></li>
+    <li><span class="box"></span><span class="t">Eve</span><span class="what">Back to Amsterdam · dinner</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 24 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 24 OF 31</div>
+      <h1>Amsterdam Rest Day</h1>
+      <div class="date">Saturday &middot; 1 August 2026</div>
+    </div>
+    <div class="flag">🇳🇱</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Slow day — ZERO rush 😌</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">—</span><span class="what">Sleep in · long breakfast at cousin's</span></li>
+    <li><span class="box"></span><span class="t">12:45</span><span class="what">🛥️ <span class=em>Canal cruise</span> through Amsterdam (~1 hr)</span></li>
+    <li><span class="box"></span><span class="t">14:00</span><span class="what">🍽️ <span class=em>Lunch with Shehani</span> 💚</span></li>
+    <li><span class="box"></span><span class="t">Aft</span><span class="what">Vondelpark playtime · stroopwafels 🍪</span></li>
+    <li><span class="box"></span><span class="t">17:00</span><span class="what">⛪ <span class=em>Saturday Vigil Mass</span> at Sint-Nicolaaskerk</span></li>
+    <li><span class="box"></span><span class="t">18:30</span><span class="what">Last dinner with cousin 💚 · pack for the morning flight</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 25 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 25 OF 31</div>
+      <h1>Amsterdam to Copenhagen</h1>
+      <div class="date">Sunday &middot; 2 August 2026</div>
+    </div>
+    <div class="flag">🇳🇱🇩🇰</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Fly north to Denmark ✈️</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">06:00</span><span class="what">Wake · pack out · quick breakfast</span></li>
+    <li><span class="box"></span><span class="t">06:30</span><span class="what">Cousin drops us at Schiphol airport</span></li>
+    <li><span class="box"></span><span class="t">10:20</span><span class="what">Fly <span class=em>Amsterdam &rarr; Copenhagen</span> ✈️ (land 11:40)</span></li>
+    <li><span class="box"></span><span class="t">12:30</span><span class="what">Metro into the city · hotel check in</span></li>
+    <li><span class="box"></span><span class="t">13:00</span><span class="what"><span class=em>Nyhavn</span> colourful harbour 🌈 + canal boat 🚤</span></li>
+    <li><span class="box"></span><span class="t">Eve</span><span class="what">Family dinner · early bed (train tomorrow!)</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 26 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 26 OF 31</div>
+      <h1>Copenhagen to Gothenburg</h1>
+      <div class="date">Monday &middot; 3 August 2026</div>
+    </div>
+    <div class="flag">🇩🇰🇸🇪</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Train over the sea bridge! 🌉</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">08:00</span><span class="what">Breakfast · check out · drop bags at the station</span></li>
+    <li><span class="box"></span><span class="t">09:00</span><span class="what">🏰 <span class=em>Christiansborg Tower</span> — free city view</span></li>
+    <li><span class="box"></span><span class="t">10:00</span><span class="what"><span class=em>Stroget</span> shopping street + market brunch 🥐</span></li>
+    <li><span class="box"></span><span class="t">13:00</span><span class="what">🚆 <span class=em>X2000 train</span> to Gothenburg</span></li>
+    <li><span class="box"></span><span class="t">13:20</span><span class="what">Cross the <span class=em>Oresund Bridge</span> — 8 km over the sea! 👀</span></li>
+    <li><span class="box"></span><span class="t">16:40</span><span class="what">Arrive Gothenburg — <span class=em>Sister pickup!</span> 💙</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 27 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 27 OF 31</div>
+      <h1>Gothenburg Family Day</h1>
+      <div class="date">Tuesday &middot; 4 August 2026</div>
+    </div>
+    <div class="flag">🇸🇪</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; No plans — just family time 💙</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">—</span><span class="what">Slow breakfast with your aunty</span></li>
+    <li><span class="box"></span><span class="t">—</span><span class="what">Whatever YOU want — park, playground, walk 🛝</span></li>
+    <li><span class="box"></span><span class="t">—</span><span class="what">Lunch together</span></li>
+    <li><span class="box"></span><span class="t">Eve</span><span class="what">Family dinner · Swedish summer stays light till 22:00 ☀️</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 28 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 28 OF 31</div>
+      <h1>Gothenburg to Munich</h1>
+      <div class="date">Wednesday &middot; 5 August 2026</div>
+    </div>
+    <div class="flag">🇸🇪🇩🇪</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Early flight — sleepy morning 😴</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">05:00</span><span class="what">Wake early 😴</span></li>
+    <li><span class="box"></span><span class="t">06:30</span><span class="what">Fly <span class=em>Gothenburg &rarr; Munich</span> ✈️ (land 08:30)</span></li>
+    <li><span class="box"></span><span class="t">—</span><span class="what">Check into airport hotel · rest</span></li>
+    <li><span class="box"></span><span class="t">Opt</span><span class="what">Maybe train into Munich for <span class=em>Marienplatz</span> + a pretzel 🥨</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 29 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 29 OF 31</div>
+      <h1>Munich to Beijing</h1>
+      <div class="date">Thursday &middot; 6 August 2026</div>
+    </div>
+    <div class="flag">🇩🇪🇨🇳</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Long flight — comfy clothes 🧦</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">11:00</span><span class="what">Check in at Munich airport ✈️</span></li>
+    <li><span class="box"></span><span class="t">13:00</span><span class="what">Fly <span class=em>Munich &rarr; Beijing</span> (CA962) — long one!</span></li>
+    <li><span class="box"></span><span class="t">—</span><span class="what">Dinner, movies, SLEEP 😴 · land Beijing early tomorrow</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 30 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 30 OF 31</div>
+      <h1>Great Wall!</h1>
+      <div class="date">Friday &middot; 7 August 2026</div>
+    </div>
+    <div class="flag">🇨🇳</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; THE GREAT WALL — best grippy shoes! 👟</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">04:45</span><span class="what">Land in Beijing ✈️ · rest a few hours at the hotel 😴</span></li>
+    <li><span class="box"></span><span class="t">08:30</span><span class="what">Head to the <span class=em>Great Wall</span> (Mutianyu) 🧱</span></li>
+    <li><span class="box"></span><span class="t">—</span><span class="what">🚡 <span class=em>Cable car UP</span> · walk along the wall</span></li>
+    <li><span class="box"></span><span class="t">—</span><span class="what">🛷 <span class=em>TOBOGGAN DOWN</span> — the best ride ever! 🎉</span></li>
+    <li><span class="box"></span><span class="t">14:00</span><span class="what">Lunch · head back to the hotel</span></li>
+    <li><span class="box"></span><span class="t">Eve</span><span class="what">Rest — very late flight home tonight 😴</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+<!-- DAY 31 -->
+<div class="sheet">
+  <div class="top">
+    <div>
+      <div class="daynum">DAY 31 OF 31</div>
+      <h1>Beijing to HOME</h1>
+      <div class="date">Saturday &middot; 8 August 2026</div>
+    </div>
+    <div class="flag">🇨🇳🇳🇿</div>
+  </div>
+  <div class="navigator">&#11088; Today's Navigator: <span class="blank"></span> &nbsp;&mdash; Last flight — going HOME! 🏡</div>
+  <ul class="plan">
+    <li><span class="box"></span><span class="t">00:05</span><span class="what">Fly <span class=em>Beijing &rarr; Auckland</span> (CA783) ✈️ · sleep on board 😴</span></li>
+    <li><span class="box"></span><span class="t">16:30</span><span class="what">Land in <span class=em>Auckland</span> — HOME! 🏡</span></li>
+    <li><span class="box"></span><span class="t">—</span><span class="what">🎉 25 nights · 22 places · so many memories · YOU DID IT! ⭐</span></li>
+  </ul>
+  <div class="foot">Munasinghe Family &middot; Europe 2026 &middot; You're doing great! <span class="star">&#9733;</span></div>
+</div>
+
+</body></html>
