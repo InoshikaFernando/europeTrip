@@ -33,6 +33,15 @@ body {
   border-bottom: 3px solid var(--gold);
 }
 .topbar strong { color: var(--gold); }
+.topbar { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:6px 8px; }
+.topbar > strong, .topbar { }
+.topbar a {
+  display:inline-block; background:var(--gold); color:var(--ink);
+  padding:6px 13px; border-radius:999px; text-decoration:none;
+  font-weight:700; letter-spacing:0.03em; font-size:12px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.25); transition:transform .1s ease, background .15s ease;
+}
+.topbar a:hover { background:#fff; transform:translateY(-1px); }
 header {
   padding: 14px 24px 10px; text-align: center;
   background: linear-gradient(180deg, var(--parchment), var(--cream));
@@ -311,7 +320,7 @@ header h1 em {
 </style>
 </head>
 <body>
-<div class="topbar"><strong>✈ Auckland → Beijing → Europe → Auckland</strong> · 25 nights · July–August 2026 · <a href="https://drive.google.com/drive/folders/1OOqIZz21cSFfno5vlhUAMOdVEo8mn66q?usp=sharing" target="_blank" rel="noopener">📁 All trip docs</a> · <a href="kids.html">🎨 Kids Zone</a> · <a href="guide.html">📘 Offline Guide</a> · <a href="schedule.html">📋 Daily Navigator</a> · <a href="booklet.html">📖 Parents</a> · <a href="booklet-avin.html">✈️ Avin (4)</a> · <a href="booklet-aviann.html">✍️ Aviann (8)</a> · <a href="booklet-avisha.html">🗺️ Avisha (11)</a></div>
+<div class="topbar"><strong>✈ Auckland → Beijing → Europe → Auckland</strong> · 25 nights · July–August 2026 <a href="https://drive.google.com/drive/folders/1OOqIZz21cSFfno5vlhUAMOdVEo8mn66q?usp=sharing" target="_blank" rel="noopener">📁 All trip docs</a> <a href="kids.html">🎨 Kids Zone</a> <a href="guide.html">📘 Offline Guide</a> <a href="schedule.html">📋 Daily Navigator</a> <a href="booklet.html">📖 Parents</a> <a href="booklet-avin.html">✈️ Avin (4)</a> <a href="booklet-aviann.html">✍️ Aviann (8)</a> <a href="booklet-avisha.html">🗺️ Avisha (11)</a></div>
 
 <!-- ==== REMINDERS BANNER ==== -->
 <div id="reminders-banner" style="display:none;max-width:1080px;margin:14px auto 0;padding:0 16px;">
