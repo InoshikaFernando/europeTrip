@@ -360,6 +360,93 @@ body { padding:20px; }
   font-style:italic; font-size:8.5px; color:#8b6914;
 }
 
+/* ─── THE JOURNEY / STORY SO FAR ─── */
+.mag-journey {
+  background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%);
+  padding:24mm 22mm; display:flex; flex-direction:column;
+}
+.jr-eyebrow {
+  font-family:'JetBrains Mono', monospace; font-size:10px;
+  letter-spacing:0.3em; text-transform:uppercase; color:#8b1a1a;
+  margin-bottom:8px;
+}
+.jr-headline {
+  font-family:'Fraunces', serif; font-weight:700;
+  font-size:52px; line-height:0.95; color:#1a1a1a;
+  margin-bottom:18px; letter-spacing:-0.02em;
+}
+.jr-body {
+  font-family:'Fraunces', serif; font-size:14px; line-height:1.7;
+  color:#3d3024; margin-bottom:22px; max-width:92%;
+}
+.jr-body p { margin-bottom:12px; }
+.jr-railtitle {
+  font-family:'JetBrains Mono', monospace; font-size:9px;
+  letter-spacing:0.28em; text-transform:uppercase; color:#8b1a1a;
+  border-bottom:1px solid #c89b3c; padding-bottom:8px; margin-bottom:14px;
+}
+.jr-rail { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:18px; }
+.jr-stop {
+  font-family:'JetBrains Mono', monospace; font-size:10px;
+  letter-spacing:0.04em; color:#a8926a;
+  padding:5px 11px; border:1px solid #e8d6a8; border-radius:100px;
+  background:rgba(255,255,255,0.35); white-space:nowrap;
+}
+.jr-stop .jr-n { font-weight:700; color:#c89b3c; margin-right:3px; }
+.jr-stop.done { color:#5a4a3a; border-color:rgba(200,155,60,0.5); }
+.jr-stop.done .jr-n { color:#8b1a1a; }
+.jr-stop.here {
+  color:#fff; background:#8b1a1a; border-color:#8b1a1a; font-weight:700;
+}
+.jr-stop.here .jr-n { color:#f0d68c; }
+.jr-today {
+  font-family:'Fraunces', serif; font-style:italic; font-size:15px;
+  line-height:1.5; color:#8b1a1a; margin-top:auto;
+  padding-top:10mm; border-top:1px solid #c89b3c;
+}
+
+/* ─── BEFORE WE LEFT / PACKING ─── */
+.mag-packing { padding:18mm 16mm; display:flex; flex-direction:column; }
+.pk-eyebrow {
+  font-family:'JetBrains Mono', monospace; font-size:9px;
+  letter-spacing:0.3em; text-transform:uppercase; color:#8b1a1a;
+  margin-bottom:8px;
+}
+.pk-headline {
+  font-family:'Fraunces', serif; font-weight:700;
+  font-size:50px; line-height:0.9; color:#1a1a1a;
+  margin-bottom:6px; letter-spacing:-0.02em;
+}
+.pk-headline em { font-style:italic; font-weight:400; color:#8b1a1a; }
+.pk-lead {
+  font-family:'Fraunces', serif; font-size:12px; line-height:1.6;
+  color:#3d3024; column-count:2; column-gap:10mm;
+  border-top:2px solid #c89b3c; padding-top:12px;
+  margin-bottom:16px; text-align:justify;
+}
+.pk-lead p { margin-bottom:8px; }
+.pk-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:5mm; }
+.pk-card {
+  background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px;
+  border-top:3px solid #8b1a1a; padding:12px 14px 13px;
+}
+.pk-num {
+  font-family:'Fraunces', serif; font-weight:300; font-style:italic;
+  font-size:22px; color:#8b1a1a; line-height:1;
+}
+.pk-name {
+  font-family:'Fraunces', serif; font-weight:700;
+  font-size:16px; line-height:1.1; color:#1a1a1a; margin:4px 0 6px;
+}
+.pk-desc {
+  font-family:'Fraunces', serif; font-size:10px; line-height:1.45;
+  color:#5a4a3a; margin-bottom:7px;
+}
+.pk-tag {
+  font-family:'JetBrains Mono', monospace; font-size:7.5px;
+  letter-spacing:0.12em; color:#8b6914; text-transform:uppercase;
+}
+
 /* PRINT */
 @media print {
   *, *::before, *::after {
@@ -398,6 +485,89 @@ body { padding:20px; }
   </div>
 
   <div class="cv-meta">Munasinghe Family · Wed 10 Jul + Fri 7 Aug 2026</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- THE JOURNEY / STORY SO FAR -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div class="mag-page mag-journey">
+  <div class="jr-eyebrow">The Journey · Chapter One</div>
+  <div class="jr-headline">One month.<br>Fifteen countries.<br>It begins here.</div>
+  <div class="jr-body">
+    <p>Every issue of this magazine is one country — and every country is one chapter of the same journey: one family of five, thirty nights on the road, from the Great Wall of China to the top of Europe and home again.</p>
+    <p>This is where it starts. We fly out of a New Zealand winter, land in Beijing, and the map unrolls from there — the Alps, the Danube, the canals and cathedrals, all the way to a day inside the world's smallest country — before Beijing catches us one last time on the way home. This page sits at the front of every issue: it will always tell you where we've been, where we are, and where we're headed next.</p>
+  </div>
+  <div class="jr-railtitle">The Route · 15 Countries · 33 Cities · 30 Nights</div>
+  <div class="jr-rail">
+    <div class="jr-stop here"><span class="jr-n">01</span>China ★</div>
+    <div class="jr-stop"><span class="jr-n">02</span>Austria</div>
+    <div class="jr-stop"><span class="jr-n">03</span>Czechia</div>
+    <div class="jr-stop"><span class="jr-n">04</span>Hungary</div>
+    <div class="jr-stop"><span class="jr-n">05</span>Slovenia</div>
+    <div class="jr-stop"><span class="jr-n">06</span>Italy</div>
+    <div class="jr-stop"><span class="jr-n">07</span>Switzerland</div>
+    <div class="jr-stop"><span class="jr-n">08</span>Germany</div>
+    <div class="jr-stop"><span class="jr-n">09</span>France</div>
+    <div class="jr-stop"><span class="jr-n">10</span>Netherlands</div>
+    <div class="jr-stop"><span class="jr-n">11</span>Belgium</div>
+    <div class="jr-stop"><span class="jr-n">12</span>Denmark</div>
+    <div class="jr-stop"><span class="jr-n">13</span>Sweden</div>
+    <div class="jr-stop"><span class="jr-n">14</span>Vatican</div>
+    <div class="jr-stop"><span class="jr-n">⌂</span>Home</div>
+  </div>
+  <div class="jr-today">Today — China: where it all begins. Beijing's Forbidden City on the way out, the Great Wall on the way home.</div>
+  <div class="folio">— Issue 01 · China · The Journey —</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<!-- BEFORE WE LEFT / PACKING -->
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<div class="mag-page mag-packing">
+  <div class="pk-eyebrow">Before We Left · The Packing</div>
+  <div class="pk-headline">One month. Three kids.<br><em>Two seasons in one bag.</em></div>
+  <div class="pk-lead">
+    <p>This was the biggest journey we had ever attempted — one month, five of us, three of them children — packed in the cracks between work and school runs. On a trip this long there is no room for mistakes; every item had to earn its place. The strangest part of all: we were leaving the middle of a New Zealand winter and landing in the thick of a European summer, so the jumpers stayed home and we packed, instead, for heat we couldn't yet feel.</p>
+    <p>We packed to a rule — light and simple for every day, but always one sensible backup tucked behind it. Toiletries kept to the essentials (body wash, shampoo, conditioner). Everything split across two large backpacks for the family's clothes, a small backpack each for Avisha and Aviann, and one hand-luggage bag packed just for the China stopover. Backpacks, not suitcases — because three children and cobblestones don't mix with wheels.</p>
+  </div>
+  <div class="pk-grid">
+    <div class="pk-card">
+      <div class="pk-num">01</div>
+      <div class="pk-name">Two Seasons, One Bag</div>
+      <div class="pk-desc">Two shorts, two dresses and a set of active wear each — plus two spare dresses, for when a dress beats shorts. The boys, Avisha and Avin, in shorts by day with one pair of trousers held in reserve; Aviann in dresses, with hair bands, and oil and gel for their hair.</div>
+      <div class="pk-tag">Summer clothes only</div>
+    </div>
+    <div class="pk-card">
+      <div class="pk-num">02</div>
+      <div class="pk-name">Feet &amp; Sun</div>
+      <div class="pk-desc">A pair of shoes and a pair of walking slippers each — hard soles for the sightseeing miles, soft ones for tired feet. Then the sun armour: sunscreen, five pairs of sunglasses, bucket hats, a refillable bottle each, and aloe gel for the evenings.</div>
+      <div class="pk-tag">Sun kit for five</div>
+    </div>
+    <div class="pk-card">
+      <div class="pk-num">03</div>
+      <div class="pk-name">The Medicine Bag</div>
+      <div class="pk-desc">Panadol, ibuprofen and cetirizine — every one in both tablets and syrup, so there's a dose for every age. Throat lozenges, Quick-Eze for bloating, nasal spray, plasters and wound cream.</div>
+      <div class="pk-tag">A dose for every age</div>
+    </div>
+    <div class="pk-card">
+      <div class="pk-num">04</div>
+      <div class="pk-name">School on the Road</div>
+      <div class="pk-desc">Three weeks out of term, so school came too. A daily journal each; Avisha's two Narnia books and Aviann's Charlotte's Web — their Term 3 reading, read ahead; online homework along the way; and a colouring book and activity book for Avin.</div>
+      <div class="pk-tag">Term 3, in advance</div>
+    </div>
+    <div class="pk-card">
+      <div class="pk-num">05</div>
+      <div class="pk-name">Three Little Cameras</div>
+      <div class="pk-desc">One small camera each, from Shein, so all three could shoot their own view of the trip. The hard part was hunting down three 32GB micro-SD cards — the one size the little cameras would take.</div>
+      <div class="pk-tag">3 cameras · 3 photographers</div>
+    </div>
+    <div class="pk-card">
+      <div class="pk-num">06</div>
+      <div class="pk-name">The Clever Finds</div>
+      <div class="pk-desc">Three folding car seats from Kmart — just 2.5 kg each, lightweight and packable — instead of boosters, for comfort over a month of roads. European adapters for every charger. And a stash of home: instant noodles, soup, mac &amp; cheese and 3-in-1 coffee, for the late and hungry arrivals.</div>
+      <div class="pk-tag">2.5 kg car seats · a taste of home</div>
+    </div>
+  </div>
+  <div class="folio">— Issue 01 · China · Before We Left —</div>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════════════ -->
