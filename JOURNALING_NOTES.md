@@ -40,7 +40,8 @@ warm magazine-editorial tone.
 
 - **"The Journey / Story So Far"** front page with a **route rail**
   (issue order 01→14 + ⌂ Home; `★` = you are here, done = ticked, upcoming = muted).
-  Built in China as "Chapter One". **TODO: roll out to the other 13 issues.**
+  Built in China (Ch.1) and Austria (Ch.2). **TODO: roll out to the remaining 12 issues.**
+  CSS (`.mag-journey`, `.jr-*`) is added per-file with that issue's accent colour.
 - **"Where We Head Next"** = the existing back-cover NEXT ISSUE teaser (already in each issue).
 
 ## Route (issue order) & multi-touch countries
@@ -79,7 +80,13 @@ warm magazine-editorial tone.
   (black/gold + sand/mud) the kids loved. Touches 2 & 3 (Ottobeuren 27 Jul, Aufkirchen/Munich
   5 Aug) still imagined placeholder. NOTE: placeholder "Munich in Three Squares" duo (Marienplatz
   etc.) is for the 5 Aug visit — reconcile if they revisit. Open thread: replacement backpack.
-- **Issues 02–07, 09–14 — untouched** (imagined placeholder). Real reflections to come as they travel.
+- **Issue 02 Austria — IN PROGRESS.** Added "The Journey" recap page (Ch.2, route rail) +
+  a real Salzburg spread ("Do-Re-Mi in the garden, and an ice-cream afternoon" — noon arrival
+  11 Jul, tired Aviann, Mirabell Gardens, street wander, ice-cream). **Pending:** confirm what
+  else they did in Salzburg — the imagined "Salzburg in Three Squares" duo (Mozart's birthplace,
+  Hohensalzburg fortress) may need trimming to match reality. Hallstatt & Vienna pages still
+  imagined placeholder (they may still visit — Austria block is 11–15 Jul).
+- **Issues 03–07, 09–14 — untouched** (imagined placeholder). Real reflections to come as they travel.
 
 ## Real details captured so far (facts to reuse — keep consistent)
 

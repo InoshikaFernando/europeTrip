@@ -90,6 +90,21 @@ body { padding:20px; }
 .bc-mag { position:absolute; top:20mm; left:20mm; font-family:'Fraunces', serif; font-style:italic; font-weight:300; font-size:16px; color:rgba(255,255,255,0.9); letter-spacing:0.05em; }
 .bc-issue { position:absolute; top:20mm; right:20mm; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; color:rgba(255,255,255,0.7); }
 .mag-page .folio { position:absolute; bottom:4mm; left:0; right:0; text-align:center; font-family:'Fraunces', serif; font-style:italic; font-size:8.5px; color:#8b6914; }
+/* THE JOURNEY / STORY SO FAR */
+.mag-journey { background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%); padding:24mm 22mm; display:flex; flex-direction:column; }
+.jr-eyebrow { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#28508c; margin-bottom:8px; }
+.jr-headline { font-family:'Fraunces', serif; font-weight:700; font-size:52px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
+.jr-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; color:#3d3024; margin-bottom:22px; max-width:92%; }
+.jr-body p { margin-bottom:12px; }
+.jr-railtitle { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.28em; text-transform:uppercase; color:#28508c; border-bottom:1px solid #c89b3c; padding-bottom:8px; margin-bottom:14px; }
+.jr-rail { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:18px; }
+.jr-stop { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.04em; color:#a8926a; padding:5px 11px; border:1px solid #e8d6a8; border-radius:100px; background:rgba(255,255,255,0.35); white-space:nowrap; }
+.jr-stop .jr-n { font-weight:700; color:#c89b3c; margin-right:3px; }
+.jr-stop.done { color:#5a4a3a; border-color:rgba(200,155,60,0.5); }
+.jr-stop.done .jr-n { color:#28508c; }
+.jr-stop.here { color:#fff; background:#28508c; border-color:#28508c; font-weight:700; }
+.jr-stop.here .jr-n { color:#f0d68c; }
+.jr-today { font-family:'Fraunces', serif; font-style:italic; font-size:15px; line-height:1.5; color:#28508c; margin-top:auto; padding-top:10mm; border-top:1px solid #c89b3c; }
 @media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
 </style></head>
 <body>
@@ -131,6 +146,35 @@ body { padding:20px; }
   </ul>
 </div>
 
+<div class="mag-page mag-journey">
+  <div class="jr-eyebrow">The Journey · Chapter Two</div>
+  <div class="jr-headline">From the Great Wall<br>to the Alps.</div>
+  <div class="jr-body">
+    <p>The story so far: we began in Beijing, where the Great Wall and the Forbidden City gave the children their first taste of how old and how vast the world can be — before a red-eye flight carried us west into Europe and a jet-lagged first afternoon in Munich.</p>
+    <p>Now the road climbs into the Alps. Austria is our second chapter — a small country of salt mines and lake villages, of Mozart's Salzburg and the Habsburgs' Vienna, with the Sound of Music hills waiting at the door. This page rides at the front of every issue: where we've been, where we are, and where we're headed next.</p>
+  </div>
+  <div class="jr-railtitle">The Route · 15 Countries · 33 Cities · 30 Nights</div>
+  <div class="jr-rail">
+    <div class="jr-stop done"><span class="jr-n">01</span>China ✓</div>
+    <div class="jr-stop here"><span class="jr-n">02</span>Austria ★</div>
+    <div class="jr-stop"><span class="jr-n">03</span>Czechia</div>
+    <div class="jr-stop"><span class="jr-n">04</span>Hungary</div>
+    <div class="jr-stop"><span class="jr-n">05</span>Slovenia</div>
+    <div class="jr-stop"><span class="jr-n">06</span>Italy</div>
+    <div class="jr-stop"><span class="jr-n">07</span>Switzerland</div>
+    <div class="jr-stop"><span class="jr-n">08</span>Germany</div>
+    <div class="jr-stop"><span class="jr-n">09</span>France</div>
+    <div class="jr-stop"><span class="jr-n">10</span>Netherlands</div>
+    <div class="jr-stop"><span class="jr-n">11</span>Belgium</div>
+    <div class="jr-stop"><span class="jr-n">12</span>Denmark</div>
+    <div class="jr-stop"><span class="jr-n">13</span>Sweden</div>
+    <div class="jr-stop"><span class="jr-n">14</span>Vatican</div>
+    <div class="jr-stop"><span class="jr-n">⌂</span>Home</div>
+  </div>
+  <div class="jr-today">Today — Austria: the Sound of Music garden, and a first Alpine afternoon.</div>
+  <div class="folio">— Issue 02 · AUSTRIA · The Journey —</div>
+</div>
+
 <div class="mag-page mag-spread">
   <div class="sp-eyebrow">FEATURE · HALLSTATT · DAY 04</div>
   <div class="sp-headline">A lake, a village,<br>a 7,000-year story.</div>
@@ -147,6 +191,24 @@ body { padding:20px; }
     <p>The salt mines began producing around 5000 BC. By 800 BC the wealth from this trade had grown so vast that archaeologists later named an entire early European civilisation — the Hallstatt Culture — after the village. We rode the funicular up, walked through a 19th-century mining tunnel, and slid down a 60-metre wooden miner's slide in pitch darkness. The kids screamed. They were the only people on the mountain who didn't look slightly stunned by the silence.</p>
   </div>
   <div class="folio">— Issue 02 · AUSTRIA · 03 —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">SALZBURG · SOUND OF MUSIC · IN OUR OWN WORDS</div>
+  <div class="sp-headline">Do-Re-Mi in the garden,<br>and an ice-cream afternoon.</div>
+  <div class="sp-deck">We reached Salzburg by noon — tired, sun-warmed, in no hurry — and walked the very garden where the von Trapp children sang, before wandering the old streets with ice-cream in hand.</div>
+  <div class="sp-meta"><span>Sat 11 Jul 2026</span><span>Mirabell Gardens, Salzburg</span><span>A gentle first afternoon</span></div>
+  <div class="sp-hero" style="background-image:url('../images/austria/day-01-mirabell-gardens.jpg');">
+    <div class="ph-name">📷 images/austria/day-01-mirabell-gardens.jpg</div>
+    <div class="ph-info">HERO PHOTO · TBD</div>
+  </div>
+  <div class="sp-caption">Mirabell Gardens — where "Do-Re-Mi" was filmed, and where we found our feet on our first Austrian afternoon.</div>
+  <div class="sp-cols">
+    <p>It was noon by the time we reached Salzburg, and after Beijing, a red-eye flight and a morning in Munich, we arrived with tired legs — Aviann most of all. So we did Salzburg gently. We walked into the Mirabell Gardens, the very place where Maria and the von Trapp children skipped and sang "Do-Re-Mi", and stood a while among the flowerbeds and fountains, the fortress watching from its hill above the city.</p>
+    <div class="sp-quote">We reached the garden where they sang Do-Re-Mi — and, tired and happy, we simply walked.</div>
+    <p>There was no grand plan and no rush. We wandered the old streets, let the city carry us, and did the single most important thing you can do with three weary children on a warm afternoon: we bought ice-cream. It was, for all its smallness, exactly the right way to arrive in Austria — not with a checklist, but with a slow walk, a famous garden, and cold ice-cream melting faster than the children could eat it.</p>
+  </div>
+  <div class="folio">— Issue 02 · AUSTRIA · Salzburg, our afternoon —</div>
 </div>
 
 <div class="mag-page mag-duo">
