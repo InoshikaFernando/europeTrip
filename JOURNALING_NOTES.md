@@ -74,8 +74,11 @@ warm magazine-editorial tone.
 - **Issue 08 Germany — IN PROGRESS.** **Visit 1 arrival page DONE & live** (Munich
   landing ~11 Jul: torn backpack, stroller kept separately, €25 airport shower, car
   pickup, driving on the right). Welcome updated "two doses" → three; cover dates now
-  11 Jul · 27 Jul · 5 Aug. **Pending:** what they actually did in Munich *city* (the 2+ hr
-  wander) → add as Visit 1b. Touches 2 & 3 (Ottobeuren, Aufkirchen/Munich) still placeholder.
+  11 Jul · 27 Jul · 5 Aug. **Visit 1b (Munich on foot) DONE & live:** REWE picnic lunch
+  (salads, hot dogs, Brezel), Marienplatz, St. Peter's Church, two living-statue performers
+  (black/gold + sand/mud) the kids loved. Touches 2 & 3 (Ottobeuren 27 Jul, Aufkirchen/Munich
+  5 Aug) still imagined placeholder. NOTE: placeholder "Munich in Three Squares" duo (Marienplatz
+  etc.) is for the 5 Aug visit — reconcile if they revisit. Open thread: replacement backpack.
 - **Issues 02–07, 09–14 — untouched** (imagined placeholder). Real reflections to come as they travel.
 
 ## Real details captured so far (facts to reuse — keep consistent)
