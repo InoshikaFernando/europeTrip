@@ -71,9 +71,11 @@ warm magazine-editorial tone.
   Before We Left (packing), Arrival in Beijing, The Palace Day, The Long Day's End
   (+ Avin fever postscript). **Pending:** homebound Great Wall (7 Aug) → then rewrite
   China's Reflections page to cover all of China.
-- **Issue 08 Germany — IN PROGRESS.** Adding **Visit 1** (Munich arrival ~11 Jul,
-  >2 hrs walking, Avin's fever recovered). Need details of the Munich walk.
-  Update welcome "two doses" → three; update cover dates/cities. Touches 2 & 3 still placeholder.
+- **Issue 08 Germany — IN PROGRESS.** **Visit 1 arrival page DONE & live** (Munich
+  landing ~11 Jul: torn backpack, stroller kept separately, €25 airport shower, car
+  pickup, driving on the right). Welcome updated "two doses" → three; cover dates now
+  11 Jul · 27 Jul · 5 Aug. **Pending:** what they actually did in Munich *city* (the 2+ hr
+  wander) → add as Visit 1b. Touches 2 & 3 (Ottobeuren, Aufkirchen/Munich) still placeholder.
 - **Issues 02–07, 09–14 — untouched** (imagined placeholder). Real reflections to come as they travel.
 
 ## Real details captured so far (facts to reuse — keep consistent)
@@ -104,5 +106,10 @@ clever finds (2.5 kg Kmart folding car seats ×3, eye masks with built-in pillow
 noodles/soup/mac&cheese/3-in-1 coffee from home); bags = 2 big + 4 small backpacks, 1 China
 hand-luggage, Avin's strap harness-backpack, a stroller, 3 car seats.
 
-**Germany Visit 1 (~11 Jul) — in progress:** landed Munich from Beijing; spent 2+ hours;
-walked in Munich; Avin's fever lifted. _Awaiting: what they saw/did/ate on the walk._
+**Germany Visit 1 (11 Jul) — arrival page done:** flight from Beijing landed on time;
+immigration + bags; Avin fully recovered; **one big backpack torn** on the carousel (need to
+buy a replacement); waited long for the stroller then learned Munich keeps strollers at a
+**separate oversized-items point**, not the belt; **Munich Airport public shower** — €25 per
+cubicle for 2 hrs, took 1 cubicle, ~45 min to wash all five; **car pickup smooth, kids loved
+their car seats**; drove into Munich; **driving on the right** (opposite NZ) felt crazy at
+first but adapted within ~30 min. _Awaiting: the 2+ hr Munich city wander (Visit 1b)._
