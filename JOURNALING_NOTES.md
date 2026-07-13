@@ -89,6 +89,12 @@ warm magazine-editorial tone.
   Mozart's birthplace skipped, running 2 hrs behind to reach church.** The imagined "Salzburg in
   Three Squares" duo was **DELETED** (Mozart birthplace/fortress not really visited). Hallstatt &
   Vienna pages still imagined placeholder (Austria block 11–15 Jul; confirm if/when they do them).
+  Added "The First Night" page (Sat 11 Jul eve): Saturday Mass finished 7:45pm; **Austria shops
+  shut at 6pm Sat** so missed grocery dinner; grabbed pizza/pasta at a restaurant just before it
+  closed (unexpected cost); stayed at **Burg Altpernstein castle — no lift, hauled heavy bags to
+  3rd floor** (historical castle); bath, bed, exhausted. NOTE: file page order is Hallstatt →
+  Salzburg → First Night → Vienna (Hallstatt/Vienna still placeholder) — reorder to chronological
+  when those two are made real.
 - **Issues 03–07, 09–14 — untouched** (imagined placeholder). Real reflections to come as they travel.
 
 ## Real details captured so far (facts to reuse — keep consistent)
