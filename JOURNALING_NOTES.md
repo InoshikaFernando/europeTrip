@@ -95,6 +95,13 @@ warm magazine-editorial tone.
   3rd floor** (historical castle); bath, bed, exhausted. NOTE: file page order is Hallstatt →
   Salzburg → First Night → Vienna (Hallstatt/Vienna still placeholder) — reorder to chronological
   when those two are made real.
+- **Hallstatt (Sun 12 Jul) now REAL & reordered** into date order (Salzburg → First Night →
+  Hallstatt → Vienna). Real visit: woke 5am fresh (bath fixed the jet-lag), castle breakfast
+  buffet 7:15/7:30 (cheese, ham, salads, dips, juice, cereal); drove to Hallstatt, arrived
+  ~10:30 (not yet hot); **salt mine was CLOSED**; very crowded; did a village walk + a boat
+  ride on the Hallstättersee; didn't eat there (full from breakfast) but **tried Wiener
+  Schnitzel on the drive back**. Imagined Hallstatt (funicular/mining tunnel/60m slide) removed.
+  Only Vienna (Wed 15 Jul, Schönbrunn/Hofburg) left as imagined placeholder in Austria.
 - **Issues 03–07, 09–14 — untouched** (imagined placeholder). Real reflections to come as they travel.
 
 ## Real details captured so far (facts to reuse — keep consistent)
