@@ -81,11 +81,14 @@ warm magazine-editorial tone.
   5 Aug) still imagined placeholder. NOTE: placeholder "Munich in Three Squares" duo (Marienplatz
   etc.) is for the 5 Aug visit — reconcile if they revisit. Open thread: replacement backpack.
 - **Issue 02 Austria — IN PROGRESS.** Added "The Journey" recap page (Ch.2, route rail) +
-  a real Salzburg spread ("Do-Re-Mi in the garden, and an ice-cream afternoon" — noon arrival
-  11 Jul, tired Aviann, Mirabell Gardens, street wander, ice-cream). **Pending:** confirm what
-  else they did in Salzburg — the imagined "Salzburg in Three Squares" duo (Mozart's birthplace,
-  Hohensalzburg fortress) may need trimming to match reality. Hallstatt & Vienna pages still
-  imagined placeholder (they may still visit — Austria block is 11–15 Jul).
+  a real, deeply personal Salzburg spread. **Lana's Sound of Music story** is the heart of it:
+  favourite childhood film, played Maria (sister as Liesl, dolls for the other kids), watched
+  it 100+ times ("every time I was in Austria in my mind"), and after 30 years did the fountain
+  splash + stood at the garden gate for real with her own kids watching. Real visit was a rushed
+  noon–afternoon (11 Jul): Mirabell Gardens, streets, ice-cream, **fortress seen only from afar,
+  Mozart's birthplace skipped, running 2 hrs behind to reach church.** The imagined "Salzburg in
+  Three Squares" duo was **DELETED** (Mozart birthplace/fortress not really visited). Hallstatt &
+  Vienna pages still imagined placeholder (Austria block 11–15 Jul; confirm if/when they do them).
 - **Issues 03–07, 09–14 — untouched** (imagined placeholder). Real reflections to come as they travel.
 
 ## Real details captured so far (facts to reuse — keep consistent)
