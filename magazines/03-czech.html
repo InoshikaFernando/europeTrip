@@ -90,6 +90,21 @@ body { padding:20px; }
 .bc-mag { position:absolute; top:20mm; left:20mm; font-family:'Fraunces', serif; font-style:italic; font-weight:300; font-size:16px; color:rgba(255,255,255,0.9); letter-spacing:0.05em; }
 .bc-issue { position:absolute; top:20mm; right:20mm; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; color:rgba(255,255,255,0.7); }
 .mag-page .folio { position:absolute; bottom:4mm; left:0; right:0; text-align:center; font-family:'Fraunces', serif; font-style:italic; font-size:8.5px; color:#8b6914; }
+/* THE JOURNEY / STORY SO FAR */
+.mag-journey { background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%); padding:24mm 22mm; display:flex; flex-direction:column; }
+.jr-eyebrow { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#6e1313; margin-bottom:8px; }
+.jr-headline { font-family:'Fraunces', serif; font-weight:700; font-size:52px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
+.jr-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; color:#3d3024; margin-bottom:22px; max-width:92%; }
+.jr-body p { margin-bottom:12px; }
+.jr-railtitle { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.28em; text-transform:uppercase; color:#6e1313; border-bottom:1px solid #325437; padding-bottom:8px; margin-bottom:14px; }
+.jr-rail { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:18px; }
+.jr-stop { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.04em; color:#a8926a; padding:5px 11px; border:1px solid #e8d6a8; border-radius:100px; background:rgba(255,255,255,0.35); white-space:nowrap; }
+.jr-stop .jr-n { font-weight:700; color:#8b6914; margin-right:3px; }
+.jr-stop.done { color:#5a4a3a; border-color:rgba(50,84,55,0.5); }
+.jr-stop.done .jr-n { color:#6e1313; }
+.jr-stop.here { color:#fff; background:#6e1313; border-color:#6e1313; font-weight:700; }
+.jr-stop.here .jr-n { color:#f0d68c; }
+.jr-today { font-family:'Fraunces', serif; font-style:italic; font-size:15px; line-height:1.5; color:#6e1313; margin-top:auto; padding-top:10mm; border-top:1px solid #325437; }
 @media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
 </style></head>
 <body>
@@ -129,6 +144,53 @@ body { padding:20px; }
     <li><span class="toc-name">Tastes of Bohemia</span><span class="toc-page">06</span></li>
     <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">07</span></li>
   </ul>
+</div>
+
+<div class="mag-page mag-journey">
+  <div class="jr-eyebrow">The Journey · Chapter Three</div>
+  <div class="jr-headline">Across a border,<br>into Bohemia.</div>
+  <div class="jr-body">
+    <p>The story so far: we began at the Great Wall and the Forbidden City in Beijing, flew west into a jet-lagged first day in Munich, then climbed into the Austrian Alps — Salzburg's Sound of Music garden, the lake at Hallstatt, and two nights in a hilltop castle.</p>
+    <p>Now we cross our first European land border. Czechia is our third chapter, and it is really one shining city: Prague, the City of a Hundred Spires — Charles Bridge at dawn, a castle above the river, and an astronomical clock that has kept time since 1410. This page rides at the front of every issue: where we've been, where we are, and where we're headed next.</p>
+  </div>
+  <div class="jr-railtitle">The Route · 15 Countries · 33 Cities · 30 Nights</div>
+  <div class="jr-rail">
+    <div class="jr-stop done"><span class="jr-n">01</span>China ✓</div>
+    <div class="jr-stop done"><span class="jr-n">02</span>Austria ✓</div>
+    <div class="jr-stop here"><span class="jr-n">03</span>Czechia ★</div>
+    <div class="jr-stop"><span class="jr-n">04</span>Hungary</div>
+    <div class="jr-stop"><span class="jr-n">05</span>Slovenia</div>
+    <div class="jr-stop"><span class="jr-n">06</span>Italy</div>
+    <div class="jr-stop"><span class="jr-n">07</span>Switzerland</div>
+    <div class="jr-stop"><span class="jr-n">08</span>Germany</div>
+    <div class="jr-stop"><span class="jr-n">09</span>France</div>
+    <div class="jr-stop"><span class="jr-n">10</span>Netherlands</div>
+    <div class="jr-stop"><span class="jr-n">11</span>Belgium</div>
+    <div class="jr-stop"><span class="jr-n">12</span>Denmark</div>
+    <div class="jr-stop"><span class="jr-n">13</span>Sweden</div>
+    <div class="jr-stop"><span class="jr-n">14</span>Vatican</div>
+    <div class="jr-stop"><span class="jr-n">⌂</span>Home</div>
+  </div>
+  <div class="jr-today">Today — Czechia: a dawn drive out of Austria, and two days in Prague ahead.</div>
+  <div class="folio">— Issue 03 · CZECH REPUBLIC · The Journey —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">ON THE ROAD · AUSTRIA → PRAGUE · DAY 3</div>
+  <div class="sp-headline">Dawn, one last breakfast,<br>and north to Prague.</div>
+  <div class="sp-deck">Day three began the way the last two had — everyone awake at five, and that magnificent castle breakfast — before we said goodbye to Burg Altpernstein and pointed the car north.</div>
+  <div class="sp-meta"><span>Mon 13 Jul 2026</span><span>Burg Altpernstein → Prague</span><span>Farewell to the castle</span></div>
+  <div class="sp-hero" style="background-image:url('../images/czech/day-05-road-to-prague.jpg');">
+    <div class="ph-name">📷 images/czech/day-05-road-to-prague.jpg</div>
+    <div class="ph-info">HERO PHOTO · TBD</div>
+  </div>
+  <div class="sp-caption">Leaving the Austrian castle at dawn — the road north toward Bohemia and the City of a Hundred Spires.</div>
+  <div class="sp-cols">
+    <p>By the third morning it had become a rhythm: awake at five, all of us, the children as bright as the adults, and down to that extraordinary breakfast — cheese and ham, fruit and cereal, more than we could carry — one last time. Then we hauled the bags back down the castle's lift-less stairs, loaded the car, and said our goodbyes to Burg Altpernstein, the hilltop fortress that had been our first European home.</p>
+    <div class="sp-quote">Three mornings in a castle, three five-o'clock starts, and one breakfast we will miss for the rest of the trip.</div>
+    <p>And then we drove north. Austria fell away behind us — its lakes, its salt villages, its Sound of Music hills — and the road pointed toward Bohemia and Prague: the city of a hundred spires, two days of cobblestones and Gothic towers waiting at the end of it. The children settled happily into their beloved car seats. The next chapter had begun.</p>
+  </div>
+  <div class="folio">— Issue 03 · CZECH REPUBLIC · The Road —</div>
 </div>
 
 <div class="mag-page mag-spread">

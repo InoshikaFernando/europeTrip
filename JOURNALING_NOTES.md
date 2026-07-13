@@ -40,8 +40,9 @@ warm magazine-editorial tone.
 
 - **"The Journey / Story So Far"** front page with a **route rail**
   (issue order 01→14 + ⌂ Home; `★` = you are here, done = ticked, upcoming = muted).
-  Built in China (Ch.1) and Austria (Ch.2). **TODO: roll out to the remaining 12 issues.**
-  CSS (`.mag-journey`, `.jr-*`) is added per-file with that issue's accent colour.
+  Built in China (Ch.1), Austria (Ch.2), Czechia (Ch.3). **TODO: roll out to the remaining 11 issues.**
+  CSS (`.mag-journey`, `.jr-*`) is added per-file with that issue's accent colour
+  (China red #8b1a1a/#c89b3c; Austria blue #28508c/#c89b3c; Czech red #6e1313/green #325437).
 - **"Where We Head Next"** = the existing back-cover NEXT ISSUE teaser (already in each issue).
 
 ## Route (issue order) & multi-touch countries
@@ -102,7 +103,14 @@ warm magazine-editorial tone.
   ride on the Hallstättersee; didn't eat there (full from breakfast) but **tried Wiener
   Schnitzel on the drive back**. Imagined Hallstatt (funicular/mining tunnel/60m slide) removed.
   Only Vienna (Wed 15 Jul, Schönbrunn/Hofburg) left as imagined placeholder in Austria.
-- **Issues 03–07, 09–14 — untouched** (imagined placeholder). Real reflections to come as they travel.
+- **Issue 03 Czechia/Prague — IN PROGRESS.** Added "The Journey" recap (Ch.3, rail: China ✓
+  Austria ✓ Czechia ★) + a real "Road to Prague" opener (Mon 13 Jul: 3rd 5am start, last castle
+  breakfast, left Burg Altpernstein, drove north). **Pending:** the actual Prague days (13–14 Jul)
+  — Charles Bridge, Prague Castle, Old Town Sq are still imagined placeholder. Note: real laundry
+  stop #1 was Prague (Andy's Laundromat, Korunní 14).
+- **Issues 04–07, 09–14 — untouched** (imagined placeholder). Real reflections to come as they travel.
+- **Austria still open:** Vienna page (Wed 15 Jul — comes AFTER Prague chronologically), Tastes
+  of Austria food page, and Reflections all still imagined placeholder.
 
 ## Real details captured so far (facts to reuse — keep consistent)
 
