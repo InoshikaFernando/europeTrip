@@ -103,11 +103,20 @@ warm magazine-editorial tone.
   ride on the Hallstättersee; didn't eat there (full from breakfast) but **tried Wiener
   Schnitzel on the drive back**. Imagined Hallstatt (funicular/mining tunnel/60m slide) removed.
   Only Vienna (Wed 15 Jul, Schönbrunn/Hofburg) left as imagined placeholder in Austria.
-- **Issue 03 Czechia/Prague — IN PROGRESS.** Added "The Journey" recap (Ch.3, rail: China ✓
-  Austria ✓ Czechia ★) + a real "Road to Prague" opener (Mon 13 Jul: 3rd 5am start, last castle
-  breakfast, left Burg Altpernstein, drove north). **Pending:** the actual Prague days (13–14 Jul)
-  — Charles Bridge, Prague Castle, Old Town Sq are still imagined placeholder. Note: real laundry
-  stop #1 was Prague (Andy's Laundromat, Korunní 14).
+- **Issue 03 Czechia/Prague — NEARLY DONE.** Real pages now: The Journey (Ch.3 rail) · Road to
+  Prague (Mon 13, dawn castle departure) · Arrival in Prague (first laundry at Andy's Laundromat
+  Vinohrady, torn-backpack replacement not found nearby → drive needed, supermarket donuts) ·
+  Prague Castle (Mon 13 pm: castle + St Vitus Cathedral + St George's Basilica; **cathedrals felt
+  grander than the castle**; kids tired → mini tourist train w/ English commentary; tram tip =
+  **buy tickets on board, kids ride free**; on way down sat in park w/ Girl-and-Dove statue for a
+  **spiral "tornado" potato + trdelník ice-cream/Nutella**) · Charles Bridge & the Clock (Tue 14:
+  left apartment 8am, on bridge ~8:15, **almost empty**; then Astronomical Clock show) · Old Town
+  (**"looks like King's Landing" (GOT)**, majestic/un-photographable, luxury-brand shops match the
+  grandeur). Removed imagined pages: old Charles Bridge (5:30 dawn fiction), Old-Town clock page,
+  duplicate Prague Castle duo (Golden Lane/Kafka/guard). **They SKIPPED the river cruise.**
+  **STILL TODO for Prague:** Tastes of Bohemia food page (real so far: trdelník + tornado potato —
+  ask for more) + Reflections page (need favourite/hardest/if-we-come-back). Then Austria's Vienna
+  (Wed 15 Jul) is next chronologically. Open thread: still need to buy the replacement backpack.
 - **Issues 04–07, 09–14 — untouched** (imagined placeholder). Real reflections to come as they travel.
 - **Austria still open:** Vienna page (Wed 15 Jul — comes AFTER Prague chronologically), Tastes
   of Austria food page, and Reflections all still imagined placeholder.
