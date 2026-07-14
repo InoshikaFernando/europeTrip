@@ -4,7 +4,7 @@
 > travel-journaling project instantly. NOT part of the published magazines.
 > To resume in a new session, say: *"Read JOURNALING_NOTES.md and let's continue."*
 
-_Last updated: China outbound fully journaled; adding Germany Visit 1 (Munich arrival)._
+_Last updated: Prague photo album fully wired in — 13 real photos placed across the issue (incl. St Vitus family cover + 6 new pages). See "Photo workflow" for the transcript-extraction recovery method (uploads stopped persisting to disk again)._
 
 ---
 
@@ -68,9 +68,15 @@ warm magazine-editorial tone.
   `/root/.claude/uploads/<session>/<name>.jpg` (Read + copy). **CRITICAL: the user must send the
   image ALONE — no caption text in the same message — or it arrives as a preview only and NO file
   is saved.** Image alone = file; image + text = preview. Ask for captions in a separate message.
-- **KNOWN ISSUE (this session):** after ~14:25 the upload pipeline stopped persisting files —
-  every new photo came as preview-only regardless of method. If that recurs, a **fresh session**
-  usually fixes it (nothing lost; everything is on GitHub + these notes).
+- **KNOWN ISSUE:** the upload pipeline sometimes stops persisting files to
+  `/root/.claude/uploads/…` — every photo comes as preview-only (I can *see* it but there's no file
+  on disk). **RECOVERY METHOD THAT WORKS (use this, don't wait for a fresh session):** the images
+  ARE stored as base64 inside the session transcript at
+  `/root/.claude/projects/-home-user-europeTrip/<SESSION-ID>.jsonl`. Extract them with a small
+  Python script: walk each JSON line, find `{"type":"image","source":{"type":"base64","data":…}}`
+  blocks, `base64.b64decode`, **dedupe by md5** (your own Read-tool image views get re-embedded as
+  dupes), write in order → you get every photo the user sent, full quality. Re-run the script as
+  more photos arrive (it's idempotent). This session recovered all 19 photos this way.
 - **Process each photo** (needs `pip install Pillow`): EXIF-straighten, resize long edge ~2000px,
   save JPEG q82 → ~300–600 KB. `ImageOps.exif_transpose(im); resize; im.save(dst,'JPEG',quality=82,optimize=True)`.
   Phone photos often have EXIF orientation 6/8 and MUST be transposed or they show sideways.
@@ -80,33 +86,48 @@ warm magazine-editorial tone.
   `<div class="sp-photo"><img src="../images/day-XX/<file>.jpg" alt="…"><div class="ph-info">Photo · Munasinghe</div></div>`
   with CSS `.sp-photo img { max-width:100%; max-height:150mm; }` (shows whole frame). Add that CSS
   per issue file. DELETE leftover striped `ph-name` placeholder boxes on pages with no photo.
+- **LAYOUT CONSTRAINT (important):** every `.mag-page` is a FIXED `210mm × 295mm` with
+  `overflow:hidden`, so anything past the bottom is silently CLIPPED. Budget ≈ **one 150mm `.sp-photo`
+  per page** + eyebrow/headline/deck/meta + a compact 2-col text block (≈2 short paras + a quote).
+  For lots of photos, make **more pages** (each a `.mag-spread` with a descriptive folio), don't stack.
+- **VERIFY BEFORE PUSHING:** render the file with headless Chromium and screenshot each `.mag-page`
+  to catch clipping. Playwright lives at `/opt/node22/lib/node_modules/playwright`; chrome at
+  `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`. Screenshot per `.mag-page` element, eyeball each.
 - **Style = Option A:** clean photo, NO watermark. Rich `sp-caption` + discreet `Photo · Munasinghe` chip.
 - **Prague photos placed (all real, uncropped):** Old Town → St Nicholas (`day-06/09`), Charles
   Bridge → family@tower (`day-05/06`), Astronomical Clock → orloj (`day-05/07`), Josefov → yellow
   Široká street (`day-06/08`).
-- **Cover = A (family photo, full cover).** Currently family@Charles-Bridge (`day-05/06`) as a
-  TEMP. User wants the **St Vitus cathedral family photo** as the cover but it won't upload (known
-  issue). Cover layout: masthead/title moved to TOP via inline style on `.mag-cover`, gradient
-  dark-at-top so faces stay clear at the bottom.
-- **OPEN user feedback to action:** (1) "wrong picture in wrong place" — the user wants the
-  **red-rooftop panorama** (the classic King's-Landing cityscape from the castle) on the **Old Town
-  page**, likely moving St Nicholas elsewhere. (2) "add more content based on what we went" — ask
-  what else they did/saw and write it in.
-- **PHOTOS THE USER TRIED TO SEND but the upload was stuck (ask them to re-send these in a fresh
-  session, each ALONE):**
-  1. **St Vitus cathedral family photo** → the COVER (their first choice).
-  2. Clear family close-up (mountain bg, "just before leaving") → alt cover option.
-  3. Two **Kohl Fountain** photos (Prague Castle 2nd courtyard) → the **Castle** page.
-  4. **Red-rooftop panorama** over Malá Strana (St Nicholas dome, sea of red roofs) → the **Old
-     Town / King's Landing** page (ideal hero — user said "reminds me of King's Landing").
-  5. **Jewish Town Hall** (pink baroque building with the Hebrew clock that runs anticlockwise,
-     Josefov) → the **Josefov** page.
-  6. **Family at the castle viewpoint** (all five, red-roof panorama behind) → strong **cover**
-     candidate OR the Old Town page. (Very clear family shot.)
+- **Cover = A (family photo, full cover). DONE:** now the **St Vitus cathedral family photo**
+  (`day-06/12-st-vitus-family.jpg`) — the family across the bottom, cathedral soaring above.
+  Masthead/title at TOP (`.mag-cover` inline `justify-content:flex-start`); gradient dark-at-top for
+  the title, light at the bottom so faces stay clear. Image ratio ≈ page ratio, so `center 42%/cover`
+  shows nearly the whole frame.
+- **OPEN user feedback — BOTH ACTIONED:** (1) "wrong picture in wrong place" → the **red-rooftop
+  panorama** (`day-06/13`) is now the **Old Town / King's Landing** hero; the old stock St-Nicholas
+  exterior was removed from that page. (2) "add more content" → wrote **6 new pages** from the album
+  (Kohl Fountain, Bridge Saints/St-John-of-Nepomuk, Old-Town Streets, Týn Church, St Nicholas Church,
+  Jewish Town Hall) + real family photos onto the Castle & Clock pages.
+- **PHOTOS THE USER SENT — ALL RECEIVED & PLACED (this session, via transcript extraction).** Final
+  homes (Issue 03):
+  1. St Vitus cathedral family (`day-06/12`) → **COVER**. ✓
+  2. Family close-up, mountain bg → new **"Just Before Leaving"** closing page (`day-06/16`),
+     captioned "just before leaving" (per user; deck kept location-neutral since it's not Prague). ✓
+  3. Kohl Fountain (`day-06/10`) → new **Kohl Fountain** page. ✓ (2nd near-dup `day-06/11` HELD.)
+  4. Red-rooftop panorama (`day-06/13`) → **Old Town** hero. ✓
+  5. Jewish Town Hall (`day-06/15`) → new **Jewish Town Hall** page. ✓
+  6. Family at castle viewpoint (`day-06/14`) → **Castle** page hero. ✓
+  Plus more they streamed in: Charles-Bridge **St-John-of-Nepomuk** cross+locks (`day-05/10`) → new
+  Bridge-Saints page; **family at the Astronomical Clock** (`day-05/12`) → swapped onto Clock page;
+  **Old-Town street** candid (`day-06/17`) → new Streets page; **Týn Church** (`day-06/20`) + **St
+  Nicholas interior** (`day-06/18`) → two new church pages.
+- **HELD (processed & in repo, NOT placed — offer as swaps):** `day-06/11` kohl-detail,
+  `day-06/19` st-nicholas-exterior, `day-06/21` tyn-closeup, `day-05/08` charles-bridge-walk,
+  `day-05/09` old-town-bridge-tower-arch, `day-05/11` bridge-crucifix-calvary, `day-05/13`
+  astronomical-clock-tower. (One near-duplicate clock shot the user flagged "same" was skipped.)
 
 ## Publish workflow
 
-- Develop on branch **`claude/travel-magazine-reflections-gkh8wt`**.
+- Develop on the session's designated branch (this session: **`claude/prague-photos-journaling-l70djc`**).
 - Commit → push branch → fast-forward merge into **`main`** → Pages rebuilds.
 - Live URL pattern: `https://inoshikafernando.github.io/europeTrip/magazines/NN-country.html`
 - The **user also edits `index.html`, `guide.html`, `schedule.html`, `day_*.html` directly on `main`.**
@@ -161,9 +182,17 @@ warm magazine-editorial tone.
   (**"looks like King's Landing" (GOT)**, majestic/un-photographable, luxury-brand shops match the
   grandeur). Removed imagined pages: old Charles Bridge (5:30 dawn fiction), Old-Town clock page,
   duplicate Prague Castle duo (Golden Lane/Kafka/guard). **They SKIPPED the river cruise.**
-  **STILL TODO for Prague:** Tastes of Bohemia food page (real so far: trdelník + tornado potato —
-  ask for more) + Reflections page (need favourite/hardest/if-we-come-back). Then Austria's Vienna
-  (Wed 15 Jul) is next chronologically. Open thread: still need to buy the replacement backpack.
+  **PHOTO ALBUM NOW FULLY WIRED IN (this session):** the family streamed ~19 real Prague photos;
+  13 placed, incl. St Vitus family COVER + 6 new pages (Kohl Fountain, Bridge Saints, Old-Town
+  Streets, Týn Church, St Nicholas Church, Jewish Town Hall) + real family photos onto the Castle &
+  Clock pages + a "Just Before Leaving" closing portrait. Issue is now **19 pages**; all verified
+  non-clipped via headless-Chromium screenshots. TOC updated (grouped entries so the Welcome page
+  doesn't overflow). 7 extra/near-dup photos HELD in repo as possible swaps (see pending-photos list).
+  **STILL TODO for Prague:** Tastes of Bohemia food page still has striped placeholders (real so far:
+  trdelník + tornado potato — the two food photos `images/czech/food-*` don't exist yet). Reflections
+  page is written but could gain the family's own favourite/hardest/if-we-come-back words. Then
+  Austria's Vienna (Wed 15 Jul) is next chronologically. Open thread: still need to buy the
+  replacement backpack.
 - **Issues 04–07, 09–14 — untouched** (imagined placeholder). Real reflections to come as they travel.
 - **Austria still open:** Vienna page (Wed 15 Jul — comes AFTER Prague chronologically), Tastes
   of Austria food page, and Reflections all still imagined placeholder.
