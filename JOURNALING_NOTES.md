@@ -182,12 +182,16 @@ warm magazine-editorial tone.
   (**"looks like King's Landing" (GOT)**, majestic/un-photographable, luxury-brand shops match the
   grandeur). Removed imagined pages: old Charles Bridge (5:30 dawn fiction), Old-Town clock page,
   duplicate Prague Castle duo (Golden Lane/Kafka/guard). **They SKIPPED the river cruise.**
-  **PHOTO ALBUM NOW FULLY WIRED IN (this session):** the family streamed ~19 real Prague photos;
-  13 placed, incl. St Vitus family COVER + 6 new pages (Kohl Fountain, Bridge Saints, Old-Town
-  Streets, Týn Church, St Nicholas Church, Jewish Town Hall) + real family photos onto the Castle &
-  Clock pages + a "Just Before Leaving" closing portrait. Issue is now **19 pages**; all verified
+  **PHOTO ALBUM NOW FULLY WIRED IN (this session):** the family streamed their whole Prague album;
+  ~16 placed, incl. St Vitus family COVER + many new pages: Kohl Fountain, Bridge Saints, Old-Town
+  Streets, Týn Church, St Nicholas Church, Jewish Town Hall, **St George's Basilica, Tomb of St
+  Ludmila, The Old Royal Palace (Land Rolls)** + real family photos onto the Castle & Clock pages +
+  a "Just Before Leaving" closing portrait. Issue is now **22 pages**; every page verified
   non-clipped via headless-Chromium screenshots. TOC updated (grouped entries so the Welcome page
-  doesn't overflow). 7 extra/near-dup photos HELD in repo as possible swaps (see pending-photos list).
+  doesn't overflow). ~10 extra/near-dup photos HELD in repo as possible swaps (St Nicholas exterior,
+  Týn closeup, 2nd Kohl, bridge walk/tower/crucifix, clock tower, St George nave/apse/relief, palace
+  heraldic wall/ceiling, castle model). **PUBLISH MODE:** user said "publish as you go / no need to
+  create branches" — so commits now fast-forward straight into **main** (live) each turn.
   **STILL TODO for Prague:** Tastes of Bohemia food page still has striped placeholders (real so far:
   trdelník + tornado potato — the two food photos `images/czech/food-*` don't exist yet). Reflections
   page is written but could gain the family's own favourite/hardest/if-we-come-back words. Then
