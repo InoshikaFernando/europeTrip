@@ -216,7 +216,15 @@ warm magazine-editorial tone.
   `images/czech/tornado-potato-kids.jpg`, `images/czech/food-family-selfie.jpg`, and
   `images/day-06/34..37`. **HELD (not placed, no dup):** Jewish Town Hall clock-tower shot (`img_007`) —
   the Town Hall already has its own page.
-**(historical note) earlier STILL TODO — now resolved:** Tastes of Bohemia food page had striped placeholders. Reflections
+**(historical note) earlier STILL TODO — now resolved:** Tastes of Bohemia food page had striped placeholders.
+**Post-redesign corrections (user review pass):** (1) The "just before leaving" portrait
+  (`day-06/16-family-portrait-mountain`, mountain bg) is actually the **Austria→Prague departure**, not a
+  Prague finale — moved it to the **Road page** hero and DELETED the old "One Last Picture" closing page.
+  (2) Castle page hero was a city-overlook shot (no castle/cathedral visible) — swapped in a real
+  **St. Vitus from the Third Courtyard** photo (`day-06/38-st-vitus-courtyard.jpg`, family crossing below).
+  **HELD/unused now:** `day-06/14-family-castle-viewpoint.jpg` (the overlook family shot) — free to place
+  if wanted (King's Landing page already has the `day-06/13` panorama). Interim route-map idea
+  (`day-05/map.jpeg`) was tried on the Road page then replaced by the portrait. Issue now **27 pages**. Reflections
   page is written but could gain the family's own favourite/hardest/if-we-come-back words. Then
   Austria's Vienna (Wed 15 Jul) is next chronologically. Open thread: still need to buy the
   replacement backpack.
