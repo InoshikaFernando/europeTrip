@@ -65,20 +65,40 @@ warm magazine-editorial tone.
   stock images from planning** (some of skipped spots, e.g. day-04 bone-house), NOT the family's
   own photos — don't trust them as "what they did."
 - **The user sends real photos in chat**; they arrive as real files at
-  `/root/.claude/uploads/<session>/<name>.jpg` (a path you can Read and copy). This WORKS.
-- **Process each photo** (needs `pip install Pillow`): straighten via EXIF, resize long edge to
-  ~2000px, save JPEG quality 82 → ~300–600 KB. Recipe:
-  `PIL: ImageOps.exif_transpose(im); resize; im.save(dst,'JPEG',quality=82,optimize=True)`.
+  `/root/.claude/uploads/<session>/<name>.jpg` (Read + copy). **CRITICAL: the user must send the
+  image ALONE — no caption text in the same message — or it arrives as a preview only and NO file
+  is saved.** Image alone = file; image + text = preview. Ask for captions in a separate message.
+- **KNOWN ISSUE (this session):** after ~14:25 the upload pipeline stopped persisting files —
+  every new photo came as preview-only regardless of method. If that recurs, a **fresh session**
+  usually fixes it (nothing lost; everything is on GitHub + these notes).
+- **Process each photo** (needs `pip install Pillow`): EXIF-straighten, resize long edge ~2000px,
+  save JPEG q82 → ~300–600 KB. `ImageOps.exif_transpose(im); resize; im.save(dst,'JPEG',quality=82,optimize=True)`.
   Phone photos often have EXIF orientation 6/8 and MUST be transposed or they show sideways.
-  Save into the matching `images/day-XX/` with a descriptive name (e.g. `08-old-town-street.jpg`).
-- **Wire into the page:** set the hero `background-image` to `../images/day-XX/<file>.jpg`, and
-  **REMOVE the `<div class="ph-name">…</div>` placeholder overlay** (it's a striped box that would
-  cover the photo). Keep a small `<div class="ph-info">` chip.
-- **Style = Option A (user chose):** clean photo, NO across-image watermark. Rich descriptive
-  `sp-caption`, and a discreet credit chip `<div class="ph-info">Photo · Munasinghe</div>`.
-- First real photo done: `images/day-06/08-old-town-street.jpg` (Josefov/Široká, Franz Kafka
-  Society) → hero of the Prague **Old Town** page.
-- Cover style chosen = **A** (family photo as full cover). Awaiting a family portrait to drop in.
+  Save into the matching `images/day-XX/` with a descriptive name.
+- **Wire in as a FULL, UNCROPPED photo** (user insisted — NO cropping): use a `.sp-photo` block,
+  NOT the cropping `background-size:cover` hero:
+  `<div class="sp-photo"><img src="../images/day-XX/<file>.jpg" alt="…"><div class="ph-info">Photo · Munasinghe</div></div>`
+  with CSS `.sp-photo img { max-width:100%; max-height:150mm; }` (shows whole frame). Add that CSS
+  per issue file. DELETE leftover striped `ph-name` placeholder boxes on pages with no photo.
+- **Style = Option A:** clean photo, NO watermark. Rich `sp-caption` + discreet `Photo · Munasinghe` chip.
+- **Prague photos placed (all real, uncropped):** Old Town → St Nicholas (`day-06/09`), Charles
+  Bridge → family@tower (`day-05/06`), Astronomical Clock → orloj (`day-05/07`), Josefov → yellow
+  Široká street (`day-06/08`).
+- **Cover = A (family photo, full cover).** Currently family@Charles-Bridge (`day-05/06`) as a
+  TEMP. User wants the **St Vitus cathedral family photo** as the cover but it won't upload (known
+  issue). Cover layout: masthead/title moved to TOP via inline style on `.mag-cover`, gradient
+  dark-at-top so faces stay clear at the bottom.
+- **OPEN user feedback to action:** (1) "wrong picture in wrong place" — the user wants the
+  **red-rooftop panorama** (the classic King's-Landing cityscape from the castle) on the **Old Town
+  page**, likely moving St Nicholas elsewhere. (2) "add more content based on what we went" — ask
+  what else they did/saw and write it in.
+- **PHOTOS THE USER TRIED TO SEND but the upload was stuck (ask them to re-send these in a fresh
+  session, each ALONE):**
+  1. **St Vitus cathedral family photo** → the COVER (their first choice).
+  2. Clear family close-up (mountain bg, "just before leaving") → alt cover option.
+  3. Two **Kohl Fountain** photos (Prague Castle 2nd courtyard) → the **Castle** page.
+  4. **Red-rooftop panorama** over Malá Strana (St Nicholas dome, sea of red roofs) → the **Old
+     Town / King's Landing** page (ideal hero — user said "reminds me of King's Landing").
 
 ## Publish workflow
 
