@@ -99,6 +99,10 @@ warm magazine-editorial tone.
   3. Two **Kohl Fountain** photos (Prague Castle 2nd courtyard) → the **Castle** page.
   4. **Red-rooftop panorama** over Malá Strana (St Nicholas dome, sea of red roofs) → the **Old
      Town / King's Landing** page (ideal hero — user said "reminds me of King's Landing").
+  5. **Jewish Town Hall** (pink baroque building with the Hebrew clock that runs anticlockwise,
+     Josefov) → the **Josefov** page.
+  6. **Family at the castle viewpoint** (all five, red-roof panorama behind) → strong **cover**
+     candidate OR the Old Town page. (Very clear family shot.)
 
 ## Publish workflow
 
