@@ -57,6 +57,29 @@ warm magazine-editorial tone.
   day-trip inside the Netherlands stay; **Vatican (Issue 14) is really 22 Jul** during the
   Rome/Italy leg — kept as a special *finale* issue that springboards to Home.
 
+## Photo workflow (IMPORTANT — established mid-trip)
+
+- **Real trip photos live in `images/day-01/` … `images/day-31/`** (by trip day, matching the
+  itinerary: day-02 Beijing, day-03 Munich+Salzburg, day-04 Hallstatt, day-05 Prague arrival,
+  day-06 Prague full day, day-07 Vienna, …). NOTE: many pre-existing files there are **reference/
+  stock images from planning** (some of skipped spots, e.g. day-04 bone-house), NOT the family's
+  own photos — don't trust them as "what they did."
+- **The user sends real photos in chat**; they arrive as real files at
+  `/root/.claude/uploads/<session>/<name>.jpg` (a path you can Read and copy). This WORKS.
+- **Process each photo** (needs `pip install Pillow`): straighten via EXIF, resize long edge to
+  ~2000px, save JPEG quality 82 → ~300–600 KB. Recipe:
+  `PIL: ImageOps.exif_transpose(im); resize; im.save(dst,'JPEG',quality=82,optimize=True)`.
+  Phone photos often have EXIF orientation 6/8 and MUST be transposed or they show sideways.
+  Save into the matching `images/day-XX/` with a descriptive name (e.g. `08-old-town-street.jpg`).
+- **Wire into the page:** set the hero `background-image` to `../images/day-XX/<file>.jpg`, and
+  **REMOVE the `<div class="ph-name">…</div>` placeholder overlay** (it's a striped box that would
+  cover the photo). Keep a small `<div class="ph-info">` chip.
+- **Style = Option A (user chose):** clean photo, NO across-image watermark. Rich descriptive
+  `sp-caption`, and a discreet credit chip `<div class="ph-info">Photo · Munasinghe</div>`.
+- First real photo done: `images/day-06/08-old-town-street.jpg` (Josefov/Široká, Franz Kafka
+  Society) → hero of the Prague **Old Town** page.
+- Cover style chosen = **A** (family photo as full cover). Awaiting a family portrait to drop in.
+
 ## Publish workflow
 
 - Develop on branch **`claude/travel-magazine-reflections-gkh8wt`**.
