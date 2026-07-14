@@ -185,13 +185,21 @@ warm magazine-editorial tone.
   **PHOTO ALBUM NOW FULLY WIRED IN (this session):** the family streamed their whole Prague album;
   ~16 placed, incl. St Vitus family COVER + many new pages: Kohl Fountain, Bridge Saints, Old-Town
   Streets, Týn Church, St Nicholas Church, Jewish Town Hall, **St George's Basilica, Tomb of St
-  Ludmila, The Old Royal Palace (Land Rolls)** + real family photos onto the Castle & Clock pages +
-  a "Just Before Leaving" closing portrait. Issue is now **22 pages**; every page verified
+  Ludmila, The Old Royal Palace (Land Rolls), Inside St. Vitus (rose window), The Throne of
+  Bohemia** + real family photos onto the Castle & Clock pages +
+  a "Just Before Leaving" closing portrait. Issue is now **24 pages, all live on `main`**; every page verified
   non-clipped via headless-Chromium screenshots. TOC updated (grouped entries so the Welcome page
   doesn't overflow). ~10 extra/near-dup photos HELD in repo as possible swaps (St Nicholas exterior,
   Týn closeup, 2nd Kohl, bridge walk/tower/crucifix, clock tower, St George nave/apse/relief, palace
   heraldic wall/ceiling, castle model). **PUBLISH MODE:** user said "publish as you go / no need to
   create branches" — so commits now fast-forward straight into **main** (live) each turn.
+  **PENDING (re-send in the fresh session, each ALONE):** the family had just started sending **St.
+  Vitus cathedral interior** photos when this session got too big — a wide **nave-vault** shot, the
+  **stained-glass apse windows** (world-famous, incl. a Mucha window; some scaffolding visible from
+  restoration), and a **bronze memorial group** under a Gothic arch. One attachment was **"too large"**
+  and didn't upload — ask them to resend a smaller version. Good next move: a **"Windows of St. Vitus"**
+  stained-glass page, and optionally swap the interior hero to the nave-vault shot. (Current interior
+  page uses the rose-window shot `day-06/31-st-vitus-interior.jpg`.)
   **STILL TODO for Prague:** Tastes of Bohemia food page still has striped placeholders (real so far:
   trdelník + tornado potato — the two food photos `images/czech/food-*` don't exist yet). Reflections
   page is written but could gain the family's own favourite/hardest/if-we-come-back words. Then
