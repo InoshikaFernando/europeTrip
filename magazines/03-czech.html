@@ -109,6 +109,47 @@ body { padding:20px; }
 .sp-photo { width:100%; margin-bottom:6px; position:relative; text-align:center; line-height:0; }
 .sp-photo img { max-width:100%; max-height:150mm; display:inline-block; border-radius:2px; vertical-align:bottom; }
 .sp-photo .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; line-height:1.2; }
+/* MAGAZINE PHOTO COLLAGE — asymmetric editorial, varied sizes, rich captions */
+.mag-collage { padding:12mm 13mm; display:flex; flex-direction:column; }
+.cl-eyebrow { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#6e1313; margin-bottom:7px; }
+.cl-headline { font-family:'Fraunces', serif; font-weight:700; font-size:40px; line-height:0.92; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.015em; }
+.cl-headline em { font-style:italic; font-weight:400; color:#6e1313; }
+.cl-deck { font-family:'Fraunces', serif; font-style:italic; font-size:13px; line-height:1.4; color:#5a4a3a; margin-bottom:9px; max-width:94%; border-bottom:2px solid #325437; padding-bottom:8px; }
+.cl-grid { display:grid; grid-template-columns:repeat(12,1fr); gap:4mm; flex:1; }
+.cl-fig { position:relative; overflow:hidden; border-radius:2px; background:#e8dcc0; min-height:0; }
+.cl-fig img { width:100%; height:100%; object-fit:cover; display:block; }
+.cl-fig .ph-info { position:absolute; bottom:5px; right:6px; background:rgba(0,0,0,0.5); color:#fff; font-family:'JetBrains Mono', monospace; font-size:6.5px; padding:2px 5px; border-radius:2px; letter-spacing:0.08em; z-index:2; }
+/* caption laid over the bottom of a photo */
+.cl-over { position:absolute; left:0; right:0; bottom:0; padding:16px 12px 9px; background:linear-gradient(0deg, rgba(20,8,8,0.82) 0%, rgba(20,8,8,0.35) 55%, rgba(20,8,8,0) 100%); color:#fff; z-index:1; }
+.cl-over .cl-t { font-family:'Fraunces', serif; font-weight:700; font-size:15px; line-height:1.02; margin-bottom:3px; }
+.cl-over .cl-t em { font-style:italic; font-weight:400; color:#f0d68c; }
+.cl-over .cl-d { font-family:'Fraunces', serif; font-size:8.8px; line-height:1.42; color:rgba(255,255,255,0.92); }
+/* text tile — a caption card that lives in the grid like a photo */
+.cl-note { background:#fff8ec; border:1px solid #e8d6a8; border-left:3px solid #6e1313; border-radius:2px; padding:11px 13px; display:flex; flex-direction:column; justify-content:flex-start; overflow:hidden; min-height:0; }
+.cl-note.green { border-left-color:#325437; }
+.cl-note .cl-k { font-family:'JetBrains Mono', monospace; font-size:7.5px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; margin-bottom:5px; }
+.cl-note .cl-t { font-family:'Fraunces', serif; font-weight:700; font-size:19px; line-height:0.98; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.01em; }
+.cl-note .cl-t em { font-style:italic; font-weight:400; color:#6e1313; }
+.cl-note .cl-b { font-family:'Fraunces', serif; font-size:9.3px; line-height:1.5; color:#3d3024; }
+.cl-note .cl-b + .cl-b { margin-top:5px; }
+.cl-note .cl-sig { font-family:'JetBrains Mono', monospace; font-size:7px; letter-spacing:0.15em; text-transform:uppercase; color:#8b6914; margin-top:7px; }
+/* editorial sidebar (for single-photo feature pages — no empty boxes) */
+.cl-side { display:flex; flex-direction:column; padding:2px 4px 2px 6px; min-height:0; }
+.cl-side .cl-k { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; margin-bottom:7px; }
+.cl-side .cl-lead { font-family:'Fraunces', serif; font-weight:700; font-size:23px; line-height:1; color:#1a1a1a; margin-bottom:10px; letter-spacing:-0.01em; }
+.cl-side .cl-lead em { font-style:italic; font-weight:400; color:#6e1313; }
+.cl-side p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; margin-bottom:9px; }
+.cl-side p b { color:#1a1a1a; }
+.cl-accent { margin-top:auto; background:#fff8ec; border-left:3px solid #6e1313; border-radius:2px; padding:11px 13px; }
+.cl-accent.green { border-left-color:#325437; }
+.cl-accent .cl-k { font-family:'JetBrains Mono', monospace; font-size:7.5px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; margin-bottom:5px; }
+.cl-accent .cl-b { font-family:'Fraunces', serif; font-size:9.3px; line-height:1.5; color:#3d3024; }
+.cl-accent .cl-quote { font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:15px; line-height:1.25; color:#6e1313; margin-bottom:5px; }
+.cl-accent .cl-quote em { color:#1a1a1a; }
+.cl-accent .cl-sig { font-family:'JetBrains Mono', monospace; font-size:7px; letter-spacing:0.15em; text-transform:uppercase; color:#8b6914; }
+/* grid span utilities */
+.col-3{grid-column:span 3}.col-4{grid-column:span 4}.col-5{grid-column:span 5}.col-6{grid-column:span 6}.col-7{grid-column:span 7}.col-8{grid-column:span 8}.col-9{grid-column:span 9}.col-12{grid-column:span 12}
+.row-1{grid-row:span 1}.row-2{grid-row:span 2}.row-3{grid-row:span 3}.row-4{grid-row:span 4}
 @media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
 </style></head>
 <body>
@@ -190,6 +231,11 @@ body { padding:20px; }
     <div class="sp-quote">Three mornings in a castle, three five-o'clock starts, and one breakfast we will miss for the rest of the trip.</div>
     <p>And then we drove north. Austria fell away behind us — its lakes, its salt villages, its Sound of Music hills — and the road pointed toward Bohemia and Prague: the city of a hundred spires, two days of cobblestones and Gothic towers waiting at the end of it. The children settled happily into their beloved car seats. The next chapter had begun.</p>
   </div>
+  <div class="sp-photo" style="margin-top:6mm;">
+    <img src="../images/czech/trdelnik-street.jpg" alt="A trdelník held up to frame a Prague street and rooftops through its hollow ring" style="max-height:138mm;">
+    <div class="ph-info">Photo · Munasinghe</div>
+  </div>
+  <div class="sp-caption">What waited at the end of the road: hours later, on the walk down from the castle, our first taste of the city came framed in a ring of warm chimney-cake — Prague's spires and red roofs glimpsed through the hole of a trdelník.</div>
   <div class="folio">— Issue 03 · CZECH REPUBLIC · The Road —</div>
 </div>
 
@@ -227,6 +273,30 @@ body { padding:20px; }
     <p>It took nearly six hundred years to build — begun in 1344, and not finished until 1929 — and standing in the middle of it you can feel every one of those centuries. Grander than the castle that surrounds it, as we said before; and inside, grander than we had any way to imagine from the square.</p>
   </div>
   <div class="folio">— Issue 03 · CZECH REPUBLIC · Inside St. Vitus —</div>
+</div>
+
+<div class="mag-page mag-collage">
+  <div class="cl-eyebrow">PRAGUE CASTLE · ST. VITUS · THE MUCHA WINDOW</div>
+  <div class="cl-headline">Painted light,<br>by <em>Alfons Mucha.</em></div>
+  <div class="cl-deck">Among the cathedral's stone-old windows hangs one that glows differently — the only stained glass the great master of Art Nouveau ever made.</div>
+  <div class="cl-grid" style="grid-template-rows:1fr;">
+    <figure class="cl-fig col-7">
+      <img src="../images/day-06/34-st-vitus-mucha-window.jpg" alt="The Alfons Mucha stained-glass window in St. Vitus Cathedral, glowing in reds, blues and golds" style="object-position:center 28%;">
+      <div class="ph-info">Photo · Munasinghe</div>
+      <figcaption class="cl-over"><div class="cl-t">The Mucha Window, <em>1931</em></div><div class="cl-d">At the centre kneel the boy St. Wenceslas and his grandmother, St. Ludmila, in a blaze of Mucha's colour.</div></figcaption>
+    </figure>
+    <div class="cl-side col-5">
+      <div class="cl-k">What you are looking at</div>
+      <div class="cl-lead">Not glass, but <em>a painting</em> in glass.</div>
+      <p>Where the rest of St. Vitus is filled with medieval leaded glass, <b>Alfons Mucha</b> — Bohemia's most famous painter, the master whose posters defined Art Nouveau in Paris — <em>painted</em> his design straight onto the glass in 1931, in the same glowing, sinuous line.</p>
+      <p>Around the two central saints swirl scenes from the lives of <b>Cyril and Methodius</b>, the brothers who brought Christianity — and the first written alphabet — to the Slavs. It remains the only stained-glass window Mucha ever made.</p>
+      <div class="cl-accent green">
+        <div class="cl-k">Who paid for it</div>
+        <div class="cl-b">Funded by the <b>Slavia</b> insurance bank — whose emblem, the goddess Slavia, hides in the glass near the figure of Christ.</div>
+      </div>
+    </div>
+  </div>
+  <div class="folio">— Issue 03 · CZECH REPUBLIC · The Mucha Window —</div>
 </div>
 
 <div class="mag-page mag-spread">
@@ -441,6 +511,30 @@ body { padding:20px; }
   <div class="folio">— Issue 03 · CZECH REPUBLIC · St. Nicholas —</div>
 </div>
 
+<div class="mag-page mag-collage">
+  <div class="cl-eyebrow">PRAGUE · KLÁROV · A MEMORIAL BY THE RIVER</div>
+  <div class="cl-headline">The lion that<br><em>flew for Britain.</em></div>
+  <div class="cl-deck">Near the river stands a bronze lion with an airman's wings — Prague's thank-you to the men who slipped out of an occupied country to fight in the skies over England.</div>
+  <div class="cl-grid" style="grid-template-rows:1fr;">
+    <figure class="cl-fig col-7">
+      <img src="../images/day-06/36-winged-lion-memorial.jpg" alt="The bronze Winged Lion Memorial in Prague, honouring Czechoslovak RAF airmen, with a wreath at its base" style="object-position:center 38%;">
+      <div class="ph-info">Photo · Munasinghe</div>
+      <figcaption class="cl-over"><div class="cl-t">The Winged Lion</div><div class="cl-d">A two-metre bronze on a granite base shaped, from above, like the roundel of the Czechoslovak Air Force.</div></figcaption>
+    </figure>
+    <div class="cl-side col-5">
+      <div class="cl-k">So few, so much owed</div>
+      <div class="cl-lead">They fought for a country that later <em>jailed them.</em></div>
+      <p>Some <b>2,500 Czechoslovak airmen</b> fled the German occupation and made their way to Britain, where they flew with the RAF through the Battle of Britain and the long war that followed.</p>
+      <p>Many paid twice for their courage — honoured in London, then imprisoned at home after 1948 for having served in the West. This memorial, funded by Prague's British community, was unveiled in 2014; its sculptor, <b>Colin Spofforth</b>, is an Englishman.</p>
+      <div class="cl-accent">
+        <div class="cl-quote">"So much owed by so many <em>to so few.</em>"</div>
+        <div class="cl-sig">— Winston Churchill, 1940</div>
+      </div>
+    </div>
+  </div>
+  <div class="folio">— Issue 03 · CZECH REPUBLIC · The Winged Lion —</div>
+</div>
+
 <div class="mag-page mag-spread">
   <div class="sp-eyebrow">JEWISH QUARTER · JOSEFOV · IN OUR OWN WORDS</div>
   <div class="sp-headline">I couldn't get<br>enough of this city.</div>
@@ -460,6 +554,31 @@ body { padding:20px; }
   <div class="folio">— Issue 03 · CZECH REPUBLIC · Josefov —</div>
 </div>
 
+<div class="mag-page mag-collage">
+  <div class="cl-eyebrow">JOSEFOV · THE OLD JEWISH CEMETERY</div>
+  <div class="cl-headline">Twelve thousand stones,<br><em>and no more room.</em></div>
+  <div class="cl-deck">Folded between the synagogues lies the oldest Jewish cemetery in Europe — where, forbidden to spread outward, the dead were laid in layer upon layer for three hundred years.</div>
+  <div class="cl-grid" style="grid-template-rows:repeat(4,1fr);">
+    <figure class="cl-fig col-7 row-4">
+      <img src="../images/day-06/35-old-jewish-cemetery.jpg" alt="The crowded, tilting old tombstones of the Old Jewish Cemetery in Prague" style="object-position:center 45%;">
+      <div class="ph-info">Photo · Munasinghe</div>
+      <figcaption class="cl-over"><div class="cl-t">Starý židovský hřbitov</div><div class="cl-d">Tombstones crowding shoulder to shoulder, leaning into one another after six centuries under the trees.</div></figcaption>
+    </figure>
+    <figure class="cl-fig col-5 row-2">
+      <img src="../images/day-06/37-old-jewish-cemetery-gate.jpg" alt="The wrought-iron gate and stone entrance to the Old Jewish Cemetery, gravestones beyond" style="object-position:center 40%;">
+      <div class="ph-info">Photo · Munasinghe</div>
+      <figcaption class="cl-over"><div class="cl-t">The gate</div><div class="cl-d">An iron entrance off Josefov's lanes, the old stones waiting just beyond.</div></figcaption>
+    </figure>
+    <div class="cl-side col-5 row-2">
+      <div class="cl-k">Layer upon layer</div>
+      <div class="cl-lead">Buried <em>twelve deep.</em></div>
+      <p>In use from about <b>1439 until 1787</b> and never allowed to grow, it holds perhaps 12,000 visible stones — but as many as <b>100,000</b> people are thought to lie below, buried up to twelve deep as each generation raised the earth and set the old headstones higher.</p>
+      <p>Among them rests <b>Rabbi Judah Loew</b>, the scholar bound forever to the legend of the Golem of Prague.</p>
+    </div>
+  </div>
+  <div class="folio">— Issue 03 · CZECH REPUBLIC · The Old Jewish Cemetery —</div>
+</div>
+
 <div class="mag-page mag-spread">
   <div class="sp-eyebrow">JOSEFOV · THE JEWISH TOWN HALL</div>
   <div class="sp-headline">A clock that runs<br>the wrong way.</div>
@@ -477,35 +596,52 @@ body { padding:20px; }
   <div class="folio">— Issue 03 · CZECH REPUBLIC · The Jewish Town Hall —</div>
 </div>
 
-<div class="mag-page mag-food">
-  <div class="sp-eyebrow">★ TASTES OF THE TRIP</div>
-  <div class="fd-headline">Two street snacks <em>we ate</em><br>on the move.</div>
-  <div class="fd-deck">We never sat down to a Czech feast — we ate on our feet, between the spires. But these two, bought from a cart and shared in the shade, were pure Prague.</div>
-  <div class="fd-grid">
-    <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/czech/food-01-trdelnik.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/czech/food-01-trdelnik.jpg</div>
-      </div>
-      <div class="fd-body">
-        <div class="fd-num">01</div>
-        <div class="fd-name">Trdelník</div>
-        <div class="fd-desc">A spit-grilled, cinnamon-sugar pastry rolled into a hollow tube and filled with ice cream and Nutella. Warm, sweet, and messy in the best way. Ours came on the walk down from the castle.</div>
-        <div class="fd-where">📍 Castle hill · shared in the park · Day 3</div>
-      </div>
-    </div>
-    <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/czech/food-02-tornado-potato.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/czech/food-02-tornado-potato.jpg</div>
-      </div>
-      <div class="fd-body">
-        <div class="fd-num">02</div>
-        <div class="fd-name">Spiral "Tornado" Potato</div>
-        <div class="fd-desc">A whole potato cut into one long spiral, skewered on a stick, deep-fried crisp and salted. Half chip, half work of art — and gone in minutes between five sets of fingers.</div>
-        <div class="fd-where">📍 Castle hill · on a stick · Day 3</div>
-      </div>
+<div class="mag-page mag-collage">
+  <div class="cl-eyebrow">★ TASTES OF BOHEMIA · STREET FOOD</div>
+  <div class="cl-headline">Eaten on our feet,<br><em>between the spires.</em></div>
+  <div class="cl-deck">We never sat down to a Czech feast — we grazed from carts on the walk down from the castle. Two snacks, both pretending to be ancient, both devoured in minutes.</div>
+  <div class="cl-grid" style="grid-template-rows:repeat(4,1fr);">
+    <figure class="cl-fig col-7 row-2">
+      <img src="../images/czech/food-01-trdelnik.jpg" alt="A trdelník cone filled with vanilla ice cream and topped with a strawberry">
+      <div class="ph-info">Photo · Munasinghe</div>
+      <figcaption class="cl-over"><div class="cl-t">Trdelník, <em>filled</em></div><div class="cl-d">Warm chimney-cake packed with soft vanilla and a strawberry on top.</div></figcaption>
+    </figure>
+    <figure class="cl-fig col-5 row-4">
+      <img src="../images/czech/food-02-tornado-potato.jpg" alt="Two spiral tornado potatoes on sticks held up against a Prague lane" style="object-position:center 40%;">
+      <div class="ph-info">Photo · Munasinghe</div>
+      <figcaption class="cl-over"><div class="cl-t">The spiral <em>potato</em></div><div class="cl-d">One whole potato, cut in a single unbroken coil, skewered and fried crisp.</div></figcaption>
+    </figure>
+    <div class="cl-note col-7 row-2">
+      <div class="cl-k">What we were really eating</div>
+      <div class="cl-b">The <b>trdelník</b> is hawked on every Prague corner as an "old Bohemian" treat — but it truly belongs to the Hungarian and Transylvanian <em>kürtőskalács</em>: dough wound around a wooden spit (a <em>trdlo</em>), grilled over coals, then rolled in cinnamon sugar. The ice-cream cone is a modern tourist twist, and none the worse for it.</div>
+      <div class="cl-b">The <b>spiral potato</b> is younger still, and travelled further — Korean street food that found its way to Prague's lanes. Gone in minutes between five sets of fingers.</div>
     </div>
   </div>
-  <div class="folio">— Issue 03 · CZECH REPUBLIC · 06 —</div>
+  <div class="folio">— Issue 03 · CZECH REPUBLIC · Tastes of Bohemia —</div>
+</div>
+
+<div class="mag-page mag-collage">
+  <div class="cl-eyebrow">TASTES OF BOHEMIA · ONE CART, FIVE PAIRS OF HANDS</div>
+  <div class="cl-headline">Shared <em>five ways</em><br>on the castle steps.</div>
+  <div class="cl-deck">One trdelník, one tornado potato, a scoop of vanilla — passed hand to hand down the family until nothing was left but sticky fingers and sugar round three small mouths.</div>
+  <div class="cl-grid" style="grid-template-rows:repeat(4,1fr);">
+    <figure class="cl-fig col-7 row-4">
+      <img src="../images/czech/tornado-potato-kids.jpg" alt="Avisha, Avin and Aviann on the castle steps between two tall spiral potatoes" style="object-position:center 42%;">
+      <div class="ph-info">Photo · Munasinghe</div>
+      <figcaption class="cl-over"><div class="cl-t">Two towers of potato</div><div class="cl-d">Avisha, Aviann and Avin on the castle steps — a fried spiral taller than the four-year-old, and a whole potato on each stick.</div></figcaption>
+    </figure>
+    <figure class="cl-fig col-5 row-2">
+      <img src="../images/czech/trdelnik-icecream-girl.jpg" alt="Aviann holding two trdelník ice-cream cones">
+      <div class="ph-info">Photo · Munasinghe</div>
+      <figcaption class="cl-over"><div class="cl-t">Strawberry on top</div><div class="cl-d">Aviann with both ice-cream trdelníks in hand, before they could melt.</div></figcaption>
+    </figure>
+    <figure class="cl-fig col-5 row-2">
+      <img src="../images/czech/food-family-selfie.jpg" alt="The Munasinghe family together with ice creams and a tornado potato" style="object-position:center 48%;">
+      <div class="ph-info">Photo · Munasinghe</div>
+      <figcaption class="cl-over"><div class="cl-t">All five, <em>mid-bite</em></div><div class="cl-d">No table, no cutlery — just the whole family leaning in on the castle hill, ice creams and a potato tower between us.</div></figcaption>
+    </figure>
+  </div>
+  <div class="folio">— Issue 03 · CZECH REPUBLIC · Shared Five Ways —</div>
 </div>
 
 <div class="mag-page mag-spread">

@@ -4,7 +4,7 @@
 > travel-journaling project instantly. NOT part of the published magazines.
 > To resume in a new session, say: *"Read JOURNALING_NOTES.md and let's continue."*
 
-_Last updated: Prague photo album fully wired in — 13 real photos placed across the issue (incl. St Vitus family cover + 6 new pages). See "Photo workflow" for the transcript-extraction recovery method (uploads stopped persisting to disk again)._
+_Last updated: Prague **food + late-album redesign**. Built a reusable magazine photo-collage layout (`.mag-collage` / `.cl-*`) and used it for a 2-page "Tastes of Bohemia" street-food feature (trdelník, tornado potato, family eating), a Mucha-window feature, an Old Jewish Cemetery page, and a Winged Lion (RAF) memorial page — all with rich historical captions. Filled the empty "Road to Prague" page with the trdelník-through-a-street photo. Issue is now 28 pages, all screenshot-verified non-clipping. Uploads still preview-only → used transcript extraction again._
 
 ---
 
@@ -200,8 +200,23 @@ warm magazine-editorial tone.
   and didn't upload — ask them to resend a smaller version. Good next move: a **"Windows of St. Vitus"**
   stained-glass page, and optionally swap the interior hero to the nave-vault shot. (Current interior
   page uses the rose-window shot `day-06/31-st-vitus-interior.jpg`.)
-  **STILL TODO for Prague:** Tastes of Bohemia food page still has striped placeholders (real so far:
-  trdelník + tornado potato — the two food photos `images/czech/food-*` don't exist yet). Reflections
+  **NEW magazine-collage layout (this session):** added `.mag-collage` page type + `.cl-*` classes — an
+  asymmetric 12-col grid (`grid-template-rows:repeat(4,1fr)` fills the fixed page exactly → no clipping),
+  photo `figure.cl-fig` with `.cl-over` gradient caption, boxed `.cl-note` text tiles, and (for
+  single-photo feature pages) an unboxed `.cl-side` editorial sidebar with a `.cl-accent` callout pinned
+  to the bottom (`margin-top:auto`) so whitespace reads as intentional, not an empty box. Rich
+  descriptive/historical captions per the user's brief ("what is it, why important, history").
+  Rotation gotcha: the family selfie had NO EXIF tag but a tilted candid composition — do NOT rotate it;
+  give it a wide-ish cell so all five stay in frame.
+**Prague food/late-album DONE:** Tastes of Bohemia is now a 2-page collage feature (trdelník ice-cream,
+  tornado potatoes, kids + Aviann + all-five selfie) with a trdelník/tornado history note. New pages:
+  **The Mucha Window** (after Inside St. Vitus), **The Old Jewish Cemetery** (in Josefov, after the intro
+  street page), **The Winged Lion** RAF memorial (after St. Nicholas). Road-to-Prague page now carries the
+  trdelník-ring-through-a-street photo. Photos live in `images/czech/food-*`, `images/czech/trdelnik-*`,
+  `images/czech/tornado-potato-kids.jpg`, `images/czech/food-family-selfie.jpg`, and
+  `images/day-06/34..37`. **HELD (not placed, no dup):** Jewish Town Hall clock-tower shot (`img_007`) —
+  the Town Hall already has its own page.
+**(historical note) earlier STILL TODO — now resolved:** Tastes of Bohemia food page had striped placeholders. Reflections
   page is written but could gain the family's own favourite/hardest/if-we-come-back words. Then
   Austria's Vienna (Wed 15 Jul) is next chronologically. Open thread: still need to buy the
   replacement backpack.
