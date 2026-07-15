@@ -333,6 +333,14 @@ Bergl garden-landscape rooms (#33/38/39), more state salons (#08/09/11/12/22/29/
 Sisi-era private rooms (#10/14/15), archduchess portrait pairs (#16/17), ceiling-fresco details
 (#24/26/27/28), the emperor-in-court-dress portrait (#05), gilt wall details (#25/30/31). Could
 become an "Imperial Portraits" page and a "State Rooms" collage page.
+**Evening (Wed 15 Jul):** after Schönbrunn, drove/headed into central Vienna; **walking through the
+old town to St. Stephen's Cathedral (Stephansdom)** in the evening. Sightseeing/tower hours were
+done for the day (closed 16:30/17:30) so this is the free interior + exterior + old-town wander,
+possibly the ~6pm Mass; **Naschmarkt** flagged as the market/dinner option (stalls closing, but its
+restaurants open till 23:00). Awaiting: how the cathedral + evening went, and photos (Stephansdom
+interior/roof, the walk) — a **"An Evening in Vienna / Stephansdom"** page would close the Vienna
+day nicely. NB Stephansdom = Vienna's Gothic cathedral (South Tower 343 steps; famous zig-zag
+tiled roof; a different building from the Habsburg palaces).
 **STILL OPEN for Vienna:** the existing "Habsburg Forever" page (folio 05) is still IMAGINED
 (Orangery concert, Avin asleep — fiction); rewrite when they share their real Schönbrunn day
 (what the kids made of the Sisi story, gardens/Gloriette, etc.). Awaiting more Vienna photos.
