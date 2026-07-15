@@ -309,6 +309,30 @@ real family-at-Schönbrunn photo (would headline the Sisi page).
 **HELD panels (processed, in `images/austria/`, NOT placed — offer as swaps/extra pages):**
 `schoenbrunn-panel-genealogy.jpg` (Habsburg family tree 1740–1918) and
 `schoenbrunn-panel-monarchy-end.jpg` (Leopold II → end of monarchy 1918).
+**SCHÖNBRUNN STATE-ROOMS PHOTOS (15 Jul) — 39 sent, all saved & EXIF-oriented at
+`images/austria/schoenbrunn/NN.jpg`** (NN = 01..39 by capture order; stable semantic copies made
+for the placed ones: `great-gallery.jpg`=23, `great-gallery-ceiling.jpg`=24,
+`immersive-projection.jpg`=04, `maria-theresa.jpg`=06, `emperor-court-dress.jpg`=05,
+`rococo-clock.jpg`=13, `imperial-table.jpg`=18, `private-salon.jpg`=11). Orientation gotcha:
+this phone tagged ALL of them EXIF-orientation 6 → `ImageOps.exif_transpose` fixes every one
+(the Read/preview tool shows RAW pixels so they LOOK sideways in preview — trust exif_transpose,
+verified via a contact-sheet montage; script in scratchpad).
+**DONE — new 4-page "Inside Schönbrunn" feature added to Issue 02**, inserted right after the
+imagined "Habsburg Forever" page (folio 05), all screenshot-verified non-clipping:
+(1) **The Great Gallery** (`great-gallery.jpg`, kids gazing up at the Guglielmi ceiling; history:
+Maria Theresa's ballroom, 1760 fresco bombed 1945 & restored, Congress of Vienna balls 1814,
+JFK–Khrushchev 1961). (2) **A History in Light** (the immersive projection room; palace history:
+hunting lodge→1441 rooms, "Schönbrunn yellow", Mozart 1762, Napoleon HQ 1805/09 & his son d.1832).
+(3) **Maria Theresa** (portrait, uncropped; 40-yr reign, 16 children incl. Marie Antoinette).
+(4) **How They Lived** (mag-duo: rococo clock + laid imperial table; Spanish court ceremonial +
+family warmth). Added `.sp-photo.compact` CSS (max-height 116mm) for photo+text pages. Descriptive
+folios (no TOC renumber). NB: for the `.mag-duo` page, fixed photo `height:104mm` + `aspect-ratio:auto`
+(a percentage/flex height chain collapsed the fixed mag-page box — avoid).
+**HELD (saved, unplaced — offer as more pages/swaps):** ~31 other Schönbrunn interiors incl. the
+Bergl garden-landscape rooms (#33/38/39), more state salons (#08/09/11/12/22/29/32), Franz-Joseph/
+Sisi-era private rooms (#10/14/15), archduchess portrait pairs (#16/17), ceiling-fresco details
+(#24/26/27/28), the emperor-in-court-dress portrait (#05), gilt wall details (#25/30/31). Could
+become an "Imperial Portraits" page and a "State Rooms" collage page.
 **STILL OPEN for Vienna:** the existing "Habsburg Forever" page (folio 05) is still IMAGINED
 (Orangery concert, Avin asleep — fiction); rewrite when they share their real Schönbrunn day
 (what the kids made of the Sisi story, gardens/Gloriette, etc.). Awaiting more Vienna photos.
