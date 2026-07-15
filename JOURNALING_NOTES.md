@@ -292,8 +292,26 @@ melancholy life at court; assassinated in Geneva 1898). This is the storyline of
 Palace** and the **Hofburg / Sisi Museum** audio tours — CONFIRM which venue they heard it at.
 This makes the **Vienna page (Issue 02 Austria) REAL at last** — replace the imagined placeholder
 with the Sisi story as its heart (echoes Lana's Sound-of-Music thread: another woman's story that
-Austria makes vivid). Awaiting: which palace/museum, what the kids made of it, any photos
-(send ALONE). NB spelling: "Sisi" (Austrian) not "Sissi" (the films).
+Austria makes vivid). NB spelling: "Sisi" (Austrian) not "Sissi" (the films).
+**VENUE CONFIRMED = Schönbrunn Palace** (they photographed the palace's history boards).
+**DONE THIS SESSION — 3 new history pages added to Issue 02 (magazines/02-austria.html),
+after the existing imagined "Habsburg Forever" Vienna page (folio 05), all screenshot-verified
+non-clipping:** (1) **"The emperor who chose the wrong sister"** — the Franz Joseph & Sisi love
+story (Bad Ischl 1853, the rigid court, Hungary/1867 Compromise, Mayerling 1889, Geneva 1898,
+68-yr reign; ties to Lana's Sound-of-Music thread). (2) **"Echoes of a Monarchy"** — a photo
+page showing their own (uncropped) shot of the Schönbrunn timeline/empire-map board
+(`images/austria/schoenbrunn-panel-echoes-map.jpg`); added a new `.sp-photo` CSS class to this
+issue for uncropped `<img>` photos. (3) **"The autumn Vienna stopped an empire"** — the 1529
+First Siege (Suleiman the Magnificent, Mohács 1526, Count Niklas von Salm, the rain + mining war,
+withdrawal; nods to the 1683 second siege / Sobieski). All use descriptive folios (no TOC
+renumber). Text-forward pages sit ~55–60% filled (clean essay look) — could grow if they send a
+real family-at-Schönbrunn photo (would headline the Sisi page).
+**HELD panels (processed, in `images/austria/`, NOT placed — offer as swaps/extra pages):**
+`schoenbrunn-panel-genealogy.jpg` (Habsburg family tree 1740–1918) and
+`schoenbrunn-panel-monarchy-end.jpg` (Leopold II → end of monarchy 1918).
+**STILL OPEN for Vienna:** the existing "Habsburg Forever" page (folio 05) is still IMAGINED
+(Orangery concert, Avin asleep — fiction); rewrite when they share their real Schönbrunn day
+(what the kids made of the Sisi story, gardens/Gloriette, etc.). Awaiting more Vienna photos.
 
 **Germany Visit 1 (11 Jul) — arrival page done:** flight from Beijing landed on time;
 immigration + bags; Avin fully recovered; **one big backpack torn** on the carousel (need to
