@@ -19,7 +19,8 @@ warm magazine-editorial tone.
 
 ## The family (the Munasinghes)
 
-- **Navin** — dad · **Lana** — mum (parents; sign-offs read "Navin, Lana, Avisha, Aviann & Avin Munasinghe")
+- **Avinesh** ("Avi") — dad · **Lana** — mum (parents; magazine sign-offs read "Avinesh, Lana, Avisha, Aviann & Avin Munasinghe").
+  - NOTE: his **full legal name is "Navin Avinesh Welikala Munasinghe"** — he *goes by* Avinesh/Avi (the kids' names all echo it: Avinesh → Avisha, Aviann, Avin). Magazines use **Avinesh** (family voice); the **`day_*.html` booking/logistics pages keep the legal "Navin …"** on tickets/licence/hotel so they match his documents — do NOT change those. (Corrected across all 14 issues this session per Lana's confirmation.)
 - **Avisha** — 11, **boy**
 - **Aviann** — 8, **girl**
 - **Avin** — 4, **boy**
@@ -266,8 +267,7 @@ packed; walked to fetch the vehicle from the (car) park. Planned to leave Prague
 on the road. **Route now confirmed: Prague → Brno → Vienna** (so Brno is a stop en route, and
 **Vienna is still the next issue-02 Austria destination**, reached 15 Jul via Brno — this
 reconciles the earlier "Vienna = Wed 15 Jul" note). **The Brno reason = nostalgia:** ~12 years
-ago **"Avi"** (a parent — CONFIRM which; sign-off names are Navin & Lana, so likely a
-nickname — check before publishing) came to Brno on an **office/work tour**, and the family
+ago **Avinesh ("Avi", the dad — CONFIRMED)** came to Brno on an **office/work tour**, and the family
 wanted to bring back those old memories. Awaiting: what they did/saw in Brno, the company/place
 Avi visited, whether they went back to that actual building, and photos (send ALONE, no caption
 in same message). Good page idea: a warm **"Return to Brno"** memory-lane feature for Issue 02
