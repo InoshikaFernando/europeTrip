@@ -284,6 +284,16 @@ Tower. (6) `road-to-brno-in-car-family.jpg` — all-five in-car selfie setting o
 auto-transposed to portrait). All uncropped, long-edge ~2000px, q82. Awaiting per-photo captions.
 Natural home: a new **"The Last Morning in Prague / Road to Brno"** travel-day opener for the
 15 Jul leg (day-07).
+**VIENNA (Wed 15 Jul) — ARRIVED, real content starting:** after the Brno detour they reached
+**Vienna**. First thing captured: they're **hearing the love story of Emperor Franz Joseph I &
+Empress Elisabeth ("Sisi")** — the classic Habsburg romance (Franz Joseph was meant to marry
+Sisi's elder sister Helene but chose 15-yr-old Sisi at Bad Ischl in 1853; her free-spirited,
+melancholy life at court; assassinated in Geneva 1898). This is the storyline of **Schönbrunn
+Palace** and the **Hofburg / Sisi Museum** audio tours — CONFIRM which venue they heard it at.
+This makes the **Vienna page (Issue 02 Austria) REAL at last** — replace the imagined placeholder
+with the Sisi story as its heart (echoes Lana's Sound-of-Music thread: another woman's story that
+Austria makes vivid). Awaiting: which palace/museum, what the kids made of it, any photos
+(send ALONE). NB spelling: "Sisi" (Austrian) not "Sissi" (the films).
 
 **Germany Visit 1 (11 Jul) — arrival page done:** flight from Beijing landed on time;
 immigration + bags; Avin fully recovered; **one big backpack torn** on the carousel (need to
