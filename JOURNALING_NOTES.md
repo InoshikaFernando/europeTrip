@@ -260,13 +260,18 @@ clever finds (2.5 kg Kmart folding car seats ×3, eye masks with built-in pillow
 noodles/soup/mac&cheese/3-in-1 coffee from home); bags = 2 big + 4 small backpacks, 1 China
 hand-luggage, Avin's strap harness-backpack, a stroller, 3 car seats.
 
-**Brno travel day (Wed 15 Jul) — CAPTURED, page not built yet:** again woke early morning;
-packed; walked to fetch the vehicle from the (car) park; set off **driving to Brno** (Czech
-Republic's second city, ~2.5 hr SE of Prague, on the natural Prague→Brno→Vienna/Budapest road).
-NOTE: 15 Jul had been pencilled as the **Vienna** day in the notes — the real route now runs
-via Brno, so reconcile Austria/Vienna timing once we know whether Brno is a stop en route to
-Vienna, to Budapest (Hungary, Issue 04), or a destination in its own right. Awaiting: what they
-did/saw in Brno, where they stayed, and any photos (send ALONE, no caption in same message).
+**Brno → Vienna travel day (Wed 15 Jul) — CAPTURED, page not built yet:** again woke early;
+packed; walked to fetch the vehicle from the (car) park. Planned to leave Prague at 10am but
+**left at 8am** — so decided to spend a bit of time in **Brno** on the way. At 8:30am they were
+on the road. **Route now confirmed: Prague → Brno → Vienna** (so Brno is a stop en route, and
+**Vienna is still the next issue-02 Austria destination**, reached 15 Jul via Brno — this
+reconciles the earlier "Vienna = Wed 15 Jul" note). **The Brno reason = nostalgia:** ~12 years
+ago **"Avi"** (a parent — CONFIRM which; sign-off names are Navin & Lana, so likely a
+nickname — check before publishing) came to Brno on an **office/work tour**, and the family
+wanted to bring back those old memories. Awaiting: what they did/saw in Brno, the company/place
+Avi visited, whether they went back to that actual building, and photos (send ALONE, no caption
+in same message). Good page idea: a warm **"Return to Brno"** memory-lane feature for Issue 02
+(Austria) or Issue 03 (Czechia).
 
 **Germany Visit 1 (11 Jul) — arrival page done:** flight from Beijing landed on time;
 immigration + bags; Avin fully recovered; **one big backpack torn** on the carousel (need to
