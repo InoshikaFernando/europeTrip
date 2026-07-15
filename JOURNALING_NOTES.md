@@ -260,6 +260,14 @@ clever finds (2.5 kg Kmart folding car seats ×3, eye masks with built-in pillow
 noodles/soup/mac&cheese/3-in-1 coffee from home); bags = 2 big + 4 small backpacks, 1 China
 hand-luggage, Avin's strap harness-backpack, a stroller, 3 car seats.
 
+**Brno travel day (Wed 15 Jul) — CAPTURED, page not built yet:** again woke early morning;
+packed; walked to fetch the vehicle from the (car) park; set off **driving to Brno** (Czech
+Republic's second city, ~2.5 hr SE of Prague, on the natural Prague→Brno→Vienna/Budapest road).
+NOTE: 15 Jul had been pencilled as the **Vienna** day in the notes — the real route now runs
+via Brno, so reconcile Austria/Vienna timing once we know whether Brno is a stop en route to
+Vienna, to Budapest (Hungary, Issue 04), or a destination in its own right. Awaiting: what they
+did/saw in Brno, where they stayed, and any photos (send ALONE, no caption in same message).
+
 **Germany Visit 1 (11 Jul) — arrival page done:** flight from Beijing landed on time;
 immigration + bags; Avin fully recovered; **one big backpack torn** on the carousel (need to
 buy a replacement); waited long for the stroller then learned Munich keeps strollers at a
