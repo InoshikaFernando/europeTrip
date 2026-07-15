@@ -333,8 +333,25 @@ Bergl garden-landscape rooms (#33/38/39), more state salons (#08/09/11/12/22/29/
 Sisi-era private rooms (#10/14/15), archduchess portrait pairs (#16/17), ceiling-fresco details
 (#24/26/27/28), the emperor-in-court-dress portrait (#05), gilt wall details (#25/30/31). Could
 become an "Imperial Portraits" page and a "State Rooms" collage page.
-**Evening (Wed 15 Jul):** after Schönbrunn, drove/headed into central Vienna; **walking through the
-old town to St. Stephen's Cathedral (Stephansdom)** in the evening. Sightseeing/tower hours were
+**Evening (Wed 15 Jul) — DONE: 4-page evening feature built** (Issue 02, inserted after "The Siege
+of 1529", before the food page; all screenshot-verified non-clipping):
+(1) **Stephansdom (exterior)** — `stephansdom-tower-roof.jpg` + cathedral history (1147 origin, 136m
+"Steffl" south tower, ~230k-tile roof w/ Habsburg double-eagle, catacombs, 1945 fire → rebuilt 1952).
+(2) **Inside Stephansdom — "Honestly, I had no words"** (user's own words) — mag-duo, nave + Baroque
+altar photos + the speechless-interior moment + Gothic interior notes (pulpit c.1500, Wiener Neustädter
+altar, Frederick III tomb). (3) **An Evening Walk — "One walk, four Viennas"** — 2×2 photo grid:
+State Opera+Lorelei fountain (music), Marc-Anton/Secession (Jugendstil/Klimt), fiaker (old town),
+Capistran monument (the Ottoman-frontier tie). (4) **"Prague or Vienna?"** reflection — the user's
+recurring dilemma in their own voice ("majesty that suits the castle"; "found" vs "commissioned"
+beauty; heart big enough for both), weaving real Prague (King's Landing, empty Charles Bridge,
+trdelník) + Vienna (Schönbrunn, Sisi, the wordless cathedral) moments. Uses existing classes +
+inline grid; no new CSS beyond earlier `.sp-photo.compact`.
+**Evening photos saved in `images/austria/`:** stephansdom-tower-roof, -capistran-pulpit,
+-interior-nave, -interior-nave-windows (held), -interior-side-altar (held), -interior-baroque-altar,
+vienna-fiaker, vienna-fountain-facade (=State Opera/Karajan-Platz), vienna-marc-anton-secession.
+HELD/unused: interior-nave-windows, interior-side-altar (offer as swaps/extra interior page).
+**(earlier context) Evening (Wed 15 Jul):** after Schönbrunn, into central Vienna; walked the old
+town to Stephansdom. Sightseeing/tower hours were
 done for the day (closed 16:30/17:30) so this is the free interior + exterior + old-town wander,
 possibly the ~6pm Mass; **Naschmarkt** flagged as the market/dinner option (stalls closing, but its
 restaurants open till 23:00). Awaiting: how the cathedral + evening went, and photos (Stephansdom
