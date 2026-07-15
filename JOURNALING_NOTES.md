@@ -272,6 +272,18 @@ wanted to bring back those old memories. Awaiting: what they did/saw in Brno, th
 Avi visited, whether they went back to that actual building, and photos (send ALONE, no caption
 in same message). Good page idea: a warm **"Return to Brno"** memory-lane feature for Issue 02
 (Austria) or Issue 03 (Czechia).
+**PHOTOS RECEIVED (last morning in Prague → setting off) — processed & in repo at `images/day-07/`,
+NOT yet placed on a page:** (1) `leaving-prague-family-apartment.jpg` — all five outside their
+Prague stay, the **"Gold Art Apartments"** door (had NO EXIF tag + stored sideways → fixed with a
+manual ROTATE_90; note this gotcha). (2) `leaving-prague-kafka-monument.jpg` — Avisha at the
+**Franz Kafka Monument** (Jaroslav Róna's bronze, man on an empty suit, Jewish Quarter). (3)
+`leaving-prague-street-aviann.jpg` — Aviann on a sunlit cobbled Old-Town street. (4)
+`leaving-prague-powder-tower.jpg` — the **Powder Tower / Prašná brána** Gothic gate, near-empty
+early street. (5) `leaving-prague-powder-tower-family.jpg` — all-five selfie under the Powder
+Tower. (6) `road-to-brno-in-car-family.jpg` — all-five in-car selfie setting off (EXIF orient 6,
+auto-transposed to portrait). All uncropped, long-edge ~2000px, q82. Awaiting per-photo captions.
+Natural home: a new **"The Last Morning in Prague / Road to Brno"** travel-day opener for the
+15 Jul leg (day-07).
 
 **Germany Visit 1 (11 Jul) — arrival page done:** flight from Beijing landed on time;
 immigration + bags; Avin fully recovered; **one big backpack torn** on the carousel (need to
