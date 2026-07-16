@@ -10,7 +10,9 @@ _Earlier: Prague **food + late-album redesign**. Built a reusable magazine photo
 
 _Then (St Vitus interior pass): swapped the "Inside St. Vitus" hero to the wide **nave-vault** shot (`day-06/39`), and added two `.mag-spread` pages — **"The Silver Saint"** (Nepomuk's silver tomb `day-06/40`) and **"In Bronze"** (bronze memorial group `day-06/41`). Old `31-st-vitus-interior.jpg` now unused. **NOTE:** headless check flagged the **"Tastes of Bohemia"** collage page as overflowing ~208px — worth a re-check._
 
-_Then "≥1 photo per attraction" pass DONE (added 6 `.mag-spread` pages, Chromium-verified, photos already in repo): Kohl Fountain → detail `11`; St George's → nave `24`; Old Royal Palace → heraldic ceiling `29`; Throne → Crown Jewels `33`; Týn → towers `21`; St Nicholas → exterior `19`. Prague issue ~33 pages, and a Prague "second photo for six attractions" pass also landed on main. **STILL OPEN (Prague):** "Tastes of Bohemia" collage overflow ~208px; Astronomical Clock still 1 photo; held-but-unused `25/26/28/30/31`._
+_Then "≥1 photo per attraction" pass DONE (added 6 `.mag-spread` pages, Chromium-verified, photos already in repo): Kohl Fountain → detail `11`; St George's → nave `24`; Old Royal Palace → heraldic ceiling `29`; Throne → Crown Jewels `33`; Týn → towers `21`; St Nicholas → exterior `19`. Prague issue ~33 pages, and a Prague "second photo for six attractions" pass also landed on main._
+>
+> _Then: **fixed the "Tastes of Bohemia" collage overflow** — root cause was `.cl-grid` being a flex child without `min-height:0`, so its `height:100%` images ballooned to intrinsic height; added `min-height:0` to `.cl-grid` (safe for all collage pages). **Added the Astronomical Clock's 2nd photo:** the all-five family selfie under the Old Town Hall tower → `day-06/42-clock-family-selfie.jpg`, new page "All Five of Us". Whole issue re-verified 0 clipping. **Brno:** user asked to add Brno photos but NONE are in the transcript yet — awaiting upload (each alone). Held-but-unused Prague photos: `25/26/28/30/31` + St Vitus extras (mucha-selfie/apse/saints/flame/royal-tomb/chapel) in transcript._
 
 ---
 
