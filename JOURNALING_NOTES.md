@@ -233,6 +233,17 @@ warm magazine-editorial tone.
 - **Austria still open:** Vienna page (Wed 15 Jul — comes AFTER Prague chronologically), Tastes
   of Austria food page, and Reflections all still imagined placeholder.
 
+## NEXT: Budapest (Thu 16 Jul) — Issue 04 Hungary (all still IMAGINED placeholder)
+
+Family's own plan for the Budapest day: **St. Stephen's Basilica** (9–5) · **Matthias Church** (9–5)
+· **Fisherman's Bastion** · **Castle Hill funicular** (Budavári Sikló, ~8am–10pm) · **Danube sunset
+cruise** (~8:30pm). Buda-side cluster = Castle Hill (Matthias Church + Fisherman's Bastion + Buda
+Castle, reached by the funicular); Pest-side = Basilica + (suggested) Parliament, Shoes on the
+Danube, Chain Bridge, Great Market Hall. NB timing: the funicular "8–10pm" and the 8:30 cruise
+overlap — do Castle Hill late-afternoon or after the cruise. Build Issue 04 from real photos/details
+as they arrive, same rich-history treatment as Vienna. (This is the leg being handed to a fresh
+session — see the resume prompt given 15 Jul evening.)
+
 ## Real details captured so far (facts to reuse — keep consistent)
 
 **China arrival (10 Jul):** landed ~4:30am; hand-luggage only (skipped baggage claim);
