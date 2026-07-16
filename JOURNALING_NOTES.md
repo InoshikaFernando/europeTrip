@@ -5,6 +5,8 @@
 > To resume in a new session, say: *"Read JOURNALING_NOTES.md and let's continue."*
 
 _Last updated: Prague **food + late-album redesign**. Built a reusable magazine photo-collage layout (`.mag-collage` / `.cl-*`) and used it for a 2-page "Tastes of Bohemia" street-food feature (trdelník, tornado potato, family eating), a Mucha-window feature, an Old Jewish Cemetery page, and a Winged Lion (RAF) memorial page — all with rich historical captions. Filled the empty "Road to Prague" page with the trdelník-through-a-street photo. Issue is now 28 pages, all screenshot-verified non-clipping. Uploads still preview-only → used transcript extraction again._
+>
+> _Then (St Vitus interior pass, merged into this): swapped the "Inside St. Vitus" hero to the wide **nave-vault** shot (`day-06/39`), and added two `.mag-spread` pages — **"The Silver Saint"** (Nepomuk's silver tomb `day-06/40`, ties to the Bridge Saints page) and **"In Bronze"** (bronze memorial group `day-06/41`). Kept the existing Mucha Window feature (dropped a duplicate windows page from the branch to avoid repeating it). Old `31-st-vitus-interior.jpg` now unused. All 3 new pages Chromium-verified non-clipping. **NOTE:** my headless check flagged the **"Tastes of Bohemia"** collage page as overflowing ~208px — worth a re-check (may be viewport-dependent). Extra unplaced St Vitus shots still available in this session's transcript / branch (Mucha family-selfie, apse window, saints & flame windows, royal tomb, chapel-statues) for the "≥1 photo per attraction" pass._
 
 ---
 
