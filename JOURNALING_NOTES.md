@@ -237,11 +237,41 @@ warm magazine-editorial tone.
   page is written but could gain the family's own favourite/hardest/if-we-come-back words. Then
   Austria's Vienna (Wed 15 Jul) is next chronologically. Open thread: still need to buy the
   replacement backpack.
-- **Issues 04–07, 09–14 — untouched** (imagined placeholder). Real reflections to come as they travel.
+- **Issue 04 Hungary — DONE & LIVE** (Budapest, 16 Jul; see section below). **Issues 05–07, 09–14 — untouched** (imagined placeholder). Real reflections to come as they travel.
 - **Austria still open:** Vienna page (Wed 15 Jul — comes AFTER Prague chronologically), Tastes
   of Austria food page, and Reflections all still imagined placeholder.
 
-## NEXT: Budapest (Thu 16 Jul) — Issue 04 Hungary (all still IMAGINED placeholder)
+## Issue 04 Hungary (Budapest, Thu 16 Jul) — DONE & LIVE
+
+**18 pages, all real, published to `main`.** Built live from the family's own photos as they toured.
+Pages: real **cover** (all five on Fisherman's Bastion terrace, Danube behind; masthead moved to TOP,
+gradient reworked so faces stay clear) · Welcome + TOC rewritten to the real day (drove in, parked Pest →
+Basilica → Chain Bridge on foot → funicular up → Buda hill → river; TOC tagged Pest/Buda/River) ·
+**Chapter 4 Journey** route rail · **St. Stephen's Basilica ×3** (facade, dome — *Avin (4) climbed to the
+top*, Szent Jobb Holy-Right relic) · **Fisherman's Bastion ×2** (white towers; "Under the Arches" 3 kids) ·
+**The King in Bronze** (St. Stephen equestrian statue) · **Matthias Church ×4** (family exterior selfie,
+painted nave, Béla III tomb, **Treasury collage**: Holy Crown/Sisi/altar cross) · **Buda Castle** (family +
+green dome + Prince Eugene statue) · **Danube sunset cruise** finale (family on glass-roofed boat, golden
+hour) · **Tastes of Hungary = Lángos** collage (board of three + family dinner + Nutella). Deleted the
+imagined **Széchenyi baths** page (they didn't go). Reflections rewritten from the real day.
+- **LAYOUT GOTCHAS (this file):** (1) `.mag-collage` grid captions on the BOTTOM-row cell clip — keep photo
+  captions out of the last row (put the text `.cl-note` there). (2) Line-based `grid-column:a / b` inline
+  placement did NOT render reliably here — use the `.col-N .row-N` **span classes** (all uniform span) OR a
+  plain **flexbox** layout (the final food page uses flex: full-width figure on top, inner flex row of two
+  below, note last). (3) Several phone photos had **NO EXIF orientation tag** but were 90° off — exif_transpose
+  won't fix those; rotate manually and ALWAYS view the saved file.
+- **HELD (in repo, not placed):** matthias-church-exterior/apse, matthias interior altar/sanctuary/side-altar/
+  laszlo-chapel, fishermans-bastion terrace-parliament-view/towers-close/stairs, bastion-arch-kids-alt,
+  panorama-* (chain-bridge/elisabeth/margaret/parliament-dome/parliament-clear), sandor-palace-guard,
+  buda-castle-family-alt, langos-classic-pizza/pizza-closeup, basilica-dome-top-kids. Also main's
+  `road-to-budapest-family-car.jpg` (a "Road to Budapest" opener was suggested but NOT built — Journey page
+  used instead). Vienna **Votivkirche** held at `images/austria/vienna-votivkirche.jpg` for the Austria issue.
+- **STILL OPEN:** **back cover** bg image missing (`images/hungary/back-cover.jpg` → use a Parliament-lit /
+  Chain-Bridge-at-night cruise shot when sent); optional 2nd cruise "city at night" page.
+- **Publishing:** developed on branch `claude/budapest-issue-04-hungary-ij6ich`, fast-forward-merged to `main`
+  each turn (live). Dad's sign-off name is **Avinesh** (main corrected Navin→Avinesh across all 14 issues).
+
+### (original plan, kept for reference)
 
 Family's own plan for the Budapest day: **St. Stephen's Basilica** (9–5) · **Matthias Church** (9–5)
 · **Fisherman's Bastion** · **Castle Hill funicular** (Budavári Sikló, ~8am–10pm) · **Danube sunset
