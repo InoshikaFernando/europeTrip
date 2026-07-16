@@ -107,6 +107,28 @@ body { padding:20px; }
 .jr-stop.here { color:#fff; background:#b41e1e; border-color:#b41e1e; font-weight:700; }
 .jr-stop.here .jr-n { color:#f0d68c; }
 .jr-today { font-family:'Fraunces', serif; font-style:italic; font-size:15px; line-height:1.5; color:#b41e1e; margin-top:auto; padding-top:10mm; border-top:1px solid #1e508c; }
+.mag-collage { padding:12mm 13mm; display:flex; flex-direction:column; }
+.cl-eyebrow { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#b41e1e; margin-bottom:7px; }
+.cl-headline { font-family:'Fraunces', serif; font-weight:700; font-size:40px; line-height:0.92; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.015em; }
+.cl-headline em { font-style:italic; font-weight:400; color:#b41e1e; }
+.cl-deck { font-family:'Fraunces', serif; font-style:italic; font-size:13px; line-height:1.4; color:#5a4a3a; margin-bottom:9px; max-width:94%; border-bottom:2px solid #1e508c; padding-bottom:8px; }
+.cl-grid { display:grid; grid-template-columns:repeat(12,1fr); gap:4mm; flex:1; }
+.col-3{grid-column:span 3}.col-4{grid-column:span 4}.col-5{grid-column:span 5}.col-6{grid-column:span 6}.col-7{grid-column:span 7}.col-8{grid-column:span 8}.col-9{grid-column:span 9}.col-12{grid-column:span 12}
+.row-1{grid-row:span 1}.row-2{grid-row:span 2}.row-3{grid-row:span 3}.row-4{grid-row:span 4}
+.cl-fig { position:relative; overflow:hidden; border-radius:2px; background:#e8dcc0; min-height:0; }
+.cl-fig img { width:100%; height:100%; object-fit:cover; display:block; }
+.cl-fig .ph-info { position:absolute; bottom:5px; right:6px; background:rgba(0,0,0,0.5); color:#fff; font-family:'JetBrains Mono', monospace; font-size:6.5px; padding:2px 5px; border-radius:2px; letter-spacing:0.08em; z-index:2; }
+.cl-over { position:absolute; left:0; right:0; bottom:0; padding:16px 12px 9px; background:linear-gradient(0deg, rgba(20,8,8,0.82) 0%, rgba(20,8,8,0.35) 55%, rgba(20,8,8,0) 100%); color:#fff; z-index:1; }
+.cl-over .cl-t { font-family:'Fraunces', serif; font-weight:700; font-size:15px; line-height:1.02; margin-bottom:3px; }
+.cl-over .cl-t em { font-style:italic; font-weight:400; color:#f0d68c; }
+.cl-over .cl-d { font-family:'Fraunces', serif; font-size:8.8px; line-height:1.42; color:rgba(255,255,255,0.92); }
+.cl-note { background:#fff8ec; border:1px solid #e8d6a8; border-left:3px solid #b41e1e; border-radius:2px; padding:11px 13px; display:flex; flex-direction:column; justify-content:flex-start; overflow:hidden; min-height:0; }
+.cl-note.blue { border-left-color:#1e508c; }
+.cl-note .cl-k { font-family:'JetBrains Mono', monospace; font-size:7.5px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; margin-bottom:5px; }
+.cl-note .cl-t { font-family:'Fraunces', serif; font-weight:700; font-size:19px; line-height:0.98; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.01em; }
+.cl-note .cl-t em { font-style:italic; font-weight:400; color:#b41e1e; }
+.cl-note .cl-b { font-family:'Fraunces', serif; font-size:9.3px; line-height:1.5; color:#3d3024; }
+.cl-note .cl-b + .cl-b { margin-top:5px; }
 @media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
 </style></head>
 <body>
@@ -207,7 +229,7 @@ body { padding:20px; }
   <div class="sp-caption">Straight up into the cupola. The dome mosaics were designed by Károly Lotz — the same hand that decorated the Opera House and the Parliament — and show God the Father surrounded by Hungarian saints.</div>
   <div class="sp-cols">
     <p>The inside is a warmer thing than the grey stone front lets on: caramel and gold, with more than fifty kinds of coloured marble on the walls and floor. Light falls from the ring of windows at the base of the dome and pools on the crossing far below. Every surface that isn't marble is painted or gilded, and the eye simply gives up trying to count.</p>
-    <p>At the far end, on the high altar, stands a white Carrara-marble statue of the king himself, carved by Alajos Stróbl, ringed by bronze reliefs of his life. Around the base of the sanctuary runs a Latin prayer to Stephen: intercede for us with the King of Kings. For those with the legs for it, a lift and a last spiral of stairs climb to the outdoor colonnade around the dome, and one of the widest views in the city.</p>
+    <p>At the far end, on the high altar, stands a white Carrara-marble statue of the king himself, carved by Alajos Stróbl, ringed by bronze reliefs of his life. Around the base of the sanctuary runs a Latin prayer to Stephen: intercede for us with the King of Kings. And we climbed it — a lift for most of the way, then a last spiral of stone stairs out onto the colonnade that rings the dome. Even Avin, all of four years old, made it to the very top, and one of the widest views in Budapest was his reward.</p>
     <div class="sp-quote">A church the colour of honey, lit from a ring of windows a hundred metres up.</div>
   </div>
   <div class="folio">— Issue 04 · HUNGARY · Under the Dome —</div>
@@ -322,6 +344,35 @@ body { padding:20px; }
     <div class="sp-quote">A king who out-earned the kings of France — lost for six centuries, and found by chance.</div>
   </div>
   <div class="folio">— Issue 04 · HUNGARY · The Royal Tomb —</div>
+</div>
+
+<div class="mag-page mag-collage">
+  <div class="cl-eyebrow">MATTHIAS CHURCH · THE TREASURY · DAY 08</div>
+  <div class="cl-headline">Crown, cross<br><em>and queen.</em></div>
+  <div class="cl-deck">Up a stair from the nave the church keeps its treasures — the regalia of a kingdom, a goldsmith's cross, and the marble face of the queen the Hungarians loved most.</div>
+  <div class="cl-grid" style="grid-template-rows:repeat(4,1fr);">
+    <figure class="cl-fig col-4 row-3">
+      <img src="../images/hungary/holy-crown-replica.jpg" alt="A replica of the Holy Crown of Hungary with its bent cross, beside the orb and sceptre, on red velvet." style="object-position:center 45%;">
+      <div class="ph-info">Photo · Munasinghe</div>
+      <figcaption class="cl-over"><div class="cl-t">The Holy Crown</div><div class="cl-d">A replica of the Szent Korona — its little cross knocked crooked long ago, and never straightened since.</div></figcaption>
+    </figure>
+    <figure class="cl-fig col-4 row-3">
+      <img src="../images/hungary/sisi-statue.jpg" alt="A white marble statue of Queen Elisabeth of Hungary, 'Sisi', against colourful stained glass." style="object-position:center 28%;">
+      <div class="ph-info">Photo · Munasinghe</div>
+      <figcaption class="cl-over"><div class="cl-t">Sisi, the <em>beloved queen</em></div><div class="cl-d">Elisabeth of Austria, crowned Queen of Hungary here in 1867 — and mourned across the land at her murder in 1898.</div></figcaption>
+    </figure>
+    <figure class="cl-fig col-4 row-3">
+      <img src="../images/hungary/treasury-crucifix.jpg" alt="A gilt processional crucifix with a filigree base in a treasury display case." style="object-position:center 42%;">
+      <div class="ph-info">Photo · Munasinghe</div>
+      <figcaption class="cl-over"><div class="cl-t">The altar cross</div><div class="cl-d">A gilt processional cross from the church treasury.</div></figcaption>
+    </figure>
+    <div class="cl-note blue col-12 row-1">
+      <div class="cl-k">Why the crown matters</div>
+      <div class="cl-t">A crown treated <em>as a person</em></div>
+      <div class="cl-b">The real Holy Crown — Byzantine and Latin enamels, its cross forever askew — is no ordinary jewel. For a thousand years Hungarians held that the nation's authority rested not in the king but in the Crown itself; a ruler was only lawful once it had touched his head.</div>
+    </div>
+  </div>
+  <div class="folio">— Issue 04 · HUNGARY · The Treasury —</div>
 </div>
 
 <div class="mag-page mag-spread">
