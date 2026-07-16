@@ -4,7 +4,15 @@
 > travel-journaling project instantly. NOT part of the published magazines.
 > To resume in a new session, say: *"Read JOURNALING_NOTES.md and let's continue."*
 
-_Last updated: Prague **food + late-album redesign**. Built a reusable magazine photo-collage layout (`.mag-collage` / `.cl-*`) and used it for a 2-page "Tastes of Bohemia" street-food feature (trdelník, tornado potato, family eating), a Mucha-window feature, an Old Jewish Cemetery page, and a Winged Lion (RAF) memorial page — all with rich historical captions. Filled the empty "Road to Prague" page with the trdelník-through-a-street photo. Issue is now 28 pages, all screenshot-verified non-clipping. Uploads still preview-only → used transcript extraction again._
+_Last updated: **Austria (Issue 02) FINALIZED & merged to main — real photo album + real cover.** Family streamed their full Austria album (~35 photos, recovered via transcript-base64 method → `images/austria/`). DONE: gave Salzburg / First Night (Burg Altpernstein) / Hallstatt their real uncropped photo heroes (replaced TBD placeholders); **rebuilt the imagined "Tastes of Austria" food page** (fake Figlmüller/Sacher cards, which were also CLIPPING) into a real schnitzel-lunch feature; added two photo spreads — **"At the garden gate"** (Salzburg: Lana + kids at the Mirabell steps pointing to the fortress) and **"The most photographed village"** (Hallstatt railing); **rewrote the last imagined page "Habsburg Forever"** into the real Schönbrunn day (confirmed by user: only Schönbrunn — NO Hofburg; arrived 4pm, state rooms till 6; NO Gloriette/gardens/concert), hero = the private-salon shot with Franz Joseph & Sisi portraits; **Reflections** now truthful (real "if we come back" = the salt mine + panorama they missed as both were closed; removed the fabricated 60m-slide/funicular; favourite=Mirabell gate, hardest=liftless-castle first night — true placeholders, user may reword); **real COVER** = Stephansdom family selfie (`cover.jpg`, masthead moved to top, gradient so faces stay clear); fixed cover + welcome + back-cover blurbs to match reality. All 23 pages screenshot-verified non-clipping. Austria has NO imagined content left. HELD unplaced Austria photos for optional extra spreads: Salzburg Residenzbrunnen/Getreidegasse/Residenz-facade/Do-Re-Mi-avenue/horse-fountain/family-cathedral(tilted); Hallstatt boat/market-square/postcard-vs-real/street/viewpoint; castle exterior-selfie/breakfast/valley-view; autobahn._
+
+_Earlier: Prague **food + late-album redesign**. Built a reusable magazine photo-collage layout (`.mag-collage` / `.cl-*`) and used it for a 2-page "Tastes of Bohemia" street-food feature (trdelník, tornado potato, family eating), a Mucha-window feature, an Old Jewish Cemetery page, and a Winged Lion (RAF) memorial page — all with rich historical captions. Filled the empty "Road to Prague" page with the trdelník-through-a-street photo. Uploads still preview-only → used transcript extraction again._
+
+_Then (St Vitus interior pass): swapped the "Inside St. Vitus" hero to the wide **nave-vault** shot (`day-06/39`), and added two `.mag-spread` pages — **"The Silver Saint"** (Nepomuk's silver tomb `day-06/40`) and **"In Bronze"** (bronze memorial group `day-06/41`). Old `31-st-vitus-interior.jpg` now unused. **NOTE:** headless check flagged the **"Tastes of Bohemia"** collage page as overflowing ~208px — worth a re-check._
+
+_Then "≥1 photo per attraction" pass DONE (added 6 `.mag-spread` pages, Chromium-verified, photos already in repo): Kohl Fountain → detail `11`; St George's → nave `24`; Old Royal Palace → heraldic ceiling `29`; Throne → Crown Jewels `33`; Týn → towers `21`; St Nicholas → exterior `19`. Prague issue ~33 pages, and a Prague "second photo for six attractions" pass also landed on main._
+>
+> _Then: **fixed the "Tastes of Bohemia" collage overflow** — root cause was `.cl-grid` being a flex child without `min-height:0`, so its `height:100%` images ballooned to intrinsic height; added `min-height:0` to `.cl-grid` (safe for all collage pages). **Added the Astronomical Clock's 2nd photo:** the all-five family selfie under the Old Town Hall tower → `day-06/42-clock-family-selfie.jpg`, new page "All Five of Us". Whole issue re-verified 0 clipping. **Brno:** user asked to add Brno photos but NONE are in the transcript yet — awaiting upload (each alone). Held-but-unused Prague photos: `25/26/28/30/31` + St Vitus extras (mucha-selfie/apse/saints/flame/royal-tomb/chapel) in transcript._
 
 ---
 
@@ -19,7 +27,8 @@ warm magazine-editorial tone.
 
 ## The family (the Munasinghes)
 
-- **Navin** — dad · **Lana** — mum (parents; sign-offs read "Navin, Lana, Avisha, Aviann & Avin Munasinghe")
+- **Avinesh** ("Avi") — dad · **Lana** — mum (parents; magazine sign-offs read "Avinesh, Lana, Avisha, Aviann & Avin Munasinghe").
+  - NOTE: his **full legal name is "Navin Avinesh Welikala Munasinghe"** — he *goes by* Avinesh/Avi (the kids' names all echo it: Avinesh → Avisha, Aviann, Avin). Magazines use **Avinesh** (family voice); the **`day_*.html` booking/logistics pages keep the legal "Navin …"** on tickets/licence/hotel so they match his documents — do NOT change those. (Corrected across all 14 issues this session per Lana's confirmation.)
 - **Avisha** — 11, **boy**
 - **Aviann** — 8, **girl**
 - **Avin** — 4, **boy**
@@ -232,6 +241,24 @@ warm magazine-editorial tone.
 - **Austria still open:** Vienna page (Wed 15 Jul — comes AFTER Prague chronologically), Tastes
   of Austria food page, and Reflections all still imagined placeholder.
 
+## NEXT: Budapest (Thu 16 Jul) — Issue 04 Hungary (all still IMAGINED placeholder)
+
+Family's own plan for the Budapest day: **St. Stephen's Basilica** (9–5) · **Matthias Church** (9–5)
+· **Fisherman's Bastion** · **Castle Hill funicular** (Budavári Sikló, ~8am–10pm) · **Danube sunset
+cruise** (~8:30pm). Buda-side cluster = Castle Hill (Matthias Church + Fisherman's Bastion + Buda
+Castle, reached by the funicular); Pest-side = Basilica + (suggested) Parliament, Shoes on the
+Danube, Chain Bridge, Great Market Hall. NB timing: the funicular "8–10pm" and the 8:30 cruise
+overlap — do Castle Hill late-afternoon or after the cruise. Build Issue 04 from real photos/details
+as they arrive, same rich-history treatment as Vienna. (This is the leg being handed to a fresh
+session — see the resume prompt given 15 Jul evening.)
+**Parking chosen:** **Central Passage Parkoló** (Király utca 8–10, District VI, by Deák Ferenc tér)
+— central Pest, ~6 min walk to St. Stephen's Basilica; park once, whole day on foot/tram-2/funicular,
+return here after the cruise. **Route given (min-stairs, funicular):** Central Passage → Basilica →
+Parliament + Shoes on the Danube → tram 2 / Chain Bridge → funicular UP → Castle Hill (Buda Castle,
+Matthias, Fisherman's Bastion main terrace, skip paid turrets) → down → dinner → 8:30 sunset cruise.
+**Set off 7:30am Thu 16 Jul** — `images/hungary/road-to-budapest-family-car.jpg` (all five in the car,
+happy) = natural **"Road to Budapest" opener** for Issue 04.
+
 ## Real details captured so far (facts to reuse — keep consistent)
 
 **China arrival (10 Jul):** landed ~4:30am; hand-luggage only (skipped baggage claim);
@@ -259,6 +286,107 @@ online homework, Avin colouring + activity book); 3 Shein kids' cameras + 32GB m
 clever finds (2.5 kg Kmart folding car seats ×3, eye masks with built-in pillow, EU adapters,
 noodles/soup/mac&cheese/3-in-1 coffee from home); bags = 2 big + 4 small backpacks, 1 China
 hand-luggage, Avin's strap harness-backpack, a stroller, 3 car seats.
+
+**Brno → Vienna travel day (Wed 15 Jul) — CAPTURED, page not built yet:** again woke early;
+packed; walked to fetch the vehicle from the (car) park. Planned to leave Prague at 10am but
+**left at 8am** — so decided to spend a bit of time in **Brno** on the way. At 8:30am they were
+on the road. **Route now confirmed: Prague → Brno → Vienna** (so Brno is a stop en route, and
+**Vienna is still the next issue-02 Austria destination**, reached 15 Jul via Brno — this
+reconciles the earlier "Vienna = Wed 15 Jul" note). **The Brno reason = nostalgia:** ~12 years
+ago **Avinesh ("Avi", the dad — CONFIRMED)** came to Brno on an **office/work tour**, and the family
+wanted to bring back those old memories. Awaiting: what they did/saw in Brno, the company/place
+Avi visited, whether they went back to that actual building, and photos (send ALONE, no caption
+in same message). Good page idea: a warm **"Return to Brno"** memory-lane feature for Issue 02
+(Austria) or Issue 03 (Czechia).
+**PHOTOS RECEIVED (last morning in Prague → setting off) — processed & in repo at `images/day-07/`,
+NOT yet placed on a page:** (1) `leaving-prague-family-apartment.jpg` — all five outside their
+Prague stay, the **"Gold Art Apartments"** door (had NO EXIF tag + stored sideways → fixed with a
+manual ROTATE_90; note this gotcha). (2) `leaving-prague-kafka-monument.jpg` — Avisha at the
+**Franz Kafka Monument** (Jaroslav Róna's bronze, man on an empty suit, Jewish Quarter). (3)
+`leaving-prague-street-aviann.jpg` — Aviann on a sunlit cobbled Old-Town street. (4)
+`leaving-prague-powder-tower.jpg` — the **Powder Tower / Prašná brána** Gothic gate, near-empty
+early street. (5) `leaving-prague-powder-tower-family.jpg` — all-five selfie under the Powder
+Tower. (6) `road-to-brno-in-car-family.jpg` — all-five in-car selfie setting off (EXIF orient 6,
+auto-transposed to portrait). All uncropped, long-edge ~2000px, q82. Awaiting per-photo captions.
+Natural home: a new **"The Last Morning in Prague / Road to Brno"** travel-day opener for the
+15 Jul leg (day-07).
+**VIENNA (Wed 15 Jul) — ARRIVED, real content starting:** after the Brno detour they reached
+**Vienna**. First thing captured: they're **hearing the love story of Emperor Franz Joseph I &
+Empress Elisabeth ("Sisi")** — the classic Habsburg romance (Franz Joseph was meant to marry
+Sisi's elder sister Helene but chose 15-yr-old Sisi at Bad Ischl in 1853; her free-spirited,
+melancholy life at court; assassinated in Geneva 1898). This is the storyline of **Schönbrunn
+Palace** and the **Hofburg / Sisi Museum** audio tours — CONFIRM which venue they heard it at.
+This makes the **Vienna page (Issue 02 Austria) REAL at last** — replace the imagined placeholder
+with the Sisi story as its heart (echoes Lana's Sound-of-Music thread: another woman's story that
+Austria makes vivid). NB spelling: "Sisi" (Austrian) not "Sissi" (the films).
+**VENUE CONFIRMED = Schönbrunn Palace** (they photographed the palace's history boards).
+**DONE THIS SESSION — 3 new history pages added to Issue 02 (magazines/02-austria.html),
+after the existing imagined "Habsburg Forever" Vienna page (folio 05), all screenshot-verified
+non-clipping:** (1) **"The emperor who chose the wrong sister"** — the Franz Joseph & Sisi love
+story (Bad Ischl 1853, the rigid court, Hungary/1867 Compromise, Mayerling 1889, Geneva 1898,
+68-yr reign; ties to Lana's Sound-of-Music thread). (2) **"Echoes of a Monarchy"** — a photo
+page showing their own (uncropped) shot of the Schönbrunn timeline/empire-map board
+(`images/austria/schoenbrunn-panel-echoes-map.jpg`); added a new `.sp-photo` CSS class to this
+issue for uncropped `<img>` photos. (3) **"The autumn Vienna stopped an empire"** — the 1529
+First Siege (Suleiman the Magnificent, Mohács 1526, Count Niklas von Salm, the rain + mining war,
+withdrawal; nods to the 1683 second siege / Sobieski). All use descriptive folios (no TOC
+renumber). Text-forward pages sit ~55–60% filled (clean essay look) — could grow if they send a
+real family-at-Schönbrunn photo (would headline the Sisi page).
+**HELD panels (processed, in `images/austria/`, NOT placed — offer as swaps/extra pages):**
+`schoenbrunn-panel-genealogy.jpg` (Habsburg family tree 1740–1918) and
+`schoenbrunn-panel-monarchy-end.jpg` (Leopold II → end of monarchy 1918).
+**SCHÖNBRUNN STATE-ROOMS PHOTOS (15 Jul) — 39 sent, all saved & EXIF-oriented at
+`images/austria/schoenbrunn/NN.jpg`** (NN = 01..39 by capture order; stable semantic copies made
+for the placed ones: `great-gallery.jpg`=23, `great-gallery-ceiling.jpg`=24,
+`immersive-projection.jpg`=04, `maria-theresa.jpg`=06, `emperor-court-dress.jpg`=05,
+`rococo-clock.jpg`=13, `imperial-table.jpg`=18, `private-salon.jpg`=11). Orientation gotcha:
+this phone tagged ALL of them EXIF-orientation 6 → `ImageOps.exif_transpose` fixes every one
+(the Read/preview tool shows RAW pixels so they LOOK sideways in preview — trust exif_transpose,
+verified via a contact-sheet montage; script in scratchpad).
+**DONE — new 4-page "Inside Schönbrunn" feature added to Issue 02**, inserted right after the
+imagined "Habsburg Forever" page (folio 05), all screenshot-verified non-clipping:
+(1) **The Great Gallery** (`great-gallery.jpg`, kids gazing up at the Guglielmi ceiling; history:
+Maria Theresa's ballroom, 1760 fresco bombed 1945 & restored, Congress of Vienna balls 1814,
+JFK–Khrushchev 1961). (2) **A History in Light** (the immersive projection room; palace history:
+hunting lodge→1441 rooms, "Schönbrunn yellow", Mozart 1762, Napoleon HQ 1805/09 & his son d.1832).
+(3) **Maria Theresa** (portrait, uncropped; 40-yr reign, 16 children incl. Marie Antoinette).
+(4) **How They Lived** (mag-duo: rococo clock + laid imperial table; Spanish court ceremonial +
+family warmth). Added `.sp-photo.compact` CSS (max-height 116mm) for photo+text pages. Descriptive
+folios (no TOC renumber). NB: for the `.mag-duo` page, fixed photo `height:104mm` + `aspect-ratio:auto`
+(a percentage/flex height chain collapsed the fixed mag-page box — avoid).
+**HELD (saved, unplaced — offer as more pages/swaps):** ~31 other Schönbrunn interiors incl. the
+Bergl garden-landscape rooms (#33/38/39), more state salons (#08/09/11/12/22/29/32), Franz-Joseph/
+Sisi-era private rooms (#10/14/15), archduchess portrait pairs (#16/17), ceiling-fresco details
+(#24/26/27/28), the emperor-in-court-dress portrait (#05), gilt wall details (#25/30/31). Could
+become an "Imperial Portraits" page and a "State Rooms" collage page.
+**Evening (Wed 15 Jul) — DONE: 4-page evening feature built** (Issue 02, inserted after "The Siege
+of 1529", before the food page; all screenshot-verified non-clipping):
+(1) **Stephansdom (exterior)** — `stephansdom-tower-roof.jpg` + cathedral history (1147 origin, 136m
+"Steffl" south tower, ~230k-tile roof w/ Habsburg double-eagle, catacombs, 1945 fire → rebuilt 1952).
+(2) **Inside Stephansdom — "Honestly, I had no words"** (user's own words) — mag-duo, nave + Baroque
+altar photos + the speechless-interior moment + Gothic interior notes (pulpit c.1500, Wiener Neustädter
+altar, Frederick III tomb). (3) **An Evening Walk — "One walk, four Viennas"** — 2×2 photo grid:
+State Opera+Lorelei fountain (music), Marc-Anton/Secession (Jugendstil/Klimt), fiaker (old town),
+Capistran monument (the Ottoman-frontier tie). (4) **"Prague or Vienna?"** reflection — the user's
+recurring dilemma in their own voice ("majesty that suits the castle"; "found" vs "commissioned"
+beauty; heart big enough for both), weaving real Prague (King's Landing, empty Charles Bridge,
+trdelník) + Vienna (Schönbrunn, Sisi, the wordless cathedral) moments. Uses existing classes +
+inline grid; no new CSS beyond earlier `.sp-photo.compact`.
+**Evening photos saved in `images/austria/`:** stephansdom-tower-roof, -capistran-pulpit,
+-interior-nave, -interior-nave-windows (held), -interior-side-altar (held), -interior-baroque-altar,
+vienna-fiaker, vienna-fountain-facade (=State Opera/Karajan-Platz), vienna-marc-anton-secession.
+HELD/unused: interior-nave-windows, interior-side-altar (offer as swaps/extra interior page).
+**(earlier context) Evening (Wed 15 Jul):** after Schönbrunn, into central Vienna; walked the old
+town to Stephansdom. Sightseeing/tower hours were
+done for the day (closed 16:30/17:30) so this is the free interior + exterior + old-town wander,
+possibly the ~6pm Mass; **Naschmarkt** flagged as the market/dinner option (stalls closing, but its
+restaurants open till 23:00). Awaiting: how the cathedral + evening went, and photos (Stephansdom
+interior/roof, the walk) — a **"An Evening in Vienna / Stephansdom"** page would close the Vienna
+day nicely. NB Stephansdom = Vienna's Gothic cathedral (South Tower 343 steps; famous zig-zag
+tiled roof; a different building from the Habsburg palaces).
+**STILL OPEN for Vienna:** the existing "Habsburg Forever" page (folio 05) is still IMAGINED
+(Orangery concert, Avin asleep — fiction); rewrite when they share their real Schönbrunn day
+(what the kids made of the Sisi story, gardens/Gloriette, etc.). Awaiting more Vienna photos.
 
 **Germany Visit 1 (11 Jul) — arrival page done:** flight from Beijing landed on time;
 immigration + bags; Avin fully recovered; **one big backpack torn** on the carousel (need to

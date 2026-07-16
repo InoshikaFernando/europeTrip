@@ -11,11 +11,11 @@ html, body { font-family:'Plus Jakarta Sans', sans-serif; background:#222; color
 body { padding:20px; }
 .mag-page { width:210mm; height:295mm; background:#fefcf7; margin:14px auto; box-shadow:0 8px 32px rgba(0,0,0,0.25); position:relative; overflow:hidden; page-break-after:always; break-after:page; }
 .mag-page:last-child { page-break-after:auto; }
-.mag-cover { background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.7) 100%), url('../images/austria/cover.jpg') center/cover #1a3a5c; color:white; display:flex; flex-direction:column; padding:18mm 16mm; position:relative; }
+.mag-cover { background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.32) 26%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.12) 100%), url('../images/austria/cover.jpg') center 28%/cover #1a3a5c; color:white; display:flex; flex-direction:column; padding:18mm 16mm; position:relative; }
 .mag-cover::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 20% 80%, #c89b3c40, transparent 50%); pointer-events:none; }
 .cv-issue { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:rgba(255,255,255,0.85); margin-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:4px; display:flex; justify-content:space-between; }
 .cv-flag { font-size:14px; }
-.cv-brand { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:18px; color:rgba(255,255,255,0.95); letter-spacing:0.05em; margin-bottom:auto; }
+.cv-brand { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:18px; color:rgba(255,255,255,0.95); letter-spacing:0.05em; margin-bottom:12px; }
 .cv-title { font-family:'Fraunces', serif; font-weight:700; font-size:96px; line-height:0.9; color:white; margin-bottom:6px; letter-spacing:-0.02em; text-shadow:2px 4px 12px rgba(0,0,0,0.4); }
 .cv-sub { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:24px; color:rgba(255,255,255,0.95); margin-bottom:24px; text-shadow:1px 2px 8px rgba(0,0,0,0.5); }
 .cv-tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
@@ -49,6 +49,10 @@ body { padding:20px; }
 .sp-cols p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:38px; float:left; line-height:0.9; padding:2px 6px 0 0; color:#28508c; }
 .sp-quote { break-inside:avoid; font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:14px; line-height:1.4; color:#28508c; text-align:center; padding:10px 12px; border-top:1px solid #c89b3c; border-bottom:1px solid #c89b3c; margin:10px 0; }
 .sp-quote::before, .sp-quote::after { content:'"'; font-size:30px; line-height:0; vertical-align:-12px; color:#c89b3c; padding:0 3px; }
+.sp-photo { width:100%; margin-bottom:6px; text-align:center; position:relative; }
+.sp-photo img { max-width:100%; max-height:170mm; display:block; margin:0 auto; border-radius:2px; }
+.sp-photo.compact img { max-height:116mm; }
+.sp-photo .ph-info { display:inline-block; margin-top:4px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
 .mag-duo { padding:14mm 16mm; display:flex; flex-direction:column; gap:6mm; }
 .duo-row { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
 .duo-row.alt { grid-template-columns:2fr 1fr; }
@@ -117,10 +121,10 @@ body { padding:20px; }
     <div class="cv-sub">Hallstatt · Salzburg · Vienna</div>
     <div class="cv-tags">
       <span class="cv-tag">★ 600 Years of Habsburgs</span>
-      <span class="cv-tag">🎼 Mozart's Birthplace</span>
-      <span class="cv-tag">🏔 Salt + the Alps</span>
+      <span class="cv-tag">🎬 The Sound of Music</span>
+      <span class="cv-tag">🏔 Lakes + the Alps</span>
     </div>
-    <div class="cv-features">INSIDE: <b>Hallstatt's 7,000-year-old salt mines</b> · <b>Mozart's 1756 birthplace</b> in Salzburg · <b>Schönbrunn Palace</b> in Vienna · <b>The Sound of Music hills</b> and a lakeside pletna boat ride</div>
+    <div class="cv-features">INSIDE: <b>The Sound of Music made real</b> in Salzburg · a boat on the <b>Hallstättersee</b> · <b>Schönbrunn</b> and the story of Sisi · a wordless evening at the <b>Stephansdom</b></div>
   </div>
   <div class="cv-meta">Munasinghe Family · Sat 11 Jul — Wed 15 Jul 2026</div>
 </div>
@@ -132,7 +136,7 @@ body { padding:20px; }
   <div class="wl-body">
     <p>In one country we saw three radically different Austrias. Hallstatt was the oldest — a lakeside village whose salt mines named an entire Iron Age culture. Salzburg was the most musical — where a four-year-old Mozart began composing in a yellow townhouse off Getreidegasse. Vienna was the most imperial — where six hundred years of Habsburg power left palaces in every direction.</p>
     <p>These three cities are bound by mountains, by lakes, by the Danube and the Salzach, and — quietly, in the way Austria does these things — by classical music piped from every café terrace.</p>
-    <p>This issue is about what happens when one small country gives you a salt mine, a Sound of Music tour, a Mozart concert, and an emperor's palace, all within four hundred kilometres of each other.</p>
+    <p>This issue is about what happens when one small country gives you a lake you will come back for, a Sound of Music garden, an emperor's palace, and a cathedral that leaves you wordless — all within four hundred kilometres of each other.</p>
     <p style="font-style:italic; color:#28508c; text-align:right; margin-top:14px;">— The Munasinghes, 2026</p>
   </div>
   <div class="toc-title">In this issue</div>
@@ -180,11 +184,8 @@ body { padding:20px; }
   <div class="sp-headline">Do-Re-Mi in the garden,<br>and an ice-cream afternoon.</div>
   <div class="sp-deck">The Sound of Music was my childhood — acted out with my sister and a row of dolls. To walk its garden now, with a husband and three children of my own, was a dream I never dared to dream.</div>
   <div class="sp-meta"><span>Sat 11 Jul 2026</span><span>Mirabell Gardens, Salzburg</span><span>Two hours behind schedule</span></div>
-  <div class="sp-hero" style="background-image:url('../images/austria/day-01-mirabell-gardens.jpg');">
-    <div class="ph-name">📷 images/austria/day-01-mirabell-gardens.jpg</div>
-    <div class="ph-info">HERO PHOTO · TBD</div>
-  </div>
-  <div class="sp-caption">Mirabell Gardens — where "Do-Re-Mi" was filmed, and where we found our feet on our first Austrian afternoon.</div>
+  <div class="sp-photo" style="margin-bottom:6px;"><img src="../images/austria/salzburg-mirabell-pegasus.jpg" alt="The Pegasus Fountain in the Mirabell Gardens, flanked by two reclining stone lions with the palace behind — the spot where the von Trapp children danced 'Do-Re-Mi'." style="max-height:112mm;"><div class="ph-info">Photo · Munasinghe</div></div>
+  <div class="sp-caption">The Pegasus Fountain in the Mirabell Gardens — where "Do-Re-Mi" was filmed, and where we found our feet on our first Austrian afternoon.</div>
   <div class="sp-cols">
     <p>The Sound of Music was one of my favourite films as a child. When I was six or seven, my sister and I would act it out for hours — I was always Maria, she was Liesl, and a row of dolls stood in for the rest of the von Trapp children. I knew every song. I must have watched that film more than a hundred times, and every single time, in my mind, I was already here — already in Austria. To stand in the real Salzburg now, decades later, with a husband beside me and three children of my own, was a dream far beyond anything that little girl ever dared to dream.</p>
     <p>It was noon by the time we reached the city, and after Beijing, a red-eye flight and a morning in Munich, we arrived with tired legs — Aviann most of all. So we did Salzburg gently. We walked into the Mirabell Gardens, the very place where Maria and the children skipped and sang "Do-Re-Mi". And there, among the flowerbeds and fountains with the fortress watching from its hill, I did the things I had only ever pretended: the little splash at the fountain, and standing before the garden gate — the moves I had copied as a girl a hundred times over. Thirty years of dreaming, and this time the gate was real, the water was real, and my own children were the ones watching.</p>
@@ -195,14 +196,25 @@ body { padding:20px; }
 </div>
 
 <div class="mag-page mag-spread">
+  <div class="sp-eyebrow">SALZBURG · AT THE GARDEN GATE</div>
+  <div class="sp-headline">The gate was real,<br>and so was the hill.</div>
+  <div class="sp-deck">Thirty years of watching the film, and here at last was the Mirabell gate itself — with the Hohensalzburg Fortress on its hill exactly where it had always been on the screen.</div>
+  <div class="sp-meta"><span>Sat 11 Jul 2026</span><span>Mirabell Gardens, Salzburg</span><span>The Do-Re-Mi steps</span></div>
+  <div class="sp-photo"><img src="../images/austria/salzburg-mirabell-gate-fortress.jpg" alt="Lana and the three children at the top of the Mirabell garden steps, Lana pointing up to the Hohensalzburg Fortress on its hill in the distance." style="max-height:150mm;"><div class="ph-info">Photo · Munasinghe</div></div>
+  <div class="sp-caption">At the top of the Mirabell steps — pointing the children up to the Hohensalzburg Fortress on its hill, the one we only ever saw from afar.</div>
+  <div class="sp-cols">
+    <p>This is the gate. The very steps where the children line up in the last verse of "Do-Re-Mi", with the fortress crowning the hill behind. I had stood here a hundred times in my imagination; now I stood here with three children of my own, pointing up at the same fortress on the same hill, and telling them the story for real.</p>
+    <p>We never climbed to the Hohensalzburg itself — there was no time, and tired legs, and a church to reach. But we didn't need to. To see it from here, from the garden gate, with my family beside me, was the whole dream in a single frame.</p>
+  </div>
+  <div class="folio">— Issue 02 · AUSTRIA · At the garden gate —</div>
+</div>
+
+<div class="mag-page mag-spread">
   <div class="sp-eyebrow">BURG ALTPERNSTEIN · THE FIRST NIGHT</div>
   <div class="sp-headline">A closed city,<br>and a castle<br>with no lift.</div>
   <div class="sp-deck">Our first Austrian evening taught us two lessons the hard way: on a Saturday, the shops shut at six — and a genuine medieval castle has stairs, not elevators.</div>
   <div class="sp-meta"><span>Sat 11 Jul 2026</span><span>Salzburg → Burg Altpernstein</span><span>Mass to midnight</span></div>
-  <div class="sp-hero" style="background-image:url('../images/austria/day-01-burg-altpernstein.jpg');">
-    <div class="ph-name">📷 images/austria/day-01-burg-altpernstein.jpg</div>
-    <div class="ph-info">HERO PHOTO · TBD</div>
-  </div>
+  <div class="sp-photo" style="margin-bottom:6px;"><img src="../images/austria/altpernstein-castle-full.jpg" alt="Burg Altpernstein — a tall grey medieval castle on its rock, reached by a stone arched bridge, under a cloudy sky." style="max-height:112mm;"><div class="ph-info">Photo · Munasinghe</div></div>
   <div class="sp-caption">Burg Altpernstein — our first night in Austria: a genuine hilltop castle, kept historical to the core, right down to the stairs where a lift might have been.</div>
   <div class="sp-cols">
     <p>Mass finished at a quarter to eight, and we stepped out into a problem we hadn't seen coming. It was Saturday, and in Austria the shops close at six — so our plan to pick up groceries for dinner had quietly expired two hours earlier, while we were still in the pews. A tired family, three hungry children, and a town that had rolled up its shutters for the weekend.</p>
@@ -218,11 +230,8 @@ body { padding:20px; }
   <div class="sp-headline">The salt mine was closed —<br>so we walked the lake.</div>
   <div class="sp-deck">We woke at five, fresh at last, filled up on a castle breakfast, and drove to the world's most photographed village. The famous salt mine was shut — but the lake, the boats and the cool of the morning were ours.</div>
   <div class="sp-meta"><span>Sun 12 Jul 2026</span><span>Hallstatt, Salzkammergut</span><span>Arrived 10:30 · village + boat</span></div>
-  <div class="sp-hero" style="background-image:url('../images/austria/day-04-hallstatt-village-from-lake.jpg');">
-    <div class="ph-name">📷 images/austria/day-04-hallstatt-village-from-lake.jpg</div>
-    <div class="ph-info">HERO PHOTO · TBD</div>
-  </div>
-  <div class="sp-caption">Hallstatt from the water — pastel houses stacked up the cliff above the Hallstättersee, doubling in the still lake below.</div>
+  <div class="sp-photo" style="margin-bottom:6px;"><img src="../images/austria/hallstatt-classic-view.jpg" alt="The classic view of Hallstatt — the lakeside church spire and pastel houses stacked up the cliff above the Hallstättersee, a green mountain rising behind." style="max-height:112mm;"><div class="ph-info">Photo · Munasinghe</div></div>
+  <div class="sp-caption">Hallstatt from the lakeshore — pastel houses stacked up the cliff above the Hallstättersee, the church spire and mountain behind: the view on a thousand postcards.</div>
   <div class="sp-cols">
     <p>We woke at five o'clock — all of us, even the children, and for once wide awake and bright. The hot bath the night before had done its quiet work, and the exhaustion of the long journey had finally lifted. We were at the breakfast buffet by a quarter past seven, fifteen minutes before it opened, and when it did we fell on it happily: cheese and ham, salads and dips, fruit juice and cereal, more than we could finish. Full and ready, we drove out to Hallstatt.</p>
     <div class="sp-quote">The salt mine was shut, the lanes were packed — and still, in the morning light, Hallstatt was every bit the postcard.</div>
@@ -233,120 +242,259 @@ body { padding:20px; }
 </div>
 
 <div class="mag-page mag-spread">
-  <div class="sp-eyebrow">IMPERIAL VIENNA · DAY 07</div>
-  <div class="sp-headline">The Habsburgs built<br>a city for themselves.</div>
-  <div class="sp-deck">Six hundred years of empire left Vienna with more palaces per square kilometre than any other European city. We saw two: Hofburg in the morning, Schönbrunn in the afternoon.</div>
-  <div class="sp-meta"><span>Wed 15 Jul 2026</span><span>Vienna, 1st & 13th districts</span><span>8 hrs · tram + foot</span></div>
-  <div class="sp-hero" style="background-image:url('../images/austria/day-07-schoenbrunn-palace.jpg');">
-    <div class="ph-name">📷 images/austria/day-07-schoenbrunn-palace.jpg</div>
-    <div class="ph-info">HERO PHOTO · TBD</div>
-  </div>
-  <div class="sp-caption">Schönbrunn Palace — 1,441 rooms, completed under Maria Theresa in 1740. The Habsburgs lived here until 1918.</div>
+  <div class="sp-eyebrow">HALLSTATT · THE MOST PHOTOGRAPHED VILLAGE</div>
+  <div class="sp-headline">Shoulder to shoulder<br>in a postcard.</div>
+  <div class="sp-deck">They call Hallstatt the most photographed village on earth — and on a July morning, with the lanes packed and the lake shining, we could see exactly why.</div>
+  <div class="sp-meta"><span>Sun 12 Jul 2026</span><span>Hallstatt, Salzkammergut</span><span>Village + boat</span></div>
+  <div class="sp-photo"><img src="../images/austria/hallstatt-family-railing.jpg" alt="The family lined up along the lakeside railing at Hallstatt, the pastel village and church rising up the mountain behind them." style="max-height:150mm;"><div class="ph-info">Photo · Munasinghe</div></div>
+  <div class="sp-caption">All five of us along the lakeside railing — the whole village stacked up the mountain behind, the shot the whole world comes here to take.</div>
   <div class="sp-cols">
-    <p>You cannot understand Vienna without understanding the Habsburgs. From 1278 until 1918 — six hundred and forty years — this family ran an empire that at various points included Austria, Hungary, Bohemia, Croatia, parts of Italy, parts of Poland, all of the Holy Roman Empire, and (for a few decades) Spain and Mexico. They built like people who knew they would never leave. The Hofburg in central Vienna alone has 2,600 rooms. Schönbrunn, their summer palace, has 1,441.</p>
-    <div class="sp-quote">Vienna is the city of dreams. — Sigmund Freud, who lived three streets away from the imperial palaces.</div>
-    <p>We walked the Schönbrunn gardens in the afternoon heat, climbed the Gloriette for the view back over the city, and watched Avin chase butterflies through baroque parterres designed by Maria Theresa's personal gardener in 1750. In the evening we listened to a Mozart-and-Strauss concert in the Orangery. Avin fell asleep during Eine kleine Nachtmusik. We took it as the highest possible compliment to Mozart's craft.</p>
+    <p>By mid-morning the lanes ran shoulder to shoulder — Hallstatt is tiny, and half the world seemed to have come to photograph it at once. We joined them happily, wandering the waterfront and the market square with its Trinity column, and then did the one thing that beats any viewpoint: we took a boat out onto the Hallstättersee and watched the village pull slowly into frame from the water, the mountains climbing behind it.</p>
+    <p>Someone had a postcard of the same view under winter snow. We held it up against the summer lake — same church, same cliff, same impossible prettiness — and took a picture of the picture. Not the day we'd planned, with the salt mine shut. A better one.</p>
+  </div>
+  <div class="folio">— Issue 02 · AUSTRIA · The most photographed village —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">IMPERIAL VIENNA · SCHÖNBRUNN</div>
+  <div class="sp-headline">The Habsburgs built<br>a city for themselves.</div>
+  <div class="sp-deck">Six hundred years of empire left Vienna with more palaces per square kilometre than any other European city. We reached just one — Schönbrunn — and it was more than enough for a single afternoon.</div>
+  <div class="sp-meta"><span>Wed 15 Jul 2026</span><span>Schönbrunn Palace, Vienna</span><span>Arrived 4pm · rooms till 6</span></div>
+  <div class="sp-photo" style="margin-bottom:6px;"><img src="../images/austria/schoenbrunn/private-salon.jpg" alt="A private salon at Schönbrunn — a fringed chaise longue on a patterned red carpet, a crystal chandelier above, and framed portraits of Emperor Franz Joseph and Empress Elisabeth on the wall." style="max-height:112mm;"><div class="ph-info">Photo · Munasinghe</div></div>
+  <div class="sp-caption">Inside Schönbrunn — a private salon hung with the family's own portraits, Franz Joseph and his Sisi among them. The Habsburgs lived here until 1918.</div>
+  <div class="sp-cols">
+    <p>You cannot understand Vienna without understanding the Habsburgs. From 1278 until 1918 — six hundred and forty years — this one family ran an empire that at various points reached across Austria, Hungary, Bohemia, Croatia, parts of Italy and Poland, all of the Holy Roman Empire, and for a few decades even Spain and Mexico. They built like people who knew they would never leave: the Hofburg sprawling across the city centre, and out to the west their summer palace, Schönbrunn, with its 1,441 rooms.</p>
+    <div class="sp-quote">Vienna is the city of dreams. — Sigmund Freud, who lived a few streets from the imperial palaces.</div>
+    <p>We came late, after the long detour through Brno, and passed under Schönbrunn's gates at four o'clock. That gave us the palace but not its gardens: we spent two hours indoors, room after gilded room, and stepped back out at six with the light already softening — too late to climb the hill to the Gloriette, or to lose the children among the parterres. We saw the gardens only from the terrace, stretching away to the arch on the ridge. Some things you leave for next time. And inside those rooms we found the story that would follow us all evening — the one about the emperor and the reluctant young empress he chose.</p>
   </div>
   <div class="folio">— Issue 02 · AUSTRIA · 05 —</div>
 </div>
 
-<div class="mag-page mag-food">
-  <div class="sp-eyebrow">★ TASTES OF THE TRIP</div>
-  <div class="fd-headline">Six things <em>we ate</em><br>and won't forget.</div>
-  <div class="fd-deck">From morning coffee to evening pastries — the flavours that defined this leg.</div>
-  <div class="fd-grid">
-    <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/austria/food-01-schnitzel.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/austria/food-01-schnitzel.jpg</div>
-      </div>
-      <div class="fd-body">
-        <div class="fd-num">01</div>
-        <div class="fd-name">Wiener Schnitzel</div>
-        <div class="fd-desc">Veal cutlet pounded paper-thin, breaded, fried in butter until the breading puffs into a golden cloud. Served with lemon and lingonberry jam. The dish that defined Vienna.</div>
-        <div class="fd-where">📍 Figlmüller · €25 · Day 07</div>
-      </div>
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">SCHÖNBRUNN · THE STATE ROOMS · IN OUR OWN WORDS</div>
+  <div class="sp-headline">The hall built to<br>take your breath away.</div>
+  <div class="sp-deck">Forty-three metres of white, gold and mirror under a painted sky — Maria Theresa's grand hall, where an empire held its banquets and balls, and where, two centuries later, the Cold War paused for a summit.</div>
+  <div class="sp-meta"><span>Wed 15 Jul 2026</span><span>The Great Gallery, Schönbrunn</span><span>The state apartments</span></div>
+  <div class="sp-photo compact"><img src="../images/austria/schoenbrunn/great-gallery.jpg" alt="The Great Gallery at Schönbrunn — a long white-and-gold hall with crystal chandeliers and a frescoed ceiling; two children stand gazing up."><div class="ph-info">Photo · Munasinghe</div></div>
+  <div class="sp-caption">Aviann and Avin, small under all that gold, stopped in the middle of the Great Gallery to stare up at the ceiling — exactly as the room was built to make you do.</div>
+  <div class="sp-cols">
+    <p>The Great Gallery is the ceremonial heart of Schönbrunn: nearly forty-three metres long, walled in mirrors and gilded stucco, lit by great crystal chandeliers and roofed by an enormous ceiling fresco. This was Maria Theresa's room for the grandest occasions — state banquets, receptions, and balls that ran until dawn.</p>
+    <p>The ceiling was painted in 1760 by the Italian master Gregorio Guglielmi: a swirling allegory glorifying the reign — the crown lands, the arts and sciences, the good government of the monarchy. Its central panel was destroyed by a bomb in 1945 and painstakingly restored after the war.</p>
+    <div class="sp-quote">Balls for the Congress of Vienna were danced here in 1814; and in 1961 Kennedy met Khrushchev beneath this same painted sky.</div>
+    <p>History keeps passing through it. During the Congress of Vienna in 1814–15, the powers redrawing Europe waltzed in this gallery. And in June 1961 the room hosted the summit between John F. Kennedy and Nikita Khrushchev — the two superpowers, face to face, under Maria Theresa's ceiling.</p>
+  </div>
+  <div class="folio">— Issue 02 · AUSTRIA · The Great Gallery —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">SCHÖNBRUNN · A HISTORY IN LIGHT</div>
+  <div class="sp-headline">And then the walls<br>came alive.</div>
+  <div class="sp-deck">Before the state rooms, a darkened chamber where three centuries of the palace's story were thrown across the rococo panelling — the yellow facade, the gardens, cavalry massing in the great courtyard.</div>
+  <div class="sp-meta"><span>Wed 15 Jul 2026</span><span>Schönbrunn · the multimedia room</span><span>Projection show</span></div>
+  <div class="sp-photo compact"><img src="../images/austria/schoenbrunn/immersive-projection.jpg" alt="Schönbrunn's own facade projected across the gilded walls of a darkened room, with cavalry in the courtyard."><div class="ph-info">Photo · Munasinghe</div></div>
+  <div class="sp-caption">The palace's own front, thrown across its inner walls — the parade ground filling with horses and cannon as the story played out around us.</div>
+  <div class="sp-cols">
+    <p>Schönbrunn began as a hunting lodge, wrecked by the Turks and then rebuilt. It was Maria Theresa who turned it into the palace we walked today — a summer residence of some fourteen hundred rooms, its walls washed in the warm ochre that Austria still calls "Schönbrunn yellow." The gardens, the Gloriette on the hill, the menagerie that grew into the world's oldest zoo — all of it took shape under her.</p>
+    <p>The projection carried the family's whole story: the great receptions, the six-year-old Mozart who played here for the empress in 1762, and the darker turns as well.</p>
+    <div class="sp-quote">Only one foreigner ever slept as master in these rooms — and he arrived with an army.</div>
+    <p>That foreigner was Napoleon, who made Schönbrunn his headquarters twice, in 1805 and 1809, dictating peace to the Habsburgs from their own palace. In a final twist, his only legitimate son — the little "King of Rome," grandson of the Austrian emperor — grew up here and died in these rooms in 1832, at just twenty-one. The children watched it all move across the gold, wide-eyed.</p>
+  </div>
+  <div class="folio">— Issue 02 · AUSTRIA · A History in Light —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">SCHÖNBRUNN · THE FACE ON THE WALL</div>
+  <div class="sp-headline">The woman who<br>made this place.</div>
+  <div class="sp-deck">Every corridor at Schönbrunn leads back to her — Maria Theresa: the only woman ever to rule the Habsburg lands in her own right, mother of sixteen, and the maker of the palace as it stands.</div>
+  <div class="sp-meta"><span>Schönbrunn, Vienna</span><span>Maria Theresa · 1717–1780</span><span>Portrait</span></div>
+  <div class="sp-photo"><img src="../images/austria/schoenbrunn/maria-theresa.jpg" alt="Portrait of Empress Maria Theresa in a richly embroidered gown, a crown on the table beside her."><div class="ph-info">Photo · Munasinghe</div></div>
+  <div class="sp-caption">Maria Theresa — sovereign of Austria, Hungary and Bohemia for forty years, and ancestress of half the royal houses of Europe.</div>
+  <div class="sp-cols">
+    <p>When her father died in 1740 leaving no son, twenty-three-year-old Maria Theresa inherited an empire that half of Europe promptly tried to carve up. She fought them off through the long War of the Austrian Succession and held the lands together for four decades, reforming the army, the treasury and the schools as she went.</p>
+    <p>She married for love — Francis Stephen of Lorraine — and bore sixteen children in twenty years, marrying them across the continent to bind it by blood. The youngest daughter, Maria Antonia, went to France and became Marie Antoinette. Schönbrunn was the family's beloved summer home, and it is her taste, her yellow and her ceilings that fill it still.</p>
+  </div>
+  <div class="folio">— Issue 02 · AUSTRIA · Maria Theresa —</div>
+</div>
+
+<div class="mag-page mag-duo">
+  <div class="sp-eyebrow">SCHÖNBRUNN · HOW AN EMPIRE LIVED AT HOME</div>
+  <div class="sp-headline" style="font-size:30px; margin-bottom:5mm;">Gilt clocks, and a table<br>laid for the family.</div>
+  <div class="duo-row">
+    <div class="duo-photo" style="aspect-ratio:auto; height:104mm; background-image:url('../images/austria/schoenbrunn/rococo-clock.jpg');"><div class="ph-info">Photo · Munasinghe</div></div>
+    <div class="duo-text">
+      <div class="kicker">The rococo hours</div>
+      <p>Even telling the time was an occasion. This gilt-bronze mantel clock — all scrolls, flowers and tumbling putti — is pure eighteenth-century court rococo, built to dazzle as much as to keep the hour. Rooms like these held hundreds of such pieces: porcelain, ormolu, lacquer and mirror, a language of luxury spoken fluently only by the very rich.</p>
     </div>
-    <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/austria/food-02-sachertorte.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/austria/food-02-sachertorte.jpg</div>
-      </div>
-      <div class="fd-body">
-        <div class="fd-num">02</div>
-        <div class="fd-name">Sachertorte</div>
-        <div class="fd-desc">Dense chocolate sponge filled with apricot jam, glazed in dark chocolate. Slice with the side of a fork. Eat with whipped cream.</div>
-        <div class="fd-where">📍 Café Sacher · €8.50 · Day 07</div>
-      </div>
+  </div>
+  <div class="duo-row">
+    <div class="duo-text">
+      <div class="kicker">The imperial table</div>
+      <p>The Habsburgs dined under a strict "Spanish court ceremonial," every plate and place governed by rank and ritual. Yet Maria Theresa also prized something rarer for royalty — ordinary family meals, the children at the table, warmth behind the pomp. These settings, crystal and porcelain on white damask, hold both the grandeur and the domesticity this house was known for.</p>
     </div>
-    <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/austria/food-03-kasekrainer.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/austria/food-03-kasekrainer.jpg</div>
-      </div>
-      <div class="fd-body">
-        <div class="fd-num">03</div>
-        <div class="fd-name">Käsekrainer</div>
-        <div class="fd-desc">Sausage embedded with melted cheese, grilled at a Würstelstand, served on bread with mustard. Aviann ate three.</div>
-        <div class="fd-where">📍 Bitzinger stand · €5 · Day 07</div>
-      </div>
+    <div class="duo-photo" style="aspect-ratio:auto; height:104mm; background-image:url('../images/austria/schoenbrunn/imperial-table.jpg');"><div class="ph-info">Photo · Munasinghe</div></div>
+  </div>
+  <div class="folio">— Issue 02 · AUSTRIA · How They Lived —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">IMPERIAL VIENNA · SCHÖNBRUNN · THE STORY WE HEARD</div>
+  <div class="sp-headline">The emperor who chose<br>the wrong sister.</div>
+  <div class="sp-deck">At Schönbrunn today the tour told us the story the whole city seems to keep — Franz Joseph and his Sisi: a love match that began in a summer garden and ended, forty-five years later, on a lakeside in Geneva.</div>
+  <div class="sp-meta"><span>Wed 15 Jul 2026</span><span>Schönbrunn Palace, Vienna</span><span>The Sisi story</span></div>
+  <div class="sp-cols">
+    <p>In the summer of 1853, in the spa town of Bad Ischl, a twenty-three-year-old emperor was supposed to fall in love to order. Franz Joseph I already ruled the Habsburg empire, and his mother, the formidable Archduchess Sophie, had chosen his bride: her niece Helene of Bavaria, the sensible elder sister. But when the family arrived, Franz Joseph barely noticed Helene. His eye had gone straight to her younger sister — fifteen-year-old Elisabeth, whom everyone called Sisi. Within five days they were engaged.</p>
+    <p>They married in Vienna the following spring, and Sisi walked into the most rigid court in Europe. She was famous almost at once for her beauty — a tiny waist she guarded with fierce discipline, and hair so long it fell past her ankles and took her hairdresser three hours to arrange. But the gilded protocol of the Hofburg suffocated her. She escaped it constantly, travelling for months at a time — to Hungary, which she loved, to Corfu, to anywhere the court was not — and filled private notebooks with melancholy poems.</p>
+    <div class="sp-quote">He was matched with the elder sister and chose the younger — and in sixty-eight years upon the throne, he never loved another.</div>
+    <p>Yet Sisi was more than ornament. She loved Hungary above every other land of the empire, learned its language when almost no one at court would, and lent her influence to the Compromise of 1867 that made her husband King of Hungary as well as Emperor of Austria — and crowned her a queen in Budapest. It stayed the achievement she was proudest of.</p>
+    <p>Sorrow shadowed the fairy tale. In 1889 their only son, Crown Prince Rudolf, died at his hunting lodge at Mayerling, and Sisi wore mourning black for the rest of her life. Nine years later, on a Geneva quay in 1898, an anarchist stepped from a crowd and stabbed her with a sharpened file; she walked on a few steps before she fell. Franz Joseph reigned alone until 1916 — sixty-eight years in all — outliving his wife, his son, and very nearly his empire.</p>
+    <p>Everything about her became legend: the ankle-length hair washed with egg and cognac, the diamond stars pinned through it, the exercise rings fixed in her palace rooms, the notebooks of verse. A century on, the films turned her into a sugared sweetheart — "Sissi," with a double S — but the real Elisabeth was stranger, sadder and far more interesting than the girl on the screen.</p>
+    <p>The children listened with wide eyes. It is a strange thing to explain to a child: that the most admired woman in Europe, who lived in a golden palace of a thousand rooms, was for much of her life quietly unhappy.</p>
+  </div>
+  <div class="folio">— Issue 02 · AUSTRIA · Franz Joseph &amp; Sisi —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">SCHÖNBRUNN · THE HISTORY WE READ</div>
+  <div class="sp-headline">Six hundred years,<br>on a single wall.</div>
+  <div class="sp-deck">We stood a long while in front of this one — the whole House of Habsburg, from a medieval count to the last emperor, laid across a map of everything they once ruled.</div>
+  <div class="sp-meta"><span>Wed 15 Jul 2026</span><span>Schönbrunn Palace, Vienna</span><span>"Echoes of a Monarchy"</span></div>
+  <div class="sp-photo"><img src="../images/austria/schoenbrunn-panel-echoes-map.jpg" alt="Schönbrunn 'Echoes of a Monarchy' panel — a timeline of Habsburg rulers from 1282 to 1900 above a map of the empire in blue."><div class="ph-info">Photo · Munasinghe</div></div>
+  <div class="sp-caption">From Rudolf I in 1282 to Franz Joseph in 1900 — seven faces and six hundred years, the empire they built spread out in blue below. The last portrait on the right is Franz Joseph himself: Sisi's husband, and the man who ruled all of it for sixty-eight years.</div>
+  <div class="folio">— Issue 02 · AUSTRIA · Echoes of a Monarchy —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">VIENNA · 1529 · A LITTLE HISTORY</div>
+  <div class="sp-headline">The autumn Vienna<br>stopped an empire.</div>
+  <div class="sp-deck">Long before the palaces and the waltzes, Vienna was a frontier — and in the wet October of 1529 it was the wall against which the largest empire on earth finally broke.</div>
+  <div class="sp-meta"><span>Sept–Oct 1529</span><span>The First Siege of Vienna</span><span>Then &amp; now</span></div>
+  <div class="sp-cols">
+    <p>In September 1529 the most powerful man in the world arrived at the gates of Vienna. He was Suleiman the Magnificent, sultan of the Ottoman Empire at the very height of its reach — a realm that ran from the walls of this city to the deserts of Arabia. Three years earlier his army had destroyed the kingdom of Hungary in a single afternoon at Mohács; now he had marched the better part of a thousand miles to take the Habsburg capital itself.</p>
+    <p>To understand why Vienna trembled, you have to go back to that marsh at Mohács. There, in August 1526, the Ottoman army had annihilated the kingdom of Hungary in under two hours; the young Hungarian king drowned as he fled the field, and a wealthy Christian kingdom simply ceased to exist. The road north lay open after that, and everyone in Vienna knew it.</p>
+    <p>Suleiman set out from Istanbul in May with a vast army and a great train of cannon, but the same wet spring that would later undo him slowed the march from the start. His light horsemen, the akıncı, swept ahead and put the countryside to the torch; frightened villagers crowded in behind the walls, and the defenders burned their own suburbs so the enemy would find no shelter near the city.</p>
+    <p>Inside stood a patchwork of the age — German pikemen, Spanish musketeers sent by the emperor's brother Charles V, Bohemian and Austrian troops — perhaps twenty thousand in all, thrown together under old Count Salm to hold a medieval wall against the most modern army on earth.</p>
+    <p>Vienna was badly outnumbered. The archduke, Ferdinand I, was elsewhere, and the city's defence fell to an elderly soldier, Count Niklas von Salm, with a garrison dwarfed by the host outside the walls. But the city had two allies the sultan could not defeat. The first was the weather — an unusually wet autumn that turned the roads to mud, stranded his heavy siege cannon somewhere back in the Balkans, and left the Ottoman army cold and hungry so far from home.</p>
+    <div class="sp-quote">The soldiers held the walls, and the rain did the rest. Vienna became the frontier that would not fall.</div>
+    <p>The second ally was time. The numbers were badly lopsided — the sultan's host several times the size of the garrison — and the fiercest fighting happened out of sight, underground. Ottoman sappers dug mines to blow breaches in the walls; the defenders dug down to meet them, listening for the scrape of spades in the dark and fighting hand to hand beneath the city. Count Salm was wounded in those last assaults, and would die of it the following spring.</p>
+    <p>By mid-October, with winter closing in and his supply lines failing, Suleiman broke off the siege and turned for home. He told the world it had never been a serious attempt — but he never took Vienna, then or later. A century and a half on, in 1683, a second and even greater Ottoman army stood before these same walls, and was broken by a thunderous charge of Polish and allied cavalry down from the Kahlenberg hills. Twice the tide of empire reached this city; twice it went out again. Everything gilded and imperial that we saw today was built, in the end, behind a line that held.</p>
+  </div>
+  <div class="folio">— Issue 02 · AUSTRIA · The Siege of 1529 —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">AN EVENING IN VIENNA · STEPHANSDOM</div>
+  <div class="sp-headline">The cathedral at<br>the heart of it all.</div>
+  <div class="sp-deck">As the palaces closed and the light turned gold, we walked the old town to St. Stephen's — the "Steffl" — the Gothic giant that has stood at the centre of Vienna for eight hundred years.</div>
+  <div class="sp-meta"><span>Wed 15 Jul 2026</span><span>Stephansplatz, Vienna</span><span>Evening</span></div>
+  <div class="sp-photo compact"><img src="../images/austria/stephansdom-tower-roof.jpg" alt="St. Stephen's Cathedral, Vienna — the soaring south tower and the famous zig-zag tiled roof."><div class="ph-info">Photo · Munasinghe</div></div>
+  <div class="sp-caption">St. Stephen's Cathedral — the south tower soaring 136 metres, and the famous tiled roof blazing in the evening light.</div>
+  <div class="sp-cols">
+    <p>St. Stephen's — Stephansdom — is Vienna's soul in stone. A church was first consecrated on this spot in 1147, and the great Gothic cathedral rose over the centuries that followed. Its south tower, 136 metres tall, is affectionately nicknamed the "Steffl," and for generations it was the tallest thing for miles around.</p>
+    <p>The roof is its glory: nearly a quarter of a million glazed tiles laid in dazzling zig-zags, and on the south side the double-headed eagle of the empire picked out in colour — a coat of arms you can really only read from the sky.</p>
+    <div class="sp-quote">The tower the watchmen climbed to scan for fire — and for the Ottoman armies that twice reached the walls.</div>
+    <p>Below lie the catacombs, where the bones of tens of thousands of Viennese still rest. The cathedral has survived siege, plague and the last terrible days of the Second World War, when fire gutted its roof in 1945. The Viennese rebuilt it — every province of Austria helping to pay — and it reopened, whole again, in 1952. We reached it as the crowds thinned and the stone went honey-gold, and simply stood in the square looking up.</p>
+  </div>
+  <div class="folio">— Issue 02 · AUSTRIA · Stephansdom —</div>
+</div>
+
+<div class="mag-page mag-duo">
+  <div class="sp-eyebrow">INSIDE STEPHANSDOM · IN OUR OWN WORDS</div>
+  <div class="sp-headline" style="font-size:30px; margin-bottom:5mm;">Honestly — I had<br>no words.</div>
+  <div class="duo-row">
+    <div class="duo-photo" style="aspect-ratio:auto; height:104mm; background-image:url('../images/austria/stephansdom-interior-nave.jpg');"><div class="ph-info">Photo · Munasinghe</div></div>
+    <div class="duo-text">
+      <div class="kicker">The nave</div>
+      <p>You step out of the bright, busy square into a cool half-dark, and the ceiling simply climbs away from you — ribbed Gothic vaults vanishing into shadow, stone pillars like a forest of trunks, the long chequerboard floor drawing your eye to the far altar. After a whole day of gold built to impress you, this is a space built to make you feel small. It works. We stood there, all five of us, and none of us could speak.</p>
     </div>
-    <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/austria/food-04-nockerl.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/austria/food-04-nockerl.jpg</div>
-      </div>
-      <div class="fd-body">
-        <div class="fd-num">04</div>
-        <div class="fd-name">Salzburger Nockerl</div>
-        <div class="fd-desc">Three soufflé peaks shaped like the mountains around Salzburg, dusted with powdered sugar. Sweet, eggy, fluffy.</div>
-        <div class="fd-where">📍 Café Tomaselli · €18 · Day 03</div>
-      </div>
+  </div>
+  <div class="duo-row">
+    <div class="duo-text">
+      <div class="kicker">Light and shadow</div>
+      <p>Seven centuries of prayer are soaked into these walls. Somewhere in the gloom is the great stone pulpit carved around 1500, its rail crawling with lizards and toads; the delicate Wiener Neustädter altar with its folding wings of gilded saints; the vast red-marble tomb of Emperor Frederick III. In the side chapels the last evening light falls in coloured shafts through the stained glass and pools on the old stone. You don't really photograph a place like this — you just stand in it.</p>
     </div>
-    <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/austria/food-05-strudel.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/austria/food-05-strudel.jpg</div>
-      </div>
-      <div class="fd-body">
-        <div class="fd-num">05</div>
-        <div class="fd-name">Apfelstrudel</div>
-        <div class="fd-desc">Paper-thin pastry around buttered apples, raisins, and cinnamon. Eaten warm with vanilla custard at every café in the country.</div>
-        <div class="fd-where">📍 Café Central · €6 · Day 07</div>
-      </div>
-    </div>
-    <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/austria/food-06-kaiserschmarrn.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/austria/food-06-kaiserschmarrn.jpg</div>
-      </div>
-      <div class="fd-body">
-        <div class="fd-num">06</div>
-        <div class="fd-name">Kaiserschmarrn</div>
-        <div class="fd-desc">"Emperor's mess" — fluffy shredded pancake with caramelised sugar, raisins, served with plum compote. Beloved by Franz Joseph I.</div>
-        <div class="fd-where">📍 Hallstatt restaurant · €10 · Day 04</div>
-      </div>
-    </div>
+    <div class="duo-photo" style="aspect-ratio:auto; height:104mm; background-image:url('../images/austria/stephansdom-interior-baroque-altar.jpg');"><div class="ph-info">Photo · Munasinghe</div></div>
+  </div>
+  <div class="folio">— Issue 02 · AUSTRIA · Inside Stephansdom —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">AN EVENING WALK · VIENNA'S MANY FACES</div>
+  <div class="sp-headline">One walk, four Viennas.</div>
+  <div class="sp-deck">The old town gives you everything at once — an opera house, a rebel art temple, a horse-drawn cab, a saint over a fallen foe. We just kept turning corners into another Vienna.</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:7mm; margin-top:7mm;">
+    <figure style="margin:0;">
+      <div style="height:76mm; background-size:cover; background-position:center; background-image:url('../images/austria/vienna-fountain-facade.jpg'); border-radius:2px;"></div>
+      <figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:9.5px; line-height:1.35; color:#5a4a3a; margin-top:6px; padding-left:10px; border-left:2px solid #c89b3c;">The State Opera and its Lorelei fountain — <b>Vienna the city of music</b>, home of Mozart, Beethoven and the New Year's concert.</figcaption>
+    </figure>
+    <figure style="margin:0;">
+      <div style="height:76mm; background-size:cover; background-position:center; background-image:url('../images/austria/vienna-marc-anton-secession.jpg'); border-radius:2px;"></div>
+      <figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:9.5px; line-height:1.35; color:#5a4a3a; margin-top:6px; padding-left:10px; border-left:2px solid #c89b3c;">Mark Antony's lion-drawn chariot beside the Secession — <b>Vienna the birthplace of Jugendstil</b>, Klimt's rebel art.</figcaption>
+    </figure>
+    <figure style="margin:0;">
+      <div style="height:76mm; background-size:cover; background-position:center; background-image:url('../images/austria/vienna-fiaker.jpg'); border-radius:2px;"></div>
+      <figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:9.5px; line-height:1.35; color:#5a4a3a; margin-top:6px; padding-left:10px; border-left:2px solid #c89b3c;">A fiaker waiting on the cobbles — <b>Vienna the old town</b>, where the horse-drawn cabs still clip past the gingerbread shops.</figcaption>
+    </figure>
+    <figure style="margin:0;">
+      <div style="height:76mm; background-size:cover; background-position:center; background-image:url('../images/austria/stephansdom-capistran-pulpit.jpg'); border-radius:2px;"></div>
+      <figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:9.5px; line-height:1.35; color:#5a4a3a; margin-top:6px; padding-left:10px; border-left:2px solid #c89b3c;">St. John of Capistrano in gold on the cathedral wall — <b>Vienna the frontier</b>, that twice turned back the Ottoman tide.</figcaption>
+    </figure>
+  </div>
+  <div class="folio">— Issue 02 · AUSTRIA · An Evening Walk —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">A TRAVELLER'S DILEMMA · WRITTEN IN VIENNA</div>
+  <div class="sp-headline">Prague, or Vienna?</div>
+  <div class="sp-deck">Standing in one city, torn about another — the happiest impossible question of the whole trip.</div>
+  <div class="sp-meta"><span>Wed 15 Jul 2026</span><span>Vienna</span><span>In our own words</span></div>
+  <div class="sp-cols">
+    <p>Somewhere on our Vienna evening the question crept up and refused to leave: which one do we love most — Prague, or Vienna? We still can't answer it, and we've decided that's the point.</p>
+    <p>Prague stole our breath like a fairy tale. It was the almost-empty Charles Bridge at eight in the morning, the Old Town that made us say out loud, "this looks like King's Landing," the golden spires and the un-photographable majesty of it, St. Vitus soaring over the castle, a tornado potato and a trdelník in a little park. A city you don't visit so much as walk into, like a story.</p>
+    <div class="sp-quote">One is the fairy tale you wander into; the other is the crown that knows it's a crown.</div>
+    <p>Vienna took our breath a grander way. Gold and mirrors at Schönbrunn, Maria Theresa's ceilings, the love story of Franz Joseph and his Sisi, six hundred years of empire laid out on the walls — and then a Gothic cathedral at dusk that left us without a single word. And it has the majesty that suits a palace, because Vienna was built to be a capital of emperors, and it knows it.</p>
+    <p>So we won't choose. Prague is beauty <em>found</em> — a thousand years that simply happen to take your breath away. Vienna is beauty <em>commissioned</em> — every gilded inch built on purpose to say an empire lived here. Loving them differently isn't indecision. It's just having a heart big enough for both.</p>
+    <p>Ask us again tomorrow and the answer will have moved. That is the quiet gift of a journey like this one: you don't come home with a single favourite — you come home with a heart full of them, and you carry them all at once.</p>
+  </div>
+  <div class="folio">— Issue 02 · AUSTRIA · Prague or Vienna? —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">TASTES OF AUSTRIA · IN OUR OWN WORDS</div>
+  <div class="sp-headline">A schnitzel<br>bigger than the plate.</div>
+  <div class="sp-deck">We came for palaces and mountains and ended up eating our way through Austria almost by accident — a castle breakfast that lasted all day, ice-cream in Salzburg, and the golden cutlet the country is famous for.</div>
+  <div class="sp-meta"><span>11–15 Jul 2026</span><span>Altpernstein · Salzburg · Hallstatt road</span><span>Zipfer country</span></div>
+  <div class="sp-photo compact"><img src="../images/austria/schnitzel-lunch-family.jpg" alt="The whole family around a restaurant table in Austria, a golden Wiener Schnitzel with fries, a red gerbera and a Zipfer beer coaster in front of them."><div class="ph-info">Photo · Munasinghe</div></div>
+  <div class="sp-caption">Lunch at last — the five of us around a proper Wiener Schnitzel and a plate of fries, a Zipfer coaster on the table, on the road back from Hallstatt.</div>
+  <div class="sp-cols">
+    <p>The dish we had crossed half the world for arrived on the drive back from Hallstatt: a proper <em>Wiener Schnitzel</em> — veal pounded paper-thin, breaded and fried until the crust puffs into a golden cloud, dressed with nothing but a wedge of lemon and hanging clean over the edge of the plate, a heap of crinkle-cut fries beside it. Austria's national dish, eaten in a warm timber-panelled Gasthaus with a Zipfer coaster under the glass — exactly as it should be.</p>
+    <div class="sp-quote">The castle breakfast was so generous we skipped lunch in Hallstatt altogether — and still weren't hungry by mid-afternoon.</div>
+    <p>Most of what we ate in Austria wasn't in restaurants at all. The castle at Altpernstein laid out a breakfast buffet each morning — cheese and ham, salads and dips, juice and cereal — so generous it carried us clean through the day. In Salzburg we queued for ice-cream in the heat and ate it walking the Mirabell gardens. And on our very first night, with every shop shut at six, we slipped into a restaurant minutes before it closed for a plate of pizza and pasta that never tasted better. Not a gourmet tour — just the food a travelling family actually eats, and remembers.</p>
   </div>
   <div class="folio">— Issue 02 · AUSTRIA · 06 —</div>
 </div>
 
 <div class="mag-page mag-reflection">
   <div class="rf-eyebrow">REFLECTIONS · AUSTRIA</div>
-  <div class="rf-headline">A salt mine,<br>a Mozart sonata,<br>an emperor's ballroom.</div>
+  <div class="rf-headline">A closed salt mine,<br>a Sound-of-Music gate,<br>an emperor's ballroom.</div>
   <div class="rf-body">
     <p>Austria is small. You can drive its width in three hours. But it punches above its weight in cultural density: every single city we visited had a UNESCO World Heritage centre, every single café served a different cake on a porcelain plate, every single street corner had a busker playing something baroque on a violin.</p>
-    <p>What we will carry home: the smell of pine on the Hallstatt funicular, the silence inside the Salzburg Cathedral, the sound of Avin asking "is THIS a palace too?" outside every building taller than a tram stop in Vienna.</p>
+    <p>What we will carry home: the shimmer of the Hallstättersee from a little boat, the moment Lana stood at the Mirabell gate she had only ever seen on a screen, and the sound of Avin asking "is THIS a palace too?" outside every building taller than a tram stop in Vienna.</p>
   </div>
   <div class="rf-grid">
     <div class="rf-card">
       <div class="rf-label">Favourite moment</div>
-      <div class="rf-value">Sliding down the 60-metre miner's slide at Hallstatt in pitch darkness. Avin screamed so loud the guide laughed.</div>
+      <div class="rf-value">Standing at the Mirabell garden gate at last — thirty years after playing Maria with a row of dolls — and pointing our own three children up to the fortress on the hill.</div>
     </div>
     <div class="rf-card">
       <div class="rf-label">Hardest moment</div>
-      <div class="rf-value">Schönbrunn's heat at 14:00. We bought ice cream and sat under a 250-year-old tree.</div>
+      <div class="rf-value">The first night: shops shut at six, dinner nearly didn't happen, and then hauling the heavy bags up to the third floor of a castle with no lift.</div>
     </div>
     <div class="rf-card">
       <div class="rf-label">If we come back…</div>
-      <div class="rf-value">Innsbruck and the Tyrolean Alps. A Christmas-market trip in December. Aviann wants to ski.</div>
+      <div class="rf-value">The Hallstatt salt mine and the panorama up top — both closed the day we came, and both still waiting for us.</div>
     </div>
   </div>
-  <div class="rf-signoff">— Navin, Lana, Avisha, Aviann & Avin Munasinghe<br>Burg Altpernstein → Salzburg → Hallstatt → Vienna · 11–15 July 2026</div>
+  <div class="rf-signoff">— Avinesh, Lana, Avisha, Aviann & Avin Munasinghe<br>Burg Altpernstein → Salzburg → Hallstatt → Vienna · 11–15 July 2026</div>
 </div>
 
 <div class="mag-page mag-back">
@@ -354,7 +502,7 @@ body { padding:20px; }
   <div class="bc-issue">No. 02 · One of Fifteen</div>
   <div class="bc-next">★ NEXT ISSUE ★</div>
   <div class="bc-country">CZECH REPUBLIC</div>
-  <div class="bc-tagline">Charles Bridge at dawn, Prague Castle on a hill, and a beer hall older than most of America.</div>
+  <div class="bc-tagline">Charles Bridge before the crowds, a castle and cathedral on the hill, and a city that looks like King's Landing.</div>
 </div>
 
 </body></html>
