@@ -243,6 +243,13 @@ Danube, Chain Bridge, Great Market Hall. NB timing: the funicular "8–10pm" and
 overlap — do Castle Hill late-afternoon or after the cruise. Build Issue 04 from real photos/details
 as they arrive, same rich-history treatment as Vienna. (This is the leg being handed to a fresh
 session — see the resume prompt given 15 Jul evening.)
+**Parking chosen:** **Central Passage Parkoló** (Király utca 8–10, District VI, by Deák Ferenc tér)
+— central Pest, ~6 min walk to St. Stephen's Basilica; park once, whole day on foot/tram-2/funicular,
+return here after the cruise. **Route given (min-stairs, funicular):** Central Passage → Basilica →
+Parliament + Shoes on the Danube → tram 2 / Chain Bridge → funicular UP → Castle Hill (Buda Castle,
+Matthias, Fisherman's Bastion main terrace, skip paid turrets) → down → dinner → 8:30 sunset cruise.
+**Set off 7:30am Thu 16 Jul** — `images/hungary/road-to-budapest-family-car.jpg` (all five in the car,
+happy) = natural **"Road to Budapest" opener** for Issue 04.
 
 ## Real details captured so far (facts to reuse — keep consistent)
 
