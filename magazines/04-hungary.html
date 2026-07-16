@@ -90,6 +90,23 @@ body { padding:20px; }
 .bc-mag { position:absolute; top:20mm; left:20mm; font-family:'Fraunces', serif; font-style:italic; font-weight:300; font-size:16px; color:rgba(255,255,255,0.9); letter-spacing:0.05em; }
 .bc-issue { position:absolute; top:20mm; right:20mm; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; color:rgba(255,255,255,0.7); }
 .mag-page .folio { position:absolute; bottom:4mm; left:0; right:0; text-align:center; font-family:'Fraunces', serif; font-style:italic; font-size:8.5px; color:#8b6914; }
+.sp-photo { width:100%; margin-bottom:6px; position:relative; text-align:center; line-height:0; }
+.sp-photo img { max-width:100%; max-height:150mm; display:inline-block; border-radius:2px; vertical-align:bottom; }
+.sp-photo .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; line-height:1.2; }
+.mag-journey { background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%); padding:24mm 22mm; display:flex; flex-direction:column; }
+.jr-eyebrow { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#b41e1e; margin-bottom:8px; }
+.jr-headline { font-family:'Fraunces', serif; font-weight:700; font-size:52px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
+.jr-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; color:#3d3024; margin-bottom:22px; max-width:92%; }
+.jr-body p { margin-bottom:12px; }
+.jr-railtitle { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.28em; text-transform:uppercase; color:#b41e1e; border-bottom:1px solid #1e508c; padding-bottom:8px; margin-bottom:14px; }
+.jr-rail { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:18px; }
+.jr-stop { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.04em; color:#a8926a; padding:5px 11px; border:1px solid #e8d6a8; border-radius:100px; background:rgba(255,255,255,0.35); white-space:nowrap; }
+.jr-stop .jr-n { font-weight:700; color:#8b6914; margin-right:3px; }
+.jr-stop.done { color:#5a4a3a; border-color:rgba(30,80,140,0.4); }
+.jr-stop.done .jr-n { color:#1e508c; }
+.jr-stop.here { color:#fff; background:#b41e1e; border-color:#b41e1e; font-weight:700; }
+.jr-stop.here .jr-n { color:#f0d68c; }
+.jr-today { font-family:'Fraunces', serif; font-style:italic; font-size:15px; line-height:1.5; color:#b41e1e; margin-top:auto; padding-top:10mm; border-top:1px solid #1e508c; }
 @media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
 </style></head>
 <body>
@@ -129,6 +146,34 @@ body { padding:20px; }
     <li><span class="toc-name">Tastes of Hungary</span><span class="toc-page">06</span></li>
     <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">07</span></li>
   </ul>
+</div>
+
+<div class="mag-page mag-journey">
+  <div class="jr-eyebrow">The Journey · Chapter Four</div>
+  <div class="jr-headline">Down the Danube,<br>into Hungary.</div>
+  <div class="jr-body">
+    <p>The story so far: from Beijing's Great Wall and Forbidden City we flew west into Europe — a jet-lagged first week through Munich, the salt mines and lake villages of Austria, two golden days in Prague, and then imperial Vienna, which closed our Austrian chapter.</p>
+    <p>Now the great river carries us on. Hungary is our fourth chapter — Budapest, the "Queen of the Danube," a single capital stitched together in 1873 from hilly, royal Buda on the west bank and flat, trading Pest on the east. This page rides at the front of every issue: where we've been, where we are, and where we're headed next.</p>
+  </div>
+  <div class="jr-railtitle">The Route · 15 Countries · 33 Cities · 30 Nights</div>
+  <div class="jr-rail">
+    <div class="jr-stop done"><span class="jr-n">01</span>China ✓</div>
+    <div class="jr-stop done"><span class="jr-n">02</span>Austria ✓</div>
+    <div class="jr-stop done"><span class="jr-n">03</span>Czechia ✓</div>
+    <div class="jr-stop here"><span class="jr-n">04</span>Hungary ★</div>
+    <div class="jr-stop"><span class="jr-n">05</span>Slovenia</div>
+    <div class="jr-stop"><span class="jr-n">06</span>Italy</div>
+    <div class="jr-stop"><span class="jr-n">07</span>Switzerland</div>
+    <div class="jr-stop"><span class="jr-n">08</span>Germany</div>
+    <div class="jr-stop"><span class="jr-n">09</span>France</div>
+    <div class="jr-stop"><span class="jr-n">10</span>Netherlands</div>
+    <div class="jr-stop"><span class="jr-n">11</span>Belgium</div>
+    <div class="jr-stop"><span class="jr-n">12</span>Denmark</div>
+    <div class="jr-stop"><span class="jr-n">13</span>Sweden</div>
+    <div class="jr-stop"><span class="jr-n">14</span>Vatican</div>
+    <div class="jr-stop"><span class="jr-n">⌂</span>Home</div>
+  </div>
+  <div class="jr-today">Today — Hungary: we drove in and parked below Buda's castle hill, the Danube and a full day of sights waiting ahead.</div>
 </div>
 
 <div class="mag-page mag-spread">
