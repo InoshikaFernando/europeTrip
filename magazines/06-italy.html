@@ -49,6 +49,14 @@ body { padding:20px; }
 .sp-cols p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:38px; float:left; line-height:0.9; padding:2px 6px 0 0; color:#7a4a2e; }
 .sp-quote { break-inside:avoid; font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:14px; line-height:1.4; color:#7a4a2e; text-align:center; padding:10px 12px; border-top:1px solid #1e6e4a; border-bottom:1px solid #1e6e4a; margin:10px 0; }
 .sp-quote::before, .sp-quote::after { content:'"'; font-size:30px; line-height:0; vertical-align:-12px; color:#1e6e4a; padding:0 3px; }
+.sp-photo { width:100%; text-align:center; margin:0 auto 7px; position:relative; line-height:0; }
+.sp-photo img { max-width:100%; max-height:124mm; border-radius:2px; object-fit:contain; }
+.sp-photo.big img { max-height:150mm; }
+.sp-photo.compact img { max-height:104mm; }
+.sp-photo .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; line-height:1.2; }
+.sp-pair { display:flex; gap:5mm; justify-content:center; align-items:flex-start; margin-bottom:7px; }
+.sp-pair .sp-photo { margin:0; flex:1; }
+.sp-pair .sp-photo img { max-height:112mm; }
 .mag-duo { padding:14mm 16mm; display:flex; flex-direction:column; gap:6mm; }
 .duo-row { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
 .duo-row.alt { grid-template-columns:2fr 1fr; }
@@ -123,7 +131,7 @@ body { padding:20px; }
   <div class="toc-title">In this issue</div>
   <ul class="toc-list">
     <li><span class="toc-name">Welcome — Everything at Once</span><span class="toc-page">02</span></li>
-    <li><span class="toc-name">Venice — A City Floating</span><span class="toc-page">03</span></li>
+    <li><span class="toc-name">Venice — A City on the Water</span><span class="toc-page">03</span></li>
     <li><span class="toc-name">Florence — Where the Renaissance Began</span><span class="toc-page">04</span></li>
     <li><span class="toc-name">Rome + Vatican — The Eternal City</span><span class="toc-page">05</span></li>
     <li><span class="toc-name">Tastes of Italy</span><span class="toc-page">06</span></li>
@@ -132,21 +140,178 @@ body { padding:20px; }
 </div>
 
 <div class="mag-page mag-spread">
-  <div class="sp-eyebrow">COVER STORY · VENICE · DAY 10</div>
-  <div class="sp-headline">A city built<br>on stilts<br>by refugees.</div>
-  <div class="sp-deck">Venice was founded by people fleeing barbarian invasions in the 5th century. They chose 118 muddy islands in a lagoon because they were impossible to attack. Then they built one of the richest cities in human history on top of them.</div>
-  <div class="sp-meta"><span>Sat 18 Jul 2026</span><span>San Marco, Doge's Palace, Grand Canal</span><span>10 hrs · walk + vaporetto + gondola</span></div>
-  <div class="sp-hero" style="background-image:url('../images/italy/day-10-venice-grand-canal-dawn.jpg');">
-    <div class="ph-name">📷 images/italy/day-10-venice-grand-canal-dawn.jpg</div>
-    <div class="ph-info">HERO PHOTO · TBD</div>
+  <div class="sp-eyebrow">COVER STORY · VENICE · SAT 18 JUL 2026</div>
+  <div class="sp-headline">A city built<br>on water.</div>
+  <div class="sp-deck">Founded fifteen centuries ago by refugees who fled onto the mud islands of a lagoon because no army could reach them. They stayed, drove millions of timber piles into the mud, and built one of the richest cities in history on top of the tide.</div>
+  <div class="sp-meta"><span>Sat 18 Jul 2026</span><span>Piazza San Marco · Doge's Palace</span><span>Bus 2 from Mestre · then on foot</span></div>
+  <div class="sp-photo">
+    <img src="../images/day-09/venice-piazza-san-marco.jpg" alt="Piazza San Marco after a summer shower, Basilica and Campanile, wet stone reflecting the sky">
+    <div class="ph-info">Photo · Munasinghe</div>
   </div>
-  <div class="sp-caption">Sunrise on the Grand Canal. Venice's palaces rise directly from the water — no curb, no foundation visible, just marble meeting tide.</div>
+  <div class="sp-caption">Piazza San Marco — the Basilica and the Campanile, the wet stone mirroring a sky just washed by rain. Napoleon called this square "the drawing room of Europe."</div>
   <div class="sp-cols">
-    <p>You arrive in Venice and you immediately abandon your assumptions about what a city is. There are no cars. There are no streets in the usual sense. The Piazza San Marco is the only piazza, and everything else is a calle (alley), a campo (square), or a fondamenta (waterfront). The Grand Canal does what Broadway and the Champs-Élysées do in other cities: it is the artery, the stage, the spine. Vaporetti — water buses — chug past every five minutes. Gondolas slip silently between them.</p>
-    <div class="sp-quote">A city without roads — built on 118 islands and 400 bridges. Sinking by 2mm a year. Fought for, stone by stone.</div>
-    <p>We did Venice in one full day, which is heresy but inevitable. We took a vaporetto down the Grand Canal in the morning. We climbed the Campanile in San Marco for the view. We toured the Doge's Palace, walked the Bridge of Sighs, and got lost (deliberately) in Cannaregio. We took a gondola at sunset — overpriced, magical, photographed by every tourist on every bridge as we passed under them. Avin sat in the gondolier's lap. He had to be peeled off, screaming, when the trip ended.</p>
+    <p>We came in from the mainland the simple way — the number 2 bus from Mestre, over the long causeway to Piazzale Roma, and then the city takes over and the cars simply stop. There are no roads in Venice. There are canals, and narrow lanes, and one great square; everything else is water. Vaporetti chug past every few minutes and gondolas slip between them.</p>
+    <div class="sp-quote">No cars. No roads. Just canals, a thousand bridges, and a city that has floated here for 1,500 years.</div>
+    <p>It was a fierce July day — close and hot even by mid-morning. But we had a plan and a booked ticket: the Doge's Palace at half past ten. What we did not expect was that the palace, and the churches, and one cold drink, would spend the whole day quietly saving us from the heat.</p>
   </div>
-  <div class="folio">— Issue 06 · ITALY · 03 —</div>
+  <div class="folio">— Issue 06 · VENICE · A City on the Water —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">VENICE · PIAZZA SAN MARCO</div>
+  <div class="sp-headline">The drawing room<br>of Europe.</div>
+  <div class="sp-deck">The only true piazza in Venice — ringed by the Basilica, the bell tower, and the blue-and-gold clock where two bronze Moors have hammered out the hours since 1499.</div>
+  <div class="sp-pair">
+    <div class="sp-photo">
+      <img src="../images/day-09/venice-san-marco-family-selfie.jpg" alt="All five of the family in Piazza San Marco, Basilica and Doge's Palace behind">
+      <div class="ph-info">Photo · Munasinghe</div>
+    </div>
+    <div class="sp-photo">
+      <img src="../images/day-09/venice-piazza-clock-tower-family.jpg" alt="The family in the square beside the Torre dell'Orologio clock tower">
+      <div class="ph-info">Photo · Munasinghe</div>
+    </div>
+  </div>
+  <div class="sp-caption">All five of us in the square — the golden Basilica on one side, and the Torre dell'Orologio, where the two bronze giants still strike the great bell.</div>
+  <div class="sp-cols">
+    <p>You step out of a shaded lane and the square simply opens — vast, bright, and loud with pigeons and footsteps. The Basilica glitters at one end; the Campanile stands almost 100 metres over everything; the arcades run the length of both long sides.</p>
+    <p>In July it is also a furnace of pale stone with no shade at all, which is exactly why the Venetians learned, centuries ago, to keep their cool indoors.</p>
+  </div>
+  <div class="folio">— Issue 06 · VENICE · Piazza San Marco —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">VENICE · ST MARK'S BASILICA</div>
+  <div class="sp-headline">Gold, and the<br>bones of a saint.</div>
+  <div class="sp-deck">Built to hold the relics of St Mark, smuggled out of Alexandria in 828 under a cargo of pork so the inspectors would not look. Five domes, and more than 8,000 square metres of gold mosaic inside.</div>
+  <div class="sp-photo compact">
+    <img src="../images/day-09/basilica-san-marco-facade.jpg" alt="The west front of St Mark's Basilica, golden mosaics over five arched portals">
+    <div class="ph-info">Photo · Munasinghe</div>
+  </div>
+  <div class="sp-caption">The west front — golden mosaics over the five portals, and the four bronze horses on the loggia (copies now; the looted originals are kept safe inside).</div>
+  <div class="sp-cols">
+    <p>By day the Basilica now runs on timed tickets and a long queue that snakes across the square — so we admired the front, the mosaics, the winged lion of St Mark, and left the inside for later.</p>
+    <p>And later was the better idea. As the light softened we came back for the Saturday evening Mass — free, and entered as worshippers through the little Piazzetta dei Leoni door on the north side. For a Catholic family it was our Sunday Mass, sung under those golden vaults with the low sun in the domes. No ticket, no queue — just the church doing the thing it was built for.</p>
+  </div>
+  <div class="folio">— Issue 06 · VENICE · St Mark's Basilica —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">VENICE · PALAZZO DUCALE · 10:30</div>
+  <div class="sp-headline">The palace that<br>cooled the day.</div>
+  <div class="sp-deck">For a thousand years the seat of the Doge and the Venetian Republic — the courtroom, the treasury, and the throne of a sea empire. On a blazing July afternoon, it was also the coolest place in the city.</div>
+  <div class="sp-photo compact">
+    <img src="../images/day-09/doge-palace-scala-doro-ceiling.jpg" alt="The gilded vault of the Scala d'Oro, the Golden Staircase in the Doge's Palace">
+    <div class="ph-info">Photo · Munasinghe</div>
+  </div>
+  <div class="sp-caption">The Scala d'Oro — the Golden Staircase — its vault crusted in 24-carat gold stucco. Only those whose names were written in the Republic's Book of Gold were allowed to climb it.</div>
+  <div class="sp-cols">
+    <p>We stepped in from the glare and the thick marble simply swallowed the heat. Cool courtyards, cool stone stairs, cool gilded halls one after another — the Republic built for power, and by happy accident for shade.</p>
+    <div class="sp-quote">Venezia is quite hot — but that palace cooled everything down.</div>
+    <p>Up the Golden Staircase, through the great council chambers, the ceilings drip with gold and the walls are hung with painted glory. It is impossibly grand and, on that day, blessedly cold.</p>
+  </div>
+  <div class="folio">— Issue 06 · VENICE · The Doge's Palace —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">VENICE · INSIDE THE PALACE</div>
+  <div class="sp-headline">Ceilings you lie<br>down to read.</div>
+  <div class="sp-deck">Room after room painted by Veronese and Tintoretto — the Republic hiring its greatest artists to paint its own power onto every wall and ceiling.</div>
+  <div class="sp-photo">
+    <img src="../images/day-09/doge-palace-veronese-rape-of-europa.jpg" alt="Veronese's The Rape of Europa in the Anticollegio of the Doge's Palace">
+    <div class="ph-info">Photo · Munasinghe</div>
+  </div>
+  <div class="sp-caption">Veronese's <em>The Rape of Europa</em>, in the Anticollegio — the waiting room where foreign ambassadors sat before meeting the Doge, surrounded by some of the finest paint in Europe.</div>
+  <div class="sp-cols">
+    <p>The walls here are a who's-who: Veronese's shimmering myths, Tintoretto's <em>Bacchus and Ariadne</em>, and vast votive canvases of doges kneeling before the Virgin and the Cross — the state painting itself as blessed, chosen, eternal.</p>
+    <p>You crane your neck until it aches. Every gilded frame overhead holds another masterpiece, and the children quickly learn that the best view is with your head tipped all the way back.</p>
+  </div>
+  <div class="folio">— Issue 06 · VENICE · Painted Power —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">VENICE · THE PRISONS</div>
+  <div class="sp-headline">Across the<br>Bridge of Sighs.</div>
+  <div class="sp-deck">The enclosed stone bridge that carried prisoners from the courtroom straight to the cells — named for the last sigh a captive gave at Venice through its little latticed windows.</div>
+  <div class="sp-photo compact">
+    <img src="../images/day-09/doge-palace-prison-cells.jpg" alt="Damp stone prison cells inside the Doge's Palace, behind iron grilles">
+    <div class="ph-info">Photo · Munasinghe</div>
+  </div>
+  <div class="sp-caption">The New Prisons — damp stone cells behind heavy iron grilles, reached across the covered bridge. Casanova was locked in the cells above the palace, and famously escaped through the roof in 1756.</div>
+  <div class="sp-cols">
+    <p>From the gilded halls the route drops suddenly into the dark. You cross the Bridge of Sighs, glimpse the lagoon once through its stone lattice, and then you are in the cells — cold, low, and heavy with iron.</p>
+    <p>Prisoners' names and marks are still scratched into the old wood. The children pressed their faces to the grilles and went quiet — the one truly spooky corner of a very grand day.</p>
+  </div>
+  <div class="folio">— Issue 06 · VENICE · The Bridge of Sighs —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">VENICE · MUSEO DELL'OPERA</div>
+  <div class="sp-headline">The palace's<br>first stones.</div>
+  <div class="sp-deck">On the ground floor, out of the sun, stand the original 14th-century carved capitals from the palace's outer loggia — brought inside to save them, and quietly replaced with copies on the arcade above.</div>
+  <div class="sp-photo compact">
+    <img src="../images/day-09/doge-palace-museo-opera-family.jpg" alt="Avi and one of the boys walking among the original carved stone capitals in the Museo dell'Opera">
+    <div class="ph-info">Photo · Munasinghe</div>
+  </div>
+  <div class="sp-caption">Avi and the boys among the palace's original Gothic capitals — each one carved with virtues, seasons, and trades, cool brick underfoot and quiet all around.</div>
+  <div class="sp-cols">
+    <p>It is the sort of room most people hurry past, and we nearly did — but it turned out to be one of the calmest, coolest corners of the whole palace. The capitals are astonishing up close: birds, kings, months, and moral lessons carved in stone six hundred years ago.</p>
+    <p>Empty pram, small hand held, unhurried footsteps on old brick — a good place to slow down before stepping back into the heat.</p>
+  </div>
+  <div class="folio">— Issue 06 · VENICE · The Original Stones —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">VENICE · CHIESA DI SAN ZULIAN</div>
+  <div class="sp-headline">A cool church<br>on the Merceria.</div>
+  <div class="sp-deck">Halfway along the busy shopping street from San Marco to Rialto, a Sansovino façade and a quiet nave — the second refuge of the day from the heat.</div>
+  <div class="sp-photo compact">
+    <img src="../images/day-09/venice-san-zulian-interior.jpg" alt="The cool interior of San Zulian, altar and crucifix, light through a lunette window">
+    <div class="ph-info">Photo · Munasinghe</div>
+  </div>
+  <div class="sp-caption">Inside San Zulian (San Giuliano) — a Renaissance altarpiece, a gilded reliquary, and a big lunette window pouring cool light onto old marble.</div>
+  <div class="sp-cols">
+    <p>We ducked off the crowded Merceria and pulled open a heavy door, and the noise and heat fell away at once. The front of the church is by Jacopo Sansovino — the same architect who shaped Piazza San Marco — with the bronze figure of the physician Tommaso Rangone set into it.</p>
+    <p>Inside it was still, shaded, and blessedly cool: paintings by Palma il Giovane overhead, a handful of worshippers, and a family catching its breath before the next stretch of sun.</p>
+  </div>
+  <div class="folio">— Issue 06 · VENICE · San Zulian —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">VENICE · THE CANALS</div>
+  <div class="sp-headline">Water where the<br>streets should be.</div>
+  <div class="sp-deck">Step off the main lanes and Venice becomes green water, arched bridges, striped gondoliers, and the red-and-gold winged lion flying overhead.</div>
+  <div class="sp-pair">
+    <div class="sp-photo">
+      <img src="../images/day-09/venice-canal-gondolas.jpg" alt="A gondola gliding under an arched stone bridge on a Venetian canal">
+      <div class="ph-info">Photo · Munasinghe</div>
+    </div>
+    <div class="sp-photo">
+      <img src="../images/day-09/venice-souvenir-magnet-bridge-of-sighs.jpg" alt="A Venezia souvenir magnet of the Bridge of Sighs held up in front of the real bridge">
+      <div class="ph-info">Photo · Munasinghe</div>
+    </div>
+  </div>
+  <div class="sp-caption">Left: a gondola slipping under a little humpback bridge, the winged-lion banner of Venice above. Right: a fridge-magnet Bridge of Sighs, held up in front of the real one.</div>
+  <div class="sp-cols">
+    <p>The gondoliers still wear the striped shirts and still call the corners to one another as they turn. We watched them thread the narrow canals, oars flashing, tourists on every bridge leaning over to take the same photograph.</p>
+    <p>We did not ride one — but we held up a two-euro magnet against the real Bridge of Sighs and decided that was a souvenir all its own.</p>
+  </div>
+  <div class="folio">— Issue 06 · VENICE · The Canals —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">VENICE · KEEPING COOL</div>
+  <div class="sp-headline">Chasing the cool,<br>all day long.</div>
+  <div class="sp-deck">If Venice in July has a plot, this was ours: hot square, cool palace, cool church, cold drinks — and, at the end, rain.</div>
+  <div class="sp-photo compact">
+    <img src="../images/day-09/venice-hard-rock-cafe-family.jpg" alt="The whole family with cold drinks at the Hard Rock Cafe in Venice">
+    <div class="ph-info">Photo · Munasinghe</div>
+  </div>
+  <div class="sp-caption">Cold drinks and air-conditioning at the Hard Rock Cafe — the day's third refuge from the heat, after the palace and the church. Everyone revived.</div>
+  <div class="sp-cols">
+    <p>By mid-afternoon the whole family needed a proper stop, so we found the coldest air-conditioning in the city, ordered a row of iced drinks under the guitars, and simply sat for a while. Bliss.</p>
+    <p>And then Venice answered the heat itself. The sky went slate-grey, umbrellas bloomed across San Marco, and a summer downpour washed the square clean and cool. When it eased, the stones were mirrors — and the bells were already calling the city to the Saturday evening Mass.</p>
+  </div>
+  <div class="folio">— Issue 06 · VENICE · Keeping Cool —</div>
 </div>
 
 <div class="mag-page mag-duo">
