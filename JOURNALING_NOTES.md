@@ -65,6 +65,12 @@ warm magazine-editorial tone.
 - Numbering is **not strictly chronological**: Czech overlaps Austria; Belgium is a
   day-trip inside the Netherlands stay; **Vatican (Issue 14) is really 22 Jul** during the
   Rome/Italy leg — kept as a special *finale* issue that springboards to Home.
+- **Slovenia (Issue 05) was a DRIVE-THROUGH, NOT a stop (user-confirmed).** Coming
+  **Hungary → Italy** the family passed **through Slovenia with no stop — they SKIPPED Lake Bled.**
+  So Issue 05 has **no real content** and should NOT imply a Bled/Ljubljana visit; keep it a
+  transit note (the Italy welcome line "we crossed the Alps from Slovenia" is fine as-is). Do not
+  invent a Slovenia day. If it becomes a real issue later it's a "the country we only drove across"
+  page, not a sightseeing one.
 
 ## Photo workflow (IMPORTANT — established mid-trip)
 
