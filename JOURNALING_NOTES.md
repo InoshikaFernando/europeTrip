@@ -238,6 +238,24 @@ Trust the reader. Let the moment carry itself.
   logbooks — nice meta/keepsake shot, no page yet). Two rotated originals were EXIF-straightened. NOTE:
   the airport selfie is daylight while the page is the 02:50 night departure — caption kept time-neutral;
   reconcile if the family prefers.
+- **Issue 01 China — TIANANMEN made REAL + big Beijing album received (this session, cont.).** User
+  confirmed **"it was raining when we arrive"** and **"we had to buy raincoats/ponchos in the morning —
+  our own raincoats were packed in the main luggage."** So the old imagined **"Tiananmen at first light /
+  jianbing on Wangfujing / violet dawn"** duo was **rebuilt into two real spreads**: (1) **"The largest
+  square in the world, in a poncho"** (`ponchos-great-hall.jpg` — all five in blue ponchos on Tiananmen
+  Sq, Great Hall of the People behind, Avi holding a ¥100 note whose back pictures that hall; kept the
+  real 440,000 m² fact) and (2) **"Under the famous gate"** (`tiananmen-family.jpg` — all five at the
+  Gate of Heavenly Peace, Mao portrait, banner translations). TOC "Tiananmen at Dawn" → "Tiananmen
+  Square, in the rain". Both screenshot-verified non-clipping. **~28 Beijing photos received total** and
+  processed into `images/china/` (EXIF-straightened, long-edge 2000 q82). **PLACED:** cover, arrival van,
+  fc-courtyard, fc-hall-interior, airport selfie, fc-ceiling, packing-luggage, ponchos-great-hall,
+  tiananmen-family. **HELD in `images/china/` (offer as swaps/extra pages):** `ponchos-tiananmen-gate`,
+  `ponchos-monument`, `tiananmen-kids`, `tiananmen-square-wide`, `tiananmen-gate`, `heroes-monument`,
+  `fc-hall-terraces`, `fc-hall-lion`, `fc-courtyard2`, `fc-aviann`, `fc-avisha`, `fc-avisha2`,
+  `fc-lana-aviann`, `fc-parents`, `fc-family2`, `before-booklets`, plus `a47b0370`-style dup hall +
+  `8c8e85d4` Hall-of-Supreme-Harmony + `18d86262` **carved dragon marble ramp** (a great detail shot,
+  worth its own page) + `e35247a1` Avin-with-a-fan. Lots of near-dups among the kid/architecture shots —
+  pick best, don't cram.
 - **Issue 01 China — outbound DONE & live.** Added: The Journey (recap+rail),
   Before We Left (packing), Arrival in Beijing, The Palace Day, The Long Day's End
   (+ Avin fever postscript). **Pending:** homebound Great Wall (7 Aug) → then rewrite
