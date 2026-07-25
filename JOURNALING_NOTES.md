@@ -224,6 +224,20 @@ Trust the reader. Let the moment carry itself.
   travels. Helper scripts (integrity + clipcheck) live in the session scratchpad.
 - **Slovenia issue removed** (see the Route section above for details).
 
+- **Issue 01 China — REAL PHOTOS WIRED IN (this session).** Family sent the Beijing/pre-departure
+  album; cover set to the real **family-at-the-Forbidden-City** shot (`images/china/cover.jpg`, the CSS
+  already referenced it). Added a `.sp-photo` uncropped style (max-height ~72mm inline, ~118mm on
+  photo-forward pages) and replaced the four TBD `.sp-hero` striped placeholders with real uncropped
+  photos + truthful captions: **Arrival** ← transfer-van selfie (`plane-selfie.jpg`), **Forbidden City
+  feature** ← courtyard (`fc-courtyard.jpg`), **The Palace** ← hall interior 景星堂 (`fc-hall-interior.jpg`),
+  **Long Day's End** ← Beijing-Capital family selfie (`airport-family-selfie.jpg`). Added two new
+  photo-forward `.mag-spread` pages (descriptive folios, no TOC renumber): **"The Pile by the Door"**
+  (`packing-luggage.jpg`, after Packing) and **"Look Up — the dragon overhead"** (`fc-ceiling.jpg`, after
+  The Palace). All screenshot-verified non-clipping. **HELD in `images/china/` (offer as swaps):**
+  `fc-family2.jpg` (near-dup of the cover shot) and `before-booklets.jpg` (the printed trip guide + kids'
+  logbooks — nice meta/keepsake shot, no page yet). Two rotated originals were EXIF-straightened. NOTE:
+  the airport selfie is daylight while the page is the 02:50 night departure — caption kept time-neutral;
+  reconcile if the family prefers.
 - **Issue 01 China — outbound DONE & live.** Added: The Journey (recap+rail),
   Before We Left (packing), Arrival in Beijing, The Palace Day, The Long Day's End
   (+ Avin fever postscript). **Pending:** homebound Great Wall (7 Aug) → then rewrite
