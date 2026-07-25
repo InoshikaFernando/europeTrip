@@ -115,12 +115,15 @@ Trust the reader. Let the moment carry itself.
 - Numbering is **not strictly chronological**: Czech overlaps Austria; Belgium is a
   day-trip inside the Netherlands stay; **Vatican (Issue 14) is really 22 Jul** during the
   Rome/Italy leg — kept as a special *finale* issue that springboards to Home.
-- **Slovenia (Issue 05) was a DRIVE-THROUGH, NOT a stop (user-confirmed).** Coming
-  **Hungary → Italy** the family passed **through Slovenia with no stop — they SKIPPED Lake Bled.**
-  So Issue 05 has **no real content** and should NOT imply a Bled/Ljubljana visit; keep it a
-  transit note (the Italy welcome line "we crossed the Alps from Slovenia" is fine as-is). Do not
-  invent a Slovenia day. If it becomes a real issue later it's a "the country we only drove across"
-  page, not a sightseeing one.
+- **Slovenia (Issue 05) — ISSUE REMOVED (user-confirmed).** Slovenia was a **DRIVE-THROUGH, NOT a
+  stop**: coming Hungary → Italy the family passed **through with no stop — they SKIPPED Lake Bled**,
+  so the issue had no real content. Per user request the **`magazines/05-slovenia.html` file was
+  deleted** and its magazine cross-reference fixed (**Hungary's back-cover NEXT ISSUE now → ITALY**).
+  KEPT on purpose (user chose "just the magazine issue"): the **route-rail `05 Slovenia` nodes** in
+  Issues 01–04 (that rail is "The Route · 15 Countries" — a map of countries actually driven through,
+  Slovenia among them) and the **Italy welcome line "we crossed the Alps from Slovenia"** (a country
+  mention, factually true). Issue numbers were NOT renumbered — 06 Italy … 14 Vatican keep their
+  numbers/filenames, so there is an intentional gap at 05. Do not re-create a Slovenia issue.
 
 ## Photo workflow (IMPORTANT — established mid-trip)
 
@@ -201,6 +204,25 @@ Trust the reader. Let the moment carry itself.
 - User has approved publishing straight to the live site (all reversible).
 
 ## Progress log
+
+- **JOURNAL-EXPERT REWRITE PASS — DONE (this session, branch `claude/magazines-journal-expert-x0f01o`).**
+  Added the **"The role — you are the Journal Expert"** section to House style (10 craft rules:
+  scene-first ledes, show-don't-tell, weave facts not dump them, one emotional beat per page, honour
+  the real / invent nothing, economy that fits the fixed page). Then rewrote the prose of **all
+  issues** to that standard — France as the worked exemplar, then a parallel per-issue pass
+  (01 China, 02 Austria, 03 Czechia, 04 Hungary, 06 Italy, 07 Switzerland, 08 Germany, 09 France,
+  10 Netherlands, 11 Belgium, 12 Denmark, 13 Sweden, 14 Vatican). **Every edit was prose-only** —
+  no fact/date/name/price/ticket-number/quote/photo-path/HTML/class changed (verified per file with
+  an image-path + tag-count + class-inventory integrity check) and **no page clips beyond its
+  pre-existing baseline** (headless-Chromium clipcheck per file). Real issues kept every real detail;
+  placeholder issues stayed honestly imagined. A few internal-truth fixes landed as a side effect
+  (China: removed a "bright sun" line on the real rainy palace day; Switzerland: "his sisters" →
+  named Avisha & Aviann, since Avisha is a boy). **Germany and China got a deeper second pass** per
+  user ("German and China need more"). **Scope note:** real travel currently reaches **Switzerland**;
+  France onward (09–13) + Germany 5 Aug + China Great Wall 7 Aug are still imagined/future — the
+  future issues were rewritten too (user said keep them) but stay placeholder until the family
+  travels. Helper scripts (integrity + clipcheck) live in the session scratchpad.
+- **Slovenia issue removed** (see the Route section above for details).
 
 - **Issue 01 China — outbound DONE & live.** Added: The Journey (recap+rail),
   Before We Left (packing), Arrival in Beijing, The Palace Day, The Long Day's End
