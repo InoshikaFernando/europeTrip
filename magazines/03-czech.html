@@ -150,6 +150,19 @@ body { padding:20px; }
 /* grid span utilities */
 .col-3{grid-column:span 3}.col-4{grid-column:span 4}.col-5{grid-column:span 5}.col-6{grid-column:span 6}.col-7{grid-column:span 7}.col-8{grid-column:span 8}.col-9{grid-column:span 9}.col-12{grid-column:span 12}
 .row-1{grid-row:span 1}.row-2{grid-row:span 2}.row-3{grid-row:span 3}.row-4{grid-row:span 4}
+/* PHOTO ESSAY — masonry columns, whole frames shown, connected captions */
+.mag-photoessay { padding:14mm 16mm; display:flex; flex-direction:column; }
+.pe-eyebrow { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#6e1313; margin-bottom:8px; }
+.pe-headline { font-family:'Fraunces', serif; font-weight:700; font-size:38px; line-height:0.95; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.01em; }
+.pe-headline em { font-style:italic; font-weight:400; color:#6e1313; }
+.pe-deck { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:14px; line-height:1.4; color:#5a4a3a; margin-bottom:12px; max-width:94%; border-bottom:2px solid #325437; padding-bottom:10px; }
+.mag-essay { column-count:3; column-gap:5mm; margin-top:4px; }
+.mag-essay .essay-item { break-inside:avoid; margin:0 0 5mm; }
+.mag-essay .essay-item img { width:100%; height:auto; display:block; border-radius:2px; background:#0e0e0e; }
+.mag-essay .essay-cap { font-family:'Fraunces', serif; font-size:8px; line-height:1.4; color:#5a4a3a; margin-top:4px; }
+.mag-essay .essay-lead { column-span:all; margin-bottom:6mm; }
+.mag-essay .essay-lead .essay-cap { font-size:11px; font-style:italic; color:#3d3024; text-align:center; }
+@media print { .mag-essay { column-count:3; } }
 @media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
 </style></head>
 <body>
@@ -171,24 +184,39 @@ body { padding:20px; }
 
 <div class="mag-page mag-welcome">
   <div class="wl-num">No. 03 · A Letter from the Road</div>
+  <div class="wl-title">Who we are,<br>why we travel.</div>
+  <div class="wl-divider"></div>
+  <div style="text-align:center; margin:2mm 0 10mm;"><img src="../images/day-06/14-family-castle-viewpoint.jpg" alt="The Munasinghe-Fernando family of five at a castle viewpoint above Prague, the red roofs and green church domes of Malá Strana spread out below them." style="max-height:112mm; max-width:78%; object-fit:contain; border-radius:4px;"></div>
+  <div class="wl-body">
+    <p>We're the Munasinghe-Fernandos — two parents and three children who love to see the world <em>together</em>. My husband and I share one dream: to travel to as many countries as we possibly can, as a family.</p>
+    <p>It's never easy — booking flights, trains and rooms for five is its own small adventure, and we know we can't reach everywhere. But from every country we do get to, we try our very best to see as much as we can. This magazine is where we keep all of it.</p>
+    <p style="font-style:italic; color:#6e1313; text-align:right; margin-top:14px;">— The Munasinghe-Fernandos, 2026</p>
+  </div>
+</div>
+
+<div class="mag-page mag-welcome">
+  <div class="wl-num">No. 03 · Welcome</div>
   <div class="wl-title">Welcome to<br>the City of a<br>Hundred Spires.</div>
   <div class="wl-divider"></div>
   <div class="wl-body">
-    <p>Prague survived. That's the line we kept coming back to. It survived the Hussite wars, the Thirty Years' War, Nazi occupation, communist rule, and most miraculously, the wave of Allied bombing that flattened so much of Central Europe in 1945. Walking its cobblestones is walking through the only major European capital that still looks the way it did in the 1700s.</p>
-    <p>For two summer days we lived inside that surviving city: in a Gold Art Apartment overlooking the Old Town, near the river that splits the city in two. Our days began with cobblestone walks before breakfast, when the Charles Bridge was empty and the morning mist made the statues look like ghosts.</p>
-    <p>A word on where we are: this is <b>Bohemia</b>. Prague has been the capital of the Kingdom of Bohemia for over a thousand years — the throne of the Bohemian kings, who ruled from the castle on the hill. Its golden age came under <b>Charles IV</b> in the 1300s, King of Bohemia and Holy Roman Emperor, who made Prague his imperial capital and built the very things we came to see: the Charles Bridge, St. Vitus Cathedral, and the university that still bears his name. Bohemia is the historic land; Prague is, and always has been, its crown.</p>
-    <p style="font-style:italic; color:#6e1313; text-align:right; margin-top:14px;">— The Munasinghe-Fernandos, 2026</p>
+    <p>Prague survived. That's the line we kept coming back to. It came through the Hussite wars, the Thirty Years' War, Nazi occupation and communist rule — and, most remarkably, escaped the wave of Allied bombing that flattened so much of Central Europe in 1945. To walk its cobblestones is to walk through one of the few great European capitals that still looks much as it did three centuries ago.</p>
+    <p>For two summer days we lived inside that surviving city, in an apartment overlooking the Old Town, close to the Vltava that splits Prague in two. Our best hours came early: cobblestone walks before breakfast, when the Charles Bridge stood almost empty and the river mist made ghosts of its stone saints.</p>
+    <p>A word on where we are: this is <b>Bohemia</b>. Prague has been the seat of the Bohemian kings for over a thousand years, ruled from the castle on the hill. Its golden age came under <b>Charles IV</b> in the 1300s — King of Bohemia and Holy Roman Emperor — who made the city his imperial capital and raised the very things we had come to see: the Charles Bridge, St. Vitus Cathedral, and the university that still bears his name. Bohemia is the land; Prague is, and always has been, its crown.</p>
   </div>
   <div class="toc-title">In this issue</div>
   <ul class="toc-list">
-    <li><span class="toc-name">Welcome — The City of Spires</span><span class="toc-page">02</span></li>
-    <li><span class="toc-name">The Road & Prague Castle</span><span class="toc-page">04</span></li>
-    <li><span class="toc-name">Charles Bridge & the Bridge Saints</span><span class="toc-page">07</span></li>
-    <li><span class="toc-name">The Astronomical Clock</span><span class="toc-page">09</span></li>
-    <li><span class="toc-name">The Old Town & Its Churches</span><span class="toc-page">10</span></li>
-    <li><span class="toc-name">Josefov — the Jewish Quarter</span><span class="toc-page">14</span></li>
-    <li><span class="toc-name">Tastes of Bohemia</span><span class="toc-page">16</span></li>
-    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">17</span></li>
+    <li><span class="toc-name">A Letter from the Road</span><span class="toc-page">02</span></li>
+    <li><span class="toc-name">Welcome — The City of Spires</span><span class="toc-page">03</span></li>
+    <li><span class="toc-name">The Journey So Far</span><span class="toc-page">04</span></li>
+    <li><span class="toc-name">The Road to Prague</span><span class="toc-page">05</span></li>
+    <li><span class="toc-name">Prague Castle & St. Vitus</span><span class="toc-page">06</span></li>
+    <li><span class="toc-name">Around the Castle</span><span class="toc-page">11</span></li>
+    <li><span class="toc-name">Charles Bridge & the Saints</span><span class="toc-page">17</span></li>
+    <li><span class="toc-name">The Astronomical Clock</span><span class="toc-page">19</span></li>
+    <li><span class="toc-name">The Old Town & Its Churches</span><span class="toc-page">21</span></li>
+    <li><span class="toc-name">Josefov — the Jewish Quarter</span><span class="toc-page">28</span></li>
+    <li><span class="toc-name">Tastes of Bohemia</span><span class="toc-page">31</span></li>
+    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">33</span></li>
   </ul>
 </div>
 
@@ -242,10 +270,15 @@ body { padding:20px; }
 <div class="mag-page mag-spread">
   <div class="sp-eyebrow">PRAGUE CASTLE · DAY 3 · IN OUR OWN WORDS</div>
   <div class="sp-headline">The castle, the cathedral,<br>and a little train.</div>
-  <div class="sp-deck">That afternoon we climbed to Prague Castle and St. Vitus Cathedral — and when small legs gave out, a mini tourist train carried us round, narrating the city in English as it went.</div>
+  <div style="margin:2px 0 12px; border-left:3px solid #a02828; padding:4px 0 4px 10px;">
+    <div style="font-family:'Fraunces', serif; font-weight:700; font-size:16px; color:#1a1a1a; margin-bottom:4px;">First, a thousand years on the hill</div>
+    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify;">Founded around the year 880 by the <strong>Přemyslid</strong> dukes, Prague Castle has grown for more than a millennium into the largest coherent castle complex in the world — some seventy thousand square metres of palaces, churches and courtyards, still the official seat of the Czech head of state. At its heart soars <strong>St. Vitus Cathedral</strong>, begun in 1344 on the order of <strong>Charles IV</strong> and not completed until 1929, a span of nearly six hundred years written into a single building.</div>
+    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify; margin-top:6px;">For a thousand years this hill has been the crown of Bohemia — and on our first Prague afternoon, tired legs and all, we set out to climb it.</div>
+  </div>
+  <div class="sp-deck">When small legs gave out, a mini tourist train carried us round the sights, narrating the city in English as it went — and it was the cathedrals, not the fortress, that stopped us in our tracks.</div>
   <div class="sp-meta"><span>Mon 13 Jul 2026</span><span>Pražský hrad + St. Vitus</span><span>Afternoon · foot + mini-train</span></div>
   <div class="sp-photo">
-    <img src="../images/day-06/38-st-vitus-courtyard.jpg" alt="St. Vitus Cathedral rising over the Third Courtyard of Prague Castle, the family crossing the square below">
+    <img src="../images/day-06/38-st-vitus-courtyard.jpg" alt="St. Vitus Cathedral rising over the Third Courtyard of Prague Castle, the family crossing the square below" style="max-height:92mm;">
     <div class="ph-info">Photo · Munasinghe-Fernando</div>
   </div>
   <div class="sp-caption">St. Vitus Cathedral from the Third Courtyard — six hundred years of Gothic stonework soaring over the square, its golden mosaic of the Last Judgement catching the afternoon sun. Our three are down in the crowd crossing below: Aviann in her white dress and hat, the boys wheeling the stroller.</div>
@@ -270,7 +303,7 @@ body { padding:20px; }
   <div class="sp-cols">
     <p>We had marvelled at the castle and loved St. George's, but it was inside St. Vitus that the children went quiet. The cathedral is vast — pillars rising higher than seems possible into a ribbed stone ceiling lost in shadow — and the eye is pulled all the way down the nave to a rose window more than ten metres wide, throwing pools of red and blue and violet light onto the gleaming ranks of the organ below.</p>
     <div class="sp-quote">The pillars simply rise into the dark, and the whole west wall turns to coloured light.</div>
-    <p>It took nearly six hundred years to build — begun in 1344, and not finished until 1929 — and standing in the middle of it you can feel every one of those centuries. Grander than the castle that surrounds it, as we said before; and inside, grander than we had any way to imagine from the square.</p>
+    <p>Standing in the middle of it, you can feel every one of the six centuries it took to raise — and understand why the children forgot, for a moment, to fidget. From the square below we had no way to picture this; inside, it simply swallowed us whole.</p>
   </div>
   <div class="folio">— Issue 03 · CZECH REPUBLIC · Inside St. Vitus —</div>
 </div>
@@ -310,8 +343,8 @@ body { padding:20px; }
   </div>
   <div class="sp-caption">The silver tomb of St. John of Nepomuk — nearly two tonnes of silver worked into angels, cherubs and a great red-and-silver canopy, the saint kneeling on top with the martyr's cross in his arms.</div>
   <div class="sp-cols">
-    <p>We had already met St. John of Nepomuk down on Charles Bridge — the priest thrown from it into the river, whose brass cross the children had rubbed for luck that morning. Here, in the cathedral, is where he rests: under a canopy of solid silver, borne up by silver angels, the whole monument said to weigh close to two tonnes.</p>
-    <p>It glittered even in the dim light of the aisle. After the honest old stone of St. George's and the soaring grey of the nave, this baroque explosion of silver felt like something out of a treasure-story — and the children, who had wished on his cross only hours before, were delighted to find him again.</p>
+    <p>Here rests St. John of Nepomuk — a priest who, in 1393, was thrown from the Charles Bridge into the Vltava on the order of the king. In the cathedral he lies under a canopy of solid silver, borne up by silver angels, the whole monument said to weigh close to two tonnes.</p>
+    <p>It glittered even in the dim light of the aisle. After the honest old stone of St. George's and the soaring grey of the nave, this baroque explosion of silver felt like something out of a treasure-story. We did not yet know we would meet him again the very next morning — out on the bridge itself, at the spot where the children would rub his brass cross for luck.</p>
   </div>
   <div class="folio">— Issue 03 · CZECH REPUBLIC · The Silver Saint —</div>
 </div>
@@ -333,38 +366,16 @@ body { padding:20px; }
   <div class="folio">— Issue 03 · CZECH REPUBLIC · In Bronze —</div>
 </div>
 
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">PRAGUE CASTLE · THE SECOND COURTYARD</div>
-  <div class="sp-headline">A fountain the colour<br>of old gold.</div>
-  <div class="sp-deck">In one of the castle's great cobbled courtyards we found the Kohl Fountain — baroque stone catching the low afternoon sun until the whole thing seemed to glow.</div>
-  <div class="sp-meta"><span>Mon 13 Jul 2026</span><span>Kohlova kašna · Prague Castle</span><span>The oldest baroque fountain in the city</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/10-kohl-fountain.jpg" alt="The Kohl Fountain in the second courtyard of Prague Castle">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
+<div class="mag-page mag-photoessay">
+  <div class="pe-eyebrow">PRAGUE CASTLE · COURTYARDS & CORNERS</div>
+  <div class="pe-headline">Around the castle,<br>between the <em>churches.</em></div>
+  <div class="pe-deck">A vast complex is made of small things too — a fountain in a quiet courtyard, and a model that shrinks a thousand years of building down to the size of a table.</div>
+  <div class="mag-essay">
+    <div class="essay-item"><img src="../images/day-06/10-kohl-fountain.jpg" loading="lazy"><div class="essay-cap">Down in the second courtyard, the <strong>Kohl Fountain</strong> has been playing since 1686 — the oldest baroque fountain in Prague. Three tritons hold up two great shell basins beneath the black-and-gold imperial eagle, and in the late sun the pale sandstone turned almost gold.</div></div>
+    <div class="essay-item"><img src="../images/day-06/11-kohl-fountain-detail.jpg" loading="lazy"><div class="essay-cap">Up close it becomes a crowd of characters — a muscled sea-god straining under the shell, water threading quietly from a lion-mask spout worn smooth by three and a half centuries. The children went hunting for faces in the stone and lost count.</div></div>
+    <div class="essay-item"><img src="../images/day-06/30-castle-model.jpg" loading="lazy"><div class="essay-cap">And in one of the palace halls, a scale model laid the whole hill out at once: the long walled complex, tower by tower, with St. Vitus bristling along its spine — a millennium of building shrunk to something a child could lean over.</div></div>
   </div>
-  <div class="sp-caption">The Kohl Fountain in the castle's second courtyard — carved in 1686, three tritons holding up two great shell-shaped basins, the imperial double eagle spread at the very top.</div>
-  <div class="sp-cols">
-    <p>Set in the middle of the second courtyard, the Kohl Fountain has been playing since 1686 — the oldest baroque fountain in Prague, all crouching tritons and lion-mask spouts, crowned by the black-and-gold imperial eagle. The children circled it once, twice, watching the thin ropes of water fall from basin to basin, and in the late sun the pale sandstone turned almost golden.</p>
-    <p>It is an easy thing to walk straight past on the way to the cathedral. We are glad we stopped. A quiet corner of a vast castle, a fountain three and a half centuries old, still doing the one simple thing it was built to do.</p>
-  </div>
-  <div class="folio">— Issue 03 · CZECH REPUBLIC · The Kohl Fountain —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">PRAGUE CASTLE · THE FOUNTAIN, UP CLOSE</div>
-  <div class="sp-headline">Tritons, shells<br>and lion-mouths.</div>
-  <div class="sp-deck">A closer look at the carving that has been pouring water since 1686 — sea-gods straining under the basins, and water sliding from the mouths of stone lions.</div>
-  <div class="sp-meta"><span>Mon 13 Jul 2026</span><span>Kohlova kašna · detail</span><span>Carved by Francesco Colin, 1686</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/11-kohl-fountain-detail.jpg" alt="A close-up of the baroque carving on the Kohl Fountain — a muscular triton beneath a shell basin with a lion-mask spout">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">Up close, the fountain becomes a crowd of characters — a muscled triton straining under the great shell basin, water threading down from a lion-mask spout worn smooth by three and a half centuries.</div>
-  <div class="sp-cols">
-    <p>It is only when you come right up to it that you see how alive the old fountain is: every surface is worked into something — bearded sea-gods, curling fish-tails, snarling lion masks with the water running quietly out of them. The children went looking for faces in the stone and found more than they could count.</p>
-    <p>Three and a half centuries of Prague rain and Prague hands have softened every edge, until the pale sandstone feels less carved than grown. A small thing to stand and study, in the middle of a very large castle.</p>
-  </div>
-  <div class="folio">— Issue 03 · CZECH REPUBLIC · The Fountain, Up Close —</div>
+  <div class="folio">— Issue 03 · CZECH REPUBLIC · Around the Castle —</div>
 </div>
 
 <div class="mag-page mag-spread">
@@ -385,73 +396,29 @@ body { padding:20px; }
   <div class="folio">— Issue 03 · CZECH REPUBLIC · St. George's Basilica —</div>
 </div>
 
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">ST. GEORGE'S BASILICA · THE NAVE</div>
-  <div class="sp-headline">A thousand years,<br>arch upon arch.</div>
-  <div class="sp-deck">Step through the baroque door and the whole nave opens up ahead — rounded Romanesque arches marching to the raised choir, under a plain timber roof a thousand years old.</div>
-  <div class="sp-meta"><span>Mon 13 Jul 2026</span><span>Bazilika svatého Jiří · the nave</span><span>Romanesque · c. 1142 rebuild</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/24-st-george-nave.jpg" alt="Looking down the Romanesque nave of St. George's Basilica, rounded arches and a timber ceiling above the raised choir and painted apse">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
+<div class="mag-page mag-photoessay">
+  <div class="pe-eyebrow">PRAGUE CASTLE · INSIDE ST. GEORGE'S</div>
+  <div class="pe-headline">A thousand years,<br>arch upon <em>arch.</em></div>
+  <div class="pe-deck">Through the baroque door and back a thousand years — a bare Romanesque hall of honey-coloured stone, its walls still holding their medieval saints and one very old queen.</div>
+  <div class="mag-essay">
+    <div class="essay-item"><img src="../images/day-06/24-st-george-nave.jpg" loading="lazy"><div class="essay-cap">From the door it is one long room of honey-coloured stone, round-headed arches marching two by two toward the raised choir. Almost no gold, no glass — just proportion, age, and light in soft bars from the high windows. The children lowered their voices without being asked.</div></div>
+    <div class="essay-item"><img src="../images/day-06/25-st-george-apse-frescoes.jpg" loading="lazy"><div class="essay-cap">Up in the half-dome of the apse, medieval frescoes of the Heavenly Jerusalem, ghostly but unmistakable after seven centuries; on the pillar a painted St. Ludmila keeps watch, and below, a bronze relief of St. George and the dragon.</div></div>
+    <div class="essay-item"><img src="../images/day-06/23-st-ludmila-tomb.jpg" loading="lazy"><div class="essay-cap">In a side chapel, under glass, lies <strong>St. Ludmila</strong> — the first female saint of the Czech lands, grandmother of the "Good King Wenceslas" of the carol. She raised him in the faith; for it she made enemies, and in 921 was murdered, the story goes, with her own veil. The children pressed close to look.</div></div>
+    <div class="essay-item"><img src="../images/day-06/26-st-george-adoration-relief.jpg" loading="lazy"><div class="essay-cap">And set on a stone altar, a carved Adoration of the Magi — the three kings kneeling with their gifts before the Christ child, worked in dark old wood in the bare Romanesque light.</div></div>
   </div>
-  <div class="sp-caption">The long nave of St. George's — bare golden stone, round-headed arches one behind the other, and the tourists small beneath them, necks tipped back at a ceiling that has stood since the 1100s.</div>
-  <div class="sp-cols">
-    <p>From the door, the church is a single long room of honey-coloured stone, the arches marching two by two toward the raised choir at the far end. There is almost no gold here, no glass — just proportion, and age, and light falling in soft bars from the small high windows.</p>
-    <p>The children lowered their voices without being asked. After the soaring theatre of St. Vitus, this plain, ancient hall felt like the true bones of the hill — the place the whole castle grew up around.</p>
-  </div>
-  <div class="folio">— Issue 03 · CZECH REPUBLIC · The Nave of St. George's —</div>
+  <div class="folio">— Issue 03 · CZECH REPUBLIC · Inside St. George's —</div>
 </div>
 
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">ST. GEORGE'S BASILICA · A ROYAL TOMB</div>
-  <div class="sp-headline">The grandmother<br>of a saint.</div>
-  <div class="sp-deck">In a side chapel, under glass, lies St. Ludmila — Bohemia's first female saint, and the grandmother who raised Good King Wenceslas.</div>
-  <div class="sp-meta"><span>Mon 13 Jul 2026</span><span>Tomb of St. Ludmila</span><span>Martyred 921 AD</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/23-st-ludmila-tomb.jpg" alt="The recumbent stone tomb effigy of St. Ludmila under glass in St. George's Basilica">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">The Gothic effigy of St. Ludmila, carved in pale stone and kept under glass — the grandmother of St. Wenceslas, and the first woman ever canonised in Bohemia.</div>
-  <div class="sp-cols">
-    <p>The basilica keeps a remarkable resident. In a quiet chapel lies St. Ludmila, carved in pale stone and laid under glass — the first female saint of the Czech lands. She was the grandmother of Wenceslas, the "Good King Wenceslas" of the Christmas carol, and it was she who raised him and brought him up in the faith. For that she made enemies, and in the year 921 she was murdered — strangled, the story goes, with her own veil.</p>
-    <p>The children pressed close to the glass to look. It is a strange and moving thing, to stand in the oldest church on the hill beside a woman who lived eleven hundred years ago, and whose grandson the whole world still sings about every December.</p>
-  </div>
-  <div class="folio">— Issue 03 · CZECH REPUBLIC · The Tomb of St. Ludmila —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">PRAGUE CASTLE · THE OLD ROYAL PALACE</div>
-  <div class="sp-headline">The books that<br>ran a kingdom.</div>
-  <div class="sp-deck">In the Old Royal Palace we found the strangest treasure of all — the painted cupboards and heraldic ceilings of the Land Rolls, the offices where a whole kingdom kept its records.</div>
-  <div class="sp-meta"><span>Mon 13 Jul 2026</span><span>Starý královský palác · Desky zemské</span><span>The Bohemian Land Rolls</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/27-royal-palace-land-rolls.jpg" alt="The carved wooden cabinets of the Bohemian Land Rolls, filled with painted record books, in the Old Royal Palace">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">The cabinets of the Land Rolls — the Desky zemské — their doors thrown open on rows of leather books, each spine hand-painted with a number and a little flower or emblem so the clerks could find it again.</div>
-  <div class="sp-cols">
-    <p>Beyond the churches, the castle keeps its old government rooms — the Old Royal Palace, seat of the Bohemian kings and their courts for centuries. Here we found the Land Rolls, the Desky zemské: the great books in which the whole kingdom's property, laws and lawsuits were written down, locked away in beautiful carved cupboards, each volume's spine painted with a number and a small bright emblem.</p>
-    <div class="sp-quote">A thousand years of a kingdom's memory — kept in painted books behind carved wooden doors.</div>
-    <p>And the clerks who kept them left their mark: the walls and vaulted ceilings of these rooms are covered, edge to edge, with the painted coats of arms of the officials who served here, a riot of red-and-gold shields watching over the paperwork of a kingdom. Nearby, a little model showed the castle growing across a thousand years, tower by tower, into the city on the hill we had climbed that morning.</p>
+<div class="mag-page mag-photoessay">
+  <div class="pe-eyebrow">PRAGUE CASTLE · THE OLD ROYAL PALACE</div>
+  <div class="pe-headline">The books that<br>ran a <em>kingdom.</em></div>
+  <div class="pe-deck">Beyond the churches lie the government rooms — the seat of the Bohemian kings and their courts, where a whole realm's memory was kept in painted books and painted shields.</div>
+  <div class="mag-essay">
+    <div class="essay-item"><img src="../images/day-06/27-royal-palace-land-rolls.jpg" loading="lazy"><div class="essay-cap">The <strong>Desky zemské</strong>, the Land Rolls — the great leather books in which the kingdom's property, laws and lawsuits were recorded, locked in carved cupboards, each spine painted with a number and a bright little emblem so a clerk could find it again.</div></div>
+    <div class="essay-item"><img src="../images/day-06/28-royal-palace-heraldic-wall.jpg" loading="lazy"><div class="essay-cap">The clerks left their mark on the walls too: above an old iron-studded door, rows of painted coats of arms climb toward the crowned Bohemian lion — every official who ever served here, signed into the plaster.</div></div>
+    <div class="essay-item"><img src="../images/day-06/29-royal-palace-heraldic-ceiling.jpg" loading="lazy"><div class="essay-cap">And overhead the whole vault is heraldry — hundreds of little shields crowding every rib, a riot of red, gold and silver. The children lay their heads right back and turned slowly on the spot. A monument not to kings, but to the quiet machinery of a kingdom.</div></div>
   </div>
   <div class="folio">— Issue 03 · CZECH REPUBLIC · The Old Royal Palace —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">THE OLD ROYAL PALACE · THE HERALDIC HALL</div>
-  <div class="sp-headline">A ceiling of<br>painted shields.</div>
-  <div class="sp-deck">The clerks who kept the kingdom's books left their mark overhead — the vaults of the Land Rolls offices painted edge to edge with the coats of arms of everyone who served here.</div>
-  <div class="sp-meta"><span>Mon 13 Jul 2026</span><span>Starý královský palác · Desky zemské</span><span>Heraldry of the land officials</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/29-royal-palace-heraldic-ceiling.jpg" alt="The vaulted ceiling of the Land Rolls offices in the Old Royal Palace, covered edge to edge with painted coats of arms">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">The vault of the Land Rolls office — every rib and panel crowded with the painted coats of arms of the clerks and officials who ran the kingdom's records, a riot of red, gold and silver watching over the paperwork below.</div>
-  <div class="sp-cols">
-    <p>Look up in these rooms and the whole ceiling is heraldry: hundreds of little painted shields, one for every official who ever kept the Land Rolls, signed into the plaster like a thousand years of names in a visitors' book. The children lay their heads right back to take it in, turning slowly on the spot.</p>
-    <p>It is a strange kind of monument — not to kings or saints, but to the clerks and record-keepers, the quiet machinery of a kingdom. And every one of them wanted to be remembered on the ceiling.</p>
-  </div>
-  <div class="folio">— Issue 03 · CZECH REPUBLIC · The Heraldic Hall —</div>
 </div>
 
 <div class="mag-page mag-spread">
@@ -467,7 +434,7 @@ body { padding:20px; }
   <div class="sp-cols">
     <p>And so we came to the throne itself: a slim golden chair under a great fall of dark velvet, guarded by the silver double-tailed lion that is the badge of Bohemia. Along the walls ran benches of deep red for the courtiers, and tall leaded windows filled the room with a cool northern light. For a thousand years, this hill had been the seat of kings — and here, at last, was the seat itself.</p>
     <div class="sp-quote">A slim gold chair, a fall of velvet, and the silver lion of Bohemia — the seat of a thousand years of kings.</div>
-    <p>Nearby, behind glass, glittered the coronation regalia — the jewelled Crown of St. Wenceslas, the golden sceptre and orb that were placed in the hands of every Bohemian king. Gold and rubies and old blue sapphires, laid out on velvet. The children pressed their noses to the glass and imagined the coronations this quiet hilltop has seen.</p>
+    <p>No king has been crowned here for more than a century, and the room stands quiet now behind its ropes. But in the cool northern light it is easy to people it again — the courtiers on their red benches, the silver lion looking down, and a new king climbing the few low steps to that slim gold chair.</p>
   </div>
   <div class="folio">— Issue 03 · CZECH REPUBLIC · The Throne —</div>
 </div>
@@ -496,7 +463,7 @@ body { padding:20px; }
   <div class="sp-deck">We left early and walked out onto the Charles Bridge to find Prague's most famous crossing almost entirely to ourselves.</div>
   <div class="sp-meta"><span>Tue 14 Jul 2026</span><span>Charles Bridge · Old Town → Malá Strana</span><span>On the bridge by 8:15am</span></div>
   <div class="sp-photo">
-    <img src="../images/day-05/06-charles-bridge-family.jpg" alt="The family at the Old Town Bridge Tower, Charles Bridge">
+    <img src="../images/day-05/06-charles-bridge-family.jpg" alt="The family at the Old Town Bridge Tower, Charles Bridge" style="max-height:104mm;">
     <div class="ph-info">Photo · Munasinghe-Fernando</div>
   </div>
   <div class="sp-caption">The five of us at the Old Town Bridge Tower — Charles Bridge almost to ourselves, just after eight in the morning.</div>
@@ -524,7 +491,7 @@ body { padding:20px; }
   </div>
   <div class="sp-caption">The brass cross and relief on the parapet — the spot where St. John of Nepomuk was thrown into the Vltava in 1393. Rub the plaque, they say, and you will one day return to Prague. The grille above has quietly filled with lovers' padlocks.</div>
   <div class="sp-cols">
-    <p>Thirty statues of saints stand along the Charles Bridge, added over the centuries until the crossing became a kind of open-air gallery in stone. The most famous of them marks a dark story: St. John of Nepomuk, a priest thrown from this very bridge into the river in 1393 on the order of the king. A brass plaque and a small cross set into the parapet mark the place — polished bright by centuries of hands.</p>
+    <p>Thirty statues of saints stand along the Charles Bridge, added over the centuries until the crossing became a kind of open-air gallery in stone. The most famous of them marks a dark story: St. John of Nepomuk, a priest thrown from this very bridge into the river in 1393 on the order of the king. The day before, up in St. Vitus, we had stood beside his glittering silver tomb; now here was the very place the story began — a brass plaque and a small cross set into the parapet, polished bright by centuries of hands.</p>
     <div class="sp-quote">Lay your hand on the brass, make your wish, and one day the city will call you home again.</div>
     <p>So of course we did. Five hands on the warm brass, one shared wish — that Prague would not be a place we saw only once. Above the plaque the iron grille has slowly filled with padlocks, each one a couple's promise clicked shut and the key thrown into the Vltava. A bridge of saints and secrets, and we left a little of our own hope on it.</p>
   </div>
@@ -827,7 +794,7 @@ body { padding:20px; }
   <div class="rf-signoff">— Avinesh, Lana, Avisha, Aviann & Avin Munasinghe-Fernando<br>Prague · 13–14 July 2026</div>
 </div>
 
-<div class="mag-page mag-back">
+<div class="mag-page mag-back" style="background:linear-gradient(0deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.35) 100%), url('../images/day-06/01-prague-castle.jpg') center/cover #3a0808;">
   <div class="bc-mag">Munasinghe-Fernando Travel Magazine</div>
   <div class="bc-issue">No. 03 · One of Fifteen</div>
   <div class="bc-next">★ NEXT ISSUE ★</div>

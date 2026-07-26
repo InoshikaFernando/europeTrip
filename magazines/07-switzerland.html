@@ -11,7 +11,7 @@ html, body { font-family:'Plus Jakarta Sans', sans-serif; background:#222; color
 body { padding:20px; }
 .mag-page { width:210mm; min-height:295mm; background:#fefcf7; margin:14px auto; box-shadow:0 8px 32px rgba(0,0,0,0.25); position:relative; overflow:hidden; page-break-after:always; break-after:page; }
 .mag-page:last-child { page-break-after:auto; }
-.mag-cover { background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.85) 100%), url('../images/switzerland/cover.jpg') center/cover #0e0e0e; color:white; display:flex; flex-direction:column; padding:18mm 16mm; position:relative; }
+.mag-cover { background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.85) 100%), url('../images/switzerland/cover.jpg') center 30%/cover #0e0e0e; color:white; display:flex; flex-direction:column; padding:18mm 16mm; position:relative; }
 .mag-cover::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 20% 80%, #3d7a4a40, transparent 50%); pointer-events:none; }
 .cv-issue { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:rgba(255,255,255,0.85); margin-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:4px; display:flex; justify-content:space-between; }
 .cv-flag { font-size:14px; }
@@ -40,44 +40,46 @@ body { padding:20px; }
 .sp-headline { font-family:'Fraunces', serif; font-weight:700; font-size:38px; line-height:0.95; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.01em; }
 .sp-deck { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:15px; line-height:1.4; color:#5a4a3a; margin-bottom:10px; max-width:92%; }
 .sp-meta { display:flex; gap:14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; border-top:1px solid #3d7a4a; padding-top:8px; margin-bottom:14px; }
-.sp-hero { width:100%; height:105mm; background:#0e0e0e; background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:6px; position:relative; border-radius:2px; }
-.sp-hero .ph-name { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:repeating-linear-gradient(45deg,#e8dcc0 0 10px,#ddd1b3 10px 20px); font-family:'JetBrains Mono', monospace; font-size:10px; color:#8b6914; }
-.sp-hero .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
+.sp-hist { margin:2px 0 12px; border-left:3px solid #a02828; padding:4px 0 4px 10px; }
+.sp-hist .sp-hist-title { font-family:'Fraunces', serif; font-weight:700; font-size:16px; color:#1a1a1a; margin-bottom:4px; }
+.sp-hist p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify; }
+.sp-hist p + p { margin-top:6px; }
+.sp-photo { width:100%; margin-bottom:6px; text-align:center; position:relative; }
+.sp-photo img { max-width:100%; max-height:170mm; display:block; margin:0 auto; border-radius:2px; }
+.sp-photo.compact img { max-height:116mm; }
+.sp-photo .ph-info { display:inline-block; margin-top:4px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
 .sp-caption { font-family:'Fraunces', serif; font-style:italic; font-size:9.5px; color:#5a4a3a; margin-bottom:10px; padding-left:12px; border-left:2px solid #3d7a4a; }
 .sp-cols { column-count:2; column-gap:10mm; column-rule:0; }
 .sp-cols p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; margin-bottom:7px; }
 .sp-cols p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:38px; float:left; line-height:0.9; padding:2px 6px 0 0; color:#a02828; }
 .sp-quote { break-inside:avoid; font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:14px; line-height:1.4; color:#a02828; text-align:center; padding:10px 12px; border-top:1px solid #3d7a4a; border-bottom:1px solid #3d7a4a; margin:10px 0; }
 .sp-quote::before, .sp-quote::after { content:'"'; font-size:30px; line-height:0; vertical-align:-12px; color:#3d7a4a; padding:0 3px; }
-.mag-duo { padding:14mm 16mm; display:flex; flex-direction:column; gap:6mm; }
-.duo-row { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
-.duo-row.alt { grid-template-columns:2fr 1fr; }
-.duo-photo { background:#0e0e0e; aspect-ratio:3/4; position:relative; border-radius:2px; overflow:hidden; background-size:contain; background-repeat:no-repeat; background-position:center; }
-.duo-photo.wide { aspect-ratio:16/10; }
-.duo-photo .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
-.duo-photo > .ph-name { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; background:repeating-linear-gradient(45deg, #e8dcc0 0 8px, #ddd1b3 8px 16px); font-family:'JetBrains Mono', monospace; font-size:8px; color:#8b6914; text-align:center; padding:8px; gap:4px; }
-.duo-text { display:flex; flex-direction:column; justify-content:center; padding:0 4mm; }
-.duo-text h3 { font-family:'Fraunces', serif; font-weight:700; font-size:28px; line-height:1; color:#1a1a1a; margin-bottom:8px; }
-.duo-text p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; }
-.duo-text .kicker { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.3em; text-transform:uppercase; color:#a02828; margin-bottom:6px; }
+.strip { display:grid; grid-template-columns:repeat(4,1fr); gap:4mm; margin-top:4px; }
+.strip img { width:100%; height:auto; display:block; border-radius:2px; background:#0e0e0e; }
 .mag-food { padding:18mm 16mm; }
 .fd-headline { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.02em; }
 .fd-headline em { font-style:italic; font-weight:400; color:#a02828; }
 .fd-deck { font-family:'Fraunces', serif; font-style:italic; font-size:16px; color:#5a4a3a; margin-bottom:18px; border-bottom:2px solid #3d7a4a; padding-bottom:14px; }
 .fd-grid { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
 .fd-card { background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; overflow:hidden; }
-.fd-card .fd-img { width:100%; aspect-ratio:4/3; background:#0e0e0e; position:relative; display:flex; align-items:center; justify-content:center; background-size:contain; background-repeat:no-repeat; background-position:center; }
-.album-sub { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:#a02828; margin-bottom:2px; }
-.album-head { font-family:'Fraunces', serif; font-weight:700; font-size:30px; line-height:1; color:#1a1a1a; margin-bottom:12px; }
-.album-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:5mm; }
-.album-photo { width:100%; aspect-ratio:1/1; background:#0e0e0e; background-size:contain; background-repeat:no-repeat; background-position:center; border-radius:2px; }
-.album-cap { font-family:'JetBrains Mono', monospace; font-size:7px; color:#8b6914; margin-top:3px; text-align:center; letter-spacing:0.03em; line-height:1.3; }
+.fd-card .fd-img { width:100%; aspect-ratio:5/3; background:#e8dcc0; position:relative; display:flex; align-items:center; justify-content:center; background-image:repeating-linear-gradient(45deg, #e8dcc0 0 8px, #ddd1b3 8px 16px); }
 .fd-card .fd-img .ph { font-family:'JetBrains Mono', monospace; font-size:8px; color:#8b6914; text-align:center; padding:8px; }
 .fd-card .fd-body { padding:10px 14px 14px; }
 .fd-card .fd-num { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:22px; color:#a02828; line-height:1; }
 .fd-card .fd-name { font-family:'Fraunces', serif; font-weight:700; font-size:18px; line-height:1.1; color:#1a1a1a; margin:4px 0 6px; }
 .fd-card .fd-desc { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.5; color:#5a4a3a; margin-bottom:5px; }
 .fd-card .fd-where { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.15em; color:#8b6914; text-transform:uppercase; }
+.mag-album { padding:20mm 18mm; }
+.album-sub { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:#a02828; margin-bottom:2px; }
+.album-head { font-family:'Fraunces', serif; font-weight:700; font-size:30px; line-height:1; color:#1a1a1a; margin-bottom:12px; }
+.album-intro { font-family:'Fraunces', serif; font-style:italic; font-size:12px; color:#5a4a3a; margin:-6px 0 14px; }
+.mag-essay { column-count:3; column-gap:5mm; margin-top:4px; }
+.mag-essay .essay-item { break-inside:avoid; margin:0 0 5mm; }
+.mag-essay .essay-item img { width:100%; height:auto; display:block; border-radius:2px; background:#0e0e0e; }
+.mag-essay .essay-cap { font-family:'Fraunces', serif; font-size:8px; line-height:1.4; color:#5a4a3a; margin-top:4px; }
+.mag-essay .essay-lead { column-span:all; margin-bottom:6mm; }
+.mag-essay .essay-lead .essay-cap { font-size:11px; font-style:italic; color:#3d3024; text-align:center; }
+@media print { .mag-essay { column-count:3; } }
 .mag-reflection { background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%); padding:24mm 22mm; display:flex; flex-direction:column; }
 .rf-eyebrow { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#a02828; margin-bottom:8px; }
 .rf-headline { font-family:'Fraunces', serif; font-weight:700; font-size:54px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
@@ -88,7 +90,7 @@ body { padding:20px; }
 .rf-card .rf-label { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#a02828; margin-bottom:4px; }
 .rf-card .rf-value { font-family:'Fraunces', serif; font-size:13px; line-height:1.4; color:#3d3024; }
 .rf-signoff { margin-top:auto; padding-top:18mm; font-family:'Fraunces', serif; font-style:italic; font-size:13px; color:#a02828; text-align:right; }
-.mag-back { background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%), url('../images/switzerland/back-cover.jpg') center/cover #5c0e0e; color:white; display:flex; flex-direction:column; justify-content:flex-end; padding:24mm 20mm; }
+.mag-back { background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%), url('../images/switzerland/day-17-matterhorn-gornergrat.jpg') center/cover #5c0e0e; color:white; display:flex; flex-direction:column; justify-content:flex-end; padding:24mm 20mm; }
 .bc-next { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:6px; }
 .bc-country { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:white; margin-bottom:8px; }
 .bc-tagline { font-family:'Fraunces', serif; font-style:italic; font-size:18px; color:rgba(255,255,255,0.9); border-top:1px solid rgba(255,255,255,0.4); padding-top:14px; margin-bottom:12px; max-width:70%; }
@@ -104,319 +106,356 @@ body { padding:20px; }
   <div class="cv-brand">Munasinghe-Fernando Travel Magazine</div>
   <div>
     <div class="cv-title">SWITZERLAND</div>
-    <div class="cv-sub">Stalden · Gornergrat · Moléson · Geneva · Bern</div>
+    <div class="cv-sub">Stalden · Gornergrat · Moléson · Geneva</div>
     <div class="cv-tags">
       <span class="cv-tag">★ 700 Years of Neutrality</span>
       <span class="cv-tag">🏔 The Matterhorn</span>
       <span class="cv-tag">🍫 Toblerone's Country</span>
     </div>
-    <div class="cv-features">INSIDE: <b>The Matterhorn from Gornergrat</b> at 3,089m · <b>La Maison du Gruyère cheese cellars</b> ·<b>Geneva's Old Town</b> and the lake jet · <b>Bern's Zytglogge clock tower</b></div>
+    <div class="cv-features">INSIDE: <b>The Matterhorn from Gornergrat</b> at 3,089 m · <b>Maison Cailler</b> and a day bookended by chocolate · <b>La Maison du Gruyère</b> cheese cellars · <b>Geneva's</b> lake, flags and Old Town</div>
   </div>
   <div class="cv-meta">Munasinghe-Fernando Family · Thu 23 — Sun 26 Jul 2026</div>
 </div>
 
 <div class="mag-page mag-welcome">
   <div class="wl-num">No. 07 · A Letter from the Road</div>
-  <div class="wl-title">Welcome to<br>the country that<br>didn't fight.</div>
+  <div class="wl-title">Who we are,<br>why we travel.</div>
+  <div class="wl-divider"></div>
+  <div style="text-align:center; margin:2mm 0 10mm;"><img src="../images/switzerland/cover.jpg" alt="The Munasinghe-Fernando family of five in a selfie on the Gornergrat platform, the snow and glaciers of the Monte Rosa massif behind them." style="max-height:112mm; max-width:74%; object-fit:contain; border-radius:4px;"></div>
+  <div class="wl-body">
+    <p>We're the Munasinghe-Fernandos — two parents and three children who love to see the world <em>together</em>. My husband and I share one dream: to travel to as many countries as we possibly can, as a family.</p>
+    <p>It's never easy — booking flights, trains and rooms for five is its own small adventure, and we know we can't reach everywhere. But from every country we do get to, we try our very best to see as much as we can. This magazine is where we keep all of it.</p>
+    <p style="font-style:italic; color:#a02828; text-align:right; margin-top:14px;">— The Munasinghe-Fernandos, 2026</p>
+  </div>
+</div>
+
+<div class="mag-page mag-welcome">
+  <div class="wl-num">No. 07 · Welcome</div>
+  <div class="wl-title">Welcome to<br>the country<br>that didn't fight.</div>
   <div class="wl-divider"></div>
   <div class="wl-body">
-    <p>Switzerland is small. You can drive its width in three hours. But its mountains are the steepest in Europe, its trains are the most punctual in the world, and its chocolate is the most consumed per capita on earth. We spent three nights here — all in alpine villages, at Stalden and Moléson-sur-Gruyères — and saw what 700 years of strategic neutrality looks like up close.</p>
-    <p>In 1291 three small cantons signed a defensive pact in a meadow. That pact became the Swiss Confederation. Today there are 26 cantons, 4 official languages, and a country that has not fought a war since 1815.</p>
-    <p>This issue is about the Matterhorn, seen from the Gornergrat railway at 3,089 m; the Maison Cailler chocolate factory at Broc; a lakeside day in Geneva; and the cellars of Gruyère at La Maison du Gruyère. The one thing we missed — the live cheese-making itself, a man in a felt hat stirring a copper cauldron — we're saving for next time.</p>
-    <p style="font-style:italic; color:#a02828; text-align:right; margin-top:14px;">— The Munasinghe-Fernandos, 2026</p>
+    <p>Switzerland is small — you can drive its width in about three hours — yet its mountains are the steepest in Europe, its trains the most punctual in the world, and its chocolate the most eaten, per person, on earth. We gave it three nights, all of them in alpine villages: one high up the Mattertal at Stalden, near car-free Zermatt, and two at Moléson-sur-Gruyères in the green heart of cheese country.</p>
+    <p>In 1291 three small cantons met in a meadow and swore a defensive pact. That pact grew into the Swiss Confederation — today twenty-six cantons, four official languages, and a nation that has not fought a war since 1815. Neutrality here is not timidity; it is a seven-hundred-year strategy, and you feel its calm everywhere.</p>
+    <p>This issue is what three days bought us: the Matterhorn seen from the Gornergrat railway at 3,089 m; the Maison Cailler chocolate factory at Broc; the copper vats and ageing cellars of La Maison du Gruyère; and a whole lakeside day in Geneva, the world's meeting place.</p>
   </div>
   <div class="toc-title">In this issue</div>
   <ul class="toc-list">
-    <li><span class="toc-name">Welcome — The Country That Didn't Fight</span><span class="toc-page">02</span></li>
-    <li><span class="toc-name">Gornergrat + the Matterhorn</span><span class="toc-page">03</span></li>
-    <li><span class="toc-name">Moléson — Cheese & Chalets</span><span class="toc-page">04</span></li>
-    <li><span class="toc-name">Chocolate — A Sweet Empire</span><span class="toc-page">05</span></li>
-    <li><span class="toc-name">Geneva — The World's Meeting Place</span><span class="toc-page">06</span></li>
-    <li><span class="toc-name">Tastes of Switzerland</span><span class="toc-page">07</span></li>
-    <li><span class="toc-name">Album — Gornergrat</span><span class="toc-page">08</span></li>
-    <li><span class="toc-name">Album — Maison Cailler</span><span class="toc-page">09</span></li>
-    <li><span class="toc-name">Album — Tastes</span><span class="toc-page">10</span></li>
-    <li><span class="toc-name">Album — Geneva</span><span class="toc-page">11</span></li>
-    <li><span class="toc-name">Album — La Maison du Gruyère</span><span class="toc-page">12</span></li>
-    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">13</span></li>
+    <li><span class="toc-name">A Letter from the Road</span><span class="toc-page">02</span></li>
+    <li><span class="toc-name">Welcome — The Country That Didn't Fight</span><span class="toc-page">03</span></li>
+    <li><span class="toc-name">Gornergrat &amp; the Matterhorn</span><span class="toc-page">04</span></li>
+    <li><span class="toc-name">Moléson — Our Cheese-Country Base</span><span class="toc-page">05</span></li>
+    <li><span class="toc-name">Chocolate — A Sweet Empire</span><span class="toc-page">06</span></li>
+    <li><span class="toc-name">Geneva — The World's Meeting Place</span><span class="toc-page">07</span></li>
+    <li><span class="toc-name">Tastes of Switzerland</span><span class="toc-page">08</span></li>
+    <li><span class="toc-name">Album — Gornergrat, the Climb</span><span class="toc-page">09</span></li>
+    <li><span class="toc-name">Album — Gornergrat, the Summit</span><span class="toc-page">10</span></li>
+    <li><span class="toc-name">Album — Maison Cailler</span><span class="toc-page">11</span></li>
+    <li><span class="toc-name">Album — On the Road</span><span class="toc-page">12</span></li>
+    <li><span class="toc-name">Album — Geneva, the Lake &amp; the UN</span><span class="toc-page">13</span></li>
+    <li><span class="toc-name">Album — Geneva, the Old Town</span><span class="toc-page">14</span></li>
+    <li><span class="toc-name">Album — La Maison du Gruyère</span><span class="toc-page">15</span></li>
+    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">16</span></li>
   </ul>
 </div>
 
 <div class="mag-page mag-spread">
-  <div class="sp-eyebrow">COVER STORY · GORNERGRAT · DAY 17</div>
+  <div class="sp-eyebrow">COVER STORY · GORNERGRAT</div>
   <div class="sp-headline">The Matterhorn<br>from above.</div>
-  <div class="sp-deck">The Gornergrat railway has carried tourists up to 3,089 metres since 1898. From the top you see the Matterhorn, the Monte Rosa, and 29 other Alpine peaks above 4,000 metres.</div>
-  <div class="sp-meta"><span>Sat 25 Jul 2026</span><span>Zermatt → Gornergrat</span><span>6 hrs · train + walk + train back</span></div>
-  <div class="sp-hero" style="background-image:url('../images/switzerland/day-17-matterhorn-gornergrat.jpg');"></div>
-  <div class="sp-caption">The Matterhorn from Gornergrat — 4,478 metres of perfectly triangular rock, clear against a blue July sky. First summited 14 July 1865.</div>
+  <div class="sp-hist">
+    <div class="sp-hist-title">A history written in rock and rope</div>
+    <p>For centuries the Matterhorn — 4,478 metres of near-vertical rock on the Swiss–Italian border — was thought unclimbable, a peak the valley people believed was guarded by spirits. Then, on 14 July 1865, an English illustrator named Edward Whymper and six companions proved otherwise, reaching the summit after years of failed attempts. Their triumph lasted barely an hour: on the descent a single rope snapped, and four of the seven fell more than a thousand metres to their deaths. The disaster shook Victorian Europe — and turned the Matterhorn, overnight, into the birthplace of modern mountaineering.</p>
+    <p>Thirty-three years later, in 1898, Switzerland answered the mountain in its own way. The Gornergrat Railway — the country's first fully electric cog railway, and still the highest open-air line in Europe — began carrying travellers from car-free Zermatt up to a bare ridge at 3,089 metres. The climb that once cost lives now takes thirty-three minutes and a train ticket. Even the chocolate in your bag is a tribute: the Toblerone bar, created in Bern in 1908, borrowed its unmistakable triangular shape from this very peak.</p>
+  </div>
+  <div class="sp-deck">We rode that same 1898 railway to the top on our first full Swiss morning — and found the mountain everyone comes for standing clear against a cloudless July sky.</div>
+  <div class="sp-meta"><span>Fri 24 Jul 2026</span><span>Zermatt → Gornergrat</span><span>Cog railway · summit walk</span></div>
+  <div class="sp-photo"><img src="../images/switzerland/day-17-matterhorn-gornergrat.jpg" alt="The Matterhorn seen from the Gornergrat ridge — a perfectly triangular rock peak against a clear blue sky." style="max-height:118mm;"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+  <div class="sp-caption">The Matterhorn from Gornergrat — 4,478 metres of perfectly triangular rock, clean against a blue July sky. First summited on 14 July 1865.</div>
   <div class="sp-cols">
-    <p>Zermatt is car-free. You arrive at the train station and switch to electric taxis or your feet. The Gornergrat Railway departs from a building right next to the regular train station. It climbs 1,500 vertical metres in 33 minutes via cogwheel — the second-highest open-air railway in Europe. The Matterhorn comes into view almost immediately and stays there for the entire ride. By the time you reach the summit at 3,089 metres, you are looking at it from above.</p>
-    <div class="sp-quote">Neutral since 1815. Wealthy since forever. — The most chocolate-eating country per capita on earth.</div>
-    <p>We had perfect weather. From the observation platform we could see 29 peaks above 4,000 metres, including the Monte Rosa (Switzerland's tallest), the Lyskamm, the Castor and Pollux twin summits, the Breithorn. We walked along the ridge for an hour. Avin found patches of summer snow and threw snowballs at his sisters in July.</p>
-  </div>
-  <div style="margin-top:12px; border-left:3px solid #a02828; padding:4px 0 4px 10px;">
-    <div style="font-family:'Fraunces', serif; font-weight:700; font-size:16px; color:#1a1a1a; margin-bottom:4px;">A history written in rock and rope</div>
-    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify;">For centuries the Matterhorn — 4,478 metres of near-vertical rock on the Swiss–Italian border — was thought unclimbable, a peak the valley people believed was guarded by spirits. Then, on 14 July 1865, an English illustrator named Edward Whymper and six companions proved otherwise, reaching the summit after years of failed attempts. Their triumph lasted barely an hour: on the descent a single rope snapped, and four of the seven fell more than a thousand metres to their deaths. The disaster shook Victorian Europe — and turned the Matterhorn, overnight, into the birthplace of modern mountaineering.</div>
-    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify; margin-top:6px;">Thirty-three years later, in 1898, Switzerland answered the mountain in its own way. The Gornergrat Railway — the country's first fully electric cog railway, and still the highest open-air line in Europe — began carrying travellers from car-free Zermatt up to a bare ridge at 3,089 metres. The climb that once cost lives now takes thirty-three minutes and a train ticket. Even the chocolate in your bag is a tribute: the Toblerone bar, created in Bern in 1908, borrowed its unmistakable triangular shape from this very peak.</div>
-  </div>
-  <div class="folio">— Issue 07 · SWITZERLAND · 03 —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">MOLÉSON-SUR-GRUYÈRES · OUR BASE</div>
-  <div class="sp-headline">A village<br><em>that smells of cheese.</em></div>
-  <div class="sp-deck">Two nights in the heart of Gruyère country — our quiet mountain base between the Matterhorn, the chocolate factory and Geneva.</div>
-  <div class="sp-meta"><span>25–27 Jul 2026</span><span>Moléson-sur-Gruyères</span><span>La Pierre à Catillon · 2 nights</span></div>
-  <div class="sp-cols">
-    <p>We stayed at <strong>La Pierre à Catillon</strong>, in the little alpine village of Moléson-sur-Gruyères — red-shuttered chalets, wooden balconies, and a view straight down the green valley toward the medieval town of Gruyères. It made the perfect base: close enough to reach Gornergrat, Maison Cailler and Geneva, quiet enough to sleep well after long days on the road. And from our hotel room, with the window open, we could hear the cowbells ringing across the pasture — proof, if any were needed, that this really is the village of cheese.</p>
-    <div class="sp-quote">Gruyère cheese has been made in these valleys since 1115 — the whole region smells faintly, wonderfully, of it.</div>
-    <p>And in the end we did reach the cheese — <strong>La Maison du Gruyère</strong> at Pringy, where great copper vats, cellars stacked with thousands of ageing wheels and centuries of dairy history tell the whole story of Le Gruyère AOP (made in these valleys since 1115). The only thing we missed was the live morning cheese-making itself — the cheesemaker stirring 800 litres over the fire — so that one scene is still saved for next time. A good reason to come back to Gruyère.</p>
-  </div>
-  <div style="margin-top:12px; border-left:3px solid #a02828; padding:4px 0 4px 10px;">
-    <div style="font-family:'Fraunces', serif; font-weight:700; font-size:16px; color:#1a1a1a; margin-bottom:4px;">Heidi — the other Swiss childhood story</div>
-    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify;">If Gruyère is the taste of the Swiss Alps, <strong>Heidi</strong> is their story. Written by the Swiss author <strong>Johanna Spyri</strong> in 1881, the tale of a small orphan sent to live with her gruff grandfather on a high alpine pasture — with her goatherd friend Peter, fresh goat's milk, and cheese toasted over the fire — became one of the best-loved children's books ever written, and the world's enduring image of Switzerland: chalets, cowbells and mountain freedom. It is why you'll find Heidi on magnets and chocolate in every Swiss shop, even here in cheese country.</div>
-    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify; margin-top:6px;">The book is set not in Gruyère but in the east, above Maienfeld in the canton of Graubünden — a region that now proudly calls itself "Heidiland," with a recreated Heidi's Village to visit. It is the same alpine-dairy world all the same: cattle summered on high meadows, the milk, the cheese. It was a story we loved as children — so if we ever come back to Switzerland, <strong>Heidi's village is right at the top of the list.</strong></div>
+    <p>Zermatt is car-free; you leave the road behind at the valley station and switch to electric taxis or your own feet. The Gornergrat train leaves from a building right beside the main line and climbs 1,500 vertical metres by cogwheel, the Matterhorn swinging into view almost at once and never leaving it. By the summit at 3,089 metres you are no longer looking up at the mountain — you are looking across at it, and a little down.</p>
+    <div class="sp-quote">Neutral since 1815, and wealthy since long before — the country that turned an unclimbable peak into a thirty-three-minute train ride.</div>
+    <p>We had faultless weather. From the observation platform we counted off the giants: the Monte Rosa, Switzerland's tallest; the Lyskamm; the twin summits of Castor and Pollux; the broad white dome of the Breithorn — twenty-nine peaks above 4,000 metres in a single sweep. We walked the ridge for the better part of an hour, and Avin, four years old, found a patch of summer snow and threw snowballs at his sisters in the middle of July.</p>
   </div>
   <div class="folio">— Issue 07 · SWITZERLAND · 04 —</div>
 </div>
 
 <div class="mag-page mag-spread">
-  <div class="sp-eyebrow">MAISON CAILLER · BROC · DAY 17</div>
-  <div class="sp-headline">A sweet<br><em>empire.</em></div>
-  <div class="sp-deck">How a bitter bean from the Aztecs passed through the court of Emperor Charles V, was refined in the palaces of France, and finally became the milk chocolate the whole world knows — invented right here in Switzerland.</div>
-  <div class="sp-meta"><span>Sat 25 Jul 2026</span><span>Maison Cailler · Broc</span><span>self-guided tour + tasting</span></div>
-  <div class="sp-hero" style="background-image:url('../images/switzerland/day-17-cailler-factory.jpg');"></div>
-  <div class="sp-caption">All five of us at Maison Cailler, Broc — founded 1819, the oldest Swiss chocolate brand still going, in its grand factory building (working since 1898).</div>
-  <div class="sp-cols">
-    <p>Chocolate did not begin in Switzerland. It began with the Aztecs of Central America, who drank cacao bitter, thick and spiced. When Spanish conquistadors reached the New World in the 1500s the beans crossed the ocean and arrived at the royal court of Emperor Charles V — the Habsburg ruler of Spain, master of a realm so vast it was said the sun never set on it. His court sweetened the bitter drink with sugar and cane, and for almost a century kept it a guarded Spanish luxury.</p>
-    <div class="sp-quote">Two emperors, one name: Charles V brought chocolate to Spain in the 1500s — not to be confused with Charles IV, who built the bridge we crossed in Prague 150 years earlier.</div>
-    <p>From Spain it spread to France through royal marriages — Spanish princesses who became French queens carried the habit to Paris, and by the reign of Louis XIV drinking chocolate was the fashion of Versailles. Yet it stayed a drink, a treat for aristocrats — until Switzerland changed everything. François-Louis Cailler opened his chocolate works in 1819. His son-in-law, Daniel Peter, blended in Nestlé's condensed milk in 1875 and invented milk chocolate. The bean that once belonged to emperors was, at last, for everyone — including five very happy tasters in Broc.</p>
+  <div class="sp-eyebrow">MOLÉSON-SUR-GRUYÈRES · OUR BASE</div>
+  <div class="sp-headline">A village<br><em>that smells of cheese.</em></div>
+  <div class="sp-hist">
+    <div class="sp-hist-title">Nine hundred years of Le Gruyère</div>
+    <p>The green, cow-cropped hills around Gruyères have been turning milk into cheese since at least 1115, when the monks and herders of these valleys first pressed the hard, nutty wheels that the world now knows as Le Gruyère AOP. The recipe has barely changed: raw morning milk, a copper cauldron, rennet, and long months ageing in a cool cellar. The whole district — pastures, chalets, the medieval hill-town of Gruyères itself — grew up around that single craft, and to this day the air here carries the faint, unmistakable sweetness of it.</p>
   </div>
-  <div style="margin-top:12px; border-left:4px solid #a02828; background:rgba(160,40,40,0.06); border-radius:3px; padding:12px 15px;">
-    <div style="font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#a02828; margin-bottom:5px;">A chocolate-shaped day · for Avin</div>
-    <div style="font-family:'Fraunces', serif; font-size:11.5px; line-height:1.6; color:#3d3024;">The whole day was bookended by chocolate. We <em>began</em> it at 3,089 metres, holding a giant Toblerone up against the real Matterhorn — the very peak that gave the bar its triangular shape. We <em>ended</em> it here at Maison Cailler, tasting our way through the factory. For Avin, our four-year-old and the family's devoted chocolate fan, no better day has ever been invented: a Toblerone on the mountain, and a chocolate factory before dinner.</div>
+  <div class="sp-deck">Our first Swiss night was high in the Mattertal at Stalden, near Zermatt. Then we crossed the country to Moléson — a quiet mountain village that became our base for the chocolate, the cheese and the lake.</div>
+  <div class="sp-meta"><span>24–26 Jul 2026</span><span>Moléson-sur-Gruyères</span><span>La Pierre à Catillon · 2 nights</span></div>
+  <div class="sp-cols">
+    <p>We stayed at <strong>La Pierre à Catillon</strong>, in the little alpine village of Moléson-sur-Gruyères — red-shuttered chalets, wooden balconies, and a view straight down the green valley toward the medieval town of Gruyères. It made a perfect base: close to Maison Cailler and to Geneva, and quiet enough to sleep deeply after long days on the road. And from our room, with the window open, we could hear the cowbells ringing across the pasture — proof, if any were needed, that this really is the country of cheese.</p>
+    <div class="sp-quote">From our hotel window, cowbells across the pasture — the sound Switzerland makes when no one is trying to sell you anything.</div>
+    <p>And here we did reach the cheese. At <strong>La Maison du Gruyère</strong>, down at Pringy, we walked past the great copper vats and into cellars stacked to the ceiling with thousands of ageing wheels, the whole history of Le Gruyère laid out around us. The one thing we missed was the live morning cheese-making — the cheesemaker stirring some 800 litres of milk over the fire — so that single scene stays saved for next time. A good reason, we decided, to come back to Gruyère.</p>
+  </div>
+  <div class="sp-hist" style="margin-top:12px;">
+    <div class="sp-hist-title">Heidi — the other Swiss childhood story</div>
+    <p>If Gruyère is the taste of the Swiss Alps, <strong>Heidi</strong> is their story. Written by the Swiss author <strong>Johanna Spyri</strong> in 1881, the tale of a small orphan sent to live with her gruff grandfather on a high alpine pasture — with her goatherd friend Peter, fresh goat's milk, and cheese toasted over the fire — became one of the best-loved children's books ever written, and the world's enduring image of Switzerland: chalets, cowbells and mountain freedom. It is why you'll find Heidi on magnets and chocolate in every Swiss shop, even here in cheese country.</p>
+    <p>The book is set not in Gruyère but in the east, above Maienfeld in the canton of Graubünden — a region that now proudly calls itself "Heidiland," with a recreated Heidi's Village to visit. It is the same alpine-dairy world all the same: cattle summered on high meadows, the milk, the cheese. It was a story we loved as children — so if we ever come back to Switzerland, <strong>Heidi's village is right at the top of the list.</strong></p>
   </div>
   <div class="folio">— Issue 07 · SWITZERLAND · 05 —</div>
 </div>
 
 <div class="mag-page mag-spread">
-  <div class="sp-eyebrow">GENEVA · DAY 18 · SUN 26 JUL</div>
+  <div class="sp-eyebrow">MAISON CAILLER · BROC</div>
+  <div class="sp-headline">A sweet<br><em>empire.</em></div>
+  <div class="sp-hist">
+    <div class="sp-hist-title">From the Aztecs to a Swiss factory floor</div>
+    <p>Chocolate did not begin in Switzerland. It began with the Aztecs of Central America, who drank cacao bitter, thick and spiced. When Spanish conquistadors reached the New World in the 1500s the beans crossed the ocean to the court of Emperor Charles V — the Habsburg ruler of Spain, master of a realm so vast it was said the sun never set on it — where the bitter drink was sweetened with sugar and kept, for almost a century, a guarded Spanish luxury.</p>
+    <p>From Spain it spread to France through royal marriages, and by the reign of Louis XIV drinking chocolate was the fashion of Versailles. Yet it stayed a drink for aristocrats — until Switzerland changed everything. <strong>François-Louis Cailler</strong> opened his chocolate works in 1819, and his son-in-law, <strong>Daniel Peter</strong>, blended in Nestlé's condensed milk in 1875 to invent milk chocolate. The bean that once belonged to emperors was, at last, for everyone.</p>
+  </div>
+  <div class="sp-deck">Which is how five very happy tasters came to spend an afternoon in Broc — at Cailler, the oldest Swiss chocolate brand still going, founded in 1819.</div>
+  <div class="sp-meta"><span>Fri 24 Jul 2026</span><span>Maison Cailler · Broc</span><span>Self-guided tour + tasting</span></div>
+  <div class="sp-photo"><img src="../images/switzerland/day-17-cailler-factory.jpg" alt="All five of the family outside the grand Maison Cailler factory building at Broc." style="max-height:118mm;"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+  <div class="sp-caption">All five of us at Maison Cailler, Broc — founded in 1819, the oldest Swiss chocolate brand still going, in its grand factory building of 1898.</div>
+  <div class="sp-cols">
+    <p>The tour walks you backward through that whole story — from the pods and beans, past the roasting and conching, to a gallery of the cauldrons and machines that once did the work by hand — and then, at the end, into the tasting room, where the children discovered that "self-guided" is Swiss for "eat as much as you like." We are fairly sure Avin set a personal record.</p>
+    <div class="sp-quote">Two emperors, one name: Charles V brought chocolate to Spain in the 1500s — not to be confused with Charles IV, who built the bridge we crossed in Prague 150 years earlier.</div>
+    <p>It was the perfect close to a day that had begun at 3,089 metres. And it belonged, more than to any of us, to a certain four-year-old.</p>
+  </div>
+  <div style="margin-top:12px; border-left:4px solid #a02828; background:rgba(160,40,40,0.06); border-radius:3px; padding:12px 15px;">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#a02828; margin-bottom:5px;">A chocolate-shaped day · for Avin</div>
+    <div style="font-family:'Fraunces', serif; font-size:11.5px; line-height:1.6; color:#3d3024;">The whole day was bookended by chocolate. We <em>began</em> it at 3,089 metres, holding a giant Toblerone up against the real Matterhorn — the very peak that gave the bar its triangular shape — and we <em>ended</em> it here at Maison Cailler, tasting our way through the factory. For Avin, our four-year-old and the family's devoted chocolate fan, no better day has ever been invented: a Toblerone on the mountain in the morning, and a chocolate factory before dinner.</div>
+  </div>
+  <div class="folio">— Issue 07 · SWITZERLAND · 06 —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">GENEVA · SUN 26 JUL</div>
   <div class="sp-headline">The world's<br><em>meeting place.</em></div>
-  <div class="sp-deck">Lakeside and French-speaking, Geneva is the home of the United Nations, the Red Cross and the Jet d'Eau — a whole day car-free, by train and on foot.</div>
+  <div class="sp-hist">
+    <div class="sp-hist-title">The city that reinvented itself twice</div>
+    <p>In the 1500s Geneva became the capital of the Protestant Reformation. The French theologian <strong>John Calvin</strong> arrived in 1536 and remade the city into a strict, self-governing "Protestant Rome" — a refuge for reformers fleeing Catholic Europe and the launch-pad for Calvinism, which would reach Scotland, the Netherlands and, eventually, America. The plain, whitewashed Cathédrale Saint-Pierre — stripped of its statues and gold — is Calvin's church still.</p>
+    <p>Three centuries later Geneva reinvented itself again, as the world's humanitarian capital. In 1863 a Genevan, <strong>Henry Dunant</strong>, founded the Red Cross here (its emblem is simply the Swiss flag reversed), and the first Geneva Convention followed in 1864. When the League of Nations chose the city after the First World War, and the United Nations kept its European seat here after the Second, the town that once exported a stern faith became the place where nearly 200 nations meet to keep the peace.</p>
+  </div>
+  <div class="sp-deck">Lakeside and French-speaking, Geneva was our last Swiss day — a whole day on foot and by train, from the flags of the UN to the Jet d'Eau and the cobbles of the Old Town.</div>
   <div class="sp-meta"><span>Sun 26 Jul 2026</span><span>Day-trip from Moléson</span><span>UN · Old Town · lake</span></div>
-  <div class="sp-hero" style="background-image:url('../images/switzerland/day-18-geneva-un.jpg');"></div>
+  <div class="sp-photo"><img src="../images/switzerland/day-18-geneva-un.jpg" alt="The avenue of national flags leading to the Palais des Nations, the UN's European headquarters in Geneva." style="max-height:110mm;"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
   <div class="sp-caption">The avenue of flags leading to the Palais des Nations — the UN's European home, where nearly 200 nations fly side by side.</div>
   <div class="sp-cols">
-    <p>Geneva is sometimes called the world's capital of peace. The United Nations, the Red Cross (founded here in 1863), the WHO — all headquartered along the lake. We walked the great avenue of flags up to the Palais des Nations, then stood under the Broken Chair: a twelve-metre monument balanced on three and a bit legs, protesting landmines. The kids loved that one leg is deliberately smashed.</p>
+    <p>Calvin's stern city is long gone; the Geneva we walked is the gentler, later one. We climbed the great avenue of flags to the Palais des Nations, then stood beneath the <strong>Broken Chair</strong> — a twelve-metre monument balanced on three and a bit legs, a protest against landmines. The children loved that one leg is deliberately smashed off, and asked, reasonably, why no one had fixed it.</p>
     <div class="sp-quote">Nearly 200 flags, one lawn. Geneva has been the world's meeting room since the Red Cross was founded here in 1863.</div>
-    <p>Then down to the water — the Jet d'Eau firing 140 metres into the sky, the Flower Clock ticking in the Jardin Anglais, and the cobbled Old Town climbing to the Cathédrale Saint-Pierre. Tomorrow we point the car north: a stop in medieval Bern, then across the border into Bavaria.</p>
+    <p>Then down to the water: the <strong>Jet d'Eau</strong> firing 140 metres into the sky, the Flower Clock ticking in the Jardin Anglais, and the cobbled Old Town climbing to the Cathédrale Saint-Pierre. It was a fitting last Swiss day. Tomorrow we point the car north — a stop in medieval Bern, then across the border into Bavaria.</p>
   </div>
-  <div style="margin-top:12px; border-left:3px solid #a02828; padding:4px 0 4px 10px;">
-    <div style="font-family:'Fraunces', serif; font-weight:700; font-size:16px; color:#1a1a1a; margin-bottom:4px;">The city that reinvented itself twice</div>
-    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify;">In the 1500s Geneva became the capital of the Protestant Reformation. The French theologian <strong>John Calvin</strong> arrived in 1536 and remade the city into a strict, self-governing "Protestant Rome" — a refuge for reformers fleeing Catholic Europe and the launch-pad for Calvinism, which would reach Scotland, the Netherlands and, eventually, America. The plain, whitewashed Cathédrale Saint-Pierre — stripped of its statues and gold — is Calvin's church still, and the Reformation Wall in Parc des Bastions honours him in a hundred metres of stone.</div>
-    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify; margin-top:6px;">Three centuries later Geneva reinvented itself again — as the world's humanitarian capital. In 1863 a Genevan, <strong>Henry Dunant</strong>, founded the Red Cross here (its emblem is simply the Swiss flag reversed), and the first Geneva Convention followed in 1864. When the League of Nations chose the city after the First World War, and the United Nations kept its European seat here after the Second, the town that once exported a stern faith became the place where nearly 200 nations meet to keep the peace.</div>
+  <div class="strip">
+    <img src="../images/switzerland/day-18-geneva-family-un.jpg" loading="lazy" alt="The family at the gates of the Palais des Nations.">
+    <img src="../images/switzerland/day-18-geneva-jet-deau.jpg" loading="lazy" alt="The Jet d'Eau fountain firing high over Lake Geneva.">
+    <img src="../images/switzerland/day-18-geneva-broken-chair.jpg" loading="lazy" alt="The Broken Chair monument on the Place des Nations.">
+    <img src="../images/switzerland/day-18-geneva-boys-chair.jpg" loading="lazy" alt="The boys standing beneath the Broken Chair.">
   </div>
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:5mm; margin-top:4px;">
-    <div class="duo-photo" style="background-image:url('../images/switzerland/day-18-geneva-jet-deau.jpg');"></div>
-    <div class="duo-photo" style="background-image:url('../images/switzerland/day-18-geneva-family-un.jpg');"></div>
-    <div class="duo-photo" style="background-image:url('../images/switzerland/day-18-geneva-broken-chair.jpg');"></div>
-    <div class="duo-photo" style="background-image:url('../images/switzerland/day-18-geneva-boys-chair.jpg');"></div>
-  </div>
-  <div class="sp-caption">The Jet d'Eau firing 140 m over the lake; all five of us at the Palais des Nations gate; the family — and the boys — under the Broken Chair.</div>
-  <div class="folio">— Issue 07 · SWITZERLAND · 06 —</div>
+  <div class="sp-caption">All five at the Palais des Nations gate; the Jet d'Eau over the lake; the family and the boys under the Broken Chair.</div>
+  <div class="folio">— Issue 07 · SWITZERLAND · 07 —</div>
 </div>
 
 <div class="mag-page mag-food">
   <div class="sp-eyebrow">★ TASTES OF THE TRIP</div>
   <div class="fd-headline">Six things <em>we ate</em><br>and won't forget.</div>
-  <div class="fd-deck">From morning coffee to evening pastries — the flavours that defined this leg.</div>
+  <div class="fd-deck">From cheese melted three different ways to the road-lunch that tasted like home — the flavours that defined our Swiss days.</div>
   <div class="fd-grid">
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/switzerland/food-01-fondue.jpg'); background-size:contain; background-repeat:no-repeat; background-position:center;">
-        <div class="ph">📷 images/switzerland/food-01-fondue.jpg</div>
-      </div>
+      <div class="fd-img"><div class="ph">🧀 Fondue moitié-moitié</div></div>
       <div class="fd-body">
         <div class="fd-num">01</div>
         <div class="fd-name">Fondue Moitié-Moitié</div>
-        <div class="fd-desc">Gruyère + Vacherin Fribourgeois melted with white wine. Bread on a long fork. Lose your bread in the pot, you pay for the round.</div>
-        <div class="fd-where">📍 Café du Moléson · CHF 35 · Day 17</div>
+        <div class="fd-desc">Gruyère and Vacherin Fribourgeois melted half-and-half with white wine. Bread on a long fork — lose your bread in the pot, and you buy the next round.</div>
+        <div class="fd-where">📍 Café du Moléson · CHF 35</div>
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/switzerland/food-02-raclette.jpg'); background-size:contain; background-repeat:no-repeat; background-position:center;">
-        <div class="ph">📷 images/switzerland/food-02-raclette.jpg</div>
-      </div>
+      <div class="fd-img"><div class="ph">🧀 Raclette</div></div>
       <div class="fd-body">
         <div class="fd-num">02</div>
         <div class="fd-name">Raclette</div>
-        <div class="fd-desc">A half-wheel of cheese melted by a heating element, scraped onto small potatoes and pickles. Cold beer or schnapps to drink.</div>
-        <div class="fd-where">📍 Edelweiss, Geneva · CHF 32 · Day 18</div>
+        <div class="fd-desc">A half-wheel of cheese melted at the flame and scraped onto small potatoes and pickles. A cold drink alongside, and no hurry at all.</div>
+        <div class="fd-where">📍 Geneva Old Town · CHF 32</div>
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/switzerland/food-03-rosti.jpg'); background-size:contain; background-repeat:no-repeat; background-position:center;">
-        <div class="ph">📷 images/switzerland/food-03-rosti.jpg</div>
-      </div>
+      <div class="fd-img"><div class="ph">🥔 Rösti</div></div>
       <div class="fd-body">
         <div class="fd-num">03</div>
         <div class="fd-name">Rösti</div>
-        <div class="fd-desc">Grated potato pan-fried in butter until golden and crisp on both sides. Often topped with cheese, ham, or a fried egg.</div>
-        <div class="fd-where">📍 Mountain restaurant · CHF 22 · Day 17</div>
+        <div class="fd-desc">Grated potato pan-fried in butter until golden and crisp on both sides — often crowned with cheese, ham, or a fried egg.</div>
+        <div class="fd-where">📍 Mountain restaurant · CHF 22</div>
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/switzerland/food-04-magronen.jpg'); background-size:contain; background-repeat:no-repeat; background-position:center;">
-        <div class="ph">📷 images/switzerland/food-04-magronen.jpg</div>
-      </div>
+      <div class="fd-img"><div class="ph">🍝 Älplermagronen</div></div>
       <div class="fd-body">
         <div class="fd-num">04</div>
         <div class="fd-name">Älplermagronen</div>
-        <div class="fd-desc">Alpine herder's macaroni — pasta, potatoes, cream, melted cheese, fried onions, apple sauce on the side.</div>
-        <div class="fd-where">📍 Zermatt restaurant · CHF 24 · Day 17</div>
+        <div class="fd-desc">The alpine herder's macaroni — pasta and potatoes bound in cream and melted cheese, fried onions on top, apple sauce on the side.</div>
+        <div class="fd-where">📍 Zermatt · CHF 24</div>
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/switzerland/food-05-toblerone.jpg'); background-size:contain; background-repeat:no-repeat; background-position:center;">
-        <div class="ph">📷 images/switzerland/food-05-toblerone.jpg</div>
-      </div>
+      <div class="fd-img"><div class="ph">🍫 Toblerone</div></div>
       <div class="fd-body">
         <div class="fd-num">05</div>
         <div class="fd-name">Toblerone</div>
-        <div class="fd-desc">Triangular milk chocolate with honey + almond nougat. Invented in Bern in 1908. Shape based on the Matterhorn.</div>
-        <div class="fd-where">📍 Bern train station · CHF 4 · Day 19</div>
+        <div class="fd-desc">Triangular milk chocolate with honey-and-almond nougat, invented in Bern in 1908 — its shape a deliberate echo of the Matterhorn we'd just stood beneath.</div>
+        <div class="fd-where">📍 Everywhere · CHF 4</div>
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/switzerland/day-17-galette.jpg'); background-size:contain; background-repeat:no-repeat; background-position:center;"></div>
+      <div class="fd-img"><div class="ph">📷 See the album overleaf</div></div>
       <div class="fd-body">
         <div class="fd-num">06</div>
         <div class="fd-name">Galette bretonne</div>
-        <div class="fd-desc">Our real lunch on the road: a savoury buckwheat crêpe folded around ham, cheese and herbs, with a side salad. It looked — and tasted — just like thosai, even though buckwheat is a seed, not black gram (undu).</div>
-        <div class="fd-where">📍 Crêperie, French-speaking Switzerland · Day 17</div>
+        <div class="fd-desc">Our real lunch on the road: a savoury buckwheat crêpe folded around ham, cheese and herbs, with a side salad. It looked — and tasted — uncannily like thosai, even though buckwheat is a seed, not black gram (undu).</div>
+        <div class="fd-where">📍 Crêperie, French-speaking Switzerland</div>
       </div>
     </div>
-  </div>
-  <div class="folio">— Issue 07 · SWITZERLAND · 07 —</div>
-</div>
-
-<div class="mag-page mag-album">
-  <div class="album-sub">Photo Album · Gornergrat</div>
-  <div class="album-head">The climb to 3,089 m.</div>
-  <div class="album-grid">
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gg-summit.jpg');"></div><div class="album-cap">At the summit</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gg-train1.jpg');"></div><div class="album-cap">On the Gornergrat Bahn</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gg-train2.jpg');"></div><div class="album-cap">Through the larches</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gg-train3.jpg');"></div><div class="album-cap">Snacks with a view</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gg-valley.jpg');"></div><div class="album-cap">The Mattertal on the way up</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gg-dad.jpg');"></div><div class="album-cap">Dad on the summit</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gg-mum-point.jpg');"></div><div class="album-cap">Mum points to the Matterhorn</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gg-mum-toblerone.jpg');"></div><div class="album-cap">A giant Toblerone — Matterhorn-shaped!</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gg-aviann.jpg');"></div><div class="album-cap">Aviann &amp; the peak</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gg-avisha.jpg');"></div><div class="album-cap">Avisha holds up the Matterhorn</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gg-avin-choc.jpg');"></div><div class="album-cap">Avin &amp; chocolate at 3,089 m</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gg-pinch.jpg');"></div><div class="album-cap">Pinching the peak</div></div>
   </div>
   <div class="folio">— Issue 07 · SWITZERLAND · 08 —</div>
 </div>
 
 <div class="mag-page mag-album">
-  <div class="album-sub">Photo Album · Maison Cailler, Broc</div>
-  <div class="album-head">Inside the chocolate factory.</div>
-  <div class="album-grid">
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-cacao.jpg');"></div><div class="album-cap">Cacao — where it starts</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-hazelnuts.jpg');"></div><div class="album-cap">Hazelnuts</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-vanilla.jpg');"></div><div class="album-cap">Vanilla pods</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-cocoabutter.jpg');"></div><div class="album-cap">Cocoa butter</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-cow.jpg');"></div><div class="album-cap">Chocolate cow &amp; Gruyères castle</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-flowing.jpg');"></div><div class="album-cap">Flowing chocolate</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-machine.jpg');"></div><div class="album-cap">A vintage Cailler machine</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-wrappers.jpg');"></div><div class="album-cap">Wrappers through the years</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-tasting.jpg');"></div><div class="album-cap">The tasting room</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-kids.jpg');"></div><div class="album-cap">Three happy tasters</div></div>
+  <div class="album-sub">A photo essay · Gornergrat</div>
+  <div class="album-head">The climb to 3,089 metres.</div>
+  <div class="album-intro">Up out of car-free Zermatt on the little red cog train, through the pines toward a bare ridge in the sky — the first half of the day the children still call "the chocolate day."</div>
+  <div class="mag-essay">
+    <div class="essay-item essay-lead"><img src="../images/switzerland/day-17-gornergrat-train.jpg" loading="lazy"><div class="essay-cap">The little red cog train of the Gornergrat Bahn hauling out of Zermatt — 1,500 vertical metres in thirty-three minutes, the mountains rising with every turn.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gg-valley.jpg" loading="lazy"><div class="essay-cap">Below us the Mattertal fell away, green and deep, as the train climbed higher.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gg-train1.jpg" loading="lazy"><div class="essay-cap">Aboard the Bahn — noses to the glass for the first sight of the peaks.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gg-train2.jpg" loading="lazy"><div class="essay-cap">Through the last of the larches, the treeline slipping past the window.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gg-train3.jpg" loading="lazy"><div class="essay-cap">Snacks unpacked, the whole carriage watching the mountains grow.</div></div>
   </div>
   <div class="folio">— Issue 07 · SWITZERLAND · 09 —</div>
 </div>
 
 <div class="mag-page mag-album">
-  <div class="album-sub">Photo Album · Tastes on the road</div>
-  <div class="album-head">The galettes.</div>
-  <div class="album-grid">
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-f-creperie.jpg');"></div><div class="album-cap">Lunch at the crêperie</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-f-galette-egg.jpg');"></div><div class="album-cap">Galette complète, with an egg</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-f-galette-chicken.jpg');"></div><div class="album-cap">Chicken &amp; cheese</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-f-galette-caprese.jpg');"></div><div class="album-cap">Tomato, mozzarella &amp; pesto</div></div>
+  <div class="album-sub">A photo essay · Gornergrat</div>
+  <div class="album-head">At the top of the sky.</div>
+  <div class="album-intro">Off the train and onto the ridge at 3,089 metres — twenty-nine peaks above 4,000 m in a single sweep, and one perfectly triangular mountain for everyone to pose with.</div>
+  <div class="mag-essay">
+    <div class="essay-item"><img src="../images/switzerland/alb-gg-summit.jpg" loading="lazy"><div class="essay-cap">The top at last — the bare ridge at 3,089 metres, a wall of four-thousanders straight ahead.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gg-dad.jpg" loading="lazy"><div class="essay-cap">Dad on the summit platform, the Monte Rosa massif behind him.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gg-mum-point.jpg" loading="lazy"><div class="essay-cap">Mum picking the Matterhorn out of a crowd of peaks.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gg-mum-toblerone.jpg" loading="lazy"><div class="essay-cap">A giant Toblerone held up to the mountain that gave the bar its shape.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gg-aviann.jpg" loading="lazy"><div class="essay-cap">Aviann against the peak he'd been promised all morning.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gg-avisha.jpg" loading="lazy"><div class="essay-cap">Avisha holding the Matterhorn between her fingertips.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gg-avin-choc.jpg" loading="lazy"><div class="essay-cap">Avin — four years old and already a chocolate man — at 3,089 metres.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gg-pinch.jpg" loading="lazy"><div class="essay-cap">And the game everyone plays up here: pinching the summit clean off the sky.</div></div>
   </div>
   <div class="folio">— Issue 07 · SWITZERLAND · 10 —</div>
 </div>
 
 <div class="mag-page mag-album">
-  <div class="album-sub">Photo Album · Geneva</div>
-  <div class="album-head">A day by the lake.</div>
-  <div class="album-grid">
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-ge-unsign.jpg');"></div><div class="album-cap">At the United Nations</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-ge-kidschair.jpg');"></div><div class="album-cap">Pointing out the Broken Chair</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-ge-sculpture.jpg');"></div><div class="album-cap">A bronze in the lakeside park</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-ge-building.jpg');"></div><div class="album-cap">Grand facade on Quai Wilson</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-ge-harbor.jpg');"></div><div class="album-cap">The Jet d'Eau from the harbour</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-ge-family-lake.jpg');"></div><div class="album-cap">All five of us by the lake</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-ge-brunswick.jpg');"></div><div class="album-cap">The Brunswick Monument</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-ge-lunch.jpg');"></div><div class="album-cap">Lakeside lunch — hot dogs &amp; panini</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-ge-icecream.jpg');"></div><div class="album-cap">Ice cream to finish</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-ge-flowerclock-family.jpg');"></div><div class="album-cap">L'Horloge Fleurie — the Flower Clock</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-ge-oldtown.jpg');"></div><div class="album-cap">Rue des Barrières — an Old Town stairway</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-ge-fountain.jpg');"></div><div class="album-cap">A fountain in central Geneva</div></div>
-  </div>
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:5mm; margin-top:5mm;">
-    <div><div class="album-photo" style="aspect-ratio:3/4; background-image:url('../images/switzerland/alb-ge-cathedral-nave.jpg');"></div><div class="album-cap">Inside the Cathédrale Saint-Pierre — Calvin's church, stripped bare in the Reformation</div></div>
-    <div><div class="album-photo" style="aspect-ratio:3/4; background-image:url('../images/switzerland/alb-ge-cathedral-organ.jpg');"></div><div class="album-cap">The great organ</div></div>
-  </div>
-  <div style="margin-top:12px; border-left:3px solid #a02828; padding:4px 0 4px 10px;">
-    <div style="font-family:'Fraunces', serif; font-weight:700; font-size:16px; color:#1a1a1a; margin-bottom:3px;">The Brunswick Monument</div>
-    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024;">A neo-Gothic mausoleum built in 1879 for Charles II, Duke of Brunswick, who died in Geneva in 1873. He left his entire fortune — around 24 million gold francs — to the city, on the condition they build him a grand tomb. Geneva agreed, and the money also helped fund landmarks like the Grand Théâtre.</div>
+  <div class="album-sub">A photo essay · Maison Cailler, Broc</div>
+  <div class="album-head">Inside the chocolate factory.</div>
+  <div class="album-intro">The tour runs backward through the whole story of a chocolate bar — bean, roast, machine, and finally the room the children had come for. This is the walk, in order.</div>
+  <div class="mag-essay">
+    <div class="essay-item"><img src="../images/switzerland/alb-c-cacao.jpg" loading="lazy"><div class="essay-cap">It starts with the bean — cacao, where every bar begins.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-c-hazelnuts.jpg" loading="lazy"><div class="essay-cap">Hazelnuts, waiting to be roasted and folded in.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-c-vanilla.jpg" loading="lazy"><div class="essay-cap">Vanilla pods — the quiet second note in every recipe.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-c-cocoabutter.jpg" loading="lazy"><div class="essay-cap">Cocoa butter, the fat that makes chocolate melt on the tongue.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-c-cow.jpg" loading="lazy"><div class="essay-cap">A chocolate cow and Gruyères castle beyond — cocoa meets Alpine milk.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-c-flowing.jpg" loading="lazy"><div class="essay-cap">Chocolate running warm and glossy through the works.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-c-machine.jpg" loading="lazy"><div class="essay-cap">A vintage Cailler machine from the old factory floor.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-c-wrappers.jpg" loading="lazy"><div class="essay-cap">A century of wrappers — the brand growing up along one wall.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-c-tasting.jpg" loading="lazy"><div class="essay-cap">The tasting room at the end — the part they'd been waiting for.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-c-kids.jpg" loading="lazy"><div class="essay-cap">Three very happy tasters.</div></div>
   </div>
   <div class="folio">— Issue 07 · SWITZERLAND · 11 —</div>
 </div>
 
 <div class="mag-page mag-album">
-  <div class="album-sub">Photo Album · La Maison du Gruyère</div>
-  <div class="album-head">The cheese house.</div>
-  <div class="album-grid">
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gr-kids-wheel.jpg');"></div><div class="album-cap">Holding a wheel of Le Gruyère</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gr-vats.jpg');"></div><div class="album-cap">The great copper vats</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gr-factory.jpg');"></div><div class="album-cap">The modern cheese hall</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gr-wheels-display.jpg');"></div><div class="album-cap">Wheels of Le Gruyère AOP</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gr-moulds.jpg');"></div><div class="album-cap">Old wooden cheese moulds</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gr-poya.jpg');"></div><div class="album-cap">The <em>poya</em> — cattle to the alp, in folk art</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gr-historic.jpg');"></div><div class="album-cap">A Gruyère dairy family, 1925</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gr-milkcart.jpg');"></div><div class="album-cap">An antique milk cart</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gr-cart-cauldron.jpg');"></div><div class="album-cap">Cauldron &amp; cart of the old dairy</div></div>
-    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gr-cowgame.jpg');"></div><div class="album-cap">Avisha herds virtual cows</div></div>
+  <div class="album-sub">A photo essay · On the road</div>
+  <div class="album-head">The galettes.</div>
+  <div class="album-intro">Lunch on a driving day pulled us into a little crêperie in French-speaking Switzerland — and into the dish that surprised us most.</div>
+  <div class="mag-essay">
+    <div class="essay-item"><img src="../images/switzerland/alb-f-creperie.jpg" loading="lazy"><div class="essay-cap">The crêperie where we stopped, somewhere on the road west.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/day-17-galette.jpg" loading="lazy"><div class="essay-cap">Our real road lunch — a savoury buckwheat galette, folded and golden. It looked, we all agreed, uncannily like thosai.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-f-galette-egg.jpg" loading="lazy"><div class="essay-cap">The galette complète, an egg set shining in its middle.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-f-galette-chicken.jpg" loading="lazy"><div class="essay-cap">Another folded around chicken and melted cheese.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-f-galette-caprese.jpg" loading="lazy"><div class="essay-cap">And one with tomato, mozzarella and pesto, a salad on the side.</div></div>
   </div>
   <div class="folio">— Issue 07 · SWITZERLAND · 12 —</div>
+</div>
+
+<div class="mag-page mag-album">
+  <div class="album-sub">A photo essay · Geneva</div>
+  <div class="album-head">The lake &amp; the United Nations.</div>
+  <div class="album-intro">We began our Geneva day up at the Place des Nations, among the flags and the monuments, then wandered down toward the water — the city of peace, in the order we walked it.</div>
+  <div class="mag-essay">
+    <div class="essay-item"><img src="../images/switzerland/alb-ge-unsign.jpg" loading="lazy"><div class="essay-cap">We began at the Place des Nations, under the great sign of the United Nations.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-ge-kidschair.jpg" loading="lazy"><div class="essay-cap">The children found the Broken Chair at once — twelve metres of timber on three and a bit legs.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-ge-sculpture.jpg" loading="lazy"><div class="essay-cap">A bronze figure standing watch in the lakeside gardens.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-ge-building.jpg" loading="lazy"><div class="essay-cap">A grand façade along Quai Wilson, the old lakefront of hotels.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-ge-brunswick.jpg" loading="lazy"><div class="essay-cap">The Brunswick Monument, a neo-Gothic tomb rising by the water.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-ge-harbor.jpg" loading="lazy"><div class="essay-cap">And out on the lake, the Jet d'Eau firing 140 metres into the sky.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-ge-family-lake.jpg" loading="lazy"><div class="essay-cap">All five of us down at the water's edge, the fountain and the far shore behind.</div></div>
+  </div>
+  <div class="sp-hist" style="margin-top:14px;">
+    <div class="sp-hist-title">The Brunswick Monument</div>
+    <p>A neo-Gothic mausoleum built in 1879 for Charles II, Duke of Brunswick, who died in Geneva in 1873. He left his entire fortune — around 24 million gold francs — to the city, on the single condition that it build him a grand tomb. Geneva agreed, and the money also helped fund landmarks such as the Grand Théâtre.</p>
+  </div>
+  <div class="folio">— Issue 07 · SWITZERLAND · 13 —</div>
+</div>
+
+<div class="mag-page mag-album">
+  <div class="album-sub">A photo essay · Geneva</div>
+  <div class="album-head">The water &amp; the Old Town.</div>
+  <div class="album-intro">From the Flower Clock by the lake up into the cobbled Old Town and Calvin's plain cathedral — the second half of our day in the city.</div>
+  <div class="mag-essay">
+    <div class="essay-item"><img src="../images/switzerland/alb-ge-flowerclock-family.jpg" loading="lazy"><div class="essay-cap">By L'Horloge Fleurie, the Flower Clock in the Jardin Anglais, all of us in a row.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-ge-flowerclock.jpg" loading="lazy"><div class="essay-cap">Its living face up close — planted, tended, and keeping perfect time through the seasons.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-ge-oldtown.jpg" loading="lazy"><div class="essay-cap">Then up into the Old Town, a cobbled stair on the Rue des Barrières.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-ge-fountain.jpg" loading="lazy"><div class="essay-cap">A fountain playing in a quiet central square.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-ge-lunch.jpg" loading="lazy"><div class="essay-cap">Lunch back by the lake — hot dogs and panini, eaten in the sun.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-ge-icecream.jpg" loading="lazy"><div class="essay-cap">And ice cream to finish, the only proper end to a hot day.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-ge-cathedral-nave.jpg" loading="lazy"><div class="essay-cap">Inside the Cathédrale Saint-Pierre — Calvin's church, stripped bare in the Reformation.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-ge-cathedral-organ.jpg" loading="lazy"><div class="essay-cap">The great organ rising in the pale, plain nave.</div></div>
+  </div>
+  <div class="folio">— Issue 07 · SWITZERLAND · 14 —</div>
+</div>
+
+<div class="mag-page mag-album">
+  <div class="album-sub">A photo essay · La Maison du Gruyère</div>
+  <div class="album-head">The cheese house.</div>
+  <div class="album-intro">Down at Pringy, below Gruyères castle, the whole story of Le Gruyère AOP — from the copper vats to the cellars, and nine centuries of dairy life around them.</div>
+  <div class="mag-essay">
+    <div class="essay-item"><img src="../images/switzerland/alb-gr-kids-wheel.jpg" loading="lazy"><div class="essay-cap">The children hoisting a wheel of Le Gruyère — made in these valleys since 1115.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gr-vats.jpg" loading="lazy"><div class="essay-cap">The great copper vats where the morning milk becomes cheese.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gr-factory.jpg" loading="lazy"><div class="essay-cap">The modern cheese hall, seen from the visitors' gallery.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gr-wheels-display.jpg" loading="lazy"><div class="essay-cap">Wheels ageing in their thousands on the cellar shelves.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gr-moulds.jpg" loading="lazy"><div class="essay-cap">Old wooden moulds that once shaped each wheel by hand.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gr-poya.jpg" loading="lazy"><div class="essay-cap">A painted <em>poya</em> — the spring procession of cattle up to the high alp.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gr-historic.jpg" loading="lazy"><div class="essay-cap">A Gruyère dairy family, photographed around 1925.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gr-milkcart.jpg" loading="lazy"><div class="essay-cap">An antique milk cart from the old dairy days.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gr-cart-cauldron.jpg" loading="lazy"><div class="essay-cap">The cauldron and cart of a mountain cheesemaker.</div></div>
+    <div class="essay-item"><img src="../images/switzerland/alb-gr-cowgame.jpg" loading="lazy"><div class="essay-cap">And Avisha, herding virtual cows in the play corner.</div></div>
+  </div>
+  <div class="folio">— Issue 07 · SWITZERLAND · 15 —</div>
 </div>
 
 <div class="mag-page mag-reflection">
   <div class="rf-eyebrow">REFLECTIONS · SWITZERLAND</div>
   <div class="rf-headline">Mountains, milk,<br>and 700 years<br>of not picking sides.</div>
   <div class="rf-body">
-    <p>Switzerland is what happens when geography (impossible mountains) meets policy (neutral since 1815). The result is a country that has saved its old towns, kept its languages, perfected its trains, and turned cheese into an export industry. The cities are tiny. The mountains are massive. The chocolate is everywhere.</p>
-    <p>We did this country in four days. We could not have done it in fewer. We could have done it in forty.</p>
+    <p>Switzerland is what happens when geography — impossible mountains — meets policy — neutral since 1815. The result is a country that has kept its old towns, its four languages and its punctual trains, and turned even cheese and chocolate into quiet empires. The villages are small. The peaks are enormous. And a giant Toblerone, it turns out, lines up exactly with the mountain that inspired it.</p>
+    <p>We did this country in barely four days, all of them among the alps. We could not have done it in fewer — and we could happily have given it forty.</p>
   </div>
   <div class="rf-grid">
     <div class="rf-card">
       <div class="rf-label">Favourite moment</div>
-      <div class="rf-value">The Matterhorn appearing through the train window at exactly the moment we crested the ridge.</div>
+      <div class="rf-value">The Matterhorn holding steady in a cloudless sky as we crested the ridge at Gornergrat — and Avin, at 3,089 m, with chocolate in both hands.</div>
     </div>
     <div class="rf-card">
-      <div class="rf-label">Hardest moment</div>
-      <div class="rf-value">Bern at 32°C — apparently a heatwave by Swiss standards. The Aare river was 18°C, and we swam in it.</div>
+      <div class="rf-label">What we missed</div>
+      <div class="rf-value">The live cheese-making at La Maison du Gruyère — the cheesemaker stirring 800 litres over the fire. Saved, deliberately, for next time.</div>
     </div>
     <div class="rf-card">
       <div class="rf-label">If we come back…</div>
-      <div class="rf-value">The Glacier Express end-to-end. Lauterbrunnen, Mürren, the Jungfraujoch.</div>
+      <div class="rf-value">Heidi's village above Maienfeld, and the Glacier Express end to end — Lauterbrunnen, Mürren, the Jungfraujoch.</div>
     </div>
   </div>
-  <div class="rf-signoff">— Avinesh, Lana, Avisha, Aviann & Avin Munasinghe-Fernando<br>Stalden → Gornergrat → Moléson → Geneva → Bern · 23–26 July 2026</div>
+  <div class="rf-signoff">— Avinesh, Lana, Avisha, Aviann &amp; Avin Munasinghe-Fernando<br>Stalden → Gornergrat → Moléson → Geneva → Bern · 23–26 July 2026</div>
 </div>
 
 <div class="mag-page mag-back">

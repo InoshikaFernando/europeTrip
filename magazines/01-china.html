@@ -20,8 +20,8 @@ body { padding:20px; }
 /* ─── COVER ─── */
 .mag-cover {
   background:
-    linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.7) 100%),
-    url('../images/china/cover.jpg') center/cover #8b1a1a;
+    linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 34%, rgba(0,0,0,0.78) 100%),
+    url('../images/day-02/04-forbidden-city.jpg') center/cover #8b1a1a;
   color:white; display:flex; flex-direction:column; padding:18mm 16mm;
   position:relative;
 }
@@ -314,7 +314,7 @@ body { padding:20px; }
 .mag-back {
   background:
     linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%),
-    url('../images/china/back-cover.jpg') center/cover #8b1a1a;
+    url('../images/austria/hallstatt-family-railing.jpg') center/cover #8b1a1a;
   color:white; display:flex; flex-direction:column;
   justify-content:flex-end; padding:24mm 20mm;
 }
@@ -446,6 +446,21 @@ body { padding:20px; }
   font-family:'JetBrains Mono', monospace; font-size:7.5px;
   letter-spacing:0.12em; color:#8b6914; text-transform:uppercase;
 }
+
+/* ─── PHOTO ESSAY ─── */
+.mag-essay { column-count:3; column-gap:5mm; margin-top:4px; }
+.mag-essay .essay-item { break-inside:avoid; margin:0 0 5mm; }
+.mag-essay .essay-item img { width:100%; height:auto; display:block; border-radius:2px; background:#0e0e0e; }
+.mag-essay .essay-cap { font-family:'Fraunces', serif; font-size:8px; line-height:1.4; color:#5a4a3a; margin-top:4px; }
+.mag-essay .essay-lead { column-span:all; margin-bottom:6mm; }
+.mag-essay .essay-lead .essay-cap { font-size:11px; font-style:italic; color:#3d3024; text-align:center; }
+@media print { .mag-essay { column-count:3; } }
+
+/* PHOTO SPREAD (uncropped, Austria standard) */
+.sp-photo { width:100%; margin-bottom:6px; text-align:center; position:relative; }
+.sp-photo img { max-width:100%; max-height:150mm; display:block; margin:0 auto; border-radius:2px; }
+.sp-photo.compact img { max-height:116mm; }
+.sp-photo .ph-info { display:inline-block; margin-top:4px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
 
 /* PRINT */
 @media print {
