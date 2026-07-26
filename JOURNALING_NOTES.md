@@ -256,6 +256,12 @@ Trust the reader. Let the moment carry itself.
   `8c8e85d4` Hall-of-Supreme-Harmony + `18d86262` **carved dragon marble ramp** (a great detail shot,
   worth its own page) + `e35247a1` Avin-with-a-fan. Lots of near-dups among the kid/architecture shots —
   pick best, don't cram.
+- **Issue 01 China — added a Forbidden City HISTORY page** ("A city built to a rule", after the FC
+  feature spread), in the issue's Wider-World bordered-block style. Covers who built it (Yongle Emperor,
+  1406–1420, ~1M workers, 24 emperors), the central axis (Son of Heaven faces south), the left/right
+  halls (east/left = Hall of Literary Glory, civil; west/right = Hall of Military Eminence, military),
+  and the inner court's Six Eastern/Six Western Palaces for consorts. General history (not photo-specific
+  claims). Screenshot-verified non-clipping.
 - **Issue 01 China — outbound DONE & live.** Added: The Journey (recap+rail),
   Before We Left (packing), Arrival in Beijing, The Palace Day, The Long Day's End
   (+ Avin fever postscript). **Pending:** homebound Great Wall (7 Aug) → then rewrite
