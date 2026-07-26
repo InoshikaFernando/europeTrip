@@ -9,7 +9,7 @@
 @page { size:A4 portrait; margin:0; }
 html, body { font-family:'Plus Jakarta Sans', sans-serif; background:#222; color:#1a1a1a; }
 body { padding:20px; }
-.mag-page { width:210mm; height:295mm; background:#fefcf7; margin:14px auto; box-shadow:0 8px 32px rgba(0,0,0,0.25); position:relative; overflow:hidden; page-break-after:always; break-after:page; }
+.mag-page { width:210mm; min-height:295mm; background:#fefcf7; margin:14px auto; box-shadow:0 8px 32px rgba(0,0,0,0.25); position:relative; overflow:hidden; page-break-after:always; break-after:page; }
 .mag-page:last-child { page-break-after:auto; }
 .mag-cover { background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.7) 100%), url('../images/sweden/cover.jpg') center/cover #003c6a; color:white; display:flex; flex-direction:column; padding:18mm 16mm; position:relative; }
 .mag-cover::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 20% 80%, #c89b3c40, transparent 50%); pointer-events:none; }
