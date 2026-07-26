@@ -17,7 +17,7 @@ body { padding:20px; }
 .cv-flag { font-size:14px; }
 .cv-brand { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:18px; color:rgba(255,255,255,0.95); letter-spacing:0.05em; margin-bottom:auto; }
 .cv-title { font-family:'Fraunces', serif; font-weight:700; font-size:96px; line-height:0.9; color:white; margin-bottom:6px; letter-spacing:-0.02em; text-shadow:2px 4px 12px rgba(0,0,0,0.4); }
-.cv-sub { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:24px; color:rgba(255,255,255,0.95); margin-bottom:24px; text-shadow:1px 2px 8px rgba(0,0,0,0.5); }
+.cv-sub { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:22px; color:rgba(255,255,255,0.95); margin-bottom:24px; text-shadow:1px 2px 8px rgba(0,0,0,0.5); }
 .cv-tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
 .cv-tag { background:rgba(255,255,255,0.15); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.3); border-radius:100px; padding:5px 14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.15em; text-transform:uppercase; }
 .cv-features { font-family:'Fraunces', serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.9); border-top:1px solid rgba(255,255,255,0.3); padding-top:12px; margin-top:8px; }
@@ -41,7 +41,6 @@ body { padding:20px; }
 .sp-deck { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:15px; line-height:1.4; color:#5a4a3a; margin-bottom:10px; max-width:92%; }
 .sp-meta { display:flex; gap:14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; border-top:1px solid #1e6e4a; padding-top:8px; margin-bottom:14px; }
 .sp-hero { width:100%; height:64mm; background:#e8dcc0; background-size:cover; background-position:center; margin-bottom:6px; position:relative; border-radius:2px; }
-.sp-hero .ph-name { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:repeating-linear-gradient(45deg,#e8dcc0 0 10px,#ddd1b3 10px 20px); font-family:'JetBrains Mono', monospace; font-size:10px; color:#8b6914; }
 .sp-hero .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
 .sp-caption { font-family:'Fraunces', serif; font-style:italic; font-size:9.5px; color:#5a4a3a; margin-bottom:10px; padding-left:12px; border-left:2px solid #1e6e4a; }
 .sp-cols { column-count:2; column-gap:10mm; column-rule:0; }
@@ -63,19 +62,28 @@ body { padding:20px; }
 .duo-photo { background:#e8dcc0; aspect-ratio:4/5; position:relative; border-radius:2px; overflow:hidden; background-size:cover; background-position:center; }
 .duo-photo.wide { aspect-ratio:16/10; }
 .duo-photo .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
-.duo-photo > .ph-name { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; background:repeating-linear-gradient(45deg, #e8dcc0 0 8px, #ddd1b3 8px 16px); font-family:'JetBrains Mono', monospace; font-size:8px; color:#8b6914; text-align:center; padding:8px; gap:4px; }
 .duo-text { display:flex; flex-direction:column; justify-content:center; padding:0 4mm; }
 .duo-text h3 { font-family:'Fraunces', serif; font-weight:700; font-size:28px; line-height:1; color:#1a1a1a; margin-bottom:8px; }
 .duo-text p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; }
 .duo-text .kicker { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.3em; text-transform:uppercase; color:#7a4a2e; margin-bottom:6px; }
+.mag-album { padding:18mm 16mm; }
+.album-sub { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:#7a4a2e; margin-bottom:2px; }
+.album-head { font-family:'Fraunces', serif; font-weight:700; font-size:30px; line-height:1; color:#1a1a1a; margin-bottom:8px; }
+.mag-essay { column-count:3; column-gap:5mm; margin-top:4px; }
+.mag-essay .essay-item { break-inside:avoid; margin:0 0 5mm; }
+.mag-essay .essay-item img { width:100%; height:auto; display:block; border-radius:2px; background:#0e0e0e; }
+.mag-essay .essay-cap { font-family:'Fraunces', serif; font-size:8px; line-height:1.4; color:#5a4a3a; margin-top:4px; }
+.mag-essay .essay-lead { column-span:all; margin-bottom:6mm; }
+.mag-essay .essay-lead img { max-height:60mm; width:auto; max-width:100%; margin:0 auto; }
+.mag-essay .essay-lead .essay-cap { font-size:11px; font-style:italic; color:#3d3024; text-align:center; max-width:80%; margin-left:auto; margin-right:auto; }
+@media print { .mag-essay { column-count:3; } }
 .mag-food { padding:18mm 16mm; }
 .fd-headline { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.02em; }
 .fd-headline em { font-style:italic; font-weight:400; color:#7a4a2e; }
 .fd-deck { font-family:'Fraunces', serif; font-style:italic; font-size:16px; color:#5a4a3a; margin-bottom:18px; border-bottom:2px solid #1e6e4a; padding-bottom:14px; }
 .fd-grid { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
 .fd-card { background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; overflow:hidden; }
-.fd-card .fd-img { width:100%; aspect-ratio:5/3; background:#e8dcc0; position:relative; display:flex; align-items:center; justify-content:center; background-image:repeating-linear-gradient(45deg, #e8dcc0 0 8px, #ddd1b3 8px 16px); }
-.fd-card .fd-img .ph { font-family:'JetBrains Mono', monospace; font-size:8px; color:#8b6914; text-align:center; padding:8px; }
+.fd-card .fd-img { width:100%; aspect-ratio:5/3; background:#e8dcc0; position:relative; background-size:cover; background-position:center; }
 .fd-card .fd-body { padding:10px 14px 14px; }
 .fd-card .fd-num { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:22px; color:#7a4a2e; line-height:1; }
 .fd-card .fd-name { font-family:'Fraunces', serif; font-weight:700; font-size:18px; line-height:1.1; color:#1a1a1a; margin:4px 0 6px; }
@@ -91,158 +99,161 @@ body { padding:20px; }
 .rf-card .rf-label { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#7a4a2e; margin-bottom:4px; }
 .rf-card .rf-value { font-family:'Fraunces', serif; font-size:13px; line-height:1.4; color:#3d3024; }
 .rf-signoff { margin-top:auto; padding-top:18mm; font-family:'Fraunces', serif; font-style:italic; font-size:13px; color:#7a4a2e; text-align:right; }
-.mag-back { background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%), url('../images/italy/back-cover.jpg') center/cover #3a1f0a; color:white; display:flex; flex-direction:column; justify-content:flex-end; padding:24mm 20mm; }
+.mag-back { background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%), url('../images/italy/vatican-colonnade.jpg') center/cover #3a1f0a; color:white; display:flex; flex-direction:column; justify-content:flex-end; padding:24mm 20mm; }
 .bc-next { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:6px; }
 .bc-country { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:white; margin-bottom:8px; }
 .bc-tagline { font-family:'Fraunces', serif; font-style:italic; font-size:18px; color:rgba(255,255,255,0.9); border-top:1px solid rgba(255,255,255,0.4); padding-top:14px; margin-bottom:12px; max-width:70%; }
 .bc-mag { position:absolute; top:20mm; left:20mm; font-family:'Fraunces', serif; font-style:italic; font-weight:300; font-size:16px; color:rgba(255,255,255,0.9); letter-spacing:0.05em; }
 .bc-issue { position:absolute; top:20mm; right:20mm; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; color:rgba(255,255,255,0.7); }
 .mag-page .folio { position:absolute; bottom:4mm; left:0; right:0; text-align:center; font-family:'Fraunces', serif; font-style:italic; font-size:8.5px; color:#8b6914; }
+.divider { background:#0c1a2c; display:flex; flex-direction:column; align-items:center; padding:0; position:relative; }
+.divider .dv-frame { position:absolute; inset:7mm; border:1px solid #c89b3c; pointer-events:none; }
+.divider .dv-kicker { font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.42em; text-transform:uppercase; color:#c89b3c; margin-top:19mm; text-align:center; }
+.divider .dv-photo { width:63%; margin-top:12mm; box-shadow:0 12px 44px rgba(0,0,0,0.55); line-height:0; }
+.divider .dv-photo img { width:100%; display:block; }
+.divider .dv-country { font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.4em; text-transform:uppercase; color:#c89b3c; margin-top:13mm; text-align:center; }
+.divider .dv-name { font-family:'Fraunces',serif; font-weight:700; font-size:82px; line-height:1; color:#fefcf7; margin-top:4px; text-align:center; letter-spacing:-0.01em; }
+.divider .dv-rule { width:46px; height:2px; background:#c89b3c; margin-top:15px; }
+.divider .dv-date { font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.3em; color:#aeb9c4; margin-top:15px; text-align:center; }
 @media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
 </style></head>
 <body>
 
+<!-- ===== COVER ===== -->
 <div class="mag-page mag-cover" style="background:linear-gradient(180deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.5) 32%, rgba(0,0,0,0.08) 52%, rgba(0,0,0,0) 62%), url('../images/italy/milan-duomo-family.jpg') center 44%/cover #2a1a0a; justify-content:flex-start;">
   <div class="cv-issue"><span>Issue 06 · 2026</span><span class="cv-flag">🇮🇹 ITALY</span></div>
   <div class="cv-brand" style="margin-bottom:14px;">Munasinghe-Fernando Travel Magazine</div>
   <div>
     <div class="cv-title">ITALY</div>
-    <div class="cv-sub">Venice · Florence · Rome · Naples · Milan · Vatican</div>
+    <div class="cv-sub">Venice · Padua · Florence · Rome · The Vatican · Pompeii · Milan</div>
     <div class="cv-tags">
-      <span class="cv-tag">★ 6 Cities · 1 Week</span>
+      <span class="cv-tag">★ 8 Days · 2,000 Years</span>
       <span class="cv-tag">🎨 Renaissance + Roman</span>
-      <span class="cv-tag">🍝 Tortellini to Tiramisu</span>
+      <span class="cv-tag">✝ A Pilgrim Road</span>
     </div>
-    <div class="cv-features">INSIDE: <b>Venice's 400 bridges</b> at sunrise · <b>Florence's Duomo</b> and the Medici · <b>Rome's Colosseum</b> and the Vatican Museums · <b>Pompeii frozen at 79 AD</b> · <b>Milan</b> and Leonardo's Last Supper</div>
+    <div class="cv-features">INSIDE: <b>Venice</b> and a Vigil Mass under a heaven of gold · <b>Florence</b>, cradle of the Renaissance · <b>Pompeii</b> frozen at 79 AD · the smallest country and the <b>largest church</b> on earth — a whole day in the <b>Vatican</b></div>
   </div>
   <div class="cv-meta">Munasinghe-Fernando Family · Fri 17 Jul — Fri 24 Jul 2026</div>
 </div>
 
+<!-- ===== PAGE 2 · A LETTER FROM THE ROAD (family) ===== -->
 <div class="mag-page mag-welcome">
   <div class="wl-num">No. 06 · A Letter from the Road</div>
+  <div class="wl-title">Who we are,<br>why we travel.</div>
+  <div class="wl-divider"></div>
+  <div style="text-align:center; margin:2mm 0 10mm;"><img src="../images/italy/rome-colosseum-family.jpg" alt="The Munasinghe-Fernando family of five together in front of the Colosseum in Rome." style="max-height:118mm; max-width:74%; object-fit:contain; border-radius:4px;"></div>
+  <div class="wl-body">
+    <p>We're the Munasinghe-Fernandos — two parents and three children who love to see the world <em>together</em>. My husband and I share one dream: to travel to as many countries as we possibly can, as a family.</p>
+    <p>It's never easy — booking flights, trains and rooms for five is its own small adventure, and we know we can't reach everywhere. But from every country we do get to, we try our very best to see as much as we can. This magazine is where we keep all of it.</p>
+    <p style="font-style:italic; color:#7a4a2e; text-align:right; margin-top:14px;">— The Munasinghe-Fernandos, 2026</p>
+  </div>
+</div>
+
+<!-- ===== PAGE 3 · WELCOME + CONTENTS ===== -->
+<div class="mag-page mag-welcome">
+  <div class="wl-num">No. 06 · Welcome</div>
   <div class="wl-title">Welcome to<br>everything at once.</div>
   <div class="wl-divider"></div>
   <div class="wl-body">
-    <p>Italy was the engine of the trip. We had six days, six cities, six wildly different histories, and three children who fell in love with gelato early and never recovered. We crossed the Alps from Slovenia. We arrived in Venice on a hot Friday. By the time we left Naples on the following Wednesday, we had walked through more Roman ruins, more Renaissance frescoes, more medieval churches, and more pasta plates than the rest of the trip combined.</p>
-    <p>This is the longest issue of the magazine, because Italy refused to be smaller.</p>
-    <p>You will find inside: the Doge's Palace, the dome of Brunelleschi, the Sistine Chapel, the ruins of Pompeii frozen in 79 AD, and the world's finest pizza arguments. We could not put it all here. We tried.</p>
-    <p style="font-style:italic; color:#7a4a2e; text-align:right; margin-top:14px;">— The Munasinghe-Fernandos, 2026</p>
+    <p>Italy was the engine of the whole trip. We crossed the Alps from the north and dropped down into Venice on a hot Friday afternoon; eight days later we drove out of Milan toward the Swiss border — and in between we had walked through more Roman ruins, more Renaissance frescoes, more gilded churches and more plates of pasta than in all the rest of Europe combined.</p>
+    <p>We went history-first and faith-first, in more or less equal measure: a city built on water, a saint's tomb at Padua, a grandmother's shrine in the fields near Brescia, the cradle of the Renaissance at Florence, the Eternal City, a whole Roman town frozen at 79 AD, and the smallest country on earth with the largest church at its heart.</p>
+    <p>This is the longest issue of the magazine, because Italy refused to be smaller. We could not fit all of it in. We tried.</p>
   </div>
   <div class="toc-title">In this issue</div>
   <ul class="toc-list">
-    <li><span class="toc-name">Welcome — Everything at Once</span><span class="toc-page">02</span></li>
-    <li><span class="toc-name">Venice — A City on the Water</span><span class="toc-page">03</span></li>
-    <li><span class="toc-name">Florence — Where the Renaissance Began</span><span class="toc-page">04</span></li>
-    <li><span class="toc-name">Rome + Vatican — The Eternal City</span><span class="toc-page">05</span></li>
-    <li><span class="toc-name">Milan — The Duomo &amp; the Galleria</span><span class="toc-page">06</span></li>
-    <li><span class="toc-name">Tastes of Italy</span><span class="toc-page">07</span></li>
-    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">08</span></li>
+    <li><span class="toc-name">A Letter from the Road</span><span class="toc-page">02</span></li>
+    <li><span class="toc-name">Welcome — Everything at Once</span><span class="toc-page">03</span></li>
+    <li><span class="toc-name">Venice — A City on the Water</span><span class="toc-page">04</span></li>
+    <li><span class="toc-name">Padua — St Anthony's Tomb</span><span class="toc-page">12</span></li>
+    <li><span class="toc-name">Rosa Mistica — A Grandmother's Miracle</span><span class="toc-page">15</span></li>
+    <li><span class="toc-name">Florence — Cradle of the Renaissance</span><span class="toc-page">20</span></li>
+    <li><span class="toc-name">Rome — The Eternal City</span><span class="toc-page">28</span></li>
+    <li><span class="toc-name">Pompeii — Frozen at 79 AD</span><span class="toc-page">31</span></li>
+    <li><span class="toc-name">The Vatican — The Holy See</span><span class="toc-page">38</span></li>
+    <li><span class="toc-name">Milan — The Duomo &amp; the Galleria</span><span class="toc-page">47</span></li>
+    <li><span class="toc-name">Tastes of Italy</span><span class="toc-page">54</span></li>
+    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">55</span></li>
   </ul>
 </div>
 
 <!-- ===== VENICE divider ===== -->
-<div class="mag-page" style="background:#0c1a2c; display:flex; flex-direction:column; align-items:center; padding:0; position:relative;">
-  <div style="position:absolute; inset:7mm; border:1px solid #c89b3c; pointer-events:none;"></div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.42em; text-transform:uppercase; color:#c89b3c; margin-top:19mm; text-align:center;">The Grand Journey · 2026</div>
-  <div style="width:63%; margin-top:12mm; box-shadow:0 12px 44px rgba(0,0,0,0.55); line-height:0;">
-    <img src="../images/italy/venice-san-marco-family.jpg" alt="The Munasinghe-Fernando family in front of St Mark's Basilica in Venice" style="width:100%; display:block;">
-  </div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.4em; text-transform:uppercase; color:#c89b3c; margin-top:13mm; text-align:center;">Italy</div>
-  <div style="font-family:'Fraunces',serif; font-weight:700; font-size:82px; line-height:1; color:#fefcf7; margin-top:4px; text-align:center; letter-spacing:-0.01em;">Venezia</div>
-  <div style="width:46px; height:2px; background:#c89b3c; margin-top:15px;"></div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.3em; color:#aeb9c4; margin-top:15px; text-align:center;">17—18 Jul 2026</div>
+<div class="mag-page divider">
+  <div class="dv-frame"></div>
+  <div class="dv-kicker">The Grand Journey · 2026</div>
+  <div class="dv-photo"><img src="../images/italy/venice-san-marco-family.jpg" alt="The Munasinghe-Fernando family in front of St Mark's Basilica in Venice"></div>
+  <div class="dv-country">Italy</div>
+  <div class="dv-name">Venezia</div>
+  <div class="dv-rule"></div>
+  <div class="dv-date">17—18 Jul 2026</div>
 </div>
 
+<!-- Venice · history-first opening -->
 <div class="mag-page mag-spread">
-  <div class="sp-eyebrow">COVER STORY · VENICE · SAT 18 JUL 2026</div>
+  <div class="sp-eyebrow">VENICE · A CITY ON THE WATER · SAT 18 JUL</div>
   <div class="sp-headline">A city built<br>on water.</div>
   <div class="sp-deck">Founded fifteen centuries ago by refugees who fled onto the mud islands of a lagoon because no army could reach them. They stayed, drove millions of timber piles into the mud, and built one of the richest cities in history on top of the tide.</div>
   <div class="sp-meta"><span>Sat 18 Jul 2026</span><span>Piazza San Marco · Doge's Palace</span><span>Bus 2 from Mestre · then on foot</span></div>
   <div class="sp-photo">
-    <img src="../images/day-09/venice-piazza-san-marco-after-rain.jpg" alt="Piazza San Marco emptied by rain, Basilica and Campanile, wet stone reflecting a stormy sky">
+    <img src="../images/italy/venice-piazza-after-rain.jpg" alt="Piazza San Marco emptied by rain, Basilica and Campanile, wet stone reflecting a stormy sky">
     <div class="ph-info">Photo · Munasinghe-Fernando</div>
   </div>
   <div class="sp-caption">Piazza San Marco — the Basilica and the Campanile, the wet stone mirroring a sky just washed by rain. Napoleon called this square "the drawing room of Europe."</div>
   <div class="sp-cols">
     <p>We came in from the mainland the simple way — the number 2 bus from Mestre, over the long causeway to Piazzale Roma, and then the city takes over and the cars simply stop. There are no roads in Venice. There are canals, and narrow lanes, and one great square; everything else is water. Vaporetti chug past every few minutes and gondolas slip between them.</p>
     <div class="sp-quote">No cars. No roads. Just canals, a thousand bridges, and a city that has floated here for 1,500 years.</div>
-    <p>It was a fierce July day — close and hot even by mid-morning. But we had a plan and a booked ticket: the Doge's Palace at half past ten. What we did not expect was that the palace, and the churches, and one cold drink, would spend the whole day quietly saving us from the heat.</p>
+    <p>It was a fierce July day — close and hot even by mid-morning. But we had a plan and a booked ticket: the Doge's Palace at half past ten. What we did not expect was that the palace, the churches and one cold drink would spend the whole day quietly saving us from the heat.</p>
   </div>
   <div style="margin-top:12px; border-left:3px solid #a02828; padding:4px 0 4px 10px;">
     <div style="font-family:'Fraunces', serif; font-weight:700; font-size:16px; color:#1a1a1a; margin-bottom:4px;">A city built on a forest of trees</div>
     <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify;">Venice should not exist. When Roman refugees fled Attila's Huns and later the Lombards in the fifth and sixth centuries, they sheltered in the one place invaders on horseback could not follow: a marshy lagoon of tidal mudflats. To build on water they drove millions of wooden piles deep into the mud, where the oxygen-starved silt petrified rather than rotted the timber — and laid their stone city atop a submerged forest that still holds firm today.</div>
-    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify; margin-top:6px;">From this improbable foundation rose <strong>La Serenissima</strong>, the Most Serene Republic, which endured over a thousand years until 1797. Facing east, Venice made itself Europe's gateway to the riches of Byzantium and the Orient, its merchant galleys returning laden with silk and spice. Marco Polo sailed from here toward China, and the wealth of that trade gilded the domes of St Mark's Basilica.</div>
+    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify; margin-top:6px;">From this improbable foundation rose <strong>La Serenissima</strong>, the Most Serene Republic, which endured over a thousand years until 1797. Facing east, Venice made itself Europe's gateway to the riches of Byzantium and the Orient, its merchant galleys returning laden with silk and spice. Marco Polo sailed from here toward China, and the wealth of that trade gilded the domes of St Mark's Basilica — where our own Venice day would begin and end.</div>
   </div>
   <div class="folio">— Issue 06 · VENICE · A City on the Water —</div>
 </div>
 
+<!-- Venice · Piazza San Marco + family -->
 <div class="mag-page mag-spread">
   <div class="sp-eyebrow">VENICE · PIAZZA SAN MARCO</div>
   <div class="sp-headline">The drawing room<br>of Europe.</div>
   <div class="sp-deck">The only true piazza in Venice — ringed by the Basilica, the bell tower, and the blue-and-gold clock where two bronze Moors have hammered out the hours since 1499.</div>
   <div class="sp-pair">
-    <div class="sp-photo">
-      <img src="../images/day-09/venice-san-marco-family-selfie.jpg" alt="All five of the family in Piazza San Marco, Basilica and Doge's Palace behind">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-    <div class="sp-photo">
-      <img src="../images/day-09/venice-piazza-clock-tower-family.jpg" alt="The family in the square beside the Torre dell'Orologio clock tower">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
+    <div class="sp-photo"><img src="../images/italy/venice-piazza-family-selfie.jpg" alt="All five of the family in Piazza San Marco, Basilica and Doge's Palace behind"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/venice-clock-tower-family.jpg" alt="The family in the square beside the Torre dell'Orologio clock tower"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
   </div>
   <div class="sp-caption">All five of us in the square — the golden Basilica on one side, and the Torre dell'Orologio, where the two bronze giants still strike the great bell.</div>
   <div class="sp-cols">
-    <p>You step out of a shaded lane and the square simply opens — vast, bright, and loud with pigeons and footsteps. The Basilica glitters at one end; the Campanile stands almost 100 metres over everything; the arcades run the length of both long sides.</p>
-    <p>In July it is also a furnace of pale stone with no shade at all, which is exactly why the Venetians learned, centuries ago, to keep their cool indoors.</p>
+    <p>You step out of a shaded lane and the square simply opens — vast, bright, and loud with pigeons and footsteps. The Basilica glitters at one end; the Campanile stands almost a hundred metres over everything; the arcades run the length of both long sides, and somewhere among them is the café where Casanova and, later, half of Europe took their coffee.</p>
+    <p>In July it is also a furnace of pale stone with no shade at all, which is exactly why the Venetians learned, centuries ago, to keep their cool indoors — and why our whole day became a hunt for the shade.</p>
   </div>
   <div class="folio">— Issue 06 · VENICE · Piazza San Marco —</div>
 </div>
 
+<!-- Venice · St Mark's + Vigil Mass (merged) -->
 <div class="mag-page mag-spread">
-  <div class="sp-eyebrow">VENICE · ST MARK'S BASILICA</div>
-  <div class="sp-headline">Gold, and the<br>bones of a saint.</div>
-  <div class="sp-deck">Built to hold the relics of St Mark, smuggled out of Alexandria in 828 under a cargo of pork so the inspectors would not look. Five domes, and more than 8,000 square metres of gold mosaic inside.</div>
-  <div class="sp-photo compact">
-    <img src="../images/day-09/basilica-san-marco-facade.jpg" alt="The west front of St Mark's Basilica, golden mosaics over five arched portals">
+  <div class="sp-eyebrow">VENICE · ST MARK'S BASILICA · OUR VIGIL MASS</div>
+  <div class="sp-headline">Gold, and our<br>Sunday Mass.</div>
+  <div class="sp-deck">Built to hold the relics of St Mark, smuggled out of Alexandria in 828 under a cargo of pork so the inspectors would not look. Five domes, and more than 8,000 square metres of gold mosaic inside — and on the Saturday evening we came back, not as tourists but as worshippers.</div>
+  <div class="sp-photo big">
+    <img src="../images/italy/venice-san-marco-golden-vaults.jpg" alt="The golden mosaic domes of the interior of St Mark's Basilica, Venice">
     <div class="ph-info">Photo · Munasinghe-Fernando</div>
   </div>
-  <div class="sp-caption">The west front — golden mosaics over the five portals, and the four bronze horses on the loggia (copies now; the looted originals are kept safe inside).</div>
+  <div class="sp-caption">The domes of gold glass — the Ascension in the central cupola, lit by shafts of evening light. More than eight thousand square metres of mosaic climb the vaults of St Mark's.</div>
   <div class="sp-cols">
-    <p>By day the Basilica now runs on timed tickets and a long queue that snakes across the square — so we admired the front, the mosaics, the winged lion of St Mark, and left the inside for later.</p>
-    <p>And later was the better idea. As the light softened we came back for the Saturday evening Mass — free, and entered as worshippers through the little Piazzetta dei Leoni door on the north side. For a Catholic family it was our Sunday Mass, sung under those golden vaults with the low sun in the domes. No ticket, no queue — just the church doing the thing it was built for.</p>
-  </div>
-  <div class="folio">— Issue 06 · VENICE · St Mark's Basilica —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">VENICE · INSIDE ST MARK'S</div>
-  <div class="sp-headline">Our Sunday Mass,<br>under golden vaults.</div>
-  <div class="sp-deck">More than 8,000 square metres of gold mosaic climb the domes of St Mark's — and on the Saturday evening we came back, not as tourists but as worshippers, for the Vigil Mass.</div>
-  <div class="sp-pair">
-    <div class="sp-photo">
-      <img src="../images/italy/venice-san-marco-golden-vaults.jpg" alt="The golden mosaic domes of the interior of St Mark's Basilica, Venice">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-    <div class="sp-photo">
-      <img src="../images/italy/venice-san-marco-interior-nave.jpg" alt="Marble columns and mosaic arches in the nave of St Mark's Basilica, Venice">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-  </div>
-  <div class="sp-caption">Left: the domes of gold glass — the Ascension in the central cupola, lit by shafts of evening light. Right: the marble forest of the nave, every arch above it sheathed in mosaic.</div>
-  <div class="sp-cols">
-    <p>By day the queue for the inside snakes across the square, so we admired the front and left it. But as the light softened we came back through the little Piazzetta dei Leoni door on the north side — free, and entered as worshippers — for the Saturday evening Mass.</p>
-    <div class="sp-quote">No ticket, no queue — just the church doing the thing it was built for, and a family at Mass under a heaven of gold.</div>
-    <p>For a Catholic family it fulfilled the Sunday obligation, sung beneath eight centuries of gold with the low sun in the domes — and it is the reason the next morning could be given wholly to St Anthony and to Rosa Mistica.</p>
+    <p>By day the Basilica now runs on timed tickets and a queue that snakes across the square, so we admired the front — the mosaics, the winged lion of St Mark, the four bronze horses on the loggia (copies now; the looted originals kept safe inside) — and left the inside for later.</p>
+    <p>And later was the better idea. As the light softened we came back for the Saturday evening Mass, free, entering as worshippers through the little Piazzetta dei Leoni door on the north side. No ticket, no queue — just the church doing the thing it was built for.</p>
+    <div class="sp-quote">For a Catholic family it was our Sunday Mass, sung beneath eight centuries of gold with the low sun in the domes.</div>
+    <p>Fulfilling the Sunday obligation on the Saturday evening was also a small piece of planning: it meant the next morning could be given wholly to St Anthony at Padua and to Rosa Mistica, without a Mass to catch on the road.</p>
   </div>
   <div class="folio">— Issue 06 · VENICE · Inside St Mark's —</div>
 </div>
 
+<!-- Venice · Doge's Palace -->
 <div class="mag-page mag-spread">
   <div class="sp-eyebrow">VENICE · PALAZZO DUCALE · 10:30</div>
   <div class="sp-headline">The palace that<br>cooled the day.</div>
   <div class="sp-deck">For a thousand years the seat of the Doge and the Venetian Republic — the courtroom, the treasury, and the throne of a sea empire. On a blazing July afternoon, it was also the coolest place in the city.</div>
   <div class="sp-photo compact">
-    <img src="../images/day-09/doge-palace-scala-doro-ceiling.jpg" alt="The gilded vault of the Scala d'Oro, the Golden Staircase in the Doge's Palace">
+    <img src="../images/italy/venice-doge-scala-doro.jpg" alt="The gilded vault of the Scala d'Oro, the Golden Staircase in the Doge's Palace">
     <div class="ph-info">Photo · Munasinghe-Fernando</div>
   </div>
   <div class="sp-caption">The Scala d'Oro — the Golden Staircase — its vault crusted in 24-carat gold stucco. Only those whose names were written in the Republic's Book of Gold were allowed to climb it.</div>
@@ -254,28 +265,30 @@ body { padding:20px; }
   <div class="folio">— Issue 06 · VENICE · The Doge's Palace —</div>
 </div>
 
+<!-- Venice · inside the palace -->
 <div class="mag-page mag-spread">
   <div class="sp-eyebrow">VENICE · INSIDE THE PALACE</div>
   <div class="sp-headline">Ceilings you lie<br>down to read.</div>
   <div class="sp-deck">Room after room painted by Veronese and Tintoretto — the Republic hiring its greatest artists to paint its own power onto every wall and ceiling.</div>
   <div class="sp-photo">
-    <img src="../images/day-09/doge-palace-veronese-rape-of-europa.jpg" alt="Veronese's The Rape of Europa in the Anticollegio of the Doge's Palace">
+    <img src="../images/italy/venice-doge-veronese.jpg" alt="Veronese's The Rape of Europa in the Anticollegio of the Doge's Palace">
     <div class="ph-info">Photo · Munasinghe-Fernando</div>
   </div>
   <div class="sp-caption">Veronese's <em>The Rape of Europa</em>, in the Anticollegio — the waiting room where foreign ambassadors sat before meeting the Doge, surrounded by some of the finest paint in Europe.</div>
   <div class="sp-cols">
-    <p>The walls here are a who's-who: Veronese's shimmering myths, Tintoretto's <em>Bacchus and Ariadne</em>, and vast votive canvases of doges kneeling before the Virgin and the Cross — the state painting itself as blessed, chosen, eternal.</p>
+    <p>The walls here are a who's-who: Veronese's shimmering myths, Tintoretto's brooding canvases, and vast votive scenes of doges kneeling before the Virgin and the Cross — the state painting itself as blessed, chosen, eternal.</p>
     <p>You crane your neck until it aches. Every gilded frame overhead holds another masterpiece, and the children quickly learn that the best view is with your head tipped all the way back.</p>
   </div>
   <div class="folio">— Issue 06 · VENICE · Painted Power —</div>
 </div>
 
+<!-- Venice · Bridge of Sighs -->
 <div class="mag-page mag-spread">
   <div class="sp-eyebrow">VENICE · THE PRISONS</div>
   <div class="sp-headline">Across the<br>Bridge of Sighs.</div>
   <div class="sp-deck">The enclosed stone bridge that carried prisoners from the courtroom straight to the cells — named for the last sigh a captive gave at Venice through its little latticed windows.</div>
   <div class="sp-photo compact">
-    <img src="../images/day-09/doge-palace-prison-cells.jpg" alt="Damp stone prison cells inside the Doge's Palace, behind iron grilles">
+    <img src="../images/italy/venice-doge-prison-cells.jpg" alt="Damp stone prison cells inside the Doge's Palace, behind iron grilles">
     <div class="ph-info">Photo · Munasinghe-Fernando</div>
   </div>
   <div class="sp-caption">The New Prisons — damp stone cells behind heavy iron grilles, reached across the covered bridge. Casanova was locked in the cells above the palace, and famously escaped through the roof in 1756.</div>
@@ -286,87 +299,34 @@ body { padding:20px; }
   <div class="folio">— Issue 06 · VENICE · The Bridge of Sighs —</div>
 </div>
 
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">VENICE · MUSEO DELL'OPERA</div>
-  <div class="sp-headline">The palace's<br>first stones.</div>
-  <div class="sp-deck">On the ground floor, out of the sun, stand the original 14th-century carved capitals from the palace's outer loggia — brought inside to save them, and quietly replaced with copies on the arcade above.</div>
-  <div class="sp-photo compact">
-    <img src="../images/day-09/doge-palace-museo-opera-family.jpg" alt="Avi and one of the boys walking among the original carved stone capitals in the Museo dell'Opera">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
+<!-- Venice · photo essay -->
+<div class="mag-page mag-album">
+  <div class="album-sub">Venice · a day on foot</div>
+  <div class="album-head">Between the palaces, the city itself.</div>
+  <div class="mag-essay">
+    <div class="essay-item essay-lead"><img src="../images/italy/venice-vaporetto-family.jpg" loading="lazy"><div class="essay-cap">We crossed the lagoon and spent a whole day chasing shade through Venice — palace to church, canal to café — before a summer downpour washed the square clean at dusk. This is the walk in between.</div></div>
+    <div class="essay-item"><img src="../images/italy/venice-basilica-facade.jpg" loading="lazy"><div class="essay-cap">The west front of St Mark's — golden mosaics over five portals, the winged lion above, the bronze horses on the loggia.</div></div>
+    <div class="essay-item"><img src="../images/italy/venice-san-marco-interior-nave.jpg" loading="lazy"><div class="essay-cap">Inside, the marble forest of the nave, every arch above it sheathed in mosaic — where we came back for the Vigil Mass.</div></div>
+    <div class="essay-item"><img src="../images/italy/venice-doge-museo-family.jpg" loading="lazy"><div class="essay-cap">A quiet corner of the Doge's Palace — the Museo dell'Opera, where the palace's original Gothic capitals are kept safe out of the weather.</div></div>
+    <div class="essay-item"><img src="../images/italy/venice-san-zulian.jpg" loading="lazy"><div class="essay-cap">San Zulian, off the busy Merceria — a Sansovino church and a cool, still nave: the day's second refuge from the heat.</div></div>
+    <div class="essay-item"><img src="../images/italy/venice-campanile.jpg" loading="lazy"><div class="essay-cap">The Campanile from directly below — the near-hundred-metre bell tower that fell in 1902 and was rebuilt "as it was, where it was."</div></div>
+    <div class="essay-item"><img src="../images/italy/venice-canal-gondolas.jpg" loading="lazy"><div class="essay-cap">Step off the main lanes and Venice becomes green water and arched bridges — a gondola slipping under a little humpback bridge.</div></div>
+    <div class="essay-item"><img src="../images/italy/venice-gondola-station.jpg" loading="lazy"><div class="essay-cap">The gondola station at Orseolo, the striped-shirted gondoliers calling the corners to one another as they turn.</div></div>
+    <div class="essay-item"><img src="../images/italy/venice-magnet-sighs.jpg" loading="lazy"><div class="essay-cap">We didn't ride one — but we held a two-euro magnet of the Bridge of Sighs up against the real thing, and called it a souvenir.</div></div>
+    <div class="essay-item"><img src="../images/italy/venice-hard-rock-family.jpg" loading="lazy"><div class="essay-cap">The day's third refuge: the coldest air-conditioning in the city and a row of iced drinks, before the bells called us to Mass.</div></div>
   </div>
-  <div class="sp-caption">Avi and the boys among the palace's original Gothic capitals — each one carved with virtues, seasons, and trades, cool brick underfoot and quiet all around.</div>
-  <div class="sp-cols">
-    <p>It is the sort of room most people hurry past, and we nearly did — but it turned out to be one of the calmest, coolest corners of the whole palace. The capitals are astonishing up close: birds, kings, months, and moral lessons carved in stone six hundred years ago.</p>
-    <p>Empty pram, small hand held, unhurried footsteps on old brick — a good place to slow down before stepping back into the heat.</p>
-  </div>
-  <div class="folio">— Issue 06 · VENICE · The Original Stones —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">VENICE · CHIESA DI SAN ZULIAN</div>
-  <div class="sp-headline">A cool church<br>on the Merceria.</div>
-  <div class="sp-deck">Halfway along the busy shopping street from San Marco to Rialto, a Sansovino façade and a quiet nave — the second refuge of the day from the heat.</div>
-  <div class="sp-photo compact">
-    <img src="../images/day-09/venice-san-zulian-interior.jpg" alt="The cool interior of San Zulian, altar and crucifix, light through a lunette window">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">Inside San Zulian (San Giuliano) — a Renaissance altarpiece, a gilded reliquary, and a big lunette window pouring cool light onto old marble.</div>
-  <div class="sp-cols">
-    <p>We ducked off the crowded Merceria and pulled open a heavy door, and the noise and heat fell away at once. The front of the church is by Jacopo Sansovino — the same architect who shaped Piazza San Marco — with the bronze figure of the physician Tommaso Rangone set into it.</p>
-    <p>Inside it was still, shaded, and blessedly cool: paintings by Palma il Giovane overhead, a handful of worshippers, and a family catching its breath before the next stretch of sun.</p>
-  </div>
-  <div class="folio">— Issue 06 · VENICE · San Zulian —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">VENICE · THE CANALS</div>
-  <div class="sp-headline">Water where the<br>streets should be.</div>
-  <div class="sp-deck">Step off the main lanes and Venice becomes green water, arched bridges, striped gondoliers, and the red-and-gold winged lion flying overhead.</div>
-  <div class="sp-pair">
-    <div class="sp-photo">
-      <img src="../images/day-09/venice-canal-gondolas.jpg" alt="A gondola gliding under an arched stone bridge on a Venetian canal">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-    <div class="sp-photo">
-      <img src="../images/day-09/venice-souvenir-magnet-bridge-of-sighs.jpg" alt="A Venezia souvenir magnet of the Bridge of Sighs held up in front of the real bridge">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-  </div>
-  <div class="sp-caption">Left: a gondola slipping under a little humpback bridge, the winged-lion banner of Venice above. Right: a fridge-magnet Bridge of Sighs, held up in front of the real one.</div>
-  <div class="sp-cols">
-    <p>The gondoliers still wear the striped shirts and still call the corners to one another as they turn. We watched them thread the narrow canals, oars flashing, tourists on every bridge leaning over to take the same photograph.</p>
-    <p>We did not ride one — but we held up a two-euro magnet against the real Bridge of Sighs and decided that was a souvenir all its own.</p>
-  </div>
-  <div class="folio">— Issue 06 · VENICE · The Canals —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">VENICE · KEEPING COOL</div>
-  <div class="sp-headline">Chasing the cool,<br>all day long.</div>
-  <div class="sp-deck">If Venice in July has a plot, this was ours: hot square, cool palace, cool church, cold drinks — and, at the end, rain.</div>
-  <div class="sp-photo compact">
-    <img src="../images/day-09/venice-hard-rock-cafe-family.jpg" alt="The whole family with cold drinks at the Hard Rock Cafe in Venice">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">Cold drinks and air-conditioning at the Hard Rock Cafe — the day's third refuge from the heat, after the palace and the church. Everyone revived.</div>
-  <div class="sp-cols">
-    <p>By mid-afternoon the whole family needed a proper stop, so we found the coldest air-conditioning in the city, ordered a row of iced drinks under the guitars, and simply sat for a while. Bliss.</p>
-    <p>And then Venice answered the heat itself. The sky went slate-grey, umbrellas bloomed across San Marco, and a summer downpour washed the square clean and cool. When it eased, the stones were mirrors — and the bells were already calling the city to the Saturday evening Mass.</p>
-  </div>
-  <div class="folio">— Issue 06 · VENICE · Keeping Cool —</div>
+  <div class="folio">— Issue 06 · VENICE · A day on foot —</div>
 </div>
 
 <!-- ===== PADUA divider ===== -->
-<div class="mag-page" style="background:#0c1a2c; display:flex; flex-direction:column; align-items:center; padding:0; position:relative;">
-  <div style="position:absolute; inset:7mm; border:1px solid #c89b3c; pointer-events:none;"></div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.42em; text-transform:uppercase; color:#c89b3c; margin-top:19mm; text-align:center;">The Grand Journey · 2026</div>
-  <div style="width:63%; margin-top:12mm; box-shadow:0 12px 44px rgba(0,0,0,0.55); line-height:0;">
-    <img src="../images/italy/padua-family.jpg" alt="The Munasinghe-Fernando family in front of the domes and towers of the Basilica of Saint Anthony in Padua" style="width:100%; display:block;">
-  </div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.4em; text-transform:uppercase; color:#c89b3c; margin-top:13mm; text-align:center;">Italy</div>
-  <div style="font-family:'Fraunces',serif; font-weight:700; font-size:82px; line-height:1; color:#fefcf7; margin-top:4px; text-align:center; letter-spacing:-0.01em;">Padova</div>
-  <div style="width:46px; height:2px; background:#c89b3c; margin-top:15px;"></div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.3em; color:#aeb9c4; margin-top:15px; text-align:center;">19 Jul 2026</div>
+<div class="mag-page divider">
+  <div class="dv-frame"></div>
+  <div class="dv-kicker">The Grand Journey · 2026</div>
+  <div class="dv-photo"><img src="../images/italy/padua-family.jpg" alt="The Munasinghe-Fernando family in front of the domes and towers of the Basilica of Saint Anthony in Padua"></div>
+  <div class="dv-country">Italy</div>
+  <div class="dv-name">Padova</div>
+  <div class="dv-rule"></div>
+  <div class="dv-date">19 Jul 2026</div>
 </div>
 
 <div class="mag-page mag-spread">
@@ -374,14 +334,8 @@ body { padding:20px; }
   <div class="sp-headline">The road south begins<br>at a saint's tomb.</div>
   <div class="sp-deck">We left Venice at first light and stopped, an hour down the road, at the great domed Basilica of Saint Anthony — where the beloved saint of lost things and lost causes has lain since 1231.</div>
   <div class="sp-pair">
-    <div class="sp-photo">
-      <img src="../images/italy/padua-tomb-of-st-anthony.jpg" alt="The marble Tomb of St Anthony in the Basilica del Santo, Padua, with carved reliefs">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-    <div class="sp-photo">
-      <img src="../images/italy/padua-basilica-nave.jpg" alt="The vaulted nave of the Basilica of St Anthony in Padua, light falling through the dome">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
+    <div class="sp-photo"><img src="../images/italy/padua-tomb-of-st-anthony.jpg" alt="The marble Tomb of St Anthony in the Basilica del Santo, Padua, with carved reliefs"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/padua-basilica-nave.jpg" alt="The vaulted nave of the Basilica of St Anthony in Padua, light falling through the dome"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
   </div>
   <div class="sp-caption">Left: the Tomb of St Anthony, its marble worn smooth by eight centuries of pilgrims' hands and heaped with photographs and written petitions. Right: the great nave, cool and dim, light pouring down from the domes.</div>
   <div class="sp-cols">
@@ -396,29 +350,27 @@ body { padding:20px; }
   <div class="sp-eyebrow">PADUA · A GILDED MADONNA</div>
   <div class="sp-headline">Our Lady, in gold,<br>above the crowd.</div>
   <div class="sp-deck">Beneath a great fall of crimson cloth, a golden Madonna and Child keeps watch over the pilgrims who come and go all day beneath her.</div>
-  <div class="sp-photo compact">
-    <img src="../images/italy/padua-madonna-and-child.jpg" alt="A golden statue of the Madonna and Child on a column draped with red cloth in the Basilica of St Anthony">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
+  <div class="sp-pair">
+    <div class="sp-photo"><img src="../images/italy/padua-madonna-and-child.jpg" alt="A golden statue of the Madonna and Child on a column draped with red cloth in the Basilica of St Anthony"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/padua-basilica.jpg" alt="The interior of the Basilica of St Anthony, light falling in shafts through the great dim nave"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
   </div>
-  <div class="sp-caption">A gilded Madonna and Child on her column, haloed in tiny lights, the red drape spilling down behind her like a royal canopy.</div>
+  <div class="sp-caption">Left: a gilded Madonna and Child on her column, haloed in tiny lights, the red drape spilling down behind her. Right: the Santo at prayer — shafts of morning light falling the length of the dim nave.</div>
   <div class="sp-cols">
     <p>Everywhere in the Santo there is gold — Donatello's bronzes on the high altar, reliquaries, candlelight — but the children stopped for this one: Mary in gold with the Child on her arm, small and bright against all that red.</p>
-    <p>It felt the right note to carry out of the door, because the morning's next stop was hers too — a quieter shrine, an hour to the west, to a name of Our Lady one of us had known since childhood.</p>
+    <p>It felt the right note to carry out of the door, because the morning's next stop was hers too — a quieter shrine, an hour and a half to the west, to a name of Our Lady one of us had known since childhood.</p>
   </div>
   <div class="folio">— Issue 06 · PADUA · The Gilded Madonna —</div>
 </div>
 
 <!-- ===== ROSA MISTICA divider ===== -->
-<div class="mag-page" style="background:#0c1a2c; display:flex; flex-direction:column; align-items:center; padding:0; position:relative;">
-  <div style="position:absolute; inset:7mm; border:1px solid #c89b3c; pointer-events:none;"></div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.42em; text-transform:uppercase; color:#c89b3c; margin-top:19mm; text-align:center;">The Grand Journey · 2026</div>
-  <div style="width:63%; margin-top:12mm; box-shadow:0 12px 44px rgba(0,0,0,0.55); line-height:0;">
-    <img src="../images/italy/rosa-mistica-sanctuary.jpg" alt="The entrance banner of the Santuario Rosa Mistica at Fontanelle di Montichiari" style="width:100%; display:block;">
-  </div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.4em; text-transform:uppercase; color:#c89b3c; margin-top:11mm; text-align:center;">Italy</div>
-  <div style="font-family:'Fraunces',serif; font-weight:700; font-size:60px; line-height:0.98; color:#fefcf7; margin-top:4px; text-align:center; letter-spacing:-0.01em;">Rosa<br>Mistica</div>
-  <div style="width:46px; height:2px; background:#c89b3c; margin-top:13px;"></div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.3em; color:#aeb9c4; margin-top:13px; text-align:center;">Jul 2026</div>
+<div class="mag-page divider">
+  <div class="dv-frame"></div>
+  <div class="dv-kicker">The Grand Journey · 2026</div>
+  <div class="dv-photo"><img src="../images/italy/rosa-mistica-sanctuary.jpg" alt="The entrance banner of the Santuario Rosa Mistica at Fontanelle di Montichiari"></div>
+  <div class="dv-country">Italy</div>
+  <div class="dv-name" style="font-size:60px; line-height:0.98;">Rosa<br>Mistica</div>
+  <div class="dv-rule"></div>
+  <div class="dv-date">19 Jul 2026</div>
 </div>
 
 <div class="mag-page mag-spread">
@@ -443,14 +395,8 @@ body { padding:20px; }
   <div class="sp-headline">The Mystical Rose,<br>Mother of the Church.</div>
   <div class="sp-deck">Three roses — white, red and gold — for the spirit of prayer, of sacrifice, and of penance. In 2024 the little country shrine was recognised at last as a diocesan Marian sanctuary of the Diocese of Brescia.</div>
   <div class="sp-pair">
-    <div class="sp-photo">
-      <img src="../images/italy/rosa-mistica-mater-ecclesiae.jpg" alt="Pilgrims seated beneath the ROSA MISTICA MATER ECCLESIAE banner at the Fontanelle shrine">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-    <div class="sp-photo">
-      <img src="../images/italy/rosa-mistica-shrine-interior.jpg" alt="Inside the Rosa Mistica shrine, pilgrims and the white statue of Our Lady at the front">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
+    <div class="sp-photo"><img src="../images/italy/rosa-mistica-mater-ecclesiae.jpg" alt="Pilgrims seated beneath the ROSA MISTICA MATER ECCLESIAE banner at the Fontanelle shrine"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/rosa-mistica-shrine-interior.jpg" alt="Inside the Rosa Mistica shrine, pilgrims and the white statue of Our Lady at the front"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
   </div>
   <div class="sp-caption">ROSA MISTICA · MATER ECCLESIAE — the Mystical Rose, Mother of the Church. Pilgrims from around the world fill the simple hall, many kneeling, many in tears.</div>
   <div class="sp-cols">
@@ -481,14 +427,8 @@ body { padding:20px; }
   <div class="sp-headline">At the spring,<br>a wall of thank-yous.</div>
   <div class="sp-deck">At Fontanelle — "the little springs" — pilgrims come to the water and to the white statue of Our Lady, and leave behind marble plaques of two words repeated a thousand times: <em>grazie ricevute</em>, graces received.</div>
   <div class="sp-pair">
-    <div class="sp-photo">
-      <img src="../images/italy/rosa-mistica-statue-spring.jpg" alt="The white marble statue of Our Lady Rosa Mistica with a rosary, orchids at her feet, by the spring">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-    <div class="sp-photo">
-      <img src="../images/italy/rosa-mistica-ex-voto.jpg" alt="The family among walls of ex-voto thanksgiving plaques at the Fontanelle shrine">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
+    <div class="sp-photo"><img src="../images/italy/rosa-mistica-statue-spring.jpg" alt="The white marble statue of Our Lady Rosa Mistica with a rosary, orchids at her feet, by the spring"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/rosa-mistica-ex-voto.jpg" alt="The family among walls of ex-voto thanksgiving plaques at the Fontanelle shrine"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
   </div>
   <div class="sp-caption">Left: Our Lady at the spring, rosary in hand, white orchids at her feet. Right: the family among the ex-voto plaques — walls of <em>grazie</em> from pilgrims whose prayers, they believe, were answered here.</div>
   <div class="sp-cols">
@@ -500,33 +440,25 @@ body { padding:20px; }
 </div>
 
 <!-- ===== FLORENCE divider ===== -->
-<div class="mag-page" style="background:#0c1a2c; display:flex; flex-direction:column; align-items:center; padding:0; position:relative;">
-  <div style="position:absolute; inset:7mm; border:1px solid #c89b3c; pointer-events:none;"></div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.42em; text-transform:uppercase; color:#c89b3c; margin-top:19mm; text-align:center;">The Grand Journey · 2026</div>
-  <div style="width:63%; margin-top:12mm; box-shadow:0 12px 44px rgba(0,0,0,0.55); line-height:0;">
-    <img src="../images/italy/florence-duomo-family.jpg" alt="The Munasinghe-Fernando family in front of Florence Cathedral" style="width:100%; display:block;">
-  </div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.4em; text-transform:uppercase; color:#c89b3c; margin-top:13mm; text-align:center;">Italy</div>
-  <div style="font-family:'Fraunces',serif; font-weight:700; font-size:82px; line-height:1; color:#fefcf7; margin-top:4px; text-align:center; letter-spacing:-0.01em;">Firenze</div>
-  <div style="width:46px; height:2px; background:#c89b3c; margin-top:15px;"></div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.3em; color:#aeb9c4; margin-top:15px; text-align:center;">19 Jul 2026</div>
+<div class="mag-page divider">
+  <div class="dv-frame"></div>
+  <div class="dv-kicker">The Grand Journey · 2026</div>
+  <div class="dv-photo"><img src="../images/italy/florence-duomo-family.jpg" alt="The Munasinghe-Fernando family in front of Florence Cathedral"></div>
+  <div class="dv-country">Italy</div>
+  <div class="dv-name">Firenze</div>
+  <div class="dv-rule"></div>
+  <div class="dv-date">19 Jul 2026</div>
 </div>
 
 <div class="mag-page mag-spread">
-  <div class="sp-eyebrow">FLORENCE · DAY 11 · 15:00</div>
+  <div class="sp-eyebrow">FLORENCE · CRADLE OF THE RENAISSANCE · 15:00</div>
   <div class="sp-headline">Where the Renaissance<br>became inevitable.</div>
   <div class="sp-deck">We rolled in from the north around three — over the Apennines, past the great IKEA at the city's edge — and parked the car for a city built to be walked. This is Florence: the cradle of the Renaissance, packed into a mile of the Arno.</div>
   <div class="sp-pair">
-    <div class="sp-photo">
-      <img src="../images/italy/florence-duomo-family-selfie.jpg" alt="The Munasinghe-Fernando family — two parents and three children — smiling in front of Florence Cathedral and Giotto's bell tower">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-    <div class="sp-photo">
-      <img src="../images/italy/florence-duomo-facade.jpg" alt="The green, white and pink marble Gothic façade of Florence Cathedral, Santa Maria del Fiore">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
+    <div class="sp-photo"><img src="../images/italy/florence-duomo-family-selfie.jpg" alt="The family smiling in front of Florence Cathedral and Giotto's bell tower"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/florence-duomo-facade.jpg" alt="The green, white and pink marble Gothic façade of Florence Cathedral, Santa Maria del Fiore"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
   </div>
-  <div class="sp-caption">All five of us under the Duomo — Santa Maria del Fiore — its façade a fever of green, white and pink marble, Giotto's bell tower alongside in its summer scaffolding. Behind rises Brunelleschi's dome, still the largest masonry dome ever raised.</div>
+  <div class="sp-caption">All five of us under the Duomo — Santa Maria del Fiore — its façade a fever of green, white and pink marble, Giotto's bell tower alongside. Behind rises Brunelleschi's dome, still the largest masonry dome ever raised.</div>
   <div class="sp-cols">
     <p>The shrine had run us late, so Florence began at a gallop: park outside the ZTL, drop the bags, and walk straight into the storm of marble that is the cathedral square. The Duomo simply stops you — there is no easing into it.</p>
     <div class="sp-quote">Half a mile of the Arno holds more art than most whole countries. You do not so much visit Florence as wade through it.</div>
@@ -535,7 +467,7 @@ body { padding:20px; }
   <div style="margin-top:12px; border-left:3px solid #a02828; padding:4px 0 4px 10px;">
     <div style="font-family:'Fraunces', serif; font-weight:700; font-size:16px; color:#1a1a1a; margin-bottom:4px;">How one city reinvented the world</div>
     <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify;">Why did the Renaissance ignite in Florence? Follow the money. In the fifteenth century the <strong>Medici</strong>, a family of ambitious bankers, held the accounts of popes and princes — and poured their fortune into art. Their patronage, and that of rival Florentine guilds, gave the world Botticelli, a young Leonardo da Vinci, and a temperamental genius named Michelangelo, whose <em>David</em> still stands as the city's marble heartbeat.</div>
-    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify; margin-top:6px;">Nowhere is Florentine daring clearer than the cathedral dome. For over a century the Duomo gaped open, its planned crown deemed impossible to build. Then a goldsmith, <strong>Filippo Brunelleschi</strong>, cracked the puzzle: a self-supporting double shell of over four million bricks laid in a herringbone pattern, raised without the wooden scaffolding everyone believed essential. Completed in 1436, it remains the largest masonry dome ever built.</div>
+    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify; margin-top:6px;">Nowhere is Florentine daring clearer than the cathedral dome. For over a century the Duomo gaped open, its planned crown deemed impossible to build. Then a goldsmith, <strong>Filippo Brunelleschi</strong>, cracked the puzzle: a self-supporting double shell of over four million bricks laid in a herringbone pattern, raised without the wooden centring everyone believed essential. Completed in 1436, it remains the largest masonry dome ever built.</div>
   </div>
   <div class="folio">— Issue 06 · FLORENCE · The Cradle of the Renaissance —</div>
 </div>
@@ -545,16 +477,10 @@ body { padding:20px; }
   <div class="sp-headline">Booked at a quarter<br>past four.</div>
   <div class="sp-deck">Once the Medici's offices — <em>uffizi</em> means "offices" — now one of the greatest galleries on earth, a long U of corridors hung with the whole Renaissance.</div>
   <div class="sp-pair">
-    <div class="sp-photo">
-      <img src="../images/italy/florence-uffizi-battle-hall.jpg" alt="A vast battle painting above classical marble statues in a gallery of the Uffizi">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-    <div class="sp-photo">
-      <img src="../images/italy/florence-uffizi-laocoon.jpg" alt="Baccio Bandinelli's marble copy of the Laocoön group in the Uffizi, against tall windows">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
+    <div class="sp-photo"><img src="../images/italy/florence-uffizi-battle-hall.jpg" alt="A vast battle painting above classical marble statues in a gallery of the Uffizi"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/florence-uffizi-laocoon.jpg" alt="Baccio Bandinelli's marble copy of the Laocoön group in the Uffizi, against tall windows"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
   </div>
-  <div class="sp-caption">Left: the Niobe Room — the <em>Niobids</em>, Roman marble copies of Greek Hellenistic originals (c. 3rd century BC), a mother shielding her youngest child, beneath a great battle canvas. Right: the <em>Laocoön</em> by <strong>Baccio Bandinelli</strong> — a marble copy of the ancient Rhodian group (unearthed in Rome, 1506), commissioned by Pope Leo X in <strong>1520</strong> and finished about 1525.</div>
+  <div class="sp-caption">Left: the Niobe Room — Roman marble copies of Greek Hellenistic originals beneath a great battle canvas. Right: the <em>Laocoön</em> by <strong>Baccio Bandinelli</strong>, a marble copy of the ancient Rhodian group (unearthed in Rome, 1506), commissioned by Pope Leo X around 1520.</div>
   <div class="sp-cols">
     <p>The timed ticket spared us the worst of the queue, and then it is simply room after room of things you have seen in books all your life — Botticelli, Leonardo, Michelangelo, Raphael — hung on the walls as if it were nothing.</p>
     <p>The children lasted better than we feared, partly for the statues (easier to love than paintings at eight) and partly for the windows: the long corridor looks straight down onto the Arno and across to the Ponte Vecchio.</p>
@@ -562,70 +488,21 @@ body { padding:20px; }
   <div class="folio">— Issue 06 · FLORENCE · The Uffizi —</div>
 </div>
 
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">FLORENCE · THE UFFIZI · MASTERS</div>
-  <div class="sp-headline">Madonnas, saints,<br>and Medici gold.</div>
-  <div class="sp-deck">Room after room of altarpieces and tondi — the sacred painting that Florence's wealth and faith made possible, and its greatest hands perfected.</div>
-  <div class="sp-pair">
-    <div class="sp-photo">
-      <img src="../images/italy/florence-uffizi-madonna-angels.jpg" alt="A Renaissance painting of the Madonna and Child enthroned among singing angels">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-    <div class="sp-photo">
-      <img src="../images/italy/florence-uffizi-andrea-del-sarto.jpg" alt="Andrea del Sarto's Stories of Joseph in an ornate gilt frame in the Uffizi">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-  </div>
-  <div class="sp-caption">Left: a <em>sacra conversazione</em> — the Madonna and Child enthroned among singing angels and saints (artist to confirm from the wall label). Right: a crowded narrative panel by <strong>Andrea del Sarto</strong> (Andrea d'Agnolo, 1486–1530) — the painter Vasari praised as <em>senza errori</em>, the faultless one.</div>
-  <div class="sp-cols">
-    <p>For a Catholic family the Uffizi is a strange, double thing — a museum, yes, but wall after wall of the very faith we had just been praying in Padua and at Fontanelle, here painted by the finest hands the world has produced.</p>
-    <p>You move slowly, pick a favourite in each room, and try not to let the sheer quantity turn it into wallpaper. By the end the little ones were counting angels; there were, it turned out, a great many to count.</p>
+<!-- Florence · Uffizi + Baptistery essay -->
+<div class="mag-page mag-album">
+  <div class="album-sub">Florence · the Uffizi &amp; the Baptistery</div>
+  <div class="album-head">The whole Renaissance, room by room.</div>
+  <div class="mag-essay">
+    <div class="essay-item essay-lead"><img src="../images/italy/florence-uffizi-madonna-angels.jpg" loading="lazy"><div class="essay-cap">For a Catholic family the Uffizi is a strange, double thing — a museum, and wall after wall of the very faith we had just been praying in Padua and at Fontanelle, here painted by the finest hands the world has produced.</div></div>
+    <div class="essay-item"><img src="../images/italy/florence-uffizi-holy-family-tondo.jpg" loading="lazy"><div class="essay-cap">A Holy Family <em>tondo</em> — the round panel Florentine painters favoured for the home: Mary, the Christ Child, the infant St John and an aged Joseph.</div></div>
+    <div class="essay-item"><img src="../images/italy/florence-uffizi-andrea-del-sarto.jpg" loading="lazy"><div class="essay-cap">A crowded narrative panel by <strong>Andrea del Sarto</strong> (1486–1530) — the painter Vasari praised as <em>senza errori</em>, the faultless one.</div></div>
+    <div class="essay-item"><img src="../images/italy/florence-uffizi-painting-gold-frame.jpg" loading="lazy"><div class="essay-cap">A sacred scene set in a richly carved and gilded frame — the Florentine rooms are full of them.</div></div>
+    <div class="essay-item"><img src="../images/italy/florence-uffizi-altarpiece.jpg" loading="lazy"><div class="essay-cap">A multi-panelled altarpiece — a mitred bishop-saint and companions above a <em>predella</em> of small narrative scenes.</div></div>
+    <div class="essay-item"><img src="../images/italy/florence-uffizi-statue.jpg" loading="lazy"><div class="essay-cap">And, framed in a window, an antique marble — a Roman copy after a Greek original, of the kind the Medici collected obsessively.</div></div>
+    <div class="essay-item"><img src="../images/italy/florence-baptistery-ceiling.jpg" loading="lazy"><div class="essay-cap">Then, across the square, the Baptistery — the mosaic vault a whole heaven of gold, patriarchs and prophets in tiny cubes of glass.</div></div>
+    <div class="essay-item"><img src="../images/italy/florence-baptistery-dome.jpg" loading="lazy"><div class="essay-cap">The eight-sided dome overhead — Genesis, the life of Christ, and a colossal Last Judgement laid in gold eight centuries ago.</div></div>
   </div>
   <div class="folio">— Issue 06 · FLORENCE · Renaissance Masters —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">FLORENCE · THE UFFIZI · DEVOTION</div>
-  <div class="sp-headline">Holy Families,<br>round and small.</div>
-  <div class="sp-deck">The Florentine rooms are full of the Holy Family — in great gold-framed panels and in the intimate <em>tondo</em>, the round picture that Florence made its own in the early 1500s.</div>
-  <div class="sp-pair">
-    <div class="sp-photo">
-      <img src="../images/italy/florence-uffizi-holy-family-tondo.jpg" alt="A round tondo painting of the Holy Family with the infant Saint John">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-    <div class="sp-photo">
-      <img src="../images/italy/florence-uffizi-painting-gold-frame.jpg" alt="A Renaissance painting of a sacred scene in an ornate carved gilt frame">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-  </div>
-  <div class="sp-caption">Left: a Holy Family <em>tondo</em> — the round panel Florentine painters favoured for the home: Mary with the Christ Child, the infant St John and an aged Joseph, c. early 1500s. Right: a sacred scene set in a richly carved gilt frame. <em>(Both artists' names on the wall labels — to be confirmed.)</em></div>
-  <div class="sp-cols">
-    <p>By this point the children were flagging, but the round paintings drew them back — a shape a child can take in at a glance, and always the same tender scene: a mother, a baby, a small cousin, and a watchful old man.</p>
-    <p>Florence painted this subject a thousand ways. Half the joy of the Uffizi is walking one room and seeing a dozen different hands take the very same Madonna and make her entirely their own.</p>
-  </div>
-  <div class="folio">— Issue 06 · FLORENCE · The Uffizi · Devotion —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">FLORENCE · THE UFFIZI · SAINTS &amp; ANTIQUITY</div>
-  <div class="sp-headline">An altarpiece,<br>and an antique.</div>
-  <div class="sp-deck">Two faces of the same collection: a many-panelled church altarpiece, and — everywhere between the paintings — the ancient marbles the Medici prized above all else.</div>
-  <div class="sp-pair">
-    <div class="sp-photo">
-      <img src="../images/italy/florence-uffizi-altarpiece.jpg" alt="A multi-panel altarpiece with a bishop saint and other saints above a predella of small scenes">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-    <div class="sp-photo">
-      <img src="../images/italy/florence-uffizi-statue.jpg" alt="An antique marble statue of a nude male figure with drapery, by a gallery window">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-  </div>
-  <div class="sp-caption">Left: a multi-panelled altarpiece — a mitred bishop-saint and companions above a <em>predella</em> of small narrative scenes (artist to confirm from the label). Right: an antique marble in the corridor — a Roman copy after a Greek original, of the kind the Medici collected obsessively.</div>
-  <div class="sp-cols">
-    <p>The Uffizi is really two collections braided together: the paintings the Medici commissioned, and the ancient sculpture they hunted across Italy. You turn from a gold-ground altarpiece and there, framed in a window, stands a two-thousand-year-old marble.</p>
-    <p>It is a very Florentine idea — that Christian saints and pagan gods belong in the same long corridor, and that beauty, wherever it comes from, is worth the keeping.</p>
-  </div>
-  <div class="folio">— Issue 06 · FLORENCE · The Uffizi · Saints &amp; Antiquity —</div>
 </div>
 
 <div class="mag-page mag-spread">
@@ -633,14 +510,8 @@ body { padding:20px; }
   <div class="sp-headline">A square that is<br>an open-air museum.</div>
   <div class="sp-deck">Beneath the tower of the Palazzo Vecchio, Florence keeps some of its greatest sculpture out in the open air, free to all — colossal marble and green bronze under the Loggia dei Lanzi.</div>
   <div class="sp-pair">
-    <div class="sp-photo">
-      <img src="../images/italy/florence-palazzo-vecchio-hercules.jpg" alt="Bandinelli's Hercules and Cacus in front of the rusticated stone façade of the Palazzo Vecchio">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-    <div class="sp-photo">
-      <img src="../images/italy/florence-perseus-cellini.jpg" alt="Cellini's bronze Perseus holding the head of Medusa in the Loggia dei Lanzi">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
+    <div class="sp-photo"><img src="../images/italy/florence-palazzo-vecchio-hercules.jpg" alt="Bandinelli's Hercules and Cacus in front of the rusticated stone façade of the Palazzo Vecchio"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/florence-perseus-cellini.jpg" alt="Cellini's bronze Perseus holding the head of Medusa in the Loggia dei Lanzi"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
   </div>
   <div class="sp-caption">Left: Bandinelli's <em>Hercules and Cacus</em> guarding the Palazzo Vecchio, where a copy of Michelangelo's David also stands. Right: Cellini's bronze <em>Perseus with the Head of Medusa</em>, cast in a single pour in 1554.</div>
   <div class="sp-cols">
@@ -655,14 +526,8 @@ body { padding:20px; }
   <div class="sp-headline">Look up: a ceiling<br>of solid gold.</div>
   <div class="sp-deck">The oldest building on the cathedral square — an eight-sided marble box where Dante was baptised — and, inside, a dome sheathed in shimmering 13th-century gold mosaic.</div>
   <div class="sp-pair">
-    <div class="sp-photo">
-      <img src="../images/italy/florence-baptistery-gold-vault.jpg" alt="The gold mosaic vault of the Florence Baptistery, saints and scenes in glittering gold">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-    <div class="sp-photo">
-      <img src="../images/italy/florence-baptistery-tomb-john-xxiii.jpg" alt="Donatello and Michelozzo's marble tomb of Antipope John XXIII inside the Baptistery">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
+    <div class="sp-photo"><img src="../images/italy/florence-baptistery-gold-vault.jpg" alt="The gold mosaic vault of the Florence Baptistery, saints and scenes in glittering gold"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/florence-baptistery-tomb-john-xxiii.jpg" alt="Donatello and Michelozzo's marble tomb of Antipope John XXIII inside the Baptistery"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
   </div>
   <div class="sp-caption">Left: the mosaic vault — a whole heaven of gold (half-hidden this summer behind restorers' scaffolding). Right: Donatello &amp; Michelozzo's tomb of Antipope John XXIII, set into the marble wall.</div>
   <div class="sp-cols">
@@ -689,53 +554,84 @@ body { padding:20px; }
   <div class="folio">— Issue 06 · FLORENCE · Street Food —</div>
 </div>
 
-<!-- ===== ROME divider ===== -->
-<div class="mag-page" style="background:#0c1a2c; display:flex; flex-direction:column; align-items:center; padding:0; position:relative;">
-  <div style="position:absolute; inset:7mm; border:1px solid #c89b3c; pointer-events:none;"></div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.42em; text-transform:uppercase; color:#c89b3c; margin-top:19mm; text-align:center;">The Grand Journey · 2026</div>
-  <div style="width:63%; margin-top:12mm; box-shadow:0 12px 44px rgba(0,0,0,0.55); line-height:0;">
-    <img src="../images/italy/rome-colosseum-family.jpg" alt="The Munasinghe-Fernando family in front of the Colosseum in Rome" style="width:100%; display:block;">
+<!-- Florence · waypoints -->
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">ON THE ROAD · TUSCANY &amp; UMBRIA</div>
+  <div class="sp-headline">Two stops<br>the map gave us.</div>
+  <div class="sp-deck">A long drive is never only a line between two cities. Between the great set-pieces we broke the journey twice — for a tower that will not stand straight, and a hilltop town of pink stone.</div>
+  <div class="sp-pair">
+    <div class="sp-photo"><img src="../images/italy/pisa-leaning-tower-family.jpg" alt="Lana and the children holding up the Leaning Tower of Pisa in the classic pose"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/perugia-church-family.jpg" alt="The family in a selfie at the stone portal of a church in hilltop Perugia"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
   </div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.4em; text-transform:uppercase; color:#c89b3c; margin-top:13mm; text-align:center;">Italy</div>
-  <div style="font-family:'Fraunces',serif; font-weight:700; font-size:82px; line-height:1; color:#fefcf7; margin-top:4px; text-align:center; letter-spacing:-0.01em;">Roma</div>
-  <div style="width:46px; height:2px; background:#c89b3c; margin-top:15px;"></div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.3em; color:#aeb9c4; margin-top:15px; text-align:center;">20—22 Jul 2026</div>
+  <div class="sp-caption">Left: the obligatory photograph at the Leaning Tower of Pisa — everyone holding it up. Right: a family selfie at a church doorway in hilltop Perugia, capital of green Umbria.</div>
+  <div class="sp-cols">
+    <p>Pisa first: the famous white tower on its green field, tilting a full four metres out of true because its builders, back in 1173, set it on soft ground that began to sink before the third floor was up. You cannot resist the pose. We took it, laughed at ourselves, and drove on.</p>
+    <p>And Perugia — a steep old Etruscan town in the hills of Umbria, all pink stone and long views, where we stopped to stretch our legs and say a quick prayer in a cool church before the last push toward Rome.</p>
+  </div>
+  <div class="folio">— Issue 06 · ITALY · On the Road —</div>
+</div>
+
+<!-- ===== ROME divider ===== -->
+<div class="mag-page divider">
+  <div class="dv-frame"></div>
+  <div class="dv-kicker">The Grand Journey · 2026</div>
+  <div class="dv-photo"><img src="../images/italy/rome-colosseum-family.jpg" alt="The Munasinghe-Fernando family in front of the Colosseum in Rome"></div>
+  <div class="dv-country">Italy</div>
+  <div class="dv-name">Roma</div>
+  <div class="dv-rule"></div>
+  <div class="dv-date">20—22 Jul 2026</div>
 </div>
 
 <div class="mag-page mag-spread">
-  <div class="sp-eyebrow">ROME + VATICAN · DAYS 12-14</div>
-  <div class="sp-headline">A city the<br>Romans built,<br>the popes kept.</div>
-  <div class="sp-deck">Three days in Rome was not enough. The Colosseum, the Forum, the Pantheon, the Vatican Museums, the Sistine Chapel, the Spanish Steps, the Trevi Fountain — every corner had something 2,000 years old.</div>
-  <div class="sp-meta"><span>Mon 20 — Wed 22 Jul 2026</span><span>Rome + Vatican City</span><span>3 days · 30 km walked</span></div>
-  <div class="sp-hero" style="background-image:url('../images/italy/day-12-colosseum-interior.jpg');">
-    <div class="ph-name">📷 images/italy/day-12-colosseum-interior.jpg</div>
-    <div class="ph-info">HERO PHOTO · TBD</div>
+  <div class="sp-eyebrow">ROME · THE ETERNAL CITY · DAYS 12–14</div>
+  <div class="sp-headline">A city the Romans<br>built, the popes kept.</div>
+  <div class="sp-deck">Three days in Rome were not enough. The Colosseum, the Forum, the Pantheon, the Spanish Steps, the Trevi Fountain — every corner had something two thousand years old, and every third street had a reason to stop for gelato.</div>
+  <div class="sp-meta"><span>Mon 20 — Wed 22 Jul 2026</span><span>Rome · the Eternal City</span><span>Roughly 30 km on foot</span></div>
+  <div class="sp-photo">
+    <img src="../images/italy/rome-colosseum-exterior.jpg" alt="The great arched outer wall of the Colosseum in Rome under a blue summer sky">
+    <div class="ph-info">Photo · Munasinghe-Fernando</div>
   </div>
-  <div class="sp-caption">Inside the Colosseum — completed 80 AD, held 65,000 spectators, hosted 400 years of gladiator combat.</div>
+  <div class="sp-caption">The Colosseum — completed around 80 AD, it held some 50,000 spectators for four centuries of games. Even a ruin, it is the largest amphitheatre ever built.</div>
   <div class="sp-cols">
-    <p>You cannot understand Rome in three days. We did not try. We picked five sites — the Colosseum and Forum, the Pantheon, the Spanish Steps, the Vatican Museums, and the Trevi Fountain — and we walked between them slowly, eating gelato every three streets to keep the kids motivated. The Vatican Day deserves its own issue: four hours in the Vatican Museums (we cried looking at the Sistine Chapel), an hour in St Peter's Basilica, lunch in Borgo Pio, the Castel Sant'Angelo, gelato at Piazza Navona.</p>
-    <div class="sp-quote">All roads lead to Rome. And they really did: 80,000 km of Roman roads still shape Europe today.</div>
-    <p>On Day 13 we took the Frecciarossa south to Naples and the little Circumvesuviana out to Pompeii — a whole Roman city buried by Vesuvius in 79 AD and forgotten for 1,700 years. Walking its streets is the closest thing to time travel humans have managed. The pages that follow are our afternoon among the ruins.</p>
+    <p>You cannot understand Rome in three days, so we did not try. We picked a handful of things — the Colosseum and the Forum, the Pantheon, the Spanish Steps, the Trevi Fountain — and walked slowly between them in the July heat, eating gelato every few streets to keep three children moving.</p>
+    <div class="sp-quote">All roads lead to Rome. And they really did: some 80,000 km of Roman roads still shape the map of Europe.</div>
+    <p>Two of our Roman days spilled outward: one south to Pompeii and Naples, and one given wholly to the Vatican — each big enough for its own chapter, which follows. This is the city in between: ancient, sun-baked, impossible, and endlessly worth the walking.</p>
   </div>
   <div style="margin-top:12px; border-left:3px solid #a02828; padding:4px 0 4px 10px;">
     <div style="font-family:'Fraunces', serif; font-weight:700; font-size:16px; color:#1a1a1a; margin-bottom:4px;">Why Rome, and not Jerusalem?</div>
     <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify;">It is one of history's great ironies. Jesus was born in Bethlehem and died in Jerusalem — in the Middle East, in Asia — yet the faith that grew from him came to be governed from Rome, and Europe became its heartland. The reason begins with an empire. First-century Judea was a Roman province, so Christianity was born inside the Roman world and spread along its roads. The apostle Paul carried it west through Asia Minor and Greece; Peter and Paul were both martyred in Rome, the capital, and the bishops of Rome — the popes — claimed Peter's authority ever after. When the Emperor Constantine legalised the faith in 313, and Theodosius made it the empire's official religion in 380, its centre of gravity was already Roman and Western.</div>
     <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify; margin-top:6px;">Christianity did reach Asia — earlier and further than most people realise. Missionaries carried it along the Silk Road to Persia, to India (the St Thomas Christians of Kerala trace their church to the apostle himself), and even to Tang-dynasty China by 635; Armenia had become the world's first Christian state back in 301. But from the 7th century the swift rise of Islam absorbed those ancient Christian lands across the Middle East and Central Asia, while in Europe the Church of Rome outlived the empire that bore it, converted the Germanic and Slavic peoples, and became the one institution holding a fractured continent together. And so a Middle-Eastern faith, kept and spread from Rome, became the story of Europe.</div>
   </div>
-  <div class="folio">— Issue 06 · ITALY · 05 —</div>
+  <div class="folio">— Issue 06 · ROME · The Eternal City —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">ROME · THE ANCIENT CENTRE</div>
+  <div class="sp-headline">Walking through<br>two thousand years.</div>
+  <div class="sp-deck">You do not visit ancient Rome so much as walk into it — an amphitheatre, a triumphal arch, and a Forum where the Republic once argued, all within a few hot streets of one another.</div>
+  <div class="sp-pair">
+    <div class="sp-photo"><img src="../images/italy/rome-colosseum-selfie.jpg" alt="The family in a selfie in front of the Colosseum in Rome"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/rome-arch-constantine.jpg" alt="The Arch of Constantine beside the Colosseum in Rome"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+  </div>
+  <div class="sp-caption">Left: all five of us under the Colosseum. Right: the Arch of Constantine (315 AD) beside it — raised to mark the victory that would make Constantine emperor and, in time, turn Rome Christian.</div>
+  <div class="sp-cols">
+    <p>The great ring of the Colosseum still throws its shadow over the same ground where crowds once poured in through numbered arches. Next to it the Arch of Constantine marks the battle of 312 that changed everything — the one after which the emperor threw his lot in with the Christians.</p>
+    <p>From there it is a short, sun-struck walk to the Forum and the Palatine, the broken columns and worn paving of the city that once ran the Western world. We drank litres of water, wore our hats, and let the children set the pace between patches of shade.</p>
+    <div class="sp-quote">The Trevi coins, the Pantheon's open eye, the Spanish Steps at dusk — Rome hands you a wonder on nearly every corner.</div>
+    <p>And in the evenings, the lighter Rome: a coin thrown backwards into the Trevi Fountain, the Pantheon's great dome open to the sky after two thousand years, and gelato on the Spanish Steps as the stone went gold. A city that never quite lets you rest, and never quite lets you leave.</p>
+  </div>
+  <div class="folio">— Issue 06 · ROME · The Ancient Centre —</div>
 </div>
 
 <!-- ===== POMPEII divider ===== -->
-<div class="mag-page" style="background:#0c1a2c; display:flex; flex-direction:column; align-items:center; padding:0; position:relative;">
-  <div style="position:absolute; inset:7mm; border:1px solid #c89b3c; pointer-events:none;"></div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.42em; text-transform:uppercase; color:#c89b3c; margin-top:19mm; text-align:center;">The Grand Journey · 2026</div>
-  <div style="width:63%; margin-top:12mm; box-shadow:0 12px 44px rgba(0,0,0,0.55); line-height:0;">
-    <img src="../images/italy/pompeii-family.jpg" alt="The Munasinghe-Fernando family in the forum of Pompeii, ancient columns and ruins behind" style="width:100%; display:block;">
-  </div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.4em; text-transform:uppercase; color:#c89b3c; margin-top:13mm; text-align:center;">Italy</div>
-  <div style="font-family:'Fraunces',serif; font-weight:700; font-size:82px; line-height:1; color:#fefcf7; margin-top:4px; text-align:center; letter-spacing:-0.01em;">Pompei</div>
-  <div style="width:46px; height:2px; background:#c89b3c; margin-top:15px;"></div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.3em; color:#aeb9c4; margin-top:15px; text-align:center;">21 Jul 2026</div>
+<div class="mag-page divider">
+  <div class="dv-frame"></div>
+  <div class="dv-kicker">The Grand Journey · 2026</div>
+  <div class="dv-photo"><img src="../images/italy/pompeii-family.jpg" alt="The Munasinghe-Fernando family in the forum of Pompeii, ancient columns and ruins behind"></div>
+  <div class="dv-country">Italy</div>
+  <div class="dv-name">Pompei</div>
+  <div class="dv-rule"></div>
+  <div class="dv-date">21 Jul 2026</div>
 </div>
 
 <div class="mag-page mag-spread">
@@ -744,7 +640,7 @@ body { padding:20px; }
   <div class="sp-deck">A whole Roman city, stopped in a single morning — and the green mountain behind it that no one knew was a volcano.</div>
   <div class="sp-meta"><span>Tue 21 Jul 2026</span><span>Pompeii · Bay of Naples</span><span>Buried 79 AD</span></div>
   <div class="sp-photo">
-    <img src="../images/day-13/photo-02-temple-apollo-vesuvius.jpg" alt="The columns of the Temple of Apollo at Pompeii with Mount Vesuvius rising behind">
+    <img src="../images/italy/pompeii-temple-apollo.jpg" alt="The columns of the Temple of Apollo at Pompeii with Mount Vesuvius rising behind">
     <div class="ph-info">Photo · Munasinghe-Fernando</div>
   </div>
   <div class="sp-caption">The Temple of Apollo — and, low on the horizon behind it, <strong>Vesuvius</strong> itself. The Pompeians rebuilt this temple to their gods in the very shadow of the mountain that would bury them.</div>
@@ -756,7 +652,7 @@ body { padding:20px; }
   <div style="margin-top:12px; border-left:3px solid #a02828; padding:4px 0 4px 10px;">
     <div style="font-family:'Fraunces', serif; font-weight:700; font-size:16px; color:#1a1a1a; margin-bottom:4px;">The city that death kept alive</div>
     <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify;">In 79 AD Mount Vesuvius erupted with the force of many atomic bombs, burying the Roman town of Pompeii under metres of ash and pumice in a single day. Yet the catastrophe performed a strange mercy. Sealed from air and moisture, the city was not destroyed but paused: frescoes kept their colour, loaves of bread sat carbonised in ovens, graffiti still teased from the walls. Plaster later poured into voids in the ash revealed the very shapes of the dying, caught mid-gesture.</div>
-    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify; margin-top:6px;">Rediscovered in the eighteenth century after seventeen centuries underground, Pompeii handed us an unmatched window into everyday Roman life. Nearby Naples still lives in the volcano's shadow, Vesuvius looming over the bay — dormant but far from dead. Fittingly, this exuberant city also gave the world one of its great pleasures: the pizza, and specifically the tomato-and-mozzarella Margherita.</div>
+    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify; margin-top:6px;">Rediscovered in the eighteenth century after seventeen centuries underground, Pompeii handed us an unmatched window into everyday Roman life. Nearby Naples still lives in the volcano's shadow, Vesuvius looming over the bay — dormant but far from dead. Fittingly, this exuberant corner of Italy also gave the world one of its great pleasures: the pizza, and specifically the tomato-and-mozzarella Margherita.</div>
   </div>
   <div class="folio">— Issue 06 · POMPEII · Frozen at 79 AD —</div>
 </div>
@@ -766,14 +662,8 @@ body { padding:20px; }
   <div class="sp-headline">The beating heart<br>of the city.</div>
   <div class="sp-deck">The Forum was Pompeii's public square — temples, law courts, markets and politics, all under the eye of Vesuvius.</div>
   <div class="sp-pair">
-    <div class="sp-photo">
-      <img src="../images/day-13/photo-03-forum-jupiter.jpg" alt="The Forum of Pompeii with the Temple of Jupiter and a brick honorary arch">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-    <div class="sp-photo">
-      <img src="../images/day-13/photo-04-forum-colonnade.jpg" alt="The tall two-storey colonnade lining the Forum of Pompeii">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
+    <div class="sp-photo"><img src="../images/italy/pompeii-forum-jupiter.jpg" alt="The Forum of Pompeii with the Temple of Jupiter and a brick honorary arch"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/pompeii-forum-colonnade.jpg" alt="The tall two-storey colonnade lining the Forum of Pompeii"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
   </div>
   <div class="sp-caption">Left: the <strong>Temple of Jupiter</strong> at the head of the Forum, framed by a brick honorary arch. Right: the two-storey <strong>colonnade</strong> that once enclosed the square — market stalls, statues and citizens filling the space between.</div>
   <div class="sp-cols">
@@ -787,11 +677,11 @@ body { padding:20px; }
   <div class="sp-eyebrow">POMPEII · THE ANTIQUARIUM</div>
   <div class="sp-headline">What the ash<br>kept safe.</div>
   <div class="sp-deck">The eruption that destroyed a city also preserved it — statues, frescoes and the smallest daily things, held two thousand years beneath the ash.</div>
-  <div class="sp-photo compact">
-    <img src="../images/day-13/photo-05-marble-goddess.jpg" alt="A draped marble statue of a goddess with a bird at her side, in a glass case in the Antiquarium">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
+  <div class="sp-pair">
+    <div class="sp-photo"><img src="../images/italy/pompeii-marble-goddess.jpg" alt="A draped marble statue of a goddess with a bird at her side, in a glass case in the Antiquarium"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/pompeii-roman-street.jpg" alt="A quiet stone street of Pompeii between ancient walls"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
   </div>
-  <div class="sp-caption">A draped marble goddess with a bird at her feet, in the site's Antiquarium — the folds of her robe as crisp as the day the ash swallowed them.</div>
+  <div class="sp-caption">Left: a draped marble goddess with a bird at her feet, in the site's Antiquarium — the folds of her robe as crisp as the day the ash swallowed them. Right: back out into the empty streets, walked smooth two thousand years ago.</div>
   <div class="sp-cols">
     <p>Because Pompeii was buried so fast and so completely, what came out of the ground was not weathered ruin but a town's belongings: painted walls, mosaics, glassware, even carbonised loaves and eggs. The finest pieces now fill the Antiquarium here and the great National Archaeological Museum in Naples — a short walk, as it happens, from where we would have dinner.</p>
     <p>Standing before a statue this sharp, it is hard to believe the centuries between us. The ash was merciless to the living and astonishingly kind to their things.</p>
@@ -804,7 +694,7 @@ body { padding:20px; }
   <div class="sp-headline">The people<br>of the ash.</div>
   <div class="sp-deck">The most haunting thing at Pompeii is not a building. It is the shape of a person, curled against the falling ash.</div>
   <div class="sp-photo">
-    <img src="../images/day-13/photo-06-plaster-cast.jpg" alt="A plaster cast of a Pompeii victim, curled on their side inside a glass case">
+    <img src="../images/italy/pompeii-plaster-cast.jpg" alt="A plaster cast of a Pompeii victim, curled on their side inside a glass case">
     <div class="ph-info">Photo · Munasinghe-Fernando</div>
   </div>
   <div class="sp-caption">A plaster cast of one of the victims of 79 AD — not a sculpture, but the exact space a real person left behind in the hardened ash.</div>
@@ -817,36 +707,30 @@ body { padding:20px; }
 </div>
 
 <div class="mag-page mag-spread">
-  <div class="sp-eyebrow">POMPEII · OUR DAY · 21 JUL</div>
+  <div class="sp-eyebrow">POMPEII &amp; NAPLES · OUR DAY · 21 JUL</div>
   <div class="sp-headline">A missed train,<br>and a day worth it.</div>
-  <div class="sp-deck">How we actually got there: one train missed, one famous pizza eaten, and forty degrees of July sun on two-thousand-year-old stone.</div>
+  <div class="sp-deck">How we actually got there: one train missed, the world's most famous pizza eaten, forty degrees of July sun on two-thousand-year-old stone, and dinner with family in Naples.</div>
   <div class="sp-pair">
-    <div class="sp-photo">
-      <img src="../images/day-13/photo-01-family-train.jpg" alt="The Munasinghe-Fernando family smiling aboard the Frecciarossa to Naples">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-    <div class="sp-photo">
-      <img src="../images/day-13/photo-07-roman-street.jpg" alt="A quiet stone street of Pompeii between ancient walls">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
+    <div class="sp-photo"><img src="../images/italy/pompeii-family-train.jpg" alt="The Munasinghe-Fernando family smiling aboard the Frecciarossa to Naples"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/napoli-family.jpg" alt="The family in a selfie on a busy Naples street, a red tram behind them"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
   </div>
-  <div class="sp-caption">Left: all five aboard the Frecciarossa south. Right: a Pompeian side street — the same stones, the same corners, walked by strangers two thousand years apart.</div>
+  <div class="sp-caption">Left: all five aboard the Frecciarossa south. Right: back in Naples for the evening — a loud, alive, gloriously chaotic city, and dinner with family.</div>
   <div class="sp-cols">
-    <p>We booked the fast train from Rome, and promptly missed it. A quick re-book put us on the 9:25; by mid-morning we were in Naples, eating the world's most famous pizza at da Michele, then rattling out to the ruins on the little Circumvesuviana.</p>
-    <p>Pompeii in July is <em>burning</em> hot — no shade, the white stone throwing the heat back at you. We drank litres, wore our hats, and walked the Forum, the temples and the casts anyway. Then back to Naples for dinner with family. A day that started badly and ended unforgettable.</p>
+    <p>We booked the fast train from Rome, and promptly missed it. A quick re-book put us on the next one; by mid-morning we were in Naples, eating the world's most famous pizza at da Michele, then rattling out to the ruins on the little Circumvesuviana.</p>
+    <p>Pompeii in July is <em>burning</em> hot — no shade, the white stone throwing the heat back at you. We drank litres, wore our hats, and walked the Forum, the temples and the casts anyway. Then back to Naples for dinner with family — a day that started badly and ended unforgettable.</p>
   </div>
-  <div class="folio">— Issue 06 · POMPEII · Our Day —</div>
+  <div class="folio">— Issue 06 · POMPEII &amp; NAPLES · Our Day —</div>
 </div>
 
 <div class="mag-page mag-spread">
   <div class="sp-eyebrow">POMPEII · THE LITTLEST EXPLORER</div>
   <div class="sp-headline">Eleven kilometres.<br>Age four.</div>
   <div class="sp-deck">Avin kept pace with the whole family across Pompeii — some eleven kilometres, no stroller, in the July heat, a Powerade in one hand and a grin that never left.</div>
-  <div class="sp-photo">
-    <img src="../images/day-13/photo-08-avin-explorer.jpg" alt="Four-year-old Avin in a blue bucket hat, smiling in a Pompeii street with a drink in his hand">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
+  <div class="sp-pair">
+    <div class="sp-photo"><img src="../images/italy/pompeii-avin-explorer.jpg" alt="Four-year-old Avin in a blue bucket hat, smiling in a Pompeii street with a drink in his hand"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/pompeii-family-forum.jpg" alt="The whole family together among the columns and ruins of Pompeii"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
   </div>
-  <div class="sp-caption">Avin (4) in the streets of Pompeii — blue hat, striped shirt, Powerade in hand. Eleven kilometres, and still smiling.</div>
+  <div class="sp-caption">Left: Avin (4) in the streets of Pompeii — blue hat, striped shirt, Powerade in hand. Right: all five of us among the ruins, at the end of a long, hot, unforgettable day.</div>
   <div class="sp-cols">
     <p>Our youngest is quietly becoming the trip's great walker. In China he crossed the entire Forbidden City on his own two feet, his stroller forgotten in a checked bag. Here he did it again — the length of an ancient Roman city, some eleven kilometres over uneven two-thousand-year-old stone, in forty-degree heat.</p>
     <div class="sp-quote">Fifteen thousand steps on our count — every one of them walked by a four-year-old too.</div>
@@ -854,17 +738,170 @@ body { padding:20px; }
   </div>
   <div class="folio">— Issue 06 · POMPEII · The Littlest Explorer —</div>
 </div>
-<!-- ============ MILAN SECTION (23–24 Jul) ============ -->
-<div class="mag-page" style="background:#0c1a2c; display:flex; flex-direction:column; align-items:center; padding:0; position:relative;">
-  <div style="position:absolute; inset:7mm; border:1px solid #c89b3c; pointer-events:none;"></div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.42em; text-transform:uppercase; color:#c89b3c; margin-top:19mm; text-align:center;">The Grand Journey · 2026</div>
-  <div style="width:63%; margin-top:12mm; box-shadow:0 12px 44px rgba(0,0,0,0.55); line-height:0;">
-    <img src="../images/italy/milan-duomo-family.jpg" alt="The Munasinghe-Fernando family below the soaring façade of Milan Cathedral" style="width:100%; display:block;">
+
+<!-- ===== VATICAN divider ===== -->
+<div class="mag-page divider">
+  <div class="dv-frame"></div>
+  <div class="dv-kicker">The Grand Journey · 2026</div>
+  <div class="dv-photo"><img src="../images/italy/vatican-family-square.jpg" alt="The Munasinghe-Fernando family in a selfie in St Peter's Square, the Vatican"></div>
+  <div class="dv-country">Italy · The Holy See</div>
+  <div class="dv-name">Città del<br>Vaticano</div>
+  <div class="dv-rule"></div>
+  <div class="dv-date">22 Jul 2026</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">THE VATICAN · WED 22 JUL</div>
+  <div class="sp-headline">The smallest country,<br>the largest church.</div>
+  <div class="sp-deck">A walled enclave of forty-four hectares inside Rome — the smallest sovereign state on earth — and at its heart the largest church in Christendom, raised over the grave of a fisherman.</div>
+  <div class="sp-meta"><span>Wed 22 Jul 2026</span><span>Vatican City · The Holy See</span><span>The whole day</span></div>
+  <div class="sp-photo compact">
+    <img src="../images/italy/vatican-square-dawn.jpg" alt="St Peter's Square at dawn, the obelisk casting a long shadow, the basilica dome beyond">
+    <div class="ph-info">Photo · Munasinghe-Fernando</div>
   </div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:0.4em; text-transform:uppercase; color:#c89b3c; margin-top:13mm; text-align:center;">Italy</div>
-  <div style="font-family:'Fraunces',serif; font-weight:700; font-size:82px; line-height:1; color:#fefcf7; margin-top:4px; text-align:center; letter-spacing:-0.01em;">Milano</div>
-  <div style="width:46px; height:2px; background:#c89b3c; margin-top:15px;"></div>
-  <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.3em; color:#aeb9c4; margin-top:15px; text-align:center;">23—24 Jul 2026</div>
+  <div class="sp-caption">St Peter's Square in the early light — the great Egyptian obelisk, the colonnade curving away, and Michelangelo's dome beyond. We came early, and gave the Vatican a whole day.</div>
+  <div class="sp-cols">
+    <p>Everywhere else on this trip we ran out of time. Not here. Rome we could only sample; the Vatican we finished — from the square at opening to the last hall of the Museums, St Peter's, the Grottoes beneath it, the Sistine Chapel, and the walk back over the river past Castel Sant'Angelo.</p>
+    <div class="sp-quote">One country you can cross on foot in twenty minutes — and could not exhaust in a lifetime.</div>
+    <p>For a Catholic family this was, quietly, the centre of the whole journey: not just the greatest sight in Rome, but the seat of the faith we had carried with us from St Mark's to St Anthony to a spring in the fields near Brescia. We had saved it for last on purpose.</p>
+  </div>
+  <div style="margin-top:12px; border-left:3px solid #a02828; padding:4px 0 4px 10px;">
+    <div style="font-family:'Fraunces', serif; font-weight:700; font-size:16px; color:#1a1a1a; margin-bottom:4px;">How a fisherman's grave became a country</div>
+    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify;">Around 64 AD the apostle <strong>Peter</strong> was martyred in Nero's circus on the Vatican hill and buried in a simple grave nearby. Two and a half centuries later the Emperor Constantine raised a great basilica directly over that tomb. By the 1500s it was crumbling, and the popes rebuilt it from the ground up — a project of 120 years and the genius of Bramante, Raphael, Michelangelo and Bernini — into the vast church that stands today, the altar still set precisely above the apostle's grave.</div>
+    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify; margin-top:6px;">The Vatican was not always so small. For over a thousand years the popes ruled the broad <em>Papal States</em> across central Italy — until Italian unification swept them away in 1870. For nearly sixty years the popes called themselves "prisoners in the Vatican," until the <strong>Lateran Treaty of 1929</strong> created the modern Vatican City State: independent, neutral, with its own post office, radio, railway and Swiss Guard, and a population of only a few hundred. The world's smallest country, and the spiritual home of over a billion people.</div>
+  </div>
+  <div class="folio">— Issue 06 · THE VATICAN · Smallest Country, Largest Church —</div>
+</div>
+
+<!-- Vatican · St Peter's Square essay -->
+<div class="mag-page mag-album">
+  <div class="album-sub">The Vatican · St Peter's Square</div>
+  <div class="album-head">Bernini's welcoming arms.</div>
+  <div class="mag-essay">
+    <div class="essay-item essay-lead"><img src="../images/italy/vatican-postcard-square.jpg" loading="lazy"><div class="essay-cap">We came in as the square opened, and did what we do everywhere — held a postcard up against the real thing: the obelisk, the dome, and Bernini's colonnade sweeping round like a pair of arms drawing you in.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-colonnade.jpg" loading="lazy"><div class="essay-cap">The colonnade — 284 travertine columns in four ranks, laid out by <strong>Bernini</strong> in the 1660s as "the motherly arms of the Church" embracing the faithful.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-colonnade-gate.jpg" loading="lazy"><div class="essay-cap">Above the columns, a crowd of stone saints and the coat of arms of Pope Alexander VII, who commissioned the square.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-facade.jpg" loading="lazy"><div class="essay-cap">Maderno's great façade — from its central balcony, the <em>loggia delle benedizioni</em>, a new pope is announced to the world.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-fountain.jpg" loading="lazy"><div class="essay-cap">One of the square's twin fountains, catching the early sun — Maderno's on the right, its partner added by Bernini to balance it.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-stpeters-family.jpg" loading="lazy"><div class="essay-cap">And all of us in the square, with the basilica behind — before the queue, before the heat, at the start of a very long, very happy day.</div></div>
+  </div>
+  <div class="folio">— Issue 06 · THE VATICAN · St Peter's Square —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">THE VATICAN · INSIDE ST PETER'S</div>
+  <div class="sp-headline">A church built<br>to hold heaven.</div>
+  <div class="sp-deck">You step through the doors and the scale simply refuses to make sense — a nave the length of two football pitches, a dome you could stand the Statue of Liberty beneath, and everything, everywhere, in marble and gold and bronze.</div>
+  <div class="sp-pair">
+    <div class="sp-photo"><img src="../images/italy/vatican-baldacchino.jpg" alt="Bernini's great bronze baldacchino over the papal altar in St Peter's Basilica"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/vatican-dome-interior.jpg" alt="The interior of Michelangelo's dome above the altar of St Peter's, coffered and lit"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+  </div>
+  <div class="sp-caption">Left: Bernini's bronze <em>baldacchino</em> (1623–34), nearly 30 metres tall, its twisted columns cast from bronze stripped off the Pantheon. Right: Michelangelo's dome soaring above it — the words of Christ to Peter ringing the base in letters two metres high.</div>
+  <div class="sp-cols">
+    <p>Directly beneath the baldacchino and the dome lies the <em>confessio</em>, sunk before the high altar — and beneath that, the tomb of St Peter himself. Only the pope says Mass at this altar, set over the apostle's grave as it has been for seventeen centuries.</p>
+    <div class="sp-quote">Nothing prepares you for the size of it. The children simply stopped, tipped their heads back, and went quiet.</div>
+    <p>We walked the length of the nave in a kind of daze — past markers in the floor showing where the world's other great cathedrals would end if you set them down inside this one, none of them reaching even close to the far wall.</p>
+  </div>
+  <div class="folio">— Issue 06 · THE VATICAN · Inside St Peter's —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">THE VATICAN · THE PIETÀ</div>
+  <div class="sp-headline">Marble made<br>tender.</div>
+  <div class="sp-deck">Just inside the door, behind glass, the one work that stops nearly everyone: Michelangelo's <em>Pietà</em> — Mary holding the body of her son, carved from a single block when the sculptor was just twenty-four.</div>
+  <div class="sp-photo compact">
+    <img src="../images/italy/vatican-pieta.jpg" alt="Michelangelo's Pietà — the Virgin Mary cradling the dead Christ, in white marble behind glass">
+    <div class="ph-info">Photo · Munasinghe-Fernando</div>
+  </div>
+  <div class="sp-caption">Michelangelo's <em>Pietà</em> (1498–99) — the young Virgin cradling her dead son, the folds of her robe and the weight of his body drawn from cold stone. It is the only work Michelangelo ever signed.</div>
+  <div class="sp-cols">
+    <p>He carved it at twenty-four, and when visitors credited the work to another sculptor he crept back one night and cut his name across the sash on Mary's breast — the only signature he ever left on anything. It has stood behind glass since 1972, when a man attacked it with a hammer; the marble was painstakingly restored.</p>
+    <div class="sp-quote">You can see the softness of cloth and skin in stone that has not moved for five hundred years.</div>
+    <p>For all the gold and scale around it, this quiet white group is the thing you carry out of the door — a mother, a son, and grief made unbearably gentle.</p>
+  </div>
+  <div class="folio">— Issue 06 · THE VATICAN · The Pietà —</div>
+</div>
+
+<!-- Vatican · altars & tombs essay -->
+<div class="mag-page mag-album">
+  <div class="album-sub">The Vatican · inside the basilica</div>
+  <div class="album-head">Marble, mosaic, and the popes.</div>
+  <div class="mag-essay">
+    <div class="essay-item essay-lead"><img src="../images/italy/vatican-nave-vault.jpg" loading="lazy"><div class="essay-cap">Above the nave, the barrel vault runs in a river of gilded coffering toward the dome. Almost nothing here is what it seems: St Peter's has scarcely a single oil painting — its "paintings" are all mosaic, millions of tiny tiles copying the great altarpieces so faithfully you must press your nose to the surface to tell.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-basilica-altar.jpg" loading="lazy"><div class="essay-cap">The high altar and the sunken <em>confessio</em> before it, ringed with oil lamps that burn day and night over the tomb of St Peter.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-nave.jpg" loading="lazy"><div class="essay-cap">The long marble floor of the nave, inlaid with coloured stone and the measured lengths of the world's other cathedrals.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-papal-tomb.jpg" loading="lazy"><div class="essay-cap">A Baroque papal monument — a pope in bronze above allegories of Charity and Justice in white marble, the Bernini formula copied for two centuries.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-altar-mosaic.jpg" loading="lazy"><div class="essay-cap">A side altar whose "altarpiece" is in fact a mosaic — the Vatican kept its own mosaic studio precisely to make these.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-altar-relief.jpg" loading="lazy"><div class="essay-cap">Carved marble around another altar, saints and angels worked in high relief in the cool of a side chapel.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-tomb-relief.jpg" loading="lazy"><div class="essay-cap">Close up on a tomb — a marble frieze of mourners and virtues, the kind of detail you walk past a hundred times without seeing.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-founder-statue.jpg" loading="lazy"><div class="essay-cap">A saint's statue high in its niche above a doorway; each of the great pillars carries one of the founders of a religious order.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-mosaic-crucifix.jpg" loading="lazy"><div class="essay-cap">A mosaic icon set above an ancient wooden crucifix at a quiet side altar — a place to stop and pray amid the crowds.</div></div>
+  </div>
+  <div class="folio">— Issue 06 · THE VATICAN · Inside the Basilica —</div>
+</div>
+
+<!-- Vatican · the Grottoes essay -->
+<div class="mag-page mag-album">
+  <div class="album-sub">The Vatican · the Grottoes</div>
+  <div class="album-head">Down among the popes.</div>
+  <div class="mag-essay">
+    <div class="essay-item essay-lead"><img src="../images/italy/vatican-grotto-corridor.jpg" loading="lazy"><div class="essay-cap">Beneath the basilica floor lie the Vatican Grottoes — low, quiet, whitewashed corridors where some ninety popes are buried, along with a few kings and queens. You come down out of the great gold nave into stillness and stone.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-tomb-st-peter.jpg" loading="lazy"><div class="essay-cap">The heart of it all: the shrine over the tomb of St Peter, its inscription reading <em>SEPVLCRVM SANCTI PETRI APOSTOLI</em> — the grave of the apostle, directly below the high altar above.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-grotto-paul-vi.jpg" loading="lazy"><div class="essay-cap">The plain floor-grave of a modern pope — a simple slab in the pavement, chosen in deliberate humility over any grand monument.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-grotto-urban-vi.jpg" loading="lazy"><div class="essay-cap">A carved sarcophagus marked <em>VRBANVS PP VI</em> — Pope Urban VI, who reigned during the great Western Schism of the 14th century.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-grotto-effigy.jpg" loading="lazy"><div class="essay-cap">A medieval papal effigy in marble, the pope carved lying in state atop his tomb, hands folded in prayer.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-grotto-merry-del-val.jpg" loading="lazy"><div class="essay-cap">The tomb of Cardinal <strong>Rafael Merry del Val</strong>, Secretary of State to St Pius X, laid to rest here near the apostle.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-grotto-mosaic-tomb.jpg" loading="lazy"><div class="essay-cap">A wall tomb glowing with gold mosaic — Christ in majesty above the resting place of one of the medieval popes.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-grotto-altar.jpg" loading="lazy"><div class="essay-cap">A small altar in the Grottoes, where Mass is still offered among the tombs.</div></div>
+    <div class="essay-item"><img src="../images/italy/vatican-grotto-chapel.jpg" loading="lazy"><div class="essay-cap">A quiet chapel with a cross and a mosaic floor — a place for a last prayer before the stairs back up to the light.</div></div>
+  </div>
+  <div class="folio">— Issue 06 · THE VATICAN · The Grottoes —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">THE VATICAN · THE MUSEUMS &amp; THE SISTINE CHAPEL</div>
+  <div class="sp-headline">Four hours, and<br>then we cried.</div>
+  <div class="sp-deck">Seven kilometres of galleries lead, in the end, to a single room — and to a ceiling that has undone grown travellers for five hundred years.</div>
+  <div class="sp-pair">
+    <div class="sp-photo"><img src="../images/italy/vatican-museums-corridor.jpg" alt="A long frescoed corridor in the Vatican Museums, ceiling painted end to end"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/vatican-museums-gallery.jpg" alt="A gallery of the Vatican Museums with carved exhibits under low lighting"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+  </div>
+  <div class="sp-caption">Left: one of the Museums' great frescoed corridors — the walls and vaults painted end to end, a river of colour that never seems to stop. Right: a quieter gallery among the miles of collections the popes have gathered over centuries.</div>
+  <div class="sp-cols">
+    <p>The Vatican Museums are not one museum but dozens, strung along corridors that run for the better part of seven kilometres — the Gallery of Maps, the Raphael Rooms, Egyptian mummies, Etruscan gold, modern art, and everywhere the crowd shuffling the same way, toward one door.</p>
+    <p>And then the Sistine Chapel. No photographs are allowed, and the guards hush the room every few minutes, but nothing can prepare you for looking up at Michelangelo's ceiling — the Creation, the outstretched fingers of God and Adam — and, on the far wall, the vast, terrible <em>Last Judgement</em>.</p>
+    <div class="sp-quote">We stood under the ceiling and cried. So did half the room.</div>
+    <p>Michelangelo painted the ceiling between 1508 and 1512, flat on his back on the scaffolding, and returned decades later for the wall. It is the room where the cardinals still lock themselves away to elect a pope. We simply stood in it, necks craned, until the tears came — and they did.</p>
+  </div>
+  <div class="folio">— Issue 06 · THE VATICAN · The Museums &amp; the Sistine Chapel —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">THE VATICAN · BORGO PIO &amp; ACROSS THE RIVER</div>
+  <div class="sp-headline">Lunch at last,<br>and the walk home.</div>
+  <div class="sp-deck">After a whole morning on our feet, the reward: a cool trattoria in the old Borgo, and an evening walk back over the Tiber past a fortress that was once an emperor's tomb.</div>
+  <div class="sp-pair">
+    <div class="sp-photo"><img src="../images/italy/vatican-lunch-family.jpg" alt="The family at lunch at a trattoria table in Borgo Pio, near the Vatican"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/vatican-museums-treasury.jpg" alt="Small treasures displayed behind glass in a red-lined case in the Vatican Museums"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+  </div>
+  <div class="sp-caption">Left: lunch in Borgo Pio, the little pedestrian street of trattorias just outside the Vatican walls — five tired, happy people and a table of pasta. Right: a last case of small treasures on the way out of the Museums.</div>
+  <div class="sp-cols">
+    <p>Borgo Pio is where the Vatican comes to eat — a narrow lane of checked tablecloths a two-minute walk from the colonnade. We collapsed into chairs, ordered too much pasta, and let the children work through a whole basket of bread while the morning caught up with us.</p>
+    <div class="sp-quote">One country, one church, one very long and unforgettable day — and pasta, at the end of it, tasting like a reward.</div>
+    <p>Then the walk back over the river toward Piazza Navona, past <strong>Castel Sant'Angelo</strong> — built as the Emperor Hadrian's mausoleum, later a papal fortress linked to the Vatican by a secret raised passage the popes could flee along in a siege. Gelato at Navona, and the Vatican day was done.</p>
+  </div>
+  <div class="folio">— Issue 06 · THE VATICAN · Borgo Pio —</div>
+</div>
+
+<!-- ============ MILAN SECTION (23–24 Jul) ============ -->
+<div class="mag-page divider">
+  <div class="dv-frame"></div>
+  <div class="dv-kicker">The Grand Journey · 2026</div>
+  <div class="dv-photo"><img src="../images/italy/milan-duomo-family.jpg" alt="The Munasinghe-Fernando family below the soaring façade of Milan Cathedral"></div>
+  <div class="dv-country">Italy</div>
+  <div class="dv-name">Milano</div>
+  <div class="dv-rule"></div>
+  <div class="dv-date">23—24 Jul 2026</div>
 </div>
 
 <div class="mag-page mag-spread">
@@ -880,7 +917,7 @@ body { padding:20px; }
   <div class="sp-cols">
     <p>We came into Milan the long way — a whole day's drive north from Rome, a quick lunch somewhere on the autostrada, and then the flat green plain of Lombardy. Milan was the last Italian city on our map, and the only one where we were not tourists in a hotel: old friends live here, and they took us in.</p>
     <div class="sp-quote">After a week of ancient Rome, Milan felt like stepping into the modern world — trams, boutiques, and a cathedral like a white mountain.</div>
-    <p>They saved their energy that first evening, because the Duomo — the reason everyone comes to Milan — was booked for the morning. But even at dusk the square pulled us in: pigeons, street sellers, and that impossible marble front glowing pink in the last light.</p>
+    <p>We saved our energy that first evening, because the Duomo — the reason everyone comes to Milan — was booked for the morning. But even at dusk the square pulled us in: pigeons, street sellers, and that impossible marble front glowing pink in the last light.</p>
   </div>
   <div class="folio">— Issue 06 · MILAN · Piazza del Duomo —</div>
 </div>
@@ -893,7 +930,7 @@ body { padding:20px; }
     <img src="../images/italy/milan-duomo-nave.jpg" alt="The vast nave of Milan Cathedral, colossal columns and ribbed vaults, shafts of sunlight falling through the windows">
     <div class="ph-info">Photo · Munasinghe-Fernando</div>
   </div>
-  <div class="sp-caption">Inside the Duomo — fifty-two soaring piers march toward the apse, and the morning sun falls in solid shafts through the highest Gothic windows in the world.</div>
+  <div class="sp-caption">Inside the Duomo — fifty-two soaring piers march toward the apse, and the morning sun falls in solid shafts through some of the tallest Gothic windows in the world.</div>
   <div class="sp-cols">
     <p>Nothing prepares you for the inside. You step out of a bright Italian square into a cool grey twilight, and the columns simply keep rising until they vanish. There are fifty-two of them — one, they say, for every week of the year — and each is thick as a house.</p>
     <div class="sp-quote">It took nearly six hundred years to build. In Milan, "as long as the making of the Duomo" still means a job that never ends.</div>
@@ -910,21 +947,15 @@ body { padding:20px; }
 <div class="mag-page mag-spread">
   <div class="sp-eyebrow">MILAN · THE DUOMO · GLASS</div>
   <div class="sp-headline">Light, poured<br>through coloured glass.</div>
-  <div class="sp-deck">The Duomo holds the largest stained-glass windows in the world — some medieval, some Renaissance — telling the whole Bible in glowing panels three storeys high.</div>
+  <div class="sp-deck">The Duomo holds some of the largest stained-glass windows in the world — some medieval, some Renaissance — telling the whole Bible in glowing panels three storeys high.</div>
   <div class="sp-pair">
-    <div class="sp-photo">
-      <img src="../images/italy/milan-duomo-apse-windows.jpg" alt="The three great apse windows of Milan Cathedral, coloured glass glowing above the high altar">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-    <div class="sp-photo">
-      <img src="../images/italy/milan-duomo-stained-glass-rays.jpg" alt="Sunbeams streaming through the tall stained-glass windows of Milan Cathedral in visible shafts of light">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
+    <div class="sp-photo"><img src="../images/italy/milan-duomo-apse-windows.jpg" alt="The three great apse windows of Milan Cathedral, coloured glass glowing above the high altar"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/milan-duomo-stained-glass-rays.jpg" alt="Sunbeams streaming through the tall stained-glass windows of Milan Cathedral in visible shafts of light"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
   </div>
   <div class="sp-caption">Left: the three enormous apse windows above the high altar. Right: on a clear July morning the light came through in solid golden beams you could almost hold.</div>
   <div class="sp-cols">
     <p>The children stopped talking. Sun was pouring through the south windows in visible shafts — thick ropes of gold hanging in the dusty air — and landing in coloured pools on the marble floor. It is the kind of light that makes a four-year-old go quiet.</p>
-    <p>Some of the glass is six hundred years old, some added only a century ago, but together they cover more window than any church on earth. You do not read the stories so much as stand inside their colour.</p>
+    <p>Some of the glass is six hundred years old, some added only a century ago, but together they cover more window than almost any church on earth. You do not read the stories so much as stand inside their colour.</p>
   </div>
   <div class="folio">— Issue 06 · MILAN · The Windows —</div>
 </div>
@@ -932,7 +963,7 @@ body { padding:20px; }
 <div class="mag-page mag-spread">
   <div class="sp-eyebrow">MILAN · THE DUOMO · MARBLE &amp; SKY</div>
   <div class="sp-headline">Tombs below,<br>spires above.</div>
-  <div class="sp-deck">Along the aisles, Renaissance monuments in carved marble; and up on the roof, a stone forest of 135 spires crowned by the golden Madonnina, watching over the whole city.</div>
+  <div class="sp-deck">Along the aisles, Renaissance monuments in carved marble; and up on the roof, a stone forest of spires crowned by the golden Madonnina, watching over the whole city.</div>
   <div class="sp-photo big">
     <img src="../images/italy/milan-duomo-monument.jpg" alt="An ornate Renaissance marble funerary monument inside Milan Cathedral, reclining effigies and figures between red-veined columns">
     <div class="ph-info">Photo · Munasinghe-Fernando</div>
@@ -941,7 +972,7 @@ body { padding:20px; }
   <div class="sp-cols">
     <p>The aisles are lined with the dead of Milan — archbishops and soldiers laid out in marble, guarded by saints and framed in coloured stone. You walk past centuries of the city's memory just crossing from one door to the next.</p>
     <div class="sp-quote">For two hundred years no roof in Milan was allowed to rise higher than the golden Madonnina on her spire.</div>
-    <p>And above it all is the roof — the reason we booked the early lift. A whole forest of pinnacles and statues you can walk among, and at the summit the Madonnina: a gilded copper Virgin raised in 1774, glinting 108 metres above the square, the true high point of the old city.</p>
+    <p>And above it all is the roof — the reason we booked the early lift. A whole forest of pinnacles and statues you can walk among, and at the summit the Madonnina: a gilded copper Virgin raised in 1774, glinting over a hundred metres above the square, the true high point of the old city.</p>
   </div>
   <div class="folio">— Issue 06 · MILAN · Marble &amp; Sky —</div>
 </div>
@@ -951,14 +982,8 @@ body { padding:20px; }
   <div class="sp-headline">The world's most<br>beautiful arcade.</div>
   <div class="sp-deck">Galleria Vittorio Emanuele II — an iron-and-glass cathedral of shopping from the 1860s, cross-shaped beneath a great dome, and known to every Milanese as <em>il salotto</em>: the city's drawing room.</div>
   <div class="sp-pair">
-    <div class="sp-photo">
-      <img src="../images/italy/milan-galleria-arcade.jpg" alt="The glass barrel-vaulted arcade of the Galleria Vittorio Emanuele II in Milan, ornate facades and crowds">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
-    <div class="sp-photo">
-      <img src="../images/italy/milan-galleria-entrance.jpg" alt="The ornate triumphal-arch entrance to the Galleria in Milan with its dedication to Vittorio Emanuele II and architect Mengoni">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-    </div>
+    <div class="sp-photo"><img src="../images/italy/milan-galleria-arcade.jpg" alt="The glass barrel-vaulted arcade of the Galleria Vittorio Emanuele II in Milan, ornate facades and crowds"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+    <div class="sp-photo"><img src="../images/italy/milan-galleria-entrance.jpg" alt="The ornate triumphal-arch entrance to the Galleria in Milan"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
   </div>
   <div class="sp-caption">Left: the barrel-vaulted glass roof running the length of the arcade. Right: the great triumphal entrance, carved with the names of the king and of Giuseppe Mengoni, the architect who designed it.</div>
   <div class="sp-cols">
@@ -977,7 +1002,7 @@ body { padding:20px; }
     <img src="../images/italy/milan-galleria-kids.jpg" alt="Avisha, Aviann and Avin laughing together in the Galleria arcade in Milan, glass dome above, Avin in the stroller">
     <div class="ph-info">Photo · Munasinghe-Fernando</div>
   </div>
-  <div class="sp-caption">The three of them in the Galleria — Camparino and Motta cafés to the sides, the barrel-vaulted glass roof soaring overhead, and Avin holding court from the stroller.</div>
+  <div class="sp-caption">The three of them in the Galleria — cafés to the sides, the barrel-vaulted glass roof soaring overhead, and Avin holding court from the stroller.</div>
   <div class="sp-cols">
     <p>They were tired and it was warm, but the Galleria has a way of lifting everyone. Avisha and Aviann struck a pose; Avin decided the stroller was the best seat in Milan and grinned at everyone who passed.</p>
     <div class="sp-quote">Down on the mosaic floor is a bull, and the custom is to spin on your heel for luck — the reason there is a hole worn right through the stone.</div>
@@ -988,102 +1013,91 @@ body { padding:20px; }
 <!-- ============ END MILAN SECTION ============ -->
 
 <div class="mag-page mag-food">
-  <div class="sp-eyebrow">★ TASTES OF THE TRIP</div>
+  <div class="sp-eyebrow">★ TASTES OF ITALY</div>
   <div class="fd-headline">Six things <em>we ate</em><br>and won't forget.</div>
-  <div class="fd-deck">From morning coffee to evening pastries — the flavours that defined this leg.</div>
+  <div class="fd-deck">From a folded Neapolitan pizza to a tripe roll in a Florence lane — the flavours that fed a family of five across a week of Italy.</div>
   <div class="fd-grid">
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/italy/food-01-pizza.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/italy/food-01-pizza.jpg</div>
-      </div>
+      <div class="fd-img" style="background-image:url('../images/italy/food-pizza-margherita.jpg');"></div>
       <div class="fd-body">
         <div class="fd-num">01</div>
         <div class="fd-name">Pizza Margherita</div>
-        <div class="fd-desc">Naples' gift to the world. Tomato, mozzarella, basil — invented in 1889 for Queen Margherita of Savoy. Wood-fired, eaten folded.</div>
-        <div class="fd-where">📍 L'Antica Pizzeria da Michele · €5 · Day 13</div>
+        <div class="fd-desc">Naples' gift to the world — tomato, mozzarella, basil, the colours of the flag. Wood-fired in ninety seconds, soft in the middle, eaten folded.</div>
+        <div class="fd-where">📍 L'Antica Pizzeria da Michele, Naples · Day 13</div>
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/italy/food-02-cacio-pepe.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/italy/food-02-cacio-pepe.jpg</div>
-      </div>
+      <div class="fd-img" style="background-image:url('../images/italy/food-gelato.jpg');"></div>
       <div class="fd-body">
         <div class="fd-num">02</div>
-        <div class="fd-name">Cacio e Pepe</div>
-        <div class="fd-desc">Three ingredients: spaghetti, pecorino romano, black pepper. Trust the technique. Roman comfort food.</div>
-        <div class="fd-where">📍 Roscioli · €18 · Day 12</div>
+        <div class="fd-name">Gelato</div>
+        <div class="fd-desc">The engine that kept three children walking. Real pistachio is brown-green, not neon; the good stuff is dense and low on air. Eaten daily, often twice.</div>
+        <div class="fd-where">📍 Everywhere · roughly every third street</div>
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/italy/food-03-fiorentina.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/italy/food-03-fiorentina.jpg</div>
-      </div>
+      <div class="fd-img" style="background-image:url('../images/italy/food-cicchetti.jpg');"></div>
       <div class="fd-body">
         <div class="fd-num">03</div>
-        <div class="fd-name">Bistecca alla Fiorentina</div>
-        <div class="fd-desc">A T-bone steak from Tuscan Chianina cattle, cooked rare over charcoal. Served by weight (€8/100g). Eat with both hands.</div>
-        <div class="fd-where">📍 Trattoria Mario · €45 · Day 11</div>
+        <div class="fd-name">Cicchetti</div>
+        <div class="fd-desc">Venice's little bar snacks — bread piled with baccalà, prawn or salami — taken standing at the counter with an <em>ombra</em>, a small glass of wine.</div>
+        <div class="fd-where">📍 Venice · a bàcaro off San Marco · Day 09</div>
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/italy/food-04-tiramisu.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/italy/food-04-tiramisu.jpg</div>
-      </div>
+      <div class="fd-img" style="background-image:url('../images/italy/food-lampredotto.jpg');"></div>
       <div class="fd-body">
         <div class="fd-num">04</div>
-        <div class="fd-name">Tiramisu</div>
-        <div class="fd-desc">"Pick me up" — espresso-soaked savoiardi, mascarpone cream, cocoa. The right one is wet, cool, and barely holds its shape.</div>
-        <div class="fd-where">📍 Pompi · €5 · Day 12</div>
+        <div class="fd-name">Lampredotto</div>
+        <div class="fd-desc">Florence's famous street sandwich — slow-cooked tripe in broth, piled into a bread roll dipped in its own juices and dressed with salsa verde. Braver than it sounds, and delicious.</div>
+        <div class="fd-where">📍 Florence · a street cart near the market · Day 11</div>
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/italy/food-05-gelato.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/italy/food-05-gelato.jpg</div>
-      </div>
+      <div class="fd-img" style="background-image:url('../images/italy/food-cecina.jpg');"></div>
       <div class="fd-body">
         <div class="fd-num">05</div>
-        <div class="fd-name">Gelato (Pistacchio)</div>
-        <div class="fd-desc">Made with Sicilian Bronte pistachios. The bright-green stuff is fake. The real gelato is brown-green and tastes like ground nuts.</div>
-        <div class="fd-where">📍 Gelateria del Teatro · €4 · Day 12</div>
+        <div class="fd-name">Cecina</div>
+        <div class="fd-desc">A thin Tuscan flatbread baked from nothing but chickpea flour, water and olive oil in a wide copper pan — crisp at the edge, soft in the middle, cheap and filling.</div>
+        <div class="fd-where">📍 Florence · a bakery counter · Day 11</div>
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/italy/food-06-espresso.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/italy/food-06-espresso.jpg</div>
-      </div>
+      <div class="fd-img" style="background-image:url('../images/italy/food-trapizzino.jpg');"></div>
       <div class="fd-body">
         <div class="fd-num">06</div>
-        <div class="fd-name">Espresso</div>
-        <div class="fd-desc">At a counter, standing up, in twenty seconds. €1. Bitter. Hot. The right way to end every Italian meal.</div>
-        <div class="fd-where">📍 Any bar · €1 · Daily</div>
+        <div class="fd-name">Trapizzino</div>
+        <div class="fd-desc">Rome's modern classic — a pocket of pizza-bianca stuffed with a spoon of something slow-cooked, like chicken cacciatore or meatballs in sauce. Street food, engineered.</div>
+        <div class="fd-where">📍 Rome · Day 12</div>
       </div>
     </div>
   </div>
-  <div class="folio">— Issue 06 · ITALY · 06 —</div>
+  <div class="folio">— Issue 06 · ITALY · Tastes of Italy —</div>
 </div>
 
 <div class="mag-page mag-reflection">
   <div class="rf-eyebrow">REFLECTIONS · ITALY</div>
-  <div class="rf-headline">Two thousand years<br>in seven days.</div>
+  <div class="rf-headline">Two thousand years<br>in eight days.</div>
   <div class="rf-body">
-    <p>Italy was the longest, hottest, most exhausting, most rewarding week of the trip. We walked an average of 18 kilometres a day. We ate gelato three times a day. We saw the Sistine Chapel, the Mona Lisa's sister-painting at the Uffizi, the throne where Caesar was killed, the inn where Caravaggio brawled, the oven where Pompeii's bread is still burning.</p>
-    <p>The kids will remember the volume. The volume of stone, of frescoes, of statues, of churches, of food. Italy is a country that does not edit. It piles up its history on the streets and asks you to walk through it.</p>
+    <p>Italy was the longest, hottest, most exhausting and most rewarding leg of the whole journey. We walked something close to eighteen kilometres a day, ate gelato most afternoons, and lost count of the churches. We stood under a heaven of gold in Venice, laid our hands on a saint's tomb in Padua, filled little bottles at a country spring near Brescia, wept in the Sistine Chapel, and walked a whole Roman city that had stopped in a single morning in 79 AD.</p>
+    <p>The children will remember the volume — of stone, of frescoes, of statues, of pasta. Italy is a country that does not edit. It piles its history up on the streets and asks you to walk through it. We did, all eight days of it.</p>
   </div>
   <div class="rf-grid">
     <div class="rf-card">
       <div class="rf-label">Favourite moment</div>
-      <div class="rf-value">Sistine Chapel. We all cried. So did half the room.</div>
+      <div class="rf-value">The Sistine Chapel. We stood under Michelangelo's ceiling and cried — and so did half the room.</div>
     </div>
     <div class="rf-card">
       <div class="rf-label">Hardest moment</div>
-      <div class="rf-value">Rome at 35°C in mid-July. We bought four water bottles per person per day.</div>
+      <div class="rf-value">Rome and Pompeii at close to 40°C in mid-July. Four water bottles per person, per day, and never quite enough.</div>
     </div>
     <div class="rf-card">
       <div class="rf-label">If we come back…</div>
-      <div class="rf-value">A week each for Florence, Rome, and the Amalfi Coast. Sicily next. Then Puglia.</div>
+      <div class="rf-value">A week each for Rome, Florence and the Amalfi Coast. Sicily next — and then Puglia.</div>
     </div>
   </div>
-  <div class="rf-signoff">— Avinesh, Lana, Avisha, Aviann & Avin Munasinghe-Fernando<br>Venice → Florence → Rome → Pompeii → Vatican → Milan · 17–24 July 2026</div>
+  <div style="margin-top:14px; border-left:4px solid #7a4a2e; background:rgba(255,255,255,0.55); padding:14px 18px; font-family:'Fraunces', serif; font-style:italic; font-size:15px; line-height:1.6; color:#2a2418;">We came to Italy for its art and its ruins, and we did see them — but what we will carry home is the faith woven through it all: a Vigil Mass under the gold of St Mark's, a hand on St Anthony's tomb, bare feet in a country spring, and five of us in tears beneath the Sistine ceiling. Italy gave us the greatest museum on earth, and reminded us, gently, that most of it was built as a prayer.</div>
+  <div class="rf-signoff">— Avinesh, Lana, Avisha, Aviann &amp; Avin Munasinghe-Fernando<br>Venice → Padua → Rosa Mistica → Florence → Rome → Pompeii → the Vatican → Milan · 17–24 July 2026</div>
 </div>
 
 <div class="mag-page mag-back">
