@@ -67,6 +67,11 @@ body { padding:20px; }
 .fd-grid { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
 .fd-card { background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; overflow:hidden; }
 .fd-card .fd-img { width:100%; aspect-ratio:4/3; background:#0e0e0e; position:relative; display:flex; align-items:center; justify-content:center; background-size:contain; background-repeat:no-repeat; background-position:center; }
+.album-sub { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:#a02828; margin-bottom:2px; }
+.album-head { font-family:'Fraunces', serif; font-weight:700; font-size:30px; line-height:1; color:#1a1a1a; margin-bottom:12px; }
+.album-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:5mm; }
+.album-photo { width:100%; aspect-ratio:1/1; background:#0e0e0e; background-size:contain; background-repeat:no-repeat; background-position:center; border-radius:2px; }
+.album-cap { font-family:'JetBrains Mono', monospace; font-size:7px; color:#8b6914; margin-top:3px; text-align:center; letter-spacing:0.03em; line-height:1.3; }
 .fd-card .fd-img .ph { font-family:'JetBrains Mono', monospace; font-size:8px; color:#8b6914; text-align:center; padding:8px; }
 .fd-card .fd-body { padding:10px 14px 14px; }
 .fd-card .fd-num { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:22px; color:#a02828; line-height:1; }
@@ -128,7 +133,11 @@ body { padding:20px; }
     <li><span class="toc-name">Chocolate — A Sweet Empire</span><span class="toc-page">05</span></li>
     <li><span class="toc-name">Geneva — The World's Meeting Place</span><span class="toc-page">06</span></li>
     <li><span class="toc-name">Tastes of Switzerland</span><span class="toc-page">07</span></li>
-    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">08</span></li>
+    <li><span class="toc-name">Album — Gornergrat</span><span class="toc-page">08</span></li>
+    <li><span class="toc-name">Album — Maison Cailler</span><span class="toc-page">09</span></li>
+    <li><span class="toc-name">Album — Tastes</span><span class="toc-page">10</span></li>
+    <li><span class="toc-name">Album — Geneva</span><span class="toc-page">11</span></li>
+    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">12</span></li>
   </ul>
 </div>
 
@@ -295,6 +304,62 @@ body { padding:20px; }
     </div>
   </div>
   <div class="folio">— Issue 07 · SWITZERLAND · 07 —</div>
+</div>
+
+<div class="mag-page mag-album">
+  <div class="album-sub">Photo Album · Gornergrat</div>
+  <div class="album-head">The climb to 3,089 m.</div>
+  <div class="album-grid">
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gg-summit.jpg');"></div><div class="album-cap">At the summit</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gg-train1.jpg');"></div><div class="album-cap">On the Gornergrat Bahn</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gg-train2.jpg');"></div><div class="album-cap">Through the larches</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gg-train3.jpg');"></div><div class="album-cap">Snacks with a view</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-gg-valley.jpg');"></div><div class="album-cap">The Mattertal on the way up</div></div>
+  </div>
+  <div class="folio">— Issue 07 · SWITZERLAND · 08 —</div>
+</div>
+
+<div class="mag-page mag-album">
+  <div class="album-sub">Photo Album · Maison Cailler, Broc</div>
+  <div class="album-head">Inside the chocolate factory.</div>
+  <div class="album-grid">
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-cacao.jpg');"></div><div class="album-cap">Cacao — where it starts</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-hazelnuts.jpg');"></div><div class="album-cap">Hazelnuts</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-vanilla.jpg');"></div><div class="album-cap">Vanilla pods</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-cocoabutter.jpg');"></div><div class="album-cap">Cocoa butter</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-cow.jpg');"></div><div class="album-cap">Chocolate cow &amp; Gruyères castle</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-flowing.jpg');"></div><div class="album-cap">Flowing chocolate</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-machine.jpg');"></div><div class="album-cap">A vintage Cailler machine</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-wrappers.jpg');"></div><div class="album-cap">Wrappers through the years</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-tasting.jpg');"></div><div class="album-cap">The tasting room</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-c-kids.jpg');"></div><div class="album-cap">Three happy tasters</div></div>
+  </div>
+  <div class="folio">— Issue 07 · SWITZERLAND · 09 —</div>
+</div>
+
+<div class="mag-page mag-album">
+  <div class="album-sub">Photo Album · Tastes on the road</div>
+  <div class="album-head">The galettes.</div>
+  <div class="album-grid">
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-f-creperie.jpg');"></div><div class="album-cap">Lunch at the crêperie</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-f-galette-egg.jpg');"></div><div class="album-cap">Galette complète, with an egg</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-f-galette-chicken.jpg');"></div><div class="album-cap">Chicken &amp; cheese</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-f-galette-caprese.jpg');"></div><div class="album-cap">Tomato, mozzarella &amp; pesto</div></div>
+  </div>
+  <div class="folio">— Issue 07 · SWITZERLAND · 10 —</div>
+</div>
+
+<div class="mag-page mag-album">
+  <div class="album-sub">Photo Album · Geneva</div>
+  <div class="album-head">A day by the lake.</div>
+  <div class="album-grid">
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-ge-unsign.jpg');"></div><div class="album-cap">At the United Nations</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-ge-kidschair.jpg');"></div><div class="album-cap">Pointing out the Broken Chair</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-ge-flowerclock.jpg');"></div><div class="album-cap">L'Horloge Fleurie — the Flower Clock</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-ge-sculpture.jpg');"></div><div class="album-cap">A bronze in the lakeside park</div></div>
+    <div><div class="album-photo" style="background-image:url('../images/switzerland/alb-ge-building.jpg');"></div><div class="album-cap">Grand facade on Quai Wilson</div></div>
+  </div>
+  <div class="folio">— Issue 07 · SWITZERLAND · 11 —</div>
 </div>
 
 <div class="mag-page mag-reflection">
