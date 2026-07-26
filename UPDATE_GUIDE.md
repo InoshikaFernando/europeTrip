@@ -13,7 +13,7 @@
 |---|---|---|
 | `guide.html` | Main A4 printable trip guide (cover + all 31 days + 22 history pages) | **Day 1–31 = actual trip days** ✅ |
 | `index.html` | Landing page · interactive map · day cards · **REMINDERS/TODO banner** | 3 JS arrays (see §C) |
-| `Munasinghe_Family_Europe_Trip_2026.xlsx` | Day-by-Day / Calendar / Transit / TODO sheets | Col A = trip day ✅ |
+| `Munasinghe-Fernando_Family_Europe_Trip_2026.xlsx` | Day-by-Day / Calendar / Transit / TODO sheets | Col A = trip day ✅ |
 
 ### B. Printable booklets (A4)
 | File | Who | Pages per day | Day numbering |
@@ -39,7 +39,7 @@
 | File / folder | Purpose |
 |---|---|
 | `map-data.js` | Country boundary geo data (Natural Earth). **Static.** |
-| `Munasinghe_Family_Europe_Trip_2026_LATEST_FROM_GSHEET.xlsx` | Google-Sheets sync copy. ⚠️ **Overwrites local edits — edit GSheet directly or re-export.** |
+| `Munasinghe-Fernando_Family_Europe_Trip_2026_LATEST_FROM_GSHEET.xlsx` | Google-Sheets sync copy. ⚠️ **Overwrites local edits — edit GSheet directly or re-export.** |
 | `images/day-01/` … `images/day-31/` | Day maps + visit-card photos (folder № = trip day ✅) |
 | `images/flags/` | Country flags — `DE.jpg`, `DE-outline.png` etc. **Any format works** (jpg/jpeg/png/webp/avif/svg/gif) via `imgFallback()` |
 | `images/food/` | Food card images (`08b-france-croissant.jpg` etc.) |
@@ -82,7 +82,7 @@ Inside the affected `<div class="page day-page">`:
 - ⚠️ Confirm which trip day it is via its `<title>` first
 - Update title, h1, banner, timeline
 
-### 8. Excel `Munasinghe_Family_Europe_Trip_2026.xlsx`
+### 8. Excel `Munasinghe-Fernando_Family_Europe_Trip_2026.xlsx`
 - **Day-by-Day**: col A=day, B=date, E=hotel (+hyperlink), I=notes/desc
 - **Calendar**: daily summary line
 - **Transit**: train/flight bookings

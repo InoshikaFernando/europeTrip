@@ -1,4 +1,4 @@
-# Journaling Notes — Munasinghe Travel Magazine (handoff / continuity file)
+# Journaling Notes — Munasinghe-Fernando Travel Magazine (handoff / continuity file)
 
 > **Purpose:** A private working note so any Claude Code session can pick up the
 > travel-journaling project instantly. NOT part of the published magazines.
@@ -25,10 +25,10 @@ tells us what really happened, we replace the pre-trip **imagined placeholder** 
 with **real experiences**, keeping each issue's exact HTML structure, classes, and
 warm magazine-editorial tone.
 
-## The family (the Munasinghes)
+## The family (the Munasinghe-Fernandos)
 
-- **Avinesh** ("Avi") — dad · **Lana** — mum (parents; magazine sign-offs read "Avinesh, Lana, Avisha, Aviann & Avin Munasinghe").
-  - NOTE: his **full legal name is "Navin Avinesh Welikala Munasinghe"** — he *goes by* Avinesh/Avi (the kids' names all echo it: Avinesh → Avisha, Aviann, Avin). Magazines use **Avinesh** (family voice); the **`day_*.html` booking/logistics pages keep the legal "Navin …"** on tickets/licence/hotel so they match his documents — do NOT change those. (Corrected across all 14 issues this session per Lana's confirmation.)
+- **Avinesh** ("Avi") — dad · **Lana** — mum (parents; magazine sign-offs read "Avinesh, Lana, Avisha, Aviann & Avin Munasinghe-Fernando").
+  - NOTE: his **full legal name is "Navin Avinesh Welikala Munasinghe-Fernando"** — he *goes by* Avinesh/Avi (the kids' names all echo it: Avinesh → Avisha, Aviann, Avin). Magazines use **Avinesh** (family voice); the **`day_*.html` booking/logistics pages keep the legal "Navin …"** on tickets/licence/hotel so they match his documents — do NOT change those. (Corrected across all 14 issues this session per Lana's confirmation.)
 - **Avisha** — 11, **boy**
 - **Aviann** — 8, **girl**
 - **Avin** — 4, **boy**
@@ -98,7 +98,7 @@ warm magazine-editorial tone.
   Save into the matching `images/day-XX/` with a descriptive name.
 - **Wire in as a FULL, UNCROPPED photo** (user insisted — NO cropping): use a `.sp-photo` block,
   NOT the cropping `background-size:cover` hero:
-  `<div class="sp-photo"><img src="../images/day-XX/<file>.jpg" alt="…"><div class="ph-info">Photo · Munasinghe</div></div>`
+  `<div class="sp-photo"><img src="../images/day-XX/<file>.jpg" alt="…"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>`
   with CSS `.sp-photo img { max-width:100%; max-height:150mm; }` (shows whole frame). Add that CSS
   per issue file. DELETE leftover striped `ph-name` placeholder boxes on pages with no photo.
 - **LAYOUT CONSTRAINT (important):** every `.mag-page` is a FIXED `210mm × 295mm` with
@@ -108,7 +108,7 @@ warm magazine-editorial tone.
 - **VERIFY BEFORE PUSHING:** render the file with headless Chromium and screenshot each `.mag-page`
   to catch clipping. Playwright lives at `/opt/node22/lib/node_modules/playwright`; chrome at
   `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`. Screenshot per `.mag-page` element, eyeball each.
-- **Style = Option A:** clean photo, NO watermark. Rich `sp-caption` + discreet `Photo · Munasinghe` chip.
+- **Style = Option A:** clean photo, NO watermark. Rich `sp-caption` + discreet `Photo · Munasinghe-Fernando` chip.
 - **Prague photos placed (all real, uncropped):** Old Town → St Nicholas (`day-06/09`), Charles
   Bridge → family@tower (`day-05/06`), Astronomical Clock → orloj (`day-05/07`), Josefov → yellow
   Široká street (`day-06/08`).
