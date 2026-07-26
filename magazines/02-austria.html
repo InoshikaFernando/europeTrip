@@ -83,14 +83,13 @@ body { padding:20px; }
 .album-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:5mm; }
 .album-photo { width:100%; aspect-ratio:1/1; background:#0e0e0e; background-size:contain; background-repeat:no-repeat; background-position:center; border-radius:2px; }
 .album-cap { font-family:'JetBrains Mono', monospace; font-size:7px; color:#8b6914; margin-top:3px; text-align:center; letter-spacing:0.03em; line-height:1.3; }
-.mag-essay { column-count:2; column-gap:7mm; margin-top:4px; }
-.mag-essay .essay-item { break-inside:avoid; margin:0 0 7mm; }
-.mag-essay .essay-item img { width:100%; height:auto; display:block; border-radius:3px; background:#0e0e0e; }
-.mag-essay .essay-cap { font-family:'Fraunces', serif; font-size:9.5px; line-height:1.5; color:#5a4a3a; margin-top:5px; }
-.mag-essay .essay-lead { column-span:all; margin-bottom:8mm; }
-.mag-essay .essay-lead img { max-height:120mm; object-fit:cover; object-position:center 32%; }
-.mag-essay .essay-lead .essay-cap { font-size:11.5px; font-style:italic; color:#3d3024; }
-@media print { .mag-essay { column-count:2; } }
+.mag-essay { column-count:3; column-gap:5mm; margin-top:4px; }
+.mag-essay .essay-item { break-inside:avoid; margin:0 0 5mm; }
+.mag-essay .essay-item img { width:100%; height:auto; display:block; border-radius:2px; background:#0e0e0e; }
+.mag-essay .essay-cap { font-family:'Fraunces', serif; font-size:8px; line-height:1.4; color:#5a4a3a; margin-top:4px; }
+.mag-essay .essay-lead { column-span:all; margin-bottom:6mm; }
+.mag-essay .essay-lead .essay-cap { font-size:11px; font-style:italic; color:#3d3024; text-align:center; }
+@media print { .mag-essay { column-count:3; } }
 .mag-reflection { background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%); padding:24mm 22mm; display:flex; flex-direction:column; }
 .rf-eyebrow { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#28508c; margin-bottom:8px; }
 .rf-headline { font-family:'Fraunces', serif; font-weight:700; font-size:54px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
@@ -234,7 +233,7 @@ body { padding:20px; }
   <div class="album-head">Do-Re-Mi, in our own frames.</div>
   <div style="font-family:'Fraunces', serif; font-style:italic; font-size:12px; color:#5a4a3a; margin:-6px 0 14px;">The little splash, the long avenue, the walk to the gate — the scenes I'd acted out with a row of dolls, now stepped through one by one with my own three.</div>
   <div class="mag-essay">
-    <div class="essay-item essay-lead"><img src="../images/austria/salzburg-mirabell-pegasus.jpg" loading="lazy"><div class="essay-cap">We came in past the <strong>Pegasus Fountain</strong> — the very spot where the von Trapp children danced "Do-Re-Mi". I had seen it a thousand times on a screen; now I was standing right in it.</div></div>
+    <div class="essay-item"><img src="../images/austria/salzburg-mirabell-pegasus.jpg" loading="lazy"><div class="essay-cap">We came in past the <strong>Pegasus Fountain</strong> — the very spot where the von Trapp children danced "Do-Re-Mi". I had seen it a thousand times on a screen; now I was standing right in it.</div></div>
     <div class="essay-item"><img src="../images/austria/salzburg-residenzplatz.jpg" loading="lazy"><div class="essay-cap">By the water I did the thing I'd copied as a girl — a little <strong>splash at the fountain</strong>, just as Maria does in "I Have Confidence" on her way to the villa.</div></div>
     <div class="essay-item"><img src="../images/austria/salzburg-doremi-avenue.jpg" loading="lazy"><div class="essay-cap">Then the long <strong>pergola avenue</strong>, where the children skip and sing the scales — a tunnel of green with the fortress showing at the far end.</div></div>
     <div class="essay-item"><img src="../images/austria/salzburg-mirabell-walk.jpg" loading="lazy"><div class="essay-cap">And the <strong>walk up through the flowerbeds</strong> toward the palace, all of us together — the garden I'd only ever visited in my imagination, real at last.</div></div>
@@ -263,7 +262,7 @@ body { padding:20px; }
   <div class="album-head">The Old Town, square by square.</div>
   <div style="font-family:'Fraunces', serif; font-style:italic; font-size:12px; color:#5a4a3a; margin:-6px 0 14px;">From the river to the cathedral squares and back through the lanes — our afternoon in the Altstadt, in the order we walked it.</div>
   <div class="mag-essay">
-    <div class="essay-item essay-lead"><img src="../images/austria/salzburg-family-cathedral.jpg" loading="lazy"><div class="essay-cap">We crossed the Salzach into the Altstadt, and there stood the Dom — all five of us in the cathedral square.</div></div>
+    <div class="essay-item"><img src="../images/austria/salzburg-family-cathedral.jpg" loading="lazy"><div class="essay-cap">We crossed the Salzach into the Altstadt, and there stood the Dom — all five of us in the cathedral square.</div></div>
     <div class="essay-item"><img src="../images/austria/salzburg-residenz-facade.jpg" loading="lazy"><div class="essay-cap">Beside it, the marble front of the Residenz — the prince-archbishops' palace.</div></div>
     <div class="essay-item"><img src="../images/austria/salzburg-residenz-fountain.jpg" loading="lazy"><div class="essay-cap">And its great fountain, the Residenzbrunnen, at the centre of the square.</div></div>
     <div class="essay-item"><img src="../images/austria/salzburg-residenzbrunnen.jpg" loading="lazy"><div class="essay-cap">Up close: Tritons and horses spouting water, the Glockenspiel tower rising behind.</div></div>
@@ -290,7 +289,7 @@ body { padding:20px; }
     <p>Then, at last, the castle. We were staying at Burg Altpernstein, a genuine hilltop fortress — and a genuine fortress, it turns out, has no elevator. We hauled our heavy bags up to the third floor by stair, breath by breath, and we couldn't even mind: you don't keep a castle's medieval soul by drilling a lift shaft through it. A hot bath washed the long day away, and we fell into bed more tired than we had been at any point on this trip. Day one in Austria, done.</p>
   </div>
   <div class="mag-essay">
-    <div class="essay-item essay-lead"><img src="../images/austria/altpernstein-castle-exterior.jpg" loading="lazy"><div class="essay-cap">Burg Altpernstein by day — our hilltop base</div></div>
+    <div class="essay-item"><img src="../images/austria/altpernstein-castle-exterior.jpg" loading="lazy"><div class="essay-cap">Burg Altpernstein by day — our hilltop base</div></div>
     <div class="essay-item"><img src="../images/austria/altpernstein-valley-view.jpg" loading="lazy"><div class="essay-cap">The valley spread out far below the castle</div></div>
     <div class="essay-item"><img src="../images/austria/altpernstein-breakfast.jpg" loading="lazy"><div class="essay-cap">The generous breakfast that carried us all day</div></div>
   </div>
@@ -333,7 +332,7 @@ body { padding:20px; }
   <div class="album-head">The most photographed village.</div>
   <div style="font-family:'Fraunces', serif; font-style:italic; font-size:12px; color:#5a4a3a; margin:-6px 0 14px;">We wandered the waterfront and the lanes, and took the boat out onto the lake — the village from every angle it is famous for.</div>
   <div class="mag-essay">
-    <div class="essay-item essay-lead"><img src="../images/austria/hallstatt-postcard-lake.jpg" loading="lazy"><div class="essay-cap">The lake that has launched a thousand postcards — pastel houses doubling in the still Hallstättersee, the mountains rising straight behind.</div></div>
+    <div class="essay-item"><img src="../images/austria/hallstatt-postcard-lake.jpg" loading="lazy"><div class="essay-cap">The lake that has launched a thousand postcards — pastel houses doubling in the still Hallstättersee, the mountains rising straight behind.</div></div>
     <div class="essay-item"><img src="../images/austria/hallstatt-postcard-railing.jpg" loading="lazy"><div class="essay-cap">The famous railing everyone leans on for the shot, the church spire framed just so.</div></div>
     <div class="essay-item"><img src="../images/austria/hallstatt-boat-family.jpg" loading="lazy"><div class="essay-cap">Down at the water's edge, where we caught the little boat out onto the lake — the best way of all to see the village.</div></div>
     <div class="essay-item"><img src="../images/austria/hallstatt-market-square.jpg" loading="lazy"><div class="essay-cap">Into the Marktplatz, the tiny village square gathered round its Trinity column.</div></div>
@@ -471,7 +470,7 @@ body { padding:20px; }
   <div class="album-head">The palace, gate to gallery.</div>
   <div style="font-family:'Fraunces', serif; font-style:italic; font-size:12px; color:#5a4a3a; margin:-6px 0 14px;">The tour runs one way, hall opening onto hall. This is what we saw, in the order we walked it — from the great courtyard gates, up into the frescoed galleries.</div>
   <div class="mag-essay">
-    <div class="essay-item essay-lead"><img src="../images/austria/vienna-schoenbrunn-family.jpg" loading="lazy"><div class="essay-cap">All five of us in the great forecourt, holding the postcard up against the real palace behind.</div></div>
+    <div class="essay-item"><img src="../images/austria/vienna-schoenbrunn-family.jpg" loading="lazy"><div class="essay-cap">All five of us in the great forecourt, holding the postcard up against the real palace behind.</div></div>
     <div class="essay-item"><img src="../images/austria/vienna-schoenbrunn-family-gates.jpg" loading="lazy"><div class="essay-cap">In through the palace gates, beneath the golden Habsburg eagles on their obelisks.</div></div>
     <div class="essay-item"><img src="../images/austria/schoenbrunn/23.jpg" loading="lazy"><div class="essay-cap">Inside at last — the Great Gallery, the palace's grand ballroom, gold and mirrors from end to end.</div></div>
     <div class="essay-item"><img src="../images/austria/schoenbrunn/great-gallery-ceiling.jpg" loading="lazy"><div class="essay-cap">Above it, the vast ceiling fresco — all painted sky, gods and allegory.</div></div>
@@ -490,7 +489,7 @@ body { padding:20px; }
   <div class="album-sub">Our walk through Schönbrunn</div>
   <div class="album-head">The imperial apartments.</div>
   <div class="mag-essay">
-    <div class="essay-item essay-lead"><img src="../images/austria/schoenbrunn/09.jpg" loading="lazy"><div class="essay-cap">An imperial living salon</div></div>
+    <div class="essay-item"><img src="../images/austria/schoenbrunn/09.jpg" loading="lazy"><div class="essay-cap">An imperial living salon</div></div>
     <div class="essay-item"><img src="../images/austria/schoenbrunn/11.jpg" loading="lazy"><div class="essay-cap">A rococo drawing room</div></div>
     <div class="essay-item"><img src="../images/austria/schoenbrunn/12.jpg" loading="lazy"><div class="essay-cap">A red-damask salon</div></div>
     <div class="essay-item"><img src="../images/austria/schoenbrunn/14.jpg" loading="lazy"><div class="essay-cap">Imperial portraits in a blue salon</div></div>
@@ -525,7 +524,7 @@ body { padding:20px; }
   <div class="album-sub">Our walk through Schönbrunn</div>
   <div class="album-head">The immersive rooms &amp; more.</div>
   <div class="mag-essay">
-    <div class="essay-item essay-lead"><img src="../images/austria/schoenbrunn/04.jpg" loading="lazy"><div class="essay-cap">A royal procession, projected wall to wall</div></div>
+    <div class="essay-item"><img src="../images/austria/schoenbrunn/04.jpg" loading="lazy"><div class="essay-cap">A royal procession, projected wall to wall</div></div>
     <div class="essay-item"><img src="../images/austria/schoenbrunn/03.jpg" loading="lazy"><div class="essay-cap">A painted sky brought to life in light</div></div>
     <div class="essay-item"><img src="../images/austria/schoenbrunn/01.jpg" loading="lazy"><div class="essay-cap">The immersive projection room</div></div>
     <div class="essay-item"><img src="../images/austria/schoenbrunn/02.jpg" loading="lazy"><div class="essay-cap">Projected scenes on the palace walls</div></div>
@@ -683,7 +682,7 @@ body { padding:20px; }
   <div class="album-sub">Vienna · more from the city</div>
   <div class="album-head">The imperial city, up close.</div>
   <div class="mag-essay">
-    <div class="essay-item essay-lead"><img src="../images/austria/vienna-stephansdom-family.jpg" loading="lazy"><div class="essay-cap">The family at Stephansdom</div></div>
+    <div class="essay-item"><img src="../images/austria/vienna-stephansdom-family.jpg" loading="lazy"><div class="essay-cap">The family at Stephansdom</div></div>
     <div class="essay-item"><img src="../images/austria/stephansdom-interior-side-altar.jpg" loading="lazy"><div class="essay-cap">A side altar, Stephansdom</div></div>
     <div class="essay-item"><img src="../images/austria/vienna-votivkirche.jpg" loading="lazy"><div class="essay-cap">The Votivkirche spires</div></div>
     <div class="essay-item"><img src="../images/austria/votivkirche-facade.jpg" loading="lazy"><div class="essay-cap">Votivkirche, neo-Gothic façade</div></div>
