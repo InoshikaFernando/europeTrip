@@ -129,6 +129,17 @@ body { padding:20px; }
 .cl-note .cl-t em { font-style:italic; font-weight:400; color:#b41e1e; }
 .cl-note .cl-b { font-family:'Fraunces', serif; font-size:9.3px; line-height:1.5; color:#3d3024; }
 .cl-note .cl-b + .cl-b { margin-top:5px; }
+.mag-essaypage { padding:12mm 14mm; display:flex; flex-direction:column; }
+.es-eyebrow { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#b41e1e; margin-bottom:7px; }
+.es-headline { font-family:'Fraunces', serif; font-weight:700; font-size:38px; line-height:0.92; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.015em; }
+.es-headline em { font-style:italic; font-weight:400; color:#b41e1e; }
+.es-deck { font-family:'Fraunces', serif; font-style:italic; font-size:13px; line-height:1.4; color:#5a4a3a; margin-bottom:10px; max-width:94%; border-bottom:2px solid #1e508c; padding-bottom:9px; }
+.mag-essay { column-count:3; column-gap:5mm; margin-top:4px; }
+.mag-essay .essay-item { break-inside:avoid; margin:0 0 5mm; }
+.mag-essay .essay-item img { width:100%; height:auto; display:block; border-radius:2px; background:#0e0e0e; }
+.mag-essay .essay-cap { font-family:'Fraunces', serif; font-size:8px; line-height:1.4; color:#5a4a3a; margin-top:4px; }
+.mag-essay .essay-lead { column-span:all; margin-bottom:6mm; }
+.mag-essay .essay-lead .essay-cap { font-size:11px; font-style:italic; color:#3d3024; text-align:center; }
 @media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
 </style></head>
 <body>
@@ -145,22 +156,40 @@ body { padding:20px; }
 
 <div class="mag-page mag-welcome">
   <div class="wl-num">No. 04 · A Letter from the Road</div>
+  <div class="wl-title">Who we are,<br>why we travel.</div>
+  <div class="wl-divider"></div>
+  <div style="text-align:center; margin:2mm 0 10mm;"><img src="../images/hungary/road-to-budapest-family-car.jpg" alt="The Munasinghe-Fernando family together in the car on the road to Budapest, the children buckled in behind their smiling parents." style="max-height:112mm; max-width:78%; object-fit:contain; border-radius:4px;"></div>
+  <div class="wl-body">
+    <p>We're the Munasinghe-Fernandos — two parents and three children who love to see the world <em>together</em>. My husband and I share one dream: to travel to as many countries as we possibly can, as a family.</p>
+    <p>It's never easy — booking flights, trains and rooms for five is its own small adventure, and we know we can't reach everywhere. But from every country we do get to, we try our very best to see as much as we can. This magazine is where we keep all of it.</p>
+    <p style="font-style:italic; color:#b41e1e; text-align:right; margin-top:14px;">— The Munasinghe-Fernandos, 2026</p>
+  </div>
+</div>
+
+<div class="mag-page mag-welcome">
+  <div class="wl-num">No. 04 · Welcome</div>
   <div class="wl-title">Welcome to<br>the Queen of<br>the Danube.</div>
   <div class="wl-divider"></div>
   <div class="wl-body">
     <p>Until 1873, Budapest was two cities. Buda — old, royal, hilly, fortified — sat on the west bank of the Danube. Pest — flat, busy, trading — sprawled across the east. They could not have been more different. The Chain Bridge, opened in 1849, gave them their first permanent connection. Twenty-four years later, an act of parliament merged them, along with the smaller town of Óbuda, into a single capital.</p>
     <p>We drove into the city on a hot Thursday and left the car in Pest, then gave the whole day to our feet: first the great gilded dome of St. Stephen's Basilica, then over the Chain Bridge and up the little funicular to the old royal hill — Matthias Church, the white towers of Fisherman's Bastion, and Buda Castle — before turning, as the light softened, to the river itself.</p>
     <p>This issue is about a city that learned to be one thing after spending centuries being two — and is still, somehow, both.</p>
-    <p style="font-style:italic; color:#b41e1e; text-align:right; margin-top:14px;">— The Munasinghe-Fernandos, 2026</p>
   </div>
   <div class="toc-title">In this issue</div>
   <ul class="toc-list">
+    <li><span class="toc-name">A Letter from the Road</span><span class="toc-page">Home</span></li>
     <li><span class="toc-name">Welcome — Queen of the Danube</span><span class="toc-page">Pest</span></li>
+    <li><span class="toc-name">The Journey So Far</span><span class="toc-page">Route</span></li>
     <li><span class="toc-name">St. Stephen's Basilica</span><span class="toc-page">Pest</span></li>
+    <li><span class="toc-name">Inside the Basilica — a portfolio</span><span class="toc-page">Pest</span></li>
+    <li><span class="toc-name">The Holy Right</span><span class="toc-page">Pest</span></li>
     <li><span class="toc-name">Fisherman's Bastion &amp; the Arches</span><span class="toc-page">Buda</span></li>
+    <li><span class="toc-name">The City from the Terrace</span><span class="toc-page">Buda</span></li>
     <li><span class="toc-name">Matthias Church &amp; Treasury</span><span class="toc-page">Buda</span></li>
-    <li><span class="toc-name">Buda Castle</span><span class="toc-page">Buda</span></li>
+    <li><span class="toc-name">Buda Castle &amp; the Palace Quarter</span><span class="toc-page">Buda</span></li>
+    <li><span class="toc-name">Hungary at the Crossroads</span><span class="toc-page">History</span></li>
     <li><span class="toc-name">A Danube Cruise at Dusk</span><span class="toc-page">River</span></li>
+    <li><span class="toc-name">Budapest by Night</span><span class="toc-page">River</span></li>
     <li><span class="toc-name">Tastes of Hungary</span><span class="toc-page">Food</span></li>
     <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">Home</span></li>
   </ul>
@@ -231,6 +260,20 @@ body { padding:20px; }
   <div class="folio">— Issue 04 · HUNGARY · Under the Dome —</div>
 </div>
 
+<div class="mag-page mag-essaypage">
+  <div class="es-eyebrow">PEST · INSIDE ST STEPHEN'S · A PORTFOLIO</div>
+  <div class="es-headline">A walk down<br><em>the honeyed nave.</em></div>
+  <div class="es-deck">Off the hot square and into the cool of the largest church in Budapest — down the marble aisle, up to the altar of the founding king, and past the side chapels toward the relic that draws the crowds.</div>
+  <div class="mag-essay">
+    <div class="essay-item"><img src="../images/hungary/st-stephens-nave.jpg" loading="lazy"><div class="essay-cap">In from the portico: the long nave runs over a black-and-white marble floor toward the high altar, the caramel-and-gold walls climbing to the vault above.</div></div>
+    <div class="essay-item"><img src="../images/hungary/st-stephens-high-altar.jpg" loading="lazy"><div class="essay-cap">The apse, lit from a high window — at its centre the white Carrara statue of King Stephen by Alajos Stróbl, ringed by the red marble and gilt of the sanctuary.</div></div>
+    <div class="essay-item"><img src="../images/hungary/st-stephens-side-altar.jpg" loading="lazy"><div class="essay-cap">One of the side altars off the nave, its crucifix set between painted saints — a quieter corner away from the glow of the crossing.</div></div>
+    <div class="essay-item"><img src="../images/hungary/basilica-dome-top-kids.jpg" loading="lazy"><div class="essay-cap">Two of ours by the red rope inside, cameras at the ready, before we queued for the lift and the last spiral of steps up to the dome colonnade.</div></div>
+    <div class="essay-item"><img src="../images/hungary/holy-right-chapel.jpg" loading="lazy"><div class="essay-cap">The Chapel of the Holy Right, off the left aisle — the little glass reliquary glowing in its case beneath a gilded altarpiece. The relic itself is on the next page.</div></div>
+  </div>
+  <div class="folio">— Issue 04 · HUNGARY · Inside the Basilica —</div>
+</div>
+
 <div class="mag-page mag-spread">
   <div class="sp-eyebrow">THE HOLY RIGHT · SZENT JOBB · DAY 08</div>
   <div class="sp-headline">A king's right hand,<br>a thousand years on.</div>
@@ -284,6 +327,33 @@ body { padding:20px; }
     <div class="sp-quote">Every arch a picture frame — and behind this one, three of ours and a thousand-year-old view.</div>
   </div>
   <div class="folio">— Issue 04 · HUNGARY · Under the Arches —</div>
+</div>
+
+<div class="mag-page mag-essaypage">
+  <div class="es-eyebrow">BUDA · AROUND THE BASTION · A PORTFOLIO</div>
+  <div class="es-headline">White stone,<br><em>and a long way down.</em></div>
+  <div class="es-deck">Up close, Schulek's fairy-tale terrace is all cone-topped turrets, climbing stairs and iron lanterns — and over the parapet, the whole of Pest laid flat beyond the river.</div>
+  <div class="mag-essay">
+    <div class="essay-item essay-lead"><img src="../images/hungary/fishermans-bastion-parliament-view.jpg" loading="lazy"><div class="essay-cap">The reward at the rail: from the Bastion terrace the Danube opens out and the Parliament stands answering across the water, with the red roofs of the Watertown tumbling down the hill below.</div></div>
+    <div class="essay-item"><img src="../images/hungary/fishermans-bastion-stairs.jpg" loading="lazy"><div class="essay-cap">The ceremonial stairs sweeping up between the towers — the climb we hauled the stroller up, flight by flight, in the midday heat.</div></div>
+    <div class="essay-item"><img src="../images/hungary/fishermans-bastion-towers-close.jpg" loading="lazy"><div class="essay-cap">One of the seven turrets up close: pale stone, a witch's-hat roof, and a wrought-iron lamp — a castle built purely to be looked at.</div></div>
+    <div class="essay-item"><img src="../images/hungary/bastion-arch-kids-alt.jpg" loading="lazy"><div class="essay-cap">The three of them under an arch again — Avin riding in the pushchair this time, Avisha and Aviann framed by the loggia and a turret beyond.</div></div>
+  </div>
+  <div class="folio">— Issue 04 · HUNGARY · Around the Bastion —</div>
+</div>
+
+<div class="mag-page mag-essaypage">
+  <div class="es-eyebrow">BUDA · THE CITY FROM THE TERRACE · A PORTFOLIO</div>
+  <div class="es-headline">Pest, the river,<br><em>and every bridge.</em></div>
+  <div class="es-deck">From the top of Castle Hill the flat east bank unrolls the whole way to the horizon — the Parliament, the great chain of bridges, and the Danube threading through the middle of it all.</div>
+  <div class="mag-essay" style="column-count:2;">
+    <div class="essay-item essay-lead"><img src="../images/hungary/panorama-parliament-clear.jpg" loading="lazy"><div class="essay-cap">The classic view: the neo-Gothic Parliament stretched along the far bank, the river bright in front of it, the roofs of Buda in the foreground.</div></div>
+    <div class="essay-item"><img src="../images/hungary/panorama-parliament-dome.jpg" loading="lazy"><div class="essay-cap">The Parliament dome and the sweep of the Pest embankment, the water dotted with sightseeing boats.</div></div>
+    <div class="essay-item"><img src="../images/hungary/panorama-chain-bridge.jpg" loading="lazy"><div class="essay-cap">Downstream toward the Chain Bridge, the low line of central Pest running off into the haze.</div></div>
+    <div class="essay-item"><img src="../images/hungary/panorama-elisabeth-bridge.jpg" loading="lazy"><div class="essay-cap">Southward past the white span of the Elisabeth Bridge, the river bending away between the two banks.</div></div>
+    <div class="essay-item"><img src="../images/hungary/panorama-margaret-bridge.jpg" loading="lazy"><div class="essay-cap">Upstream to the Margaret Bridge, with green Margaret Island splitting the stream and a Buda church spire in the foreground.</div></div>
+  </div>
+  <div class="folio">— Issue 04 · HUNGARY · The City from the Terrace —</div>
 </div>
 
 <div class="mag-page mag-spread">
@@ -340,6 +410,22 @@ body { padding:20px; }
     <div class="sp-quote">Not restored so much as re-dreamed — a medieval Hungary that never quite existed, painted onto real stone.</div>
   </div>
   <div class="folio">— Issue 04 · HUNGARY · Inside Matthias Church —</div>
+</div>
+
+<div class="mag-page mag-essaypage">
+  <div class="es-eyebrow">BUDA · MATTHIAS CHURCH · A PORTFOLIO</div>
+  <div class="es-headline">Every rib and wall,<br><em>a page of pattern.</em></div>
+  <div class="es-deck">Around the outside and back through the door — the Gothic tower on the square, the tiled apse, and altar after altar inside, each one painted and gilded to the last inch.</div>
+  <div class="mag-essay">
+    <div class="essay-item"><img src="../images/hungary/matthias-church-exterior.jpg" loading="lazy"><div class="essay-cap">The west front from Trinity Square: the slender 80-metre Gothic tower, the rose window, and the stone porch we stepped in through.</div></div>
+    <div class="essay-item"><img src="../images/hungary/matthias-church-apse.jpg" loading="lazy"><div class="essay-cap">Around the side to the apse, where the famous diamond-patterned Zsolnay roof climbs over the buttresses against a moving sky.</div></div>
+    <div class="essay-item"><img src="../images/hungary/matthias-interior-altar.jpg" loading="lazy"><div class="essay-cap">The sanctuary from the nave — a plain modern altar standing bare under a blaze of painted vaults and tall stained-glass windows.</div></div>
+    <div class="essay-item"><img src="../images/hungary/matthias-interior-sanctuary.jpg" loading="lazy"><div class="essay-cap">Deeper into the chancel, a ring of lights hanging under the vault and glass cases lining the painted walls.</div></div>
+    <div class="essay-item"><img src="../images/hungary/matthias-high-altar.jpg" loading="lazy"><div class="essay-cap">A soaring neo-Gothic side altar of carved and gilded pinnacles, framed between two lancets of coloured glass.</div></div>
+    <div class="essay-item"><img src="../images/hungary/matthias-interior-side-altar.jpg" loading="lazy"><div class="essay-cap">Another altar set in a gilded sunburst recess, a painted triptych at its heart — the pattern-work never once repeating.</div></div>
+    <div class="essay-item"><img src="../images/hungary/matthias-laszlo-chapel.jpg" loading="lazy"><div class="essay-cap">A side chapel painted floor to vault with frescoes of Hungarian saints and kings — the medieval-Hungarian style Schulek dreamed back onto the walls.</div></div>
+  </div>
+  <div class="folio">— Issue 04 · HUNGARY · Matthias Church —</div>
 </div>
 
 <div class="mag-page mag-spread">
@@ -404,6 +490,18 @@ body { padding:20px; }
     <div class="sp-quote">Burned, besieged, bombed and built again — and still crowning the hill.</div>
   </div>
   <div class="folio">— Issue 04 · HUNGARY · Buda Castle —</div>
+</div>
+
+<div class="mag-page mag-essaypage">
+  <div class="es-eyebrow">BUDA · THE PALACE QUARTER · A PORTFOLIO</div>
+  <div class="es-headline">The top of the hill,<br><em>on our own feet.</em></div>
+  <div class="es-deck">The long palace wings, a guard standing to attention outside the president's house, and one more family photo below the great green dome — the last stretch of Castle Hill before we came down for the river.</div>
+  <div class="mag-essay">
+    <div class="essay-item"><img src="../images/hungary/buda-castle-family-alt.jpg" loading="lazy"><div class="essay-cap">All of us tipped back for a selfie under the castle dome — hot, footsore and grinning, near the end of a very long day of walking.</div></div>
+    <div class="essay-item"><img src="../images/hungary/buda-castle-national-gallery.jpg" loading="lazy"><div class="essay-cap">The long columned wing of the palace that now holds the Hungarian National Gallery, its terrace open to the river and dotted with visitors.</div></div>
+    <div class="essay-item"><img src="../images/hungary/sandor-palace-guard.jpg" loading="lazy"><div class="essay-cap">A ceremonial guard at his sentry box outside Sándor Palace, the president's residence at the top of the hill — the red-white-green sash unmistakable.</div></div>
+  </div>
+  <div class="folio">— Issue 04 · HUNGARY · The Palace Quarter —</div>
 </div>
 
 <div class="mag-page mag-spread" style="justify-content:flex-start;">
@@ -473,6 +571,20 @@ body { padding:20px; }
   <div class="folio">— Issue 04 · HUNGARY · Gellért Hill —</div>
 </div>
 
+<div class="mag-page mag-essaypage">
+  <div class="es-eyebrow">ON THE DANUBE · GOLDEN HOUR · A PORTFOLIO</div>
+  <div class="es-headline">The sun going,<br><em>the gold coming.</em></div>
+  <div class="es-deck">From the deck we watched the light drain out of the sky and the city change over — the last flare on the water, the sunset behind the bridges, and the first buildings beginning to glow.</div>
+  <div class="mag-essay">
+    <div class="essay-item essay-lead"><img src="../images/hungary/buda-embankment-dusk.jpg" loading="lazy"><div class="essay-cap">The Buda embankment as the low sun caught the water — the pale façades along the bank lit warm, the river gone to silver in front of them.</div></div>
+    <div class="essay-item"><img src="../images/hungary/danube-sunset-chain-bridge.jpg" loading="lazy"><div class="essay-cap">Sunset over the Chain Bridge — the sky pink and orange, the bridge a low silhouette strung across the darkening river.</div></div>
+    <div class="essay-item"><img src="../images/hungary/danube-dusk-dome.jpg" loading="lazy"><div class="essay-cap">Buda Castle's dome standing dark on its hill as the last colour left the sky and the water turned to pewter.</div></div>
+    <div class="essay-item"><img src="../images/hungary/buda-church-night.jpg" loading="lazy"><div class="essay-cap">A Buda church spire catching the first floodlight against the dusk, the streetlamps of the embankment coming on below it.</div></div>
+    <div class="essay-item"><img src="../images/hungary/buda-hill-night.jpg" loading="lazy"><div class="essay-cap">And then, full dark: Matthias Church floodlit gold high on Castle Hill, its reflection breaking on the black water — the tower we had stood under that afternoon.</div></div>
+  </div>
+  <div class="folio">— Issue 04 · HUNGARY · Golden Hour —</div>
+</div>
+
 <div class="mag-page" style="background:linear-gradient(160deg, #13324c 0%, #0a1a28 55%, #060e16 100%); display:flex; flex-direction:column; justify-content:center; gap:8mm; padding:18mm 14mm; color:#fff; overflow:hidden;">
   <div style="text-align:center;">
     <div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.34em; text-transform:uppercase; color:#f0d68c; margin-bottom:11px;">On the Danube · After Dark</div>
@@ -528,17 +640,25 @@ body { padding:20px; }
   <div class="cl-deck">Before the boat, dinner was lángos — Hungary's great deep-fried flatbread — one savoury and cheesy, one piled up like a pizza, and one (for pudding) smothered in chocolate.</div>
   <div style="display:flex; flex-direction:column; align-items:center; gap:4mm; flex:1; min-height:0; justify-content:center;">
     <figure style="text-align:center; width:100%; margin:0;">
-      <img src="../images/hungary/langos-dinner.jpg" alt="All five of the family around a restaurant table with langos, before the cruise." style="display:block; margin:0 auto; max-width:100%; max-height:106mm; border-radius:2px;">
+      <img src="../images/hungary/langos-dinner.jpg" alt="All five of the family around a restaurant table with langos, before the cruise." style="display:block; margin:0 auto; max-width:100%; max-height:88mm; border-radius:2px;">
       <figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:9.5px; color:#5a4a3a; margin-top:4px;"><b style="font-style:normal;">Dinner before the boat</b> — all five of us round the table, piling in before the evening cruise.</figcaption>
     </figure>
-    <div style="display:flex; gap:8mm; justify-content:center; align-items:flex-start; width:100%;">
-      <figure style="text-align:center; margin:0;">
-        <img src="../images/hungary/langos-board.jpg" alt="Three langos on a board with a pizza cutter." style="display:block; max-width:100%; max-height:58mm; border-radius:2px;">
-        <figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:8.5px; color:#5a4a3a; margin-top:3px;">Three on a board — cheese, prosciutto "pizza", Nutella.</figcaption>
+    <div style="display:flex; gap:6mm; justify-content:center; align-items:flex-start; width:100%;">
+      <figure style="text-align:center; margin:0; width:25%;">
+        <img src="../images/hungary/langos-board.jpg" alt="Three langos on a board with a pizza cutter." style="display:block; width:100%; max-height:52mm; object-fit:cover; border-radius:2px;">
+        <figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:8px; color:#5a4a3a; margin-top:3px;">Three on a board — cheese, "pizza", Nutella.</figcaption>
       </figure>
-      <figure style="text-align:center; margin:0;">
-        <img src="../images/hungary/langos-nutella.jpg" alt="A langos spread thickly with chocolate." style="display:block; max-width:100%; max-height:58mm; border-radius:2px;">
-        <figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:8.5px; color:#5a4a3a; margin-top:3px;">One for pudding — under a slick of chocolate.</figcaption>
+      <figure style="text-align:center; margin:0; width:25%;">
+        <img src="../images/hungary/langos-classic-pizza.jpg" alt="A cheese-topped langos and a prosciutto pizza langos side by side." style="display:block; width:100%; max-height:52mm; object-fit:cover; border-radius:2px;">
+        <figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:8px; color:#5a4a3a; margin-top:3px;">The cheese one, and the "pizza" beside it.</figcaption>
+      </figure>
+      <figure style="text-align:center; margin:0; width:25%;">
+        <img src="../images/hungary/langos-pizza-closeup.jpg" alt="A close-up of the prosciutto, mozzarella and basil pizza-style langos." style="display:block; width:100%; max-height:52mm; object-fit:cover; border-radius:2px;">
+        <figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:8px; color:#5a4a3a; margin-top:3px;">Prosciutto, mozzarella, basil — up close.</figcaption>
+      </figure>
+      <figure style="text-align:center; margin:0; width:25%;">
+        <img src="../images/hungary/langos-nutella.jpg" alt="A langos spread thickly with chocolate." style="display:block; width:100%; max-height:52mm; object-fit:cover; border-radius:2px;">
+        <figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:8px; color:#5a4a3a; margin-top:3px;">One for pudding — a slick of chocolate.</figcaption>
       </figure>
     </div>
     <div class="cl-note blue" style="width:100%;">
