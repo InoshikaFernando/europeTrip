@@ -40,7 +40,7 @@ body { padding:20px; }
 .sp-headline { font-family:'Fraunces', serif; font-weight:700; font-size:38px; line-height:0.95; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.01em; }
 .sp-deck { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:15px; line-height:1.4; color:#5a4a3a; margin-bottom:10px; max-width:92%; }
 .sp-meta { display:flex; gap:14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; border-top:1px solid #3d7a4a; padding-top:8px; margin-bottom:14px; }
-.sp-hero { width:100%; height:64mm; background:#e8dcc0; background-size:cover; background-position:center; margin-bottom:6px; position:relative; border-radius:2px; }
+.sp-hero { width:100%; height:105mm; background:#0e0e0e; background-size:contain; background-repeat:no-repeat; background-position:center; margin-bottom:6px; position:relative; border-radius:2px; }
 .sp-hero .ph-name { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:repeating-linear-gradient(45deg,#e8dcc0 0 10px,#ddd1b3 10px 20px); font-family:'JetBrains Mono', monospace; font-size:10px; color:#8b6914; }
 .sp-hero .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
 .sp-caption { font-family:'Fraunces', serif; font-style:italic; font-size:9.5px; color:#5a4a3a; margin-bottom:10px; padding-left:12px; border-left:2px solid #3d7a4a; }
@@ -52,7 +52,7 @@ body { padding:20px; }
 .mag-duo { padding:14mm 16mm; display:flex; flex-direction:column; gap:6mm; }
 .duo-row { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
 .duo-row.alt { grid-template-columns:2fr 1fr; }
-.duo-photo { background:#e8dcc0; aspect-ratio:4/5; position:relative; border-radius:2px; overflow:hidden; background-size:cover; background-position:center; }
+.duo-photo { background:#0e0e0e; aspect-ratio:3/4; position:relative; border-radius:2px; overflow:hidden; background-size:contain; background-repeat:no-repeat; background-position:center; }
 .duo-photo.wide { aspect-ratio:16/10; }
 .duo-photo .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
 .duo-photo > .ph-name { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; background:repeating-linear-gradient(45deg, #e8dcc0 0 8px, #ddd1b3 8px 16px); font-family:'JetBrains Mono', monospace; font-size:8px; color:#8b6914; text-align:center; padding:8px; gap:4px; }
@@ -66,7 +66,7 @@ body { padding:20px; }
 .fd-deck { font-family:'Fraunces', serif; font-style:italic; font-size:16px; color:#5a4a3a; margin-bottom:18px; border-bottom:2px solid #3d7a4a; padding-bottom:14px; }
 .fd-grid { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
 .fd-card { background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; overflow:hidden; }
-.fd-card .fd-img { width:100%; aspect-ratio:5/3; background:#e8dcc0; position:relative; display:flex; align-items:center; justify-content:center; background-image:repeating-linear-gradient(45deg, #e8dcc0 0 8px, #ddd1b3 8px 16px); }
+.fd-card .fd-img { width:100%; aspect-ratio:4/3; background:#0e0e0e; position:relative; display:flex; align-items:center; justify-content:center; background-size:contain; background-repeat:no-repeat; background-position:center; }
 .fd-card .fd-img .ph { font-family:'JetBrains Mono', monospace; font-size:8px; color:#8b6914; text-align:center; padding:8px; }
 .fd-card .fd-body { padding:10px 14px 14px; }
 .fd-card .fd-num { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:22px; color:#a02828; line-height:1; }
@@ -226,7 +226,7 @@ body { padding:20px; }
   <div class="fd-deck">From morning coffee to evening pastries — the flavours that defined this leg.</div>
   <div class="fd-grid">
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/switzerland/food-01-fondue.jpg'); background-size:cover; background-position:center;">
+      <div class="fd-img" style="background-image:url('../images/switzerland/food-01-fondue.jpg'); background-size:contain; background-repeat:no-repeat; background-position:center;">
         <div class="ph">📷 images/switzerland/food-01-fondue.jpg</div>
       </div>
       <div class="fd-body">
@@ -237,7 +237,7 @@ body { padding:20px; }
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/switzerland/food-02-raclette.jpg'); background-size:cover; background-position:center;">
+      <div class="fd-img" style="background-image:url('../images/switzerland/food-02-raclette.jpg'); background-size:contain; background-repeat:no-repeat; background-position:center;">
         <div class="ph">📷 images/switzerland/food-02-raclette.jpg</div>
       </div>
       <div class="fd-body">
@@ -248,7 +248,7 @@ body { padding:20px; }
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/switzerland/food-03-rosti.jpg'); background-size:cover; background-position:center;">
+      <div class="fd-img" style="background-image:url('../images/switzerland/food-03-rosti.jpg'); background-size:contain; background-repeat:no-repeat; background-position:center;">
         <div class="ph">📷 images/switzerland/food-03-rosti.jpg</div>
       </div>
       <div class="fd-body">
@@ -259,7 +259,7 @@ body { padding:20px; }
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/switzerland/food-04-magronen.jpg'); background-size:cover; background-position:center;">
+      <div class="fd-img" style="background-image:url('../images/switzerland/food-04-magronen.jpg'); background-size:contain; background-repeat:no-repeat; background-position:center;">
         <div class="ph">📷 images/switzerland/food-04-magronen.jpg</div>
       </div>
       <div class="fd-body">
@@ -270,7 +270,7 @@ body { padding:20px; }
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/switzerland/food-05-toblerone.jpg'); background-size:cover; background-position:center;">
+      <div class="fd-img" style="background-image:url('../images/switzerland/food-05-toblerone.jpg'); background-size:contain; background-repeat:no-repeat; background-position:center;">
         <div class="ph">📷 images/switzerland/food-05-toblerone.jpg</div>
       </div>
       <div class="fd-body">
@@ -281,7 +281,7 @@ body { padding:20px; }
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/switzerland/day-17-galette.jpg'); background-size:cover; background-position:center;"></div>
+      <div class="fd-img" style="background-image:url('../images/switzerland/day-17-galette.jpg'); background-size:contain; background-repeat:no-repeat; background-position:center;"></div>
       <div class="fd-body">
         <div class="fd-num">06</div>
         <div class="fd-name">Galette bretonne</div>
