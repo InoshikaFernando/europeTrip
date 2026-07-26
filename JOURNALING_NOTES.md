@@ -436,3 +436,16 @@ buy a replacement); waited long for the stroller then learned Munich keeps strol
 cubicle for 2 hrs, took 1 cubicle, ~45 min to wash all five; **car pickup smooth, kids loved
 their car seats**; drove into Munich; **driving on the right** (opposite NZ) felt crazy at
 first but adapted within ~30 min. _Awaiting: the 2+ hr Munich city wander (Visit 1b)._
+
+**Switzerland — Maison Cailler + lunch (Sat 25 Jul, Day 16 / halfway point):** after the
+Gornergrat morning, drove down to **Broc** for the **Maison Cailler** chocolate factory
+(free visitor parking; self-guided history + tasting). The exhibit's chocolate-history thread
+(Aztecs → **Emperor Charles V's** Spanish court → refined in the French court → Swiss milk
+chocolate) sparked the kids' question of whether this was the same Charles as **Prague** — it's
+not: **Charles V** (Habsburg, Spain, 1500s, the chocolate one) vs **Charles IV** (Bohemia, 1300s,
+the Charles Bridge one). **Lunch = galette** (savoury **buckwheat** crêpe, French-Swiss).
+**Family observation to use:** the galette *looked AND tasted* similar to **thosai/dosa** — but
+they're different ingredients: **buckwheat is a seed/pseudo-cereal** (cousin of rhubarb/sorrel),
+whereas **undu (උඳු / ulundu / urad dal) is a legume/black gram**. Nice "tastes like home, made
+from something totally different" bridge for a food page. _Story angles: "A Sweet Empire" chocolate
+spread (built into Issue 07); a food note pairing galette ↔ thosai._
