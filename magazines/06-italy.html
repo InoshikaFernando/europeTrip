@@ -77,6 +77,26 @@ body { padding:20px; }
 .mag-essay .essay-lead img { max-height:60mm; width:auto; max-width:100%; margin:0 auto; }
 .mag-essay .essay-lead .essay-cap { font-size:11px; font-style:italic; color:#3d3024; text-align:center; max-width:80%; margin-left:auto; margin-right:auto; }
 @media print { .mag-essay { column-count:3; } }
+/* ===== FEATURE-LED EDITORIAL SYSTEM (accents: kicker #7a4a2e · caption strong #f0d68c) ===== */
+.mag-lead { display:grid; grid-template-columns:1.6fr 1fr; gap:8mm; align-items:end; margin:6px 0 7mm; }
+.mag-lead .ll-feat { margin:0; position:relative; overflow:hidden; border-radius:3px; }
+.mag-lead .ll-feat img { width:100%; height:auto; display:block; }
+.mag-lead .ll-col { display:flex; flex-direction:column; padding-bottom:3mm; }
+.mag-lead .ll-kick { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#7a4a2e; display:block; margin-bottom:10px; }
+.mag-lead .ll-intro { font-family:'Fraunces',serif; font-style:italic; font-size:14px; line-height:1.62; color:#3d3024; }
+.ed-two, .ed-grid3, .ed-grid4, .ed-land { display:grid; margin-top:8px; }
+.ed-two { grid-template-columns:repeat(2,1fr); gap:6mm; }
+.ed-grid3 { grid-template-columns:repeat(3,1fr); gap:5mm; }
+.ed-grid4 { grid-template-columns:repeat(4,1fr); gap:4mm; }
+.ed-land { grid-template-columns:repeat(2,1fr); gap:6mm; }
+.ed-two figure, .ed-grid3 figure, .ed-grid4 figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; aspect-ratio:3/4; }
+.ed-land figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; aspect-ratio:4/3; }
+.ed-two img, .ed-grid3 img, .ed-grid4 img, .ed-land img { width:100%; height:100%; object-fit:cover; display:block; }
+.ed-cap-ov { position:absolute; left:0; right:0; bottom:0; padding:22px 11px 9px; background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.35) 55%, transparent); color:#fff; font-family:'Fraunces',serif; font-size:9px; line-height:1.4; }
+.ed-grid3 .ed-cap-ov { padding:16px 8px 6px; font-size:8px; line-height:1.3; }
+.ed-grid4 .ed-cap-ov { padding:14px 6px 5px; font-size:7px; line-height:1.25; }
+.ed-cap-ov strong { color:#f0d68c; font-weight:700; }
+.mag-lead .ll-feat .ed-cap-ov { padding:26px 14px 12px; font-size:10px; line-height:1.45; }
 .mag-food { padding:18mm 16mm; }
 .fd-headline { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.02em; }
 .fd-headline em { font-style:italic; font-weight:400; color:#7a4a2e; }
@@ -303,17 +323,28 @@ body { padding:20px; }
 <div class="mag-page mag-album">
   <div class="album-sub">Venice · a day on foot</div>
   <div class="album-head">Between the palaces, the city itself.</div>
-  <div class="mag-essay">
-    <div class="essay-item essay-lead"><img src="../images/italy/venice-vaporetto-family.jpg" loading="lazy"><div class="essay-cap">We crossed the lagoon and spent a whole day chasing shade through Venice — palace to church, canal to café — before a summer downpour washed the square clean at dusk. This is the walk in between.</div></div>
-    <div class="essay-item"><img src="../images/italy/venice-basilica-facade.jpg" loading="lazy"><div class="essay-cap">The west front of St Mark's — golden mosaics over five portals, the winged lion above, the bronze horses on the loggia.</div></div>
-    <div class="essay-item"><img src="../images/italy/venice-san-marco-interior-nave.jpg" loading="lazy"><div class="essay-cap">Inside, the marble forest of the nave, every arch above it sheathed in mosaic — where we came back for the Vigil Mass.</div></div>
-    <div class="essay-item"><img src="../images/italy/venice-doge-museo-family.jpg" loading="lazy"><div class="essay-cap">A quiet corner of the Doge's Palace — the Museo dell'Opera, where the palace's original Gothic capitals are kept safe out of the weather.</div></div>
-    <div class="essay-item"><img src="../images/italy/venice-san-zulian.jpg" loading="lazy"><div class="essay-cap">San Zulian, off the busy Merceria — a Sansovino church and a cool, still nave: the day's second refuge from the heat.</div></div>
-    <div class="essay-item"><img src="../images/italy/venice-campanile.jpg" loading="lazy"><div class="essay-cap">The Campanile from directly below — the near-hundred-metre bell tower that fell in 1902 and was rebuilt "as it was, where it was."</div></div>
-    <div class="essay-item"><img src="../images/italy/venice-canal-gondolas.jpg" loading="lazy"><div class="essay-cap">Step off the main lanes and Venice becomes green water and arched bridges — a gondola slipping under a little humpback bridge.</div></div>
-    <div class="essay-item"><img src="../images/italy/venice-gondola-station.jpg" loading="lazy"><div class="essay-cap">The gondola station at Orseolo, the striped-shirted gondoliers calling the corners to one another as they turn.</div></div>
-    <div class="essay-item"><img src="../images/italy/venice-magnet-sighs.jpg" loading="lazy"><div class="essay-cap">We didn't ride one — but we held a two-euro magnet of the Bridge of Sighs up against the real thing, and called it a souvenir.</div></div>
-    <div class="essay-item"><img src="../images/italy/venice-hard-rock-family.jpg" loading="lazy"><div class="essay-cap">The day's third refuge: the coldest air-conditioning in the city and a row of iced drinks, before the bells called us to Mass.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/italy/venice-vaporetto-family.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">Across the lagoon by <strong>vaporetto</strong> — all five of us, at the start of a whole day on foot in Venice.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">Venice · A Day on Foot</span>
+      <div class="ll-intro">We crossed the lagoon and spent a whole day chasing shade through Venice — palace to church, canal to café — before a summer downpour washed the square clean at dusk. This is the walk in between.</div>
+    </div>
+  </div>
+  <div class="ed-grid4">
+    <figure><img src="../images/italy/venice-san-marco-interior-nave.jpg" loading="lazy"><figcaption class="ed-cap-ov">Inside, the marble <strong>nave</strong> of St Mark's, every arch sheathed in mosaic — where we came back for the Vigil Mass.</figcaption></figure>
+    <figure><img src="../images/italy/venice-doge-museo-family.jpg" loading="lazy"><figcaption class="ed-cap-ov">A quiet corner of the <strong>Doge's Palace</strong> — the Museo dell'Opera, its Gothic capitals kept safe.</figcaption></figure>
+    <figure><img src="../images/italy/venice-san-zulian.jpg" loading="lazy"><figcaption class="ed-cap-ov"><strong>San Zulian</strong>, off the Merceria — a cool, still nave: the day's second refuge from the heat.</figcaption></figure>
+    <figure><img src="../images/italy/venice-campanile.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>Campanile</strong> from below — the bell tower that fell in 1902 and was rebuilt "as it was, where it was."</figcaption></figure>
+    <figure><img src="../images/italy/venice-canal-gondolas.jpg" loading="lazy"><figcaption class="ed-cap-ov">Off the main lanes, green water and arched bridges — a <strong>gondola</strong> under a little humpback bridge.</figcaption></figure>
+    <figure><img src="../images/italy/venice-gondola-station.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>gondola station</strong> at Orseolo, gondoliers calling the corners as they turn.</figcaption></figure>
+    <figure><img src="../images/italy/venice-magnet-sighs.jpg" loading="lazy"><figcaption class="ed-cap-ov">A two-euro magnet of the <strong>Bridge of Sighs</strong>, held up against the real thing.</figcaption></figure>
+  </div>
+  <div class="ed-land">
+    <figure><img src="../images/italy/venice-basilica-facade.jpg" loading="lazy"><figcaption class="ed-cap-ov">The west front of <strong>St Mark's</strong> — golden mosaics over five portals, the winged lion above, the bronze horses on the loggia.</figcaption></figure>
+    <figure><img src="../images/italy/venice-hard-rock-family.jpg" loading="lazy"><figcaption class="ed-cap-ov">The day's coldest air-conditioning and a row of iced drinks, before the bells called us to <strong>Mass</strong>.</figcaption></figure>
   </div>
   <div class="folio">— Issue 06 · VENICE · A day on foot —</div>
 </div>
@@ -492,15 +523,26 @@ body { padding:20px; }
 <div class="mag-page mag-album">
   <div class="album-sub">Florence · the Uffizi &amp; the Baptistery</div>
   <div class="album-head">The whole Renaissance, room by room.</div>
-  <div class="mag-essay">
-    <div class="essay-item essay-lead"><img src="../images/italy/florence-uffizi-madonna-angels.jpg" loading="lazy"><div class="essay-cap">For a Catholic family the Uffizi is a strange, double thing — a museum, and wall after wall of the very faith we had just been praying in Padua and at Fontanelle, here painted by the finest hands the world has produced.</div></div>
-    <div class="essay-item"><img src="../images/italy/florence-uffizi-holy-family-tondo.jpg" loading="lazy"><div class="essay-cap">A Holy Family <em>tondo</em> — the round panel Florentine painters favoured for the home: Mary, the Christ Child, the infant St John and an aged Joseph.</div></div>
-    <div class="essay-item"><img src="../images/italy/florence-uffizi-andrea-del-sarto.jpg" loading="lazy"><div class="essay-cap">A crowded narrative panel by <strong>Andrea del Sarto</strong> (1486–1530) — the painter Vasari praised as <em>senza errori</em>, the faultless one.</div></div>
-    <div class="essay-item"><img src="../images/italy/florence-uffizi-painting-gold-frame.jpg" loading="lazy"><div class="essay-cap">A sacred scene set in a richly carved and gilded frame — the Florentine rooms are full of them.</div></div>
-    <div class="essay-item"><img src="../images/italy/florence-uffizi-altarpiece.jpg" loading="lazy"><div class="essay-cap">A multi-panelled altarpiece — a mitred bishop-saint and companions above a <em>predella</em> of small narrative scenes.</div></div>
-    <div class="essay-item"><img src="../images/italy/florence-uffizi-statue.jpg" loading="lazy"><div class="essay-cap">And, framed in a window, an antique marble — a Roman copy after a Greek original, of the kind the Medici collected obsessively.</div></div>
-    <div class="essay-item"><img src="../images/italy/florence-baptistery-ceiling.jpg" loading="lazy"><div class="essay-cap">Then, across the square, the Baptistery — the mosaic vault a whole heaven of gold, patriarchs and prophets in tiny cubes of glass.</div></div>
-    <div class="essay-item"><img src="../images/italy/florence-baptistery-dome.jpg" loading="lazy"><div class="essay-cap">The eight-sided dome overhead — Genesis, the life of Christ, and a colossal Last Judgement laid in gold eight centuries ago.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/italy/florence-uffizi-madonna-angels.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">A <strong>Madonna</strong> among angels — the very faith we had been praying in Padua and at Fontanelle, here in the finest hands the world has produced.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">Florence · The Uffizi</span>
+      <div class="ll-intro">For a Catholic family the Uffizi is a strange, double thing — a museum, and wall after wall of the very faith we had just been praying, painted by the finest hands the world has produced.</div>
+    </div>
+  </div>
+  <div class="ed-land">
+    <figure><img src="../images/italy/florence-uffizi-holy-family-tondo.jpg" loading="lazy"><figcaption class="ed-cap-ov">A Holy Family <strong>tondo</strong> — the round panel Florentine painters favoured for the home: Mary, the Christ Child, the infant St John and an aged Joseph.</figcaption></figure>
+    <figure><img src="../images/italy/florence-uffizi-andrea-del-sarto.jpg" loading="lazy"><figcaption class="ed-cap-ov">A crowded narrative panel by <strong>Andrea del Sarto</strong> (1486–1530) — the painter Vasari praised as <em>senza errori</em>, the faultless one.</figcaption></figure>
+  </div>
+  <div class="ed-grid4" style="grid-template-columns:repeat(5,1fr);gap:4mm;">
+    <figure><img src="../images/italy/florence-uffizi-painting-gold-frame.jpg" loading="lazy"><figcaption class="ed-cap-ov">A sacred scene in a <strong>gilded frame</strong>.</figcaption></figure>
+    <figure><img src="../images/italy/florence-uffizi-altarpiece.jpg" loading="lazy"><figcaption class="ed-cap-ov">A multi-panelled <strong>altarpiece</strong>.</figcaption></figure>
+    <figure><img src="../images/italy/florence-uffizi-statue.jpg" loading="lazy"><figcaption class="ed-cap-ov">An antique <strong>marble</strong>, Medici-collected.</figcaption></figure>
+    <figure><img src="../images/italy/florence-baptistery-ceiling.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>Baptistery</strong> vault of gold.</figcaption></figure>
+    <figure><img src="../images/italy/florence-baptistery-dome.jpg" loading="lazy"><figcaption class="ed-cap-ov">The eight-sided <strong>dome</strong> in gold.</figcaption></figure>
   </div>
   <div class="folio">— Issue 06 · FLORENCE · Renaissance Masters —</div>
 </div>
@@ -777,13 +819,24 @@ body { padding:20px; }
 <div class="mag-page mag-album">
   <div class="album-sub">The Vatican · St Peter's Square</div>
   <div class="album-head">Bernini's welcoming arms.</div>
-  <div class="mag-essay">
-    <div class="essay-item essay-lead"><img src="../images/italy/vatican-postcard-square.jpg" loading="lazy"><div class="essay-cap">We came in as the square opened, and did what we do everywhere — held a postcard up against the real thing: the obelisk, the dome, and Bernini's colonnade sweeping round like a pair of arms drawing you in.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-colonnade.jpg" loading="lazy"><div class="essay-cap">The colonnade — 284 travertine columns in four ranks, laid out by <strong>Bernini</strong> in the 1660s as "the motherly arms of the Church" embracing the faithful.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-colonnade-gate.jpg" loading="lazy"><div class="essay-cap">Above the columns, a crowd of stone saints and the coat of arms of Pope Alexander VII, who commissioned the square.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-facade.jpg" loading="lazy"><div class="essay-cap">Maderno's great façade — from its central balcony, the <em>loggia delle benedizioni</em>, a new pope is announced to the world.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-fountain.jpg" loading="lazy"><div class="essay-cap">One of the square's twin fountains, catching the early sun — Maderno's on the right, its partner added by Bernini to balance it.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-stpeters-family.jpg" loading="lazy"><div class="essay-cap">And all of us in the square, with the basilica behind — before the queue, before the heat, at the start of a very long, very happy day.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/italy/vatican-stpeters-family.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">All five of us in the <strong>square</strong>, the basilica behind — before the queue, before the heat, at the start of a very long, very happy day.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">St Peter's Square · The Vatican</span>
+      <div class="ll-intro">We came in as the square opened — the obelisk, the dome, and Bernini's colonnade sweeping round like a pair of arms drawing you in.</div>
+    </div>
+  </div>
+  <div class="ed-grid3">
+    <figure><img src="../images/italy/vatican-colonnade-gate.jpg" loading="lazy"><figcaption class="ed-cap-ov">Above the columns, a crowd of stone <strong>saints</strong> and the arms of Pope Alexander VII, who commissioned the square.</figcaption></figure>
+    <figure><img src="../images/italy/vatican-facade.jpg" loading="lazy"><figcaption class="ed-cap-ov">Maderno's great <strong>façade</strong> — from its central balcony a new pope is announced to the world.</figcaption></figure>
+    <figure><img src="../images/italy/vatican-fountain.jpg" loading="lazy"><figcaption class="ed-cap-ov">One of the square's twin <strong>fountains</strong>, catching the early sun.</figcaption></figure>
+  </div>
+  <div class="ed-land">
+    <figure><img src="../images/italy/vatican-postcard-square.jpg" loading="lazy"><figcaption class="ed-cap-ov">We did what we do everywhere — held a <strong>postcard</strong> up against the real thing: the obelisk, the dome, and the colonnade sweeping round.</figcaption></figure>
+    <figure><img src="../images/italy/vatican-colonnade.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>colonnade</strong> — 284 travertine columns in four ranks, laid out by Bernini in the 1660s as "the motherly arms of the Church."</figcaption></figure>
   </div>
   <div class="folio">— Issue 06 · THE VATICAN · St Peter's Square —</div>
 </div>
@@ -826,16 +879,27 @@ body { padding:20px; }
 <div class="mag-page mag-album">
   <div class="album-sub">The Vatican · inside the basilica</div>
   <div class="album-head">Marble, mosaic, and the popes.</div>
-  <div class="mag-essay">
-    <div class="essay-item essay-lead"><img src="../images/italy/vatican-nave-vault.jpg" loading="lazy"><div class="essay-cap">Above the nave, the barrel vault runs in a river of gilded coffering toward the dome. Almost nothing here is what it seems: St Peter's has scarcely a single oil painting — its "paintings" are all mosaic, millions of tiny tiles copying the great altarpieces so faithfully you must press your nose to the surface to tell.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-basilica-altar.jpg" loading="lazy"><div class="essay-cap">The high altar and the sunken <em>confessio</em> before it, ringed with oil lamps that burn day and night over the tomb of St Peter.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-nave.jpg" loading="lazy"><div class="essay-cap">The long marble floor of the nave, inlaid with coloured stone and the measured lengths of the world's other cathedrals.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-papal-tomb.jpg" loading="lazy"><div class="essay-cap">A Baroque papal monument — a pope in bronze above allegories of Charity and Justice in white marble, the Bernini formula copied for two centuries.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-altar-mosaic.jpg" loading="lazy"><div class="essay-cap">A side altar whose "altarpiece" is in fact a mosaic — the Vatican kept its own mosaic studio precisely to make these.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-altar-relief.jpg" loading="lazy"><div class="essay-cap">Carved marble around another altar, saints and angels worked in high relief in the cool of a side chapel.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-tomb-relief.jpg" loading="lazy"><div class="essay-cap">Close up on a tomb — a marble frieze of mourners and virtues, the kind of detail you walk past a hundred times without seeing.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-founder-statue.jpg" loading="lazy"><div class="essay-cap">A saint's statue high in its niche above a doorway; each of the great pillars carries one of the founders of a religious order.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-mosaic-crucifix.jpg" loading="lazy"><div class="essay-cap">A mosaic icon set above an ancient wooden crucifix at a quiet side altar — a place to stop and pray amid the crowds.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/italy/vatican-nave-vault.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">Above the nave, the barrel <strong>vault</strong> runs in a river of gilded coffering toward the dome — where almost every "painting" is in fact mosaic.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">Inside St Peter's · The Vatican</span>
+      <div class="ll-intro">Almost nothing here is what it seems: St Peter's has scarcely a single oil painting — its "paintings" are all mosaic, millions of tiny tiles copying the great altarpieces so faithfully you must press your nose to the surface to tell.</div>
+    </div>
+  </div>
+  <div class="ed-grid4">
+    <figure><img src="../images/italy/vatican-basilica-altar.jpg" loading="lazy"><figcaption class="ed-cap-ov">The high <strong>altar</strong> and sunken <em>confessio</em>, ringed with lamps over the tomb of St Peter.</figcaption></figure>
+    <figure><img src="../images/italy/vatican-nave.jpg" loading="lazy"><figcaption class="ed-cap-ov">The long marble <strong>floor</strong> of the nave, marked with the lengths of the world's other cathedrals.</figcaption></figure>
+    <figure><img src="../images/italy/vatican-papal-tomb.jpg" loading="lazy"><figcaption class="ed-cap-ov">A Baroque <strong>papal tomb</strong> — a pope in bronze above Charity and Justice in white marble.</figcaption></figure>
+    <figure><img src="../images/italy/vatican-altar-mosaic.jpg" loading="lazy"><figcaption class="ed-cap-ov">A side altar whose "altarpiece" is in fact a <strong>mosaic</strong>, from the Vatican's own studio.</figcaption></figure>
+    <figure><img src="../images/italy/vatican-altar-relief.jpg" loading="lazy"><figcaption class="ed-cap-ov">Carved <strong>marble</strong> around another altar — saints and angels in high relief.</figcaption></figure>
+    <figure><img src="../images/italy/vatican-founder-statue.jpg" loading="lazy"><figcaption class="ed-cap-ov">A <strong>founder's statue</strong> high in its niche; each great pillar carries one.</figcaption></figure>
+    <figure><img src="../images/italy/vatican-mosaic-crucifix.jpg" loading="lazy"><figcaption class="ed-cap-ov">A mosaic icon above an ancient wooden <strong>crucifix</strong> — a place to stop and pray.</figcaption></figure>
+  </div>
+  <div class="ed-land">
+    <figure><img src="../images/italy/vatican-tomb-relief.jpg" loading="lazy"><figcaption class="ed-cap-ov">Close up on a <strong>tomb</strong> — a marble frieze of mourners and virtues, the kind of detail you walk past a hundred times without seeing.</figcaption></figure>
   </div>
   <div class="folio">— Issue 06 · THE VATICAN · Inside the Basilica —</div>
 </div>
@@ -844,16 +908,27 @@ body { padding:20px; }
 <div class="mag-page mag-album">
   <div class="album-sub">The Vatican · the Grottoes</div>
   <div class="album-head">Down among the popes.</div>
-  <div class="mag-essay">
-    <div class="essay-item essay-lead"><img src="../images/italy/vatican-grotto-corridor.jpg" loading="lazy"><div class="essay-cap">Beneath the basilica floor lie the Vatican Grottoes — low, quiet, whitewashed corridors where some ninety popes are buried, along with a few kings and queens. You come down out of the great gold nave into stillness and stone.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-tomb-st-peter.jpg" loading="lazy"><div class="essay-cap">The heart of it all: the shrine over the tomb of St Peter, its inscription reading <em>SEPVLCRVM SANCTI PETRI APOSTOLI</em> — the grave of the apostle, directly below the high altar above.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-grotto-paul-vi.jpg" loading="lazy"><div class="essay-cap">The plain floor-grave of a modern pope — a simple slab in the pavement, chosen in deliberate humility over any grand monument.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-grotto-urban-vi.jpg" loading="lazy"><div class="essay-cap">A carved sarcophagus marked <em>VRBANVS PP VI</em> — Pope Urban VI, who reigned during the great Western Schism of the 14th century.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-grotto-effigy.jpg" loading="lazy"><div class="essay-cap">A medieval papal effigy in marble, the pope carved lying in state atop his tomb, hands folded in prayer.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-grotto-merry-del-val.jpg" loading="lazy"><div class="essay-cap">The tomb of Cardinal <strong>Rafael Merry del Val</strong>, Secretary of State to St Pius X, laid to rest here near the apostle.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-grotto-mosaic-tomb.jpg" loading="lazy"><div class="essay-cap">A wall tomb glowing with gold mosaic — Christ in majesty above the resting place of one of the medieval popes.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-grotto-altar.jpg" loading="lazy"><div class="essay-cap">A small altar in the Grottoes, where Mass is still offered among the tombs.</div></div>
-    <div class="essay-item"><img src="../images/italy/vatican-grotto-chapel.jpg" loading="lazy"><div class="essay-cap">A quiet chapel with a cross and a mosaic floor — a place for a last prayer before the stairs back up to the light.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/italy/vatican-grotto-corridor.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">Beneath the basilica floor, the low whitewashed <strong>corridors</strong> of the Grottoes — you come down out of the great gold nave into stillness and stone.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">The Grottoes · The Vatican</span>
+      <div class="ll-intro">Beneath the basilica lie the Vatican Grottoes — low, quiet corridors where some ninety popes are buried, along with a few kings and queens.</div>
+    </div>
+  </div>
+  <div class="ed-grid4">
+    <figure><img src="../images/italy/vatican-tomb-st-peter.jpg" loading="lazy"><figcaption class="ed-cap-ov">The heart of it all: the shrine over the <strong>tomb of St Peter</strong> — <em>SEPVLCRVM SANCTI PETRI APOSTOLI</em>, below the high altar.</figcaption></figure>
+    <figure><img src="../images/italy/vatican-grotto-paul-vi.jpg" loading="lazy"><figcaption class="ed-cap-ov">The plain <strong>floor-grave</strong> of a modern pope — a simple slab, chosen in humility.</figcaption></figure>
+    <figure><img src="../images/italy/vatican-grotto-altar.jpg" loading="lazy"><figcaption class="ed-cap-ov">A small <strong>altar</strong> in the Grottoes, where Mass is still offered among the tombs.</figcaption></figure>
+    <figure><img src="../images/italy/vatican-grotto-chapel.jpg" loading="lazy"><figcaption class="ed-cap-ov">A quiet <strong>chapel</strong> — a place for a last prayer before the stairs back up to the light.</figcaption></figure>
+  </div>
+  <div class="ed-land">
+    <figure><img src="../images/italy/vatican-grotto-urban-vi.jpg" loading="lazy"><figcaption class="ed-cap-ov">A carved sarcophagus marked <em>VRBANVS PP VI</em> — <strong>Pope Urban VI</strong>, who reigned during the great Western Schism of the 14th century.</figcaption></figure>
+    <figure><img src="../images/italy/vatican-grotto-effigy.jpg" loading="lazy"><figcaption class="ed-cap-ov">A medieval papal <strong>effigy</strong> in marble, the pope carved lying in state atop his tomb, hands folded in prayer.</figcaption></figure>
+    <figure><img src="../images/italy/vatican-grotto-merry-del-val.jpg" loading="lazy"><figcaption class="ed-cap-ov">The tomb of Cardinal <strong>Rafael Merry del Val</strong>, Secretary of State to St Pius X, laid to rest near the apostle.</figcaption></figure>
+    <figure><img src="../images/italy/vatican-grotto-mosaic-tomb.jpg" loading="lazy"><figcaption class="ed-cap-ov">A wall tomb glowing with gold <strong>mosaic</strong> — Christ in majesty above one of the medieval popes.</figcaption></figure>
   </div>
   <div class="folio">— Issue 06 · THE VATICAN · The Grottoes —</div>
 </div>
