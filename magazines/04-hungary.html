@@ -140,6 +140,25 @@ body { padding:20px; }
 .mag-essay .essay-cap { font-family:'Fraunces', serif; font-size:8px; line-height:1.4; color:#5a4a3a; margin-top:4px; }
 .mag-essay .essay-lead { column-span:all; margin-bottom:6mm; }
 .mag-essay .essay-lead .essay-cap { font-size:11px; font-style:italic; color:#3d3024; text-align:center; }
+.mag-lead { display:grid; grid-template-columns:1.6fr 1fr; gap:8mm; align-items:end; margin:6px 0 7mm; }
+.mag-lead .ll-feat { margin:0; position:relative; overflow:hidden; border-radius:3px; }
+.mag-lead .ll-feat img { width:100%; height:auto; display:block; }
+.mag-lead .ll-col { display:flex; flex-direction:column; padding-bottom:3mm; }
+.mag-lead .ll-kick { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#b41e1e; display:block; margin-bottom:10px; }
+.mag-lead .ll-intro { font-family:'Fraunces',serif; font-style:italic; font-size:14px; line-height:1.62; color:#3d3024; }
+.ed-two, .ed-grid3, .ed-grid4, .ed-land { display:grid; margin-top:8px; }
+.ed-two { grid-template-columns:repeat(2,1fr); gap:6mm; }
+.ed-grid3 { grid-template-columns:repeat(3,1fr); gap:5mm; }
+.ed-grid4 { grid-template-columns:repeat(4,1fr); gap:4mm; }
+.ed-land { grid-template-columns:repeat(2,1fr); gap:6mm; }
+.ed-two figure, .ed-grid3 figure, .ed-grid4 figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; aspect-ratio:3/4; }
+.ed-land figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; aspect-ratio:4/3; }
+.ed-two img, .ed-grid3 img, .ed-grid4 img, .ed-land img { width:100%; height:100%; object-fit:cover; display:block; }
+.ed-cap-ov { position:absolute; left:0; right:0; bottom:0; padding:22px 11px 9px; background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.35) 55%, transparent); color:#fff; font-family:'Fraunces',serif; font-size:9px; line-height:1.4; }
+.ed-grid3 .ed-cap-ov { padding:16px 8px 6px; font-size:8px; line-height:1.3; }
+.ed-grid4 .ed-cap-ov { padding:14px 6px 5px; font-size:7px; line-height:1.25; }
+.ed-cap-ov strong { color:#f0d68c; font-weight:700; }
+.mag-lead .ll-feat .ed-cap-ov { padding:26px 14px 12px; font-size:10px; line-height:1.45; }
 @media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
 </style></head>
 <body>
@@ -263,13 +282,21 @@ body { padding:20px; }
 <div class="mag-page mag-essaypage">
   <div class="es-eyebrow">PEST · INSIDE ST STEPHEN'S · A PORTFOLIO</div>
   <div class="es-headline">A walk down<br><em>the honeyed nave.</em></div>
-  <div class="es-deck">Off the hot square and into the cool of the largest church in Budapest — down the marble aisle, up to the altar of the founding king, and past the side chapels toward the relic that draws the crowds.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/hungary/st-stephens-nave.jpg" loading="lazy"><div class="essay-cap">In from the portico: the long nave runs over a black-and-white marble floor toward the high altar, the caramel-and-gold walls climbing to the vault above.</div></div>
-    <div class="essay-item"><img src="../images/hungary/st-stephens-high-altar.jpg" loading="lazy"><div class="essay-cap">The apse, lit from a high window — at its centre the white Carrara statue of King Stephen by Alajos Stróbl, ringed by the red marble and gilt of the sanctuary.</div></div>
-    <div class="essay-item"><img src="../images/hungary/st-stephens-side-altar.jpg" loading="lazy"><div class="essay-cap">One of the side altars off the nave, its crucifix set between painted saints — a quieter corner away from the glow of the crossing.</div></div>
-    <div class="essay-item"><img src="../images/hungary/basilica-dome-top-kids.jpg" loading="lazy"><div class="essay-cap">Two of ours by the red rope inside, cameras at the ready, before we queued for the lift and the last spiral of steps up to the dome colonnade.</div></div>
-    <div class="essay-item"><img src="../images/hungary/holy-right-chapel.jpg" loading="lazy"><div class="essay-cap">The Chapel of the Holy Right, off the left aisle — the little glass reliquary glowing in its case beneath a gilded altarpiece. The relic itself is on the next page.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/hungary/basilica-dome-top-kids.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">Two of ours by the red rope inside, <strong>cameras at the ready</strong>, before we queued for the lift and the last spiral of steps up to the dome colonnade.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">Pest · Inside the Basilica</span>
+      <div class="ll-intro">Off the hot square and into the cool — down the honeyed nave to the altar of the founding king, past a quieter side chapel to the reliquary glowing in its case.</div>
+    </div>
+  </div>
+  <div class="ed-grid4">
+    <figure><img src="../images/hungary/st-stephens-nave.jpg" loading="lazy"><figcaption class="ed-cap-ov">The long <strong>nave</strong> over a black-and-white marble floor toward the high altar, caramel-and-gold walls climbing to the vault.</figcaption></figure>
+    <figure><img src="../images/hungary/st-stephens-high-altar.jpg" loading="lazy"><figcaption class="ed-cap-ov">The apse, lit from a high window — the white Carrara statue of <strong>King Stephen</strong> by Alajos Stróbl, ringed with red marble and gilt.</figcaption></figure>
+    <figure><img src="../images/hungary/st-stephens-side-altar.jpg" loading="lazy"><figcaption class="ed-cap-ov">A <strong>side altar</strong> off the nave, its crucifix set between painted saints — a quieter corner away from the crossing.</figcaption></figure>
+    <figure><img src="../images/hungary/holy-right-chapel.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>Chapel of the Holy Right</strong> — the little glass reliquary glowing in its case beneath a gilded altarpiece.</figcaption></figure>
   </div>
   <div class="folio">— Issue 04 · HUNGARY · Inside the Basilica —</div>
 </div>
@@ -332,12 +359,20 @@ body { padding:20px; }
 <div class="mag-page mag-essaypage">
   <div class="es-eyebrow">BUDA · AROUND THE BASTION · A PORTFOLIO</div>
   <div class="es-headline">White stone,<br><em>and a long way down.</em></div>
-  <div class="es-deck">Up close, Schulek's fairy-tale terrace is all cone-topped turrets, climbing stairs and iron lanterns — and over the parapet, the whole of Pest laid flat beyond the river.</div>
-  <div class="mag-essay">
-    <div class="essay-item essay-lead"><img src="../images/hungary/fishermans-bastion-parliament-view.jpg" loading="lazy"><div class="essay-cap">The reward at the rail: from the Bastion terrace the Danube opens out and the Parliament stands answering across the water, with the red roofs of the Watertown tumbling down the hill below.</div></div>
-    <div class="essay-item"><img src="../images/hungary/fishermans-bastion-stairs.jpg" loading="lazy"><div class="essay-cap">The ceremonial stairs sweeping up between the towers — the climb we hauled the stroller up, flight by flight, in the midday heat.</div></div>
-    <div class="essay-item"><img src="../images/hungary/fishermans-bastion-towers-close.jpg" loading="lazy"><div class="essay-cap">One of the seven turrets up close: pale stone, a witch's-hat roof, and a wrought-iron lamp — a castle built purely to be looked at.</div></div>
-    <div class="essay-item"><img src="../images/hungary/bastion-arch-kids-alt.jpg" loading="lazy"><div class="essay-cap">The three of them under an arch again — Avin riding in the pushchair this time, Avisha and Aviann framed by the loggia and a turret beyond.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/hungary/fishermans-bastion-parliament-view.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">The reward at the rail: from the terrace the Danube opens out and the <strong>Parliament</strong> answers across the water, the red roofs of the Watertown tumbling down the hill below.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">Buda · Around the Bastion</span>
+      <div class="ll-intro">Up close, Schulek's fairy-tale terrace is all cone-topped turrets, climbing stairs and iron lanterns — and over the parapet, the whole of Pest laid flat beyond the river.</div>
+    </div>
+  </div>
+  <div class="ed-grid3">
+    <figure><img src="../images/hungary/fishermans-bastion-stairs.jpg" loading="lazy"><figcaption class="ed-cap-ov">The ceremonial <strong>stairs</strong> sweeping up between the towers — the climb we hauled the stroller up, flight by flight, in the midday heat.</figcaption></figure>
+    <figure><img src="../images/hungary/fishermans-bastion-towers-close.jpg" loading="lazy"><figcaption class="ed-cap-ov">One of the seven <strong>turrets</strong> up close: pale stone, a witch's-hat roof, a wrought-iron lamp — a castle built purely to be looked at.</figcaption></figure>
+    <figure><img src="../images/hungary/bastion-arch-kids-alt.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>three of them</strong> under an arch again — Avin in the pushchair, Avisha and Aviann framed by the loggia and a turret beyond.</figcaption></figure>
   </div>
   <div class="folio">— Issue 04 · HUNGARY · Around the Bastion —</div>
 </div>
@@ -345,13 +380,21 @@ body { padding:20px; }
 <div class="mag-page mag-essaypage">
   <div class="es-eyebrow">BUDA · THE CITY FROM THE TERRACE · A PORTFOLIO</div>
   <div class="es-headline">Pest, the river,<br><em>and every bridge.</em></div>
-  <div class="es-deck">From the top of Castle Hill the flat east bank unrolls the whole way to the horizon — the Parliament, the great chain of bridges, and the Danube threading through the middle of it all.</div>
-  <div class="mag-essay" style="column-count:2;">
-    <div class="essay-item essay-lead"><img src="../images/hungary/panorama-parliament-clear.jpg" loading="lazy"><div class="essay-cap">The classic view: the neo-Gothic Parliament stretched along the far bank, the river bright in front of it, the roofs of Buda in the foreground.</div></div>
-    <div class="essay-item"><img src="../images/hungary/panorama-parliament-dome.jpg" loading="lazy"><div class="essay-cap">The Parliament dome and the sweep of the Pest embankment, the water dotted with sightseeing boats.</div></div>
-    <div class="essay-item"><img src="../images/hungary/panorama-chain-bridge.jpg" loading="lazy"><div class="essay-cap">Downstream toward the Chain Bridge, the low line of central Pest running off into the haze.</div></div>
-    <div class="essay-item"><img src="../images/hungary/panorama-elisabeth-bridge.jpg" loading="lazy"><div class="essay-cap">Southward past the white span of the Elisabeth Bridge, the river bending away between the two banks.</div></div>
-    <div class="essay-item"><img src="../images/hungary/panorama-margaret-bridge.jpg" loading="lazy"><div class="essay-cap">Upstream to the Margaret Bridge, with green Margaret Island splitting the stream and a Buda church spire in the foreground.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/hungary/panorama-parliament-clear.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">The classic view: the neo-Gothic <strong>Parliament</strong> stretched along the far bank, the river bright in front of it, the roofs of Buda in the foreground.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">Buda · The Castle Hill terrace</span>
+      <div class="ll-intro">From the top of Castle Hill the flat east bank unrolls the whole way to the horizon — the Parliament, the great chain of bridges, and the Danube threading through it all.</div>
+    </div>
+  </div>
+  <div class="ed-land">
+    <figure><img src="../images/hungary/panorama-parliament-dome.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>Parliament dome</strong> and the sweep of the Pest embankment, the water dotted with sightseeing boats.</figcaption></figure>
+    <figure><img src="../images/hungary/panorama-chain-bridge.jpg" loading="lazy"><figcaption class="ed-cap-ov">Downstream toward the <strong>Chain Bridge</strong>, the low line of central Pest running off into the haze.</figcaption></figure>
+    <figure><img src="../images/hungary/panorama-elisabeth-bridge.jpg" loading="lazy"><figcaption class="ed-cap-ov">Southward past the white span of the <strong>Elisabeth Bridge</strong>, the river bending away between the two banks.</figcaption></figure>
+    <figure><img src="../images/hungary/panorama-margaret-bridge.jpg" loading="lazy"><figcaption class="ed-cap-ov">Upstream to the <strong>Margaret Bridge</strong>, green Margaret Island splitting the stream and a Buda spire in the foreground.</figcaption></figure>
   </div>
   <div class="folio">— Issue 04 · HUNGARY · The City from the Terrace —</div>
 </div>
@@ -415,15 +458,23 @@ body { padding:20px; }
 <div class="mag-page mag-essaypage">
   <div class="es-eyebrow">BUDA · MATTHIAS CHURCH · A PORTFOLIO</div>
   <div class="es-headline">Every rib and wall,<br><em>a page of pattern.</em></div>
-  <div class="es-deck">Around the outside and back through the door — the Gothic tower on the square, the tiled apse, and altar after altar inside, each one painted and gilded to the last inch.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/hungary/matthias-church-exterior.jpg" loading="lazy"><div class="essay-cap">The west front from Trinity Square: the slender 80-metre Gothic tower, the rose window, and the stone porch we stepped in through.</div></div>
-    <div class="essay-item"><img src="../images/hungary/matthias-church-apse.jpg" loading="lazy"><div class="essay-cap">Around the side to the apse, where the famous diamond-patterned Zsolnay roof climbs over the buttresses against a moving sky.</div></div>
-    <div class="essay-item"><img src="../images/hungary/matthias-interior-altar.jpg" loading="lazy"><div class="essay-cap">The sanctuary from the nave — a plain modern altar standing bare under a blaze of painted vaults and tall stained-glass windows.</div></div>
-    <div class="essay-item"><img src="../images/hungary/matthias-interior-sanctuary.jpg" loading="lazy"><div class="essay-cap">Deeper into the chancel, a ring of lights hanging under the vault and glass cases lining the painted walls.</div></div>
-    <div class="essay-item"><img src="../images/hungary/matthias-high-altar.jpg" loading="lazy"><div class="essay-cap">A soaring neo-Gothic side altar of carved and gilded pinnacles, framed between two lancets of coloured glass.</div></div>
-    <div class="essay-item"><img src="../images/hungary/matthias-interior-side-altar.jpg" loading="lazy"><div class="essay-cap">Another altar set in a gilded sunburst recess, a painted triptych at its heart — the pattern-work never once repeating.</div></div>
-    <div class="essay-item"><img src="../images/hungary/matthias-laszlo-chapel.jpg" loading="lazy"><div class="essay-cap">A side chapel painted floor to vault with frescoes of Hungarian saints and kings — the medieval-Hungarian style Schulek dreamed back onto the walls.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/hungary/matthias-church-exterior.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">The west front from Trinity Square: the slender 80-metre <strong>Gothic tower</strong>, the rose window, and the stone porch we stepped in through.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">Buda · Matthias Church</span>
+      <div class="ll-intro">Around the outside and back through the door — the tiled apse, then altar after altar inside, each one painted and gilded to the last inch.</div>
+    </div>
+  </div>
+  <div class="ed-grid3">
+    <figure><img src="../images/hungary/matthias-church-apse.jpg" loading="lazy"><figcaption class="ed-cap-ov">Around to the <strong>apse</strong>, where the diamond-patterned Zsolnay roof climbs over the buttresses against a moving sky.</figcaption></figure>
+    <figure><img src="../images/hungary/matthias-interior-altar.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>sanctuary</strong> from the nave — a plain modern altar bare under a blaze of painted vaults and stained glass.</figcaption></figure>
+    <figure><img src="../images/hungary/matthias-interior-sanctuary.jpg" loading="lazy"><figcaption class="ed-cap-ov">Deeper into the <strong>chancel</strong>, a ring of lights under the vault and glass cases lining the painted walls.</figcaption></figure>
+    <figure><img src="../images/hungary/matthias-high-altar.jpg" loading="lazy"><figcaption class="ed-cap-ov">A soaring neo-Gothic <strong>side altar</strong> of carved and gilded pinnacles, framed between two lancets of coloured glass.</figcaption></figure>
+    <figure><img src="../images/hungary/matthias-interior-side-altar.jpg" loading="lazy"><figcaption class="ed-cap-ov">Another <strong>altar</strong> in a gilded sunburst recess, a painted triptych at its heart — the pattern-work never repeating.</figcaption></figure>
+    <figure><img src="../images/hungary/matthias-laszlo-chapel.jpg" loading="lazy"><figcaption class="ed-cap-ov">A <strong>side chapel</strong> painted floor to vault with frescoes of Hungarian saints and kings — Schulek's medieval dream.</figcaption></figure>
   </div>
   <div class="folio">— Issue 04 · HUNGARY · Matthias Church —</div>
 </div>
@@ -495,11 +546,19 @@ body { padding:20px; }
 <div class="mag-page mag-essaypage">
   <div class="es-eyebrow">BUDA · THE PALACE QUARTER · A PORTFOLIO</div>
   <div class="es-headline">The top of the hill,<br><em>on our own feet.</em></div>
-  <div class="es-deck">The long palace wings, a guard standing to attention outside the president's house, and one more family photo below the great green dome — the last stretch of Castle Hill before we came down for the river.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/hungary/buda-castle-family-alt.jpg" loading="lazy"><div class="essay-cap">All of us tipped back for a selfie under the castle dome — hot, footsore and grinning, near the end of a very long day of walking.</div></div>
-    <div class="essay-item"><img src="../images/hungary/buda-castle-national-gallery.jpg" loading="lazy"><div class="essay-cap">The long columned wing of the palace that now holds the Hungarian National Gallery, its terrace open to the river and dotted with visitors.</div></div>
-    <div class="essay-item"><img src="../images/hungary/sandor-palace-guard.jpg" loading="lazy"><div class="essay-cap">A ceremonial guard at his sentry box outside Sándor Palace, the president's residence at the top of the hill — the red-white-green sash unmistakable.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/hungary/buda-castle-family-alt.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">All of us tipped back for a <strong>selfie</strong> under the castle dome — hot, footsore and grinning, near the end of a very long day of walking.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">Buda · The Palace Quarter</span>
+      <div class="ll-intro">The long palace wings, a guard standing to attention outside the president's house, and one more family photo below the great green dome — the last stretch of Castle Hill.</div>
+    </div>
+  </div>
+  <div class="ed-two">
+    <figure><img src="../images/hungary/buda-castle-national-gallery.jpg" loading="lazy"><figcaption class="ed-cap-ov">The long columned wing that now holds the <strong>Hungarian National Gallery</strong>, its terrace open to the river and dotted with visitors.</figcaption></figure>
+    <figure><img src="../images/hungary/sandor-palace-guard.jpg" loading="lazy"><figcaption class="ed-cap-ov">A ceremonial <strong>guard</strong> at his sentry box outside Sándor Palace, the president's residence — the red-white-green sash unmistakable.</figcaption></figure>
   </div>
   <div class="folio">— Issue 04 · HUNGARY · The Palace Quarter —</div>
 </div>
@@ -574,13 +633,21 @@ body { padding:20px; }
 <div class="mag-page mag-essaypage">
   <div class="es-eyebrow">ON THE DANUBE · GOLDEN HOUR · A PORTFOLIO</div>
   <div class="es-headline">The sun going,<br><em>the gold coming.</em></div>
-  <div class="es-deck">From the deck we watched the light drain out of the sky and the city change over — the last flare on the water, the sunset behind the bridges, and the first buildings beginning to glow.</div>
-  <div class="mag-essay">
-    <div class="essay-item essay-lead"><img src="../images/hungary/buda-embankment-dusk.jpg" loading="lazy"><div class="essay-cap">The Buda embankment as the low sun caught the water — the pale façades along the bank lit warm, the river gone to silver in front of them.</div></div>
-    <div class="essay-item"><img src="../images/hungary/danube-sunset-chain-bridge.jpg" loading="lazy"><div class="essay-cap">Sunset over the Chain Bridge — the sky pink and orange, the bridge a low silhouette strung across the darkening river.</div></div>
-    <div class="essay-item"><img src="../images/hungary/danube-dusk-dome.jpg" loading="lazy"><div class="essay-cap">Buda Castle's dome standing dark on its hill as the last colour left the sky and the water turned to pewter.</div></div>
-    <div class="essay-item"><img src="../images/hungary/buda-church-night.jpg" loading="lazy"><div class="essay-cap">A Buda church spire catching the first floodlight against the dusk, the streetlamps of the embankment coming on below it.</div></div>
-    <div class="essay-item"><img src="../images/hungary/buda-hill-night.jpg" loading="lazy"><div class="essay-cap">And then, full dark: Matthias Church floodlit gold high on Castle Hill, its reflection breaking on the black water — the tower we had stood under that afternoon.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/hungary/buda-embankment-dusk.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">The <strong>Buda embankment</strong> as the low sun caught the water — the pale façades along the bank lit warm, the river gone to silver in front of them.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">On the Danube · Golden Hour</span>
+      <div class="ll-intro">From the deck we watched the light drain out of the sky and the city change over — the last flare on the water, the sunset behind the bridges, and the first buildings beginning to glow.</div>
+    </div>
+  </div>
+  <div class="ed-grid4">
+    <figure><img src="../images/hungary/danube-sunset-chain-bridge.jpg" loading="lazy"><figcaption class="ed-cap-ov">Sunset over the <strong>Chain Bridge</strong> — the sky pink and orange, the bridge a low silhouette across the darkening river.</figcaption></figure>
+    <figure><img src="../images/hungary/danube-dusk-dome.jpg" loading="lazy"><figcaption class="ed-cap-ov"><strong>Buda Castle's dome</strong> standing dark on its hill as the last colour left the sky and the water turned to pewter.</figcaption></figure>
+    <figure><img src="../images/hungary/buda-church-night.jpg" loading="lazy"><figcaption class="ed-cap-ov">A Buda <strong>church spire</strong> catching the first floodlight against the dusk, the embankment lamps coming on below.</figcaption></figure>
+    <figure><img src="../images/hungary/buda-hill-night.jpg" loading="lazy"><figcaption class="ed-cap-ov">Full dark: <strong>Matthias Church</strong> floodlit gold high on Castle Hill, its reflection breaking on the black water.</figcaption></figure>
   </div>
   <div class="folio">— Issue 04 · HUNGARY · Golden Hour —</div>
 </div>

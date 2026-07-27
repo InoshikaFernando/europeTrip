@@ -163,6 +163,26 @@ body { padding:20px; }
 .mag-essay .essay-lead { column-span:all; margin-bottom:6mm; }
 .mag-essay .essay-lead .essay-cap { font-size:11px; font-style:italic; color:#3d3024; text-align:center; }
 @media print { .mag-essay { column-count:3; } }
+/* ===== FEATURE-LED EDITORIAL SYSTEM ===== */
+.mag-lead { display:grid; grid-template-columns:1.6fr 1fr; gap:8mm; align-items:end; margin:6px 0 7mm; }
+.mag-lead .ll-feat { margin:0; position:relative; overflow:hidden; border-radius:3px; }
+.mag-lead .ll-feat img { width:100%; height:auto; display:block; }
+.mag-lead .ll-col { display:flex; flex-direction:column; padding-bottom:3mm; }
+.mag-lead .ll-kick { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#6e1313; display:block; margin-bottom:10px; }
+.mag-lead .ll-intro { font-family:'Fraunces',serif; font-style:italic; font-size:14px; line-height:1.62; color:#3d3024; }
+.ed-two, .ed-grid3, .ed-grid4, .ed-land { display:grid; margin-top:8px; }
+.ed-two { grid-template-columns:repeat(2,1fr); gap:6mm; }
+.ed-grid3 { grid-template-columns:repeat(3,1fr); gap:5mm; }
+.ed-grid4 { grid-template-columns:repeat(4,1fr); gap:4mm; }
+.ed-land { grid-template-columns:repeat(2,1fr); gap:6mm; }
+.ed-two figure, .ed-grid3 figure, .ed-grid4 figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; aspect-ratio:3/4; }
+.ed-land figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; aspect-ratio:4/3; }
+.ed-two img, .ed-grid3 img, .ed-grid4 img, .ed-land img { width:100%; height:100%; object-fit:cover; display:block; }
+.ed-cap-ov { position:absolute; left:0; right:0; bottom:0; padding:22px 11px 9px; background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.35) 55%, transparent); color:#fff; font-family:'Fraunces',serif; font-size:9px; line-height:1.4; }
+.ed-grid3 .ed-cap-ov { padding:16px 8px 6px; font-size:8px; line-height:1.3; }
+.ed-grid4 .ed-cap-ov { padding:14px 6px 5px; font-size:7px; line-height:1.25; }
+.ed-cap-ov strong { color:#f0d68c; font-weight:700; }
+.mag-lead .ll-feat .ed-cap-ov { padding:26px 14px 12px; font-size:10px; line-height:1.45; }
 @media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
 </style></head>
 <body>
@@ -369,11 +389,19 @@ body { padding:20px; }
 <div class="mag-page mag-photoessay">
   <div class="pe-eyebrow">PRAGUE CASTLE · COURTYARDS & CORNERS</div>
   <div class="pe-headline">Around the castle,<br>between the <em>churches.</em></div>
-  <div class="pe-deck">A vast complex is made of small things too — a fountain in a quiet courtyard, and a model that shrinks a thousand years of building down to the size of a table.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/day-06/10-kohl-fountain.jpg" loading="lazy"><div class="essay-cap">Down in the second courtyard, the <strong>Kohl Fountain</strong> has been playing since 1686 — the oldest baroque fountain in Prague. Three tritons hold up two great shell basins beneath the black-and-gold imperial eagle, and in the late sun the pale sandstone turned almost gold.</div></div>
-    <div class="essay-item"><img src="../images/day-06/11-kohl-fountain-detail.jpg" loading="lazy"><div class="essay-cap">Up close it becomes a crowd of characters — a muscled sea-god straining under the shell, water threading quietly from a lion-mask spout worn smooth by three and a half centuries. The children went hunting for faces in the stone and lost count.</div></div>
-    <div class="essay-item"><img src="../images/day-06/30-castle-model.jpg" loading="lazy"><div class="essay-cap">And in one of the palace halls, a scale model laid the whole hill out at once: the long walled complex, tower by tower, with St. Vitus bristling along its spine — a millennium of building shrunk to something a child could lean over.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/day-06/10-kohl-fountain.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">Down in the second courtyard, the <strong>Kohl Fountain</strong> has played since 1686 — the oldest baroque fountain in Prague, its pale sandstone turned almost gold in the late sun.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">Prague Castle · The Courtyards</span>
+      <div class="ll-intro">A vast complex is made of small things too — a fountain playing since 1686, and a model that shrinks a thousand years of building down to the size of a table.</div>
+    </div>
+  </div>
+  <div class="ed-two">
+    <figure><img src="../images/day-06/11-kohl-fountain-detail.jpg" loading="lazy"><figcaption class="ed-cap-ov">Up close, a crowd of characters — a muscled <strong>sea-god</strong> straining under the shell, water threading from a lion-mask spout worn smooth by three and a half centuries.</figcaption></figure>
+    <figure><img src="../images/day-06/30-castle-model.jpg" loading="lazy"><figcaption class="ed-cap-ov">In a palace hall, a scale <strong>model</strong> laid the whole hill out at once — the walled complex tower by tower, St. Vitus bristling along its spine.</figcaption></figure>
   </div>
   <div class="folio">— Issue 03 · CZECH REPUBLIC · Around the Castle —</div>
 </div>
@@ -399,12 +427,20 @@ body { padding:20px; }
 <div class="mag-page mag-photoessay">
   <div class="pe-eyebrow">PRAGUE CASTLE · INSIDE ST. GEORGE'S</div>
   <div class="pe-headline">A thousand years,<br>arch upon <em>arch.</em></div>
-  <div class="pe-deck">Through the baroque door and back a thousand years — a bare Romanesque hall of honey-coloured stone, its walls still holding their medieval saints and one very old queen.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/day-06/24-st-george-nave.jpg" loading="lazy"><div class="essay-cap">From the door it is one long room of honey-coloured stone, round-headed arches marching two by two toward the raised choir. Almost no gold, no glass — just proportion, age, and light in soft bars from the high windows. The children lowered their voices without being asked.</div></div>
-    <div class="essay-item"><img src="../images/day-06/25-st-george-apse-frescoes.jpg" loading="lazy"><div class="essay-cap">Up in the half-dome of the apse, medieval frescoes of the Heavenly Jerusalem, ghostly but unmistakable after seven centuries; on the pillar a painted St. Ludmila keeps watch, and below, a bronze relief of St. George and the dragon.</div></div>
-    <div class="essay-item"><img src="../images/day-06/23-st-ludmila-tomb.jpg" loading="lazy"><div class="essay-cap">In a side chapel, under glass, lies <strong>St. Ludmila</strong> — the first female saint of the Czech lands, grandmother of the "Good King Wenceslas" of the carol. She raised him in the faith; for it she made enemies, and in 921 was murdered, the story goes, with her own veil. The children pressed close to look.</div></div>
-    <div class="essay-item"><img src="../images/day-06/26-st-george-adoration-relief.jpg" loading="lazy"><div class="essay-cap">And set on a stone altar, a carved Adoration of the Magi — the three kings kneeling with their gifts before the Christ child, worked in dark old wood in the bare Romanesque light.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/day-06/24-st-george-nave.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">From the door, one long room of honey-coloured stone — round-headed <strong>arches</strong> marching two by two toward the raised choir, light in soft bars from the high windows.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">Prague Castle · Bazilika sv. Jiří</span>
+      <div class="ll-intro">Through the baroque door and back a thousand years — a bare Romanesque hall of honey-coloured stone, still holding its medieval saints and one very old queen.</div>
+    </div>
+  </div>
+  <div class="ed-grid3">
+    <figure><img src="../images/day-06/25-st-george-apse-frescoes.jpg" loading="lazy"><figcaption class="ed-cap-ov">In the half-dome, medieval <strong>frescoes</strong> of the Heavenly Jerusalem, ghostly but unmistakable after seven centuries.</figcaption></figure>
+    <figure><img src="../images/day-06/23-st-ludmila-tomb.jpg" loading="lazy"><figcaption class="ed-cap-ov">Under glass lies <strong>St. Ludmila</strong> — the first female saint of the Czech lands, murdered, the story goes, in 921 with her own veil.</figcaption></figure>
+    <figure><img src="../images/day-06/26-st-george-adoration-relief.jpg" loading="lazy"><figcaption class="ed-cap-ov">On a stone altar, a carved <strong>Adoration of the Magi</strong> — three kings kneeling with their gifts, worked in dark old wood.</figcaption></figure>
   </div>
   <div class="folio">— Issue 03 · CZECH REPUBLIC · Inside St. George's —</div>
 </div>
@@ -412,11 +448,19 @@ body { padding:20px; }
 <div class="mag-page mag-photoessay">
   <div class="pe-eyebrow">PRAGUE CASTLE · THE OLD ROYAL PALACE</div>
   <div class="pe-headline">The books that<br>ran a <em>kingdom.</em></div>
-  <div class="pe-deck">Beyond the churches lie the government rooms — the seat of the Bohemian kings and their courts, where a whole realm's memory was kept in painted books and painted shields.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/day-06/27-royal-palace-land-rolls.jpg" loading="lazy"><div class="essay-cap">The <strong>Desky zemské</strong>, the Land Rolls — the great leather books in which the kingdom's property, laws and lawsuits were recorded, locked in carved cupboards, each spine painted with a number and a bright little emblem so a clerk could find it again.</div></div>
-    <div class="essay-item"><img src="../images/day-06/28-royal-palace-heraldic-wall.jpg" loading="lazy"><div class="essay-cap">The clerks left their mark on the walls too: above an old iron-studded door, rows of painted coats of arms climb toward the crowned Bohemian lion — every official who ever served here, signed into the plaster.</div></div>
-    <div class="essay-item"><img src="../images/day-06/29-royal-palace-heraldic-ceiling.jpg" loading="lazy"><div class="essay-cap">And overhead the whole vault is heraldry — hundreds of little shields crowding every rib, a riot of red, gold and silver. The children lay their heads right back and turned slowly on the spot. A monument not to kings, but to the quiet machinery of a kingdom.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/day-06/27-royal-palace-land-rolls.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">The <strong>Desky zemské</strong>, the Land Rolls — the leather books that held the kingdom's laws and lawsuits, each spine painted with a number and a bright little emblem so a clerk could find it again.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">Prague Castle · Starý královský palác</span>
+      <div class="ll-intro">Beyond the churches lie the government rooms — the seat of the Bohemian kings, where a whole realm's memory was kept in painted books and painted shields.</div>
+    </div>
+  </div>
+  <div class="ed-two">
+    <figure><img src="../images/day-06/28-royal-palace-heraldic-wall.jpg" loading="lazy"><figcaption class="ed-cap-ov">Above an old iron-studded door, rows of painted <strong>coats of arms</strong> climb toward the crowned Bohemian lion — every official who ever served here, signed into the plaster.</figcaption></figure>
+    <figure><img src="../images/day-06/29-royal-palace-heraldic-ceiling.jpg" loading="lazy"><figcaption class="ed-cap-ov">Overhead the whole vault is <strong>heraldry</strong> — hundreds of little shields crowding every rib, a riot of red, gold and silver.</figcaption></figure>
   </div>
   <div class="folio">— Issue 03 · CZECH REPUBLIC · The Old Royal Palace —</div>
 </div>
