@@ -455,6 +455,28 @@ body { padding:20px; }
 .mag-essay .essay-lead .essay-cap { font-size:11px; font-style:italic; color:#3d3024; text-align:center; }
 @media print { .mag-essay { column-count:3; } }
 
+/* ===== FEATURE-LED EDITORIAL SYSTEM ===== */
+.mag-lead { display:grid; grid-template-columns:1.6fr 1fr; gap:8mm; align-items:end; margin:6px 0 7mm; }
+.ll-feat { margin:0; position:relative; overflow:hidden; border-radius:3px; }
+.ll-feat img { width:100%; height:auto; display:block; }
+.ll-feat .ed-cap-ov { padding:26px 14px 12px; font-size:10px; line-height:1.45; }
+.mag-lead .ll-col { display:flex; flex-direction:column; padding-bottom:3mm; }
+.mag-lead .ll-kick { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#8b1a1a; display:block; margin-bottom:10px; }
+.mag-lead .ll-intro { font-family:'Fraunces',serif; font-style:italic; font-size:14px; line-height:1.62; color:#3d3024; }
+.ed-two, .ed-grid3, .ed-grid4, .ed-land { display:grid; margin-top:8px; }
+.ed-two { grid-template-columns:repeat(2,1fr); gap:6mm; }
+.ed-grid3 { grid-template-columns:repeat(3,1fr); gap:5mm; }
+.ed-grid4 { grid-template-columns:repeat(4,1fr); gap:4mm; }
+.ed-land { grid-template-columns:repeat(2,1fr); gap:6mm; }
+.ed-two figure, .ed-grid3 figure, .ed-grid4 figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; aspect-ratio:3/4; }
+.ed-land figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; aspect-ratio:4/3; }
+.ed-two img, .ed-grid3 img, .ed-grid4 img, .ed-land img { width:100%; height:100%; object-fit:cover; display:block; }
+.ed-cap-ov { position:absolute; left:0; right:0; bottom:0; padding:22px 11px 9px; background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.35) 55%, transparent); color:#fff; font-family:'Fraunces',serif; font-size:9px; line-height:1.4; }
+.ed-grid3 .ed-cap-ov { padding:16px 8px 6px; font-size:8px; line-height:1.3; }
+.ed-grid4 .ed-cap-ov { padding:14px 6px 5px; font-size:7px; line-height:1.25; }
+.ed-cap-ov strong { color:#f0d68c; font-weight:700; }
+.mag-lead .ll-feat .ed-cap-ov { padding:26px 14px 12px; font-size:10px; line-height:1.45; }
+
 /* PHOTO SPREAD (uncropped, Austria standard) */
 .sp-photo { width:100%; margin-bottom:6px; text-align:center; position:relative; }
 .sp-photo img { max-width:100%; max-height:150mm; display:block; margin:0 auto; border-radius:2px; }
@@ -716,10 +738,13 @@ body { padding:20px; }
   <div class="sp-eyebrow">BEIJING · THE CITY AROUND THE PALACE</div>
   <div class="sp-headline">The Beijing we<br>moved through.</div>
   <div class="sp-deck">Around the Forbidden City stretched the capital itself — its ceremonial gate, its old teahouses, its lantern-strung snack streets. A few frames of the Beijing that framed our day.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/day-02/03-tiananmen-square.jpg" loading="lazy"><div class="essay-cap">Tiananmen — the Gate of Heavenly Peace — hung with its great portrait and flanked by red flags. The ceremonial threshold to the Forbidden City, with the vast square, one of the largest on earth, opening out in front of it.</div></div>
-    <div class="essay-item"><img src="../images/day-02/02-lao-shes-teahouse.jpg" loading="lazy"><div class="essay-cap">Lao She's Teahouse, a Beijing institution named for the great playwright — the kind of old-Peking room where opera and shadow-puppetry still fill the evenings.</div></div>
-    <div class="essay-item"><img src="../images/day-02/05-wangfujing-street-lunch.jpg" loading="lazy"><div class="essay-cap">Wangfujing — the city's most famous snack street, strung with red lanterns and lined with sizzling stalls, where Beijing comes out to eat on its feet.</div></div>
+  <figure class="ll-feat" style="margin:8px 0 6mm;">
+    <img src="../images/day-02/03-tiananmen-square.jpg" loading="eager">
+    <figcaption class="ed-cap-ov"><strong>Tiananmen</strong> — the Gate of Heavenly Peace — hung with its great portrait and flanked by red flags. The ceremonial threshold to the Forbidden City, the vast square opening out in front of it.</figcaption>
+  </figure>
+  <div class="ed-land">
+    <figure><img src="../images/day-02/02-lao-shes-teahouse.jpg" loading="lazy"><figcaption class="ed-cap-ov"><strong>Lao She's Teahouse</strong>, a Beijing institution named for the great playwright — the kind of old-Peking room where opera and shadow-puppetry still fill the evenings.</figcaption></figure>
+    <figure><img src="../images/day-02/05-wangfujing-street-lunch.jpg" loading="lazy"><figcaption class="ed-cap-ov"><strong>Wangfujing</strong> — the city's most famous snack street, strung with red lanterns and lined with sizzling stalls, where Beijing comes out to eat on its feet.</figcaption></figure>
   </div>
   <div class="folio">— Issue 01 · China · The city around us —</div>
 </div>
