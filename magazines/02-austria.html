@@ -90,6 +90,15 @@ body { padding:20px; }
 .mag-essay .essay-lead { column-span:all; margin-bottom:6mm; }
 .mag-essay .essay-lead .essay-cap { font-size:11px; font-style:italic; color:#3d3024; text-align:center; }
 @media print { .mag-essay { column-count:3; } }
+.ed-two { display:grid; grid-template-columns:repeat(2,1fr); gap:6mm; margin-top:8px; }
+.ed-two figure, .ed-coll figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; }
+.ed-two figure { aspect-ratio:3/4; }
+.ed-two img, .ed-coll img { width:100%; height:100%; object-fit:cover; display:block; }
+.ed-cap-ov { position:absolute; left:0; right:0; bottom:0; padding:22px 11px 9px; background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.35) 55%, transparent); color:#fff; font-family:'Fraunces',serif; font-size:9px; line-height:1.4; }
+.ed-cap-ov strong { color:#f0d68c; font-weight:700; }
+.ed-coll { display:grid; grid-template-columns:repeat(3,1fr); grid-auto-rows:50mm; gap:5mm; grid-auto-flow:dense; margin-top:8px; }
+.ed-coll .ed-feature { grid-column:span 2; grid-row:span 2; }
+.ed-coll .ed-feature .ed-cap-ov { font-size:11px; font-style:italic; padding:30px 14px 12px; }
 .mag-reflection { background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%); padding:24mm 22mm; display:flex; flex-direction:column; }
 .rf-eyebrow { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#28508c; margin-bottom:8px; }
 .rf-headline { font-family:'Fraunces', serif; font-weight:700; font-size:54px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
@@ -232,11 +241,11 @@ body { padding:20px; }
   <div class="album-sub">Salzburg · Mirabell Gardens</div>
   <div class="album-head">Do-Re-Mi, in our own frames.</div>
   <div style="font-family:'Fraunces', serif; font-style:italic; font-size:12px; color:#5a4a3a; margin:-6px 0 14px;">The little splash, the long avenue, the walk to the gate — the scenes I'd acted out with a row of dolls, now stepped through one by one with my own three.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/austria/salzburg-mirabell-pegasus.jpg" loading="lazy"><div class="essay-cap">We came in past the <strong>Pegasus Fountain</strong> — the very spot where the von Trapp children danced "Do-Re-Mi". I had seen it a thousand times on a screen; now I was standing right in it.</div></div>
-    <div class="essay-item"><img src="../images/austria/salzburg-residenzplatz.jpg" loading="lazy"><div class="essay-cap">By the water I did the thing I'd copied as a girl — a little <strong>splash at the fountain</strong>, just as Maria does in "I Have Confidence" on her way to the villa.</div></div>
-    <div class="essay-item"><img src="../images/austria/salzburg-doremi-avenue.jpg" loading="lazy"><div class="essay-cap">Then the long <strong>pergola avenue</strong>, where the children skip and sing the scales — a tunnel of green with the fortress showing at the far end.</div></div>
-    <div class="essay-item"><img src="../images/austria/salzburg-mirabell-walk.jpg" loading="lazy"><div class="essay-cap">And the <strong>walk up through the flowerbeds</strong> toward the palace, all of us together — the garden I'd only ever visited in my imagination, real at last.</div></div>
+  <div class="ed-two">
+    <figure><img src="../images/austria/salzburg-mirabell-pegasus.jpg" loading="lazy"><figcaption class="ed-cap-ov">We came in past the <strong>Pegasus Fountain</strong> — where the von Trapp children danced "Do-Re-Mi". I'd seen it a thousand times on screen; now I stood right in it.</figcaption></figure>
+    <figure><img src="../images/austria/salzburg-residenzplatz.jpg" loading="lazy"><figcaption class="ed-cap-ov">By the water I did the thing I'd copied as a girl — a little <strong>splash at the fountain</strong>, just like Maria in "I Have Confidence".</figcaption></figure>
+    <figure><img src="../images/austria/salzburg-doremi-avenue.jpg" loading="lazy"><figcaption class="ed-cap-ov">The long <strong>pergola avenue</strong>, where the children skip and sing the scales — a tunnel of green, the fortress at the far end.</figcaption></figure>
+    <figure><img src="../images/austria/salzburg-mirabell-walk.jpg" loading="lazy"><figcaption class="ed-cap-ov">And the <strong>walk up to the palace</strong> through the flowerbeds, all of us together — the garden I'd only ever visited in my imagination, real at last.</figcaption></figure>
   </div>
   <div class="folio">— Issue 02 · AUSTRIA · Do-Re-Mi —</div>
 </div>
@@ -261,16 +270,16 @@ body { padding:20px; }
   <div class="album-sub">Salzburg · a walk through the Old Town</div>
   <div class="album-head">The Old Town, square by square.</div>
   <div style="font-family:'Fraunces', serif; font-style:italic; font-size:12px; color:#5a4a3a; margin:-6px 0 14px;">From the river to the cathedral squares and back through the lanes — our afternoon in the Altstadt, in the order we walked it.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/austria/salzburg-family-cathedral.jpg" loading="lazy"><div class="essay-cap">We crossed the Salzach into the Altstadt, and there stood the Dom — all five of us in the cathedral square.</div></div>
-    <div class="essay-item"><img src="../images/austria/salzburg-residenz-facade.jpg" loading="lazy"><div class="essay-cap">Beside it, the marble front of the Residenz — the prince-archbishops' palace.</div></div>
-    <div class="essay-item"><img src="../images/austria/salzburg-residenz-fountain.jpg" loading="lazy"><div class="essay-cap">And its great fountain, the Residenzbrunnen, at the centre of the square.</div></div>
-    <div class="essay-item"><img src="../images/austria/salzburg-residenzbrunnen.jpg" loading="lazy"><div class="essay-cap">Up close: Tritons and horses spouting water, the Glockenspiel tower rising behind.</div></div>
-    <div class="essay-item"><img src="../images/austria/salzburg-getreidegasse.jpg" loading="lazy"><div class="essay-cap">Then into the Getreidegasse — the famous lane strung with wrought-iron guild signs.</div></div>
-    <div class="essay-item"><img src="../images/austria/salzburg-oldtown-lane.jpg" loading="lazy"><div class="essay-cap">Shop after shop, café tables and the July crowd carrying us along.</div></div>
-    <div class="essay-item"><img src="../images/austria/salzburg-oldtown-square.jpg" loading="lazy"><div class="essay-cap">Every corner opened onto another honey-stone street in the heat.</div></div>
-    <div class="essay-item"><img src="../images/austria/salzburg-horse-fountain.jpg" loading="lazy"><div class="essay-cap">The Horse Pond, where the archbishops' horses were once washed beneath a painted wall.</div></div>
-    <div class="essay-item"><img src="../images/austria/salzburg-cathedral-fiaker.jpg" loading="lazy"><div class="essay-cap">And a fiaker, waiting for a fare beneath the cathedral towers — the Old Town as it always is.</div></div>
+  <div class="ed-coll">
+    <figure class="ed-feature"><img src="../images/austria/salzburg-family-cathedral.jpg" style="object-position:center 45%" loading="lazy"><figcaption class="ed-cap-ov">We crossed the Salzach into the Altstadt — and there stood the <strong>Dom</strong>, all five of us in the cathedral square.</figcaption></figure>
+    <figure><img src="../images/austria/salzburg-residenz-facade.jpg" loading="lazy"><figcaption class="ed-cap-ov">The marble front of the <strong>Residenz</strong>.</figcaption></figure>
+    <figure><img src="../images/austria/salzburg-residenz-fountain.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>Residenzbrunnen</strong> in the square.</figcaption></figure>
+    <figure><img src="../images/austria/salzburg-residenzbrunnen.jpg" loading="lazy"><figcaption class="ed-cap-ov">Tritons &amp; the Glockenspiel tower.</figcaption></figure>
+    <figure><img src="../images/austria/salzburg-getreidegasse.jpg" loading="lazy"><figcaption class="ed-cap-ov">Into the <strong>Getreidegasse</strong> &amp; its guild signs.</figcaption></figure>
+    <figure><img src="../images/austria/salzburg-oldtown-lane.jpg" loading="lazy"><figcaption class="ed-cap-ov">The lanes we walked, café tables spilling out.</figcaption></figure>
+    <figure><img src="../images/austria/salzburg-oldtown-square.jpg" loading="lazy"><figcaption class="ed-cap-ov">Another honey-stone street in the heat.</figcaption></figure>
+    <figure><img src="../images/austria/salzburg-horse-fountain.jpg" loading="lazy"><figcaption class="ed-cap-ov">The Horse Pond &amp; its painted wall.</figcaption></figure>
+    <figure><img src="../images/austria/salzburg-cathedral-fiaker.jpg" loading="lazy"><figcaption class="ed-cap-ov">A fiaker under the cathedral towers.</figcaption></figure>
   </div>
   <div class="folio">— Issue 02 · AUSTRIA · Salzburg, more —</div>
 </div>
