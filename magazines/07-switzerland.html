@@ -80,6 +80,29 @@ body { padding:20px; }
 .mag-essay .essay-lead { column-span:all; margin-bottom:6mm; }
 .mag-essay .essay-lead .essay-cap { font-size:11px; font-style:italic; color:#3d3024; text-align:center; }
 @media print { .mag-essay { column-count:3; } }
+/* ===== FEATURE-LED EDITORIAL SYSTEM ===== */
+.mag-lead { display:grid; grid-template-columns:1.6fr 1fr; gap:8mm; align-items:end; margin:6px 0 7mm; }
+.mag-lead .ll-feat { margin:0; position:relative; overflow:hidden; border-radius:3px; }
+.mag-lead .ll-feat img { width:100%; height:auto; display:block; }
+.mag-lead .ll-col { display:flex; flex-direction:column; padding-bottom:3mm; }
+.mag-lead .ll-kick { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#a02828; display:block; margin-bottom:10px; }
+.mag-lead .ll-intro { font-family:'Fraunces',serif; font-style:italic; font-size:14px; line-height:1.62; color:#3d3024; }
+.ed-two, .ed-grid3, .ed-grid4, .ed-land { display:grid; margin-top:8px; }
+.ed-two { grid-template-columns:repeat(2,1fr); gap:6mm; }
+.ed-grid3 { grid-template-columns:repeat(3,1fr); gap:5mm; }
+.ed-grid4 { grid-template-columns:repeat(4,1fr); gap:4mm; }
+.ed-land { grid-template-columns:repeat(2,1fr); gap:6mm; }
+.ed-two figure, .ed-grid3 figure, .ed-grid4 figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; aspect-ratio:3/4; }
+.ed-land figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; aspect-ratio:4/3; }
+.ed-two img, .ed-grid3 img, .ed-grid4 img, .ed-land img { width:100%; height:100%; object-fit:cover; display:block; }
+.ed-cap-ov { position:absolute; left:0; right:0; bottom:0; padding:22px 11px 9px; background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.35) 55%, transparent); color:#fff; font-family:'Fraunces',serif; font-size:9px; line-height:1.4; }
+.ed-grid3 .ed-cap-ov { padding:16px 8px 6px; font-size:8px; line-height:1.3; }
+.ed-grid4 .ed-cap-ov { padding:14px 6px 5px; font-size:7px; line-height:1.25; }
+.ed-cap-ov strong { color:#f0d68c; font-weight:700; }
+.mag-lead .ll-feat .ed-cap-ov { padding:26px 14px 12px; font-size:10px; line-height:1.45; }
+.ed-duo { display:flex; gap:6mm; justify-content:center; margin-top:8px; }
+.ed-duo figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; }
+.ed-duo img { height:105mm; width:auto; display:block; }
 .mag-reflection { background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%); padding:24mm 22mm; display:flex; flex-direction:column; }
 .rf-eyebrow { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#a02828; margin-bottom:8px; }
 .rf-headline { font-family:'Fraunces', serif; font-weight:700; font-size:54px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
@@ -317,13 +340,30 @@ body { padding:20px; }
 <div class="mag-page mag-album">
   <div class="album-sub">A photo essay · Gornergrat</div>
   <div class="album-head">The climb to 3,089 metres.</div>
-  <div class="album-intro">Up out of car-free Zermatt on the little red cog train, through the pines toward a bare ridge in the sky — the first half of the day the children still call "the chocolate day."</div>
-  <div class="mag-essay">
-    <div class="essay-item essay-lead"><img src="../images/switzerland/day-17-gornergrat-train.jpg" loading="lazy"><div class="essay-cap">The little red cog train of the Gornergrat Bahn hauling out of Zermatt — 1,500 vertical metres in thirty-three minutes, the mountains rising with every turn.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gg-valley.jpg" loading="lazy"><div class="essay-cap">Below us the Mattertal fell away, green and deep, as the train climbed higher.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gg-train1.jpg" loading="lazy"><div class="essay-cap">Aboard the Bahn — noses to the glass for the first sight of the peaks.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gg-train2.jpg" loading="lazy"><div class="essay-cap">Through the last of the larches, the treeline slipping past the window.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gg-train3.jpg" loading="lazy"><div class="essay-cap">Snacks unpacked, the whole carriage watching the mountains grow.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/switzerland/day-17-gornergrat-train.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">The little red <strong>cog train</strong> of the Gornergrat Bahn hauling out of Zermatt — 1,500 vertical metres in thirty-three minutes, the mountains rising with every turn.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">The Climb · Gornergrat</span>
+      <div class="ll-intro">Up out of car-free Zermatt on the little red cog train, through the pines toward a bare ridge in the sky — the first half of the day the children still call "the chocolate day."</div>
+    </div>
+  </div>
+  <div class="ed-land" style="grid-template-columns:repeat(3,1fr);gap:5mm;">
+    <figure><img src="../images/switzerland/alb-gg-train1.jpg" loading="lazy"><figcaption class="ed-cap-ov">Aboard the <strong>Bahn</strong> — noses to the glass for the first peaks.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-gg-train3.jpg" loading="lazy"><figcaption class="ed-cap-ov"><strong>Snacks</strong> unpacked, the carriage watching the mountains grow.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-gg-train2.jpg" loading="lazy"><figcaption class="ed-cap-ov">Through the last of the <strong>larches</strong>, the treeline slipping past.</figcaption></figure>
+  </div>
+  <div class="mag-lead" style="margin-top:6mm;">
+    <figure class="ll-feat">
+      <img src="../images/switzerland/alb-gg-valley.jpg" loading="lazy">
+      <figcaption class="ed-cap-ov">The <strong>Mattertal</strong>, green and deep below the climbing train.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">Below · The Mattertal</span>
+      <div class="ll-intro">Below us the Mattertal fell away, green and deep, as the little train climbed higher toward the ridge — Zermatt and its chalets shrinking into the valley behind.</div>
+    </div>
   </div>
   <div class="folio">— Issue 07 · SWITZERLAND · 09 —</div>
 </div>
@@ -331,16 +371,24 @@ body { padding:20px; }
 <div class="mag-page mag-album">
   <div class="album-sub">A photo essay · Gornergrat</div>
   <div class="album-head">At the top of the sky.</div>
-  <div class="album-intro">Off the train and onto the ridge at 3,089 metres — twenty-nine peaks above 4,000 m in a single sweep, and one perfectly triangular mountain for everyone to pose with.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/switzerland/alb-gg-summit.jpg" loading="lazy"><div class="essay-cap">The top at last — the bare ridge at 3,089 metres, a wall of four-thousanders straight ahead.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gg-dad.jpg" loading="lazy"><div class="essay-cap">Dad on the summit platform, the Monte Rosa massif behind him.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gg-mum-point.jpg" loading="lazy"><div class="essay-cap">Mum picking the Matterhorn out of a crowd of peaks.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gg-mum-toblerone.jpg" loading="lazy"><div class="essay-cap">A giant Toblerone held up to the mountain that gave the bar its shape.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gg-aviann.jpg" loading="lazy"><div class="essay-cap">Aviann against the peak he'd been promised all morning.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gg-avisha.jpg" loading="lazy"><div class="essay-cap">Avisha holding the Matterhorn between her fingertips.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gg-avin-choc.jpg" loading="lazy"><div class="essay-cap">Avin — four years old and already a chocolate man — at 3,089 metres.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gg-pinch.jpg" loading="lazy"><div class="essay-cap">And the game everyone plays up here: pinching the summit clean off the sky.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/switzerland/alb-gg-summit.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">The top at last — the bare <strong>ridge at 3,089 metres</strong>, a wall of four-thousanders straight ahead.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">The Summit · 3,089 m</span>
+      <div class="ll-intro">Off the train and onto the ridge at 3,089 metres — twenty-nine peaks above 4,000 m in a single sweep, and one perfectly triangular mountain for everyone to pose with.</div>
+    </div>
+  </div>
+  <div class="ed-grid4">
+    <figure><img src="../images/switzerland/alb-gg-mum-toblerone.jpg" loading="lazy"><figcaption class="ed-cap-ov">A giant <strong>Toblerone</strong> held up to the mountain that gave the bar its shape.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-gg-mum-point.jpg" loading="lazy"><figcaption class="ed-cap-ov"><strong>Mum</strong> picking the Matterhorn out of a crowd of peaks.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-gg-dad.jpg" loading="lazy"><figcaption class="ed-cap-ov"><strong>Dad</strong> on the summit platform, the Monte Rosa massif behind him.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-gg-avin-choc.jpg" loading="lazy"><figcaption class="ed-cap-ov"><strong>Avin</strong> — four years old and already a chocolate man — at 3,089 metres.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-gg-aviann.jpg" loading="lazy"><figcaption class="ed-cap-ov"><strong>Aviann</strong> against the peak he'd been promised all morning.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-gg-avisha.jpg" loading="lazy"><figcaption class="ed-cap-ov"><strong>Avisha</strong> holding the Matterhorn between her fingertips.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-gg-pinch.jpg" loading="lazy"><figcaption class="ed-cap-ov">The game everyone plays up here: <strong>pinching the summit</strong> clean off the sky.</figcaption></figure>
   </div>
   <div class="folio">— Issue 07 · SWITZERLAND · 10 —</div>
 </div>
@@ -348,18 +396,28 @@ body { padding:20px; }
 <div class="mag-page mag-album">
   <div class="album-sub">A photo essay · Maison Cailler, Broc</div>
   <div class="album-head">Inside the chocolate factory.</div>
-  <div class="album-intro">The tour runs backward through the whole story of a chocolate bar — bean, roast, machine, and finally the room the children had come for. This is the walk, in order.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/switzerland/alb-c-cacao.jpg" loading="lazy"><div class="essay-cap">It starts with the bean — cacao, where every bar begins.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-c-hazelnuts.jpg" loading="lazy"><div class="essay-cap">Hazelnuts, waiting to be roasted and folded in.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-c-vanilla.jpg" loading="lazy"><div class="essay-cap">Vanilla pods — the quiet second note in every recipe.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-c-cocoabutter.jpg" loading="lazy"><div class="essay-cap">Cocoa butter, the fat that makes chocolate melt on the tongue.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-c-cow.jpg" loading="lazy"><div class="essay-cap">A chocolate cow and Gruyères castle beyond — cocoa meets Alpine milk.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-c-flowing.jpg" loading="lazy"><div class="essay-cap">Chocolate running warm and glossy through the works.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-c-machine.jpg" loading="lazy"><div class="essay-cap">A vintage Cailler machine from the old factory floor.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-c-wrappers.jpg" loading="lazy"><div class="essay-cap">A century of wrappers — the brand growing up along one wall.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-c-tasting.jpg" loading="lazy"><div class="essay-cap">The tasting room at the end — the part they'd been waiting for.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-c-kids.jpg" loading="lazy"><div class="essay-cap">Three very happy tasters.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/switzerland/alb-c-cow.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">A <strong>chocolate cow</strong> and Gruyères castle beyond — cocoa meets Alpine milk.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">The Tour · Maison Cailler</span>
+      <div class="ll-intro">The tour runs backward through the whole story of a chocolate bar — bean, roast, machine, and finally the room the children had come for.</div>
+    </div>
+  </div>
+  <div class="ed-land" style="grid-template-columns:repeat(3,1fr);gap:5mm;">
+    <figure><img src="../images/switzerland/alb-c-cacao.jpg" loading="lazy"><figcaption class="ed-cap-ov">It starts with the bean — <strong>cacao</strong>.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-c-cocoabutter.jpg" loading="lazy"><figcaption class="ed-cap-ov"><strong>Cocoa butter</strong>, that melts on the tongue.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-c-machine.jpg" loading="lazy"><figcaption class="ed-cap-ov">A vintage <strong>Cailler machine</strong>.</figcaption></figure>
+  </div>
+  <div class="ed-grid3">
+    <figure><img src="../images/switzerland/alb-c-hazelnuts.jpg" loading="lazy"><figcaption class="ed-cap-ov"><strong>Hazelnuts</strong>, waiting to be roasted and folded in.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-c-vanilla.jpg" loading="lazy"><figcaption class="ed-cap-ov"><strong>Vanilla</strong> pods, the quiet second note.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-c-flowing.jpg" loading="lazy"><figcaption class="ed-cap-ov"><strong>Chocolate</strong> running warm and glossy through the works.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-c-wrappers.jpg" loading="lazy"><figcaption class="ed-cap-ov">A century of <strong>wrappers</strong> along one wall.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-c-tasting.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>tasting room</strong> — the part they'd waited for.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-c-kids.jpg" loading="lazy"><figcaption class="ed-cap-ov">Three very happy <strong>tasters</strong>.</figcaption></figure>
   </div>
   <div class="folio">— Issue 07 · SWITZERLAND · 11 —</div>
 </div>
@@ -367,13 +425,21 @@ body { padding:20px; }
 <div class="mag-page mag-album">
   <div class="album-sub">A photo essay · On the road</div>
   <div class="album-head">The galettes.</div>
-  <div class="album-intro">Lunch on a driving day pulled us into a little crêperie in French-speaking Switzerland — and into the dish that surprised us most.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/switzerland/alb-f-creperie.jpg" loading="lazy"><div class="essay-cap">The crêperie where we stopped, somewhere on the road west.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/day-17-galette.jpg" loading="lazy"><div class="essay-cap">Our real road lunch — a savoury buckwheat galette, folded and golden. It looked, we all agreed, uncannily like thosai.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-f-galette-egg.jpg" loading="lazy"><div class="essay-cap">The galette complète, an egg set shining in its middle.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-f-galette-chicken.jpg" loading="lazy"><div class="essay-cap">Another folded around chicken and melted cheese.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-f-galette-caprese.jpg" loading="lazy"><div class="essay-cap">And one with tomato, mozzarella and pesto, a salad on the side.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/switzerland/day-17-galette.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">Our real road lunch — a savoury buckwheat <strong>galette</strong>, folded and golden. It looked, we all agreed, uncannily like thosai.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">On the Road · Galettes</span>
+      <div class="ll-intro">Lunch on a driving day pulled us into a little crêperie in French-speaking Switzerland — and into the dish that surprised us most.</div>
+    </div>
+  </div>
+  <div class="ed-grid4">
+    <figure><img src="../images/switzerland/alb-f-creperie.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>crêperie</strong> where we stopped, on the road west.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-f-galette-egg.jpg" loading="lazy"><figcaption class="ed-cap-ov">The galette <strong>complète</strong>, an egg shining in its middle.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-f-galette-chicken.jpg" loading="lazy"><figcaption class="ed-cap-ov">Another folded around <strong>chicken</strong> and melted cheese.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-f-galette-caprese.jpg" loading="lazy"><figcaption class="ed-cap-ov">And one with <strong>tomato, mozzarella and pesto</strong>, salad on the side.</figcaption></figure>
   </div>
   <div class="folio">— Issue 07 · SWITZERLAND · 12 —</div>
 </div>
@@ -381,15 +447,25 @@ body { padding:20px; }
 <div class="mag-page mag-album">
   <div class="album-sub">A photo essay · Geneva</div>
   <div class="album-head">The lake &amp; the United Nations.</div>
-  <div class="album-intro">We began our Geneva day up at the Place des Nations, among the flags and the monuments, then wandered down toward the water — the city of peace, in the order we walked it.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/switzerland/alb-ge-unsign.jpg" loading="lazy"><div class="essay-cap">We began at the Place des Nations, under the great sign of the United Nations.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-ge-kidschair.jpg" loading="lazy"><div class="essay-cap">The children found the Broken Chair at once — twelve metres of timber on three and a bit legs.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-ge-sculpture.jpg" loading="lazy"><div class="essay-cap">A bronze figure standing watch in the lakeside gardens.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-ge-building.jpg" loading="lazy"><div class="essay-cap">A grand façade along Quai Wilson, the old lakefront of hotels.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-ge-brunswick.jpg" loading="lazy"><div class="essay-cap">The Brunswick Monument, a neo-Gothic tomb rising by the water.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-ge-harbor.jpg" loading="lazy"><div class="essay-cap">And out on the lake, the Jet d'Eau firing 140 metres into the sky.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-ge-family-lake.jpg" loading="lazy"><div class="essay-cap">All five of us down at the water's edge, the fountain and the far shore behind.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/switzerland/alb-ge-family-lake.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">All five of us down at the <strong>water's edge</strong>, the fountain and the far shore behind.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">Lake &amp; Flags · Geneva</span>
+      <div class="ll-intro">We began our Geneva day up at the Place des Nations, among the flags and the monuments, then wandered down toward the water — the city of peace, in the order we walked it.</div>
+    </div>
+  </div>
+  <div class="ed-land">
+    <figure><img src="../images/switzerland/alb-ge-unsign.jpg" loading="lazy"><figcaption class="ed-cap-ov">We began at the <strong>Place des Nations</strong>, under the great sign of the United Nations.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-ge-brunswick.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>Brunswick Monument</strong>, a neo-Gothic tomb rising by the water.</figcaption></figure>
+  </div>
+  <div class="ed-grid4">
+    <figure><img src="../images/switzerland/alb-ge-kidschair.jpg" loading="lazy"><figcaption class="ed-cap-ov">The children found the <strong>Broken Chair</strong> at once — twelve metres of timber.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-ge-sculpture.jpg" loading="lazy"><figcaption class="ed-cap-ov">A bronze <strong>figure</strong> in the lakeside gardens.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-ge-building.jpg" loading="lazy"><figcaption class="ed-cap-ov">A grand façade along <strong>Quai Wilson</strong>.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-ge-harbor.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>Jet d'Eau</strong> firing 140 m into the sky.</figcaption></figure>
   </div>
   <div class="sp-hist" style="margin-top:14px;">
     <div class="sp-hist-title">The Brunswick Monument</div>
@@ -401,16 +477,28 @@ body { padding:20px; }
 <div class="mag-page mag-album">
   <div class="album-sub">A photo essay · Geneva</div>
   <div class="album-head">The water &amp; the Old Town.</div>
-  <div class="album-intro">From the Flower Clock by the lake up into the cobbled Old Town and Calvin's plain cathedral — the second half of our day in the city.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/switzerland/alb-ge-flowerclock-family.jpg" loading="lazy"><div class="essay-cap">By L'Horloge Fleurie, the Flower Clock in the Jardin Anglais, all of us in a row.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-ge-flowerclock.jpg" loading="lazy"><div class="essay-cap">Its living face up close — planted, tended, and keeping perfect time through the seasons.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-ge-oldtown.jpg" loading="lazy"><div class="essay-cap">Then up into the Old Town, a cobbled stair on the Rue des Barrières.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-ge-fountain.jpg" loading="lazy"><div class="essay-cap">A fountain playing in a quiet central square.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-ge-lunch.jpg" loading="lazy"><div class="essay-cap">Lunch back by the lake — hot dogs and panini, eaten in the sun.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-ge-icecream.jpg" loading="lazy"><div class="essay-cap">And ice cream to finish, the only proper end to a hot day.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-ge-cathedral-nave.jpg" loading="lazy"><div class="essay-cap">Inside the Cathédrale Saint-Pierre — Calvin's church, stripped bare in the Reformation.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-ge-cathedral-organ.jpg" loading="lazy"><div class="essay-cap">The great organ rising in the pale, plain nave.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/switzerland/alb-ge-flowerclock.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">L'Horloge Fleurie, the <strong>Flower Clock</strong> — a living face, planted and tended, keeping perfect time through the seasons.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">Old Town · Geneva</span>
+      <div class="ll-intro">From the Flower Clock by the lake up into the cobbled Old Town and Calvin's plain cathedral — the second half of our day in the city.</div>
+    </div>
+  </div>
+  <div class="ed-land">
+    <figure><img src="../images/switzerland/alb-ge-lunch.jpg" loading="lazy"><figcaption class="ed-cap-ov"><strong>Lunch</strong> back by the lake — hot dogs and panini, eaten in the sun.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-ge-icecream.jpg" loading="lazy"><figcaption class="ed-cap-ov">And <strong>ice cream</strong> to finish, the only proper end to a hot day.</figcaption></figure>
+  </div>
+  <div class="ed-grid3">
+    <figure><img src="../images/switzerland/alb-ge-flowerclock-family.jpg" loading="lazy"><figcaption class="ed-cap-ov">By the Flower Clock in the Jardin Anglais, <strong>all of us</strong> in a row.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-ge-oldtown.jpg" loading="lazy"><figcaption class="ed-cap-ov">Up into the <strong>Old Town</strong>, a cobbled stair on the Rue des Barrières.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-ge-fountain.jpg" loading="lazy"><figcaption class="ed-cap-ov">A <strong>fountain</strong> playing in a quiet central square.</figcaption></figure>
+  </div>
+  <div class="ed-duo">
+    <figure><img src="../images/switzerland/alb-ge-cathedral-nave.jpg" loading="lazy"><figcaption class="ed-cap-ov">Inside the <strong>Cathédrale Saint-Pierre</strong> — Calvin's church, stripped bare in the Reformation.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-ge-cathedral-organ.jpg" loading="lazy"><figcaption class="ed-cap-ov">The great <strong>organ</strong> rising in the pale, plain nave.</figcaption></figure>
   </div>
   <div class="folio">— Issue 07 · SWITZERLAND · 14 —</div>
 </div>
@@ -418,18 +506,28 @@ body { padding:20px; }
 <div class="mag-page mag-album">
   <div class="album-sub">A photo essay · La Maison du Gruyère</div>
   <div class="album-head">The cheese house.</div>
-  <div class="album-intro">Down at Pringy, below Gruyères castle, the whole story of Le Gruyère AOP — from the copper vats to the cellars, and nine centuries of dairy life around them.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/switzerland/alb-gr-kids-wheel.jpg" loading="lazy"><div class="essay-cap">The children hoisting a wheel of Le Gruyère — made in these valleys since 1115.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gr-vats.jpg" loading="lazy"><div class="essay-cap">The great copper vats where the morning milk becomes cheese.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gr-factory.jpg" loading="lazy"><div class="essay-cap">The modern cheese hall, seen from the visitors' gallery.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gr-wheels-display.jpg" loading="lazy"><div class="essay-cap">Wheels ageing in their thousands on the cellar shelves.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gr-moulds.jpg" loading="lazy"><div class="essay-cap">Old wooden moulds that once shaped each wheel by hand.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gr-poya.jpg" loading="lazy"><div class="essay-cap">A painted <em>poya</em> — the spring procession of cattle up to the high alp.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gr-historic.jpg" loading="lazy"><div class="essay-cap">A Gruyère dairy family, photographed around 1925.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gr-milkcart.jpg" loading="lazy"><div class="essay-cap">An antique milk cart from the old dairy days.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gr-cart-cauldron.jpg" loading="lazy"><div class="essay-cap">The cauldron and cart of a mountain cheesemaker.</div></div>
-    <div class="essay-item"><img src="../images/switzerland/alb-gr-cowgame.jpg" loading="lazy"><div class="essay-cap">And Avisha, herding virtual cows in the play corner.</div></div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/switzerland/alb-gr-kids-wheel.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">The children hoisting a <strong>wheel of Le Gruyère</strong> — made in these valleys since 1115.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">Cheese Country · Pringy</span>
+      <div class="ll-intro">Down at Pringy, below Gruyères castle, the whole story of Le Gruyère AOP — from the copper vats to the cellars, and nine centuries of dairy life around them.</div>
+    </div>
+  </div>
+  <div class="ed-land">
+    <figure><img src="../images/switzerland/alb-gr-poya.jpg" loading="lazy"><figcaption class="ed-cap-ov">A painted <strong>poya</strong> — the spring procession of cattle up to the high alp.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-gr-historic.jpg" loading="lazy"><figcaption class="ed-cap-ov">A Gruyère <strong>dairy family</strong>, photographed around 1925.</figcaption></figure>
+  </div>
+  <div class="ed-grid4">
+    <figure><img src="../images/switzerland/alb-gr-vats.jpg" loading="lazy"><figcaption class="ed-cap-ov">The great copper <strong>vats</strong> where milk becomes cheese.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-gr-factory.jpg" loading="lazy"><figcaption class="ed-cap-ov">The modern <strong>cheese hall</strong> from the gallery.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-gr-wheels-display.jpg" loading="lazy"><figcaption class="ed-cap-ov"><strong>Wheels</strong> ageing in their thousands.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-gr-moulds.jpg" loading="lazy"><figcaption class="ed-cap-ov">Old wooden <strong>moulds</strong> that shaped each wheel.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-gr-milkcart.jpg" loading="lazy"><figcaption class="ed-cap-ov">An antique <strong>milk cart</strong> from the dairy days.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-gr-cart-cauldron.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>cauldron</strong> and cart of a mountain cheesemaker.</figcaption></figure>
+    <figure><img src="../images/switzerland/alb-gr-cowgame.jpg" loading="lazy"><figcaption class="ed-cap-ov">Avisha herding <strong>virtual cows</strong> in the play corner.</figcaption></figure>
   </div>
   <div class="folio">— Issue 07 · SWITZERLAND · 15 —</div>
 </div>
