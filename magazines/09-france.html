@@ -27,12 +27,14 @@ body { padding:20px; }
 .wl-num { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:14px; color:#1c4a7a; margin-bottom:4px; }
 .wl-title { font-family:'Fraunces', serif; font-weight:700; font-size:56px; line-height:1; color:#1a1a1a; margin-bottom:24px; letter-spacing:-0.02em; }
 .wl-divider { width:60px; height:3px; background:#c89b3c; margin-bottom:24px; }
-.wl-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; column-count:2; column-gap:14mm; column-rule:1px solid #e8d6a8; color:#3d3024; max-width:100%; margin-bottom:24mm; }
-.wl-body p { margin-bottom:10px; text-align:justify; }
-.wl-body p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:62px; float:left; line-height:0.9; padding:2px 8px 0 0; color:#1c4a7a; }
-.wl-hero { width:100%; height:82mm; background-size:cover; background-position:center 22%; border-radius:2px; margin-bottom:7px; position:relative; box-shadow:0 5px 20px rgba(0,0,0,0.14); }
-.wl-hero .wl-hero-tag { position:absolute; bottom:8px; right:10px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 7px; border-radius:2px; letter-spacing:0.15em; text-transform:uppercase; }
-.wl-cap { font-family:'Fraunces', serif; font-style:italic; font-size:10px; line-height:1.4; color:#5a4a3a; margin:0 0 22px; padding-left:12px; border-left:2px solid #c89b3c; }
+.wl-lead { display:flex; gap:9mm; align-items:flex-start; margin-bottom:11mm; }
+.wl-figure { flex:0 0 82mm; margin-top:2px; }
+.wl-photo { width:82mm; height:109mm; background-size:cover; background-position:center; border-radius:2px; position:relative; box-shadow:0 6px 22px rgba(0,0,0,0.16); }
+.wl-photo .wl-hero-tag { position:absolute; bottom:8px; right:9px; background:rgba(0,0,0,0.58); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 7px; border-radius:2px; letter-spacing:0.14em; text-transform:uppercase; }
+.wl-cap { font-family:'Fraunces', serif; font-style:italic; font-size:10px; line-height:1.45; color:#5a4a3a; margin:9px 0 0; padding-left:11px; border-left:2px solid #c89b3c; }
+.wl-letter { flex:1; font-family:'Fraunces', serif; font-size:14px; line-height:1.7; color:#3d3024; }
+.wl-letter p { margin-bottom:11px; text-align:justify; }
+.wl-letter p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:60px; float:left; line-height:0.86; padding:2px 8px 0 0; color:#1c4a7a; }
 .toc-title { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#1c4a7a; border-bottom:2px solid #1c4a7a; padding-bottom:8px; margin-bottom:14px; }
 .toc-list { list-style:none; column-count:2; column-gap:14mm; font-family:'Fraunces', serif; font-size:13px; line-height:1.8; }
 .toc-list li { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px dotted #c89b3c40; padding:4px 0; break-inside:avoid; }
@@ -117,15 +119,19 @@ body { padding:20px; }
   <div class="wl-num">No. 09 · A Letter from the Road</div>
   <div class="wl-title">Welcome to<br>two Frances.</div>
   <div class="wl-divider"></div>
-  <div class="wl-hero" style="background-image:url('../images/france/day-20-flight-to-toulouse.jpg');">
-    <div class="wl-hero-tag">Day 20 · Tue 28 Jul 2026 · CDG → TLS</div>
-  </div>
-  <div class="wl-cap">On the way to Toulouse — all five of us, wheels-up for the south of France. The France leg begins somewhere over the Pyrenees.</div>
-  <div class="wl-body">
-    <p>France was a country of contrasts. The first was Lourdes — a small Pyrenean town that becomes, every summer, one of the world's largest Catholic pilgrimage sites. The second was Paris — the loudest, most photographed, most romantic city on earth.</p>
-    <p>In Lourdes we did the Torch Procession at the Sanctuary, where thousands of pilgrims carry candles around the Esplanade as the night settles. In Paris we climbed the Eiffel Tower at 22:30 on a Wednesday, with the sparkle show happening below us at 22:00 and the city stretching to every horizon.</p>
-    <p>Two cities. Two completely different experiences of France. Both unforgettable.</p>
-    <p style="font-style:italic; color:#1c4a7a; text-align:right; margin-top:14px;">— The Munasinghe-Fernandos, 2026</p>
+  <div class="wl-lead">
+    <div class="wl-figure">
+      <div class="wl-photo" style="background-image:url('../images/france/day-20-flight-to-toulouse.jpg');">
+        <div class="wl-hero-tag">Day 20 · Tue 28 Jul 2026 · CDG → TLS</div>
+      </div>
+      <div class="wl-cap">On the way to Toulouse — all five of us, wheels-up for the south of France. The France leg begins somewhere over the Pyrenees.</div>
+    </div>
+    <div class="wl-letter">
+      <p>France was a country of contrasts. The first was Lourdes — a small Pyrenean town that becomes, every summer, one of the world's largest Catholic pilgrimage sites. The second was Paris — the loudest, most photographed, most romantic city on earth.</p>
+      <p>In Lourdes we did the Torch Procession at the Sanctuary, where thousands of pilgrims carry candles around the Esplanade as the night settles. In Paris we climbed the Eiffel Tower at 22:30 on a Wednesday, with the sparkle show happening below us at 22:00 and the city stretching to every horizon.</p>
+      <p>Two cities. Two completely different experiences of France. Both unforgettable.</p>
+      <p style="font-style:italic; color:#1c4a7a; text-align:right; margin-top:14px;">— The Munasinghe-Fernandos, 2026</p>
+    </div>
   </div>
   <div class="toc-title">In this issue</div>
   <ul class="toc-list">
