@@ -77,6 +77,9 @@ body { padding:20px; }
 .fb-eyebrow { position:absolute; top:16mm; left:16mm; font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(255,255,255,0.9); text-shadow:0 2px 8px rgba(0,0,0,0.6); }
 .fb-caption { padding:0 16mm 14mm; font-family:'Fraunces', serif; font-style:italic; font-size:15px; line-height:1.5; color:white; text-shadow:0 2px 10px rgba(0,0,0,0.7); }
 .fb-caption b { font-style:normal; font-weight:700; }
+.tbl-stack { display:flex; flex-direction:column; gap:8px; margin-top:6px; }
+.tbl-photo { position:relative; aspect-ratio:16/9; background:#e8dcc0; background-size:cover; background-position:center; border-radius:2px; overflow:hidden; box-shadow:0 4px 14px rgba(0,0,0,0.14); margin:0; }
+.tbl-photo figcaption { position:absolute; left:0; right:0; bottom:0; background:linear-gradient(transparent, rgba(0,0,0,0.72)); color:white; font-family:'Fraunces', serif; font-style:italic; font-size:10.5px; line-height:1.35; padding:20px 12px 8px; }
 .sp-caption { font-family:'Fraunces', serif; font-style:italic; font-size:9.5px; color:#5a4a3a; margin-bottom:10px; padding-left:12px; border-left:2px solid #c89b3c; }
 .sp-cols { column-count:2; column-gap:10mm; column-rule:0; }
 .sp-cols p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; margin-bottom:7px; }
@@ -415,6 +418,17 @@ body { padding:20px; }
         <div class="fd-where">📍 Café Marly · €9 · Day 22</div>
       </div>
     </div>
+  </div>
+  <div class="folio">— Issue 09 · FRANCE · 06 —</div>
+</div>
+
+<div class="mag-page mag-feature">
+  <div class="sp-eyebrow">PARIS · AT THE TABLE</div>
+  <div class="gl-title">Five at the table.</div>
+  <div class="ft-lead">Between the monuments, the best bits — a family of five around a Paris table, morning and night.</div>
+  <div class="tbl-stack">
+    <figure class="tbl-photo" style="background-image:url('../images/france/day-21-cafe-comedie-dinner.jpg'); background-position:center 40%;"><figcaption>Dinner at Café de la Comédie — mirrors, gold lamps, onion soup and charcuterie (and, of course, pasta).</figcaption></figure>
+    <figure class="tbl-photo" style="background-image:url('../images/france/day-22-paris-breakfast.jpg'); background-position:center 45%;"><figcaption>Breakfast by the window — croissants and crêpes before the last day's sightseeing.</figcaption></figure>
   </div>
   <div class="folio">— Issue 09 · FRANCE · 06 —</div>
 </div>
