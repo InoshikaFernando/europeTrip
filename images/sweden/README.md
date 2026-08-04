@@ -1,39 +1,23 @@
-# Sweden (Gothenburg) photos — drop real family photos here
+# Sweden (Gothenburg) — Issue 13 photos
 
-The Sweden issue (Issue 13) is **not built yet** — by request, we're waiting for the
-real Gothenburg / sister-day photos before building the magazine (same treatment as
-`Denmark-Copenhagen-magazine.html`, which used real embedded family photos only).
+These are the real family photos from the Gothenburg leg (Mon 3 – Tue 4 Aug 2026),
+rotation-baked and resized. They power both:
 
-Drop the actual photos into this folder using the filenames below, then say the word
-and I'll build the full self-contained Sweden magazine from what really happened.
+- `Sweden-Gothenburg-magazine.html` (repo root) — the self-contained issue, photos
+  embedded as base64 (shareable single file).
+- `magazines/13-sweden.html` — the series file, referencing these images by relative path.
 
-## What the trip actually was (day_26.html / day_27.html)
-Gothenburg was the **heart of the trip** — the sister visit. Arrived via **X2000 train
-across the Øresund bridge** from Copenhagen (~16:40, sister pickup at Gothenburg
-Central / Nils Ericson Terminal). Then a **relaxed, unstructured sister day**: slow
-breakfasts, family time, a long Swedish summer evening, family dinner at the sister's.
-**Liseberg, the Haga district (under construction), and the archipelago boat were all
-skipped** — so don't expect those shots; build around the real, relaxed family day.
+## What's in the issue
+People: `family-heart-selfie` (cover, Kungsportsplatsen), `kids-nordstan-tram`.
+Old town: `vallgraven-canal`, `heart-square-spire`, `heart-arch`, `stone-lion`,
+`domed-building` (Gustavi Domkyrka / Gothenburg Cathedral), `avenyn-fountain`.
+North bank: `kuggen-close` + `kuggen-canal` (Kuggen, Lindholmen Science Park),
+`alvstranden-tower` (Norra Älvstranden), `harbour-panorama`, `harbour-dusk`.
+Magnets: `giftshop-feskekorka` + `giftshop-lipstick` (browsed) and
+`bridge-magnet` + `bridge-magnet-skyline` (the Älvsborg Bridge — the one we bought).
+Fika: `jafaris-churros`, `wienerbrod`.
 
-## Photos to provide (rename to these)
-Story / hero shots — the ones that matter most:
-- `cover.jpg`            — best Gothenburg / family cover shot
-- `oresund-crossing.jpg` — the X2000 train / Øresund bridge crossing
-- `got-arrival.jpg`      — arrival at Gothenburg Central, sister pickup 💙
-- `sister-reunion.jpg`   — the reunion with the sister (the real moment)
-- `family-dinner.jpg`    — family dinner at the sister's
-- `summer-evening.jpg`   — long Swedish summer light / walk by the river
-- `back-cover.jpg`       — a quiet closing shot
-
-Any extra real photos (kids, playground, river walk, café/fika, goodbye) are welcome —
-name them descriptively (`riverwalk.jpg`, `playground.jpg`, `goodbye.jpg`, …) and
-they'll be woven into album pages next to the story.
-
-Food shots (only if you have your own — otherwise skipped, per the real-photos rule):
-- `food-kottbullar.jpg`  — home-cooked Swedish meatballs (the real, non-IKEA kind)
-- `food-kanelbulle.jpg`  — cinnamon bun / fika
-- `food-rakmacka.jpg`    — prawn sandwich (räkmacka)
-
-> Note: the old scaffold `magazines/13-sweden.html` references Liseberg / Haga /
-> Vrångö filenames from the *planned* itinerary. Those plans were skipped, so ignore
-> those slots — the build will follow what actually happened.
+> Built to what actually happened: a relaxed family day around central Gothenburg and
+> across the river to Lindholmen. The planned Liseberg / Haga / archipelago stops were
+> skipped, so they don't appear. Home-cooked family meals weren't photographed.
+> One upload (`a9665a0a` = `764baa87`) was a duplicate and used once as `harbour-dusk`.
