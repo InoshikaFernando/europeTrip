@@ -8,9 +8,12 @@ rotation-baked and resized. They power both:
 - `magazines/13-sweden.html` — the series file, referencing these images by relative path.
 
 ## What's in the issue
-People: `family-heart-selfie` (cover, Kungsportsplatsen), `kids-nordstan-tram`.
+People: `family-heart-close` (cover), `family-heart-selfie` (Heart of the City page),
+`family-cover` (Who We Are page), `kids-nordstan-tram`.
 Old town: `vallgraven-canal`, `heart-square-spire`, `heart-arch`, `stone-lion`,
 `domed-building` (Gustavi Domkyrka / Gothenburg Cathedral), `avenyn-fountain`.
+> Note: `family-heart-close` has a wrong EXIF orientation flag — the build force-rotates
+> it 90° CCW (see build note); don't "fix" it with exif_transpose.
 North bank: `kuggen-close` + `kuggen-canal` (Kuggen, Lindholmen Science Park),
 `alvstranden-tower` (Norra Älvstranden), `harbour-panorama`, `harbour-dusk`.
 Magnets: `giftshop-feskekorka` + `giftshop-lipstick` (browsed) and
