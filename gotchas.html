@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gotchas & Things to Watch Out For — Munasinghe-Fernando Europe 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500&family=Plus+Jakarta+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0d1b2a;
+  --parchment: #f5efe2;
+  --cream: #faf6ec;
+  --gold: #c89b3c;
+  --gold-deep: #a47a23;
+  --sky: #4a90b8;
+  --rose: #c44a4a;
+  --sage: #6b8e6f;
+  --line: rgba(13,27,42,0.12);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  background: var(--parchment); color: var(--ink); line-height: 1.55;
+}
+.topbar {
+  background: var(--ink); color: var(--cream);
+  padding: 10px 24px; border-bottom: 3px solid var(--gold);
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:6px 8px;
+  font-size: 13px; letter-spacing: 0.06em;
+}
+.topbar strong { color: var(--gold); text-transform: uppercase; }
+.topbar a {
+  display:inline-block; background:var(--gold); color:var(--ink);
+  padding:7px 15px; border-radius:999px; text-decoration:none;
+  font-weight:700; letter-spacing:0.03em; font-size:14px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.25); transition:transform .1s ease, background .15s ease;
+}
+.topbar a:hover { background:#fff; transform:translateY(-1px); }
+header {
+  padding: 26px 24px 20px; text-align: center;
+  background: linear-gradient(180deg, var(--parchment), var(--cream));
+  border-bottom: 1px solid var(--line);
+}
+header h1 {
+  font-family: 'Fraunces', serif; font-weight: 600;
+  font-size: clamp(24px, 4vw, 36px); letter-spacing: -0.02em; line-height: 1.05;
+}
+header h1 em {
+  font-style: italic; color: var(--gold-deep);
+  display: block; font-size: 0.42em; margin-top: 8px; font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.wrap { max-width: 880px; margin: 0 auto; padding: 24px 20px 80px; }
+
+.callout {
+  background: #fff7e6; border: 1px solid var(--gold);
+  border-left: 5px solid var(--gold-deep);
+  border-radius: 12px; padding: 16px 18px; margin: 6px 0 30px;
+  box-shadow: 0 2px 10px rgba(13,27,42,0.06);
+}
+.callout h2 { font-family:'Fraunces',serif; font-size: 19px; margin-bottom: 6px; }
+.callout p { font-size: 15px; }
+.callout .tag { font-weight:700; color: var(--gold-deep); }
+
+.section { margin: 34px 0 0; }
+.section > h2 {
+  font-family: 'Fraunces', serif; font-size: 22px; letter-spacing: -0.01em;
+  padding-bottom: 8px; margin-bottom: 4px;
+  border-bottom: 2px solid var(--gold); display: inline-block;
+}
+.section > .sub { font-size: 13px; color: #5a6472; margin: 4px 0 14px; }
+
+.card {
+  background: var(--cream); border: 1px solid var(--line);
+  border-radius: 12px; padding: 15px 17px; margin: 12px 0;
+  box-shadow: 0 1px 4px rgba(13,27,42,0.05);
+}
+.card h3 {
+  font-size: 16px; font-weight: 700; margin-bottom: 5px;
+  display: flex; gap: 8px; align-items: baseline;
+}
+.card h3 .flag { font-size: 18px; }
+.card p { font-size: 14.5px; color: #24313f; }
+.card p + p { margin-top: 7px; }
+.card .why { color: #5a6472; font-size: 13.5px; font-style: italic; }
+.pill {
+  display:inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; padding: 2px 9px; border-radius: 999px;
+  background: var(--ink); color: var(--cream); margin-left: auto; white-space: nowrap;
+}
+.pill.high { background: var(--rose); }
+.pill.money { background: var(--sage); }
+.pill.drive { background: var(--sky); }
+.card strong { color: var(--ink); }
+.card code {
+  font-family:'JetBrains Mono',monospace; font-size: 12.5px;
+  background:#eadfbf; padding: 1px 5px; border-radius: 4px;
+}
+.foot { text-align:center; font-size: 12px; color:#7a8494; margin-top: 40px; }
+ul.mini { margin: 6px 0 0 18px; font-size: 14px; }
+ul.mini li { margin: 3px 0; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <strong>⚠ Gotchas & Watch-Outs</strong> ·
+  <a href="index.html">🗺️ Map</a>
+  <a href="schedule.html">📋 Daily Navigator</a>
+  <a href="guide.html">📘 Offline Guide</a>
+  <a href="kids.html">🎨 Kids Zone</a>
+</div>
+
+<header>
+  <h1>Gotchas &amp; Things to Watch Out For
+    <em>The stuff that quietly trips families up — Europe &amp; China, 2026</em>
+  </h1>
+</header>
+
+<div class="wrap">
+
+  <div class="callout">
+    <h2>🚕 #1 — Car seats, taxis &amp; the Nordic exemption</h2>
+    <p><span class="tag">The nuance:</span> In <strong>Sweden and Denmark</strong>, kids under
+    <strong>135&nbsp;cm</strong> must use a seat/booster in a normal car — but <strong>taxis are
+    partially exempt</strong>. A taxi may legally carry a child without a seat for
+    <em>occasional short trips</em> (under-3s in the back seat; over-3s belted in the back). So a
+    taxi turning up with no seat isn't breaking the law — but it's still the least safe option.
+    All three kids (Avin&nbsp;4&nbsp;·&nbsp;106&nbsp;cm, Aviann&nbsp;8&nbsp;·&nbsp;122&nbsp;cm,
+    Avisha&nbsp;11&nbsp;·&nbsp;129&nbsp;cm) are under 135&nbsp;cm, so for the <strong>rental car
+    they always need the 1 seat + 2 boosters</strong> you're bringing. For a Gothenburg/Copenhagen
+    taxi, either book a <em>family taxi with seats</em> ahead, or keep the rides short.</p>
+  </div>
+
+  <!-- ================= DRIVING ================= -->
+  <div class="section">
+    <h2>🚗 Driving the rental across borders</h2>
+    <p class="sub">One car, eight countries — most of the expensive mistakes live here.</p>
+
+    <div class="card">
+      <h3><span class="flag">🇮🇹</span> Italy ZTL zones will fine you by post
+        <span class="pill high">costly</span></h3>
+      <p>Historic centres (Florence, Milan, Rome, Naples, Venice-mainland) have camera-enforced
+      <strong>ZTL</strong> (Limited Traffic Zones). Drive in without a permit and a
+      <strong>€80–100+ fine</strong> arrives at the rental company months later — <em>per zone,
+      per crossing.</em> Park <strong>outside</strong> the centre and walk/transit in.</p>
+      <p class="why">Your hotel can sometimes register your plate — ask before you drive to the door.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎫 Vignettes must be active <em>before</em> you cross the border
+        <span class="pill drive">buy ahead</span></h3>
+      <p>Each has its own toll sticker — buy the e-vignette the day before you cross:</p>
+      <ul class="mini">
+        <li>🇦🇹 <strong>Austria</strong> — €11.50 / 10-day "Pickerl" · asfinag.at</li>
+        <li>🇨🇿 <strong>Czechia</strong> — €13 / 10-day, fully electronic · edalnice.cz</li>
+        <li>🇭🇺 <strong>Hungary</strong> — e-matrica by plate · nemzetiutdij.hu</li>
+        <li>🇸🇮 <strong>Slovenia</strong> — €16 / 7-day, needed even for the drive-through · evinjeta.dars.si</li>
+        <li>🇨🇭 <strong>Switzerland</strong> — CHF 40, whole-year only (no short option) · via.admin.ch</li>
+      </ul>
+      <p class="why">Germany, Italy &amp; France have no car-sticker vignette (France uses toll booths / autoroute; Italy uses toll booths).</p>
+    </div>
+
+    <div class="card">
+      <h3><span class="flag">🇫🇷</span> France needs a Crit'Air sticker for city zones
+        <span class="pill drive">order early</span></h3>
+      <p>Paris, Lyon and other low-emission zones require a physical <strong>Crit'Air</strong>
+      windscreen sticker. Order it from the <strong>official site only</strong>
+      (<code>certificat-air.gouv.fr</code>) — it's ~€3 but ships by post, so allow weeks.
+      Third-party sites overcharge. Remember the cousin's car needs one too if you drive it in.</p>
+    </div>
+
+    <div class="card">
+      <h3>🅿️ Driving on the right &amp; low-emission zones everywhere
+        <span class="pill drive">habit</span></h3>
+      <p>Coming from NZ, <strong>everything is mirror-image</strong> — roundabouts, overtaking,
+      the gear hand. The dangerous moments are pulling out of a car park and the first roundabout
+      each morning. Also: German cities have <strong>Umweltzone</strong> (green badge) zones and
+      most old-town cores ban or restrict cars — check before routing to a hotel door.</p>
+    </div>
+
+    <div class="card">
+      <h3>⛽ Fuel, tolls &amp; parking take contactless — but keep a plan
+        <span class="pill money">money</span></h3>
+      <p>Many <strong>autoroute toll booths and automated petrol pumps</strong> in France/Italy
+      are card-only and some reject foreign cards at night. Keep a backup card and some coins.
+      Blue-lined street parking = paid; white = free/resident; <strong>yellow = don't</strong>.</p>
+    </div>
+  </div>
+
+  <!-- ================= MONEY ================= -->
+  <div class="section">
+    <h2>💳 Money &amp; payments</h2>
+
+    <div class="card">
+      <h3><span class="flag">🇨🇳</span> China is cashless — but Visa/Mastercard barely work
+        <span class="pill high">set up first</span></h3>
+      <p>Almost everything (DiDi, food, Great Wall booths, shops) runs on <strong>WeChat Pay /
+      Alipay</strong>. Link an <strong>international card inside the app before you fly</strong> —
+      it's painful to set up on arrival. Carry <strong>~¥2,000 cash</strong> as backup; some
+      vendors and taxis still take it, and cards often don't.</p>
+      <p class="why">At Mutianyu, arrange the DiDi to <em>wait and return</em> — return cars are scarce at the Wall.</p>
+    </div>
+
+    <div class="card">
+      <h3>🌐 The Great Firewall blocks Google, WhatsApp, Gmail &amp; maps
+        <span class="pill high">install now</span></h3>
+      <p>In China you <strong>cannot</strong> reach Google Maps, Gmail, WhatsApp, Instagram, or
+      most Western apps without a <strong>VPN installed before arrival</strong> (you can't download
+      one there). Download offline maps and save addresses/tickets locally. WeChat works fine for
+      messaging inside China.</p>
+    </div>
+
+    <div class="card">
+      <h3>💶 Not all of "Europe" is the euro
+        <span class="pill money">cash mix</span></h3>
+      <p>Different currencies on this route: 🇨🇿 <strong>Czech koruna</strong>,
+      🇭🇺 <strong>Hungarian forint</strong>, 🇨🇭 <strong>Swiss franc</strong>,
+      🇩🇰 <strong>Danish krone</strong>, 🇸🇪 <strong>Swedish krona</strong>. Don't over-withdraw
+      koruna/forint — you can't spend leftovers next door. When a card machine offers to charge in
+      <strong>NZD, always choose the local currency</strong> (decline "conversion" = better rate).</p>
+    </div>
+
+    <div class="card">
+      <h3>🧾 Tipping is modest, and tap water is fine
+        <span class="pill money">relax</span></h3>
+      <p>No US-style 20%. Round up or ~5–10% for good service; often already included as
+      <em>coperto/servizio</em> in Italy. <strong>Tap water is safe</strong> across Western Europe
+      &amp; the Nordics — but Italian restaurants will bring (and charge for) bottled unless you
+      ask for <em>"acqua del rubinetto."</em> Public fountains in Rome are drinkable.</p>
+    </div>
+  </div>
+
+  <!-- ================= SIGHTS ================= -->
+  <div class="section">
+    <h2>🎟️ Museums, churches &amp; timed tickets</h2>
+
+    <div class="card">
+      <h3>🛂 "Free kids" still need a ticket — and their passport
+        <span class="pill high">carry ID</span></h3>
+      <p>Under-18s are free at many sights (Uffizi, Louvre, Versailles, Vatican, Doge's Palace),
+      but you must <strong>still book a free timed ticket each</strong> and <strong>carry the
+      kids' passports</strong> as age proof. Reduced/youth rates are checked at the door. Many
+      tickets are <strong>nominative</strong> (name-matched) — book in the traveller's name.</p>
+    </div>
+
+    <div class="card">
+      <h3>📅 The big museums each close a different day
+        <span class="pill">plan around</span></h3>
+      <ul class="mini">
+        <li><strong>Louvre</strong> — closed <em>Tuesdays</em> (open late Wed to 21:45)</li>
+        <li><strong>Versailles</strong> — closed <em>Mondays</em>; Passport ticket is the only entry in 2026</li>
+        <li><strong>Uffizi / most Italian state museums</strong> — closed <em>Mondays</em></li>
+        <li><strong>Vatican Museums</strong> — closed <em>Sundays</em> (except last Sunday of month)</li>
+      </ul>
+      <p class="why">Book the timed slot weeks ahead — the popular ones sell out 3–4 weeks out in July.</p>
+    </div>
+
+    <div class="card">
+      <h3>⛪ Church dress code: shoulders &amp; knees covered
+        <span class="pill">pack a layer</span></h3>
+      <p>St Peter's, the Vatican, Milan Duomo, St Mark's and most working churches
+      <strong>refuse entry</strong> to bare shoulders or above-the-knee shorts — in peak summer
+      heat this catches everyone. Carry a light scarf/shawl. Expect
+      <strong>airport-style security queues</strong> even with a timed ticket (Sainte-Chapelle,
+      the Vatican). At the Milan Duomo there's <strong>no bag storage</strong> — leave bags in the car.</p>
+    </div>
+  </div>
+
+  <!-- ================= TRAINS ================= -->
+  <div class="section">
+    <h2>🚆 Trains &amp; the Sweden leg</h2>
+
+    <div class="card">
+      <h3><span class="flag">🇸🇪</span> Copenhagen → Gothenburg: the fast train can sell out
+        <span class="pill">have a plan B</span></h3>
+      <p>The fast <strong>X2000</strong> has <strong>reserved seats</strong> and sells out in
+      summer. If it's full, the <strong>Øresundståg regional</strong> (CPH → Gothenburg, ~3h40m)
+      is <strong>walk-up, no reservation</strong> — buy first thing that morning. Border ID checks
+      between Denmark and Sweden happen on some crossings — <strong>have passports out</strong>.</p>
+    </div>
+
+    <div class="card">
+      <h3><span class="flag">🇫🇷</span> Eurostar check-in closes early &amp; old QR codes go void
+        <span class="pill high">check in on time</span></h3>
+      <p>Eurostar (Paris → London) has <strong>airport-style check-in that shuts ~30–45 min before
+      departure</strong> — arrive 75–90 min early with passports; it's an international border.
+      If any flight/train was rebooked, the <strong>old boarding-pass QR codes are void</strong> —
+      re-check-in online and use only the new ones. Screenshot everything for offline.</p>
+    </div>
+  </div>
+
+  <!-- ================= GENERAL ================= -->
+  <div class="section">
+    <h2>🧳 General &amp; the small stuff</h2>
+
+    <div class="card">
+      <h3>🔌 Three different plugs on one trip
+        <span class="pill">adapters</span></h3>
+      <p>Most of Europe is <strong>Type C/F (two round pins)</strong> — but
+      <strong>Switzerland is Type J</strong> and <strong>Italy sometimes Type L</strong>, and both
+      can reject a fat Schuko/universal plug. A slim multi-adapter + a small power strip lets you
+      charge the whole family off one socket. China is Type A/I. All chargers are dual-voltage; the
+      hair tools may not be.</p>
+    </div>
+
+    <div class="card">
+      <h3>🏪 Sundays &amp; August: shops and pharmacies shut
+        <span class="pill">stock up Sat</span></h3>
+      <p>In Germany, Austria, Switzerland and the Nordics, most <strong>shops close Sundays</strong>
+      and many pharmacies too. In Italy/France, August is <strong>holiday season</strong> — some
+      family restaurants and shops close for weeks. Buy nappies/snacks/meds
+      <strong>Saturday</strong>, and know the nearest <em>on-duty</em> pharmacy.</p>
+    </div>
+
+    <div class="card">
+      <h3>☀️ July heat + long sightseeing days with a 4-year-old
+        <span class="pill high">pace it</span></h3>
+      <p>Rome/Pompeii/Naples hit the mid-30s°C. Pompeii has <strong>almost no shade</strong> —
+      hats, sunscreen, <strong>2L water each</strong>, and a midday break. Book the biggest walks
+      for morning. Carry rehydration sachets and the kids' regular meds (with a copy of scripts).</p>
+    </div>
+
+    <div class="card">
+      <h3>📵 Offline everything &amp; a roaming plan
+        <span class="pill">before you go</span></h3>
+      <p>Save every ticket PDF, hotel address and map <strong>offline</strong> — you'll lose signal
+      in Alpine passes, on ferries and (deliberately) in China. An <strong>eSIM per adult phone</strong>
+      is cheaper than roaming; buy the China one separately or rely on the VPN + WeChat combo.</p>
+    </div>
+
+    <div class="card">
+      <h3>🛂 Passports: the single most-used document
+        <span class="pill high">don't pack deep</span></h3>
+      <p>You'll show them constantly — nominative sight tickets, kid age-proof, hotel check-ins,
+      the Denmark↔Sweden border, real-name ticketing in China, and every flight. Keep them
+      <strong>accessible, not in the checked bag</strong>, and carry a <strong>photo/scan backup</strong>
+      of every page in the cloud and on paper.</p>
+    </div>
+  </div>
+
+  <p class="foot">Munasinghe-Fernando Family · Europe &amp; China 2026 · living gotchas list — add as you learn</p>
+
+</div>
+</body>
+</html>
