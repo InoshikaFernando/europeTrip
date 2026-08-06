@@ -182,6 +182,12 @@ warm magazine-editorial tone.
   the Glockenspiel page. All EXIF-baked (orientation 6). TOC + page numbers resynced (issue now
   15 pages). HELD in repo as near-dup swaps: 18-marienplatz-wide, 20-marienplatz-panorama,
   21-oldtown-church-street. Every page verified non-clipping via headless Chromium.
+  **Full Circle now has the real "last European breakfast" strip (this session):** 5 photos —
+  the kids over salad bowls on the Munich Airport forecourt terrace (Bayern/REWE), + two
+  salad-bowl close-ups — bought before the ~10:30 check-in. Held near-dup breakfast shots
+  (2nd girl pose, 2 more bowls) in images/day-29/. Caught + fixed a Glockenspiel-page A4 spill
+  (min-height grows silently; see MAGAZINE_REVIEW_NOTES rule 7). Issue stable at 15 pages, all
+  ≤295mm. **Still open:** confirm the Baroque church interior's name (looks like St Peter's).
 - **Issue 02 Austria — IN PROGRESS.** Added "The Journey" recap page (Ch.2, route rail) +
   a real, deeply personal Salzburg spread. **Lana's Sound of Music story** is the heart of it:
   favourite childhood film, played Maria (sister as Liesl, dolls for the other kids), watched

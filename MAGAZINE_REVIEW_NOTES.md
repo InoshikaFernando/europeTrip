@@ -50,6 +50,11 @@ fix what applies, publish to `main`, then report so the user can manually verify
 - Content must stay inside the page margin. Use `min-height` (not fixed `height`) on
   `.mag-page`. When adding text to a spread, shrink the photo `max-height` so nothing
   spills past the folio.
+- **GOTCHA:** because pages use `min-height`, a too-tall page silently *grows* instead of
+  clipping — so a `scrollHeight − clientHeight` check reads 0 (no overflow) even when the
+  page has spilled onto a 2nd printed sheet. Verify by measuring each page's `offsetHeight`
+  against A4 (295mm ≈ **1115px** at 96dpi) and flag anything taller. (Caught the Glockenspiel
+  page at 1320px after adding a photo.)
 
 ## 8. Factual accuracy & the user's real experience
 - Honor what actually happened; never contradict established facts.
