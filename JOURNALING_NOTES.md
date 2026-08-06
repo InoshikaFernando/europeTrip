@@ -20,7 +20,7 @@ _Then "≥1 photo per attraction" pass DONE (added 6 `.mag-spread` pages, Chromi
 
 The family is travelling China → Europe → home (10 Jul – 7 Aug 2026, ~30 nights,
 billed as "15 countries, 33 cities"). There are 14 per-country magazine issues in
-`magazines/NN-country.html`, static HTML published via GitHub Pages. As the family
+`magazines/NN-country-2026.html`, static HTML published via GitHub Pages. As the family
 tells us what really happened, we replace the pre-trip **imagined placeholder** text
 with **real experiences**, keeping each issue's exact HTML structure, classes, and
 warm magazine-editorial tone.
@@ -144,7 +144,7 @@ warm magazine-editorial tone.
 
 - Develop on the session's designated branch (this session: **`claude/prague-photos-journaling-l70djc`**).
 - Commit → push branch → fast-forward merge into **`main`** → Pages rebuilds.
-- Live URL pattern: `https://inoshikafernando.github.io/europeTrip/magazines/NN-country.html`
+- Live URL pattern: `https://inoshikafernando.github.io/europeTrip/magazines/NN-country-2026.html`
 - The **user also edits `index.html`, `guide.html`, `schedule.html`, `day_*.html` directly on `main`.**
   If a push to main is rejected, re-sync: `git fetch origin main` → merge `origin/main`
   into the branch → `git reset --hard origin/main` on main → `git merge --ff-only <branch>` → push.
@@ -361,7 +361,7 @@ This makes the **Vienna page (Issue 02 Austria) REAL at last** — replace the i
 with the Sisi story as its heart (echoes Lana's Sound-of-Music thread: another woman's story that
 Austria makes vivid). NB spelling: "Sisi" (Austrian) not "Sissi" (the films).
 **VENUE CONFIRMED = Schönbrunn Palace** (they photographed the palace's history boards).
-**DONE THIS SESSION — 3 new history pages added to Issue 02 (magazines/02-austria.html),
+**DONE THIS SESSION — 3 new history pages added to Issue 02 (magazines/02-austria-2026.html),
 after the existing imagined "Habsburg Forever" Vienna page (folio 05), all screenshot-verified
 non-clipping:** (1) **"The emperor who chose the wrong sister"** — the Franz Joseph & Sisi love
 story (Bad Ischl 1853, the rigid court, Hungary/1867 Compromise, Mayerling 1889, Geneva 1898,

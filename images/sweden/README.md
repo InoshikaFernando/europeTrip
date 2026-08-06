@@ -3,9 +3,9 @@
 These are the real family photos from the Gothenburg leg (Mon 3 – Tue 4 Aug 2026),
 rotation-baked and resized. They power both:
 
-- `Sweden-Gothenburg-magazine.html` (repo root) — the self-contained issue, photos
+- `Sweden-Gothenburg-magazine-2026.html` (repo root) — the self-contained issue, photos
   embedded as base64 (shareable single file).
-- `magazines/13-sweden.html` — the series file, referencing these images by relative path.
+- `magazines/13-sweden-2026.html` — the series file, referencing these images by relative path.
 
 ## What's in the issue
 People: `family-heart-close` (cover), `family-heart-selfie` (Heart of the City page),

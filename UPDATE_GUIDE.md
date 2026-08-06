@@ -32,8 +32,11 @@
 ### D. Magazines (A4 keepsake, one PDF per country — built from history pages + food cards)
 | File | Country | Notes |
 |---|---|---|
-| `magazines/01-china.html` … `magazines/14-vatican.html` | 14 country issues | 7 pages each: Cover · Welcome/TOC · Feature 1 · Duo-photo · Feature 2 · Tastes · Reflections/back-cover |
+| `magazines/01-china-2026.html` … `magazines/14-vatican-2026.html` | 14 country issues | 7 pages each: Cover · Welcome/TOC · Feature 1 · Duo-photo · Feature 2 · Tastes · Reflections/back-cover |
 | Generator: `C:/Source/Trip2026/generate_magazines.py` | rebuilds magazines 02–14 | 01-china is hand-maintained separately |
+| Self-contained exports | Denmark, Sweden | `Denmark-Copenhagen-magazine-2026.html`, `Sweden-Gothenburg-magazine-2026.html` (repo root, photos embedded as base64) |
+
+> **Naming convention — `NN-country-YYYY.html`.** The `-YYYY` year suffix marks the *edition*. Every file above is the **2026** trip. If a country is revisited, its new issue gets the visit year (e.g. `china-2030.html`) and sits beside the 2026 one — never overwrite or renumber an existing year's issue. The `NN-` prefix orders that trip's issues; a later trip starts its own sequence.
 
 ### E. Data / image files (rarely need itinerary edits)
 | File / folder | Purpose |
@@ -88,7 +91,7 @@ Inside the affected `<div class="page day-page">`:
 - **Transit**: train/flight bookings
 
 ### 9. Magazines (only if the change affects a country's content/photos)
-- Edit the relevant `magazines/NN-country.html` OR re-run `generate_magazines.py`
+- Edit the relevant `magazines/NN-country-2026.html` OR re-run `generate_magazines.py`
 
 ---
 
@@ -123,7 +126,7 @@ Inside the affected `<div class="page day-page">`:
 [ ] day_X.html — matching file (confirm via <title>)
 [ ] Excel — Day-by-Day + Calendar + Transit (+ hyperlinks)
 [ ] images/day-XX/ — new/swapped images
-[ ] magazines/NN-country.html — if country content changed
+[ ] magazines/NN-country-2026.html — if country content changed
 [ ] Hard-refresh ALL + verify visually + check div balance
 ```
 
