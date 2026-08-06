@@ -161,9 +161,19 @@ warm magazine-editorial tone.
   pickup, driving on the right). Welcome updated "two doses" → three; cover dates now
   11 Jul · 27 Jul · 5 Aug. **Visit 1b (Munich on foot) DONE & live:** REWE picnic lunch
   (salads, hot dogs, Brezel), Marienplatz, St. Peter's Church, two living-statue performers
-  (black/gold + sand/mud) the kids loved. Touches 2 & 3 (Ottobeuren 27 Jul, Aufkirchen/Munich
-  5 Aug) still imagined placeholder. NOTE: placeholder "Munich in Three Squares" duo (Marienplatz
-  etc.) is for the 5 Aug visit — reconcile if they revisit. Open thread: replacement backpack.
+  (black/gold + sand/mud) the kids loved. Touch 2 (Ottobeuren 27 Jul) still imagined
+  placeholder. **Touch 3 (Full Circle, the way home) now REAL:** flew Gothenburg → Munich,
+  landed ~8:30pm; stashed the bulk of the luggage in an **airport locker**, carried out only
+  night + next-day clothes so the hop was light; taxi to a **Mercure at Aufkirchen** (village
+  near MUC) for the last European night; **bus** back to the terminal next morning, T2 check-in
+  ~10:30, China Air → Beijing (Great Wall stopover) → home. Replaced the old "Novotel by the
+  terminal" fiction; added the Mercure reference photo. **Real arrival photos wired in (this
+  session):** the €25 **airport shower** family shot (day-03/02) on the "First hours" page, and
+  the **REWE street-picnic** family shot (day-03/03) as a two-up beside the Marienplatz selfie on
+  "City on Foot." Both baked for EXIF rotation (were orientation 6). Wove in the family's own
+  reflection that **Marienplatz "holds both old and modern"** (grand stone/spires vs. modern
+  shopfronts). Open thread: replacement backpack; 16 more user photos received — awaiting IDs
+  before placing.
 - **Issue 02 Austria — IN PROGRESS.** Added "The Journey" recap page (Ch.2, route rail) +
   a real, deeply personal Salzburg spread. **Lana's Sound of Music story** is the heart of it:
   favourite childhood film, played Maria (sister as Liesl, dolls for the other kids), watched
