@@ -172,8 +172,16 @@ warm magazine-editorial tone.
   the **REWE street-picnic** family shot (day-03/03) as a two-up beside the Marienplatz selfie on
   "City on Foot." Both baked for EXIF rotation (were orientation 6). Wove in the family's own
   reflection that **Marienplatz "holds both old and modern"** (grand stone/spires vs. modern
-  shopfronts). Open thread: replacement backpack; 16 more user photos received — awaiting IDs
-  before placing.
+  shopfronts). Open thread: replacement backpack.
+  **16 Marienplatz photos now placed (this session):** two new album spreads after "City on
+  Foot" — **"The Living Statues"** (the gold plinth performer + the sand/mud reclining performer,
+  the kids' favourite, + three family/kids shots at the Mariensäule) and **"Old & New"** (Neues
+  Rathaus facade, a Baroque church interior [captioned safely, not asserting St Peter's],
+  Kaufingerstraße shopping street tying to the old/modern reflection, market tents, an old-town
+  church, the family walking the back lanes). Frauenkirche onion-dome **family selfie** added to
+  the Glockenspiel page. All EXIF-baked (orientation 6). TOC + page numbers resynced (issue now
+  15 pages). HELD in repo as near-dup swaps: 18-marienplatz-wide, 20-marienplatz-panorama,
+  21-oldtown-church-street. Every page verified non-clipping via headless Chromium.
 - **Issue 02 Austria — IN PROGRESS.** Added "The Journey" recap page (Ch.2, route rail) +
   a real, deeply personal Salzburg spread. **Lana's Sound of Music story** is the heart of it:
   favourite childhood film, played Maria (sister as Liesl, dolls for the other kids), watched
