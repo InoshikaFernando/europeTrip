@@ -1,7 +1,7 @@
 # Magazine Review Notes — editorial checklist
 
 Standing rules distilled from the Austria (Issue 02) review. When the user asks me
-to review a magazine (`magazines/NN-country.html`), go through **every** item below,
+to review a magazine (`magazines/NN-country-2026.html`), go through **every** item below,
 fix what applies, publish to `main`, then report so the user can manually verify.
 
 ## 1. No repeated / duplicated storytelling
