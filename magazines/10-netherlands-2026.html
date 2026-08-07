@@ -90,6 +90,35 @@ body { padding:20px; }
 .bc-mag { position:absolute; top:20mm; left:20mm; font-family:'Fraunces', serif; font-style:italic; font-weight:300; font-size:16px; color:rgba(255,255,255,0.9); letter-spacing:0.05em; }
 .bc-issue { position:absolute; top:20mm; right:20mm; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; color:rgba(255,255,255,0.7); }
 .mag-page .folio { position:absolute; bottom:4mm; left:0; right:0; text-align:center; font-family:'Fraunces', serif; font-style:italic; font-size:8.5px; color:#8b6914; }
+/* ---- Photo-essay album pages ---- */
+.mag-album { padding:20mm 18mm; }
+.album-sub { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:#cc5500; margin-bottom:2px; }
+.album-head { font-family:'Fraunces', serif; font-weight:700; font-size:30px; line-height:1; color:#1a1a1a; margin-bottom:12px; }
+.album-intro { font-family:'Fraunces', serif; font-style:italic; font-size:12px; color:#5a4a3a; margin:-6px 0 14px; }
+.mag-lead { display:grid; grid-template-columns:1.6fr 1fr; gap:8mm; align-items:end; margin:6px 0 7mm; }
+.mag-lead .ll-feat { margin:0; position:relative; overflow:hidden; border-radius:3px; }
+.mag-lead .ll-feat img { width:100%; height:auto; display:block; }
+.mag-lead .ll-col { display:flex; flex-direction:column; padding-bottom:3mm; }
+.mag-lead .ll-kick { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#cc5500; display:block; margin-bottom:10px; }
+.mag-lead .ll-intro { font-family:'Fraunces',serif; font-style:italic; font-size:14px; line-height:1.62; color:#3d3024; }
+.ed-two, .ed-grid3, .ed-grid4, .ed-land { display:grid; margin-top:8px; }
+.ed-two { grid-template-columns:repeat(2,1fr); gap:6mm; }
+.ed-grid3 { grid-template-columns:repeat(3,1fr); gap:5mm; }
+.ed-grid4 { grid-template-columns:repeat(4,1fr); gap:4mm; }
+.ed-land { grid-template-columns:repeat(2,1fr); gap:6mm; }
+.ed-two figure, .ed-grid3 figure, .ed-grid4 figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; aspect-ratio:3/4; }
+.ed-land figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; aspect-ratio:4/3; }
+.ed-two img, .ed-grid3 img, .ed-grid4 img, .ed-land img { width:100%; height:100%; object-fit:cover; display:block; }
+.ed-cap-ov { position:absolute; left:0; right:0; bottom:0; padding:22px 11px 9px; background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.35) 55%, transparent); color:#fff; font-family:'Fraunces',serif; font-size:9px; line-height:1.4; }
+.ed-grid3 .ed-cap-ov { padding:16px 8px 6px; font-size:8px; line-height:1.3; }
+.ed-grid4 .ed-cap-ov { padding:14px 6px 5px; font-size:7px; line-height:1.25; }
+.ed-cap-ov strong { color:#f0d68c; font-weight:700; }
+.mag-lead .ll-feat .ed-cap-ov { padding:26px 14px 12px; font-size:10px; line-height:1.45; }
+.ed-wide { margin-top:8px; }
+.ed-wide figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; aspect-ratio:16/8.4; }
+.ed-grid3.sq figure { aspect-ratio:1/1; }
+.ed-wide img { width:100%; height:100%; object-fit:cover; display:block; }
+.ed-two.short figure { aspect-ratio:4/5; }
 @media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
 </style></head>
 <body>
@@ -105,7 +134,7 @@ body { padding:20px; }
       <span class="cv-tag">🌷 Tulip Country</span>
       <span class="cv-tag">🚲 More Bikes than People</span>
     </div>
-    <div class="cv-features">INSIDE: <b>Cousin's home in Amsterdam</b> — our 3-night base · <b>Anne Frank House</b> · <b>Rijksmuseum + Vondelpark</b> · <b>Stroopwafel</b> at Albert Cuyp Market · <b>Eurostar arrival</b> at 23:33</div>
+    <div class="cv-features">INSIDE: <b>Cousin's home</b> — our 3-night base + a new cousin the kids adored · <b>Anne Frank House</b> · <b>Zaanse Schans</b> windmills + cheese farm · <b>Canal cruise</b> past the Munttoren · <b>Stroopwafel</b> at Albert Cuyp Market</div>
   </div>
   <div class="cv-meta">Munasinghe-Fernando Family · Thu 30 Jul — Sat 2 Aug 2026</div>
 </div>
@@ -115,7 +144,7 @@ body { padding:20px; }
   <div class="wl-title">Welcome to<br>cousins.</div>
   <div class="wl-divider"></div>
   <div class="wl-body">
-    <p>The Netherlands was the family chapter. After three weeks of hotels, apartments, and short stays, we arrived in Amsterdam late on a Thursday night and were picked up at Schiphol by our cousin. We stayed in their home — a tall narrow Dutch house in a quiet neighbourhood — for three nights. We had three meals at their kitchen table. The kids played with their kids. We finally slept in.</p>
+    <p>The Netherlands was the family chapter. After three weeks of hotels, apartments, and short stays, we arrived in Amsterdam late on a Thursday night and were picked up at Schiphol by our cousin. We stayed in their home — a tall narrow Dutch house in a quiet neighbourhood — for three nights. We had three meals at their kitchen table. Best of all, our kids met their new cousin for the first time — and within an hour they were inseparable: tearing up and down the stairs, trading toys, giggling long past bedtime. We finally slept in.</p>
     <p>We also saw a city that the people built themselves — 17% of Dutch land is reclaimed from the sea by centuries of dikes, windmills, and stubborn engineering. Amsterdam has more bicycles than residents. Anne Frank wrote her diary in a hidden annex four streets from where we ate stroopwafels.</p>
     <p>This issue is shorter on monuments and longer on quiet afternoons. That is exactly what we needed.</p>
     <p style="font-style:italic; color:#cc5500; text-align:right; margin-top:14px;">— The Munasinghe-Fernandos, 2026</p>
@@ -123,11 +152,15 @@ body { padding:20px; }
   <div class="toc-title">In this issue</div>
   <ul class="toc-list">
     <li><span class="toc-name">Welcome — Cousins</span><span class="toc-page">02</span></li>
-    <li><span class="toc-name">Eurostar to Amsterdam</span><span class="toc-page">03</span></li>
-    <li><span class="toc-name">Anne Frank + Rijksmuseum</span><span class="toc-page">04</span></li>
-    <li><span class="toc-name">Albert Cuyp + Vondelpark</span><span class="toc-page">05</span></li>
-    <li><span class="toc-name">Tastes of the Netherlands</span><span class="toc-page">06</span></li>
-    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">07</span></li>
+    <li><span class="toc-name">Anne Frank House</span><span class="toc-page">03</span></li>
+    <li><span class="toc-name">Three Days of Slowing Down</span><span class="toc-page">04</span></li>
+    <li><span class="toc-name">Amsterdam by Canal</span><span class="toc-page">05</span></li>
+    <li><span class="toc-name">The Canals & Saturday Mass</span><span class="toc-page">06</span></li>
+    <li><span class="toc-name">Zaanse Schans — Windmills</span><span class="toc-page">07</span></li>
+    <li><span class="toc-name">Zaanse Schans — The Farm</span><span class="toc-page">08</span></li>
+    <li><span class="toc-name">Eurostar to Amsterdam</span><span class="toc-page">09</span></li>
+    <li><span class="toc-name">Tastes of the Netherlands</span><span class="toc-page">10</span></li>
+    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">11</span></li>
   </ul>
 </div>
 
@@ -136,11 +169,7 @@ body { padding:20px; }
   <div class="sp-headline">A girl,<br>a diary,<br>a bookshelf.</div>
   <div class="sp-deck">For 25 months, eight people hid behind a bookshelf in an Amsterdam canal house. The youngest was thirteen. She kept a diary. After the war, her father survived and published it. The house is still there.</div>
   <div class="sp-meta"><span>Sat 2 Aug 2026</span><span>Prinsengracht 263-267</span><span>90 min · pre-booked timed slot</span></div>
-  <div class="sp-hero" style="background-image:url('../images/netherlands/day-23-anne-frank-house-exterior.jpg');">
-    <div class="ph-name">📷 images/netherlands/day-23-anne-frank-house-exterior.jpg</div>
-    <div class="ph-info">HERO PHOTO · TBD</div>
-  </div>
-  <div class="sp-caption">The Anne Frank House on Prinsengracht. The bookshelf concealing the entrance to the Secret Annex is preserved exactly as it was on 4 August 1944.</div>
+  <div class="sp-caption">The Anne Frank House stands on the Prinsengracht canal. Inside, the bookshelf concealing the entrance to the Secret Annex is preserved exactly as it was on 4 August 1944 — we chose to keep no photographs of the annexe itself.</div>
   <div class="sp-cols">
     <p>The Anne Frank House is the most powerful museum we visited on the entire trip. It is not big. It is not loud. It does not need to be. You walk through the canal-side warehouse — Otto Frank's former business premises — and you climb the steep Dutch staircase to the bookshelf that for two years concealed the entrance to the Secret Annex. You bend through the hidden doorway. You enter four rooms where eight people hid. You see the pencil marks on the wall where Otto measured his daughters' growth. You see the magazine pictures Anne taped over her bed.</p>
     <div class="sp-quote">In spite of everything, I still believe that people are really good at heart. — Anne Frank, 15 July 1944.</div>
@@ -152,38 +181,16 @@ body { padding:20px; }
 <div class="mag-page mag-duo">
   <div class="sp-eyebrow" style="margin-bottom:4px;">AMSTERDAM RHYTHM · DAYS 24-25</div>
   <div class="sp-headline" style="font-size:38px; margin-bottom:14px;">Three days<br><em>of slowing down.</em></div>
-  <div class="duo-row alt">
-    <div class="duo-photo wide" style="background-image:url('../images/netherlands/day-23-canal-houses.jpg');">
-      <div class="ph-name">📷 images/netherlands/day-23-canal-houses.jpg</div>
-      <div class="ph-info">PHOTO · TBD</div>
-    </div>
+  <div class="duo-row">
     <div class="duo-text">
       <div class="kicker">★ More Bikes than People</div>
       <h3>900,000 bikes</h3>
       <p>2 million bicycles for 1.8 million people. 38% of trips by bicycle. 500 km of dedicated bike lanes. The kids tried, and learned to look both ways twice.</p>
     </div>
-  </div>
-
-  <div class="duo-row">
-    <div class="duo-photo" style="background-image:url('../images/netherlands/day-23-vondelpark.jpg');">
-      <div class="ph-name">📷 images/netherlands/day-23-vondelpark.jpg</div>
-      <div class="ph-info">PHOTO · TBD</div>
-    </div>
-    <div class="duo-photo" style="background-image:url('../images/netherlands/day-23-rijksmuseum.jpg');">
-      <div class="ph-name">📷 images/netherlands/day-23-rijksmuseum.jpg</div>
-      <div class="ph-info">PHOTO · TBD</div>
-    </div>
-  </div>
-
-  <div class="duo-row alt" style="grid-template-columns:1fr 2fr;">
-    <div class="duo-text" style="text-align:right; padding-right:6mm;">
-      <div class="kicker" style="text-align:right;">★ Albert Cuyp Market</div>
-      <h3 style="font-size:22px;">170+ stalls</h3>
-      <p>Europe's busiest open-air market, since 1905. We bought stroopwafels fresh off the iron and tasted the syrup-soaked top while it was still warm.</p>
-    </div>
-    <div class="duo-photo wide" style="background-image:url('../images/netherlands/day-23-albert-cuyp-stroopwafel.jpg');">
-      <div class="ph-name">📷 images/netherlands/day-23-albert-cuyp-stroopwafel.jpg</div>
-      <div class="ph-info">PHOTO · TBD</div>
+    <div class="duo-text">
+      <div class="kicker">★ Albert Cuyp Market</div>
+      <h3>170+ stalls</h3>
+      <p>Europe's busiest open-air market, running since 1905. We bought stroopwafels fresh off the iron and tasted the syrup-soaked top while it was still warm.</p>
     </div>
   </div>
   <div style="margin-top:12px; border-left:3px solid #a02828; padding:4px 0 4px 10px;">
@@ -194,22 +201,89 @@ body { padding:20px; }
   <div class="folio">— Issue 10 · NETHERLANDS · 04 —</div>
 </div>
 
+<div class="mag-page mag-album">
+  <div class="album-sub">A photo essay · Amsterdam</div>
+  <div class="album-head">The city built on water.</div>
+  <div class="album-intro">Amsterdam is best read from a boat. The 17th-century canal ring — the UNESCO-listed <em>grachtengordel</em> — was dug to drain the marsh, move cargo to warehouse doors, and organise a bog into the richest trading city in Europe. Four centuries on, the gabled houses still lean over the same water.</div>
+  <div class="ed-grid3">
+    <figure><img src="../images/netherlands/alb-ams-canal-houses.jpg" loading="lazy"><figcaption class="ed-cap-ov">Cruise boats moored below the <strong>gabled merchant houses</strong>, mirrored in the still canal.</figcaption></figure>
+    <figure><img src="../images/netherlands/alb-ams-rondvaart.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>Rondvaart Kooij</strong> jetty on the Rokin — one of the yellow-and-red canal cruisers, below a step-gabled façade.</figcaption></figure>
+    <figure><img src="../images/netherlands/alb-ams-munttoren.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>Munttoren</strong> (Mint Tower) at Muntplein — gilded clock and 17th-century spire at the edge of the old city.</figcaption></figure>
+  </div>
+  <div class="ed-two">
+    <figure><img src="../images/netherlands/alb-ams-canal-cruise.jpg" loading="lazy"><figcaption class="ed-cap-ov">From the water — the <strong>canal ring</strong> gliding past, the view the city was built to be seen from.</figcaption></figure>
+    <figure><img src="../images/netherlands/alb-ams-magnet.jpg" loading="lazy"><figcaption class="ed-cap-ov">A fridge magnet held up on the cobbles — <strong>AMSTERDAM</strong>, canal houses and all.</figcaption></figure>
+  </div>
+  <div class="folio">— Issue 10 · NETHERLANDS · 05 —</div>
+</div>
+
+<div class="mag-page mag-album">
+  <div class="album-sub">A photo essay · Amsterdam</div>
+  <div class="album-head">The canals, and Saturday Mass.</div>
+  <div class="album-intro">On our last afternoon we crossed a flower-hung canal bridge together, then walked to the Singel for the Saturday evening vigil — Mass in English at De Krijtberg, the slender Jesuit church wedged between the merchant houses.</div>
+  <div class="ed-two">
+    <figure><img src="../images/netherlands/alb-ams-family-canal.jpg" loading="lazy"><figcaption class="ed-cap-ov">All five of us on a <strong>flower-hung canal bridge</strong> — petunias, a blue houseboat, and the gabled Singel stretching away behind.</figcaption></figure>
+    <figure><img src="../images/netherlands/alb-ams-krijtberg.jpg" loading="lazy"><figcaption class="ed-cap-ov">Inside <strong>De Krijtberg</strong> — the neo-Gothic Jesuit church on the Singel, its altar lit for the Saturday <strong>English vigil Mass</strong>.</figcaption></figure>
+  </div>
+  <div style="margin-top:12px; border-left:3px solid #cc5500; padding:4px 0 4px 12px;">
+    <div style="font-family:'Fraunces', serif; font-weight:700; font-size:16px; color:#1a1a1a; margin-bottom:4px;">A quiet end to the day</div>
+    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify;">Officially the <strong>Sint-Franciscus Xaveriuskerk</strong>, everyone calls it <em>De Krijtberg</em> — "the chalk mountain," after the chalk merchant's house that once stood on the spot. Built in 1883 and run by the Jesuits, it is one of the few Amsterdam churches with a regular <strong>English-language Mass</strong>, at 17:15 on Saturday evenings. After a week of trains, windmills and canals, a candle-lit hour in a soaring nave was exactly the way to close the Amsterdam chapter — the priests in the green of Ordinary Time, the low sun coming coloured through the glass.</div>
+  </div>
+  <div class="folio">— Issue 10 · NETHERLANDS · 06 —</div>
+</div>
+
+<div class="mag-page mag-album">
+  <div class="album-sub">A photo essay · Zaanse Schans</div>
+  <div class="album-head">Windmills on the Zaan.</div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/netherlands/alb-zs-windmill.jpg" loading="eager">
+      <figcaption class="ed-cap-ov">Holding the magnet up to the real thing — a working <strong>green Zaanse windmill</strong> on the river, sails set against the summer sky.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">The Zaan · Windmill Country</span>
+      <div class="ll-intro">Half an hour north of the city, <strong>Zaanse Schans</strong> keeps the old Zaan alive — a riverbank of working windmills and green timber houses, the last survivors of the hundreds that once made this valley the world's first industrial zone.</div>
+    </div>
+  </div>
+  <div style="margin:10px 0 4px; border-left:3px solid #cc5500; padding:4px 0 4px 12px;">
+    <div style="font-family:'Fraunces', serif; font-weight:700; font-size:16px; color:#1a1a1a; margin-bottom:4px;">Why a country of windmills</div>
+    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify;">Nearly a third of the Netherlands lies at or below sea level, so a windmill's first job was simply to <strong>keep the land dry</strong> — turning great scoop-wheels and Archimedes' screws to pump water up and out, draining whole lakes into farmland (the <em>polders</em>) and holding back the sea. On the Zaan the same free wind power was then harnessed to <strong>industry</strong>: sawing timber for the Dutch fleet, grinding grain, and pressing linseed oil, cocoa, paint and paper. By the 1700s some <strong>600 mills</strong> crowded this one river — the first industrial landscape on earth.</div>
+  </div>
+  <div class="ed-grid3 sq">
+    <figure><img src="../images/netherlands/alb-zs-cheese-boys.jpg" loading="lazy"><figcaption class="ed-cap-ov">At the <strong>Catharina Hoeve</strong> cheese farm — two happy boys and a wheel of Gouda.</figcaption></figure>
+    <figure><img src="../images/netherlands/alb-zs-cheese-girl.jpg" loading="lazy"><figcaption class="ed-cap-ov">A wheel almost too big to hold, beside the <strong>drying racks</strong>.</figcaption></figure>
+    <figure><img src="../images/netherlands/alb-zs-cow.jpg" loading="lazy"><figcaption class="ed-cap-ov">Inside the old farmhouse — a <strong>Dutch dairy cow</strong> and the milk churns of the cheese trade.</figcaption></figure>
+  </div>
+  <div class="folio">— Issue 10 · NETHERLANDS · 07 —</div>
+</div>
+
+<div class="mag-page mag-album">
+  <div class="album-sub">A photo essay · Zaanse Schans</div>
+  <div class="album-head">The barn, and ice cream in the sun.</div>
+  <div class="album-intro">Between the mills and the cheese came the best part of any village day — a cup of ice cream on a warm afternoon, and a wander past the farm animals in their timber barn.</div>
+  <div class="ed-two short">
+    <figure><img src="../images/netherlands/alb-zs-goats.jpg" loading="lazy"><figcaption class="ed-cap-ov">Two <strong>goats</strong> in the old timber barn — the farm animals of Zaanse Schans.</figcaption></figure>
+    <figure><img src="../images/netherlands/alb-zs-icecream-madrid.jpg" loading="lazy"><figcaption class="ed-cap-ov"><strong>Chocolate and vanilla</strong>, earned after a morning of windmills.</figcaption></figure>
+  </div>
+  <div class="ed-two short">
+    <figure><img src="../images/netherlands/alb-zs-icecream-eating.jpg" loading="lazy"><figcaption class="ed-cap-ov">Not a drop wasted — <strong>ice cream</strong> on the village path.</figcaption></figure>
+    <figure><img src="../images/netherlands/alb-zs-icecream-pov.jpg" loading="lazy"><figcaption class="ed-cap-ov">The view from the pushchair — <strong>two scoops</strong> and tired feet on the brick.</figcaption></figure>
+  </div>
+  <div class="folio">— Issue 10 · NETHERLANDS · 08 —</div>
+</div>
+
 <div class="mag-page mag-spread">
   <div class="sp-eyebrow">EUROSTAR ARRIVAL · DAY 22</div>
   <div class="sp-headline">Paris to Amsterdam<br>at 300 km/h.</div>
   <div class="sp-deck">Eurostar 9387 departed Paris Gare du Nord at 20:22. Arrived Schiphol Airport at 23:33. Coach 13, seats 72-76. Cousin pickup. Late dinner. Sleep.</div>
   <div class="sp-meta"><span>Thu 30 Jul 2026</span><span>Gare du Nord → Schiphol</span><span>3h 11min · Eurostar Plus</span></div>
-  <div class="sp-hero" style="background-image:url('../images/netherlands/day-22-eurostar-9387.jpg');">
-    <div class="ph-name">📷 images/netherlands/day-22-eurostar-9387.jpg</div>
-    <div class="ph-info">HERO PHOTO · TBD</div>
-  </div>
-  <div class="sp-caption">Eurostar 9387 boarding at Gare du Nord at 19:52. The 20:22 departure carried us to Amsterdam in 3 hours 11 minutes.</div>
+  <div class="sp-caption">Eurostar 9387 boarded at Gare du Nord at 19:52. The 20:22 departure carried us to Amsterdam in 3 hours 11 minutes — Paris to Schiphol, over the Belgian border and across the flat Dutch countryside.</div>
   <div class="sp-cols">
     <p>The Eurostar to Amsterdam is a relatively new service — the direct route opened in 2018. It runs at up to 300 km/h on the dedicated high-speed line as far as the Belgian border, then settles to 250 km/h through the flat Dutch countryside. We boarded at Gare du Nord after a full Paris day, ate stale sandwiches we'd bought at a Carrefour near the station, and watched the sun set over the Champagne region from our reclining business-class seats.</p>
     <div class="sp-quote">God made the world, but the Dutch made the Netherlands. — 17% of the country is reclaimed from the sea.</div>
     <p>At 23:33 we pulled into Schiphol. The cousin's SUV was waiting at the kerb. We piled in, four pieces of luggage and five tired bodies, and drove through the dark Dutch suburbs to a house we had never seen but had been invited to for three nights. The lights were on. The bedrooms were ready. We slept twelve hours.</p>
   </div>
-  <div class="folio">— Issue 10 · NETHERLANDS · 05 —</div>
+  <div class="folio">— Issue 10 · NETHERLANDS · 09 —</div>
 </div>
 
 <div class="mag-page mag-food">
@@ -218,9 +292,6 @@ body { padding:20px; }
   <div class="fd-deck">From morning coffee to evening pastries — the flavours that defined this leg.</div>
   <div class="fd-grid">
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/netherlands/food-01-stroopwafel.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/netherlands/food-01-stroopwafel.jpg</div>
-      </div>
       <div class="fd-body">
         <div class="fd-num">01</div>
         <div class="fd-name">Stroopwafel</div>
@@ -229,9 +300,6 @@ body { padding:20px; }
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/netherlands/food-02-poffertjes.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/netherlands/food-02-poffertjes.jpg</div>
-      </div>
       <div class="fd-body">
         <div class="fd-num">02</div>
         <div class="fd-name">Poffertjes</div>
@@ -240,9 +308,6 @@ body { padding:20px; }
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/netherlands/food-03-haring.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/netherlands/food-03-haring.jpg</div>
-      </div>
       <div class="fd-body">
         <div class="fd-num">03</div>
         <div class="fd-name">Hollandse Nieuwe Haring</div>
@@ -251,9 +316,6 @@ body { padding:20px; }
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/netherlands/food-04-bitterballen.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/netherlands/food-04-bitterballen.jpg</div>
-      </div>
       <div class="fd-body">
         <div class="fd-num">04</div>
         <div class="fd-name">Bitterballen</div>
@@ -262,9 +324,6 @@ body { padding:20px; }
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/netherlands/food-05-patatje.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/netherlands/food-05-patatje.jpg</div>
-      </div>
       <div class="fd-body">
         <div class="fd-num">05</div>
         <div class="fd-name">Patatje Speciaal</div>
@@ -273,9 +332,6 @@ body { padding:20px; }
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/netherlands/food-06-appeltaart.jpg'); background-size:cover; background-position:center;">
-        <div class="ph">📷 images/netherlands/food-06-appeltaart.jpg</div>
-      </div>
       <div class="fd-body">
         <div class="fd-num">06</div>
         <div class="fd-name">Dutch Apple Pie</div>
@@ -293,20 +349,20 @@ body { padding:20px; }
       </div>
     </div>
   </div>
-  <div class="folio">— Issue 10 · NETHERLANDS · 06 —</div>
+  <div class="folio">— Issue 10 · NETHERLANDS · 10 —</div>
 </div>
 
 <div class="mag-page mag-reflection">
   <div class="rf-eyebrow">REFLECTIONS · NETHERLANDS</div>
   <div class="rf-headline">A bookshelf,<br>a kitchen table,<br>a canal at dusk.</div>
   <div class="rf-body">
-    <p>The Netherlands gave us the trip's most emotional museum visit and the trip's most ordinary family weekend. The contrast was perfect. We needed both. The Anne Frank House left a permanent mark on the children. The three nights at cousin's left a permanent mark on us — finally, finally, we slept in. The kids played with their cousins. We ate stroopwafels on the kitchen counter at 11pm.</p>
+    <p>The Netherlands gave us the trip's most emotional museum visit and the trip's most ordinary family weekend. The contrast was perfect. We needed both. The Anne Frank House left a permanent mark on the children. The three nights at cousin's left a permanent mark on us — finally, finally, we slept in. And the kids fell for their new cousin completely — the fast, easy friendship only children can strike up, the one they kept talking about for days afterwards. We ate stroopwafels on the kitchen counter at 11pm.</p>
     <p>Amsterdam is a slow city. The canals don't rush. The bikes don't rush. The cafés don't rush. It was exactly the pace we needed at this point in the trip.</p>
   </div>
   <div class="rf-grid">
     <div class="rf-card">
       <div class="rf-label">Favourite moment</div>
-      <div class="rf-value">Stroopwafel fresh off the iron at Albert Cuyp. The syrup ran down our hands.</div>
+      <div class="rf-value">The kids and their new cousin — inseparable within an hour, giggling long past bedtime.</div>
     </div>
     <div class="rf-card">
       <div class="rf-label">Hardest moment</div>
