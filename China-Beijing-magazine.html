@@ -3,84 +3,91 @@
 <meta charset="UTF-8">
 <title>Munasinghe-Fernando Travel Magazine · CHINA Issue · July 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 @page { size:A4 portrait; margin:0; }
 html, body { font-family:'Plus Jakarta Sans', sans-serif; background:#222; color:#1a1a1a; }
 body { padding:20px; }
-.mag-page { width:210mm; min-height:297mm; background:#fefcf7; margin:14px auto; box-shadow:0 8px 32px rgba(0,0,0,0.25); position:relative; overflow:hidden; page-break-after:always; break-after:page; }
+.mag-page { width:210mm; min-height:297mm; background:#ffffff; margin:14px auto; box-shadow:0 8px 32px rgba(0,0,0,0.25); position:relative; overflow:hidden; page-break-after:always; break-after:page; }
 .mag-page:last-child { page-break-after:auto; }
 /* COVER */
 .mag-cover { color:white; display:flex; flex-direction:column; padding:18mm 16mm; position:relative; background-size:cover; background-position:center; background-color:#8b1a1a; }
 .mag-cover::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 20% 80%, rgba(200,151,60,0.25), transparent 50%); pointer-events:none; }
 .cv-issue { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:rgba(255,255,255,0.9); margin-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:4px; display:flex; justify-content:space-between; position:relative; z-index:1; }
 .cv-flag { font-size:14px; }
-.cv-brand { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:18px; color:rgba(255,255,255,0.95); letter-spacing:0.05em; margin-bottom:auto; position:relative; z-index:1; text-shadow:1px 2px 8px rgba(0,0,0,0.55); }
+.cv-brand { font-family:'Plus Jakarta Sans', sans-serif; font-weight:300; font-style:italic; font-size:18px; color:rgba(255,255,255,0.95); letter-spacing:0.05em; margin-bottom:auto; position:relative; z-index:1; text-shadow:1px 2px 8px rgba(0,0,0,0.55); }
 .cv-block { position:relative; z-index:1; }
-.cv-title { font-family:'Fraunces', serif; font-weight:700; font-size:96px; line-height:0.9; color:white; margin-bottom:6px; letter-spacing:-0.02em; text-shadow:2px 4px 16px rgba(0,0,0,0.6); }
-.cv-sub { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:24px; color:rgba(255,255,255,0.97); margin-bottom:24px; text-shadow:1px 2px 8px rgba(0,0,0,0.65); }
+.cv-title { font-family:'Plus Jakarta Sans', sans-serif; font-weight:700; font-size:96px; line-height:0.9; color:white; margin-bottom:6px; letter-spacing:-0.02em; text-shadow:2px 4px 16px rgba(0,0,0,0.6); }
+.cv-sub { font-family:'Plus Jakarta Sans', sans-serif; font-style:italic; font-weight:400; font-size:24px; color:rgba(255,255,255,0.97); margin-bottom:24px; text-shadow:1px 2px 8px rgba(0,0,0,0.65); }
 .cv-tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
 .cv-tag { background:rgba(255,255,255,0.15); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.35); border-radius:100px; padding:5px 14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.15em; text-transform:uppercase; }
-.cv-features { font-family:'Fraunces', serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.95); border-top:1px solid rgba(255,255,255,0.35); padding-top:12px; margin-top:8px; text-shadow:1px 1px 6px rgba(0,0,0,0.7); }
+.cv-features { font-family:'Plus Jakarta Sans', sans-serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.95); border-top:1px solid rgba(255,255,255,0.35); padding-top:12px; margin-top:8px; text-shadow:1px 1px 6px rgba(0,0,0,0.7); }
 .cv-features b { font-weight:700; color:#f0d68c; }
 .cv-meta { position:absolute; bottom:14mm; right:16mm; text-align:right; font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; color:rgba(255,255,255,0.9); z-index:1; text-shadow:1px 1px 6px rgba(0,0,0,0.8); }
 /* WELCOME / TOC */
 .mag-welcome { padding:22mm 18mm; }
-.wl-num { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:14px; color:#8b1a1a; margin-bottom:4px; }
-.wl-title { font-family:'Fraunces', serif; font-weight:700; font-size:56px; line-height:1; color:#1a1a1a; margin-bottom:24px; letter-spacing:-0.02em; }
-.wl-divider { width:60px; height:3px; background:#c89b3c; margin-bottom:24px; }
-.wl-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; column-count:2; column-gap:14mm; column-rule:1px solid #e8d6a8; color:#3d3024; max-width:100%; margin-bottom:18mm; }
-.wl-body p { margin-bottom:10px; text-align:justify; }
-.wl-body p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:62px; float:left; line-height:0.9; padding:2px 8px 0 0; color:#8b1a1a; }
+.wl-num { font-family:'Plus Jakarta Sans', sans-serif; font-style:italic; font-weight:400; font-size:14px; color:#8b1a1a; margin-bottom:4px; }
+.wl-title { font-family:'Plus Jakarta Sans', sans-serif; font-weight:700; font-size:56px; line-height:1; color:#1a1a1a; margin-bottom:24px; letter-spacing:-0.02em; }
+.wl-divider { width:44px; height:3px; background:#8b1a1a; margin-bottom:24px; }
+.wl-body { font-family:'Plus Jakarta Sans', sans-serif; font-size:14px; line-height:1.7; column-count:2; column-gap:14mm; column-rule:1px solid #ececec; color:#333333; max-width:100%; margin-bottom:18mm; }
+.wl-body p { margin-bottom:10px; text-align:left; }
+.wl-body p:first-child::first-letter { float:none; font-size:inherit; font-weight:inherit; color:inherit; padding:0; }
 .toc-title { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#8b1a1a; border-bottom:2px solid #8b1a1a; padding-bottom:8px; margin-bottom:14px; }
-.toc-list { list-style:none; column-count:2; column-gap:14mm; font-family:'Fraunces', serif; font-size:12.5px; line-height:1.7; }
-.toc-list li { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px dotted #c89b3c40; padding:3.5px 0; break-inside:avoid; }
+.toc-list { list-style:none; column-count:2; column-gap:14mm; font-family:'Plus Jakarta Sans', sans-serif; font-size:12.5px; line-height:1.7; }
+.toc-list li { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px dotted #ededed; padding:3.5px 0; break-inside:avoid; }
 .toc-list .toc-name { font-style:italic; }
-.toc-list .toc-page { font-family:'JetBrains Mono', monospace; font-size:10px; color:#8b6914; font-weight:700; }
+.toc-list .toc-page { font-family:'JetBrains Mono', monospace; font-size:10px; color:#9a9a9a; font-weight:700; }
 /* SPREAD */
 .mag-spread { padding:14mm 16mm; display:flex; flex-direction:column; }
 .sp-eyebrow { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#8b1a1a; margin-bottom:8px; }
-.sp-headline { font-family:'Fraunces', serif; font-weight:700; font-size:38px; line-height:0.95; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.01em; }
-.sp-deck { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:15px; line-height:1.4; color:#5a4a3a; margin-bottom:10px; max-width:94%; }
-.sp-meta { display:flex; gap:14px; flex-wrap:wrap; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; border-top:1px solid #c89b3c; padding-top:8px; margin-bottom:14px; }
-.sp-hero { width:100%; height:70mm; background:#e8dcc0; background-size:cover; background-position:center; margin-bottom:6px; position:relative; border-radius:2px; }
+.sp-headline { font-family:'Plus Jakarta Sans', sans-serif; font-weight:700; font-size:38px; line-height:0.95; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.01em; }
+.sp-deck { font-family:'Plus Jakarta Sans', sans-serif; font-style:italic; font-weight:400; font-size:15px; line-height:1.4; color:#666666; margin-bottom:10px; max-width:94%; }
+.sp-meta { display:flex; gap:14px; flex-wrap:wrap; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:#9a9a9a; border-top:1px solid #e2e2e2; padding-top:8px; margin-bottom:14px; }
+.sp-hero { width:100%; height:70mm; background:#eeeeee; background-size:cover; background-position:center; margin-bottom:6px; position:relative; border-radius:2px; }
 .sp-hero .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
-.sp-caption { font-family:'Fraunces', serif; font-style:italic; font-size:9.5px; color:#5a4a3a; margin-bottom:10px; padding-left:12px; border-left:2px solid #c89b3c; line-height:1.45; }
+.sp-caption { font-style:normal; font-size:9.5px; color:#666; margin-bottom:10px; padding-left:10px; border-left:2px solid #8b1a1a; line-height:1.5; }
 .sp-photo { width:100%; margin-bottom:6px; text-align:center; position:relative; }
 .sp-photo img { max-width:100%; max-height:120mm; display:block; margin:0 auto; border-radius:2px; }
 .sp-photo .ph-info { display:inline-block; margin-top:5px; background:rgba(0,0,0,0.6); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 7px; border-radius:2px; letter-spacing:0.12em; }
 .gal { display:grid; grid-template-columns:repeat(3,1fr); gap:5mm 6mm; margin-top:8px; }
 .gal figure { margin:0; }
-.gal .gph { width:100%; aspect-ratio:3/4; background:#e8dcc0; background-size:cover; background-position:center; border-radius:3px; box-shadow:0 3px 12px rgba(0,0,0,0.12); }
-.gal figcaption { font-family:'Fraunces',serif; font-style:italic; font-size:8.3px; line-height:1.35; color:#5a4a3a; margin-top:5px; padding-left:8px; border-left:2px solid #c89b3c; }
+.gal .gph { width:100%; aspect-ratio:3/4; background:#eeeeee; background-size:cover; background-position:center; border-radius:3px; box-shadow:0 3px 12px rgba(0,0,0,0.12); }
+.gal figcaption { font-style:normal; font-size:8.6px; line-height:1.4; color:#666; margin-top:6px; padding-left:8px; border-left:2px solid #8b1a1a; }
+.tnn { margin:16px 0; padding:16px 20px; background:#8b1a1a; color:#fff; border-radius:10px; }
+.tnn .tnn-k { font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.24em; text-transform:uppercase; color:#f3c6c6; margin-bottom:8px; }
+.tnn .tnn-big { font-weight:800; font-size:30px; line-height:0.98; letter-spacing:-0.02em; margin-bottom:8px; }
+.tnn p { font-size:11.5px; line-height:1.55; color:rgba(255,255,255,0.92); max-width:92%; }
+.tnn-slim { margin:14px 0 0; padding:12px 0 0; border-top:1px solid #ececec; display:flex; align-items:baseline; gap:14px; }
+.tnn-slim .n { font-weight:800; font-size:30px; letter-spacing:-0.02em; color:#8b1a1a; line-height:1; white-space:nowrap; }
+.tnn-slim .t { font-size:11px; line-height:1.5; color:#444; }
 .sp-cols { column-count:2; column-gap:10mm; column-rule:0; }
-.sp-cols p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; margin-bottom:7px; }
-.sp-cols p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:38px; float:left; line-height:0.9; padding:2px 6px 0 0; color:#8b1a1a; }
-.sp-quote { break-inside:avoid; font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:14px; line-height:1.4; color:#8b1a1a; text-align:center; padding:10px 12px; border-top:1px solid #c89b3c; border-bottom:1px solid #c89b3c; margin:10px 0; }
-.sp-quote::before, .sp-quote::after { content:'"'; font-size:30px; line-height:0; vertical-align:-12px; color:#c89b3c; padding:0 3px; }
-.plan-box { margin-top:14px; border:1px solid #c89b3c; border-radius:5px; background:#fff8ec; padding:11px 16px 13px; }
-.plan-title { font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.22em; text-transform:uppercase; color:#8b1a1a; border-bottom:1px solid #e8d6a8; padding-bottom:7px; margin-bottom:10px; display:flex; justify-content:space-between; }
+.sp-cols p { font-family:'Plus Jakarta Sans', sans-serif; font-size:10.5px; line-height:1.55; color:#333333; text-align:left; margin-bottom:7px; }
+.sp-cols p:first-child::first-letter { float:none; font-size:inherit; font-weight:inherit; color:inherit; padding:0; }
+.sp-quote { break-inside:avoid; font-weight:700; font-size:17px; line-height:1.32; color:#141414; text-align:left; padding:2px 0 2px 16px; border-left:3px solid #8b1a1a; margin:14px 0; letter-spacing:-0.01em; }
+.sp-quote::before, .sp-quote::after { content:''; }
+.plan-box { margin-top:14px; border:1px solid #e2e2e2; border-radius:5px; background:#faf9f8; padding:11px 16px 13px; }
+.plan-title { font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.22em; text-transform:uppercase; color:#8b1a1a; border-bottom:1px solid #ececec; padding-bottom:7px; margin-bottom:10px; display:flex; justify-content:space-between; }
 .plan-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px 12mm; }
-.plan-grid > div { font-family:'Fraunces',serif; font-size:9.7px; line-height:1.46; color:#3d3024; break-inside:avoid; }
-.pl-k { display:block; font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.12em; text-transform:uppercase; color:#8b6914; margin-bottom:2px; }
+.plan-grid > div { font-family:'Plus Jakarta Sans', sans-serif; font-size:9.7px; line-height:1.46; color:#333333; break-inside:avoid; }
+.pl-k { display:block; font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.12em; text-transform:uppercase; color:#9a9a9a; margin-bottom:2px; }
 .pl-k b { color:#8b1a1a; font-weight:700; }
 .why-box { margin-top:12px; background:linear-gradient(135deg,#8b1a1a,#6f1414); color:#fff; border-radius:5px; padding:12px 16px 13px; }
 .why-title { font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.22em; text-transform:uppercase; color:#f0d68c; border-bottom:1px solid rgba(255,255,255,0.25); padding-bottom:7px; margin-bottom:10px; display:flex; justify-content:space-between; }
 .why-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px 12mm; }
-.why-grid > div { font-family:'Fraunces',serif; font-size:9.7px; line-height:1.46; color:rgba(255,255,255,0.92); break-inside:avoid; }
+.why-grid > div { font-family:'Plus Jakarta Sans', sans-serif; font-size:9.7px; line-height:1.46; color:rgba(255,255,255,0.92); break-inside:avoid; }
 .why-k { display:block; font-family:'JetBrains Mono',monospace; font-size:7.5px; letter-spacing:0.12em; text-transform:uppercase; color:#f0d68c; margin-bottom:2px; }
-.why-note { margin-top:10px; border-top:1px solid rgba(255,255,255,0.22); padding-top:8px; font-family:'Fraunces',serif; font-style:italic; font-size:9.5px; line-height:1.5; color:rgba(255,255,255,0.85); }
+.why-note { margin-top:10px; border-top:1px solid rgba(255,255,255,0.22); padding-top:8px; font-family:'Plus Jakarta Sans', sans-serif; font-style:italic; font-size:9.5px; line-height:1.5; color:rgba(255,255,255,0.85); }
 /* DUO / ALBUM */
 .mag-duo { padding:12mm 16mm; display:flex; flex-direction:column; gap:4mm; }
 .duo-row { display:grid; grid-template-columns:1fr 1fr; gap:7mm; }
 .duo-row.alt { grid-template-columns:2fr 1fr; }
-.duo-photo { background:#e8dcc0; aspect-ratio:4/5; position:relative; border-radius:2px; overflow:hidden; background-size:cover; background-position:center; }
+.duo-photo { background:#eeeeee; aspect-ratio:4/5; position:relative; border-radius:2px; overflow:hidden; background-size:cover; background-position:center; }
 .duo-photo.wide { aspect-ratio:16/10; }
 .duo-photo .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
 .duo-text { display:flex; flex-direction:column; justify-content:center; padding:0 3mm; }
-.duo-text h3 { font-family:'Fraunces', serif; font-weight:700; font-size:24px; line-height:1; color:#1a1a1a; margin-bottom:7px; }
-.duo-text p { font-family:'Fraunces', serif; font-size:10px; line-height:1.5; color:#3d3024; text-align:justify; margin-bottom:6px; }
+.duo-text h3 { font-family:'Plus Jakarta Sans', sans-serif; font-weight:700; font-size:24px; line-height:1; color:#1a1a1a; margin-bottom:7px; }
+.duo-text p { font-family:'Plus Jakarta Sans', sans-serif; font-size:10px; line-height:1.5; color:#333333; text-align:left; margin-bottom:6px; }
 .duo-text p:last-child { margin-bottom:0; }
 .duo-text .kicker { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.3em; text-transform:uppercase; color:#8b1a1a; margin-bottom:6px; }
 /* PHOTO-ESSAY GRIDS */
@@ -89,82 +96,82 @@ body { padding:20px; }
 .ed-land img { width:100%; height:100%; object-fit:cover; display:block; }
 .ll-feat { margin:0; position:relative; overflow:hidden; border-radius:3px; }
 .ll-feat img { width:100%; height:auto; display:block; }
-.ed-cap-ov { position:absolute; left:0; right:0; bottom:0; padding:22px 11px 9px; background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.35) 55%, transparent); color:#fff; font-family:'Fraunces',serif; font-size:9px; line-height:1.4; }
+.ed-cap-ov { position:absolute; left:0; right:0; bottom:0; padding:22px 11px 9px; background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.35) 55%, transparent); color:#fff; font-family:'Plus Jakarta Sans', sans-serif; font-size:9px; line-height:1.4; }
 .ed-cap-ov strong { color:#f0d68c; font-weight:700; }
 .ll-feat .ed-cap-ov { padding:26px 14px 12px; font-size:10px; line-height:1.45; }
 /* FACT / ANATOMY */
 .mag-facts { padding:16mm 16mm; display:flex; flex-direction:column; }
 .fx-grid { display:grid; grid-template-columns:1fr 1fr; gap:6mm; margin-top:4px; }
-.fx-card { border:1px solid #e8d6a8; border-radius:4px; overflow:hidden; background:#fff8ec; display:flex; flex-direction:column; }
-.fx-img { width:100%; aspect-ratio:3/2; background:#e8dcc0; background-size:cover; background-position:center; }
+.fx-card { border:1px solid #ececec; border-radius:4px; overflow:hidden; background:#faf9f8; display:flex; flex-direction:column; }
+.fx-img { width:100%; aspect-ratio:3/2; background:#eeeeee; background-size:cover; background-position:center; }
 .fx-body { padding:9px 13px 12px; }
 .fx-kick { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.18em; text-transform:uppercase; color:#8b1a1a; margin-bottom:3px; }
-.fx-name { font-family:'Fraunces',serif; font-weight:700; font-size:16px; line-height:1.05; color:#1a1a1a; margin-bottom:5px; }
-.fx-desc { font-family:'Fraunces',serif; font-size:9.7px; line-height:1.48; color:#5a4a3a; }
-.fx-stat { display:flex; gap:5mm; margin-top:10px; border-top:1px solid #c89b3c; padding-top:9px; }
+.fx-name { font-family:'Plus Jakarta Sans', sans-serif; font-weight:700; font-size:16px; line-height:1.05; color:#1a1a1a; margin-bottom:5px; }
+.fx-desc { font-family:'Plus Jakarta Sans', sans-serif; font-size:9.7px; line-height:1.48; color:#666666; }
+.fx-stat { display:flex; gap:5mm; margin-top:10px; border-top:1px solid #e2e2e2; padding-top:9px; }
 .fx-stat div { flex:1; }
-.fx-stat .n { font-family:'Fraunces',serif; font-weight:700; font-size:23px; color:#8b1a1a; line-height:1; }
-.fx-stat .l { font-family:'JetBrains Mono',monospace; font-size:7px; letter-spacing:0.12em; text-transform:uppercase; color:#8b6914; margin-top:3px; }
+.fx-stat .n { font-family:'Plus Jakarta Sans', sans-serif; font-weight:700; font-size:23px; color:#8b1a1a; line-height:1; }
+.fx-stat .l { font-family:'JetBrains Mono',monospace; font-size:7px; letter-spacing:0.12em; text-transform:uppercase; color:#9a9a9a; margin-top:3px; }
 /* FOOD */
 .mag-food { padding:18mm 16mm; }
-.fd-headline { font-family:'Fraunces', serif; font-weight:700; font-size:60px; line-height:0.9; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.02em; }
+.fd-headline { font-family:'Plus Jakarta Sans', sans-serif; font-weight:700; font-size:60px; line-height:0.9; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.02em; }
 .fd-headline em { font-style:italic; font-weight:400; color:#8b1a1a; }
-.fd-deck { font-family:'Fraunces', serif; font-style:italic; font-size:16px; color:#5a4a3a; margin-bottom:18px; border-bottom:2px solid #c89b3c; padding-bottom:14px; }
+.fd-deck { font-family:'Plus Jakarta Sans', sans-serif; font-style:italic; font-size:16px; color:#666666; margin-bottom:18px; border-bottom:2px solid #e2e2e2; padding-bottom:14px; }
 .fd-grid { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
-.fd-card { background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; overflow:hidden; }
-.fd-card .fd-img { width:100%; aspect-ratio:5/3; background:#e8dcc0; background-size:cover; background-position:center; }
+.fd-card { background:#faf9f8; border:1px solid #ececec; border-radius:4px; overflow:hidden; }
+.fd-card .fd-img { width:100%; aspect-ratio:5/3; background:#eeeeee; background-size:cover; background-position:center; }
 .fd-card .fd-body { padding:10px 14px 14px; }
-.fd-card .fd-num { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:22px; color:#8b1a1a; line-height:1; }
-.fd-card .fd-name { font-family:'Fraunces', serif; font-weight:700; font-size:18px; line-height:1.1; color:#1a1a1a; margin:4px 0 6px; }
-.fd-card .fd-desc { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.5; color:#5a4a3a; margin-bottom:5px; }
-.fd-card .fd-where { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.15em; color:#8b6914; text-transform:uppercase; }
+.fd-card .fd-num { font-family:'Plus Jakarta Sans', sans-serif; font-weight:300; font-style:italic; font-size:22px; color:#8b1a1a; line-height:1; }
+.fd-card .fd-name { font-family:'Plus Jakarta Sans', sans-serif; font-weight:700; font-size:18px; line-height:1.1; color:#1a1a1a; margin:4px 0 6px; }
+.fd-card .fd-desc { font-family:'Plus Jakarta Sans', sans-serif; font-size:10.5px; line-height:1.5; color:#666666; margin-bottom:5px; }
+.fd-card .fd-where { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.15em; color:#9a9a9a; text-transform:uppercase; }
 /* JOURNEY */
-.mag-journey { background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%); padding:24mm 22mm; display:flex; flex-direction:column; }
+.mag-journey { background:#f6f5f4; padding:24mm 22mm; display:flex; flex-direction:column; }
 .jr-eyebrow { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#8b1a1a; margin-bottom:8px; }
-.jr-headline { font-family:'Fraunces', serif; font-weight:700; font-size:52px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
-.jr-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; color:#3d3024; margin-bottom:22px; max-width:92%; }
+.jr-headline { font-family:'Plus Jakarta Sans', sans-serif; font-weight:700; font-size:52px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
+.jr-body { font-family:'Plus Jakarta Sans', sans-serif; font-size:14px; line-height:1.7; color:#333333; margin-bottom:22px; max-width:92%; }
 .jr-body p { margin-bottom:12px; }
-.jr-railtitle { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.28em; text-transform:uppercase; color:#8b1a1a; border-bottom:1px solid #c89b3c; padding-bottom:8px; margin-bottom:14px; }
+.jr-railtitle { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.28em; text-transform:uppercase; color:#8b1a1a; border-bottom:1px solid #e2e2e2; padding-bottom:8px; margin-bottom:14px; }
 .jr-rail { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:18px; }
-.jr-stop { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.04em; color:#a8926a; padding:5px 11px; border:1px solid #e8d6a8; border-radius:100px; background:rgba(255,255,255,0.35); white-space:nowrap; }
-.jr-stop .jr-n { font-weight:700; color:#c89b3c; margin-right:3px; }
+.jr-stop { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.04em; color:#999999; padding:5px 11px; border:1px solid #ececec; border-radius:100px; background:rgba(255,255,255,0.35); white-space:nowrap; }
+.jr-stop .jr-n { font-weight:700; color:#e2e2e2; margin-right:3px; }
 .jr-stop.here { color:#fff; background:#8b1a1a; border-color:#8b1a1a; font-weight:700; }
 .jr-stop.here .jr-n { color:#f0d68c; }
-.jr-today { font-family:'Fraunces', serif; font-style:italic; font-size:15px; line-height:1.5; color:#8b1a1a; margin-top:auto; padding-top:10mm; border-top:1px solid #c89b3c; }
+.jr-today { font-family:'Plus Jakarta Sans', sans-serif; font-style:italic; font-size:15px; line-height:1.5; color:#8b1a1a; margin-top:auto; padding-top:10mm; border-top:1px solid #e2e2e2; }
 /* PACKING */
 .mag-packing { padding:18mm 16mm; display:flex; flex-direction:column; }
 .pk-eyebrow { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#8b1a1a; margin-bottom:8px; }
-.pk-headline { font-family:'Fraunces', serif; font-weight:700; font-size:50px; line-height:0.9; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.02em; }
+.pk-headline { font-family:'Plus Jakarta Sans', sans-serif; font-weight:700; font-size:50px; line-height:0.9; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.02em; }
 .pk-headline em { font-style:italic; font-weight:400; color:#8b1a1a; }
-.pk-lead { font-family:'Fraunces', serif; font-size:12px; line-height:1.6; color:#3d3024; column-count:2; column-gap:10mm; border-top:2px solid #c89b3c; padding-top:12px; margin-bottom:16px; text-align:justify; }
+.pk-lead { font-family:'Plus Jakarta Sans', sans-serif; font-size:12px; line-height:1.6; color:#333333; column-count:2; column-gap:10mm; border-top:2px solid #e2e2e2; padding-top:12px; margin-bottom:16px; text-align:left; }
 .pk-lead p { margin-bottom:8px; }
 .pk-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:5mm; }
-.pk-card { background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; border-top:3px solid #8b1a1a; padding:12px 14px 13px; }
-.pk-num { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:22px; color:#8b1a1a; line-height:1; }
-.pk-name { font-family:'Fraunces', serif; font-weight:700; font-size:16px; line-height:1.1; color:#1a1a1a; margin:4px 0 6px; }
-.pk-desc { font-family:'Fraunces', serif; font-size:10px; line-height:1.45; color:#5a4a3a; margin-bottom:7px; }
-.pk-tag { font-family:'JetBrains Mono', monospace; font-size:7.5px; letter-spacing:0.12em; color:#8b6914; text-transform:uppercase; }
+.pk-card { background:#faf9f8; border:1px solid #ececec; border-radius:4px; border-top:3px solid #8b1a1a; padding:12px 14px 13px; }
+.pk-num { font-family:'Plus Jakarta Sans', sans-serif; font-weight:300; font-style:italic; font-size:22px; color:#8b1a1a; line-height:1; }
+.pk-name { font-family:'Plus Jakarta Sans', sans-serif; font-weight:700; font-size:16px; line-height:1.1; color:#1a1a1a; margin:4px 0 6px; }
+.pk-desc { font-family:'Plus Jakarta Sans', sans-serif; font-size:10px; line-height:1.45; color:#666666; margin-bottom:7px; }
+.pk-tag { font-family:'JetBrains Mono', monospace; font-size:7.5px; letter-spacing:0.12em; color:#9a9a9a; text-transform:uppercase; }
 /* REFLECTION */
-.mag-reflection { background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%); padding:24mm 22mm; display:flex; flex-direction:column; }
+.mag-reflection { background:#f6f5f4; padding:24mm 22mm; display:flex; flex-direction:column; }
 .rf-eyebrow { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#8b1a1a; margin-bottom:8px; }
-.rf-headline { font-family:'Fraunces', serif; font-weight:700; font-size:50px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
-.rf-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; color:#3d3024; margin-bottom:24px; max-width:88%; }
+.rf-headline { font-family:'Plus Jakarta Sans', sans-serif; font-weight:700; font-size:50px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
+.rf-body { font-family:'Plus Jakarta Sans', sans-serif; font-size:14px; line-height:1.7; color:#333333; margin-bottom:24px; max-width:88%; }
 .rf-body p { margin-bottom:12px; }
 .rf-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:6mm; margin-bottom:16px; }
-.rf-card { background:rgba(255,255,255,0.6); padding:14px 16px; border-left:3px solid #8b1a1a; }
+.rf-card { background:#ffffff; padding:14px 16px; border-left:3px solid #8b1a1a; }
 .rf-card .rf-label { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#8b1a1a; margin-bottom:4px; }
-.rf-card .rf-value { font-family:'Fraunces', serif; font-size:13px; line-height:1.4; color:#3d3024; }
-.rf-signoff { margin-top:auto; padding-top:14mm; font-family:'Fraunces', serif; font-style:italic; font-size:13px; color:#8b1a1a; text-align:right; }
+.rf-card .rf-value { font-family:'Plus Jakarta Sans', sans-serif; font-size:13px; line-height:1.4; color:#333333; }
+.rf-signoff { margin-top:auto; padding-top:14mm; font-family:'Plus Jakarta Sans', sans-serif; font-style:italic; font-size:13px; color:#8b1a1a; text-align:right; }
 /* BACK */
 .mag-back { color:white; display:flex; flex-direction:column; justify-content:flex-end; padding:24mm 20mm; position:relative; background:linear-gradient(160deg, #7a1616 0%, #521010 55%, #3a0d0d 100%); }
 .mag-back::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 80% 15%, rgba(200,151,60,0.22), transparent 55%); pointer-events:none; }
-.bc-mag { position:absolute; top:20mm; left:20mm; font-family:'Fraunces', serif; font-style:italic; font-weight:300; font-size:16px; color:rgba(255,255,255,0.9); letter-spacing:0.05em; }
+.bc-mag { position:absolute; top:20mm; left:20mm; font-family:'Plus Jakarta Sans', sans-serif; font-style:italic; font-weight:300; font-size:16px; color:rgba(255,255,255,0.9); letter-spacing:0.05em; }
 .bc-issue { position:absolute; top:20mm; right:20mm; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; color:rgba(255,255,255,0.7); }
 .bc-next { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:6px; position:relative; z-index:1; }
-.bc-country { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:white; margin-bottom:8px; position:relative; z-index:1; }
-.bc-tagline { font-family:'Fraunces', serif; font-style:italic; font-size:18px; color:rgba(255,255,255,0.92); border-top:1px solid rgba(255,255,255,0.4); padding-top:14px; margin-bottom:12px; max-width:74%; position:relative; z-index:1; }
+.bc-country { font-family:'Plus Jakarta Sans', sans-serif; font-weight:700; font-size:64px; line-height:0.9; color:white; margin-bottom:8px; position:relative; z-index:1; }
+.bc-tagline { font-family:'Plus Jakarta Sans', sans-serif; font-style:italic; font-size:18px; color:rgba(255,255,255,0.92); border-top:1px solid rgba(255,255,255,0.4); padding-top:14px; margin-bottom:12px; max-width:74%; position:relative; z-index:1; }
 .bc-foot { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; color:rgba(255,255,255,0.6); position:relative; z-index:1; }
-.mag-page .folio { position:absolute; bottom:4mm; left:0; right:0; text-align:center; font-family:'Fraunces', serif; font-style:italic; font-size:8.5px; color:#8b6914; }
+.mag-page .folio { position:absolute; bottom:4mm; left:0; right:0; text-align:center; font-family:'Plus Jakarta Sans', sans-serif; font-style:italic; font-size:8.5px; color:#9a9a9a; }
 @media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
 </style></head>
 <body>
@@ -478,6 +485,10 @@ body { padding:20px; }
     <div class="sp-quote">The Wall does not follow the mountain. The Wall conquers the mountain. So did the soldiers who stood on it. So did we.</div>
     <p>What makes Mutianyu special is how much survives. Rebuilt in brick under the Ming — a hard-wearing step up from the rammed earth of earlier dynasties — its watchtowers still hold their arrow-slits, their smoke-signal platforms, and the little stone chambers where soldiers once slept. You can lay a hand on stone six centuries old and feel its cool; you can stand at an arrow-slit and take in the very view a Ming sentinel once scanned, before turning to light a fire and warn the next tower down the line that something was coming.</p>
   </div>
+  <div class="tnn-slim">
+    <div class="n">2006&#8202;→&#8202;2026</div>
+    <div class="t"><strong>A generation apart.</strong> Twenty years earlier, in 2006, my father made his own journey through China. Two decades on, his three grandchildren stood here on the Great Wall — the same country, the same wonder, one generation between.</div>
+  </div>
   <div class="folio">— Issue 01 · CHINA · 14 —</div>
 </div>
 
@@ -553,11 +564,11 @@ body { padding:20px; }
   <div class="sp-eyebrow">THE WIDER WORLD · CHINA AND THE OUTSIDE</div>
   <div class="sp-headline">The country that<br>closed the door.</div>
   <div class="sp-deck">For most of history China was the richest, most advanced civilisation on earth. Then, for three centuries, it turned its back on the world — and the world, when it finally forced its way in, found a giant that had fallen behind.</div>
-  <div style="border-top:1px solid #c89b3c; margin-top:6px; padding-top:12px;">
-    <div style="margin-bottom:12px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#8b1a1a; text-transform:uppercase; margin-bottom:3px;">The Wall · from 220 BC</div><div style="font-family:'Fraunces',serif; font-size:11.5px; line-height:1.55; color:#3d3024;">The Great Wall you walked at Mutianyu was China's oldest foreign policy, written in stone — a barrier raised over two thousand years to keep out the horse-nomads of the northern steppe. To stand at an arrow-slit is to stand at the edge of the Chinese world, looking out at the very thing it feared.</div></div>
-    <div style="margin-bottom:12px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#8b1a1a; text-transform:uppercase; margin-bottom:3px;">The Mongols · 1279</div><div style="font-family:'Fraunces',serif; font-size:11.5px; line-height:1.55; color:#3d3024;">And yet the wall was not enough. In 1279 the Mongols under Kublai Khan swept over it and conquered the whole country — the first time all of China was ruled by outsiders. It was in that open, Mongol century that a young Venetian named Marco Polo reached the emperor's court and carried the legend of Cathay home to Europe.</div></div>
-    <div style="margin-bottom:12px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#8b1a1a; text-transform:uppercase; margin-bottom:3px;">The closed door · Ming &amp; Qing</div><div style="font-family:'Fraunces',serif; font-size:11.5px; line-height:1.55; color:#3d3024;">Then China turned inward. The Ming banned private sea trade; the Qing squeezed all foreign commerce through a single gate at Canton. Just as Europe's factories and steamships began to multiply, China sealed itself off, sure it needed nothing from anyone. It was this long shutting of the door — our guide told us — that let the West race ahead and left China behind.</div></div>
-    <div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#8b1a1a; text-transform:uppercase; margin-bottom:3px;">The reckoning · 1839–1860</div><div style="font-family:'Fraunces',serif; font-size:11.5px; line-height:1.55; color:#3d3024;">When Britain wanted China's tea and silk and pushed opium in return, and the Qing tried to stop it, the gunboats came. Two Opium Wars shattered the empire, took Hong Kong, and forced the ports open — the start of what China still calls its "Century of Humiliation." The door, shut too long, was now broken off its hinges.</div></div>
+  <div style="border-top:1px solid #e2e2e2; margin-top:6px; padding-top:12px;">
+    <div style="margin-bottom:12px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#8b1a1a; text-transform:uppercase; margin-bottom:3px;">The Wall · from 220 BC</div><div style="font-family:'Plus Jakarta Sans', sans-serif; font-size:11.5px; line-height:1.55; color:#333333;">The Great Wall you walked at Mutianyu was China's oldest foreign policy, written in stone — a barrier raised over two thousand years to keep out the horse-nomads of the northern steppe. To stand at an arrow-slit is to stand at the edge of the Chinese world, looking out at the very thing it feared.</div></div>
+    <div style="margin-bottom:12px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#8b1a1a; text-transform:uppercase; margin-bottom:3px;">The Mongols · 1279</div><div style="font-family:'Plus Jakarta Sans', sans-serif; font-size:11.5px; line-height:1.55; color:#333333;">And yet the wall was not enough. In 1279 the Mongols under Kublai Khan swept over it and conquered the whole country — the first time all of China was ruled by outsiders. It was in that open, Mongol century that a young Venetian named Marco Polo reached the emperor's court and carried the legend of Cathay home to Europe.</div></div>
+    <div style="margin-bottom:12px;"><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#8b1a1a; text-transform:uppercase; margin-bottom:3px;">The closed door · Ming &amp; Qing</div><div style="font-family:'Plus Jakarta Sans', sans-serif; font-size:11.5px; line-height:1.55; color:#333333;">Then China turned inward. The Ming banned private sea trade; the Qing squeezed all foreign commerce through a single gate at Canton. Just as Europe's factories and steamships began to multiply, China sealed itself off, sure it needed nothing from anyone. It was this long shutting of the door — our guide told us — that let the West race ahead and left China behind.</div></div>
+    <div><div style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#8b1a1a; text-transform:uppercase; margin-bottom:3px;">The reckoning · 1839–1860</div><div style="font-family:'Plus Jakarta Sans', sans-serif; font-size:11.5px; line-height:1.55; color:#333333;">When Britain wanted China's tea and silk and pushed opium in return, and the Qing tried to stop it, the gunboats came. Two Opium Wars shattered the empire, took Hong Kong, and forced the ports open — the start of what China still calls its "Century of Humiliation." The door, shut too long, was now broken off its hinges.</div></div>
   </div>
   <div class="sp-quote" style="margin-top:auto;">The land that gave the world paper, printing, gunpowder and the compass — and then, for three hundred years, kept them behind a wall.</div>
   <div class="folio">— Issue 01 · CHINA · 18 —</div>
@@ -570,6 +581,11 @@ body { padding:20px; }
   <div class="rf-body">
     <p>We had been told China would be a "stopover" — a layover, a bracket around the real trip. That framing turned out to be wrong. Beijing held the trip's biggest history lesson, and the Great Wall its biggest "I cannot believe this is real" moment. If the children remember anything decades from now, it might be this: that the world is impossibly old, that humans have done impossible things, and that you can still climb up onto those things and lay a hand on them and feel that they are real.</p>
     <p>What we will carry home: the drum of rain on cheap ponchos in the Forbidden City, the cable car swaying up to the Wall on our very last morning, and the driver who took us to the wrong hotel, then to the right one, and refused a single yuan for the trouble.</p>
+  </div>
+  <div class="tnn">
+    <div class="tnn-k">Then &amp; Now · One family, one generation</div>
+    <div class="tnn-big">Twenty years apart.</div>
+    <p>My father first travelled to China in 2006. Twenty years later, in 2026, I walked the same country with my own three children — Avisha, Aviann and Avin. Two visits, one family, a generation between them, and the same wonder passed quietly down the line.</p>
   </div>
   <div class="rf-grid">
     <div class="rf-card"><div class="rf-label">Favourite moment</div><div class="rf-value">Walking into the Forbidden City at last — the palace I'd only ever seen in the historical dramas I grew up on, suddenly real all around us, in the rain.</div></div>
