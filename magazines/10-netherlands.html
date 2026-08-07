@@ -11,11 +11,13 @@ html, body { font-family:'Plus Jakarta Sans', sans-serif; background:#222; color
 body { padding:20px; }
 .mag-page { width:210mm; min-height:295mm; background:#fefcf7; margin:14px auto; box-shadow:0 8px 32px rgba(0,0,0,0.25); position:relative; overflow:hidden; page-break-after:always; break-after:page; }
 .mag-page:last-child { page-break-after:auto; }
-.mag-cover { background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.7) 100%), url('../images/netherlands/cover.jpg') center/cover #5c2400; color:white; display:flex; flex-direction:column; padding:18mm 16mm; position:relative; }
+.mag-cover { background: linear-gradient(180deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.45) 28%, rgba(0,0,0,0.12) 52%, transparent 72%), url('../images/netherlands/cover.jpg') center/cover #5c2400; color:white; display:flex; flex-direction:column; padding:18mm 16mm; position:relative; }
 .mag-cover::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 20% 80%, #1c5f8c40, transparent 50%); pointer-events:none; }
 .cv-issue { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:rgba(255,255,255,0.85); margin-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:4px; display:flex; justify-content:space-between; }
 .cv-flag { font-size:14px; }
-.cv-brand { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:18px; color:rgba(255,255,255,0.95); letter-spacing:0.05em; margin-bottom:auto; }
+.cv-brand { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:18px; color:rgba(255,255,255,0.95); letter-spacing:0.05em; margin-bottom:14px; }
+.cv-features { text-shadow:1px 1px 6px rgba(0,0,0,0.6); }
+.cv-meta { text-shadow:1px 1px 5px rgba(0,0,0,0.75); color:rgba(255,255,255,0.9); }
 .cv-title { font-family:'Fraunces', serif; font-weight:700; font-size:96px; line-height:0.9; color:white; margin-bottom:6px; letter-spacing:-0.02em; text-shadow:2px 4px 12px rgba(0,0,0,0.4); }
 .cv-sub { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:24px; color:rgba(255,255,255,0.95); margin-bottom:24px; text-shadow:1px 2px 8px rgba(0,0,0,0.5); }
 .cv-tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
