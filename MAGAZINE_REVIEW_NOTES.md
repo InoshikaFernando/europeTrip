@@ -72,5 +72,19 @@ fix what applies, publish to `main`, then report so the user can manually verify
   added/removed or reordered.
 - Publish flow: commit on branch → push → merge to `main` → push `main`.
 
+## 11. No grid / tile photos — everything is a photo-story
+- **Never** lay photos out as cropped square tiles or fixed grids (no 4-column
+  galleries, no `ed-grid`/`cl-grid`/`essay-item` masonry, no `fd-img` tile grids).
+- Convert every such page into a **photo-story** in the house style of **France
+  (Issue 08)**: a scene `op-title` + a narrative `op-lead`, then rows (`prow`) of
+  **uncropped** photos whose widths are computed from each image's aspect ratio so
+  the row shares one height and fills the column — each photo with its own italic
+  caption (`cap`). Photos flow in the order the day happened.
+- Uncropped is the rule: `width` varies per photo, `height:auto` — never
+  `object-fit:cover` into a fixed tile. Let a story run onto extra pages rather
+  than cram or crop; keep folios/TOC in sync (rule 10).
+- The reusable CSS (`.mag-story/.op-*/.prow/.ph/.cap`) and the justified-row
+  width maths live in France (Issue 08); copy them into each issue as it's converted.
+
 ---
 _Add new review notes here as the user raises them._

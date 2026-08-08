@@ -44,6 +44,15 @@ warm magazine-editorial tone.
 - New pages use existing page classes (`mag-spread`, `mag-duo`, `mag-food`, etc.).
 - Give inserted pages **descriptive non-numeric folios** (e.g. `— Issue 01 · China · Arrival —`)
   so existing numbered folios/TOC don't need renumbering.
+- **NO grid / tile photos (family rule).** Never crop photos into square tiles or
+  fixed grids — no 4-col galleries, no `ed-grid`/`cl-grid`/`essay-item`/`fd-img`
+  tile layouts. Every photo page is a **photo-story** in the **France (Issue 08)**
+  house style: scene `op-title` + narrative `op-lead`, then `prow` rows of
+  **uncropped** photos (per-photo `width` computed from aspect ratio so each row
+  shares one height and fills the column; `height:auto`; never `object-fit:cover`),
+  each with an italic `cap`. Photos flow in day order; let stories run onto extra
+  pages rather than crop or cram (keep folios/TOC in sync). Reusable CSS + the
+  justified-row maths live in France (Issue 08). See MAGAZINE_REVIEW_NOTES.md §11.
 
 ## Recurring series elements (the "book series" feel)
 
