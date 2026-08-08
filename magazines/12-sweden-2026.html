@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Munasinghe-Fernando Travel Magazine · SWEDEN Issue · August 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+@page { size:A4 portrait; margin:0; }
+html, body { font-family:'Plus Jakarta Sans', sans-serif; background:#222; color:#1a1a1a; }
+body { padding:20px; }
+.mag-page { width:210mm; min-height:295mm; background:#fefcf7; margin:14px auto; box-shadow:0 8px 32px rgba(0,0,0,0.25); position:relative; overflow:hidden; page-break-after:always; break-after:page; }
+.mag-page:last-child { page-break-after:auto; }
+.mag-cover { color:white; display:flex; flex-direction:column; padding:18mm 16mm; position:relative; background-size:cover; background-position:center; background-color:#003c6a; }
+.mag-cover::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 20% 80%, #c89b3c40, transparent 50%); pointer-events:none; }
+.cv-issue { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:rgba(255,255,255,0.9); margin-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:4px; display:flex; justify-content:space-between; position:relative; z-index:1; }
+.cv-flag { font-size:14px; }
+.cv-brand { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:18px; color:rgba(255,255,255,0.95); letter-spacing:0.05em; margin-bottom:auto; position:relative; z-index:1; text-shadow:1px 2px 8px rgba(0,0,0,0.5); }
+.cv-block { position:relative; z-index:1; }
+.cv-title { font-family:'Fraunces', serif; font-weight:700; font-size:96px; line-height:0.9; color:white; margin-bottom:6px; letter-spacing:-0.02em; text-shadow:2px 4px 14px rgba(0,0,0,0.5); }
+.cv-sub { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:24px; color:rgba(255,255,255,0.97); margin-bottom:24px; text-shadow:1px 2px 8px rgba(0,0,0,0.6); }
+.cv-tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+.cv-tag { background:rgba(255,255,255,0.15); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.35); border-radius:100px; padding:5px 14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.15em; text-transform:uppercase; }
+.cv-features { font-family:'Fraunces', serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.95); border-top:1px solid rgba(255,255,255,0.35); padding-top:12px; margin-top:8px; text-shadow:1px 1px 6px rgba(0,0,0,0.6); }
+.cv-features b { font-weight:700; color:#f0d68c; }
+.cv-meta { position:absolute; bottom:14mm; right:16mm; text-align:right; font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; color:rgba(255,255,255,0.85); z-index:1; text-shadow:1px 1px 6px rgba(0,0,0,0.7); }
+.mag-welcome { padding:22mm 18mm; }
+.wl-num { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:14px; color:#005b96; margin-bottom:4px; }
+.wl-title { font-family:'Fraunces', serif; font-weight:700; font-size:56px; line-height:1; color:#1a1a1a; margin-bottom:24px; letter-spacing:-0.02em; }
+.wl-divider { width:60px; height:3px; background:#c89b3c; margin-bottom:24px; }
+.wl-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; column-count:2; column-gap:14mm; column-rule:1px solid #e8d6a8; color:#3d3024; max-width:100%; margin-bottom:20mm; }
+.wl-body p { margin-bottom:10px; text-align:justify; }
+.wl-body p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:62px; float:left; line-height:0.9; padding:2px 8px 0 0; color:#005b96; }
+.toc-title { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#005b96; border-bottom:2px solid #005b96; padding-bottom:8px; margin-bottom:14px; }
+.toc-list { list-style:none; column-count:2; column-gap:14mm; font-family:'Fraunces', serif; font-size:13px; line-height:1.8; }
+.toc-list li { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px dotted #c89b3c40; padding:4px 0; break-inside:avoid; }
+.toc-list .toc-name { font-style:italic; }
+.toc-list .toc-page { font-family:'JetBrains Mono', monospace; font-size:10px; color:#8b6914; font-weight:700; }
+.mag-spread { padding:14mm 16mm; display:flex; flex-direction:column; }
+.sp-eyebrow { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#005b96; margin-bottom:8px; }
+.sp-headline { font-family:'Fraunces', serif; font-weight:700; font-size:38px; line-height:0.95; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.01em; }
+.sp-deck { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:15px; line-height:1.4; color:#5a4a3a; margin-bottom:10px; max-width:94%; }
+.sp-meta { display:flex; gap:14px; flex-wrap:wrap; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; border-top:1px solid #c89b3c; padding-top:8px; margin-bottom:14px; }
+.sp-hero { width:100%; height:70mm; background:#e8dcc0; background-size:cover; background-position:center; margin-bottom:6px; position:relative; border-radius:2px; }
+.sp-hero .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
+.sp-caption { font-family:'Fraunces', serif; font-style:italic; font-size:9.5px; color:#5a4a3a; margin-bottom:10px; padding-left:12px; border-left:2px solid #c89b3c; }
+.sp-hist-title { font-family:'Fraunces', serif; font-weight:700; font-size:17px; color:#1a1a1a; margin-bottom:6px; }
+.sp-cols { column-count:2; column-gap:10mm; column-rule:0; }
+.sp-cols p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; margin-bottom:7px; }
+.sp-cols p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:38px; float:left; line-height:0.9; padding:2px 6px 0 0; color:#005b96; }
+.sp-quote { break-inside:avoid; font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:14px; line-height:1.4; color:#005b96; text-align:center; padding:10px 12px; border-top:1px solid #c89b3c; border-bottom:1px solid #c89b3c; margin:10px 0; }
+.sp-quote::before, .sp-quote::after { content:'"'; font-size:30px; line-height:0; vertical-align:-12px; color:#c89b3c; padding:0 3px; }
+.mag-duo { padding:14mm 16mm; display:flex; flex-direction:column; gap:6mm; }
+.duo-row { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
+.duo-row.alt { grid-template-columns:2fr 1fr; }
+.duo-photo { background:#e8dcc0; aspect-ratio:4/5; position:relative; border-radius:2px; overflow:hidden; background-size:cover; background-position:center; }
+.duo-photo.wide { aspect-ratio:16/10; }
+.duo-photo .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
+.duo-text { display:flex; flex-direction:column; justify-content:center; padding:0 4mm; }
+.duo-text h3 { font-family:'Fraunces', serif; font-weight:700; font-size:26px; line-height:1; color:#1a1a1a; margin-bottom:8px; }
+.duo-text p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; }
+.duo-text .kicker { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.3em; text-transform:uppercase; color:#005b96; margin-bottom:6px; }
+.mag-food { padding:18mm 16mm; }
+.fd-headline { font-family:'Fraunces', serif; font-weight:700; font-size:60px; line-height:0.9; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.02em; }
+.fd-headline em { font-style:italic; font-weight:400; color:#005b96; }
+.fd-deck { font-family:'Fraunces', serif; font-style:italic; font-size:16px; color:#5a4a3a; margin-bottom:18px; border-bottom:2px solid #c89b3c; padding-bottom:14px; }
+.fd-grid { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
+.fd-card { background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; overflow:hidden; }
+.fd-card .fd-img { width:100%; aspect-ratio:5/3; background:#e8dcc0; background-size:cover; background-position:center; }
+.fd-card .fd-body { padding:10px 14px 14px; }
+.fd-card .fd-num { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:22px; color:#005b96; line-height:1; }
+.fd-card .fd-name { font-family:'Fraunces', serif; font-weight:700; font-size:18px; line-height:1.1; color:#1a1a1a; margin:4px 0 6px; }
+.fd-card .fd-desc { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.5; color:#5a4a3a; margin-bottom:5px; }
+.fd-card .fd-where { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.15em; color:#8b6914; text-transform:uppercase; }
+.fd-note { font-family:'Fraunces', serif; font-style:italic; font-size:11px; line-height:1.6; color:#5a4a3a; margin-top:16px; padding-left:12px; border-left:2px solid #c89b3c; max-width:88%; }
+.mag-reflection { background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%); padding:24mm 22mm; display:flex; flex-direction:column; }
+.rf-eyebrow { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#005b96; margin-bottom:8px; }
+.rf-headline { font-family:'Fraunces', serif; font-weight:700; font-size:50px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
+.rf-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; color:#3d3024; margin-bottom:24px; max-width:88%; }
+.rf-body p { margin-bottom:12px; }
+.rf-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:6mm; margin-bottom:16px; }
+.rf-card { background:rgba(255,255,255,0.6); padding:14px 16px; border-left:3px solid #005b96; }
+.rf-card .rf-label { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#005b96; margin-bottom:4px; }
+.rf-card .rf-value { font-family:'Fraunces', serif; font-size:13px; line-height:1.4; color:#3d3024; }
+.rf-signoff { margin-top:auto; padding-top:14mm; font-family:'Fraunces', serif; font-style:italic; font-size:13px; color:#005b96; text-align:right; }
+.mag-back { color:white; display:flex; flex-direction:column; justify-content:flex-end; padding:24mm 20mm; position:relative; background:linear-gradient(160deg, #024a7a 0%, #012f52 55%, #01223d 100%); }
+.mag-back::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 80% 15%, #c89b3c33, transparent 55%); pointer-events:none; }
+.bc-mag { position:absolute; top:20mm; left:20mm; font-family:'Fraunces', serif; font-style:italic; font-weight:300; font-size:16px; color:rgba(255,255,255,0.9); letter-spacing:0.05em; }
+.bc-issue { position:absolute; top:20mm; right:20mm; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; color:rgba(255,255,255,0.7); }
+.bc-next { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:6px; position:relative; z-index:1; }
+.bc-country { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:white; margin-bottom:8px; position:relative; z-index:1; }
+.bc-tagline { font-family:'Fraunces', serif; font-style:italic; font-size:18px; color:rgba(255,255,255,0.92); border-top:1px solid rgba(255,255,255,0.4); padding-top:14px; margin-bottom:12px; max-width:74%; position:relative; z-index:1; }
+.bc-foot { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; color:rgba(255,255,255,0.6); position:relative; z-index:1; }
+.mag-page .folio { position:absolute; bottom:4mm; left:0; right:0; text-align:center; font-family:'Fraunces', serif; font-style:italic; font-size:8.5px; color:#8b6914; }
+@media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
+</style></head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="mag-page mag-cover" style="background-image: linear-gradient(180deg, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.55) 16%, rgba(0,0,0,0.12) 30%, rgba(0,0,0,0) 52%, rgba(0,0,0,0) 82%, rgba(0,0,0,0.42) 100%), url('../images/sweden/family-heart-close.jpg'); background-position:center 60%; justify-content:flex-start;">
+  <div class="cv-issue"><span>Issue 12 · 2026</span><span class="cv-flag">🇸🇪 SWEDEN</span></div>
+  <div class="cv-brand" style="margin-bottom:6px;">Munasinghe-Fernando Travel Magazine</div>
+  <div class="cv-block">
+    <div class="cv-title">SWEDEN</div>
+    <div class="cv-sub" style="margin-bottom:0;">Göteborg · the family stop</div>
+  </div>
+  <div class="cv-meta" style="left:16mm; right:auto; text-align:left; bottom:12mm;">Munasinghe-Fernando Family<br>Mon 3 – Tue 4 Aug 2026</div>
+</div>
+
+<!-- ============ WHO WE ARE ============ -->
+<div class="mag-page mag-welcome">
+  <div class="wl-num">No. 12 · Who We Are</div>
+  <div class="wl-title">Who we are,<br>why we travel.</div>
+  <div class="wl-divider"></div>
+  <div style="display:grid; grid-template-columns:0.82fr 1fr; gap:12mm; align-items:start; margin-top:2mm;">
+    <div style="aspect-ratio:3/4; background-image:url('../images/sweden/family-cover.jpg'); background-size:cover; background-position:center 58%; border-radius:3px; box-shadow:0 6px 22px rgba(0,0,0,0.20);"></div>
+    <div class="wl-body" style="column-count:1; column-rule:0; margin-bottom:0;">
+      <p>We are the Munasinghe-Fernandos — two parents, three children, and one home a very long way from here, on the far side of the world in New Zealand. This summer we set out to cross Europe end to end: thirty-odd nights, more countries than the children can now name in order, and more trains, cathedrals and scoops of gelato than we could ever count.</p>
+      <p>We travel for two reasons. The first is the obvious one — to show our three how wide and various the world really is, to let them stand under the domes and on the bridges and taste it all first-hand.</p>
+      <p>The second is quieter, and for us it is the real one: to close the distance to the people we love. Our family is scattered across the planet, and a journey like this is the only way to gather a little of it back, even for a few days.</p>
+      <p>That second reason is what this whole issue is about. Sweden was never on the list for its sights. It was on the list for a sister — and for two days in Gothenburg, the distance simply disappeared.</p>
+      <p style="font-style:italic; color:#005b96; text-align:right; margin-top:6px;">— The Munasinghe-Fernandos, 2026</p>
+    </div>
+  </div>
+  <div class="folio">— Issue 12 · SWEDEN · 02 —</div>
+</div>
+
+<!-- ============ WELCOME + TOC ============ -->
+<div class="mag-page mag-welcome">
+  <div class="wl-num">No. 12 · A Letter from the Road</div>
+  <div class="wl-title">Welcome to<br>family.</div>
+  <div class="wl-divider"></div>
+  <div class="wl-body">
+    <p>For three weeks this trip had been about places. The Forbidden City. The Colosseum. Cathedrals, castles, museums, timetables. Then the train crossed the water into Sweden, and for two days the itinerary held only one thing on it — the people we had come all this way to see.</p>
+    <p>We reached Gothenburg on Monday afternoon, in from Copenhagen on the X2000 over the Øresund, and spent the days that followed the way you only can with family and friends: slowly. There was no monument to tick off, no ticket to pre-book. There was a sister, there were cousins for our kids, and long unhurried walks that wandered from the old town to the new city across the river and back.</p>
+    <p>So this is the warmest issue we have made. It has no historical set-piece to march you through — just a summer heart made of flowers in a square, a colourful tower on the far bank, a little tram in a shopping centre, a fridge magnet held up against the real skyline, and the long Nordic light that refused to go dark until well past ten.</p>
+    <p style="font-style:italic; color:#005b96; text-align:right; margin-top:14px;">— The Munasinghe-Fernandos, 2026</p>
+  </div>
+  <div class="toc-title">In this issue</div>
+  <ul class="toc-list">
+    <li><span class="toc-name">Who We Are — Why We Travel</span><span class="toc-page">02</span></li>
+    <li><span class="toc-name">Welcome — Family</span><span class="toc-page">03</span></li>
+    <li><span class="toc-name">Over the Water, Into Family</span><span class="toc-page">04</span></li>
+    <li><span class="toc-name">The Heart of the City</span><span class="toc-page">05</span></li>
+    <li><span class="toc-name">Cathedral, Canals &amp; the Avenue</span><span class="toc-page">06</span></li>
+    <li><span class="toc-name">Across the River — Lindholmen</span><span class="toc-page">07</span></li>
+    <li><span class="toc-name">The Harbour &amp; the Long Light</span><span class="toc-page">08</span></li>
+    <li><span class="toc-name">Nordstan &amp; the Little Tram</span><span class="toc-page">09</span></li>
+    <li><span class="toc-name">The Magnet Hunt</span><span class="toc-page">10</span></li>
+    <li><span class="toc-name">Fika &amp; Sweet Things</span><span class="toc-page">11</span></li>
+    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">12</span></li>
+  </ul>
+</div>
+
+<!-- ============ COVER STORY SPREAD ============ -->
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">COVER STORY · GÖTEBORG · DAY 26</div>
+  <div class="sp-headline">Over the water,<br>into family.</div>
+  <div class="sp-deck">The X2000 slipped out of Copenhagen, crossed the Øresund, and turned north up the Swedish coast. By late afternoon we were in Gothenburg — and the family we had crossed a continent to reach was waiting.</div>
+  <div class="sp-meta"><span>Mon 3 Aug 2026</span><span>Copenhagen → Göteborg</span><span>X2000 · over the Øresund</span></div>
+  <div class="sp-hero" style="background-image:url('../images/sweden/vallgraven-canal.jpg');">
+    <div class="ph-info">GÖTEBORG · THE VALLGRAVEN</div>
+  </div>
+  <div class="sp-caption">Along the Vallgraven — Gothenburg's old moat-canal, its banks planted with summer flowers, grand nineteenth-century façades and a green copper dome mirrored in the still water.</div>
+  <div class="sp-hist-title">The Dutch-built gateway to the west</div>
+  <div class="sp-cols">
+    <p>Gothenburg was a deliberate act of statecraft. In 1621 King Gustavus Adolphus chartered a city on Sweden's rugged west coast — a foothold on the narrow strip of shore that gave the kingdom its only real window onto the North Sea, safely clear of the Danish-controlled sound. To build it he imported Dutch engineers, who laid out the new town as they knew best: straight canals, ramparts and drainage, a slice of Holland transplanted onto Nordic granite. Traces of that geometry still shape the old centre, and the Vallgraven — the moat-canal we walked beside all afternoon — is its surviving heart.</p>
+    <div class="sp-quote">Three weeks of monuments behind us; here the only thing left on the itinerary was each other.</div>
+    <p>The sea remained the city's fortune. In the eighteenth century the Swedish East India Company sailed from these quays to Canton and back with tea, silk and porcelain; later came the shipyards, and Volvo, whose name is woven into local identity. But we came for none of that. We came for a person. The train from Copenhagen ran fast and smooth over the strait, and somewhere on that long bridge Denmark quietly became Sweden. At Gothenburg Central the reunion was loud and immediate — a sister not seen in far too long, her family folded around ours, and the whole point of the detour standing right there on the platform. Everything after that was just the happy business of being together.</p>
+  </div>
+  <div class="folio">— Issue 12 · SWEDEN · 04 —</div>
+</div>
+
+<!-- ============ THE HEART OF THE CITY ============ -->
+<div class="mag-page mag-duo">
+  <div class="sp-eyebrow" style="margin-bottom:4px;">KUNGSPORTSPLATSEN · DAY 26</div>
+  <div class="sp-headline" style="font-size:36px; margin-bottom:12px;">The heart of<br><em style="font-style:italic; font-weight:400; color:#005b96;">the city.</em></div>
+  <div class="duo-row" style="grid-template-columns:1fr 1fr;">
+    <div class="duo-photo" style="aspect-ratio:3/4; background-image:url('../images/sweden/family-heart-selfie.jpg'); background-position:center 35%;">
+      <div class="ph-info">ALL FIVE · AT THE HEART</div>
+    </div>
+    <div class="duo-text">
+      <div class="kicker">★ The Summer Heart</div>
+      <h3>A heart of flowers</h3>
+      <p>Where Kungsportsavenyn meets the canal, the city had built a giant heart of flowers and greenery for the summer. Posters on the buildings counted down to Way Out West, the festival that fills the parks each August. We stood right in the middle of it, of course, and took the picture — all five of us, grinning.</p>
+    </div>
+  </div>
+  <div class="duo-row">
+    <div class="duo-photo" style="background-image:url('../images/sweden/heart-square-spire.jpg');">
+      <div class="ph-info">KUNGSPORTSPLATSEN</div>
+    </div>
+    <div class="duo-photo" style="background-image:url('../images/sweden/heart-arch.jpg');">
+      <div class="ph-info">THE FLOWER HEART</div>
+    </div>
+  </div>
+  <div class="duo-row alt" style="grid-template-columns:1fr 1fr;">
+    <div class="duo-photo" style="aspect-ratio:4/5; background-image:url('../images/sweden/stone-lion.jpg');">
+      <div class="ph-info">A STONE LION</div>
+    </div>
+    <div class="duo-text" style="padding-left:4mm;">
+      <div class="kicker">★ On the Square</div>
+      <h3 style="font-size:22px;">Lions &amp; long light</h3>
+      <p>An old stone lion keeps watch from its granite plinth, unbothered by the trams sliding past. This is the crossroads of central Gothenburg — cafés, bicycles, the avenue climbing toward Götaplatsen. Ten minutes into the walk it was as if no time had passed at all: the kids already a pack, the grown-ups already mid-conversation.</p>
+    </div>
+  </div>
+  <div class="folio">— Issue 12 · SWEDEN · 05 —</div>
+</div>
+
+<!-- ============ CANALS, DOMES & THE AVENUE ============ -->
+<div class="mag-page mag-duo">
+  <div class="sp-eyebrow" style="margin-bottom:4px;">A PHOTO ESSAY · THE OLD TOWN</div>
+  <div class="sp-headline" style="font-size:36px; margin-bottom:12px;">Cathedral, canals<br><em style="font-style:italic; font-weight:400; color:#005b96;">&amp; the avenue.</em></div>
+  <div class="duo-row" style="grid-template-columns:1fr 1fr;">
+    <div class="duo-photo" style="aspect-ratio:3/4; background-image:url('../images/sweden/domed-building.jpg');">
+      <div class="ph-info">GUSTAVI DOMKYRKA</div>
+    </div>
+    <div class="duo-text">
+      <div class="kicker">★ Gothenburg Cathedral</div>
+      <h3>Stone &amp; copper</h3>
+      <p>Gustavi Domkyrka — the city cathedral — stands at the head of its own gravel esplanade: pale stone, a columned portico, and a green copper dome and clock tower rebuilt in neoclassical calm after the old town's fires. The Dutch grid gives the whole centre this same deliberate, unhurried order.</p>
+    </div>
+  </div>
+  <div class="duo-row" style="grid-template-columns:1.1fr 1fr;">
+    <div class="duo-text" style="padding-right:4mm;">
+      <div class="kicker">★ Kungsportsavenyn</div>
+      <h3 style="font-size:24px;">Up the Avenyn</h3>
+      <p>Gothenburg's grand tree-lined boulevard runs from the canal up toward the art museum, its ornamental fountains and bronze figures marking the way. We wandered it slowly, in no hurry to be anywhere, and let the afternoon set its own pace.</p>
+    </div>
+    <div class="duo-photo" style="aspect-ratio:3/4; background-image:url('../images/sweden/avenyn-fountain.jpg'); background-position:center 30%;">
+      <div class="ph-info">A FOUNTAIN OFF THE AVENYN</div>
+    </div>
+  </div>
+  <div class="folio">— Issue 12 · SWEDEN · 06 —</div>
+</div>
+
+<!-- ============ ACROSS THE RIVER · LINDHOLMEN ============ -->
+<div class="mag-page mag-duo">
+  <div class="sp-eyebrow" style="margin-bottom:4px;">ACROSS THE RIVER · LINDHOLMEN · DAY 26</div>
+  <div class="sp-headline" style="font-size:34px; margin-bottom:6px;">The new city<br><em style="font-style:italic; font-weight:400; color:#005b96;">on the far bank.</em></div>
+  <div class="sp-deck" style="font-size:13px; margin-bottom:12px;">Where the great shipyards once stood, Hisingen's northern shore has become Lindholmen — a science park and campus of glass, colour and new towers, a short hop across the Göta älv from the old town.</div>
+  <div class="duo-row alt">
+    <div class="duo-photo wide" style="background-image:url('../images/sweden/kuggen-close.jpg'); background-position:center 30%;">
+      <div class="ph-info">KUGGEN · LINDHOLMEN</div>
+    </div>
+    <div class="duo-text">
+      <div class="kicker">★ "The Cog"</div>
+      <h3>Kuggen</h3>
+      <p>The landmark of Lindholmen Science Park: a round tower clad in red, orange, pink and green panels that grow wider as they climb, shading the floors below. It anchors Chalmers University's riverside campus — the research-and-tech heart of modern Gothenburg.</p>
+    </div>
+  </div>
+  <div class="duo-row">
+    <div class="duo-photo" style="background-image:url('../images/sweden/kuggen-canal.jpg'); background-position:center 30%;">
+      <div class="ph-info">LINDHOLMEN WATERFRONT</div>
+    </div>
+    <div class="duo-photo" style="background-image:url('../images/sweden/alvstranden-tower.jpg'); background-position:center 20%;">
+      <div class="ph-info">NORRA ÄLVSTRANDEN</div>
+    </div>
+  </div>
+  <div class="duo-row alt" style="grid-template-columns:1fr 1fr;">
+    <div class="duo-text" style="padding-right:4mm;">
+      <div class="kicker">★ Old Yards, New Towers</div>
+      <p style="font-size:11px;">Flags along the quay read <em>Älvstranden Utveckling</em> — the city company remaking these old riverbanks. Glass towers now rise where cranes and slipways used to be, a whole new district growing out of the water.</p>
+    </div>
+    <div class="duo-text" style="padding-left:4mm; border-left:1px solid #e8d6a8;">
+      <div class="kicker">★ A Short Hop</div>
+      <p style="font-size:11px;">Crossing the river is half the fun — a little ferry or a tram over the water, the old town shrinking behind you, and a completely different Gothenburg waiting on the other side.</p>
+    </div>
+  </div>
+  <div class="folio">— Issue 12 · SWEDEN · 07 —</div>
+</div>
+
+<!-- ============ THE HARBOUR & THE LONG LIGHT ============ -->
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">THE HARBOUR · DAY 26</div>
+  <div class="sp-headline">The harbour<br>&amp; the long light.</div>
+  <div class="sp-deck">From the far bank the whole city lays itself out along the Göta älv — quays and cranes, church towers on their hills, and beyond them the beginning of the sea. Then a slow dusk that would not end.</div>
+  <div class="sp-meta"><span>Mon 3 Aug 2026</span><span>Göta älv · the harbour</span><span>Evening · long northern light</span></div>
+  <div class="sp-hero" style="background-image:url('../images/sweden/harbour-panorama.jpg'); height:78mm;">
+    <div class="ph-info">GÖTA ÄLV · FROM THE NORTH BANK</div>
+  </div>
+  <div class="sp-caption">The working harbour from the northern shore — the wide river, the long quays, a red-brick church tower (Masthuggskyrkan) on its hill to the right, and the tall-masted barque moored downstream.</div>
+  <div class="sp-cols">
+    <p style="column-span:all;">Gothenburg has always faced the water. The river is still busy — ferries, tour boats, the odd working vessel — and the quays keep their cranes as monuments to the shipbuilding century. By evening the whole harbour turns gentle: a slender steel footbridge over the canal, tour boats dozing at their moorings, and a sky that softens to pink and holds there, because this far north in August the light simply refuses to give up. It was past ten and still not properly dark when we finally turned for home.</p>
+  </div>
+  <div class="duo-row" style="grid-template-columns:1fr; margin-top:8px;">
+    <div class="duo-photo wide" style="aspect-ratio:16/7; background-image:url('../images/sweden/harbour-dusk.jpg'); background-position:center 55%;">
+      <div class="ph-info">DUSK ON THE QUAY</div>
+    </div>
+  </div>
+  <div class="folio">— Issue 12 · SWEDEN · 08 —</div>
+</div>
+
+<!-- ============ NORDSTAN & THE LITTLE TRAM ============ -->
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">NORDSTAN · DAY 26</div>
+  <div class="sp-headline">Nordstan &amp;<br>the little tram.</div>
+  <div class="sp-deck">Right by the central station sits Nordstan, the big covered shopping street — and in the middle of it, a miniature Gothenburg tram running on its own little rails. The kids did not need asking twice.</div>
+  <div class="sp-meta"><span>Mon 3 Aug 2026</span><span>Nordstan · central Göteborg</span><span>Family afternoon</span></div>
+  <div class="sp-hero" style="background-image:url('../images/sweden/kids-nordstan-tram.jpg'); height:92mm; background-position:center 35%;">
+    <div class="ph-info">THE NORDSTAN TRAM</div>
+  </div>
+  <div class="sp-caption">All aboard — a model of the blue-and-white Gothenburg tram, complete with a little Swedish flag, parked in front of a scale model of the Central Station. Waving from the windows, arms around each other: the whole point of the trip, right here.</div>
+  <div class="sp-cols">
+    <p>Nordstan is where the practical business of the day happened — the shelter from a grey sky, the coffee, the browsing — but for the children it was the tram that mattered. They climbed aboard the little carriage, waved through the windows, and hugged on the platform beside the rails while the grown-ups pretended to shop. It is a small, ordinary thing, a coin-op ride in a mall. It is also exactly the kind of unhurried, unplanned moment this leg of the trip was for.</p>
+    <div class="sp-quote">No castle on the list today. Just cousins, a toy tram, and a whole afternoon to spend however we liked.</div>
+  </div>
+  <div class="folio">— Issue 12 · SWEDEN · 09 —</div>
+</div>
+
+<!-- ============ THE MAGNET HUNT ============ -->
+<div class="mag-page mag-duo">
+  <div class="sp-eyebrow" style="margin-bottom:4px;">A FAMILY TRADITION · DAY 26</div>
+  <div class="sp-headline" style="font-size:36px; margin-bottom:6px;">The magnet<br><em style="font-style:italic; font-weight:400; color:#005b96;">hunt.</em></div>
+  <div class="sp-deck" style="margin-bottom:14px;">One fridge magnet from every country — that is the rule. Gothenburg gave us a whole wall to choose from, and a genuinely hard decision.</div>
+  <div class="duo-row">
+    <div class="duo-photo" style="background-image:url('../images/sweden/giftshop-feskekorka.jpg');">
+      <div class="ph-info">CANDIDATE · FESKEKÔRKA</div>
+    </div>
+    <div class="duo-photo" style="background-image:url('../images/sweden/giftshop-lipstick.jpg');">
+      <div class="ph-info">CANDIDATE · LÄPPSTIFTET</div>
+    </div>
+  </div>
+  <div class="duo-row alt" style="grid-template-columns:1.3fr 1fr;">
+    <div class="duo-photo wide" style="background-image:url('../images/sweden/bridge-magnet-skyline.jpg');">
+      <div class="ph-info">THE WINNER · ÄLVSBORGSBRON</div>
+    </div>
+    <div class="duo-text">
+      <div class="kicker">★ We only got one</div>
+      <h3>The bridge won</h3>
+      <p>The Fish Church (Feskekôrka) made its case; so did the "Lipstick" tower down at Lilla Bommen. But in the end just one magnet came home — the Älvsborg Bridge at dusk, deep blue with the city in white script — held up, of course, against the real skyline behind it.</p>
+    </div>
+  </div>
+  <div class="duo-row" style="grid-template-columns:1fr;">
+    <div class="duo-photo wide" style="aspect-ratio:16/6; background-image:url('../images/sweden/bridge-magnet.jpg'); background-position:center 40%;">
+      <div class="ph-info">GÖTEBORG · ÄLVSBORGSBRON</div>
+    </div>
+  </div>
+  <div class="folio">— Issue 12 · SWEDEN · 10 —</div>
+</div>
+
+<!-- ============ FIKA & SWEET THINGS ============ -->
+<div class="mag-page mag-food">
+  <div class="sp-eyebrow">★ TASTES OF THE TRIP</div>
+  <div class="fd-headline">Fika &amp; <em>sweet things.</em></div>
+  <div class="fd-deck">The bites that fuelled a slow, happy day around the city.</div>
+  <div class="fd-grid">
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/sweden/jafaris-churros.jpg');"></div>
+      <div class="fd-body">
+        <div class="fd-num">01</div>
+        <div class="fd-name">Chocolate-dipped churros</div>
+        <div class="fd-desc">A paper cone of warm churros, dipped deep in chocolate, from Jafari's in the Nordstan food court. Not remotely Swedish — completely delicious, and gone in minutes.</div>
+        <div class="fd-where">📍 Jafari's Churros · Nordstan</div>
+      </div>
+    </div>
+    <div class="fd-card">
+      <div class="fd-img" style="background-image:url('../images/sweden/wienerbrod.jpg');"></div>
+      <div class="fd-body">
+        <div class="fd-num">02</div>
+        <div class="fd-name">Wienerbröd</div>
+        <div class="fd-desc">The Swedish "Vienna bread" — flaky pastry with vanilla custard and a drizzle of chocolate. The proper companion to a mid-afternoon coffee, and the closest thing to a national ritual: <em>fika.</em></div>
+        <div class="fd-where">📍 Over coffee · central Göteborg</div>
+      </div>
+    </div>
+  </div>
+  <div class="fd-note">The best meals of these two days never made it to the camera — they happened around a family table, home-cooked and second-helped, exactly where the good ones always do.</div>
+  <div class="folio">— Issue 12 · SWEDEN · 11 —</div>
+</div>
+
+<!-- ============ REFLECTIONS ============ -->
+<div class="mag-page mag-reflection">
+  <div class="rf-eyebrow">REFLECTIONS · SWEDEN</div>
+  <div class="rf-headline">Family, fika,<br>and the light<br>that wouldn't fade.</div>
+  <div class="rf-body">
+    <p>Sweden was the only stop on this whole trip with nothing to see and everything to do. No history page to fit in, no museum to pre-book — just family and friends, a gentle loop from the old town to the new city across the river and back, and evenings so long and bright they seemed reluctant to end.</p>
+    <p>We will remember the summer heart of flowers in the square, the colourful tower on the far bank, the children waving from a toy tram, one small blue magnet held up against a real skyline, and the plain, enormous relief of being back among our own people after three weeks on the road. Tomorrow the long way home begins. Tonight, it can wait.</p>
+  </div>
+  <div class="rf-grid">
+    <div class="rf-card">
+      <div class="rf-label">Favourite moment</div>
+      <div class="rf-value">The reunion — and then every unhurried hour that followed it, family and friends, no clock running.</div>
+    </div>
+    <div class="rf-card">
+      <div class="rf-label">The one magnet</div>
+      <div class="rf-value">The Älvsborg Bridge at dusk. One country, one magnet — the rule holds.</div>
+    </div>
+    <div class="rf-card">
+      <div class="rf-label">If we come back…</div>
+      <div class="rf-value">A whole summer of it. The archipelago islands. And Stockholm, next time.</div>
+    </div>
+  </div>
+  <div class="rf-signoff">— The Munasinghe-Fernando family<br>Göteborg · 3–4 August 2026</div>
+</div>
+
+<!-- ============ BACK COVER ============ -->
+<div class="mag-page mag-back">
+  <div class="bc-mag">Munasinghe-Fernando Travel Magazine</div>
+  <div class="bc-issue">No. 12 · One of Fourteen</div>
+  <div class="bc-next">★ NEXT ISSUE ★</div>
+  <div class="bc-country">VATICAN CITY</div>
+  <div class="bc-tagline">The world's smallest country, the world's biggest church, and Michelangelo's ceiling.</div>
+  <div class="bc-foot">Göteborg, Sweden · 3–4 August 2026 · The Grand Journey, 2026</div>
+</div>
+
+<style>
+/* Mobile: scale the A4 pages to fit the screen width (for direct web/GitHub Pages viewing) */
+@media (max-width: 840px){
+  body { padding:0 !important; background:#111; }
+  .mag-page { margin:0 auto 10px !important; box-shadow:none !important; }
+}
+</style>
+<script>
+(function(){
+  var PAGE_PX = 793.7; /* 210mm at 96dpi */
+  function fit(){
+    var vw = document.documentElement.clientWidth || window.innerWidth;
+    var z = Math.min(1, vw / PAGE_PX);
+    var pages = document.querySelectorAll('.mag-page');
+    for (var i=0;i<pages.length;i++){ pages[i].style.zoom = z; }
+  }
+  window.addEventListener('resize', fit);
+  window.addEventListener('orientationchange', fit);
+  fit();
+})();
+</script>
+</body></html>

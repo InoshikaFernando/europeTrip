@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Munasinghe-Fernando Travel Magazine · FRANCE Issue · July 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+@page { size:A4 portrait; margin:0; }
+html, body { font-family:'Plus Jakarta Sans', sans-serif; background:#222; color:#1a1a1a; }
+body { padding:20px; }
+.mag-page { width:210mm; min-height:295mm; background:#fefcf7; margin:14px auto; box-shadow:0 8px 32px rgba(0,0,0,0.25); position:relative; overflow:hidden; page-break-after:always; break-after:page; }
+.mag-page:last-child { page-break-after:auto; }
+.folio { position:absolute; bottom:8mm; left:0; right:0; text-align:center; font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.25em; color:#a08b5c; }
+.op-cont { height:0; overflow:hidden; }
+.prow { display:flex; gap:2.6mm; align-items:flex-start; margin-bottom:5mm; }
+.ph { margin:0; }
+.ph img { display:block; width:100%; height:auto; border-radius:2px; box-shadow:0 4px 14px rgba(0,0,0,0.16); }
+.cap { font-family:'Fraunces',serif; font-style:italic; font-size:8.6px; line-height:1.3; color:#6a5a48; margin-top:2mm; padding-left:1mm; }
+.cap b { font-style:normal; color:#1a1a1a; }
+.mag-story { padding:13mm 16mm 15mm; }
+.op-eyebrow { font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.28em; text-transform:uppercase; color:#1c4a7a; border-bottom:1px solid #d8c9a8; padding-bottom:6px; margin-bottom:8px; }
+.op-title { font-family:'Fraunces',serif; font-weight:700; font-size:38px; line-height:1.03; letter-spacing:-0.01em; color:#1a1a1a; margin-bottom:8px; }
+.op-title em { font-style:italic; color:#1c4a7a; }
+.op-lead { font-family:'Fraunces',serif; font-size:12.5px; line-height:1.58; color:#3d3024; margin-bottom:9px; }
+.op-lead strong, .body strong, .ft-p strong { color:#a02828; }
+.body { font-family:'Fraunces',serif; font-size:12px; line-height:1.6; color:#3d3024; margin-top:5px; text-align:justify; }
+.feature { border-left:3px solid #a02828; padding:2px 0 2px 10px; margin-top:7px; }
+.ft-h { font-family:'Fraunces',serif; font-weight:700; font-size:15px; color:#1a1a1a; margin-bottom:3px; }
+.ft-p { font-family:'Fraunces',serif; font-size:10px; line-height:1.5; color:#3d3024; text-align:justify; }
+.catwrap { display:flex; gap:7mm; align-items:flex-start; margin-top:2mm; }
+.catfig { flex:0 0 52mm; }
+.catbox { flex:1; border-left:3px solid #c89b3c; padding-left:10px; }
+.mag-cover { background:linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.18) 26%, rgba(0,0,0,0) 52%, rgba(0,0,0,0.12) 82%, rgba(0,0,0,0.5) 100%), url('../images/france/cover.jpg') center 44%/cover #0e2a4a; color:#fff; display:flex; flex-direction:column; padding:18mm 16mm; }
+.cv-issue { display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(255,255,255,0.9); border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:5px; }
+.cv-brand { font-family:'Fraunces',serif; font-style:italic; font-size:17px; color:rgba(255,255,255,0.95); margin-top:8px; text-shadow:0 1px 8px rgba(0,0,0,0.6); }
+.cv-spacer { flex:1; }
+.cv-title { font-family:'Fraunces',serif; font-weight:700; font-size:92px; line-height:0.9; text-shadow:2px 4px 14px rgba(0,0,0,0.5); }
+.cv-sub { font-family:'Fraunces',serif; font-style:italic; font-size:22px; color:rgba(255,255,255,0.95); margin:4px 0 16px; text-shadow:0 2px 8px rgba(0,0,0,0.6); }
+.cv-tags { display:flex; gap:7px; flex-wrap:wrap; }
+.cv-tag { background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.3); border-radius:100px; padding:5px 13px; font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.12em; text-transform:uppercase; }
+.cv-meta { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.2em; color:rgba(255,255,255,0.85); margin-top:14px; text-shadow:0 1px 6px rgba(0,0,0,0.7); }
+.mag-welcome { padding:16mm 18mm; }
+.wl-num { font-family:'Fraunces',serif; font-style:italic; font-size:14px; color:#1c4a7a; }
+.wl-title { font-family:'Fraunces',serif; font-weight:700; font-size:52px; line-height:1; margin:4px 0 14px; }
+.wl-divider { width:60px; height:3px; background:#c89b3c; margin-bottom:16px; }
+.wl-lead { display:flex; gap:9mm; align-items:flex-start; margin-bottom:8mm; }
+.wl-fig { flex:0 0 78mm; margin:0; }
+.wl-fig img { display:block; width:100%; height:auto; border-radius:2px; box-shadow:0 6px 22px rgba(0,0,0,0.16); }
+.wl-letter { flex:1; }
+.wl-letter p { font-family:'Fraunces',serif; font-size:12.5px; line-height:1.55; color:#3d3024; margin-bottom:9px; }
+.wl-letter .sig { font-style:italic; color:#1c4a7a; text-align:right; }
+.toc-title { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#1c4a7a; border-bottom:2px solid #1c4a7a; padding-bottom:8px; margin-bottom:12px; }
+.toc-list { list-style:none; column-count:2; column-gap:14mm; font-family:'Fraunces',serif; font-size:12px; line-height:1.4; }
+.toc-list li { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px dotted #c89b3c55; padding:3px 0; break-inside:avoid; }
+.toc-name { font-style:italic; } .toc-page { font-family:'JetBrains Mono',monospace; font-size:9px; color:#8b6914; font-weight:700; }
+.mag-dark { background:#0e0e10; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:14mm; }
+.hero-fig { margin:0; text-align:center; }
+.hero-fig img { max-width:100%; max-height:238mm; width:auto; height:auto; display:block; margin:0 auto; border-radius:2px; box-shadow:0 10px 40px rgba(0,0,0,0.6); }
+.cap-dark { font-family:'Fraunces',serif; font-style:italic; font-size:11px; line-height:1.4; color:rgba(255,255,255,0.9); margin-top:6mm; max-width:150mm; text-align:center; }
+.cap-dark b { color:#f0d68c; font-style:normal; }
+.mag-reflection { background:linear-gradient(135deg,#fff4e6 0%,#ffe4c4 100%); padding:16mm 20mm 15mm; }
+.rf-eyebrow { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.28em; text-transform:uppercase; color:#1c4a7a; }
+.rf-headline { font-family:'Fraunces',serif; font-weight:700; font-size:38px; line-height:1.03; margin:6px 0 10px; }
+.rf-photo { max-width:140mm; margin:0 auto 8px; }
+.rf-body p { font-family:'Fraunces',serif; font-size:12.5px; line-height:1.55; color:#3d3024; margin-top:8px; }
+.rf-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:6mm; margin-top:10px; }
+.rf-card { background:rgba(255,255,255,0.55); border-left:3px solid #1c4a7a; padding:8px 10px; }
+.rf-label { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.18em; text-transform:uppercase; color:#1c4a7a; margin-bottom:4px; }
+.rf-value { font-family:'Fraunces',serif; font-size:10.5px; line-height:1.38; color:#3d3024; }
+.rf-signoff { font-family:'Fraunces',serif; font-style:italic; font-size:12px; color:#1c4a7a; text-align:right; margin-top:14px; }
+.mag-back { background:linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.75)), url('../images/france/back-cover.jpg') center/cover #0e2a4a; color:#fff; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:20mm; }
+.bc-issue { position:absolute; top:16mm; right:16mm; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:0.2em; color:rgba(255,255,255,0.85); }
+.bc-brand { font-family:'Fraunces',serif; font-style:italic; font-size:20px; line-height:1.3; text-shadow:0 2px 10px rgba(0,0,0,0.6); }
+.bc-next { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.3em; margin-top:auto; color:#f0d68c; }
+.bc-title { font-family:'Fraunces',serif; font-weight:700; font-size:56px; margin:8px 0; text-shadow:0 3px 14px rgba(0,0,0,0.6); }
+.bc-sub { font-family:'Fraunces',serif; font-style:italic; font-size:14px; color:rgba(255,255,255,0.92); max-width:150mm; margin-bottom:auto; }
+</style>
+</head>
+<body>
+<div class="mag-page mag-cover"><div class="cv-issue"><span>Issue 08 · 2026</span><span class="cv-flag">🇫🇷 FRANCE</span></div><div class="cv-brand">Munasinghe-Fernando Travel Magazine</div><div class="cv-spacer"></div><div class="cv-title">FRANCE</div><div class="cv-sub">Lourdes · Paris</div><div class="cv-tags"><span class="cv-tag">★ A Pilgrimage</span><span class="cv-tag">🗼 The Eiffel Tower</span><span class="cv-tag">🥖 Paris</span></div><div class="cv-meta">Munasinghe-Fernando Family · 28–30 July 2026</div></div>
+<div class="mag-page mag-welcome"><div class="wl-num">No. 08 · A Letter from the Road</div><div class="wl-title">Welcome to<br>two Frances.</div><div class="wl-divider"></div><div class="wl-lead"><figure class="wl-fig"><img src="../images/france/day-20-welcome-lourdes-family.jpg" alt=""><figcaption class="cap">Who we are — the Munasinghe-Fernando five, at golden hour outside the Sanctuary of Our Lady of Lourdes.</figcaption></figure><div class="wl-letter"><p>France was a country of contrasts. The first was <strong>Lourdes</strong> — a small Pyrenean town that becomes, every summer, one of the world's largest Catholic pilgrimage sites. The second was <strong>Paris</strong> — the loudest, most romantic city on earth.</p><p>But Lourdes was no accident. Before <strong>Aviann</strong> was born, we asked Our Lady of Lourdes for a daughter — and promised that if she came, we would name her Lourdes. She came. Before it was ever a holiday, this leg was the keeping of that promise.</p><p>Two cities. Two completely different experiences of France. Both unforgettable.</p><p class="sig">— The Munasinghe-Fernandos, 2026</p></div></div><div class="toc-title">In this issue</div><ul class="toc-list"><li><span class="toc-name">Welcome — Two Frances</span><span class="toc-page">02</span></li><li><span class="toc-name">Lourdes — A Candle & a Procession</span><span class="toc-page">03</span></li><li><span class="toc-name">The Grotto of Massabielle</span><span class="toc-page">04</span></li><li><span class="toc-name">The Torch Procession</span><span class="toc-page">05</span></li><li><span class="toc-name">Toulouse to Paris — the TGV</span><span class="toc-page">06</span></li><li><span class="toc-name">Seen at the Louvre</span><span class="toc-page">07</span></li><li><span class="toc-name">Why is Egypt in the Louvre?</span><span class="toc-page">08</span></li><li><span class="toc-name">The Egyptian Halls — Kings & Cats</span><span class="toc-page">09</span></li><li><span class="toc-name">The Eiffel Tower at Midnight</span><span class="toc-page">11</span></li><li><span class="toc-name">Dusk to Dawn</span><span class="toc-page">12</span></li><li><span class="toc-name">Tastes of the Trip</span><span class="toc-page">13</span></li><li><span class="toc-name">Five at the Table</span><span class="toc-page">14</span></li><li><span class="toc-name">Versailles — the Sun King's Palace</span><span class="toc-page">15</span></li><li><span class="toc-name">Inside the Palace</span><span class="toc-page">16</span></li><li><span class="toc-name">Sainte-Chapelle</span><span class="toc-page">17</span></li><li><span class="toc-name">Along the Seine</span><span class="toc-page">18</span></li><li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">19</span></li></ul><div class="folio">— Issue 08 · FRANCE · 02 —</div></div>
+<div class="mag-page mag-story"><div class="op-eyebrow">COVER STORY · LOURDES · DAY 20</div>
+<div class="op-title">A candle, a song,<br>a procession.</div>
+<div class="op-lead">In 1858 a fourteen-year-old peasant girl, <strong>Bernadette Soubirous</strong>, reported eighteen apparitions of the Virgin Mary in a grotto by the Gave de Pau. The Church declared the visions authentic; today six million pilgrims come each year — for the Grotto, the spring, and the nightly Torch Procession.</div>
+<div class="prow"><figure class="ph" style="width:112.26mm"><img src="../images/france/day-20-drive-to-lourdes.jpg" alt=""><figcaption class="cap">The A64 south — first sight of the Pyrenees.</figcaption></figure><figure class="ph" style="width:63.14mm"><img src="../images/france/day-20-lourdes-aviann.jpg" alt=""><figcaption class="cap">Aviann — our promised Lourdes — on the Esplanade.</figcaption></figure></div>
+We drove in from the north, the Pyrenees rising ahead — come to keep a promise, and to walk that first night in a river of candlelight around the Esplanade.
+<div class="folio">— Issue 08 · FRANCE · 03 —</div></div>
+<div class="mag-page mag-story"><div class="op-eyebrow">LOURDES · THE GROTTO · DAY 20</div>
+<div class="op-title">At the Grotto of Massabielle.</div>
+<div class="op-lead">Where Bernadette saw the lady in white in 1858. In the evening light we queued along the worn rock, touched the smooth stone, filled our bottles at the spring, and left flowers beneath the statue — then walked home through the streets of Lourdes.</div>
+<div class="prow"><figure class="ph" style="width:57.60mm"><img src="../images/france/day-20-grotto-statue.jpg" alt=""><figcaption class="cap">Our Lady in the niche — the apparition site.</figcaption></figure><figure class="ph" style="width:57.60mm"><img src="../images/france/day-20-grotto-spring.jpg" alt=""><figcaption class="cap">Flowers at the spring Bernadette dug by hand.</figcaption></figure><figure class="ph" style="width:57.60mm"><img src="../images/france/day-20-grotto-pilgrims.jpg" alt=""><figcaption class="cap">Pilgrims filing along the worn rock.</figcaption></figure></div>
+<div class="prow"><figure class="ph" style="width:57.60mm"><img src="../images/france/day-20-grotto-crowd.jpg" alt=""><figcaption class="cap">The Grotto beneath the spires.</figcaption></figure><figure class="ph" style="width:57.60mm"><img src="../images/france/day-20-grotto-basilica-gold.jpg" alt=""><figcaption class="cap">The Basilica in evening gold.</figcaption></figure><figure class="ph" style="width:57.60mm"><img src="../images/france/day-20-lourdes-walk-home.jpg" alt=""><figcaption class="cap">The walk home through the streets after dark.</figcaption></figure></div>
+<div class="folio">— Issue 08 · FRANCE · 04 —</div></div>
+<div class="mag-page mag-story"><div class="op-eyebrow">LOURDES · THE TORCH PROCESSION · DAY 20</div>
+<div class="op-title">A candle, a song, a crowd.</div>
+<div class="op-lead">We arrived at 20:45 and bought candles for the children. The procession set off as dusk settled; within ten minutes thousands were moving together around the Esplanade. The Ave Maria rose in a dozen languages — and Avin, our four-year-old, sang the refrain with everyone: <em>Ave, ave, ave Maria.</em></div>
+<div class="prow"><figure class="ph" style="width:57.60mm"><img src="../images/france/day-20-procession-dusk.jpg" alt=""><figcaption class="cap">Dusk over the Esplanade.</figcaption></figure><figure class="ph" style="width:57.60mm"><img src="../images/france/day-20-procession-three-children.jpg" alt=""><figcaption class="cap">Three candles, three children — Avisha, Aviann & Avin.</figcaption></figure><figure class="ph" style="width:57.60mm"><img src="../images/france/day-20-procession-rosary-basilica.jpg" alt=""><figcaption class="cap">The Rosary Basilica, ten thousand flames below.</figcaption></figure></div>
+<div class="prow"><figure class="ph" style="width:57.60mm"><img src="../images/france/day-20-procession-avisha.jpg" alt=""><figcaption class="cap">Avisha, her flame cupped against the evening.</figcaption></figure><figure class="ph" style="width:57.60mm"><img src="../images/france/day-20-procession-aviann-avin.jpg" alt=""><figcaption class="cap">Aviann & Avin, candles lit, following the song.</figcaption></figure><figure class="ph" style="width:57.60mm"><img src="../images/france/day-20-procession-avemaria-ground.jpg" alt=""><figcaption class="cap">The Calvary above the Esplanade.</figcaption></figure></div>
+<div class="folio">— Issue 08 · FRANCE · 05 —</div></div>
+<div class="mag-page mag-story"><div class="op-eyebrow">PARIS · DAY 21</div>
+<div class="op-title">Toulouse to Paris <em>in 4h 35m.</em></div>
+<div class="op-lead">We dropped the hire car at Toulouse airport, taxied to Gare Matabiau, and rolled in an hour early — just time for a McDonald's before boarding. Departed 10:20, Coach 12; Paris-Montparnasse by 14:55.</div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:55.50mm"><img src="../images/france/day-21-tgv-toulouse.jpg" alt=""><figcaption class="cap">TGV 8508 · Coach 12 — the journey a marvel of French engineering.</figcaption></figure><figure class="ph" style="width:34.14mm"><img src="../images/france/day-21-eklo-eiffel-view.jpg" alt=""><figcaption class="cap">Eklo · the Eiffel from our top-floor window.</figcaption></figure></div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:88.00mm"><img src="../images/france/day-21-eklo-terrace-family.jpg" alt=""><figcaption class="cap">All five on the Eklo terrace, the tower behind.</figcaption></figure></div>
+<div class="feature"><div class="ft-h">The city that was rebuilt to be seen</div><p class="ft-p">The Paris of postcards — honey-stone façades and radiating boulevards — is barely older than the camera. Between 1853 and 1870 Napoleon III unleashed Baron <strong>Haussmann</strong> on the medieval city. Its most beloved landmark was meant to be temporary: Eiffel's iron tower rose for the 1889 World's Fair, saved only by its use as a radio antenna.</p></div>
+<div class="folio">— Issue 08 · FRANCE · 06 —</div></div>
+<div class="mag-page mag-story"><div class="op-eyebrow">SEEN AT THE LOUVRE · DAY 21</div>
+<div class="op-title">Why is the cross forked?</div>
+<div class="op-lead">Our first Paris afternoon was the Louvre — a royal palace turned "universal museum," 35,000 works across eight departments. We queued for the Mona Lisa, then let the children lead us through the Denon wing.</div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:64.50mm"><img src="../images/france/day-21-louvre-monalisa.jpg" alt=""><figcaption class="cap">The Mona Lisa — behind glass and a hundred phones.</figcaption></figure><figure class="ph" style="width:64.50mm"><img src="../images/france/day-21-louvre-forked-cross.jpg" alt=""><figcaption class="cap">Christ Carrying the Cross, c.1500 — the forked cross.</figcaption></figure></div>
+One <em>Christ Carrying the Cross</em> stopped us: the cross is not the neat carpentered beam of most pictures but a rough, Y-shaped tree-trunk. It's deliberate — a <strong>crux furcata</strong>, popular in 14th–16th-century German and Netherlandish art. The fork carries the meaning: the cross as a living, branching <strong>Tree of Life</strong>, the "new tree" that undoes the Fall in Eden.
+<div class="folio">— Issue 08 · FRANCE · 07 —</div></div>
+<div class="mag-page mag-story"><div class="op-eyebrow">SEEN AT THE LOUVRE · DAY 21</div>
+<div class="op-title">Why is Egypt in the Louvre?</div>
+<div class="op-lead">The second question, from the Egyptian halls: why is a Paris palace full of sphinxes and mummies?</div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:71.99mm"><img src="../images/france/day-21-louvre-sphinx-tanis.jpg" alt=""><figcaption class="cap">The Great Sphinx of Tanis — one block of pink granite, and you can walk right up to it.</figcaption></figure></div>
+It starts with <strong>Napoleon</strong>. In 1798 he invaded Egypt and brought 150 scholars, who measured and drew everything and set off a wave of "Egyptomania." Then <strong>Champollion</strong> deciphered hieroglyphics in 1822 using the Rosetta Stone, all but inventing Egyptology — and in 1826 became the first curator of a new Egyptian department. The deeper reason is the Louvre's very idea: a universal museum built to hold the art of every civilisation.
+<div class="folio">— Issue 08 · FRANCE · 08 —</div></div>
+<div class="mag-page mag-story"><div class="op-eyebrow">THE EGYPTIAN HALLS · DAY 21</div>
+<div class="op-title">Kings, coffins &amp; cats.</div>
+<div class="op-lead">The Louvre's Egypt runs wing after wing — colossal pharaohs, painted coffins, hieroglyphs by the acre. The children came away with one more question, about cats.</div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:46.51mm"><img src="../images/france/day-21-egypt-colossal-head.jpg" alt=""><figcaption class="cap">A colossal royal head, from a single block of granite.</figcaption></figure><figure class="ph" style="width:46.51mm"><img src="../images/france/day-21-egypt-pharaoh.jpg" alt=""><figcaption class="cap">A pharaoh in stone, towering over the hall — and over us.</figcaption></figure><figure class="ph" style="width:46.51mm"><img src="../images/france/day-21-egypt-coffins.jpg" alt=""><figcaption class="cap">Painted coffins — each lid a map to the afterlife.</figcaption></figure></div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:46.51mm"><img src="../images/france/day-21-egypt-stela.jpg" alt=""><figcaption class="cap">A stela: a stone page of hieroglyphs beneath a winged sun.</figcaption></figure><figure class="ph" style="width:46.51mm"><img src="../images/france/day-21-egypt-fayum-portrait.jpg" alt=""><figcaption class="cap">A Fayum portrait — a real Roman-era face in wax.</figcaption></figure><figure class="ph" style="width:46.51mm"><img src="../images/france/day-21-egypt-boy-coffin.jpg" alt=""><figcaption class="cap">One of ours, dwarfed by a 3,000-year-old coffin.</figcaption></figure></div>
+<div class="catwrap"><div class="catfig"><div class="prow" style="justify-content:center"><figure class="ph" style="width:39.00mm"><img src="../images/france/day-21-egypt-sekhmet.jpg" alt=""><figcaption class="cap">Sekhmet, the lioness goddess — four in black granite.</figcaption></figure></div></div><div class="catbox"><div class="ft-h">Why did Egypt love cats? 🐱</div><p class="ft-p">Egypt's cats began as pest-control — killing the rats and cobras that threatened the grain — and ended up as gods. The gentle house-cat became <strong>Bastet</strong>; her fierce sister the lioness <strong>Sekhmet</strong>. Cats grew so sacred that harming one could cost a life, and hundreds of thousands were mummified as offerings.</p></div></div>
+<div class="folio">— Issue 08 · FRANCE · 09 —</div></div>
+<div class="mag-page mag-dark"><figure class="hero-fig"><img src="../images/france/day-21-eiffel-straight-up.jpg" alt=""><figcaption class="cap-dark"><b>Straight up.</b> Flat on our backs at the foot of the tower — the five of us a ring of faces around 10,000 tonnes of iron, the lattice soaring into the night above us. Paris · Day 21.</figcaption></figure></div>
+<div class="mag-page mag-story"><div class="op-eyebrow">COVER STORY · EIFFEL TOWER · DAY 21</div>
+<div class="op-title">The tower at midnight.</div>
+<div class="op-lead">You should not climb the Eiffel Tower at noon. You should climb it at 22:30. We watched the 22:00 sparkle from Trocadéro — 20,000 lights for five minutes — then rode the lift up into a cool, thin-crowded night.</div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:69.00mm"><img src="../images/france/day-21-eiffel-night-family.jpg" alt=""><figcaption class="cap">All of us at the foot of the tower as it lit up gold — minutes before our 22:30 lift.</figcaption></figure></div>
+Avin was four years old, awake at 23:00, watching Paris from the second floor. The lift went up smoothly — though Avin, wide-eyed and gripping the rail, decided it was a <strong>roller-coaster</strong> and held on tight the whole way up. The kids leaned over the rail and pointed: "That one's the Louvre!" "That one's Sacré-Cœur!"
+<div class="folio">— Issue 08 · FRANCE · 11 —</div></div>
+<div class="mag-page mag-story"><div class="op-eyebrow">PARIS · THE VIEW FROM OUR WINDOW · EKLO</div>
+<div class="op-title">Dusk to dawn.</div>
+<div class="op-lead">Our top-floor room at Eklo looked straight down the city at the Eiffel Tower. We watched it sparkle at midnight, its beacon sweeping the dark — and found it again at first light, wrapped in morning mist.</div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:69.00mm"><img src="../images/france/day-21-eiffel-window-midnight.jpg" alt=""><figcaption class="cap">Midnight — the beacon sweeping the sky from our window.</figcaption></figure><figure class="ph" style="width:69.00mm"><img src="../images/france/day-22-eiffel-window-dawn.jpg" alt=""><figcaption class="cap">Dawn — the tower in the morning mist, Day 22.</figcaption></figure></div>
+<div class="folio">— Issue 08 · FRANCE · 12 —</div></div>
+<div class="mag-page mag-story"><div class="op-eyebrow">★ TASTES OF THE TRIP</div>
+<div class="op-title">Six things we ate<br>and won't forget.</div>
+<div class="op-lead">From morning coffee to evening pastries — the flavours that ran through both our Paris days.</div>
+<div class="prow"><figure class="ph" style="width:57.61mm"><img src="../images/france/food-01-steak-frites.jpg" alt=""><figcaption class="cap"><b>Steak-frites</b> — the classic bistro lunch.</figcaption></figure><figure class="ph" style="width:57.60mm"><img src="../images/france/food-02-charcuterie.jpg" alt=""><figcaption class="cap"><b>Charcuterie &amp; Fromage</b> — the French apéro on a plank.</figcaption></figure><figure class="ph" style="width:57.60mm"><img src="../images/france/food-03-crepe.jpg" alt=""><figcaption class="cap"><b>Crêpe au Chocolat</b> — the kids' pick.</figcaption></figure></div>
+<div class="prow"><figure class="ph" style="width:57.60mm"><img src="../images/france/food-04-macarons.jpg" alt=""><figcaption class="cap"><b>Macarons</b> — almond shells, ganache, chantilly.</figcaption></figure><figure class="ph" style="width:57.60mm"><img src="../images/france/food-05-onion-soup.jpg" alt=""><figcaption class="cap"><b>Soupe à l'Oignon</b> — cheese gratinéed over a crouton.</figcaption></figure><figure class="ph" style="width:57.60mm"><img src="../images/france/food-06-moelleux.jpg" alt=""><figcaption class="cap"><b>Moelleux au Chocolat</b> — a molten centre, ice cream alongside.</figcaption></figure></div>
+<div class="folio">— Issue 08 · FRANCE · 13 —</div></div>
+<div class="mag-page mag-story"><div class="op-eyebrow">PARIS · AT THE TABLE</div>
+<div class="op-title">Five at the table.</div>
+<div class="op-lead">Between the monuments, the best bits — a family of five around a Paris table, morning and night.</div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:112.00mm"><img src="../images/france/day-21-cafe-comedie-dinner.jpg" alt=""><figcaption class="cap">Dinner at Café de la Comédie — mirrors, gold lamps, onion soup and charcuterie.</figcaption></figure></div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:112.00mm"><img src="../images/france/day-22-breakfast-window.jpg" alt=""><figcaption class="cap">Breakfast by the window — croissants and crêpes before the last day.</figcaption></figure></div>
+<div class="folio">— Issue 08 · FRANCE · 14 —</div></div>
+<div class="mag-page mag-story"><div class="op-eyebrow">VERSAILLES · DAY 22</div>
+<div class="op-title">The Sun King's palace.</div>
+<div class="op-lead">We nearly missed our slot and queued under grey skies — but the Château de Versailles still stops you dead at the gates. Louis XIV built it as the seat of absolute power: 2,300 rooms, gardens to the horizon, gold on almost everything.</div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:73.33mm"><img src="../images/france/day-22-versailles-royal-gate.jpg" alt=""><figcaption class="cap">The Royal Gate, Place d'Armes.</figcaption></figure><figure class="ph" style="width:73.33mm"><img src="../images/france/day-22-rer-versailles.jpg" alt=""><figcaption class="cap">Getting there — the RER C out to the palace.</figcaption></figure></div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:73.33mm"><img src="../images/france/day-22-versailles-forecourt-family.jpg" alt=""><figcaption class="cap">All five in the forecourt — under the grey and the drizzle.</figcaption></figure><figure class="ph" style="width:41.25mm"><img src="../images/france/day-22-versailles-louis14-horse.jpg" alt=""><figcaption class="cap">Louis XIV on horseback in the forecourt.</figcaption></figure></div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:41.25mm"><img src="../images/france/day-22-versailles-gate-crown.jpg" alt=""><figcaption class="cap">The royal arms and crown, in gold leaf.</figcaption></figure><figure class="ph" style="width:41.25mm"><img src="../images/france/day-22-versailles-chapel.jpg" alt=""><figcaption class="cap">The Royal Chapel — "LA FRANCE" on the pediment.</figcaption></figure><figure class="ph" style="width:41.25mm"><img src="../images/france/day-22-versailles-allegory.jpg" alt=""><figcaption class="cap">Allegory of France, on the entrance screen.</figcaption></figure></div>
+<div class="folio">— Issue 08 · FRANCE · 15 —</div></div>
+<div class="mag-page mag-story"><div class="op-eyebrow">VERSAILLES · INSIDE · DAY 22</div>
+<div class="op-title">Inside the palace.</div>
+<div class="op-lead">Past the gilded gate, the palace opens into room after room of the State Apartments — marble and gold, ceilings painted with gods and kings. At its heart runs the Hall of Mirrors, where in 1919 the Treaty of Versailles was signed.</div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:43.50mm"><img src="../images/france/day-22-versailles-hall-of-mirrors.jpg" alt=""><figcaption class="cap">The Hall of Mirrors — 357 mirrors down a 73-metre gallery.</figcaption></figure><figure class="ph" style="width:77.33mm"><img src="../images/france/day-22-versailles-ceiling.jpg" alt=""><figcaption class="cap">Look up — a whole ceiling painted as sky.</figcaption></figure></div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:73.33mm"><img src="../images/france/day-22-versailles-bedchamber.jpg" alt=""><figcaption class="cap">A royal bedchamber, gold to the canopy.</figcaption></figure><figure class="ph" style="width:41.25mm"><img src="../images/france/day-22-versailles-state-bed.jpg" alt=""><figcaption class="cap">Crimson and crystal — a state bed.</figcaption></figure><figure class="ph" style="width:41.25mm"><img src="../images/france/day-22-versailles-sunking-marble.jpg" alt=""><figcaption class="cap">The Sun King in marble.</figcaption></figure></div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:41.25mm"><img src="../images/france/day-22-versailles-louis14-armour.jpg" alt=""><figcaption class="cap">Louis XIV in armour, astride his horse.</figcaption></figure><figure class="ph" style="width:73.33mm"><img src="../images/france/day-22-versailles-history-galleries.jpg" alt=""><figcaption class="cap">The History of France galleries, floor to ceiling.</figcaption></figure></div>
+<div class="folio">— Issue 08 · FRANCE · 16 —</div></div>
+<div class="mag-page mag-story"><div class="op-eyebrow">SAINTE-CHAPELLE · DAY 22</div>
+<div class="op-title">A box of stained-glass light.</div>
+<div class="op-lead">Saint Louis built this royal chapel in just seven years — finished 1248 — to house Christ's Crown of Thorns. Its fifteen windows rise 15 metres, holding 1,113 scenes of glass. On a sunny afternoon the whole upper chapel turns to jewelled light.</div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:99.12mm"><img src="../images/france/day-22-saintechapelle-upper.jpg" alt=""><figcaption class="cap">The upper chapel — 15 metres of 13th-century glass.</figcaption></figure></div>
+<div class="prow" style="justify-content:center"><figure class="ph" style="width:60.00mm"><img src="../images/france/day-22-saintechapelle-family-front.jpg" alt=""><figcaption class="cap">All five out front — the sun over the Gothic spire.</figcaption></figure><figure class="ph" style="width:60.00mm"><img src="../images/france/day-22-saintechapelle-inside.jpg" alt=""><figcaption class="cap">Inside, with the windows blazing behind us.</figcaption></figure></div>
+<div class="folio">— Issue 08 · FRANCE · 17 —</div></div>
+<div class="mag-page mag-story"><div class="op-eyebrow">PARIS · ALONG THE SEINE · ÎLE DE LA CITÉ</div>
+<div class="op-title">Along the Seine.</div>
+<div class="op-lead">Sainte-Chapelle sits on the Île de la Cité — the island where Paris began two thousand years ago. Next to it stands the Conciergerie, where Marie-Antoinette spent her last weeks before the guillotine.</div>
+<div class="prow"><figure class="ph" style="width:112.26mm"><img src="../images/france/day-22-seine-conciergerie.jpg" alt=""><figcaption class="cap">The Conciergerie and the Seine.</figcaption></figure><figure class="ph" style="width:63.14mm"><img src="../images/france/day-22-seine-family.jpg" alt=""><figcaption class="cap">All five on the Pont au Change, the Conciergerie behind.</figcaption></figure></div>
+We crossed to the island in the afternoon sun. A <em>bateau-mouche</em> slid under the arches of the Pont Neuf — the "New Bridge," in fact the oldest in Paris — while the towers of the Conciergerie kept watch over the water.
+<div class="folio">— Issue 08 · FRANCE · 18 —</div></div>
+<div class="mag-page mag-reflection"><div class="rf-eyebrow">REFLECTIONS · FRANCE</div><div class="rf-headline">A candle in Lourdes,<br>a lift up the Eiffel,<br>two ends of France.</div><figure class="ph rf-photo"><img src="../images/france/day-22-reflections-last-view.jpg" alt=""><figcaption class="cap">Last view · Paris · Day 22.</figcaption></figure><div class="rf-body"><p>France is two countries layered on the same map. The southern pilgrim France of Lourdes — quiet, devout, intimate. The northern capital France of Paris — loud, electric, monumental. We did the long route between them on a TGV, eating a baguette in Coach 12.</p></div><div class="rf-grid"><div class="rf-card"><div class="rf-label">Favourite moment</div><div class="rf-value">Avin's face on the Eiffel's second floor at 22:50. He could see the whole city below him.</div></div><div class="rf-card"><div class="rf-label">Hardest moment</div><div class="rf-value">The long Versailles queue under grey skies — soaked in the drizzle before we reached the gates.</div></div><div class="rf-card"><div class="rf-label">If we come back…</div><div class="rf-value">A week in Paris. The Loire châteaux. Brittany. Provence in lavender season.</div></div></div><div class="rf-signoff">— Avinesh, Lana, Avisha, Aviann &amp; Avin Munasinghe-Fernando<br>Lourdes → Toulouse → Paris · 28–30 July 2026</div><div class="folio">— Issue 08 · FRANCE · 19 —</div></div>
+<div class="mag-page mag-back"><div class="bc-issue">No. 08 · The France Issue</div><div class="bc-brand">Munasinghe-Fernando<br>Travel Magazine</div><div class="bc-next">★ NEXT ISSUE ★</div><div class="bc-title">NETHERLANDS</div><div class="bc-sub">Amsterdam canals, Anne Frank's diary, and a cousin's house to come home to.</div></div>
+<script>
+(function(){var PAGE_PX=793.7;function fit(){var vw=document.documentElement.clientWidth||window.innerWidth;var z=Math.min(1,vw/PAGE_PX);var p=document.querySelectorAll(".mag-page");for(var i=0;i<p.length;i++){p[i].style.zoom=z;}}window.addEventListener("resize",fit);window.addEventListener("orientationchange",fit);fit();})();
+</script>
+</body></html>

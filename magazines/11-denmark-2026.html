@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Munasinghe-Fernando Travel Magazine · DENMARK Issue · August 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+@page { size:A4 portrait; margin:0; }
+html, body { font-family:'Plus Jakarta Sans', sans-serif; background:#222; color:#1a1a1a; }
+body { padding:20px; }
+.mag-page { width:210mm; min-height:295mm; background:#fefcf7; margin:14px auto; box-shadow:0 8px 32px rgba(0,0,0,0.25); position:relative; overflow:hidden; page-break-after:always; break-after:page; }
+.mag-page:last-child { page-break-after:auto; }
+.mag-cover { background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.18) 45%, rgba(0,0,0,0.84) 100%), url('../images/denmark/nyhavn-houses.jpg') center 32%/cover #5c0a0a; color:white; display:flex; flex-direction:column; padding:18mm 16mm; position:relative; }
+.mag-cover::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 20% 80%, #0e4d6e40, transparent 50%); pointer-events:none; }
+.cv-issue { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:rgba(255,255,255,0.85); margin-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:4px; display:flex; justify-content:space-between; }
+.cv-flag { font-size:14px; }
+.cv-brand { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:18px; color:rgba(255,255,255,0.95); letter-spacing:0.05em; margin-bottom:auto; }
+.cv-title { font-family:'Fraunces', serif; font-weight:700; font-size:96px; line-height:0.9; color:white; margin-bottom:6px; letter-spacing:-0.02em; text-shadow:2px 4px 12px rgba(0,0,0,0.4); }
+.cv-sub { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:24px; color:rgba(255,255,255,0.95); margin-bottom:24px; text-shadow:1px 2px 8px rgba(0,0,0,0.5); }
+.cv-tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+.cv-tag { background:rgba(255,255,255,0.15); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.3); border-radius:100px; padding:5px 14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.15em; text-transform:uppercase; }
+.cv-features { font-family:'Fraunces', serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.9); border-top:1px solid rgba(255,255,255,0.3); padding-top:12px; margin-top:8px; }
+.cv-features b { font-weight:700; color:#f0d68c; }
+.cv-meta { position:absolute; bottom:14mm; right:16mm; text-align:right; font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; color:rgba(255,255,255,0.7); }
+.mag-welcome { padding:22mm 18mm; }
+.wl-num { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:14px; color:#c8102e; margin-bottom:4px; }
+.wl-title { font-family:'Fraunces', serif; font-weight:700; font-size:56px; line-height:1; color:#1a1a1a; margin-bottom:24px; letter-spacing:-0.02em; }
+.wl-divider { width:60px; height:3px; background:#0e4d6e; margin-bottom:24px; }
+.wl-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; column-count:2; column-gap:14mm; column-rule:1px solid #e8d6a8; color:#3d3024; max-width:100%; margin-bottom:24mm; }
+.wl-body p { margin-bottom:10px; text-align:justify; }
+.wl-body p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:62px; float:left; line-height:0.9; padding:2px 8px 0 0; color:#c8102e; }
+.toc-title { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#c8102e; border-bottom:2px solid #c8102e; padding-bottom:8px; margin-bottom:14px; }
+.toc-list { list-style:none; column-count:2; column-gap:14mm; font-family:'Fraunces', serif; font-size:13px; line-height:1.8; }
+.toc-list li { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px dotted #0e4d6e40; padding:4px 0; break-inside:avoid; }
+.toc-list .toc-name { font-style:italic; }
+.toc-list .toc-page { font-family:'JetBrains Mono', monospace; font-size:10px; color:#8b6914; font-weight:700; }
+.mag-spread { padding:14mm 16mm; display:flex; flex-direction:column; }
+.sp-eyebrow { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#c8102e; margin-bottom:8px; }
+.sp-headline { font-family:'Fraunces', serif; font-weight:700; font-size:38px; line-height:0.95; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.01em; }
+.sp-headline em { font-style:italic; font-weight:400; color:#c8102e; }
+.sp-deck { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:15px; line-height:1.4; color:#5a4a3a; margin-bottom:10px; max-width:92%; }
+.sp-meta { display:flex; gap:14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; border-top:1px solid #0e4d6e; padding-top:8px; margin-bottom:14px; }
+.sp-hist { margin:2px 0 12px; border-left:3px solid #c8102e; padding:4px 0 4px 10px; }
+.sp-hist .sp-hist-title { font-family:'Fraunces', serif; font-weight:700; font-size:16px; color:#1a1a1a; margin-bottom:4px; }
+.sp-hist p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify; }
+.sp-hist p + p { margin-top:6px; }
+.sp-photo { width:100%; margin-bottom:6px; text-align:center; position:relative; }
+.sp-photo img { max-width:100%; max-height:170mm; display:block; margin:0 auto; border-radius:2px; }
+.sp-photo.compact img { max-height:116mm; }
+.sp-photo .ph-info { display:inline-block; margin-top:4px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
+.sp-caption { font-family:'Fraunces', serif; font-style:italic; font-size:9.5px; color:#5a4a3a; margin-bottom:10px; padding-left:12px; border-left:2px solid #0e4d6e; }
+.sp-cols { column-count:2; column-gap:10mm; column-rule:0; }
+.sp-cols p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; margin-bottom:7px; }
+.sp-cols p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:38px; float:left; line-height:0.9; padding:2px 6px 0 0; color:#c8102e; }
+.sp-quote { break-inside:avoid; font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:14px; line-height:1.4; color:#c8102e; text-align:center; padding:10px 12px; border-top:1px solid #0e4d6e; border-bottom:1px solid #0e4d6e; margin:10px 0; }
+.sp-quote::before, .sp-quote::after { content:'"'; font-size:30px; line-height:0; vertical-align:-12px; color:#0e4d6e; padding:0 3px; }
+.strip { display:grid; grid-template-columns:repeat(4,1fr); gap:4mm; margin-top:4px; }
+.strip img { width:100%; height:auto; display:block; border-radius:2px; background:#0e0e0e; }
+.mag-food { padding:18mm 16mm; }
+.fd-headline { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.02em; }
+.fd-headline em { font-style:italic; font-weight:400; color:#c8102e; }
+.fd-deck { font-family:'Fraunces', serif; font-style:italic; font-size:16px; color:#5a4a3a; margin-bottom:18px; border-bottom:2px solid #0e4d6e; padding-bottom:14px; }
+.fd-grid { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
+.fd-card { background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; overflow:hidden; }
+.fd-card .fd-img { width:100%; aspect-ratio:5/3; background:#e8dcc0; position:relative; display:flex; align-items:center; justify-content:center; background-image:repeating-linear-gradient(45deg, #e8dcc0 0 8px, #ddd1b3 8px 16px); }
+.fd-card .fd-img .ph { font-family:'JetBrains Mono', monospace; font-size:10px; color:#8b6914; text-align:center; padding:8px; }
+.fd-card .fd-body { padding:10px 14px 14px; }
+.fd-card .fd-num { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:22px; color:#c8102e; line-height:1; }
+.fd-card .fd-name { font-family:'Fraunces', serif; font-weight:700; font-size:18px; line-height:1.1; color:#1a1a1a; margin:4px 0 6px; }
+.fd-card .fd-desc { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.5; color:#5a4a3a; margin-bottom:5px; }
+.fd-card .fd-where { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.15em; color:#8b6914; text-transform:uppercase; }
+.mag-album { padding:20mm 18mm; }
+.album-sub { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:#c8102e; margin-bottom:2px; }
+.album-head { font-family:'Fraunces', serif; font-weight:700; font-size:30px; line-height:1; color:#1a1a1a; margin-bottom:12px; }
+.album-intro { font-family:'Fraunces', serif; font-style:italic; font-size:12px; color:#5a4a3a; margin:-6px 0 14px; }
+.mag-pq { margin:7mm 0; padding:6mm 0; border-top:2px solid #c8102e; border-bottom:1px solid #c8102e40; text-align:center; }
+.mag-pq q { font-family:'Fraunces', serif; font-style:italic; font-weight:600; font-size:26px; line-height:1.2; color:#1a1a1a; quotes:'“' '”'; }
+.mag-pq .pq-by { display:block; margin-top:10px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:#c8102e; }
+/* ===== FEATURE-LED EDITORIAL SYSTEM ===== */
+.mag-lead { display:grid; grid-template-columns:1.6fr 1fr; gap:8mm; align-items:end; margin:6px 0 7mm; }
+.mag-lead .ll-feat { margin:0; position:relative; overflow:hidden; border-radius:3px; }
+.mag-lead .ll-feat img { width:100%; height:auto; display:block; }
+.mag-lead .ll-col { display:flex; flex-direction:column; padding-bottom:3mm; }
+.mag-lead .ll-kick { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#c8102e; display:block; margin-bottom:10px; }
+.mag-lead .ll-intro { font-family:'Fraunces',serif; font-style:italic; font-size:14px; line-height:1.62; color:#3d3024; }
+.ed-two, .ed-grid3, .ed-grid4, .ed-land { display:grid; margin-top:8px; }
+.ed-two { grid-template-columns:repeat(2,1fr); gap:6mm; }
+.ed-grid3 { grid-template-columns:repeat(3,1fr); gap:5mm; }
+.ed-grid4 { grid-template-columns:repeat(4,1fr); gap:4mm; }
+.ed-land { grid-template-columns:repeat(2,1fr); gap:6mm; }
+.ed-two figure, .ed-grid3 figure, .ed-grid4 figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; aspect-ratio:3/4; }
+.ed-land figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; aspect-ratio:4/3; }
+.ed-two img, .ed-grid3 img, .ed-grid4 img, .ed-land img { width:100%; height:100%; object-fit:contain; display:block; }
+.ed-cap-ov { position:absolute; left:0; right:0; bottom:0; padding:22px 11px 9px; background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.35) 55%, transparent); color:#fff; font-family:'Fraunces',serif; font-size:9px; line-height:1.4; }
+.ed-grid3 .ed-cap-ov { padding:16px 8px 6px; font-size:8px; line-height:1.3; }
+.ed-grid4 .ed-cap-ov { padding:14px 6px 5px; font-size:7px; line-height:1.25; }
+.ed-cap-ov strong { color:#f0d68c; font-weight:700; }
+.mag-lead .ll-feat .ed-cap-ov { padding:26px 14px 12px; font-size:10px; line-height:1.45; }
+.ed-duo { display:flex; gap:6mm; justify-content:center; margin-top:8px; }
+.ed-duo figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; }
+.ed-duo img { height:105mm; width:auto; display:block; }
+.mag-reflection { background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%); padding:24mm 22mm; display:flex; flex-direction:column; }
+.rf-eyebrow { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#c8102e; margin-bottom:8px; }
+.rf-headline { font-family:'Fraunces', serif; font-weight:700; font-size:54px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
+.rf-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; color:#3d3024; margin-bottom:24px; max-width:85%; }
+.rf-body p { margin-bottom:12px; }
+.rf-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:6mm; margin-bottom:16px; }
+.rf-card { background:rgba(255,255,255,0.6); padding:14px 16px; border-left:3px solid #c8102e; }
+.rf-card .rf-label { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#c8102e; margin-bottom:4px; }
+.rf-card .rf-value { font-family:'Fraunces', serif; font-size:13px; line-height:1.4; color:#3d3024; }
+.rf-signoff { margin-top:auto; padding-top:18mm; font-family:'Fraunces', serif; font-style:italic; font-size:13px; color:#c8102e; text-align:right; }
+.mag-back { background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 100%), url('../images/denmark/back-cover.jpg') center/cover #0e4d6e; color:white; display:flex; flex-direction:column; justify-content:flex-end; padding:24mm 20mm; }
+.bc-next { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:6px; }
+.bc-country { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:white; margin-bottom:8px; }
+.bc-tagline { font-family:'Fraunces', serif; font-style:italic; font-size:18px; color:rgba(255,255,255,0.9); border-top:1px solid rgba(255,255,255,0.4); padding-top:14px; margin-bottom:12px; max-width:70%; }
+.bc-mag { position:absolute; top:20mm; left:20mm; font-family:'Fraunces', serif; font-style:italic; font-weight:300; font-size:16px; color:rgba(255,255,255,0.9); letter-spacing:0.05em; }
+.bc-issue { position:absolute; top:20mm; right:20mm; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; color:rgba(255,255,255,0.7); }
+.mag-page .folio { position:absolute; bottom:4mm; left:0; right:0; text-align:center; font-family:'Fraunces', serif; font-style:italic; font-size:8.5px; color:#8b6914; }
+@media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
+</style></head>
+<body>
+
+<div class="mag-page mag-cover" style="background:linear-gradient(180deg, rgba(0,0,0,0.58) 0%, rgba(0,0,0,0.22) 32%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.10) 80%, rgba(0,0,0,0.48) 100%), url('../images/denmark/cover-family.jpg') center/cover #23405c;">
+  <div class="cv-issue"><span>Issue 11 · 2026</span><span class="cv-flag">🇩🇰 DENMARK</span></div>
+  <div class="cv-brand" style="margin-bottom:16px;">Munasinghe-Fernando Travel Magazine</div>
+  <div>
+    <div class="cv-title">DENMARK</div>
+    <div class="cv-sub">Copenhagen · Bikes, canals, hygge</div>
+    <div class="cv-tags">
+      <span class="cv-tag">★ World's Happiest City</span>
+      <span class="cv-tag">🌈 Colourful Nyhavn</span>
+      <span class="cv-tag">🎡 Tivoli by Day</span>
+    </div>
+  </div>
+  <div class="cv-meta">Munasinghe-Fernando Family · Sunday 2 Aug 2026</div>
+</div>
+
+<div class="mag-page mag-welcome">
+  <div class="wl-num">No. 11 · A Letter from the Road</div>
+  <div class="wl-title">Who we are,<br>why we travel.</div>
+  <div class="wl-divider"></div>
+  <div style="text-align:center; margin:2mm 0 9mm;"><img src="../images/denmark/family-nyhavn.jpg" alt="The five of us in a selfie on the Nyhavn quay, the painted harbour houses and the canal behind us." style="max-height:106mm; max-width:78%; object-fit:contain; border-radius:4px;"></div>
+  <div class="wl-body">
+    <p>We're the Munasinghe-Fernandos — two parents and three children who love to see the world <em>together</em>. My husband and I share one dream: to travel to as many countries as we possibly can, as a family.</p>
+    <p>It's never easy — booking flights, trains and rooms for five is its own small adventure, and we know we can't reach everywhere. But from every country we do get to, we try our very best to see as much as we can, and to bring the children along for all of it. This magazine is where we keep it — one issue for every country, in the order we reach them.</p>
+    <p style="font-style:italic; color:#c8102e; text-align:right; margin-top:14px;">— The Munasinghe-Fernandos, 2026</p>
+  </div>
+  <div class="folio">— Issue 11 · DENMARK · 02 —</div>
+</div>
+
+<div class="mag-page mag-welcome">
+  <div class="wl-num">No. 11 · Welcome</div>
+  <div class="wl-title">Welcome to<br>hygge.</div>
+  <div class="wl-divider"></div>
+  <div class="wl-body">
+    <p>Copenhagen was a one-night stop on the way to the sister visit in Gothenburg. We flew in from Amsterdam on a Sunday, dropped our bags at the Danhostel, and gave the city one big, sunny afternoon. In it we walked Nyhavn, took the canal-boat cruise, found Bishop Absalon on his horse, and let the children loose in Tivoli with clouds of pink candyfloss.</p>
+    <p>But the day really began at the airport. We had come up from the Netherlands; my sister and her family, and our parents, came the other way — by train from Sweden — and we all met on the arrivals concourse. I hugged my sister for the first time in four years. Aviann could barely wait to be introduced to her cousin, and the children were fast friends almost at once.</p>
+    <p>The city is small — 660,000 people, 380 km of bicycle lanes, a cycling rate of 62% against Amsterdam's 38%. Copenhagen has been voted the world's happiest city more often than anywhere else, and you feel why within ten minutes: it is clean, it is calm, the colours are bright but never loud, and people smile at you on the bus.</p>
+    <p>This issue is a short one. We were here for a single golden afternoon — and a little "I ❤ Copenhagen" postcard magnet came with us to every stop — held up to match each iconic view, the way we like to collect a place.</p>
+    <p style="font-style:italic; color:#c8102e; text-align:right; margin-top:14px;">— The Munasinghe-Fernandos, 2026</p>
+  </div>
+  <div class="toc-title">In this issue</div>
+  <ul class="toc-list">
+    <li><span class="toc-name">Who We Are — Why We Travel</span><span class="toc-page">02</span></li>
+    <li><span class="toc-name">Welcome — Hygge</span><span class="toc-page">03</span></li>
+    <li><span class="toc-name">Nyhavn &amp; the Canal Boat</span><span class="toc-page">04</span></li>
+    <li><span class="toc-name">Tivoli — Candyfloss &amp; Rides</span><span class="toc-page">05</span></li>
+    <li><span class="toc-name">The Old Town &amp; Bishop Absalon</span><span class="toc-page">06</span></li>
+    <li><span class="toc-name">Copenhagen at Golden Hour</span><span class="toc-page">07</span></li>
+    <li><span class="toc-name">Tastes of Denmark</span><span class="toc-page">08</span></li>
+    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">09</span></li>
+  </ul>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">COVER STORY · NYHAVN · DAY 25</div>
+  <div class="sp-headline">A canal of<br><em>painted houses.</em></div>
+  <div class="sp-hist">
+    <div class="sp-hist-title">Where the merchants' harbour learned contentment</div>
+    <p>The name says everything: <strong>København</strong>, the merchants' harbour — a Viking-age landing where the herring were fat and the sound between the islands funnelled every ship bound for the Baltic. Nyhavn itself — "New Harbour" — was dug by Swedish prisoners of war in the 1670s and worked as a sailors' quay for three centuries. Hans Christian Andersen lived in three of these houses at different points in his life. Restored and pedestrianised in the 1980s, it is now the most photographed view in Denmark.</p>
+  </div>
+  <div class="sp-deck">Our first afternoon began where every Copenhagen story does — at the row of painted 17th-century townhouses, and out onto the water on the canal boat.</div>
+  <div class="sp-meta"><span>Sun 2 Aug 2026</span><span>Nyhavn · Inner Harbour</span><span>Canal cruise + quay</span></div>
+  <div class="sp-photo"><img src="../images/denmark/harbour.jpg" alt="Copenhagen's inner harbour seen from the canal boat — a long quay of gabled harbour-front houses, the masts of Nyhavn's old wooden ships, crowds on the waterfront, and a footbridge crossing the channel under a grey sky." style="max-height:104mm;"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+  <div class="sp-caption">Copenhagen's inner harbour from the water — the long quay of gabled houses, the masts of Nyhavn's old wooden ships, and a low footbridge over the channel. This is the harbour the whole city grew up around.</div>
+  <div class="sp-cols">
+    <p>We queued for the canal boat and slid out under the low bridges, the harbour opening up around us and the old wooden ships rocking at their moorings, while the children trailed their hands in the water and argued over who could spot the most flags. The light was clean, the water calm, the whole city the colour of a paintbox.</p>
+    <div class="sp-quote">More bikes than cars, more parks than shopping malls, and the colour-coded waterfront of Nyhavn.</div>
+    <p>Back on the quay we ate an early dinner at a canal-side table, watched the tour boats come and go, and let the afternoon stretch. It is touristy, and none of that matters once the light turns gold on those façades.</p>
+  </div>
+  <div class="ed-grid3">
+    <figure><img src="../images/denmark/nyhavn-postcard.jpg" loading="lazy" alt="A hand holding the I love Copenhagen postcard magnet up against the real Nyhavn houses and the red tour-boat kiosks."><figcaption class="ed-cap-ov">The <strong>magnet</strong> vs. the real thing, at the boat kiosks.</figcaption></figure>
+    <figure><img src="../images/denmark/canal-boat.jpg" loading="lazy" alt="Aboard the canal tour boat, harbour houses sliding past behind the family."><figcaption class="ed-cap-ov">Aboard the <strong>canal boat</strong>, the harbour sliding past.</figcaption></figure>
+    <figure><img src="../images/denmark/nyhavn-booths.jpg" loading="lazy" alt="The crowded Nyhavn quay with red cruise-ticket kiosks, flags and painted houses."><figcaption class="ed-cap-ov">The busy <strong>quay</strong> — flags, kiosks, and crowds.</figcaption></figure>
+  </div>
+  <div class="folio">— Issue 11 · DENMARK · 04 —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">TIVOLI GARDENS · DAY 25</div>
+  <div class="sp-headline">Candyfloss and<br><em>the Flying Trunk.</em></div>
+  <div class="sp-hist">
+    <div class="sp-hist-title">The pleasure garden that taught Disney</div>
+    <p>Tivoli opened on 15 August 1843, when the showman <strong>Georg Carstensen</strong> talked King Christian VIII into the land just outside the ramparts — "when the people are amusing themselves, they do not think about politics." It is the world's second-oldest amusement park still running. <strong>Hans Christian Andersen</strong> was a regular, and the gardens fed straight into his tales — one ride here is still named <em>Den Flyvende Kuffert</em>, "The Flying Trunk," after his story. And in 1951 a visiting <strong>Walt Disney</strong> wandered Tivoli, took notes on its lights and music, and carried the feeling home.</p>
+  </div>
+  <div class="sp-deck">By late afternoon we were inside the gardens — the Chinese Tower mirrored in the lake, the Dæmonen coaster looping behind it, and the thing the children had been promised all day: pink clouds of candyfloss bigger than their heads.</div>
+  <div class="sp-meta"><span>Sun 2 Aug 2026</span><span>Tivoli · city centre</span><span>Afternoon · rides + treats</span></div>
+  <div class="sp-photo"><img src="../images/denmark/tivoli-lake.jpg" alt="The Chinese Tower pagoda reflected in the Tivoli lake, the red Dæmonen roller-coaster loop behind it and swans drifting on the water." style="max-height:118mm;"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+  <div class="sp-caption">The heart of Tivoli — the Chinese Tower mirrored in the lake, the Dæmonen coaster looping behind, and swans drifting past the terrace pavilions in the late afternoon sun.</div>
+  <div class="sp-cols">
+    <p>Tivoli after a hundred and eighty years of practice is exactly what you'd hope: manicured gardens, fairy-tale pavilions, the smell of roasted almonds, small shrieks carried from the rides. We queued for the gentle ones, watched the older two brave the fast ones, and walked past <em>Den Flyvende Kuffert</em>, its blue-and-white front lit like a storybook.</p>
+    <div class="sp-quote">When the people are amusing themselves, they do not think about politics. — Georg Carstensen, 1843</div>
+    <p>The candyfloss did not survive long. Neither did the children's energy — which was exactly the plan, with a single short morning and a train to catch tomorrow.</p>
+  </div>
+  <div class="ed-grid4">
+    <figure><img src="../images/denmark/tivoli-candyfloss.jpg" loading="lazy" alt="Avin grinning enormously in a grey hat, holding a huge cloud of pink candyfloss at Tivoli."><figcaption class="ed-cap-ov"><strong>Avin</strong> and a cloud bigger than his face.</figcaption></figure>
+    <figure><img src="../images/denmark/tivoli-flying-trunk.jpg" loading="lazy" alt="A child walking through Tivoli with candyfloss, the blue-and-white Flying Trunk ride pavilion behind."><figcaption class="ed-cap-ov">Past <strong>Den Flyvende Kuffert</strong> — the Flying Trunk.</figcaption></figure>
+    <figure><img src="../images/denmark/tivoli-avisha.jpg" loading="lazy" alt="Avisha smiling with pink candyfloss and a pink A backpack at Tivoli."><figcaption class="ed-cap-ov"><strong>Avisha</strong>, candyfloss and the pink backpack.</figcaption></figure>
+    <figure><img src="../images/denmark/tivoli-star-flyer.jpg" loading="lazy" alt="The Tivoli star-flyer swing ride high against the sky, seats flying out on chains."><figcaption class="ed-cap-ov">The <strong>star-flyer</strong> over the gardens.</figcaption></figure>
+  </div>
+  <div class="folio">— Issue 11 · DENMARK · 05 —</div>
+</div>
+
+<div class="mag-page mag-album">
+  <div class="album-sub">A photo essay · The Old Town</div>
+  <div class="album-head">Bishop Absalon's city.</div>
+  <div class="mag-lead">
+    <figure class="ll-feat">
+      <img src="../images/denmark/absalon.jpg" loading="eager" alt="The green bronze equestrian statue of Bishop Absalon on Højbro Plads, old-town houses and a red Metro sign behind.">
+      <figcaption class="ed-cap-ov"><strong>Bishop Absalon</strong> on Højbro Plads — the warrior-bishop who fortified a fishing village in 1167 and, in doing so, founded Copenhagen.</figcaption>
+    </figure>
+    <div class="ll-col">
+      <span class="ll-kick">On Foot · Højbro Plads</span>
+      <div class="ll-intro">Between the harbour and Tivoli we crossed the old town on foot — over Højbro, past Absalon on his horse, under the copper spires that give the skyline its green crown.</div>
+    </div>
+  </div>
+  <div class="ed-duo">
+    <figure><img src="../images/denmark/oldtown-spire.jpg" loading="lazy" style="height:74mm" alt="An ornate tiered green copper spire rising over the old-town rooftops against a blue sky."><figcaption class="ed-cap-ov">One of the <strong>copper spires</strong> that turn green with age over the old town.</figcaption></figure>
+    <figure><img src="../images/denmark/canal-postcard.jpg" loading="lazy" style="height:74mm" alt="A hand holding the I love Copenhagen postcard magnet on the canal boat, harbour houses behind."><figcaption class="ed-cap-ov">The <strong>magnet</strong> again — held up to match the view, everywhere we went.</figcaption></figure>
+  </div>
+  <div class="sp-hist" style="margin-top:14px;">
+    <div class="sp-hist-title">One bishop, one building king — and one magnet</div>
+    <p>Copenhagen has two founders. <strong>Bishop Absalon</strong> raised the first fortress on the islet of Slotsholmen in 1167, and his statue has ridden over Højbro Plads since 1902. Five centuries later <strong>Christian IV</strong>, Denmark's great building king, gave the city its green-spired skyline — Rosenborg, the Round Tower, the Stock Exchange's dragon-tail spire. We didn't have time to climb them all — but we did what we always do: we bought a single <strong>"I ❤ Copenhagen"</strong> postcard magnet, a little tile printed with the city's icons — the Little Mermaid, Tivoli, the palaces — and at each place we held it up to match the real thing. It is how we like to collect a memory of everywhere we go: one iconic view at a time.</p>
+  </div>
+  <div class="folio">— Issue 11 · DENMARK · 06 —</div>
+</div>
+
+<div class="mag-page mag-album">
+  <div class="album-sub">A photo essay · The City Centre</div>
+  <div class="album-head">Copenhagen, ground to gold.</div>
+  <div class="album-intro">From the red-brick station to the sunset over the rooftops from our own window — the city we crossed on foot, end to end, in a single afternoon.</div>
+  <div class="sp-photo"><img src="../images/denmark/sunset-panorama.jpg" alt="A golden sunset over Copenhagen's rooftops seen from a high window — the City Hall tower on the right, Tivoli's rides and a domed roof on the left, and a wide boulevard running west into the light." style="max-height:106mm;"><div class="ph-info">Photo · Munasinghe-Fernando</div></div>
+  <div class="sp-caption">The view from our room — sunset over the city, the City Hall tower to the right, Tivoli's rides and the Glyptotek's dome to the left, and the boulevard running west straight into the light. Not a bad window to end the day at.</div>
+  <div class="ed-grid3">
+    <figure style="background:#fefcf7"><img src="../images/denmark/central-station.jpg" loading="lazy" style="object-position:bottom" alt="Copenhagen Central Station's long red-brick facade with arched windows and spires, people crossing the street in front."><figcaption class="ed-cap-ov"><strong>Copenhagen Central</strong> — the 1911 red-brick terminus, our way in and out.</figcaption></figure>
+    <figure><img src="../images/denmark/glyptotek-lion.jpg" loading="lazy" alt="A green-bronze lion on a granite plinth in front of the columned terracotta facade of the Ny Carlsberg Glyptotek."><figcaption class="ed-cap-ov">A bronze <strong>lion</strong> at the Ny Carlsberg Glyptotek — the museum the brewer built.</figcaption></figure>
+    <figure><img src="../images/denmark/city-spire.jpg" loading="lazy" alt="A green copper clock-spire rising above a red-brick city-centre building against a blue sky."><figcaption class="ed-cap-ov">A green-copper <strong>clock-spire</strong> over the city-centre streets.</figcaption></figure>
+  </div>
+  <div class="folio">— Issue 11 · DENMARK · 07 —</div>
+</div>
+
+<div class="mag-page mag-food">
+  <div class="sp-eyebrow">★ TASTES OF THE TRIP</div>
+  <div class="fd-headline">The bites the kids<br><em>made their own.</em></div>
+  <div class="fd-deck">A short Danish stay — and the two we'll remember best are the ones the children made, and chose, for themselves.</div>
+  <div class="fd-grid">
+    <div class="fd-card">
+      <div class="fd-img" style="aspect-ratio:auto;height:104mm;background:#fff8ec;background-image:none;"><img src="../images/denmark/avisha-breakfast.jpg" style="max-height:100%;max-width:86%;object-fit:contain;border-radius:2px;" alt="A breakfast plate Avisha made — two boiled eggs above an open rye sandwich of ham and cheese, arranged like a little face."></div>
+      <div class="fd-body">
+        <div class="fd-num">01</div>
+        <div class="fd-name">Avisha's Breakfast</div>
+        <div class="fd-desc">Made start to finish by Avisha on our last Danish morning — ham and cheese on dense rye with two boiled eggs, laid out like a little face. His own take on smørrebrød, the Danish open sandwich.</div>
+        <div class="fd-where">📍 Danhostel · Day 26 · chef: Avisha</div>
+      </div>
+    </div>
+    <div class="fd-card">
+      <div class="fd-img" style="aspect-ratio:auto;height:104mm;background:#fff8ec;background-image:none;"><img src="../images/denmark/lagkagehuset-kid.jpg" style="max-height:100%;max-width:86%;object-fit:contain;border-radius:2px;" alt="One of the children beaming, holding a warm cheese-topped bun outside a Lagkagehuset bakery."></div>
+      <div class="fd-body">
+        <div class="fd-num">02</div>
+        <div class="fd-name">Lagkagehuset</div>
+        <div class="fd-desc">Denmark's favourite bakery chain. Its <em>wienerbrød</em> — "Vienna bread" — is what the world calls a "Danish"; the children went straight for the warm cheese buns and a pølsehorn, a sausage baked into seeded bread.</div>
+        <div class="fd-where">📍 Lagkagehuset · Day 25</div>
+      </div>
+    </div>
+  </div>
+  <div class="folio">— Issue 11 · DENMARK · 08 —</div>
+</div>
+
+<div class="mag-page mag-reflection">
+  <div class="rf-eyebrow">REFLECTIONS · DENMARK</div>
+  <div class="rf-headline">A sister at the gate,<br>painted houses,<br>pink candyfloss.</div>
+  <div class="rf-body">
+    <p>The magnet and the pastries were never quite the point. Copenhagen was where the family came back together — my sister and her family and our parents down by train from Sweden, us up from the Netherlands, all of us meeting at the airport after four years apart. The cousins were inseparable within minutes. That is the part we will keep.</p>
+    <p>Around it, the calmest, sunniest stop of the trip — Nyhavn from the water, Absalon on his horse, and Tivoli with the children trailing clouds of candyfloss. The "I ❤ Copenhagen" postcard magnet we bought on the quay ended up in every photo, held up to match the real thing — the way we like to collect a place.</p>
+    <p>Because there is plenty left. The Little Mermaid, the palaces, Tivoli lit up after dark, Strøget under Christmas lights — reasons enough to return, probably in winter, when the Danes do hygge properly.</p>
+  </div>
+  <div class="rf-grid">
+    <div class="rf-card">
+      <div class="rf-label">Favourite moment</div>
+      <div class="rf-value">Meeting my sister at the airport after four years — and the cousins becoming friends before we'd left the terminal.</div>
+    </div>
+    <div class="rf-card">
+      <div class="rf-label">Our tradition</div>
+      <div class="rf-value">An "I ❤ Copenhagen" postcard magnet, held up to match each iconic view — how we collect a memory of every place.</div>
+    </div>
+    <div class="rf-card">
+      <div class="rf-label">Next stop</div>
+      <div class="rf-value">The X2000 over the Øresund Bridge — 8 km across the sea to Sweden, together this time, for more days with the whole family.</div>
+    </div>
+  </div>
+  <figure style="margin:11mm 0 0; text-align:center;">
+    <img src="../images/denmark/family-reunion.jpg" alt="The whole extended family together on the Nyhavn quay — the parents, the grandparents and the cousins — the colourful harbour houses and canal behind them." style="max-width:100%; max-height:80mm; border-radius:4px; box-shadow:0 6px 20px rgba(0,0,0,0.18);">
+    <figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:10px; color:#7a5a3a; margin-top:7px;">All of us at Nyhavn — the Netherlands and Sweden meeting in the middle, four years in the making.</figcaption>
+  </figure>
+  <div class="rf-signoff" style="margin-top:9mm;">— Avinesh, Lana, Avisha, Aviann &amp; Avin Munasinghe-Fernando<br>Copenhagen · 2 August 2026</div>
+</div>
+
+<div class="mag-page mag-back">
+  <div class="bc-mag">Munasinghe-Fernando Travel Magazine</div>
+  <div class="bc-issue">No. 11 · One of Fourteen</div>
+  <div class="bc-next">★ NEXT ISSUE ★</div>
+  <div class="bc-country">SWEDEN</div>
+  <div class="bc-tagline">Over the Øresund Bridge to Gothenburg with the family who came to meet us — the sister, the grandparents, the cousins. Days of summer together.</div>
+</div>
+
+<style>
+/* Mobile: scale the A4 pages to fit the screen width (for direct web/GitHub Pages viewing) */
+@media (max-width: 840px){
+  body { padding:0 !important; background:#111; }
+  .mag-page { margin:0 auto 10px !important; box-shadow:none !important; }
+}
+</style>
+<script>
+(function(){
+  var PAGE_PX = 793.7; /* 210mm at 96dpi */
+  function fit(){
+    var vw = document.documentElement.clientWidth || window.innerWidth;
+    var z = Math.min(1, vw / PAGE_PX);
+    var pages = document.querySelectorAll('.mag-page');
+    for (var i=0;i<pages.length;i++){ pages[i].style.zoom = z; }
+  }
+  window.addEventListener('resize', fit);
+  window.addEventListener('orientationchange', fit);
+  fit();
+})();
+</script>
+</body></html>

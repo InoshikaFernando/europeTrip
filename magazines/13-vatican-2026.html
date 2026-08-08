@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Munasinghe-Fernando Travel Magazine · VATICAN CITY Issue · July 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+@page { size:A4 portrait; margin:0; }
+html, body { font-family:'Plus Jakarta Sans', sans-serif; background:#222; color:#1a1a1a; }
+body { padding:20px; }
+.mag-page { width:210mm; min-height:295mm; background:#fefcf7; margin:14px auto; box-shadow:0 8px 32px rgba(0,0,0,0.25); position:relative; overflow:hidden; page-break-after:always; break-after:page; }
+.mag-page:last-child { page-break-after:auto; }
+.mag-cover { background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.7) 100%), url('../images/vatican/cover.jpg') center/cover #4a0e08; color:white; display:flex; flex-direction:column; padding:18mm 16mm; position:relative; }
+.mag-cover::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 20% 80%, #c89b3c40, transparent 50%); pointer-events:none; }
+.cv-issue { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:rgba(255,255,255,0.85); margin-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:4px; display:flex; justify-content:space-between; }
+.cv-flag { font-size:14px; }
+.cv-brand { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:18px; color:rgba(255,255,255,0.95); letter-spacing:0.05em; margin-bottom:auto; }
+.cv-title { font-family:'Fraunces', serif; font-weight:700; font-size:96px; line-height:0.9; color:white; margin-bottom:6px; letter-spacing:-0.02em; text-shadow:2px 4px 12px rgba(0,0,0,0.4); }
+.cv-sub { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:24px; color:rgba(255,255,255,0.95); margin-bottom:24px; text-shadow:1px 2px 8px rgba(0,0,0,0.5); }
+.cv-tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+.cv-tag { background:rgba(255,255,255,0.15); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.3); border-radius:100px; padding:5px 14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.15em; text-transform:uppercase; }
+.cv-features { font-family:'Fraunces', serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.9); border-top:1px solid rgba(255,255,255,0.3); padding-top:12px; margin-top:8px; }
+.cv-features b { font-weight:700; color:#f0d68c; }
+.cv-meta { position:absolute; bottom:14mm; right:16mm; text-align:right; font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; color:rgba(255,255,255,0.7); }
+.mag-welcome { padding:22mm 18mm; }
+.wl-num { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:14px; color:#7a2018; margin-bottom:4px; }
+.wl-title { font-family:'Fraunces', serif; font-weight:700; font-size:56px; line-height:1; color:#1a1a1a; margin-bottom:24px; letter-spacing:-0.02em; }
+.wl-divider { width:60px; height:3px; background:#c89b3c; margin-bottom:24px; }
+.wl-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; column-count:2; column-gap:14mm; column-rule:1px solid #e8d6a8; color:#3d3024; max-width:100%; margin-bottom:24mm; }
+.wl-body p { margin-bottom:10px; text-align:justify; }
+.wl-body p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:62px; float:left; line-height:0.9; padding:2px 8px 0 0; color:#7a2018; }
+.toc-title { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#7a2018; border-bottom:2px solid #7a2018; padding-bottom:8px; margin-bottom:14px; }
+.toc-list { list-style:none; column-count:2; column-gap:14mm; font-family:'Fraunces', serif; font-size:13px; line-height:1.8; }
+.toc-list li { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px dotted #c89b3c40; padding:4px 0; break-inside:avoid; }
+.toc-list .toc-name { font-style:italic; }
+.toc-list .toc-page { font-family:'JetBrains Mono', monospace; font-size:10px; color:#8b6914; font-weight:700; }
+.mag-spread { padding:14mm 16mm; display:flex; flex-direction:column; }
+.sp-eyebrow { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#7a2018; margin-bottom:8px; }
+.sp-headline { font-family:'Fraunces', serif; font-weight:700; font-size:38px; line-height:0.95; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.01em; }
+.sp-deck { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:15px; line-height:1.4; color:#5a4a3a; margin-bottom:10px; max-width:92%; }
+.sp-meta { display:flex; gap:14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; border-top:1px solid #c89b3c; padding-top:8px; margin-bottom:14px; }
+.sp-hero { width:100%; height:64mm; background:#e8dcc0; background-size:cover; background-position:center; margin-bottom:6px; position:relative; border-radius:2px; }
+.sp-hero .ph-name { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:repeating-linear-gradient(45deg,#e8dcc0 0 10px,#ddd1b3 10px 20px); font-family:'JetBrains Mono', monospace; font-size:10px; color:#8b6914; }
+.sp-hero .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
+.sp-caption { font-family:'Fraunces', serif; font-style:italic; font-size:9.5px; color:#5a4a3a; margin-bottom:10px; padding-left:12px; border-left:2px solid #c89b3c; }
+.sp-cols { column-count:2; column-gap:10mm; column-rule:0; }
+.sp-cols p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; margin-bottom:7px; }
+.sp-cols p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:38px; float:left; line-height:0.9; padding:2px 6px 0 0; color:#7a2018; }
+.sp-quote { break-inside:avoid; font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:14px; line-height:1.4; color:#7a2018; text-align:center; padding:10px 12px; border-top:1px solid #c89b3c; border-bottom:1px solid #c89b3c; margin:10px 0; }
+.sp-quote::before, .sp-quote::after { content:'"'; font-size:30px; line-height:0; vertical-align:-12px; color:#c89b3c; padding:0 3px; }
+.mag-duo { padding:14mm 16mm; display:flex; flex-direction:column; gap:6mm; }
+.duo-row { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
+.duo-row.alt { grid-template-columns:2fr 1fr; }
+.duo-photo { background:#e8dcc0; aspect-ratio:4/5; position:relative; border-radius:2px; overflow:hidden; background-size:cover; background-position:center; }
+.duo-photo.wide { aspect-ratio:16/10; }
+.duo-photo .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
+.duo-photo > .ph-name { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; background:repeating-linear-gradient(45deg, #e8dcc0 0 8px, #ddd1b3 8px 16px); font-family:'JetBrains Mono', monospace; font-size:8px; color:#8b6914; text-align:center; padding:8px; gap:4px; }
+.duo-text { display:flex; flex-direction:column; justify-content:center; padding:0 4mm; }
+.duo-text h3 { font-family:'Fraunces', serif; font-weight:700; font-size:28px; line-height:1; color:#1a1a1a; margin-bottom:8px; }
+.duo-text p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; }
+.duo-text .kicker { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.3em; text-transform:uppercase; color:#7a2018; margin-bottom:6px; }
+.mag-food { padding:18mm 16mm; }
+.fd-headline { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.02em; }
+.fd-headline em { font-style:italic; font-weight:400; color:#7a2018; }
+.fd-deck { font-family:'Fraunces', serif; font-style:italic; font-size:16px; color:#5a4a3a; margin-bottom:18px; border-bottom:2px solid #c89b3c; padding-bottom:14px; }
+.fd-grid { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
+.fd-card { background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; overflow:hidden; }
+.fd-card .fd-img { width:100%; aspect-ratio:5/3; background:#e8dcc0; position:relative; display:flex; align-items:center; justify-content:center; background-image:repeating-linear-gradient(45deg, #e8dcc0 0 8px, #ddd1b3 8px 16px); }
+.fd-card .fd-img .ph { font-family:'JetBrains Mono', monospace; font-size:8px; color:#8b6914; text-align:center; padding:8px; }
+.fd-card .fd-body { padding:10px 14px 14px; }
+.fd-card .fd-num { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:22px; color:#7a2018; line-height:1; }
+.fd-card .fd-name { font-family:'Fraunces', serif; font-weight:700; font-size:18px; line-height:1.1; color:#1a1a1a; margin:4px 0 6px; }
+.fd-card .fd-desc { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.5; color:#5a4a3a; margin-bottom:5px; }
+.fd-card .fd-where { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.15em; color:#8b6914; text-transform:uppercase; }
+.mag-reflection { background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%); padding:24mm 22mm; display:flex; flex-direction:column; }
+.rf-eyebrow { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#7a2018; margin-bottom:8px; }
+.rf-headline { font-family:'Fraunces', serif; font-weight:700; font-size:54px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
+.rf-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; color:#3d3024; margin-bottom:24px; max-width:85%; }
+.rf-body p { margin-bottom:12px; }
+.rf-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:6mm; margin-bottom:16px; }
+.rf-card { background:rgba(255,255,255,0.6); padding:14px 16px; border-left:3px solid #7a2018; }
+.rf-card .rf-label { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#7a2018; margin-bottom:4px; }
+.rf-card .rf-value { font-family:'Fraunces', serif; font-size:13px; line-height:1.4; color:#3d3024; }
+.rf-signoff { margin-top:auto; padding-top:18mm; font-family:'Fraunces', serif; font-style:italic; font-size:13px; color:#7a2018; text-align:right; }
+.mag-back { background: linear-gradient(0deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.3) 100%), url('../images/vatican/vday-15.jpg') center/cover #4a0e08; color:white; display:flex; flex-direction:column; justify-content:flex-end; padding:24mm 20mm; }
+.bc-next { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:6px; }
+.bc-country { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:white; margin-bottom:8px; }
+.bc-tagline { font-family:'Fraunces', serif; font-style:italic; font-size:18px; color:rgba(255,255,255,0.9); border-top:1px solid rgba(255,255,255,0.4); padding-top:14px; margin-bottom:12px; max-width:70%; }
+.bc-mag { position:absolute; top:20mm; left:20mm; font-family:'Fraunces', serif; font-style:italic; font-weight:300; font-size:16px; color:rgba(255,255,255,0.9); letter-spacing:0.05em; }
+.bc-issue { position:absolute; top:20mm; right:20mm; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; color:rgba(255,255,255,0.7); }
+.mag-page .folio { position:absolute; bottom:4mm; left:0; right:0; text-align:center; font-family:'Fraunces', serif; font-style:italic; font-size:8.5px; color:#8b6914; }
+@media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
+</style></head>
+<body>
+
+<div class="mag-page mag-cover">
+  <div class="cv-issue"><span>Issue 13 · 2026</span><span class="cv-flag">🇻🇦 VATICAN CITY</span></div>
+  <div class="cv-brand">Munasinghe-Fernando Travel Magazine</div>
+  <div>
+    <div class="cv-title">VATICAN CITY</div>
+    <div class="cv-sub">A day inside the world's smallest country</div>
+    <div class="cv-tags">
+      <span class="cv-tag">★ World's Smallest Country</span>
+      <span class="cv-tag">⛪ St Peter's Basilica</span>
+      <span class="cv-tag">🎨 Sistine Chapel</span>
+    </div>
+    <div class="cv-features">INSIDE: <b>Vatican Museums</b> — 70,000+ artworks · <b>Sistine Chapel</b> — Michelangelo's ceiling, 1508–12 · <b>St Peter's Basilica</b> — the world's largest church · <b>The Colosseum</b> — ancient Rome at day's end</div>
+  </div>
+  <div class="cv-meta">Munasinghe-Fernando Family · Wed 22 Jul 2026</div>
+</div>
+
+<div class="mag-page mag-welcome">
+  <div class="wl-num">No. 13 · A Letter from the Road</div>
+  <div class="wl-title">A whole<br>new world.</div>
+  <div class="wl-divider"></div>
+  <div class="wl-body">
+    <p>We crossed a border this morning almost without noticing. One moment we were in Rome; then we walked through Bernini's great curved colonnade — and we were somewhere else entirely. A different country. The smallest in the world. And it truly felt like a whole new world.</p>
+    <p>Vatican City is barely half a square kilometre, with around 800 residents — yet it has its own head of state, its own flag, stamps, post office and army (the Swiss Guard), and it is the beating heart of a faith shared by 1.3 billion people. A tiny nation wrapped inside Rome, and a universe of its own.</p>
+    <p>We spent the morning inside its walls: St Peter's Basilica and the tomb beneath it, the Vatican Museums, and Michelangelo's Sistine Chapel — before crossing back into Rome for the Holy Stairs and the Colosseum at dusk.</p>
+    <p>This issue is short and dense — like the country itself.</p>
+    <p style="font-style:italic; color:#7a2018; text-align:right; margin-top:14px;">— The Munasinghe-Fernandos, 2026</p>
+  </div>
+  <div class="toc-title">In this issue</div>
+  <ul class="toc-list">
+    <li><span class="toc-name">Welcome — The Smallest Country</span><span class="toc-page">02</span></li>
+    <li><span class="toc-name">Museums + the Sistine Chapel</span><span class="toc-page">03</span></li>
+    <li><span class="toc-name">St Peter's Basilica</span><span class="toc-page">04</span></li>
+    <li><span class="toc-name">Ancient Rome at Day's End</span><span class="toc-page">05</span></li>
+    <li><span class="toc-name">Six Roman Things We Ate</span><span class="toc-page">06</span></li>
+    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">07</span></li>
+  </ul>
+  <div style="height:52mm; border-radius:2px; background:#e8dcc0; background-image:url('../images/vatican/vday-14.jpg'); background-size:cover; background-position:center 55%; margin-top:8mm;"></div>
+  <div style="font-family:'Fraunces',serif; font-style:italic; font-size:9.5px; color:#5a4a3a; padding-left:12px; border-left:2px solid #c89b3c; margin-top:6px;">Through Bernini's colonnade — 284 columns in four curving rows — and out of Italy into the smallest country on earth.</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">COVER STORY · SISTINE CHAPEL · DAY 14</div>
+  <div class="sp-headline">A ceiling<br>painted lying<br>on his back.</div>
+  <div class="sp-deck">Michelangelo painted the Sistine Chapel ceiling between 1508 and 1512. He hated every minute of it. He preferred sculpture. He had not painted in fresco before. The result is one of the most important artworks in human history.</div>
+  <div class="sp-meta"><span>Wed 22 Jul 2026</span><span>Sistine Chapel, Vatican Museums</span><span>45 min · silent contemplation</span></div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:5mm; margin-bottom:6px;">
+    <div style="height:74mm; border-radius:2px; background:#e8dcc0; background-image:url('../images/vatican/vday-32.jpg'); background-size:cover; background-position:center;"></div>
+    <div style="height:74mm; border-radius:2px; background:#e8dcc0; background-image:url('../images/vatican/vday-34.jpg'); background-size:cover; background-position:center;"></div>
+  </div>
+  <div class="sp-caption">The Vatican Museums on the way in — corridor after gilded corridor of tapestries, maps and frescoes, all funnelling toward one small, silent room.</div>
+  <div class="sp-cols">
+    <p>You queue. You snake through the galleries. You pass tapestries and maps and ceilings and frescoes and statues and reliquaries until your legs ache and your eyes refuse to focus. Then a guard hisses <em>silenzio</em>, you push through a heavy curtain — and you are inside the Sistine Chapel. And you forget everything. You look up.</p>
+    <div class="sp-quote">I have already a wife who is too much for me, and that is this art, which torments me. — Michelangelo on the Sistine ceiling, 1512.</div>
+    <p>The ceiling runs 40.5 metres by 14, carries more than 300 figures and nine central scenes from Genesis, and Michelangelo painted almost all of it refusing assistants. He built his own scaffolding to work standing — not, as the myth goes, on his back, but with his head tilted up and paint dripping into his eyes for four years. He left with a ruined neck and a bitter sonnet about the whole ordeal. Then he finished, and the world's ceilings were never judged the same way again.</p>
+  </div>
+  <div style="margin-top:auto; border-left:3px solid #7a2018; padding:6px 0 6px 12px; background:linear-gradient(90deg, rgba(122,32,24,0.06), transparent);">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.25em; text-transform:uppercase; color:#7a2018; margin-bottom:4px;">Why there's no photo of the ceiling here</div>
+    <div style="font-family:'Fraunces',serif; font-size:11px; line-height:1.55; color:#3d3024;">Photography is forbidden inside the Sistine Chapel — a guard hisses the moment a phone appears. So the one picture we carried out is the one in our heads: <em>The Creation of Adam</em>, God's finger a hair's breadth from Adam's. Some things you're meant to keep only in memory.</div>
+  </div>
+  <div class="folio">— Issue 13 · VATICAN CITY · 03 —</div>
+</div>
+
+<div class="mag-page mag-duo">
+  <div class="sp-eyebrow" style="margin-bottom:4px;">ST PETER'S BASILICA · DAY 14</div>
+  <div class="sp-headline" style="font-size:38px; margin-bottom:14px;">The world's<br><em>largest church.</em></div>
+  <div class="duo-row alt" style="align-items:stretch;">
+    <div class="duo-photo" style="aspect-ratio:auto; height:90mm; background-image:url('../images/vatican/vday-04.jpg'); background-position:center;"></div>
+    <div class="duo-text">
+      <div class="kicker">★ Built 1506–1626</div>
+      <h3>120 years</h3>
+      <p>The basilica took 120 years and the hand of nearly every great architect of the Renaissance — Bramante, Raphael, Michelangelo, Bernini. The dome is Michelangelo's; the great bronze baldachin over the high altar (left), its twisted Solomonic columns four storeys tall, is Bernini's. The result is simply impossible to take in.</p>
+    </div>
+  </div>
+
+  <div class="duo-row" style="align-items:stretch;">
+    <div>
+      <div class="duo-photo" style="aspect-ratio:auto; height:78mm; background-image:url('../images/vatican/vday-09.jpg'); background-position:center 20%;"></div>
+      <div class="sp-caption" style="margin:5px 0 0;">Michelangelo's Pietà — carved from a single block of Carrara marble at 24, the only work he ever signed, behind glass since a 1972 attack.</div>
+    </div>
+    <div>
+      <div class="duo-photo" style="aspect-ratio:auto; height:78mm; background-image:url('../images/vatican/vday-10.jpg'); background-position:center;"></div>
+      <div class="sp-caption" style="margin:5px 0 0;">Straight up into Michelangelo's dome — 136 metres to the lantern, the letters of the frieze each two metres tall.</div>
+    </div>
+  </div>
+
+  <div style="margin-top:10px; border-left:3px solid #7a2018; padding:4px 0 4px 10px;">
+    <div style="font-family:'Fraunces', serif; font-weight:700; font-size:16px; color:#1a1a1a; margin-bottom:4px;">The world's smallest country</div>
+    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify;">Vatican City is a nation you can walk across in twenty minutes. At just 0.44 square kilometres and around 800 residents, it is the smallest sovereign state on earth — yet its ruler, the Pope, is the spiritual leader of nearly 1.4 billion Catholics worldwide. For over a thousand years the popes governed the sprawling <strong>Papal States</strong> across central Italy, until a newly unified Italy seized Rome in 1870 and the popes shut themselves away as self-declared "prisoners in the Vatican."</div>
+    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify; margin-top:6px;">The stand-off lasted until 1929, when the <strong>Lateran Treaty</strong> carved out this tiny independent enclave and made the Pope a head of state once more. Its heart is St Peter's Basilica, the largest church in the world, raised between 1506 and 1626 over what tradition holds is the tomb of St Peter himself — the fisherman-apostle and first pope. Even the guards are historic: the Swiss Guard, in their Renaissance stripes, have protected the pontiff since 1506.</div>
+  </div>
+  <div class="folio">— Issue 13 · VATICAN CITY · 04 —</div>
+</div>
+
+<div class="mag-page mag-spread">
+  <div class="sp-eyebrow">ANCIENT ROME · DAY 14</div>
+  <div class="sp-headline">Out of the smallest country,<br>into the oldest city.</div>
+  <div class="sp-deck">We walked back out through Bernini's colonnade and across the river — and traded the newest wonder of the Renaissance for the greatest ruin of the ancient world. From the Pope's basilica to the emperors' arena in a single afternoon.</div>
+  <div class="sp-meta"><span>Wed 22 Jul 2026</span><span>Colosseo · Arco di Costantino</span><span>Evening · ancient Rome on foot</span></div>
+  <div class="sp-hero" style="background-image:url('../images/vatican/vday-36.jpg'); background-position:center 40%;"></div>
+  <div class="sp-caption">All five of us in front of the Colosseum — nearly two thousand years old, and a thousand years older than the church we had stood inside that morning.</div>
+  <div class="sp-cols">
+    <p>The Colosseum was begun by the emperor Vespasian around AD 72 and opened by his son Titus in AD 80 with a hundred days of games. Four tiers of travertine arches held between 50,000 and 80,000 spectators, filed in and out through eighty numbered gates — the same idea as a modern stadium, because this is more or less where the idea was invented. Beneath the floor ran the hypogeum, a warren of tunnels, cages and lifts that delivered animals and gladiators up into the arena.</p>
+    <div class="sp-quote">We were inside St Peter's this morning — and now we're standing where the Romans watched the games. All in one day.</div>
+    <p>A short walk away stands the Arch of Constantine, raised in AD 315 to mark the emperor's victory at the Milvian Bridge — the largest Roman triumphal arch still standing, and the one that would decide that the empire, and eventually all of Europe, turned Christian. The children, who had been reverent and quiet in the Vatican all morning, were suddenly loud again, tearing between the arches in the warm evening light. Which felt exactly right.</p>
+  </div>
+  <div class="duo-row" style="margin-top:8px;">
+    <div>
+      <div class="duo-photo" style="aspect-ratio:auto; height:58mm; background-image:url('../images/vatican/vday-37.jpg'); background-position:center;"></div>
+      <div class="sp-caption" style="margin:5px 0 0;">The Colosseum from the Roman side — travertine arch on travertine arch, AD 80.</div>
+    </div>
+    <div>
+      <div class="duo-photo" style="aspect-ratio:auto; height:58mm; background-image:url('../images/vatican/vday-38.jpg'); background-position:center;"></div>
+      <div class="sp-caption" style="margin:5px 0 0;">The Arch of Constantine, AD 315 — the largest Roman triumphal arch still standing.</div>
+    </div>
+  </div>
+  <div class="folio">— Issue 13 · VATICAN CITY · 05 —</div>
+</div>
+
+<div class="mag-page mag-food">
+  <div class="sp-eyebrow">★ TASTES OF THE TRIP</div>
+  <div class="fd-headline">Six Roman things<br><em>we ate.</em></div>
+  <div class="fd-deck">From morning coffee to evening gelato — the flavours of one long day in Rome.</div>
+  <div style="display:grid; grid-template-columns:1fr 1.1fr; gap:8mm; align-items:stretch; margin-bottom:8mm;">
+    <div style="height:66mm; border-radius:3px; background:#e8dcc0; background-image:url('../images/vatican/vday-35-lunch-family.jpg'); background-size:cover; background-position:center 30%;"></div>
+    <div style="display:flex; flex-direction:column; justify-content:center;">
+      <div style="font-family:'Fraunces',serif; font-size:12.5px; line-height:1.6; color:#3d3024;">The one photo we actually stopped to take at the table — the five of us, mid-meal, at a little trattoria in Borgo Pio a stone's throw from the Vatican walls. The rest of the day's eating we were far too busy enjoying to photograph. Here it is anyway, in words.</div>
+    </div>
+  </div>
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6mm;">
+    <div style="background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; border-top:3px solid #7a2018; padding:12px 14px;">
+      <div class="fd-num">01</div><div class="fd-name">Supplì</div>
+      <div class="fd-desc">Roman fried rice balls — risotto with tomato and mozzarella, breaded and deep-fried, the cheese stretching as you bite.</div>
+      <div class="fd-where">📍 Borgo Pio</div>
+    </div>
+    <div style="background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; border-top:3px solid #7a2018; padding:12px 14px;">
+      <div class="fd-num">02</div><div class="fd-name">Carbonara</div>
+      <div class="fd-desc">Rome's most-argued-over pasta: spaghetti, pecorino, black pepper, guanciale, egg yolk. Never any cream.</div>
+      <div class="fd-where">📍 Borgo Pio trattoria</div>
+    </div>
+    <div style="background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; border-top:3px solid #7a2018; padding:12px 14px;">
+      <div class="fd-num">03</div><div class="fd-name">Pizza Bianca</div>
+      <div class="fd-desc">Roman flatbread with olive oil, rosemary and sea salt, torn straight from a paper square. The everyday snack.</div>
+      <div class="fd-where">📍 Forno Roscioli</div>
+    </div>
+    <div style="background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; border-top:3px solid #7a2018; padding:12px 14px;">
+      <div class="fd-num">04</div><div class="fd-name">Tartufo Gelato</div>
+      <div class="fd-desc">Chocolate gelato wrapped around a cherry and dusted with cocoa — the signature of Piazza Navona since 1882.</div>
+      <div class="fd-where">📍 Tre Scalini, Piazza Navona</div>
+    </div>
+    <div style="background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; border-top:3px solid #7a2018; padding:12px 14px;">
+      <div class="fd-num">05</div><div class="fd-name">Maritozzo</div>
+      <div class="fd-desc">A soft, sweet Roman bun split open and packed with a cloud of whipped cream. Breakfast, or any hour really.</div>
+      <div class="fd-where">📍 Roscioli</div>
+    </div>
+    <div style="background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; border-top:3px solid #7a2018; padding:12px 14px;">
+      <div class="fd-num">06</div><div class="fd-name">Aranciata</div>
+      <div class="fd-desc">Ice-cold San Pellegrino orange soda with a twist of lemon over the top — the taste of a Roman summer afternoon.</div>
+      <div class="fd-where">📍 A shaded café terrace</div>
+    </div>
+  </div>
+  <div class="folio">— Issue 13 · VATICAN CITY · 06 —</div>
+</div>
+
+<div class="mag-page mag-reflection">
+  <div class="rf-eyebrow">REFLECTIONS · VATICAN CITY</div>
+  <div class="rf-headline">One day,<br>one chapel,<br>one ceiling that<br>changed everything.</div>
+  <div class="rf-body">
+    <p>Vatican Day was the most emotionally dense day of the whole trip. The Sistine Chapel produced a 30-second moment of complete silence in all five of us. The Basilica is so large you cannot get your head around it. The Pietà is so beautiful it makes you angry that someone carved it at twenty-three. And then, in the very same day, the Colosseum — older than the church by a thousand years — rising out of the evening while the children ran between its arches.</p>
+    <p>We will not forget the Sistine Chapel ceiling. The kids will not forget it either. Avisha, eleven, said quietly afterwards: "I want to learn how to draw like that." We bought her a sketchbook.</p>
+  </div>
+  <div style="height:52mm; border-radius:2px; background:#e8dcc0; background-image:url('../images/vatican/vday-13.jpg'); background-size:cover; background-position:center 40%; margin-bottom:16px;"></div>
+  <div class="rf-grid">
+    <div class="rf-card">
+      <div class="rf-label">Favourite moment</div>
+      <div class="rf-value">Sistine Chapel ceiling, the silent 30 seconds before the guard hissed silenzio again.</div>
+    </div>
+    <div class="rf-card">
+      <div class="rf-label">Hardest moment</div>
+      <div class="rf-value">Queue management. 4 hours total at the museums. We pre-booked but the lines were still endless.</div>
+    </div>
+    <div class="rf-card">
+      <div class="rf-label">If we come back…</div>
+      <div class="rf-value">A Wednesday Papal Audience in St Peter's Square. Caravaggio paintings in Rome's churches.</div>
+    </div>
+  </div>
+  <div class="rf-signoff">— Avinesh, Lana, Avisha, Aviann & Avin Munasinghe-Fernando<br>Vatican City · 22 July 2026</div>
+</div>
+
+<div class="mag-page mag-back">
+  <div class="bc-mag">Munasinghe-Fernando Travel Magazine</div>
+  <div class="bc-issue">No. 13 · One of Fourteen</div>
+  <div class="bc-next">★ NEXT ISSUE ★</div>
+  <div class="bc-country">HOME · NEW ZEALAND</div>
+  <div class="bc-tagline">30 nights on the road, 15 countries, 33 cities. The final flight back to Auckland.</div>
+</div>
+
+<style>
+/* Mobile: scale the A4 pages to fit the screen width (for direct web/GitHub Pages viewing) */
+@media (max-width: 840px){
+  body { padding:0 !important; background:#111; }
+  .mag-page { margin:0 auto 10px !important; box-shadow:none !important; }
+}
+</style>
+<script>
+(function(){
+  var PAGE_PX = 793.7; /* 210mm at 96dpi */
+  function fit(){
+    var vw = document.documentElement.clientWidth || window.innerWidth;
+    var z = Math.min(1, vw / PAGE_PX);
+    var pages = document.querySelectorAll('.mag-page');
+    for (var i=0;i<pages.length;i++){ pages[i].style.zoom = z; }
+  }
+  window.addEventListener('resize', fit);
+  window.addEventListener('orientationchange', fit);
+  fit();
+})();
+</script>
+</body></html>

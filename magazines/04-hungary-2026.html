@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Munasinghe-Fernando Travel Magazine · HUNGARY Issue · July 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -221,22 +222,21 @@ body { padding:20px; }
     <p>The story so far: from Beijing's Great Wall and Forbidden City we flew west into Europe — a jet-lagged first week through Munich, the salt mines and lake villages of Austria, two golden days in Prague, and then imperial Vienna, which closed our Austrian chapter.</p>
     <p>Now the great river carries us on. Hungary is our fourth chapter — Budapest, the "Queen of the Danube," a single capital stitched together in 1873 from hilly, royal Buda on the west bank and flat, trading Pest on the east. This page rides at the front of every issue: where we've been, where we are, and where we're headed next.</p>
   </div>
-  <div class="jr-railtitle">The Route · 15 Countries · 33 Cities · 30 Nights</div>
+  <div class="jr-railtitle">The Route · 14 Countries · 33 Cities · 30 Nights</div>
   <div class="jr-rail">
     <div class="jr-stop done"><span class="jr-n">01</span>China ✓</div>
     <div class="jr-stop done"><span class="jr-n">02</span>Austria ✓</div>
     <div class="jr-stop done"><span class="jr-n">03</span>Czechia ✓</div>
     <div class="jr-stop here"><span class="jr-n">04</span>Hungary ★</div>
-    <div class="jr-stop"><span class="jr-n">05</span>Slovenia</div>
-    <div class="jr-stop"><span class="jr-n">06</span>Italy</div>
-    <div class="jr-stop"><span class="jr-n">07</span>Switzerland</div>
-    <div class="jr-stop"><span class="jr-n">08</span>Germany</div>
-    <div class="jr-stop"><span class="jr-n">09</span>France</div>
-    <div class="jr-stop"><span class="jr-n">10</span>Netherlands</div>
-    <div class="jr-stop"><span class="jr-n">11</span>Belgium</div>
-    <div class="jr-stop"><span class="jr-n">12</span>Denmark</div>
-    <div class="jr-stop"><span class="jr-n">13</span>Sweden</div>
-    <div class="jr-stop"><span class="jr-n">14</span>Vatican</div>
+    <div class="jr-stop"><span class="jr-n">05</span>Italy</div>
+    <div class="jr-stop"><span class="jr-n">06</span>Switzerland</div>
+    <div class="jr-stop"><span class="jr-n">07</span>Germany</div>
+    <div class="jr-stop"><span class="jr-n">08</span>France</div>
+    <div class="jr-stop"><span class="jr-n">09</span>Netherlands</div>
+    <div class="jr-stop"><span class="jr-n">10</span>Belgium</div>
+    <div class="jr-stop"><span class="jr-n">11</span>Denmark</div>
+    <div class="jr-stop"><span class="jr-n">12</span>Sweden</div>
+    <div class="jr-stop"><span class="jr-n">13</span>Vatican</div>
     <div class="jr-stop"><span class="jr-n">⌂</span>Home</div>
   </div>
   <div class="jr-today">Today — Hungary: we drove in and parked below Buda's castle hill, the Danube and a full day of sights waiting ahead.</div>
@@ -763,10 +763,31 @@ body { padding:20px; }
 
 <div class="mag-page mag-back">
   <div class="bc-mag">Munasinghe-Fernando Travel Magazine</div>
-  <div class="bc-issue">No. 04 · One of Fifteen</div>
+  <div class="bc-issue">No. 04 · One of Fourteen</div>
   <div class="bc-next">★ NEXT ISSUE ★</div>
-  <div class="bc-country">SLOVENIA</div>
-  <div class="bc-tagline">A fairy-tale island, a cliffside castle, and a wish-bell.</div>
+  <div class="bc-country">ITALY</div>
+  <div class="bc-tagline">Venice on the water, Florence and its dome, the leaning tower, and the ruins of Rome.</div>
 </div>
 
+<style>
+/* Mobile: scale the A4 pages to fit the screen width (for direct web/GitHub Pages viewing) */
+@media (max-width: 840px){
+  body { padding:0 !important; background:#111; }
+  .mag-page { margin:0 auto 10px !important; box-shadow:none !important; }
+}
+</style>
+<script>
+(function(){
+  var PAGE_PX = 793.7; /* 210mm at 96dpi */
+  function fit(){
+    var vw = document.documentElement.clientWidth || window.innerWidth;
+    var z = Math.min(1, vw / PAGE_PX);
+    var pages = document.querySelectorAll('.mag-page');
+    for (var i=0;i<pages.length;i++){ pages[i].style.zoom = z; }
+  }
+  window.addEventListener('resize', fit);
+  window.addEventListener('orientationchange', fit);
+  fit();
+})();
+</script>
 </body></html>
