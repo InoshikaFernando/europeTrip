@@ -74,6 +74,12 @@ body { padding:20px; }
 .pp-fig figcaption { position:absolute; left:0; right:0; bottom:0; z-index:2; padding:26px 13px 10px; background:linear-gradient(to top, rgba(0,0,0,0.86), rgba(0,0,0,0.15) 68%, rgba(0,0,0,0)); color:#fff; font-size:8.7px; line-height:1.42; }
 .pp-fig figcaption b { color:#f0d68c; font-weight:700; }
 .pp-label { position:absolute; top:0; left:0; z-index:3; background:#8b1a1a; color:#fff; font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; padding:6px 13px; }
+/* What we missed */
+.miss-grid { display:grid; grid-template-columns:1fr 1fr; grid-auto-rows:1fr; gap:6mm; flex:1; margin-top:3mm; }
+.miss-item { background:#faf9f8; border:1px solid #ececec; border-left:3px solid #8b1a1a; border-radius:6px; padding:15px 18px; display:flex; gap:13px; align-items:flex-start; }
+.miss-n { font-weight:800; font-size:26px; line-height:0.9; letter-spacing:-0.02em; color:#8b1a1a; white-space:nowrap; }
+.miss-name { font-weight:700; font-size:15px; line-height:1.15; color:#1a1a1a; margin-bottom:3px; }
+.miss-note { font-size:10.3px; line-height:1.5; color:#555; }
 .tnn { margin:16px 0; padding:16px 20px; background:#8b1a1a; color:#fff; border-radius:10px; }
 .tnn .tnn-k { font-family:'JetBrains Mono',monospace; font-size:8.5px; letter-spacing:0.24em; text-transform:uppercase; color:#f3c6c6; margin-bottom:8px; }
 .tnn .tnn-big { font-weight:800; font-size:30px; line-height:0.98; letter-spacing:-0.02em; margin-bottom:8px; }
@@ -274,8 +280,9 @@ body { padding:20px; }
     <li><span class="toc-name">Tower to Watchtower</span><span class="toc-page">17</span></li>
     <li><span class="toc-name">The Great Wall — Good to Know</span><span class="toc-page">18</span></li>
     <li><span class="toc-name">The Wider World</span><span class="toc-page">19</span></li>
-    <li><span class="toc-name">The Long Flight Home</span><span class="toc-page">20</span></li>
-    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">21</span></li>
+    <li><span class="toc-name">What We Missed</span><span class="toc-page">20</span></li>
+    <li><span class="toc-name">The Long Flight Home</span><span class="toc-page">21</span></li>
+    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">22</span></li>
   </ul>
   <div class="folio">— Issue 01 · CHINA · 03 —</div>
 </div>
@@ -620,7 +627,25 @@ body { padding:20px; }
   <div class="folio">— Issue 01 · CHINA · 19 —</div>
 </div>
 
-<!-- ============ 20 THE LONG FLIGHT HOME ============ -->
+<!-- ============ 20 WHAT WE MISSED ============ -->
+<div class="mag-page mag-spread" style="display:flex; flex-direction:column;">
+  <div style="flex:none;">
+    <div class="sp-eyebrow">CHINA · WHAT WE LEFT FOR NEXT TIME</div>
+    <div class="sp-headline">What we missed.</div>
+    <div class="sp-deck" style="margin-bottom:7mm;">A stopover is an exercise in choosing. Two days bought us the Forbidden City and the Great Wall — and left a whole country's worth of wonders standing for another trip. Here is the list we are already keeping.</div>
+  </div>
+  <div class="miss-grid">
+    <div class="miss-item"><div class="miss-n">01</div><div><div class="miss-name">The Summer Palace</div><div class="miss-note">颐和园 — the emperors' vast lakeside garden-retreat on the edge of the city, best crossed by boat. The imperial escape from the Forbidden City's formality.</div></div></div>
+    <div class="miss-item"><div class="miss-n">02</div><div><div class="miss-name">The Temple of Heaven</div><div class="miss-note">天坛 — the blue-tiled circular hall where emperors prayed each year for a good harvest. Beijing's other great ceremonial axis, and one we never reached.</div></div></div>
+    <div class="miss-item"><div class="miss-n">03</div><div><div class="miss-name">Old Beijing's hutongs</div><div class="miss-note">The grey-brick alleys and courtyard homes around the Houhai lakes — the low, human-scaled city the boulevards and towers grew up around.</div></div></div>
+    <div class="miss-item"><div class="miss-n">04</div><div><div class="miss-name">A sit-down Peking duck</div><div class="miss-note">Carved tableside, skin first, rolled into warm pancakes — the city's signature feast. We admired it in photographs and ran out of evening. Next time, a proper table.</div></div></div>
+    <div class="miss-item"><div class="miss-n">05</div><div><div class="miss-name">Xi'an's Terracotta Army</div><div class="miss-note">Thousands of clay soldiers standing guard over a buried emperor for 2,200 years — a couple of hours' flight south-west, and top of the list for a return.</div></div></div>
+    <div class="miss-item"><div class="miss-n">06</div><div><div class="miss-name">The Wall, unhurried</div><div class="miss-note">A whole day to walk a wilder, unrestored stretch — Jinshanling, or Jiankou — with no red-eye behind us and no flight to catch at the end of it.</div></div></div>
+  </div>
+  <div class="folio">— Issue 01 · CHINA · 20 —</div>
+</div>
+
+<!-- ============ 21 THE LONG FLIGHT HOME ============ -->
 <div class="mag-page mag-spread">
   <div class="sp-eyebrow">HOMEBOUND · CA783 · BEIJING → AUCKLAND</div>
   <div class="sp-headline">The long<br>flight home.</div>
@@ -631,10 +656,10 @@ body { padding:20px; }
     <p>There is a particular tiredness to the flight home. It is not the tiredness of a bad day — it is the good kind, the kind you earn: a month of early trains and late dinners, of cathedrals and castles and one very hot morning on the Great Wall, all catching up at once. We had left in a New Zealand winter and were flying back into one, thirty-odd nights and fifteen countries later, the same five of us and yet not quite the same at all.</p>
     <p>The children slept in shifts and woke to ask, more than once, whether we could do it all again. Somewhere over the Pacific the sun came up to meet us, and by mid-afternoon we were home — bags heavier, cameras full, and a whole first issue of this magazine already writing itself in our heads.</p>
   </div>
-  <div class="folio">— Issue 01 · CHINA · 20 —</div>
+  <div class="folio">— Issue 01 · CHINA · 21 —</div>
 </div>
 
-<!-- ============ 21 REFLECTIONS ============ -->
+<!-- ============ 22 REFLECTIONS ============ -->
 <div class="mag-page mag-reflection">
   <div class="rf-eyebrow">REFLECTIONS · CHINA</div>
   <div class="rf-headline">Two stopovers,<br>five childhoods<br>changed.</div>
