@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Munasinghe-Fernando Travel Magazine · FRANCE Issue · July 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -324,4 +325,25 @@ body { padding:20px; }
   <div class="bc-tagline">Amsterdam canals, Anne Frank's diary, and a cousin's house to come home to.</div>
 </div>
 
+<style>
+/* Mobile: scale the A4 pages to fit the screen width (for direct web/GitHub Pages viewing) */
+@media (max-width: 840px){
+  body { padding:0 !important; background:#111; }
+  .mag-page { margin:0 auto 10px !important; box-shadow:none !important; }
+}
+</style>
+<script>
+(function(){
+  var PAGE_PX = 793.7; /* 210mm at 96dpi */
+  function fit(){
+    var vw = document.documentElement.clientWidth || window.innerWidth;
+    var z = Math.min(1, vw / PAGE_PX);
+    var pages = document.querySelectorAll('.mag-page');
+    for (var i=0;i<pages.length;i++){ pages[i].style.zoom = z; }
+  }
+  window.addEventListener('resize', fit);
+  window.addEventListener('orientationchange', fit);
+  fit();
+})();
+</script>
 </body></html>
