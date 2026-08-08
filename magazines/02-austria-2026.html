@@ -51,7 +51,7 @@ body { padding:20px; }
 .sp-quote { break-inside:avoid; font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:14px; line-height:1.4; color:#28508c; text-align:center; padding:10px 12px; border-top:1px solid #c89b3c; border-bottom:1px solid #c89b3c; margin:10px 0; }
 .sp-quote::before, .sp-quote::after { content:'"'; font-size:30px; line-height:0; vertical-align:-12px; color:#c89b3c; padding:0 3px; }
 .sp-photo { width:100%; margin-bottom:6px; text-align:center; position:relative; }
-.sp-photo img { max-width:100%; max-height:170mm; display:block; margin:0 auto; border-radius:2px; }
+.sp-photo img { max-width:100%; max-height:104mm; display:block; margin:0 auto; border-radius:2px; }
 .sp-photo.compact img { max-height:116mm; }
 .sp-photo .ph-info { display:inline-block; margin-top:4px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
 .mag-duo { padding:14mm 16mm; display:flex; flex-direction:column; gap:6mm; }
@@ -105,7 +105,7 @@ body { padding:20px; }
 .ed-grid4 .ed-cap-ov { padding:14px 6px 5px; font-size:7px; line-height:1.25; }
 .mag-lead { display:grid; grid-template-columns:1.6fr 1fr; gap:8mm; align-items:end; margin:6px 0 7mm; }
 .mag-lead .ll-feat { margin:0; position:relative; overflow:hidden; border-radius:3px; }
-.mag-lead .ll-feat img { width:100%; height:auto; display:block; }
+.mag-lead .ll-feat img { width:100%; height:84mm; object-fit:cover; display:block; }
 .mag-lead .ll-col { display:flex; flex-direction:column; padding-bottom:3mm; }
 .mag-lead .ll-kick { font-family:'JetBrains Mono',monospace; font-style:normal; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#a02828; display:block; margin-bottom:10px; }
 .mag-lead .ll-intro { font-family:'Fraunces',serif; font-style:italic; font-size:14px; line-height:1.62; color:#3d3024; }
@@ -143,7 +143,7 @@ body { padding:20px; }
 .jr-stop.here .jr-n { color:#f0d68c; }
 .jr-today { font-family:'Fraunces', serif; font-style:italic; font-size:15px; line-height:1.5; color:#28508c; margin-top:auto; padding-top:10mm; border-top:1px solid #c89b3c; }
 @media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
-</style></head>
+.prow{display:flex;gap:2.6mm;align-items:flex-start;justify-content:center;margin:7px 0 5mm;}.ph{margin:0;}.ph img{display:block;width:100%;height:auto;border-radius:2px;box-shadow:0 3px 12px rgba(0,0,0,0.15);}.cap{font-family:'Fraunces',serif;font-style:italic;font-size:8.2px;line-height:1.3;color:#5a4a3a;margin-top:1.6mm;}</style></head>
 <body>
 
 <div class="mag-page mag-cover">
@@ -260,12 +260,7 @@ body { padding:20px; }
       <div class="ll-intro">The little splash, the long avenue, the walk to the gate — the scenes I'd acted out with a row of dolls, now stepped through one by one with my own three.</div>
     </div>
   </div>
-  <div class="ed-grid3">
-    <figure><img src="../images/austria/salzburg-mirabell-pegasus.jpg" loading="lazy"><figcaption class="ed-cap-ov">Past the <strong>Pegasus Fountain</strong> — where the von Trapp children danced. Seen a thousand times on screen; now I stood right in it.</figcaption></figure>
-    <figure><img src="../images/austria/salzburg-residenzplatz.jpg" loading="lazy" style="object-position:center 32%;"><figcaption class="ed-cap-ov">By the water, the thing I'd copied as a girl — a little <strong>splash at the fountain</strong>, like Maria in "I Have Confidence".</figcaption></figure>
-    <figure><img src="../images/austria/salzburg-mirabell-walk.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>walk up to the palace</strong> through the flowerbeds, all of us together — real at last.</figcaption></figure>
-  </div>
-  <div class="folio">— Issue 02 · AUSTRIA · Do-Re-Mi —</div>
+  <div class="prow"><figure class="ph" style="width:49.50mm"><img src="../images/austria/salzburg-mirabell-pegasus.jpg" alt="" loading="lazy"><figcaption class="cap">Past the <strong>Pegasus Fountain</strong> — where the von Trapp children danced. Seen a thousand times on screen; now I stood right in it.</figcaption></figure><figure class="ph" style="width:37.12mm"><img src="../images/austria/salzburg-residenzplatz.jpg" alt="" loading="lazy"><figcaption class="cap">By the water, the thing I'd copied as a girl — a little <strong>splash at the fountain</strong>, like Maria in "I Have Confidence".</figcaption></figure><figure class="ph" style="width:49.50mm"><img src="../images/austria/salzburg-mirabell-walk.jpg" alt="" loading="lazy"><figcaption class="cap">The <strong>walk up to the palace</strong> through the flowerbeds, all of us together — real at last.</figcaption></figure></div><div class="folio">— Issue 02 · AUSTRIA · Do-Re-Mi —</div>
 </div>
 
 <div class="mag-page mag-spread">
@@ -297,17 +292,7 @@ body { padding:20px; }
       <div class="ll-intro">From the river to the cathedral squares and back through the guild-sign lanes — our afternoon in the Altstadt, in the order we walked it.</div>
     </div>
   </div>
-  <div class="ed-grid4">
-    <figure><img src="../images/austria/salzburg-residenz-facade.jpg" loading="lazy"><figcaption class="ed-cap-ov">The marble front of the <strong>Residenz</strong>.</figcaption></figure>
-    <figure><img src="../images/austria/salzburg-residenz-fountain.jpg" loading="lazy"><figcaption class="ed-cap-ov">The <strong>Residenzbrunnen</strong>.</figcaption></figure>
-    <figure><img src="../images/austria/salzburg-residenzbrunnen.jpg" loading="lazy"><figcaption class="ed-cap-ov">Tritons &amp; the Glockenspiel.</figcaption></figure>
-    <figure><img src="../images/austria/salzburg-getreidegasse.jpg" loading="lazy"><figcaption class="ed-cap-ov">Into the <strong>Getreidegasse</strong>.</figcaption></figure>
-    <figure><img src="../images/austria/salzburg-oldtown-lane.jpg" loading="lazy"><figcaption class="ed-cap-ov">Lanes with café tables.</figcaption></figure>
-    <figure><img src="../images/austria/salzburg-oldtown-square.jpg" loading="lazy"><figcaption class="ed-cap-ov">Honey-stone in the heat.</figcaption></figure>
-    <figure><img src="../images/austria/salzburg-horse-fountain.jpg" loading="lazy"><figcaption class="ed-cap-ov">The Horse Pond &amp; painted wall.</figcaption></figure>
-    <figure><img src="../images/austria/salzburg-cathedral-fiaker.jpg" loading="lazy"><figcaption class="ed-cap-ov">A fiaker under the towers.</figcaption></figure>
-  </div>
-  <div class="folio">— Issue 02 · AUSTRIA · Salzburg, more —</div>
+  <div class="prow"><figure class="ph" style="width:40.50mm"><img src="../images/austria/salzburg-residenz-facade.jpg" alt="" loading="lazy"><figcaption class="cap">The marble front of the <strong>Residenz</strong>.</figcaption></figure><figure class="ph" style="width:40.50mm"><img src="../images/austria/salzburg-residenz-fountain.jpg" alt="" loading="lazy"><figcaption class="cap">The <strong>Residenzbrunnen</strong>.</figcaption></figure><figure class="ph" style="width:40.50mm"><img src="../images/austria/salzburg-residenzbrunnen.jpg" alt="" loading="lazy"><figcaption class="cap">Tritons &amp; the Glockenspiel.</figcaption></figure><figure class="ph" style="width:40.50mm"><img src="../images/austria/salzburg-getreidegasse.jpg" alt="" loading="lazy"><figcaption class="cap">Into the <strong>Getreidegasse</strong>.</figcaption></figure><figure class="ph" style="width:40.50mm"><img src="../images/austria/salzburg-oldtown-lane.jpg" alt="" loading="lazy"><figcaption class="cap">Lanes with café tables.</figcaption></figure><figure class="ph" style="width:40.50mm"><img src="../images/austria/salzburg-oldtown-square.jpg" alt="" loading="lazy"><figcaption class="cap">Honey-stone in the heat.</figcaption></figure><figure class="ph" style="width:40.50mm"><img src="../images/austria/salzburg-horse-fountain.jpg" alt="" loading="lazy"><figcaption class="cap">The Horse Pond &amp; painted wall.</figcaption></figure><figure class="ph" style="width:40.50mm"><img src="../images/austria/salzburg-cathedral-fiaker.jpg" alt="" loading="lazy"><figcaption class="cap">A fiaker under the towers.</figcaption></figure></div><div class="folio">— Issue 02 · AUSTRIA · Salzburg, more —</div>
 </div>
 
 <div class="mag-page mag-spread">
@@ -323,12 +308,7 @@ body { padding:20px; }
     <div class="sp-quote">In Austria on a Saturday, the shops shut at six. We learned that with three hungry children and a Mass that ran until a quarter to eight.</div>
     <p>Then, at last, the castle. We were staying at Burg Altpernstein, a genuine hilltop fortress — and a genuine fortress, it turns out, has no elevator. We hauled our heavy bags up to the third floor by stair, breath by breath, and we couldn't even mind: you don't keep a castle's medieval soul by drilling a lift shaft through it. A hot bath washed the long day away, and we fell into bed more tired than we had been at any point on this trip. Day one in Austria, done.</p>
   </div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/austria/altpernstein-castle-exterior.jpg" loading="lazy"><div class="essay-cap">Burg Altpernstein by day — our hilltop base</div></div>
-    <div class="essay-item"><img src="../images/austria/altpernstein-valley-view.jpg" loading="lazy"><div class="essay-cap">The valley spread out far below the castle</div></div>
-    <div class="essay-item"><img src="../images/austria/altpernstein-breakfast.jpg" loading="lazy"><div class="essay-cap">The generous breakfast that carried us all day</div></div>
-  </div>
-  <div class="folio">— Issue 02 · AUSTRIA · The First Night —</div>
+  <div class="prow"><figure class="ph" style="width:39.00mm"><img src="../images/austria/altpernstein-castle-exterior.jpg" alt="" loading="lazy"><figcaption class="cap">Burg Altpernstein by day — our hilltop base</figcaption></figure><figure class="ph" style="width:69.33mm"><img src="../images/austria/altpernstein-valley-view.jpg" alt="" loading="lazy"><figcaption class="cap">The valley spread out far below the castle</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/altpernstein-breakfast.jpg" alt="" loading="lazy"><figcaption class="cap">The generous breakfast that carried us all day</figcaption></figure></div><div class="folio">— Issue 02 · AUSTRIA · The First Night —</div>
 </div>
 
 <div class="mag-page mag-spread">
@@ -366,14 +346,7 @@ body { padding:20px; }
   <div class="album-sub">Hallstatt · more from the lake</div>
   <div class="album-head">The most photographed village.</div>
   <div style="font-family:'Fraunces', serif; font-style:italic; font-size:12px; color:#5a4a3a; margin:-6px 0 14px;">We wandered the waterfront and the lanes, and took the boat out onto the lake — the village from every angle it is famous for.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/austria/hallstatt-postcard-lake.jpg" loading="lazy"><div class="essay-cap">The lake that has launched a thousand postcards — pastel houses doubling in the still Hallstättersee, the mountains rising straight behind.</div></div>
-    <div class="essay-item"><img src="../images/austria/hallstatt-postcard-railing.jpg" loading="lazy"><div class="essay-cap">The famous railing everyone leans on for the shot, the church spire framed just so.</div></div>
-    <div class="essay-item"><img src="../images/austria/hallstatt-boat-family.jpg" loading="lazy"><div class="essay-cap">Down at the water's edge, where we caught the little boat out onto the lake — the best way of all to see the village.</div></div>
-    <div class="essay-item"><img src="../images/austria/hallstatt-market-square.jpg" loading="lazy"><div class="essay-cap">Into the Marktplatz, the tiny village square gathered round its Trinity column.</div></div>
-    <div class="essay-item"><img src="../images/austria/hallstatt-street.jpg" loading="lazy"><div class="essay-cap">And a narrow lane climbing between the houses, the lake glinting at the foot of every step.</div></div>
-  </div>
-  <div class="folio">— Issue 02 · AUSTRIA · Hallstatt, more —</div>
+  <div class="prow"><figure class="ph" style="width:39.00mm"><img src="../images/austria/hallstatt-postcard-lake.jpg" alt="" loading="lazy"><figcaption class="cap">The lake that has launched a thousand postcards — pastel houses doubling in the still Hallstättersee, the mountains rising straight behind.</figcaption></figure><figure class="ph" style="width:69.33mm"><img src="../images/austria/hallstatt-postcard-railing.jpg" alt="" loading="lazy"><figcaption class="cap">The famous railing everyone leans on for the shot, the church spire framed just so.</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/hallstatt-boat-family.jpg" alt="" loading="lazy"><figcaption class="cap">Down at the water's edge, where we caught the little boat out onto the lake — the best way of all to see the village.</figcaption></figure></div><div class="prow"><figure class="ph" style="width:39.00mm"><img src="../images/austria/hallstatt-market-square.jpg" alt="" loading="lazy"><figcaption class="cap">Into the Marktplatz, the tiny village square gathered round its Trinity column.</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/hallstatt-street.jpg" alt="" loading="lazy"><figcaption class="cap">And a narrow lane climbing between the houses, the lake glinting at the foot of every step.</figcaption></figure></div><div class="folio">— Issue 02 · AUSTRIA · Hallstatt, more —</div>
 </div>
 
 <div class="mag-page mag-journey">
@@ -504,75 +477,25 @@ body { padding:20px; }
   <div class="album-sub">Our walk through Schönbrunn</div>
   <div class="album-head">The palace, gate to gallery.</div>
   <div style="font-family:'Fraunces', serif; font-style:italic; font-size:12px; color:#5a4a3a; margin:-6px 0 14px;">The tour runs one way, hall opening onto hall. This is what we saw, in the order we walked it — from the great courtyard gates, up into the frescoed galleries.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/austria/vienna-schoenbrunn-family.jpg" loading="lazy"><div class="essay-cap">All five of us in the great forecourt, holding the postcard up against the real palace behind.</div></div>
-    <div class="essay-item"><img src="../images/austria/vienna-schoenbrunn-family-gates.jpg" loading="lazy"><div class="essay-cap">In through the palace gates, beneath the golden Habsburg eagles on their obelisks.</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/23.jpg" loading="lazy"><div class="essay-cap">Inside at last — the Great Gallery, the palace's grand ballroom, gold and mirrors from end to end.</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/great-gallery-ceiling.jpg" loading="lazy"><div class="essay-cap">Above it, the vast ceiling fresco — all painted sky, gods and allegory.</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/28.jpg" loading="lazy"><div class="essay-cap">Crystal chandeliers hung the length of the hall beneath those frescoes.</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/27.jpg" loading="lazy"><div class="essay-cap">On into another frescoed ceremonial hall, light pouring across the parquet.</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/07.jpg" loading="lazy"><div class="essay-cap">A quieter gilded antechamber between the state rooms.</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/08.jpg" loading="lazy"><div class="essay-cap">A white-and-gold reception room, rococo in every corner.</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/22.jpg" loading="lazy"><div class="essay-cap">Another ceremonial hall opening ahead of us.</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/29.jpg" loading="lazy"><div class="essay-cap">The hall hung with great paintings of the family and their realm.</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/25.jpg" loading="lazy"><div class="essay-cap">Even the wall sconces are gilded — one candelabra, closer up.</div></div>
-  </div>
-  <div class="folio">— Issue 02 · AUSTRIA · Schönbrunn, the palace —</div>
+  <div class="prow"><figure class="ph" style="width:39.00mm"><img src="../images/austria/vienna-schoenbrunn-family.jpg" alt="" loading="lazy"><figcaption class="cap">All five of us in the great forecourt, holding the postcard up against the real palace behind.</figcaption></figure><figure class="ph" style="width:38.99mm"><img src="../images/austria/vienna-schoenbrunn-family-gates.jpg" alt="" loading="lazy"><figcaption class="cap">In through the palace gates, beneath the golden Habsburg eagles on their obelisks.</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/23.jpg" alt="" loading="lazy"><figcaption class="cap">Inside at last — the Great Gallery, the palace's grand ballroom, gold and mirrors from end to end.</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/great-gallery-ceiling.jpg" alt="" loading="lazy"><figcaption class="cap">Above it, the vast ceiling fresco — all painted sky, gods and allegory.</figcaption></figure></div><div class="prow"><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/28.jpg" alt="" loading="lazy"><figcaption class="cap">Crystal chandeliers hung the length of the hall beneath those frescoes.</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/27.jpg" alt="" loading="lazy"><figcaption class="cap">On into another frescoed ceremonial hall, light pouring across the parquet.</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/07.jpg" alt="" loading="lazy"><figcaption class="cap">A quieter gilded antechamber between the state rooms.</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/08.jpg" alt="" loading="lazy"><figcaption class="cap">A white-and-gold reception room, rococo in every corner.</figcaption></figure></div><div class="prow"><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/22.jpg" alt="" loading="lazy"><figcaption class="cap">Another ceremonial hall opening ahead of us.</figcaption></figure><figure class="ph" style="width:95.09mm"><img src="../images/austria/schoenbrunn/29.jpg" alt="" loading="lazy"><figcaption class="cap">The hall hung with great paintings of the family and their realm.</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/25.jpg" alt="" loading="lazy"><figcaption class="cap">Even the wall sconces are gilded — one candelabra, closer up.</figcaption></figure></div><div class="folio">— Issue 02 · AUSTRIA · Schönbrunn, the palace —</div>
 </div>
 
 <div class="mag-page mag-album">
   <div class="album-sub">Our walk through Schönbrunn</div>
   <div class="album-head">The imperial apartments.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/09.jpg" loading="lazy"><div class="essay-cap">An imperial living salon</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/11.jpg" loading="lazy"><div class="essay-cap">A rococo drawing room</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/12.jpg" loading="lazy"><div class="essay-cap">A red-damask salon</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/14.jpg" loading="lazy"><div class="essay-cap">Imperial portraits in a blue salon</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/16.jpg" loading="lazy"><div class="essay-cap">Portraits of the young archduchesses</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/17.jpg" loading="lazy"><div class="essay-cap">A gilded sitting room</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/18.jpg" loading="lazy"><div class="essay-cap">A table set for breakfast</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/38.jpg" loading="lazy"><div class="essay-cap">An imperial state bed</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/36.jpg" loading="lazy"><div class="essay-cap">A blue-chaired salon</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/private-salon.jpg" loading="lazy"><div class="essay-cap">A private salon — Franz Joseph &amp; Sisi's portraits</div></div>
-  </div>
-  <div class="folio">— Issue 02 · AUSTRIA · Schönbrunn, the palace —</div>
+  <div class="prow"><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/09.jpg" alt="" loading="lazy"><figcaption class="cap">An imperial living salon</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/11.jpg" alt="" loading="lazy"><figcaption class="cap">A rococo drawing room</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/12.jpg" alt="" loading="lazy"><figcaption class="cap">A red-damask salon</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/14.jpg" alt="" loading="lazy"><figcaption class="cap">Imperial portraits in a blue salon</figcaption></figure></div><div class="prow"><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/16.jpg" alt="" loading="lazy"><figcaption class="cap">Portraits of the young archduchesses</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/17.jpg" alt="" loading="lazy"><figcaption class="cap">A gilded sitting room</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/18.jpg" alt="" loading="lazy"><figcaption class="cap">A table set for breakfast</figcaption></figure></div><div class="prow"><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/38.jpg" alt="" loading="lazy"><figcaption class="cap">An imperial state bed</figcaption></figure><figure class="ph" style="width:69.33mm"><img src="../images/austria/schoenbrunn/36.jpg" alt="" loading="lazy"><figcaption class="cap">A blue-chaired salon</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/private-salon.jpg" alt="" loading="lazy"><figcaption class="cap">A private salon — Franz Joseph &amp; Sisi's portraits</figcaption></figure></div><div class="folio">— Issue 02 · AUSTRIA · Schönbrunn, the palace —</div>
 </div>
 
 <div class="mag-page mag-album">
   <div class="album-sub">Our walk through Schönbrunn</div>
   <div class="album-head">Treasures &amp; fine rooms.</div>
-  <div class="mag-essay">
-    <div class="essay-item essay-lead"><img src="../images/austria/schoenbrunn/30.jpg" loading="lazy"><div class="essay-cap">The Porcelain Room's blue panels</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/34.jpg" loading="lazy"><div class="essay-cap">The Millions Room</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/33.jpg" loading="lazy"><div class="essay-cap">A lacquered cabinet room</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/31.jpg" loading="lazy"><div class="essay-cap">Rosewood panelling &amp; a marble bust</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/32.jpg" loading="lazy"><div class="essay-cap">A cabinet of gilt and mirrors</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/37.jpg" loading="lazy"><div class="essay-cap">A red picture gallery</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/19.jpg" loading="lazy"><div class="essay-cap">A grand rococo salon</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/20.jpg" loading="lazy"><div class="essay-cap">The landscape room</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/39.jpg" loading="lazy"><div class="essay-cap">A grand imperial family portrait</div></div>
-  </div>
-  <div class="folio">— Issue 02 · AUSTRIA · Schönbrunn, the palace —</div>
+  <div class="prow"><figure class="ph" style="width:69.33mm"><img src="../images/austria/schoenbrunn/34.jpg" alt="" loading="lazy"><figcaption class="cap">The Millions Room</figcaption></figure><figure class="ph" style="width:69.33mm"><img src="../images/austria/schoenbrunn/33.jpg" alt="" loading="lazy"><figcaption class="cap">A lacquered cabinet room</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/31.jpg" alt="" loading="lazy"><figcaption class="cap">Rosewood panelling &amp; a marble bust</figcaption></figure><figure class="ph" style="width:69.33mm"><img src="../images/austria/schoenbrunn/32.jpg" alt="" loading="lazy"><figcaption class="cap">A cabinet of gilt and mirrors</figcaption></figure></div><div class="prow"><figure class="ph" style="width:170.49mm"><img src="../images/austria/schoenbrunn/37.jpg" alt="" loading="lazy"><figcaption class="cap">A red picture gallery</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/19.jpg" alt="" loading="lazy"><figcaption class="cap">A grand rococo salon</figcaption></figure><figure class="ph" style="width:69.33mm"><img src="../images/austria/schoenbrunn/20.jpg" alt="" loading="lazy"><figcaption class="cap">The landscape room</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/39.jpg" alt="" loading="lazy"><figcaption class="cap">A grand imperial family portrait</figcaption></figure></div><div class="folio">— Issue 02 · AUSTRIA · Schönbrunn, the palace —</div>
 </div>
 
 <div class="mag-page mag-album">
   <div class="album-sub">Our walk through Schönbrunn</div>
   <div class="album-head">The immersive rooms &amp; more.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/04.jpg" loading="lazy"><div class="essay-cap">A royal procession, projected wall to wall</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/03.jpg" loading="lazy"><div class="essay-cap">A painted sky brought to life in light</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/01.jpg" loading="lazy"><div class="essay-cap">The immersive projection room</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/02.jpg" loading="lazy"><div class="essay-cap">Projected scenes on the palace walls</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/emperor-court-dress.jpg" loading="lazy"><div class="essay-cap">An emperor in gala court dress</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/06.jpg" loading="lazy"><div class="essay-cap">Empress Maria Theresa</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/24.jpg" loading="lazy"><div class="essay-cap">A painted ceiling overhead</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/26.jpg" loading="lazy"><div class="essay-cap">Gods and clouds across the ceiling</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/15.jpg" loading="lazy"><div class="essay-cap">A state room set for dining</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/21.jpg" loading="lazy"><div class="essay-cap">The landscape-mural room</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/35.jpg" loading="lazy"><div class="essay-cap">A salon set with rows of chairs</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn/10.jpg" loading="lazy"><div class="essay-cap">The deep pile of an imperial carpet</div></div>
-  </div>
-  <div class="folio">— Issue 02 · AUSTRIA · Schönbrunn, the palace —</div>
+  <div class="prow"><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/04.jpg" alt="" loading="lazy"><figcaption class="cap">A royal procession, projected wall to wall</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/03.jpg" alt="" loading="lazy"><figcaption class="cap">A painted sky brought to life in light</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/01.jpg" alt="" loading="lazy"><figcaption class="cap">The immersive projection room</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/02.jpg" alt="" loading="lazy"><figcaption class="cap">Projected scenes on the palace walls</figcaption></figure></div><div class="prow"><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/emperor-court-dress.jpg" alt="" loading="lazy"><figcaption class="cap">An emperor in gala court dress</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/06.jpg" alt="" loading="lazy"><figcaption class="cap">Empress Maria Theresa</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/24.jpg" alt="" loading="lazy"><figcaption class="cap">A painted ceiling overhead</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/26.jpg" alt="" loading="lazy"><figcaption class="cap">Gods and clouds across the ceiling</figcaption></figure></div><div class="prow"><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/15.jpg" alt="" loading="lazy"><figcaption class="cap">A state room set for dining</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/21.jpg" alt="" loading="lazy"><figcaption class="cap">The landscape-mural room</figcaption></figure><figure class="ph" style="width:120.41mm"><img src="../images/austria/schoenbrunn/35.jpg" alt="" loading="lazy"><figcaption class="cap">A salon set with rows of chairs</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn/10.jpg" alt="" loading="lazy"><figcaption class="cap">The deep pile of an imperial carpet</figcaption></figure></div><div class="folio">— Issue 02 · AUSTRIA · Schönbrunn, the palace —</div>
 </div>
 
 <div class="mag-page mag-spread">
@@ -716,19 +639,7 @@ body { padding:20px; }
 <div class="mag-page mag-album">
   <div class="album-sub">Vienna · more from the city</div>
   <div class="album-head">The imperial city, up close.</div>
-  <div class="mag-essay">
-    <div class="essay-item"><img src="../images/austria/vienna-stephansdom-family.jpg" loading="lazy"><div class="essay-cap">The family at Stephansdom</div></div>
-    <div class="essay-item"><img src="../images/austria/stephansdom-interior-side-altar.jpg" loading="lazy"><div class="essay-cap">A side altar, Stephansdom</div></div>
-    <div class="essay-item"><img src="../images/austria/vienna-votivkirche.jpg" loading="lazy"><div class="essay-cap">The Votivkirche spires</div></div>
-    <div class="essay-item"><img src="../images/austria/votivkirche-facade.jpg" loading="lazy"><div class="essay-cap">Votivkirche, neo-Gothic façade</div></div>
-    <div class="essay-item"><img src="../images/austria/vienna-opera-fountain-group.jpg" loading="lazy"><div class="essay-cap">By the Opera fountain</div></div>
-    <div class="essay-item"><img src="../images/austria/vienna-loggia-statues.jpg" loading="lazy"><div class="essay-cap">Loggia statues</div></div>
-    <div class="essay-item"><img src="../images/austria/vienna-niche-allegory.jpg" loading="lazy"><div class="essay-cap">An allegory in stone</div></div>
-    <div class="essay-item"><img src="../images/austria/vienna-albertina-pink-bunny.jpg" loading="lazy"><div class="essay-cap">The Albertina's pink bunny</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn-panel-genealogy.jpg" loading="lazy"><div class="essay-cap">The Habsburg genealogy</div></div>
-    <div class="essay-item"><img src="../images/austria/schoenbrunn-panel-monarchy-end.jpg" loading="lazy"><div class="essay-cap">The end of the monarchy</div></div>
-  </div>
-  <div class="folio">— Issue 02 · AUSTRIA · Vienna, more —</div>
+  <div class="prow"><figure class="ph" style="width:39.00mm"><img src="../images/austria/vienna-stephansdom-family.jpg" alt="" loading="lazy"><figcaption class="cap">The family at Stephansdom</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/stephansdom-interior-side-altar.jpg" alt="" loading="lazy"><figcaption class="cap">A side altar, Stephansdom</figcaption></figure><figure class="ph" style="width:25.94mm"><img src="../images/austria/vienna-votivkirche.jpg" alt="" loading="lazy"><figcaption class="cap">The Votivkirche spires</figcaption></figure><figure class="ph" style="width:25.94mm"><img src="../images/austria/votivkirche-facade.jpg" alt="" loading="lazy"><figcaption class="cap">Votivkirche, neo-Gothic façade</figcaption></figure></div><div class="prow"><figure class="ph" style="width:39.00mm"><img src="../images/austria/vienna-opera-fountain-group.jpg" alt="" loading="lazy"><figcaption class="cap">By the Opera fountain</figcaption></figure><figure class="ph" style="width:69.33mm"><img src="../images/austria/vienna-loggia-statues.jpg" alt="" loading="lazy"><figcaption class="cap">Loggia statues</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/vienna-niche-allegory.jpg" alt="" loading="lazy"><figcaption class="cap">An allegory in stone</figcaption></figure></div><div class="prow"><figure class="ph" style="width:39.00mm"><img src="../images/austria/vienna-albertina-pink-bunny.jpg" alt="" loading="lazy"><figcaption class="cap">The Albertina's pink bunny</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn-panel-genealogy.jpg" alt="" loading="lazy"><figcaption class="cap">The Habsburg genealogy</figcaption></figure><figure class="ph" style="width:39.00mm"><img src="../images/austria/schoenbrunn-panel-monarchy-end.jpg" alt="" loading="lazy"><figcaption class="cap">The end of the monarchy</figcaption></figure></div><div class="folio">— Issue 02 · AUSTRIA · Vienna, more —</div>
 </div>
 
 <div class="mag-page mag-spread">
