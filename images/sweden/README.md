@@ -5,7 +5,7 @@ rotation-baked and resized. They power both:
 
 - `Sweden-Gothenburg-magazine-2026.html` (repo root) — the self-contained issue, photos
   embedded as base64 (shareable single file).
-- `magazines/13-sweden-2026.html` — the series file, referencing these images by relative path.
+- `magazines/12-sweden-2026.html` — the series file, referencing these images by relative path.
 
 ## What's in the issue
 People: `family-heart-close` (cover), `family-heart-selfie` (Heart of the City page),
