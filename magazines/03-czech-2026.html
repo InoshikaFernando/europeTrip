@@ -111,12 +111,12 @@ body { padding:20px; }
 .sp-photo img { max-width:100%; max-height:150mm; display:inline-block; border-radius:2px; vertical-align:bottom; }
 .sp-photo .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; line-height:1.2; }
 /* MAGAZINE PHOTO COLLAGE — asymmetric editorial, varied sizes, rich captions */
-.mag-collage { padding:12mm 13mm; display:flex; flex-direction:column; }
+.mag-collage { padding:10mm 13mm; display:flex; flex-direction:column; }
 .cl-eyebrow { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#6e1313; margin-bottom:7px; }
 .cl-headline { font-family:'Fraunces', serif; font-weight:700; font-size:40px; line-height:0.92; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.015em; }
 .cl-headline em { font-style:italic; font-weight:400; color:#6e1313; }
 .cl-deck { font-family:'Fraunces', serif; font-style:italic; font-size:13px; line-height:1.4; color:#5a4a3a; margin-bottom:9px; max-width:94%; border-bottom:2px solid #325437; padding-bottom:8px; }
-.cl-grid { display:grid; grid-template-columns:repeat(12,1fr); gap:4mm; flex:1; min-height:0; }
+.cl-grid { display:grid; grid-template-columns:repeat(12,1fr); gap:4mm; flex:1; min-height:0; max-height:232mm; }
 .cl-fig { position:relative; overflow:hidden; border-radius:2px; background:#e8dcc0; min-height:0; }
 .cl-fig img { width:100%; height:100%; object-fit:cover; display:block; }
 .cl-fig .ph-info { position:absolute; bottom:5px; right:6px; background:rgba(0,0,0,0.5); color:#fff; font-family:'JetBrains Mono', monospace; font-size:6.5px; padding:2px 5px; border-radius:2px; letter-spacing:0.08em; z-index:2; }
@@ -167,7 +167,7 @@ body { padding:20px; }
 /* ===== FEATURE-LED EDITORIAL SYSTEM ===== */
 .mag-lead { display:grid; grid-template-columns:1.6fr 1fr; gap:8mm; align-items:end; margin:6px 0 7mm; }
 .mag-lead .ll-feat { margin:0; position:relative; overflow:hidden; border-radius:3px; }
-.mag-lead .ll-feat img { width:100%; height:auto; display:block; }
+.mag-lead .ll-feat img { width:100%; height:88mm; object-fit:cover; display:block; }
 .mag-lead .ll-col { display:flex; flex-direction:column; padding-bottom:3mm; }
 .mag-lead .ll-kick { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#6e1313; display:block; margin-bottom:10px; }
 .mag-lead .ll-intro { font-family:'Fraunces',serif; font-style:italic; font-size:14px; line-height:1.62; color:#3d3024; }
@@ -728,7 +728,7 @@ body { padding:20px; }
   <div class="cl-eyebrow">JOSEFOV · THE OLD JEWISH CEMETERY</div>
   <div class="cl-headline">Twelve thousand stones,<br><em>and no more room.</em></div>
   <div class="cl-deck">Folded between the synagogues lies the oldest Jewish cemetery in Europe — where, forbidden to spread outward, the dead were laid in layer upon layer for three hundred years.</div>
-  <div class="cl-grid" style="grid-template-rows:repeat(4,1fr);">
+  <div class="cl-grid" style="grid-template-rows:repeat(4,minmax(0,1fr));">
     <figure class="cl-fig col-7 row-4">
       <img src="../images/day-06/35-old-jewish-cemetery.jpg" alt="The crowded, tilting old tombstones of the Old Jewish Cemetery in Prague" style="object-position:center 45%;">
       <div class="ph-info">Photo · Munasinghe-Fernando</div>
@@ -770,7 +770,7 @@ body { padding:20px; }
   <div class="cl-eyebrow">★ TASTES OF BOHEMIA · STREET FOOD</div>
   <div class="cl-headline">Eaten on our feet,<br><em>between the spires.</em></div>
   <div class="cl-deck">We never sat down to a Czech feast — we grazed from carts on the walk down from the castle. Two snacks, both pretending to be ancient, both devoured in minutes.</div>
-  <div class="cl-grid" style="grid-template-rows:repeat(4,1fr);">
+  <div class="cl-grid" style="grid-template-rows:repeat(4,minmax(0,1fr));">
     <figure class="cl-fig col-7 row-2">
       <img src="../images/czech/food-01-trdelnik.jpg" alt="A trdelník cone filled with vanilla ice cream and topped with a strawberry">
       <div class="ph-info">Photo · Munasinghe-Fernando</div>
@@ -783,8 +783,8 @@ body { padding:20px; }
     </figure>
     <div class="cl-note col-7 row-2">
       <div class="cl-k">What we were really eating</div>
-      <div class="cl-b">The <b>trdelník</b> is hawked on every Prague corner as an "old Bohemian" treat — but it truly belongs to the Hungarian and Transylvanian <em>kürtőskalács</em>: dough wound around a wooden spit (a <em>trdlo</em>), grilled over coals, then rolled in cinnamon sugar. The ice-cream cone is a modern tourist twist, and none the worse for it.</div>
-      <div class="cl-b">The <b>spiral potato</b> is younger still, and travelled further — Korean street food that found its way to Prague's lanes. Gone in minutes between five sets of fingers.</div>
+      <div class="cl-b">The <b>trdelník</b> is sold on every corner as "old Bohemian," but it truly belongs to the Transylvanian <em>kürtőskalács</em> — dough wound round a spit (a <em>trdlo</em>), grilled, and rolled in cinnamon sugar. The ice-cream filling is a modern tourist twist, none the worse for it.</div>
+      <div class="cl-b">The <b>spiral potato</b> travelled further still — Korean street food, now on Prague's lanes. Gone in minutes between five sets of fingers.</div>
     </div>
   </div>
   <div class="folio">— Issue 03 · CZECH REPUBLIC · Tastes of Bohemia —</div>
@@ -794,7 +794,7 @@ body { padding:20px; }
   <div class="cl-eyebrow">TASTES OF BOHEMIA · ONE CART, FIVE PAIRS OF HANDS</div>
   <div class="cl-headline">Shared <em>five ways</em><br>on the castle steps.</div>
   <div class="cl-deck">One trdelník, one tornado potato, a scoop of vanilla — passed hand to hand down the family until nothing was left but sticky fingers and sugar round three small mouths.</div>
-  <div class="cl-grid" style="grid-template-rows:repeat(4,1fr);">
+  <div class="cl-grid" style="grid-template-rows:repeat(4,minmax(0,1fr));">
     <figure class="cl-fig col-7 row-4">
       <img src="../images/czech/tornado-potato-kids.jpg" alt="Avisha, Avin and Aviann on the castle steps between two tall spiral potatoes" style="object-position:center 42%;">
       <div class="ph-info">Photo · Munasinghe-Fernando</div>
