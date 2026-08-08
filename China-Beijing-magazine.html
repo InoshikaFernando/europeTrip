@@ -68,10 +68,10 @@ body { padding:20px; }
 .feat-cols p { font-size:10.6px; line-height:1.6; color:#333333; margin-bottom:8px; }
 .feat-cols p:first-child::first-letter { font-weight:800; font-size:34px; float:left; line-height:0.82; padding:3px 7px 0 0; color:#8b1a1a; }
 .mag-photo { padding:0; }
-.pp-grid { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:2mm; width:210mm; height:297mm; background:#111; }
-.pp-fig { position:relative; overflow:hidden; margin:0; background:#141414; }
-.pp-fig img { width:100%; height:100%; object-fit:contain; display:block; }
-.pp-fig figcaption { position:absolute; left:0; right:0; bottom:0; z-index:2; padding:26px 13px 10px; background:linear-gradient(to top, rgba(0,0,0,0.86), rgba(0,0,0,0.15) 68%, rgba(0,0,0,0)); color:#fff; font-size:8.7px; line-height:1.42; }
+.pp-grid { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:3mm; width:210mm; height:297mm; background:#111; padding:3mm; }
+.pp-fig { position:relative; display:flex; flex-direction:column; overflow:hidden; margin:0; background:#161616; }
+.pp-fig img { flex:1 1 auto; width:100%; min-height:0; object-fit:contain; display:block; }
+.pp-fig figcaption { flex:0 0 auto; padding:9px 14px 11px; background:#161616; color:#dcdcdc; font-size:8.7px; line-height:1.46; border-top:1px solid #2c2c2c; }
 .pp-fig figcaption b { color:#f0d68c; font-weight:700; }
 .pp-label { position:absolute; top:0; left:0; z-index:3; background:#8b1a1a; color:#fff; font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; padding:6px 13px; }
 /* What we missed */
