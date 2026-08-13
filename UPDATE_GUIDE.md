@@ -32,7 +32,7 @@
 ### D. Magazines (A4 keepsake, one PDF per country — built from history pages + food cards)
 | File | Country | Notes |
 |---|---|---|
-| `magazines/01-china-2026.html` … `magazines/13-vatican-2026.html` | 13 country issues | 7 pages each: Cover · Welcome/TOC · Feature 1 · Duo-photo · Feature 2 · Tastes · Reflections/back-cover |
+| `magazines/01-china-2026.html` … `magazines/13-sweden-2026.html` | 13 country issues, numbered in travel order (China · Germany · Austria · Czechia · Hungary · Italy · Vatican · Switzerland · France · Netherlands · Belgium · Denmark · Sweden) | 7 pages each: Cover · Welcome/TOC · Feature 1 · Duo-photo · Feature 2 · Tastes · Reflections/back-cover |
 | Generator: `C:/Source/Trip2026/generate_magazines.py` | rebuilds magazines 02–14 | 01-china is hand-maintained separately |
 | Self-contained exports | Denmark, Sweden | `Denmark-Copenhagen-magazine-2026.html`, `Sweden-Gothenburg-magazine-2026.html` (repo root, photos embedded as base64) |
 
