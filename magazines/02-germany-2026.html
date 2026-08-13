@@ -119,6 +119,14 @@ body { padding:20px; }
 .jr-stop.here .jr-n { color:#f0d68c; }
 .jr-today { font-family:'Fraunces', serif; font-style:italic; font-size:15px; line-height:1.5; color:#1b4f8e; margin-top:auto; padding-top:10mm; border-top:1px solid #0a7a3a; }
 @media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
+
+.mag-food { display:flex; flex-direction:column; }
+.mag-food .fd-grid { flex:1; grid-template-rows:1fr 1fr; gap:8mm; margin-top:6mm; }
+.mag-food .fd-card { border:1px solid #e8d6a8; border-left:4px solid #b58a2e; border-radius:4px; background:#fff8ec; display:flex; flex-direction:column; justify-content:center; }
+.mag-food .fd-card .fd-body { padding:16px 20px; }
+.mag-food .fd-num { font-size:32px; }
+.mag-food .fd-name { font-size:22px; margin:3px 0 9px; }
+.mag-food .fd-desc { font-size:11.5px; line-height:1.6; margin-bottom:10px; }
 </style></head>
 <body>
 
@@ -361,7 +369,6 @@ body { padding:20px; }
   <div class="fd-deck">Hearty, honest, southern-German food — from the pretzel that was our very first European lunch to the sausages Bavaria won't let you eat after noon.</div>
   <div class="fd-grid">
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/food/07b-germany-laugenstange.jpg');"></div>
       <div class="fd-body">
         <div class="fd-num">01</div>
         <div class="fd-name">Brezn &amp; Laugengebäck</div>
@@ -370,7 +377,6 @@ body { padding:20px; }
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/food/07-germany-weisswurst.jpg');"></div>
       <div class="fd-body">
         <div class="fd-num">02</div>
         <div class="fd-name">Weisswurst</div>
@@ -379,7 +385,6 @@ body { padding:20px; }
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/food/07d-germany-leberkase.jpg');"></div>
       <div class="fd-body">
         <div class="fd-num">03</div>
         <div class="fd-name">Leberkäse</div>
@@ -388,7 +393,6 @@ body { padding:20px; }
       </div>
     </div>
     <div class="fd-card">
-      <div class="fd-img" style="background-image:url('../images/food/07c-germany-maultaschen.jpg');"></div>
       <div class="fd-body">
         <div class="fd-num">04</div>
         <div class="fd-name">Maultaschen</div>
