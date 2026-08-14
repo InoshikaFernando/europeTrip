@@ -14,10 +14,12 @@ body { padding:20px; }
 .mag-page:last-child { page-break-after:auto; }
 .mag-cover { color:white; display:flex; flex-direction:row; align-items:stretch; padding:0; position:relative; overflow:hidden; }
 .cv-hero { flex:1; position:relative; display:flex; flex-direction:column; padding:18mm 14mm; background: linear-gradient(180deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.42) 26%, rgba(0,0,0,0.05) 47%, rgba(0,0,0,0.15) 70%, rgba(0,0,0,0.82) 100%), url('../images/italy/milan-duomo-family.jpg') center 40%/cover #2a1a0a; overflow:hidden; }
-.cv-strip { width:31mm; flex:none; background:linear-gradient(158deg, #3a2416 0%, #17100a 100%); padding:6mm 3mm; display:flex; flex-direction:column; }
-.cv-strip-h { font-family:'JetBrains Mono', monospace; font-size:7px; letter-spacing:0.22em; text-transform:uppercase; color:#e6bf6a; text-align:center; padding-bottom:3mm; margin-bottom:3mm; border-bottom:1px solid rgba(255,255,255,0.18); }
-.cv-grid { display:grid; grid-template-columns:1fr; gap:2mm; align-content:space-between; flex:1; }
-.cv-grid img { width:100%; height:auto; display:block; border-radius:3px; box-shadow:0 4px 12px rgba(0,0,0,0.5); }
+.cv-strip { width:60mm; flex:none; background:#17100a; display:flex; flex-direction:column; padding:0; }
+.cv-strip-h { font-family:'JetBrains Mono', monospace; font-size:7.5px; letter-spacing:0.26em; text-transform:uppercase; color:#e6bf6a; text-align:center; padding:6mm 0 5mm; }
+.cv-mosaic { display:grid; grid-template-columns:1fr 1fr; grid-auto-rows:1fr; flex:1; }
+.cv-cell { position:relative; overflow:hidden; }
+.cv-cell img { width:100%; height:100%; object-fit:cover; object-position:center 42%; display:block; }
+.cv-cell span { position:absolute; left:0; right:0; bottom:0; padding:12px 4px 4px; background:linear-gradient(transparent, rgba(0,0,0,0.9)); font-family:'Fraunces', serif; font-weight:700; font-size:12px; color:#fff; text-align:center; letter-spacing:0.01em; text-shadow:0 1px 4px rgba(0,0,0,0.8); }
 .cv-issue { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:rgba(255,255,255,0.85); margin-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:4px; display:flex; justify-content:space-between; }
 .cv-flag { font-size:14px; }
 .cv-brand { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:18px; color:rgba(255,255,255,0.95); letter-spacing:0.05em; margin-bottom:auto; }
@@ -161,18 +163,18 @@ body { padding:20px; }
       <div class="cv-meta" style="position:static; text-align:left; margin-top:7mm;">Munasinghe-Fernando Family · Fri 17 — Fri 24 Jul 2026</div>
     </div>
   </div>
-  <!-- Right-hand city column: all the Italian cities as styled cover-cards in a two-column grid -->
+  <!-- Right-hand city column: edge-to-edge photo mosaic of every Italian city, no gaps -->
   <div class="cv-strip">
     <div class="cv-strip-h">The Cities · 2026</div>
-    <div class="cv-grid">
-      <img src="../images/covers/cover-08-venice.png" alt="Venice">
-      <img src="../images/covers/cover-09-padova.png" alt="Padova">
-      <img src="../images/covers/cover-10-florence.png" alt="Florence">
-      <img src="../images/covers/cover-11-pisa.png" alt="Pisa">
-      <img src="../images/covers/cover-12-perugia.png" alt="Perugia">
-      <img src="../images/covers/cover-13-pompeii.png" alt="Pompeii">
-      <img src="../images/covers/cover-14-napoli.png" alt="Napoli">
-      <img src="../images/covers/cover-15-rome.png" alt="Rome">
+    <div class="cv-mosaic">
+      <div class="cv-cell"><img src="../images/italy/venice-basilica-facade.jpg" alt=""><span>Venice</span></div>
+      <div class="cv-cell"><img src="../images/italy/padua-family.jpg" alt=""><span>Padova</span></div>
+      <div class="cv-cell"><img src="../images/italy/florence-duomo-family.jpg" alt=""><span>Florence</span></div>
+      <div class="cv-cell"><img src="../images/italy/pisa-leaning-tower-family.jpg" alt=""><span>Pisa</span></div>
+      <div class="cv-cell"><img src="../images/italy/perugia-church-family.jpg" alt=""><span>Perugia</span></div>
+      <div class="cv-cell"><img src="../images/italy/pompeii-family.jpg" alt=""><span>Pompeii</span></div>
+      <div class="cv-cell"><img src="../images/italy/napoli-family.jpg" alt=""><span>Napoli</span></div>
+      <div class="cv-cell"><img src="../images/italy/rome-colosseum-family.jpg" alt=""><span>Rome</span></div>
     </div>
   </div>
 </div>
