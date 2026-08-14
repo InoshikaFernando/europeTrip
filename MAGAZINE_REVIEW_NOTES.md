@@ -163,6 +163,20 @@ fix what applies, publish to `main`, then report so the user can manually verify
 - Frame anything missed as **"Next time"** and **name the specific places**
   (Neuschwanstein, the Romantic Road, the Ottobeuren basilica…), never "what we missed".
 
+## 21. Add history wherever it fits — the reader loves history
+- The user **loves history**: wherever a page has room or touches a place with a
+  story (a palace, a square, a bridge, a cathedral, a castle, a whole city),
+  **weave in the historical context** — who built it and when, why it looks the
+  way it does, what happened there. Add it as narrative prose, a **"story in N
+  dates" timeline**, a short **history sidebar/feature**, or a captioned fact —
+  whatever fills the page best (rule 12) without crowding the family story.
+- History is a first-class way to fill a light page: prefer a real history
+  feature over generic filler prose. Keep it **accurate** (rule 5/8) — hedge or
+  use a safe descriptive line when unsure, never assert a wrong fact.
+- Blend, don't bury: the family's personal moment stays the heart of the spread;
+  history frames it (rule 2). Aim for at least one genuine historical note per
+  city/landmark spread across every issue.
+
 ## Publish / preview flow
 - Commit on branch → push → ff-merge to `main` → push `main`.
 - **raw.githack caches per-URL.** When giving the user a preview link, add a
