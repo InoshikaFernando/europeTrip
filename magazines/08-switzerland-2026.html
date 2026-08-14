@@ -137,12 +137,33 @@ body { padding:20px; }
 .bc-issue { position:absolute; top:20mm; right:20mm; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; color:rgba(255,255,255,0.7); }
 .mag-page .folio { position:absolute; bottom:4mm; left:0; right:0; text-align:center; font-family:'Fraunces', serif; font-style:italic; font-size:8.5px; color:#8b6914; }
 @media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
+.ctile { position:absolute; background:#101820; border:2px solid rgba(255,255,255,0.92); border-radius:5px; box-shadow:0 8px 24px rgba(0,0,0,0.55); overflow:hidden; padding:5px 5px 0; z-index:3; }
+.ctile .ck { font-family:'JetBrains Mono', monospace; font-size:4px; letter-spacing:0.22em; text-transform:uppercase; text-align:center; color:#c89b3c; padding:2px 0 3px; white-space:nowrap; }
+.ctile img { width:100%; aspect-ratio:4/5; object-fit:cover; display:block; border-radius:2px; }
+.ctile .cn { font-family:'Fraunces', serif; font-weight:700; font-size:13px; line-height:1; text-align:center; color:#fff; padding:5px 0 2px; }
+.ctile .cc { font-family:'JetBrains Mono', monospace; font-size:4px; letter-spacing:0.28em; text-transform:uppercase; text-align:center; color:rgba(255,255,255,0.55); padding:0 0 6px; }
 </style></head>
 <body>
 
 <div class="mag-page mag-cover">
   <div class="cv-issue"><span>Issue 08 · 2026</span><span class="cv-flag">🇨🇭 SWITZERLAND</span></div>
   <div class="cv-brand">Munasinghe-Fernando Travel Magazine</div>
+  <!-- City cards built from real trip photos, scattered across the clear sky/Matterhorn zone above the family -->
+  <div class="ctile" style="top:40mm; left:12mm; width:40mm; transform:rotate(-5deg);">
+    <div class="ck">The Grand Journey · 2026</div>
+    <img src="../images/switzerland/zurich-family-lake.jpg" alt="">
+    <div class="cn">Zürich</div><div class="cc">Switzerland</div>
+  </div>
+  <div class="ctile" style="top:110mm; left:36mm; width:37mm; transform:rotate(5deg);">
+    <div class="ck">The Grand Journey · 2026</div>
+    <img src="../images/switzerland/bern-family-zytglogge.jpg" alt="">
+    <div class="cn">Bern</div><div class="cc">Switzerland</div>
+  </div>
+  <div class="ctile" style="top:46mm; right:12mm; width:42mm; transform:rotate(4deg);">
+    <div class="ck">The Grand Journey · 2026</div>
+    <img src="../images/switzerland/day-18-geneva-jet-deau.jpg" alt="">
+    <div class="cn">Geneva</div><div class="cc">Switzerland</div>
+  </div>
   <div>
     <div class="cv-title">SWITZERLAND</div>
     <div class="cv-sub">Stalden · Gornergrat · Moléson · Geneva</div>
