@@ -86,5 +86,87 @@ fix what applies, publish to `main`, then report so the user can manually verify
 - The reusable CSS (`.mag-story/.op-*/.prow/.ph/.cap`) and the justified-row
   width maths live in France (Issue 08); copy them into each issue as it's converted.
 
+## 12. No empty space — every page must FILL (as well as not overflow)
+- A page with a big blank band at the foot is a defect, just like an overflow.
+  Target: content reaches near the folio; no more than a small margin of blank.
+- **Text/history pages:** fill with a fitting element — a **stat row**, a **dates
+  timeline**, a **"Next time" wish-list**, this-issue **highlights**, or an
+  enlarged supporting photo. Never pad with filler prose.
+- **Photo/gallery pages:** enlarge the photos so they fill. A sparse grid of small
+  tiles is worse than fewer, larger photos.
+- **Portrait photos are height-capped in a row:** 3 portrait shots across (≈56mm)
+  are short and leave blank. Use **2 big photos side-by-side (≈87mm)** to fill, or
+  a 1-big + 2-stacked collage. (Fixed the Schönbrunn story pages this way.)
+- Always re-run the height check after enlarging (rule 7): fill to the folio,
+  **never past it**.
+
+## 13. Never cover faces — or key scenery — with text or cards
+- Titles, coverlines and labels must sit in a **face-free zone** (open sky, plain
+  ground), never on a family face. On a face-heavy hero, lift the title to the top
+  over the sky.
+- City cards / tiles must not cover the hero's **faces** OR its **key scenery**
+  (e.g. the Hallstatt hills). If they'd cover either, move them off the photo.
+- **Card labels go BELOW the photo**, never as text baked over a face.
+
+## 14. Multi-city covers — the split layout
+- For issues covering several cities (Austria, Italy, Switzerland, France…), use the
+  **split layout**: full hero on the LEFT (scenery + family visible), and a clean
+  dark **city-column on the RIGHT** — one card per city, photo with the label
+  beneath. Do **not** scatter cards over the hero scene.
+- Build the cards from real family/landmark photos (label beneath), not baked-in
+  text tiles. Switzerland (Issue 08) and Austria (03) covers are the reference.
+- Italy's variant (many cities): an **L-frame** of cards along top+right, hero held
+  in the open lower-left corner. Same rule — cards in their own band, off the faces.
+
+## 15. Journey route rail — must match ISSUE order everywhere
+- The rail lists countries in issue/travel order:
+  **01 China · 02 Germany · 03 Austria · 04 Czechia · 05 Hungary · 06 Italy ·
+  07 Vatican · 08 Switzerland · 09 France · 10 Netherlands · 11 Belgium ·
+  12 Denmark · 13 Sweden · ⌂ Home.**
+- **Chapter number = the issue number.** ✓/`done` on every EARLIER issue, ★/`here`
+  on the current one, plain for the ones ahead.
+- Country count is **13** (not 14). Keep it consistent with the rail and any deck.
+- Fill the journey page (rule 12) with a "what's ahead" line + this-issue highlights.
+- ⚠️ This rail is stale (old order, Germany at 07) in the issues not yet reviewed —
+  fix it in each as you go.
+
+## 16. Back cover teases the NEXT issue with the NEXT country's landmark
+- The "★ NEXT ISSUE · [country] ★" back cover must show a **landmark photo of that
+  next country**, not the current one. (Germany→Hallstatt, Austria→Prague Castle,
+  Czechia→Budapest night, Hungary→Colosseum, Vatican→Matterhorn, Switzerland→Eiffel,
+  France→Amsterdam, Netherlands→Atomium, Belgium→Nyhavn, Denmark→Gothenburg.)
+- The chain follows issue order (02→03 … 13→Home). Sweden (13) teases Home · NZ.
+- Issue count on the back = **"No. NN · One of Fourteen"** (13 countries + the Home
+  finale). Keep it identical across every issue.
+
+## 17. History as a story, with 2–3 matched photos per page
+- When asked to explain a place's history (palace, cathedral, etc.): **write it as a
+  narrative story** and add **2–3 matching photos per page** to illustrate it.
+  Story is primary; photos are the graphics. (Schönbrunn: Maria Theresa → the Great
+  Gallery/Mozart → the imperial apartments → treasures & the end.) Never a photo grid.
+
+## 18. Only the family's own photos — no stock, no photo-less filler
+- Use only real **"Photo · Munasinghe-Fernando"** shots. **Never** stock images
+  (e.g. the unused `images/food/` reference set).
+- If a page has no usable own photos and is generic filler (e.g. a food page for a
+  country they only passed through), **remove it** and fix the TOC/folios — don't pad
+  it with stock.
+
+## 19. Numbering & facts consistent everywhere
+- Issue numbers, "No. X in this series", "Chapter X", "One of Fourteen", country
+  counts must agree across cover, journey rail, back cover and cross-references
+  (a Prague/Czechia mention is **No. 04**, not 03).
+- Honour the real itinerary/accommodation (e.g. Germany's 2nd night = the Novotel by
+  Munich Airport, **not** Ottobeuren — plans changed).
+
+## 20. "Next time" framing
+- Frame anything missed as **"Next time"** and **name the specific places**
+  (Neuschwanstein, the Romantic Road, the Ottobeuren basilica…), never "what we missed".
+
+## Publish / preview flow
+- Commit on branch → push → ff-merge to `main` → push `main`.
+- **raw.githack caches per-URL.** When giving the user a preview link, add a
+  `?v=N` cache-buster and bump N so they see the fresh version (not a stale cache).
+
 ---
 _Add new review notes here as the user raises them._
