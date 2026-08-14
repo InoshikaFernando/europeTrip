@@ -158,10 +158,11 @@ body { padding:20px; }
 <div class="mag-page mag-cover">
   <div class="cv-issue"><span>Issue 03 · 2026</span><span class="cv-flag">🇦🇹 AUSTRIA</span></div>
   <div class="cv-brand">Munasinghe-Fernando Travel Magazine</div>
-  <div style="position:absolute; top:30mm; right:12mm; width:52mm; display:flex; flex-direction:column; gap:4mm; z-index:3;">
-    <img src="../images/covers/cover-04-hallstatt.png" style="width:100%; height:auto; display:block; border-radius:3px; box-shadow:0 5px 16px rgba(0,0,0,0.5);">
-    <img src="../images/covers/cover-03-salzburg.png" style="width:100%; height:auto; display:block; border-radius:3px; box-shadow:0 5px 16px rgba(0,0,0,0.5);">
-    <img src="../images/covers/cover-06-vienna.png" style="width:100%; height:auto; display:block; border-radius:3px; box-shadow:0 5px 16px rgba(0,0,0,0.5);">
+  <!-- Fanned city cover-cards cascading through the clear sky/mountain zone (top half), above the family -->
+  <div style="position:absolute; inset:0; z-index:3; pointer-events:none;">
+    <img src="../images/covers/cover-04-hallstatt.png" style="position:absolute; top:16mm; right:11mm; width:45mm; transform:rotate(4deg);  border-radius:4px; border:2px solid rgba(255,255,255,0.9); box-shadow:0 7px 22px rgba(0,0,0,0.55); display:block;">
+    <img src="../images/covers/cover-03-salzburg.png" style="position:absolute; top:52mm; right:53mm; width:42mm; transform:rotate(-5deg); border-radius:4px; border:2px solid rgba(255,255,255,0.9); box-shadow:0 7px 22px rgba(0,0,0,0.55); display:block;">
+    <img src="../images/covers/cover-06-vienna.png"   style="position:absolute; top:96mm; right:16mm; width:43mm; transform:rotate(-3deg); border-radius:4px; border:2px solid rgba(255,255,255,0.9); box-shadow:0 7px 22px rgba(0,0,0,0.55); display:block;">
   </div>
   <div style="margin-top:auto; max-width:60%;">
     <div class="cv-title" style="font-size:82px;">AUSTRIA</div>
