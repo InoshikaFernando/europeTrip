@@ -182,5 +182,32 @@ fix what applies, publish to `main`, then report so the user can manually verify
 - **raw.githack caches per-URL.** When giving the user a preview link, add a
   `?v=N` cache-buster and bump N so they see the fresh version (not a stale cache).
 
+## 22. The mother's name is Inoshi (never "Lana")
+- The family is **Avinesh, Inoshi, Avisha, Aviann & Avin Munasinghe-Fernando**. The
+  mother/author is **Inoshi**. Earlier drafts wrongly called her "Lana" — never use
+  that name anywhere (signoffs, captions, alt text). (Watch base64 image blobs — a
+  literal "Lana" inside a data-URI is coincidental; never edit those.)
+
+## 23. No standalone food page — weave food into the day it happened
+- The magazine must read as **one continuous story**. Never give food its own
+  "★ TASTES OF…" / `mag-food` page.
+- Put each dish into the **narrative of the day it was eaten** (a sentence or two in
+  that day's spread) and place any real food photo as a captioned shot on that day's
+  spread or nearest album page. Then delete the standalone page and **renumber** the
+  TOC + any sequential folios (rule 10).
+- Keep only the family's own food photos (rule 18); drop CSS-emoji placeholder cards.
+
+## 24. Architecture as inheritance — say where the style came from
+- The reader loves knowing **what tradition a building belongs to and who it was
+  inherited/copied from**, not just what it is. On any architecture note, name the
+  lineage: classical dome/arch/column = **Roman**, revived in the **Renaissance**;
+  Gothic (pointed arch, rib vault) = **invented in France**; painted ceilings =
+  **Italy's** supreme art, exported across Europe; carved/ornamented walls =
+  **Prague's** glory; **alpine timber chalets** (Hallstatt ≈ Zermatt) vs **lowland
+  stone burgher towns** (Bern/Zürich arcades); tax-shaped **Dutch canal houses**;
+  civic **guild/belfry** wealth in Belgium; **beyond Rome's reach** in Scandinavia
+  (classical arrived late as an import); **Dutch-engineered** Gothenburg canals.
+- Blend it into the family story (rule 2/21); keep it accurate (rule 5/8).
+
 ---
 _Add new review notes here as the user raises them._
