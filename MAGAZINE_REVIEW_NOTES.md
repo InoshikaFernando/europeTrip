@@ -136,8 +136,8 @@ fix what applies, publish to `main`, then report so the user can manually verify
   Czechia→Budapest night, Hungary→Colosseum, Vatican→Matterhorn, Switzerland→Eiffel,
   France→Amsterdam, Netherlands→Atomium, Belgium→Nyhavn, Denmark→Gothenburg.)
 - The chain follows issue order (02→03 … 13→Home). Sweden (13) teases Home · NZ.
-- Issue count on the back = **"No. NN · One of Fourteen"** (13 countries + the Home
-  finale). Keep it identical across every issue.
+- Back-cover issue label is **trip-scoped**: **"No. NN of 14 · Europe 2026"** (see
+  rule 25). Keep the format identical across every issue in the trip.
 
 ## 17. History as a story, with 2–3 matched photos per page
 - When asked to explain a place's history (palace, cathedral, etc.): **write it as a
@@ -209,5 +209,19 @@ fix what applies, publish to `main`, then report so the user can manually verify
   (classical arrived late as an import); **Dutch-engineered** Gothenburg canals.
 - Blend it into the family story (rule 2/21); keep it accurate (rule 5/8).
 
----
-_Add new review notes here as the user raises them._
+## 25. Collection naming & numbering — number WITHIN a trip, not globally
+- The magazines are a growing shelf of **trips**, written in any order but sorted by
+  travel date. Each trip is its own series identified by a **name + year**
+  (e.g. *Europe 2026*; a future *Singapore 2016* — Batam, Bintan, etc.).
+- **Issue numbers restart at 01 inside each trip.** Never use one global running
+  number — that way adding an older trip later never forces a renumber.
+- Back-cover / masthead label is trip-scoped: **"No. NN of 14 · Europe 2026"**
+  (a future set reads e.g. "No. 01 of 3 · Singapore 2016"). Applied to all 13
+  current issues (2026-08). The "14" counts the 13 countries + the Home finale.
+- **Filenames / folders:** current issues stay flat as `NN-country-2026.html` (so
+  existing raw.githack links keep working). **New trips go in their own folder** —
+  `magazines/2016-singapore/01-….html` etc. — numbered from 01 within that folder.
+- **Revisiting a country:** a second visit is just a new issue in a new trip folder
+  (no collision with the 2026 one). **Link them** with a "We've been here before"
+  cross-reference line pointing to the earlier issue, and list everything on a
+  top-level **`magazines/index.html`** (build it when the 2nd trip starts).
