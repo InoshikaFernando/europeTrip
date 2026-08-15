@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Munasinghe-Fernando Travel Magazine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:'Fraunces', serif;
+    background:#f7f2e8;
+    color:#2a2418;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  .wrap { max-width:1100px; margin:0 auto; padding:0 22px 80px; }
+
+  /* ---------- masthead ---------- */
+  header { text-align:center; padding:64px 0 40px; }
+  .mh-kicker { font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.34em; text-transform:uppercase; color:#a02828; }
+  .mh-title { font-family:'Fraunces', serif; font-weight:700; font-size:clamp(40px, 8vw, 74px); line-height:0.95; letter-spacing:-0.02em; margin:10px 0 6px; }
+  .mh-title em { font-style:italic; font-weight:400; color:#28508c; }
+  .mh-rule { width:70px; height:3px; background:#c89b3c; margin:18px auto 16px; }
+  .mh-tag { font-family:'Fraunces', serif; font-style:italic; font-size:clamp(15px,2.4vw,19px); color:#5a4a3a; max-width:640px; margin:0 auto; }
+  .mh-note { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.14em; color:#8b6914; margin-top:16px; }
+
+  /* ---------- trip section ---------- */
+  .trip { margin-top:52px; }
+  .trip-head { display:flex; align-items:baseline; justify-content:space-between; gap:14px; border-bottom:2px solid #2a2418; padding-bottom:10px; flex-wrap:wrap; }
+  .trip-name { font-family:'Fraunces', serif; font-weight:700; font-size:clamp(24px,4.4vw,34px); letter-spacing:-0.01em; }
+  .trip-name span { font-style:italic; font-weight:400; color:#28508c; }
+  .trip-meta { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:#a02828; white-space:nowrap; }
+  .trip-sub { font-family:'Fraunces', serif; font-style:italic; font-size:14px; color:#5a4a3a; margin-top:10px; }
+
+  /* ---------- issue grid ---------- */
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(232px, 1fr)); gap:16px; margin-top:20px; }
+  a.card { text-decoration:none; color:inherit; display:block; }
+  .card {
+    position:relative; background:#fffdf7; border:1px solid #e6d9bd; border-top:4px solid #a02828;
+    border-radius:6px; padding:18px 18px 16px; transition:transform .12s ease, box-shadow .12s ease;
+    height:100%;
+  }
+  a.card:hover .card, a.card:focus .card { transform:translateY(-3px); box-shadow:0 10px 24px rgba(80,60,20,0.14); border-top-color:#c89b3c; }
+  .c-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; }
+  .c-no { font-family:'JetBrains Mono', monospace; font-size:10px; font-weight:700; letter-spacing:0.2em; color:#a02828; }
+  .c-flag { font-size:26px; line-height:1; }
+  .c-country { font-family:'Fraunces', serif; font-weight:700; font-size:22px; line-height:1.05; letter-spacing:-0.01em; }
+  .c-cities { font-family:'Fraunces', serif; font-size:12.5px; line-height:1.45; color:#5a4a3a; margin-top:6px; min-height:34px; }
+  .c-read { font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:0.18em; text-transform:uppercase; color:#28508c; margin-top:12px; }
+
+  /* coming soon */
+  .card.soon { background:#f3eddf; border-color:#e0d3b6; border-top-color:#cbb98e; opacity:0.9; }
+  .card.soon .c-country, .card.soon .c-no { color:#8a7c62; }
+  .card.soon .c-flag { filter:grayscale(0.35); opacity:0.85; }
+  .badge-soon { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; color:#a08a55; margin-top:12px; }
+
+  footer { margin-top:64px; text-align:center; font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.16em; color:#8b6914; border-top:1px solid #e0d3b6; padding-top:22px; }
+  footer .fn { font-family:'Fraunces', serif; font-style:italic; font-size:14px; letter-spacing:0; color:#5a4a3a; margin-bottom:8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="mh-kicker">The Munasinghe-Fernando</div>
+    <h1 class="mh-title">Travel <em>Magazine</em></h1>
+    <div class="mh-rule"></div>
+    <p class="mh-tag">One family, every country we can reach — a growing shelf of stories, city by city, meal by meal, and a little history along the way.</p>
+    <div class="mh-note">Avinesh · Inoshi · Avisha · Aviann · Avin</div>
+  </header>
+
+  <!-- ===================== EUROPE 2026 ===================== -->
+  <section class="trip">
+    <div class="trip-head">
+      <div class="trip-name">Europe <span>· 2026</span></div>
+      <div class="trip-meta">The European Grand Tour · 14 issues</div>
+    </div>
+    <p class="trip-sub">One month, one continent, thirteen countries — from the Great Wall to the Arctic edge of Sweden.</p>
+    <div class="grid">
+
+      <a class="card" href="https://raw.githack.com/InoshikaFernando/europeTrip/main/magazines/01-china-2026.html">
+        <div class="card"><div class="c-top"><span class="c-no">No. 01</span><span class="c-flag">🇨🇳</span></div>
+        <div class="c-country">China</div><div class="c-cities">Beijing — the Great Wall & the Forbidden City.</div><div class="c-read">Read the issue →</div></div></a>
+
+      <a class="card" href="https://raw.githack.com/InoshikaFernando/europeTrip/main/magazines/02-germany-2026.html">
+        <div class="card"><div class="c-top"><span class="c-no">No. 02</span><span class="c-flag">🇩🇪</span></div>
+        <div class="c-country">Germany</div><div class="c-cities">Munich & Bavaria — the door into Europe.</div><div class="c-read">Read the issue →</div></div></a>
+
+      <a class="card" href="https://raw.githack.com/InoshikaFernando/europeTrip/main/magazines/03-austria-2026.html">
+        <div class="card"><div class="c-top"><span class="c-no">No. 03</span><span class="c-flag">🇦🇹</span></div>
+        <div class="c-country">Austria</div><div class="c-cities">Salzburg, Hallstatt & imperial Vienna.</div><div class="c-read">Read the issue →</div></div></a>
+
+      <a class="card" href="https://raw.githack.com/InoshikaFernando/europeTrip/main/magazines/04-czech-2026.html">
+        <div class="card"><div class="c-top"><span class="c-no">No. 04</span><span class="c-flag">🇨🇿</span></div>
+        <div class="c-country">Czech Republic</div><div class="c-cities">Prague — the city of a thousand spires.</div><div class="c-read">Read the issue →</div></div></a>
+
+      <a class="card" href="https://raw.githack.com/InoshikaFernando/europeTrip/main/magazines/05-hungary-2026.html">
+        <div class="card"><div class="c-top"><span class="c-no">No. 05</span><span class="c-flag">🇭🇺</span></div>
+        <div class="c-country">Hungary</div><div class="c-cities">Budapest — Buda's hill, Pest's river.</div><div class="c-read">Read the issue →</div></div></a>
+
+      <a class="card" href="https://raw.githack.com/InoshikaFernando/europeTrip/main/magazines/06-italy-2026.html">
+        <div class="card"><div class="c-top"><span class="c-no">No. 06</span><span class="c-flag">🇮🇹</span></div>
+        <div class="c-country">Italy</div><div class="c-cities">Venice, Florence, Pisa, Milan, Naples & Rome.</div><div class="c-read">Read the issue →</div></div></a>
+
+      <a class="card" href="https://raw.githack.com/InoshikaFernando/europeTrip/main/magazines/07-vatican-2026.html">
+        <div class="card"><div class="c-top"><span class="c-no">No. 07</span><span class="c-flag">🇻🇦</span></div>
+        <div class="c-country">Vatican City</div><div class="c-cities">The Sistine Chapel & St Peter's.</div><div class="c-read">Read the issue →</div></div></a>
+
+      <a class="card" href="https://raw.githack.com/InoshikaFernando/europeTrip/main/magazines/08-switzerland-2026.html">
+        <div class="card"><div class="c-top"><span class="c-no">No. 08</span><span class="c-flag">🇨🇭</span></div>
+        <div class="c-country">Switzerland</div><div class="c-cities">Three days among the Alps.</div><div class="c-read">Read the issue →</div></div></a>
+
+      <a class="card" href="https://raw.githack.com/InoshikaFernando/europeTrip/main/magazines/09-france-2026.html">
+        <div class="card"><div class="c-top"><span class="c-no">No. 09</span><span class="c-flag">🇫🇷</span></div>
+        <div class="c-country">France</div><div class="c-cities">Lourdes, Versailles & the Eiffel Tower.</div><div class="c-read">Read the issue →</div></div></a>
+
+      <a class="card" href="https://raw.githack.com/InoshikaFernando/europeTrip/main/magazines/10-netherlands-2026.html">
+        <div class="card"><div class="c-top"><span class="c-no">No. 10</span><span class="c-flag">🇳🇱</span></div>
+        <div class="c-country">Netherlands</div><div class="c-cities">Amsterdam's canals & a cousin's kitchen.</div><div class="c-read">Read the issue →</div></div></a>
+
+      <a class="card" href="https://raw.githack.com/InoshikaFernando/europeTrip/main/magazines/11-belgium-2026.html">
+        <div class="card"><div class="c-top"><span class="c-no">No. 11</span><span class="c-flag">🇧🇪</span></div>
+        <div class="c-country">Belgium</div><div class="c-cities">Brussels — the Grand-Place & the Atomium.</div><div class="c-read">Read the issue →</div></div></a>
+
+      <a class="card" href="https://raw.githack.com/InoshikaFernando/europeTrip/main/magazines/12-denmark-2026.html">
+        <div class="card"><div class="c-top"><span class="c-no">No. 12</span><span class="c-flag">🇩🇰</span></div>
+        <div class="c-country">Denmark</div><div class="c-cities">Copenhagen & the colours of Nyhavn.</div><div class="c-read">Read the issue →</div></div></a>
+
+      <a class="card" href="https://raw.githack.com/InoshikaFernando/europeTrip/main/magazines/13-sweden-2026.html">
+        <div class="card"><div class="c-top"><span class="c-no">No. 13</span><span class="c-flag">🇸🇪</span></div>
+        <div class="c-country">Sweden</div><div class="c-cities">Gothenburg — canals the Dutch drew.</div><div class="c-read">Read the issue →</div></div></a>
+
+      <div class="card soon"><div class="c-top"><span class="c-no">No. 14</span><span class="c-flag">🇳🇿</span></div>
+        <div class="c-country">Home · New Zealand</div><div class="c-cities">The long way home, and the journey's end.</div><div class="badge-soon">Coming soon</div></div>
+
+    </div>
+  </section>
+
+  <!-- ===================== JAPAN 2025 ===================== -->
+  <section class="trip">
+    <div class="trip-head">
+      <div class="trip-name">Japan <span>· 2025</span></div>
+      <div class="trip-meta">In the works</div>
+    </div>
+    <p class="trip-sub">Temples, bullet trains and blossom — the issues are on their way.</p>
+    <div class="grid">
+      <div class="card soon"><div class="c-top"><span class="c-no">No. 01</span><span class="c-flag">🇯🇵</span></div>
+        <div class="c-country">Japan</div><div class="c-cities">The whole trip — coming to the shelf soon.</div><div class="badge-soon">Coming soon</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== SOUTH-EAST ASIA ===================== -->
+  <section class="trip">
+    <div class="trip-head">
+      <div class="trip-name">South-East Asia <span>· earlier travels</span></div>
+      <div class="trip-meta">To be written</div>
+    </div>
+    <p class="trip-sub">From our Singapore years — the island days and short hops across the water, still to be set down in print.</p>
+    <div class="grid">
+      <div class="card soon"><div class="c-top"><span class="c-no">SG</span><span class="c-flag">🇸🇬</span></div>
+        <div class="c-country">Singapore</div><div class="c-cities">The city-state we called home.</div><div class="badge-soon">Coming soon</div></div>
+      <div class="card soon"><div class="c-top"><span class="c-no">ID</span><span class="c-flag">🇮🇩</span></div>
+        <div class="c-country">Batam</div><div class="c-cities">A ferry hop across the strait.</div><div class="badge-soon">Coming soon</div></div>
+      <div class="card soon"><div class="c-top"><span class="c-no">ID</span><span class="c-flag">🇮🇩</span></div>
+        <div class="c-country">Bintan</div><div class="c-cities">Island beaches off the Riau coast.</div><div class="badge-soon">Coming soon</div></div>
+      <div class="card soon"><div class="c-top"><span class="c-no">TH</span><span class="c-flag">🇹🇭</span></div>
+        <div class="c-country">Pattaya</div><div class="c-cities">A Thai seaside escape.</div><div class="badge-soon">Coming soon</div></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fn">One family, one shelf, still growing.</div>
+    Munasinghe-Fernando Travel Magazine · updated August 2026
+  </footer>
+
+</div>
+</body>
+</html>
