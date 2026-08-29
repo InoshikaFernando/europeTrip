@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Austria · Munasinghe-Fernando Travel Magazine (v2)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#231f1a; --paper:#f4efe6; --card:#fffdf8; --line:#e3d8c4;
+    --red:#8f2436; --blue:#25566a; --gold:#b3924f; --muted:#726858;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#cbb8a0;font-family:'Spectral',serif;color:var(--ink);-webkit-font-smoothing:antialiased;}
+  .page{width:210mm;min-height:296mm;margin:0 auto;background:var(--paper);position:relative;overflow:hidden;}
+  .pad{padding:20mm 18mm;}
+  img{display:block;max-width:100%;}
+
+  /* ---- typographic system ---- */
+  .kicker{font-family:'Inter',sans-serif;font-weight:600;font-size:10px;letter-spacing:0.32em;text-transform:uppercase;color:var(--red);}
+  .kicker.blue{color:var(--blue);}
+  .hl{font-family:'Playfair Display',serif;font-weight:900;line-height:0.98;letter-spacing:-0.01em;color:#191510;}
+  .hl.big{font-size:52px;}
+  .hl.mid{font-size:40px;}
+  .lede{font-family:'Spectral',serif;font-style:italic;font-size:18px;line-height:1.5;color:#4a4238;}
+  .byline{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap;}
+  .body{font-family:'Spectral',serif;font-size:12.5px;line-height:1.72;color:#332e27;}
+  .body p{margin-bottom:10px;}
+  .body p:last-child{margin-bottom:0;}
+  .cols2{column-count:2;column-gap:9mm;}
+  .drop::first-letter{font-family:'Playfair Display',serif;font-weight:700;font-size:52px;line-height:0.8;float:left;padding:6px 8px 0 0;color:var(--red);}
+  .hr{height:1px;background:var(--line);border:0;margin:14px 0;}
+  .rule-top{border-top:2px solid var(--ink);}
+  figure{margin:0;}
+  .cap{font-family:'Inter',sans-serif;font-size:9.5px;line-height:1.45;color:var(--muted);margin-top:6px;}
+  .cap b{color:#463f34;font-weight:600;}
+  .foot{position:absolute;left:18mm;right:18mm;bottom:9mm;display:flex;justify-content:space-between;font-family:'Inter',sans-serif;font-size:8.5px;letter-spacing:0.18em;text-transform:uppercase;color:#9a8f7c;border-top:1px solid var(--line);padding-top:6px;}
+
+  /* pull quote */
+  .pull{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:22px;line-height:1.32;color:var(--red);text-align:center;padding:8px 4px;}
+  .pull .src{display:block;font-family:'Inter',sans-serif;font-style:normal;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-top:10px;}
+
+  /* modules */
+  .mod{border-radius:4px;padding:14px 16px;}
+  .mod .mh{font-family:'Inter',sans-serif;font-weight:700;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;display:flex;align-items:center;gap:7px;margin-bottom:8px;}
+  .mod .mb{font-family:'Spectral',serif;font-size:11.5px;line-height:1.55;color:#38322a;}
+  .mod .mb b{font-weight:600;}
+  .mod .mb p{margin-bottom:6px;}
+  .mod .mb ul{list-style:none;}
+  .mod .mb li{position:relative;padding-left:15px;margin-bottom:5px;}
+  .mod .mb li::before{content:"›";position:absolute;left:0;color:var(--red);font-weight:700;}
+  .mod-know{background:#eef2f0;border-left:3px solid var(--blue);} .mod-know .mh{color:var(--blue);}
+  .mod-kids{background:#fbeee6;border-left:3px solid #c06a2e;} .mod-kids .mh{color:#b35f26;}
+  .mod-eyes{background:#f0ecf5;border-left:3px solid #6a4d86;} .mod-eyes .mh{color:#5f4479;}
+  .mod-tip{background:#f6efdd;border-left:3px solid var(--gold);} .mod-tip .mh{color:#8a6f2e;}
+  .mod-hist{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);} .mod-hist .mh{color:var(--red);}
+
+  /* timeline */
+  .tl{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+  .tl.four{grid-template-columns:repeat(4,1fr);}
+  .tl .yr{font-family:'Inter',sans-serif;font-weight:700;font-size:14px;color:var(--red);}
+  .tl .tx{font-family:'Spectral',serif;font-size:10.5px;line-height:1.4;color:#38322a;margin-top:3px;}
+
+  /* stat row */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .stats .n{font-family:'Playfair Display',serif;font-weight:700;font-size:26px;color:var(--blue);line-height:1;}
+  .stats .l{font-family:'Inter',sans-serif;font-size:8px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-top:5px;}
+
+  /* cover */
+  .cover{width:210mm;min-height:296mm;margin:0 auto;position:relative;overflow:hidden;background:#0d1416;}
+  .cover .bg{position:absolute;inset:0;background-size:cover;background-position:center;}
+  .cover .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.05) 26%,rgba(0,0,0,0) 46%,rgba(0,0,0,.25) 74%,rgba(0,0,0,.86) 100%);}
+  .cover .inner{position:absolute;inset:0;padding:16mm 16mm 14mm;display:flex;flex-direction:column;color:#fff;}
+  .cover .mast{font-family:'Inter',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.34em;text-transform:uppercase;text-align:center;color:rgba(255,255,255,.92);}
+  .cover .mast .n{display:block;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:0.3em;color:rgba(255,255,255,.7);margin-top:5px;}
+  .cover .hairline{width:64px;height:2px;background:#fff;opacity:.85;margin:12px auto 0;}
+  .cover .country{font-family:'Playfair Display',serif;font-weight:900;font-size:104px;line-height:.9;letter-spacing:-.02em;margin-top:auto;text-shadow:0 2px 30px rgba(0,0,0,.5);}
+  .cover .coverline{font-family:'Spectral',serif;font-style:italic;font-size:19px;line-height:1.42;max-width:74%;margin-top:12px;color:rgba(255,255,255,.95);text-shadow:0 1px 12px rgba(0,0,0,.6);}
+  .cover .teasers{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;}
+  .cover .teasers span{font-family:'Inter',sans-serif;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:100px;padding:6px 12px;}
+  .cover .credit{font-family:'Inter',sans-serif;font-size:9px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,.8);margin-top:20px;}
+
+  /* full-bleed hero inside issue */
+  .bleed{width:100%;height:150mm;object-fit:cover;}
+  .figfull{position:relative;}
+  .figfull .over{position:absolute;left:0;right:0;bottom:0;padding:26px 18mm 16px;background:linear-gradient(0deg,rgba(0,0,0,.78),transparent);color:#fff;}
+  .figfull .over .kicker{color:#f2c9a0;}
+  .figfull .over .hl{color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.5);}
+  .figfull .over .cap{color:rgba(255,255,255,.82);}
+
+  .contents li{display:flex;justify-content:space-between;align-items:baseline;font-family:'Spectral',serif;font-size:13.5px;padding:7px 0;border-bottom:1px solid var(--line);}
+  .contents .nm{font-style:italic;} .contents .nm b{font-style:normal;font-weight:600;}
+  .contents .pg{font-family:'Inter',sans-serif;font-weight:700;font-size:11px;color:var(--red);}
+</style>
+</head>
+<body>
+
+<!-- ============ 1 · COVER ============ -->
+<div class="cover">
+  <div class="bg" style="background-image:url('../images/austria/hallstatt-classic-view.jpg');"></div>
+  <div class="scrim"></div>
+  <div class="inner">
+    <div class="mast">Munasinghe-Fernando Travel<span class="n">No. 03 of 14 · Europe 2026</span></div>
+    <div class="hairline"></div>
+    <div class="country">Austria</div>
+    <div class="coverline">A month across Europe, told by five travellers — the song hidden in Salzburg's gardens, the lake the whole world photographs, and the gold of imperial Vienna.</div>
+    <div class="teasers"><span>The Sound of Music, for real</span><span>Hallstatt from the water</span><span>Inside Schönbrunn</span></div>
+    <div class="credit">The Munasinghe-Fernando family · 11–15 July 2026</div>
+  </div>
+</div>
+
+<!-- ============ 2 · CONTENTS + JOURNEY SO FAR ============ -->
+<div class="page">
+  <div class="pad">
+    <div class="kicker">The Issue</div>
+    <div class="hl mid" style="margin:8px 0 4px;">Austria, in five days<br>and three cities.</div>
+    <div class="lede" style="max-width:90%;">Small enough to drive across in an afternoon; deep enough that every city we stopped in wore a UNESCO crown. This is the third chapter of our European summer.</div>
+    <hr class="hr">
+    <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:12mm;align-items:start;">
+      <div>
+        <div class="kicker" style="margin-bottom:8px;">In this issue</div>
+        <ul class="contents" style="list-style:none;">
+          <li><span class="nm">The road in — <b>from the Great Wall to the Alps</b></span><span class="pg">03</span></li>
+          <li><span class="nm">Salzburg — <b>the song made real</b></span><span class="pg">04</span></li>
+          <li><span class="nm">The Old Town — <b>salt, Baroque & narrow lanes</b></span><span class="pg">05</span></li>
+          <li><span class="nm">Hallstatt — <b>the lake everyone photographs</b></span><span class="pg">06</span></li>
+          <li><span class="nm">Little moments from Hallstatt</span><span class="pg">08</span></li>
+          <li><span class="nm">Vienna — <b>Schönbrunn & the Habsburgs</b></span><span class="pg">09</span></li>
+          <li><span class="nm">Stephansdom — <b>an evening, wordless</b></span><span class="pg">11</span></li>
+          <li><span class="nm">What we ate · The five of us</span><span class="pg">12</span></li>
+          <li><span class="nm">Reflections & what's next</span><span class="pg">13</span></li>
+        </ul>
+      </div>
+      <div>
+        <figure>
+          <img src="../images/austria/austria-autobahn-mountains.jpg" style="width:100%;height:70mm;object-fit:cover;border-radius:3px;">
+          <div class="cap"><b>The drive south.</b> Kilometre after kilometre of autobahn with the Alps rising on the horizon — the road that carried us out of Bavaria and into Austria.</div>
+        </figure>
+        <div class="mod mod-know" style="margin-top:12px;">
+          <div class="mh">◆ The journey so far</div>
+          <div class="mb">We began in <b>Beijing</b> — the Great Wall and the Forbidden City — then a red-eye west to <b>Munich</b>, and up into the Alps. Austria is chapter three of thirteen countries in one European month.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Munasinghe-Fernando Travel</span><span>Austria · Contents</span></div>
+</div>
+
+<!-- ============ 3 · COUNTRY OPENER ============ -->
+<div class="page">
+  <figure class="figfull">
+    <img src="../images/austria/altpernstein-valley-view.jpg" class="bleed" style="height:170mm;object-position:center 40%;">
+    <div class="over" style="background:linear-gradient(0deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.4) 42%,transparent 78%);padding-top:60px;">
+      <div class="kicker" style="text-shadow:0 1px 8px rgba(0,0,0,.7);">Austria · An introduction</div>
+      <div class="hl big" style="margin:6px 0 8px;">A little country<br>that punches high.</div>
+      <div class="cap">The valley from the ramparts of Burg Altpernstein, our first Austrian night — farmland and forest folding away toward the mountains.</div>
+    </div>
+  </figure>
+  <div class="pad" style="padding-top:14mm;">
+    <div class="body cols2 drop">
+      <p>You can drive the width of Austria in about three hours. In those three hours you pass from a lake the whole world queues to photograph, through the birthplace of Mozart, to a capital that ran an empire for six centuries. Few countries pack so much into so little.</p>
+      <p>We came, honestly, for a film. Salzburg was where <em>The Sound of Music</em> was shot, and for one of us that was reason enough. What we found around it was a country of salt and snowmelt, of prince-archbishops and Habsburg emperors, of cream cakes on porcelain and buskers playing Bach on street corners — and, closed on the very day we arrived, one very famous salt mine we are still determined to see.</p>
+    </div>
+    <hr class="hr" style="margin:16px 0;">
+    <div class="tl">
+      <div><div class="yr">Salzburg</div><div class="tx">Mozart, the Baroque, and the Sound of Music garden.</div></div>
+      <div><div class="yr">Hallstatt</div><div class="tx">A lake village whose salt named an entire Iron-Age culture.</div></div>
+      <div><div class="yr">Vienna</div><div class="tx">Schönbrunn, the Habsburgs, and a cathedral that silenced us.</div></div>
+    </div>
+  </div>
+  <div class="foot"><span>Austria · Opener</span><span>03</span></div>
+</div>
+
+<!-- ============ 4 · SALZBURG — THE SONG ============ -->
+<div class="page">
+  <div class="pad">
+    <div class="kicker">Salzburg · The song made real</div>
+    <div class="hl big" style="margin:8px 0 10px;">The garden she had<br>only ever pretended into.</div>
+    <div style="display:grid;grid-template-columns:1.25fr 1fr;gap:10mm;align-items:start;">
+      <div>
+        <figure>
+          <img src="../images/austria/salzburg-mirabell-mum-daughter.jpg" style="width:100%;height:118mm;object-fit:cover;object-position:center 60%;border-radius:3px;">
+          <div class="cap"><b>Mirabell Gardens, Salzburg.</b> Mum and her girl on the grand parterre — the marble statues flanking the path, the palace framed by the limes behind. The exact spot the "Do-Re-Mi" verse was danced.</div>
+        </figure>
+      </div>
+      <div>
+        <div class="lede" style="font-size:16px;">For Mum, this was never just another garden.</div>
+        <div class="body" style="margin-top:10px;">
+          <p>As a child she had acted out <em>The Sound of Music</em> with her sister and a row of dolls — she was always Maria — and watched the film more than a hundred times. Every time, in her head, she was already here. Thirty years later she was standing at the real Mirabell gate, with three children of her own lining up on the very steps where the von Trapps sing the last verse of "Do-Re-Mi."</p>
+        </div>
+        <div class="mod mod-eyes" style="margin-top:14px;">
+          <div class="mh">◆ Through their eyes</div>
+          <div class="mb">To the children it was simply a big garden with good fountains and statues to dodge between. To their mother it was a thirty-year-old promise, finally kept. Both things were true at once — which is rather the point of travelling as a family.</div>
+        </div>
+      </div>
+    </div>
+    <hr class="hr" style="margin:16px 0;">
+    <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:10mm;align-items:center;">
+      <div class="pull" style="text-align:left;">Maria sets out from the abbey half-afraid — "facing adventure, then why am I so scared?" — and sings herself brave enough for seven children and a whole new life.<span class="src" style="text-align:left;">"I Have Confidence" · The Sound of Music</span></div>
+      <div class="body">
+        <p>That song — sung as Maria leaves Nonnberg Abbey to become governess to the von Trapps — was the one that came back to Mum standing here. Facing her own small adventure, a month on the road with three children instead of seven, she borrowed the line and told herself: <em>I have confidence — for all of it.</em></p>
+        <p>We had reached Salzburg two hours behind schedule, after Beijing, a red-eye and a morning in Munich. So we did the city gently: one unhurried hour in the garden, and let the rest wait.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Salzburg · The Song</span><span>04</span></div>
+</div>
+
+<!-- ============ 5 · OLD TOWN — PHOTO + HISTORY ============ -->
+<div class="page">
+  <div class="pad">
+    <div class="kicker blue">Salzburg · The Old Town</div>
+    <div class="hl mid" style="margin:8px 0 8px;">Salt built it. The Baroque<br>gave it its face.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5mm;margin-top:6px;">
+      <figure><img src="../images/austria/salzburg-getreidegasse.jpg" style="width:100%;height:74mm;object-fit:cover;border-radius:3px;"><div class="cap"><b>Getreidegasse.</b> The famous lane, hung end to end with wrought-iron guild signs — even the modern shops must swing a hand-forged emblem over the street.</div></figure>
+      <figure><img src="../images/austria/salzburg-oldtown-square.jpg" style="width:100%;height:74mm;object-fit:cover;object-position:center 40%;border-radius:3px;"><div class="cap"><b>A Baroque square.</b> Step out of a dark medieval lane and the city opens, all at once, into Italian light — the whole story of Salzburg in a single stride.</div></figure>
+    </div>
+    <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:10mm;margin-top:16px;align-items:start;">
+      <div class="body cols2">
+        <p><b>Why the lanes are so narrow.</b> Squeezed between the river Salzach and the sheer cliff of the Mönchsberg, medieval Salzburg had nowhere to grow — so it grew up and back, in tall, thin houses running deep into the block. Not for the heat; simply for want of room.</p>
+        <p><b>Why the squares are so grand.</b> Then came the salt. The "white gold" hauled from the mountains made the prince-archbishops some of the richest princes in the Holy Roman Empire, and from about 1600 they cleared whole quarters to build a Baroque stage — "the Rome of the North" — with Italian architects and a vast domed cathedral.</p>
+        <p>We took it at an ice-cream pace: the guild-sign lanes, Mozart's yellow birthplace at No. 9 (passed in the crush, saved for another day), and the horse-pond fountain, before hurrying on to reach the evening Mass.</p>
+      </div>
+      <div>
+        <div class="mod mod-hist">
+          <div class="mh">◆ Then & now</div>
+          <div class="mb"><b>1077</b> — the Hohensalzburg fortress begun above the town.<br><b>1587</b> — Wolf Dietrich starts the Baroque rebuild.<br><b>1628</b> — Solari's domed cathedral consecrated.<br><b>1944</b> — Allied bombs pierce the dome; half the city is damaged.<br><b>1996</b> — the restored Old Town becomes a UNESCO site.</div>
+        </div>
+        <div class="mod mod-know" style="margin-top:12px;">
+          <div class="mh">◆ Good to know</div>
+          <div class="mb"><ul><li>On a Saturday, the shops shut at <b>6pm</b> — we learned this with three hungry children.</li><li>The Altstadt is small and walkable; a couple of hours covers the squares.</li><li>Ice-cream is the local survival strategy in the July heat.</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Salzburg · The Old Town</span><span>05</span></div>
+</div>
+
+<!-- ============ 6 · HALLSTATT — BIG FEATURE OPENER ============ -->
+<div class="page">
+  <figure class="figfull">
+    <img src="../images/austria/hallstatt-postcard-railing.jpg" class="bleed" style="height:184mm;">
+    <div class="over">
+      <div class="kicker">Hallstatt · The lake</div>
+      <div class="hl big" style="margin:6px 0 8px;">The most photographed<br>village on earth.</div>
+      <div class="cap">The railing everyone leans on for the shot — pastel houses stacked up the cliff, the church spire framed just so, the mountains doubling in the still Hallstättersee.</div>
+    </div>
+  </figure>
+  <div class="pad" style="padding-top:12mm;">
+    <div class="lede" style="max-width:88%;">They really do call it that — and on a July morning, with the lanes packed and the lake shining, you can see exactly why. But the crowds are only the surface. Underneath is one of the oldest stories in Europe.</div>
+  </div>
+  <div class="foot"><span>Hallstatt · The Lake</span><span>06</span></div>
+</div>
+
+<!-- ============ 7 · HALLSTATT — EXPERIENCE + STORY + MODULES ============ -->
+<div class="page">
+  <div class="pad">
+    <div class="kicker">Hallstatt · Our day</div>
+    <div class="hl mid" style="margin:8px 0 10px;">The salt mine was closed —<br>so we took to the water.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5mm;">
+      <figure><img src="../images/austria/hallstatt-boat-family.jpg" style="width:100%;height:96mm;object-fit:cover;object-position:center 30%;border-radius:3px;"><div class="cap"><b>On the Hallstättersee.</b> The best way to see the village is from the water — the whole postcard pulling slowly into frame, the mountains climbing behind.</div></figure>
+      <figure><img src="../images/austria/hallstatt-market-square.jpg" style="width:100%;height:96mm;object-fit:cover;border-radius:3px;"><div class="cap"><b>The Marktplatz.</b> The tiny village square, gathered round its Trinity column — reached, at last, after a five-o'clock start and a castle breakfast.</div></figure>
+    </div>
+    <div style="display:grid;grid-template-columns:1.35fr 1fr;gap:10mm;margin-top:16px;align-items:start;">
+      <div class="body cols2">
+        <p>We woke at five, fresh at last after the long haul from China, filled up on a hilltop-castle breakfast and drove out to Hallstatt before the heat. Two things were against us: the famous salt mine — the oldest in the world — and the Skywalk viewpoint above it were both closed. So we did the simplest, best thing instead, and took a boat out onto the lake.</p>
+        <p><b>The story under the pretty.</b> Salt has been cut from this mountain for around 7,000 years — the oldest known salt mine anywhere. In the 19th century a vast prehistoric cemetery was found here, so important that an entire age of European prehistory, the "Hallstatt Culture," is named after this one village. The "white gold" made it rich long before it was pretty.</p>
+      </div>
+      <div>
+        <div class="mod mod-hist">
+          <div class="mh">◆ The story of this place</div>
+          <div class="mb"><ul><li><b>7,000 years</b> of salt mining — the world's oldest.</li><li><b>c. 800 BC</b> — the "Hallstatt Culture" of the early Iron Age is named for the great cemetery found here.</li><li><b>1,200 skulls</b> in the Bone House, many hand-painted, from a graveyard with no room to spare.</li><li><b>1997</b> — village and lake join the UNESCO list.</li></ul></div>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6mm;margin-top:16px;">
+      <div class="mod mod-know"><div class="mh">◆ Good to know</div><div class="mb">The <b>salt mine & Skywalk</b> can close (they were, for us) — check before you climb. Book the funicular ahead in summer.</div></div>
+      <div class="mod mod-kids"><div class="mh">◆ With kids</div><div class="mb">The <b>boat beats the viewpoint</b> — ours loved it. We skipped the Bone House crypt for the four-year-old; older children would be fascinated.</div></div>
+      <div class="mod mod-tip"><div class="mh">◆ Our one tip</div><div class="mb">Come <b>early</b>. By mid-morning the lanes run shoulder to shoulder; at 8am the village is almost yours.</div></div>
+    </div>
+  </div>
+  <div class="foot"><span>Hallstatt · Our Day</span><span>07</span></div>
+</div>
+
+<!-- ============ 8 · HALLSTATT — LITTLE MOMENTS (memory grid) ============ -->
+<div class="page">
+  <div class="pad">
+    <div class="kicker blue">Little moments</div>
+    <div class="hl mid" style="margin:8px 0 4px;">Hallstatt, in passing.</div>
+    <div class="lede" style="font-size:15px;margin-bottom:12px;">The ordinary frames between the famous ones — the lanes, the railings, the five of us where the whole world comes to stand.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;grid-auto-rows:91mm;gap:5mm;">
+      <figure style="grid-column:span 2;grid-row:span 1;"><img src="../images/austria/hallstatt-viewpoint-family.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;border-radius:3px;"></figure>
+      <figure><img src="../images/austria/hallstatt-classic-view.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:3px;"></figure>
+      <figure><img src="../images/austria/hallstatt-street.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:3px;"></figure>
+      <figure><img src="../images/austria/hallstatt-postcard-lake.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:3px;"></figure>
+      <figure><img src="../images/austria/hallstatt-family-railing.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;border-radius:3px;"></figure>
+    </div>
+    <div class="cap" style="margin-top:8px;">From top left — the family at the classic viewpoint; the postcard lake; a lane climbing between the houses; the still water from the shore; and all five of us at the railing, the shot the whole world comes here to take.</div>
+  </div>
+  <div class="foot"><span>Hallstatt · Little Moments</span><span>08</span></div>
+</div>
+
+<!-- ============ 9 · VIENNA / SCHÖNBRUNN — BIG FEATURE ============ -->
+<div class="page">
+  <div class="pad">
+    <div class="kicker">Vienna · Schönbrunn</div>
+    <div class="hl big" style="margin:8px 0 10px;">A summer palace, and six<br>hundred years of Habsburgs.</div>
+    <figure><img src="../images/austria/schoenbrunn/great-gallery.jpg" style="width:100%;height:96mm;object-fit:cover;border-radius:3px;"><div class="cap"><b>The Great Gallery.</b> Forty-three metres of white, gold and mirror under a painted sky — Maria Theresa's ballroom, where balls for the Congress of Vienna were danced and, in 1961, Kennedy met Khrushchev. Our two smallest simply stopped and stared up.</div></figure>
+    <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:10mm;margin-top:14px;align-items:start;">
+      <div class="body cols2 drop">
+        <p>Vienna kept the Habsburgs for six centuries, and they built as if they meant to stay. Schönbrunn was the family's summer home — some 1,441 rooms in "Schönbrunn yellow" — and it is really the story of one extraordinary woman. Maria Theresa inherited an empire in 1740 that half of Europe promptly tried to carve up; she fought them off, reformed the army and the schools, bore sixteen children, and turned a hunting lodge into this.</p>
+        <p>In one of these rooms a six-year-old Mozart played for her in 1762 and, the story goes, jumped straight into her lap. A century later the palace kept the age's great love story — the emperor Franz Joseph and his restless "Sisi." For a child it is a great deal of gold; for a parent, a strange thing to explain: that the most admired woman in Europe, in a palace of a thousand rooms, was for much of her life quietly unhappy.</p>
+      </div>
+      <div>
+        <figure><img src="../images/austria/vienna-schoenbrunn-family-gates.jpg" style="width:100%;height:52mm;object-fit:cover;object-position:center 42%;border-radius:3px;"><div class="cap"><b>At the gates.</b> The long yellow front behind us, the eagles on their columns — all five of us at the door of the empire's summer.</div></figure>
+        <div class="mod mod-eyes" style="margin-top:12px;">
+          <div class="mh">◆ Through their eyes</div>
+          <div class="mb">By Vienna, Avin had a running question for every grand building we passed: <em>"Is THIS a palace too?"</em> Outside anything taller than a tram stop, the answer was usually yes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Vienna · Schönbrunn</span><span>09</span></div>
+</div>
+
+<!-- ============ 10 · SCHÖNBRUNN — HISTORY IN DATES + DETAILS ============ -->
+<div class="page">
+  <div class="pad">
+    <div class="kicker blue">Vienna · A little history</div>
+    <div class="hl mid" style="margin:8px 0 8px;">Maria Theresa,<br>a reign in six dates.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5mm;">
+      <figure><img src="../images/austria/schoenbrunn/maria-theresa.jpg" style="width:100%;height:82mm;object-fit:cover;object-position:center 35%;border-radius:3px;"><div class="cap"><b>The face on every wall.</b> The only woman to rule the Habsburg lands in her own right — sovereign of Austria, Hungary and Bohemia for forty years.</div></figure>
+      <figure><img src="../images/austria/schoenbrunn/great-gallery-ceiling.jpg" style="width:100%;height:82mm;object-fit:cover;border-radius:3px;"><div class="cap"><b>Overhead.</b> Gregorio Guglielmi's 1760 ceiling fresco — an Italian master's swirling sky, the summit of an art Italy exported across Europe.</div></figure>
+    </div>
+    <div class="mod mod-hist" style="margin-top:16px;">
+      <div class="mh">◆ A reign in six dates</div>
+      <div class="mb">
+        <div class="tl four" style="margin-top:4px;">
+          <div><div class="yr">1717</div><div class="tx">Born in Vienna, a daughter of Emperor Charles VI.</div></div>
+          <div><div class="yr">1740</div><div class="tx">Inherits the throne; the War of the Austrian Succession begins.</div></div>
+          <div><div class="yr">1762</div><div class="tx">A six-year-old Mozart plays for her at Schönbrunn.</div></div>
+          <div><div class="yr">1770</div><div class="tx">Her youngest daughter weds the French dauphin — Marie Antoinette.</div></div>
+        </div>
+      </div>
+    </div>
+    <hr class="hr" style="margin:16px 0;">
+    <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:10mm;align-items:center;">
+      <div class="pull" style="text-align:left;font-size:20px;">Six hundred years of one family, laid across a map of everything they once ruled.<span class="src" style="text-align:left;">Schönbrunn · "Echoes of a Monarchy"</span></div>
+      <div class="body"><p>The palace tells its own end plainly enough: from Rudolf I in 1282 to Franz Joseph in 1900, seven faces on a single wall — and then, in November 1918, in these very rooms, six hundred years of Habsburg rule quietly came to a close. The children watched a whole empire rise and fall across a projected wall of light, and, for once, forgot to fidget.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>Vienna · A Little History</span><span>10</span></div>
+</div>
+
+<!-- ============ 11 · STEPHANSDOM — CINEMATIC EVENING ============ -->
+<div class="page">
+  <figure class="figfull">
+    <img src="../images/austria/stephansdom-tower-roof.jpg" class="bleed" style="height:158mm;">
+    <div class="over">
+      <div class="kicker">Vienna · An evening</div>
+      <div class="hl big" style="margin:6px 0 8px;">The cathedral at<br>the heart of it all.</div>
+      <div class="cap">St. Stephen's — the "Steffl" — its 136-metre south tower and its blaze of glazed tiles, caught as the light went gold and a full day in Vienna wound down.</div>
+    </div>
+  </figure>
+  <div class="pad" style="padding-top:12mm;">
+    <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:10mm;align-items:start;">
+      <div class="body cols2">
+        <p>A church was first consecrated on this spot in 1147; the great Gothic cathedral rose over the centuries that followed. Its roof is its glory — nearly a quarter of a million glazed tiles laid in dazzling zig-zags, the double-headed imperial eagle picked out among them, a coat of arms you can really only read from the sky.</p>
+        <p>We reached it as the crowds thinned and the stone turned honey-gold. It had survived siege, plague and the last days of the war, when fire gutted its roof in 1945; every province of Austria helped pay to rebuild it. We simply stood in the square and looked up — and then stepped inside, and the whole mood of the evening changed.</p>
+      </div>
+      <div class="mod mod-hist">
+        <div class="mh">◆ Then & now</div>
+        <div class="mb"><b>1147</b> — first church consecrated.<br><b>1359</b> — Duke Rudolf IV lays the Gothic cornerstone.<br><b>1433</b> — the 136m "Steffl" tower completed.<br><b>1683</b> — watchmen scan from the tower as the Ottomans besiege Vienna.<br><b>1945 → 1952</b> — fire guts the roof; every province of Austria helps rebuild it.</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Vienna · Stephansdom</span><span>11</span></div>
+</div>
+
+<!-- ============ 12 · WHAT WE ATE + THE FIVE OF US ============ -->
+<div class="page">
+  <div class="pad">
+    <div class="kicker">The table · The five of us</div>
+    <div class="hl mid" style="margin:8px 0 10px;">A schnitzel bigger<br>than the plate.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5mm;">
+      <figure><img src="../images/austria/schnitzel-lunch-family.jpg" style="width:100%;height:112mm;object-fit:cover;object-position:center 35%;border-radius:3px;"><div class="cap"><b>Lunch at last.</b> On the drive back from Hallstatt — all five of us around a proper Wiener Schnitzel, a Zipfer coaster on the table.</div></figure>
+      <figure><img src="../images/austria/schnitzel-plate.jpg" style="width:100%;height:112mm;object-fit:cover;border-radius:3px;"><div class="cap"><b>The dish itself.</b> Veal pounded paper-thin, breaded and fried to a golden cloud, hanging clean over the edge of the plate with a heap of crinkle-cut fries.</div></figure>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10mm;margin-top:14px;align-items:start;">
+      <div class="mod mod-kids">
+        <div class="mh">◆ What we ate</div>
+        <div class="mb">Most of what we ate wasn't in restaurants at all: a <b>castle breakfast buffet</b> so generous it carried us through the day, <b>ice-cream</b> in the Salzburg heat, and — on the very first night, with every shop shut at six — a plate of pizza we slid in for minutes before closing. The schnitzel we crossed half the world for arrived last, on the road home.</div>
+      </div>
+      <div class="body">
+        <div class="kicker" style="margin-bottom:6px;">The five of us</div>
+        <p>Avinesh and Inoshi, and Avisha, Aviann and Avin — two parents and three children who travel the world <em>together</em>, and try to see as much of every country as five people and one stroller reasonably can. Austria was chapter three; the schnitzel was the reward.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Austria · The Table</span><span>12</span></div>
+</div>
+
+<!-- ============ 13 · REFLECTIONS ============ -->
+<div class="page">
+  <div class="pad">
+    <div class="kicker blue">Reflections · Austria</div>
+    <div class="hl mid" style="margin:8px 0 10px;">A closed salt mine, a garden<br>gate, an emperor's gold.</div>
+    <div class="body" style="max-width:92%;">
+      <p>Maria sings herself brave setting out from the abbey — scared of the adventure ahead, and going anyway. Setting out with our own three and a month of road still to come, we borrowed her line and told ourselves we had the confidence for all of it. So far, through Beijing, Bavaria and all of this, it has held. Every last day of it.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6mm;margin-top:16px;">
+      <div class="mod mod-tip"><div class="mh">◆ Favourite moment</div><div class="mb">The Mirabell gate at last — thirty years after a row of dolls — pointing our own three up to the fortress on the hill.</div></div>
+      <div class="mod mod-know"><div class="mh">◆ Hardest moment</div><div class="mb">The first night: shops shut at six, dinner nearly didn't happen, and heavy bags up to the third floor of a castle with no lift.</div></div>
+      <div class="mod mod-kids"><div class="mh">◆ If we come back…</div><div class="mb">Hallstatt kept three doors shut on us — the wish-list, below, is not negotiable.</div></div>
+    </div>
+    <div class="mod mod-hist" style="margin-top:14px;">
+      <div class="mh">◆ Next time in Austria — the three Hallstatt kept from us</div>
+      <div class="mb">
+        <div class="tl" style="margin-top:4px;">
+          <div><div class="yr" style="color:var(--red);">The salt mine</div><div class="tx">The Salzwelten — the world's oldest, with wooden miners' slides and an underground salt lake. Closed the day we came.</div></div>
+          <div><div class="yr" style="color:var(--red);">The Skywalk</div><div class="tx">The "World Heritage View," the platform that juts out high over the lake. Closed too.</div></div>
+          <div><div class="yr" style="color:var(--red);">The Bone House</div><div class="tx">St Michael's chapel of ~1,200 painted skulls — we spared four-year-old Avin the crypt.</div></div>
+        </div>
+      </div>
+    </div>
+    <figure style="margin:18px 0 0;">
+      <img src="../images/austria/vienna-stephansdom-family.jpg" style="width:100%;height:98mm;object-fit:cover;object-position:center 82%;border-radius:3px;">
+      <figcaption class="cap" style="margin-top:8px;"><b>The five of us · Vienna.</b> Under the tiled spire of Stephansdom, on the last of our Austrian days — the whole reason a trip like this gets written down at all.</figcaption>
+    </figure>
+    <div class="byline" style="margin-top:12px;justify-content:flex-end;font-style:normal;">Avinesh · Inoshi · Avisha · Aviann · Avin — Burg Altpernstein → Salzburg → Hallstatt → Vienna · 11–15 July 2026</div>
+  </div>
+  <div class="foot"><span>Austria · Reflections</span><span>13</span></div>
+</div>
+
+<!-- ============ 14 · BACK COVER — NEXT ISSUE ============ -->
+<div class="cover">
+  <div class="bg" style="background-image:url('../images/day-06/01-prague-castle.jpg');"></div>
+  <div class="scrim"></div>
+  <div class="inner">
+    <div class="mast">Munasinghe-Fernando Travel<span class="n">No. 04 of 14 · Europe 2026</span></div>
+    <div class="hairline"></div>
+    <div style="margin-top:auto;">
+      <div class="kicker" style="color:#f2c9a0;">Next issue</div>
+      <div class="country" style="font-size:88px;">Czechia</div>
+      <div class="coverline">Prague — a hilltop castle, an almost-empty Charles Bridge at dawn, and a clock that has kept time since 1410.</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
