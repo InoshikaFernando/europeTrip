@@ -14,11 +14,11 @@
   }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
-  body{background:var(--paper); color:var(--ink); font-family:'Spectral',Georgia,serif; font-size:18.5px; line-height:1.78; -webkit-font-smoothing:antialiased;}
+  body{background:#9a9fa5; color:var(--ink); font-family:'Spectral',Georgia,serif; font-size:16.5px; line-height:1.72; -webkit-font-smoothing:antialiased; padding:22px 0;}
   img{max-width:100%; display:block;}
 
   /* ---------- Cover ---------- */
-  .cover{position:relative; overflow:hidden; background:#10171c;}
+  .cover{position:relative; overflow:hidden; background:#10171c; width:210mm; margin:0 auto 16px; box-shadow:0 2px 16px rgba(0,0,0,.35);}
   .cover img.ph{width:100%; display:block;}
   .cover .sc{position:absolute; top:0; left:0; right:0; height:66%; background:linear-gradient(180deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.3) 32%, rgba(0,0,0,0) 100%); pointer-events:none;}
   .cover .in{position:absolute; top:0; left:0; right:0; padding:5.5vh 2rem 0; display:flex; flex-direction:column; align-items:center; color:#fff; text-align:center;}
@@ -29,14 +29,14 @@
   .cover .cr{font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.85); margin-top:16px; text-shadow:0 1px 8px rgba(0,0,0,.8);}
 
   /* ---------- Reading column ---------- */
-  .wrap{max-width:720px; margin:0 auto; padding:0 24px;}
-  .opener{padding:64px 0 8px;}
+  .wrap{width:210mm; margin:0 auto; padding:0;}
+  .opener{background:#fff; padding:20mm 22mm 16mm; margin:0 auto 16px; box-shadow:0 2px 16px rgba(0,0,0,.35);}
   .opener .k{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--blue);}
   .opener h1{font-family:'Fraunces',serif; font-weight:600; font-size:30px; line-height:1.15; margin:12px 0 0;}
   .opener p{color:var(--muted); font-style:italic; font-size:19px; margin:14px 0 0;}
   .rule{width:54px; height:3px; background:var(--gold); margin:34px 0;}
 
-  .chapter{padding:30px 0 10px;}
+  .chapter{background:#fff; padding:20mm 22mm; margin:0 auto 16px; box-shadow:0 2px 16px rgba(0,0,0,.35);}
   .chapter .num{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--blue); margin-bottom:10px;}
   .chapter h2{font-family:'Fraunces',serif; font-weight:700; font-size:clamp(34px,6vw,46px); line-height:1.02; letter-spacing:-.015em; margin:0;}
   .chapter .sub{font-family:'Spectral',serif; font-style:italic; font-size:21px; line-height:1.4; color:var(--muted); margin:16px 0 4px;}
@@ -45,11 +45,11 @@
   em.q{font-style:italic;}
 
   figure.photo{margin:34px 0; }
-  figure.photo.bleed{margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw); width:100vw;}
+  figure.photo.bleed{margin-left:-22mm; margin-right:-22mm;}
   figure.photo img{width:100%; border-radius:3px; box-shadow:0 10px 34px rgba(60,45,25,.22);}
-  figure.photo.bleed img{border-radius:0; box-shadow:none; max-height:84vh; object-fit:cover;}
-  figure.photo figcaption{font-family:'Spectral',serif; font-style:italic; font-size:14.5px; line-height:1.5; color:var(--muted); margin-top:9px; padding-left:14px; border-left:2px solid var(--gold);}
-  figure.photo.bleed figcaption{max-width:720px; margin:9px auto 0; padding:0 24px;}
+  figure.photo.bleed img{border-radius:0; box-shadow:none;}
+  figure.photo figcaption{font-family:'Spectral',serif; font-style:italic; font-size:13.5px; line-height:1.5; color:var(--muted); margin-top:9px; padding-left:14px; border-left:2px solid var(--gold);}
+  figure.photo.bleed figcaption{margin:9px 22mm 0;}
   .duo{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:34px 0;}
   .duo figure{margin:0;} .duo img{width:100%; height:100%; object-fit:cover; border-radius:3px; box-shadow:0 8px 24px rgba(60,45,25,.2);}
   .duo figcaption{grid-column:1 / -1; font-family:'Spectral',serif; font-style:italic; font-size:14px; color:var(--muted); padding-left:14px; border-left:2px solid var(--gold);}
@@ -67,10 +67,28 @@
 
   footer{border-top:1px solid var(--line); margin-top:30px; padding:26px 0 70px; text-align:center; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted);}
 
-  @media (max-width:640px){
-    body{font-size:17.5px;}
+  @media (max-width:800px){
+    body{padding:0; font-size:16px;}
+    .cover,.wrap,.opener,.chapter{width:auto; max-width:100%; margin:0 0 10px; box-shadow:none;}
+    .opener,.chapter{padding:26px 20px;}
+    figure.photo.bleed{margin-left:-20px; margin-right:-20px;}
+    figure.photo.bleed figcaption{margin:9px 20px 0;}
     .chapter p.lead:first-letter{font-size:52px;}
     .duo{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Print / Save-as-PDF: clean A4 pages ---------- */
+  @page{ size:A4; margin:0; }
+  @media print{
+    body{background:#fff; padding:0;}
+    .cover{width:auto; height:297mm; margin:0; box-shadow:none; page-break-after:always;}
+    .cover img.ph{height:297mm; object-fit:cover; object-position:72% 42%;}
+    .wrap{width:auto;}
+    .opener,.chapter{width:auto; margin:0; box-shadow:none; padding:18mm 16mm; page-break-before:always;}
+    .opener{page-break-before:avoid;}
+    figure.photo, .side, .pq, .duo, .endnote{break-inside:avoid;}
+    .chapter h2{break-after:avoid;}
+    footer{page-break-before:avoid; padding:16px 0; border:0;}
   }
 </style>
 </head>
