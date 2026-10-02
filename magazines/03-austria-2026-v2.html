@@ -73,7 +73,7 @@
 
   /* cover */
   .cover{width:210mm;min-height:296mm;margin:0 auto;position:relative;overflow:hidden;background:#0d1416;}
-  .cover .bg{position:absolute;inset:0;background-size:cover;background-position:center center;}
+  .cover .bg{position:absolute;inset:0;background-size:100% auto;background-position:center top;background-repeat:no-repeat;}
   .cover .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.08) 20%,rgba(0,0,0,0) 40%,rgba(0,0,0,0) 62%,rgba(0,0,0,.5) 82%,rgba(0,0,0,.9) 100%);}
   .cover .inner{position:absolute;inset:0;padding:16mm 16mm 14mm;display:flex;flex-direction:column;color:#fff;}
   .cover .mast{font-family:'Inter',sans-serif;font-weight:600;font-size:11px;letter-spacing:0.34em;text-transform:uppercase;text-align:center;color:rgba(255,255,255,.92);}
@@ -84,8 +84,7 @@
   .cover .teasers{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;}
   .cover .teasers span{font-family:'Inter',sans-serif;font-size:9.5px;letter-spacing:0.12em;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:100px;padding:6px 12px;}
   .cover .credit{font-family:'Inter',sans-serif;font-size:9px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,.8);margin-top:20px;}
-  .cover .citystrip{position:absolute;top:24mm;right:9mm;width:45mm;display:flex;flex-direction:column;gap:5mm;z-index:3;}
-  .cover .citystrip .ch{font-family:'Inter',sans-serif;font-weight:600;font-size:8px;letter-spacing:0.28em;text-transform:uppercase;color:#fff;text-align:center;text-shadow:0 1px 6px rgba(0,0,0,.9);margin-bottom:1mm;}
+  .cover .citystrip{position:absolute;top:12mm;right:8mm;width:37mm;display:flex;flex-direction:column;gap:4mm;z-index:3;}
   .cover .citystrip figure{margin:0;background:#fff;border:2px solid rgba(255,255,255,.95);border-radius:5px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.55);}
   .cover .citystrip img{width:100%;height:auto;display:block;}
   .cover .citystrip figcaption{font-family:'Inter',sans-serif;font-weight:600;font-size:10px;letter-spacing:0.08em;text-align:center;color:#17293c;padding:5px 0 6px;}
@@ -110,7 +109,6 @@
   <div class="bg" style="background-image:url('../images/austria/hallstatt-family-railing.jpg');"></div>
   <div class="scrim"></div>
   <div class="citystrip">
-    <div class="ch">The Cities · 2026</div>
     <figure><img src="../images/austria/hallstatt-boat-family.jpg" alt="The family on the Hallstättersee"><figcaption>Hallstatt</figcaption></figure>
     <figure><img src="../images/austria/salzburg-family-cathedral.jpg" alt="The family in Salzburg's old town"><figcaption>Salzburg</figcaption></figure>
     <figure><img src="../images/austria/vienna-schoenbrunn-family.jpg" alt="The family at Schönbrunn in Vienna"><figcaption>Vienna</figcaption></figure>
