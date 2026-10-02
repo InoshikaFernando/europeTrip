@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Austria · Munasinghe-Fernando Travel Magazine (v3 · the memoir)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2c2522; --paper:#f7f2e8; --paper2:#efe7d6;
+    --blue:#28508c; --gold:#b1812c; --muted:#6f6353; --line:#e0d4bb;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--paper); color:var(--ink); font-family:'Spectral',Georgia,serif; font-size:18.5px; line-height:1.78; -webkit-font-smoothing:antialiased;}
+  img{max-width:100%; display:block;}
+
+  /* ---------- Cover ---------- */
+  .cover{position:relative; overflow:hidden; background:#10171c;}
+  .cover img.ph{width:100%; display:block;}
+  .cover .sc{position:absolute; top:0; left:0; right:0; height:66%; background:linear-gradient(180deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.3) 32%, rgba(0,0,0,0) 100%); pointer-events:none;}
+  .cover .in{position:absolute; top:0; left:0; right:0; padding:5.5vh 2rem 0; display:flex; flex-direction:column; align-items:center; color:#fff; text-align:center;}
+  .cover .mast{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.34em; text-transform:uppercase; color:rgba(255,255,255,.92);}
+  .cover .mast span{display:block; font-size:8.5px; letter-spacing:.3em; color:rgba(255,255,255,.74); margin-top:6px;}
+  .cover .ttl{font-family:'Fraunces',serif; font-weight:700; font-size:clamp(58px,12vw,120px); line-height:.9; letter-spacing:-.02em; margin-top:2.5vh; text-shadow:0 2px 30px rgba(0,0,0,.55);}
+  .cover .ded{font-family:'Spectral',serif; font-style:italic; font-size:clamp(15px,2.5vw,21px); line-height:1.5; color:rgba(255,255,255,.95); max-width:30ch; margin:12px auto 0; text-shadow:0 1px 10px rgba(0,0,0,.75);}
+  .cover .cr{font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.85); margin-top:16px; text-shadow:0 1px 8px rgba(0,0,0,.8);}
+
+  /* ---------- Reading column ---------- */
+  .wrap{max-width:720px; margin:0 auto; padding:0 24px;}
+  .opener{padding:64px 0 8px;}
+  .opener .k{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--blue);}
+  .opener h1{font-family:'Fraunces',serif; font-weight:600; font-size:30px; line-height:1.15; margin:12px 0 0;}
+  .opener p{color:var(--muted); font-style:italic; font-size:19px; margin:14px 0 0;}
+  .rule{width:54px; height:3px; background:var(--gold); margin:34px 0;}
+
+  .chapter{padding:30px 0 10px;}
+  .chapter .num{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--blue); margin-bottom:10px;}
+  .chapter h2{font-family:'Fraunces',serif; font-weight:700; font-size:clamp(34px,6vw,46px); line-height:1.02; letter-spacing:-.015em; margin:0;}
+  .chapter .sub{font-family:'Spectral',serif; font-style:italic; font-size:21px; line-height:1.4; color:var(--muted); margin:16px 0 4px;}
+  .chapter p{margin:20px 0;}
+  .chapter p.lead:first-letter{font-family:'Fraunces',serif; font-weight:700; font-size:62px; line-height:.72; float:left; margin:8px 10px 0 0; color:var(--blue);}
+  em.q{font-style:italic;}
+
+  figure.photo{margin:34px 0; }
+  figure.photo.bleed{margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw); width:100vw;}
+  figure.photo img{width:100%; border-radius:3px; box-shadow:0 10px 34px rgba(60,45,25,.22);}
+  figure.photo.bleed img{border-radius:0; box-shadow:none; max-height:84vh; object-fit:cover;}
+  figure.photo figcaption{font-family:'Spectral',serif; font-style:italic; font-size:14.5px; line-height:1.5; color:var(--muted); margin-top:9px; padding-left:14px; border-left:2px solid var(--gold);}
+  figure.photo.bleed figcaption{max-width:720px; margin:9px auto 0; padding:0 24px;}
+  .duo{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:34px 0;}
+  .duo figure{margin:0;} .duo img{width:100%; height:100%; object-fit:cover; border-radius:3px; box-shadow:0 8px 24px rgba(60,45,25,.2);}
+  .duo figcaption{grid-column:1 / -1; font-family:'Spectral',serif; font-style:italic; font-size:14px; color:var(--muted); padding-left:14px; border-left:2px solid var(--gold);}
+
+  .pq{font-family:'Fraunces',serif; font-style:italic; font-weight:500; font-size:clamp(23px,4.6vw,30px); line-height:1.32; color:var(--blue); text-align:center; margin:40px 0; padding:22px 10px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+
+  .side{background:var(--paper2); border-left:4px solid var(--gold); border-radius:3px; padding:20px 22px; margin:36px 0;}
+  .side .h{font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--blue); margin-bottom:10px;}
+  .side p{margin:0 0 10px; font-size:16.5px; line-height:1.65;}
+  .side p:last-child{margin-bottom:0;}
+  .side ul{margin:0; padding-left:18px;} .side li{margin:6px 0; font-size:16.5px; line-height:1.6;}
+
+  .endnote{margin:60px 0 40px; text-align:center; font-family:'Spectral',serif; font-style:italic; color:var(--muted); font-size:16px;}
+  .endnote .sig{font-family:'Fraunces',serif; font-style:italic; font-size:19px; color:var(--ink); margin-top:8px;}
+
+  footer{border-top:1px solid var(--line); margin-top:30px; padding:26px 0 70px; text-align:center; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted);}
+
+  @media (max-width:640px){
+    body{font-size:17.5px;}
+    .chapter p.lead:first-letter{font-size:52px;}
+    .duo{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== COVER ===================== -->
+<header class="cover">
+  <img class="ph" src="../images/austria/hallstatt-family-railing.jpg" alt="The Munasinghe-Fernando family at the Hallstatt lakeshore, the village and mountains behind">
+  <div class="sc"></div>
+  <div class="in">
+    <div class="mast">Munasinghe-Fernando Travel<span>No. 03 of 14 · Europe 2026 · The Memoir Edition</span></div>
+    <div class="ttl">Austria</div>
+    <div class="ded">Five days, three cities, and a small country that kept catching us off guard.</div>
+    <div class="cr">The Munasinghe-Fernando Family · 11–15 July 2026</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ===================== OPENER ===================== -->
+  <section class="opener">
+    <div class="k">Austria · 11–15 July 2026</div>
+    <h1>Three cities, small enough to drive between,<br>large enough to remember.</h1>
+    <p>We came into Austria by road from Bavaria and left it five days later through Brno on the way to Vienna. In between were a lake village the whole world photographs, an evening cathedral that stopped us mid-sentence, and — first — a garden one of us had been waiting thirty years to stand in. This is what actually happened.</p>
+    <div class="rule"></div>
+  </section>
+
+  <!-- ===================== CH 1 — SALZBURG ===================== -->
+  <section class="chapter">
+    <div class="num">Chapter One · Salzburg</div>
+    <h2>The girl who played Maria</h2>
+    <div class="sub">Thirty years of a film she knew by heart — and then the real garden gate.</div>
+
+    <p class="lead">At the top of the Mirabell steps, Lana lifted her arm and pointed up at the fortress on its hill, and for a moment she wasn't a mother of three in the midday heat — she was a girl again, in a living room on the other side of the world, acting out a film she had watched more than a hundred times.</p>
+
+    <p>When she was six or seven, she and her sister used to perform <em>The Sound of Music</em> for hours. Lana was always Maria; her sister was Liesl; a row of dolls stood in for the rest of the von Trapp children. She knew every song. And every single time, in her head, she was already here — already in Austria. <em class="q">"Every time, I was in Austria in my mind,"</em> she says. To arrive in the real Salzburg now, decades later, with a husband beside her and three children of her own, was a dream she had never quite dared to dream aloud.</p>
+
+    <figure class="photo bleed">
+      <img src="../images/austria/salzburg-mirabell-gate-fortress.jpg" alt="Lana and the children at the top of the Mirabell garden steps, pointing up to the Hohensalzburg Fortress">
+      <figcaption>The top of the Mirabell steps — the "Do-Re-Mi" gate. She has pointed up at that fortress a hundred times on a screen. This time her own children followed her finger.</figcaption>
+    </figure>
+
+    <p>The truth is we did Salzburg on tired legs. It was already noon when we reached the city — behind us were Beijing, a red-eye flight and a morning in Munich — and Aviann, eight years old, was flagging hardest. So we kept it gentle. We walked into the Mirabell Gardens, to the Pegasus fountain and the beds where Maria and the children once skipped and sang, and there Lana did the small things she had only ever pretended: the little splash at the fountain, the pause at the garden gate, the moves she had copied as a girl. This time the water was real and the children were the ones watching.</p>
+
+    <figure class="photo">
+      <img src="../images/austria/salzburg-mirabell-pegasus.jpg" alt="The Pegasus fountain and reclining stone lions in the Mirabell Gardens">
+      <figcaption>The Pegasus fountain, flanked by its two sleeping lions — the spot the film made famous, quieter in life than on screen.</figcaption>
+    </figure>
+
+    <p>We never climbed to the Hohensalzburg itself; we only saw it from below. Mozart's birthplace stayed a doorway we walked past without stopping. We were already running two hours behind, with a church to reach before the day was gone, so we wandered the streets we could, bought ice-cream for three weary children, and let that be enough. Not a checklist — a stolen hour in the one place Lana had waited her whole life to see.</p>
+
+    <div class="side">
+      <div class="h">Travel Reality</div>
+      <p>We saw the fortress only from the valley floor. We passed Mozart's front door without going in. We were two hours behind before we'd really begun. None of it mattered: the garden was the whole point, and the garden we reached.</p>
+    </div>
+  </section>
+
+  <!-- ===================== CH 2 — THE FIRST NIGHT ===================== -->
+  <section class="chapter">
+    <div class="num">Chapter Two · Burg Altpernstein</div>
+    <h2>A closed city, and a castle with no lift</h2>
+    <div class="sub">The night Austria quietly taught us its opening hours.</div>
+
+    <p class="lead">Mass finished at a quarter to eight, and we stepped out into a problem we hadn't seen coming: a town that had already rolled up its shutters for the weekend.</p>
+
+    <p>It was Saturday, and in Austria the shops close at six. Our plan to buy groceries for dinner had expired two hours earlier, while we were still in the pews — a detail nobody tells you until a tired family with three hungry children is standing on a quiet street at dusk. We found a restaurant just before it, too, closed for the night, and ordered pizza and pasta almost at the door. It cost more than the supermarket dinner we'd planned. After the day we'd had, nobody was complaining.</p>
+
+    <p>Then, at last, the castle. We were staying at Burg Altpernstein, a genuine hilltop fortress — and a genuine fortress, it turns out, has no elevator. We carried the heavy bags up to the third floor by stair, breath by breath, and found we couldn't even mind: you don't keep a castle's medieval soul by drilling a lift shaft through the middle of it. A hot bath washed the long day away, and we fell into bed more tired than we had been at any point on the trip.</p>
+
+    <figure class="photo bleed">
+      <img src="../images/austria/altpernstein-castle-full.jpg" alt="Burg Altpernstein, a tall grey medieval castle on its rock, reached by a stone arched bridge">
+      <figcaption>Burg Altpernstein. Our room was up on the third floor — and so, eventually, breath by breath, were all of the bags.</figcaption>
+    </figure>
+
+    <p>What we didn't yet know was that the bath would do more than wash off a long day. It would hand us the next morning completely new.</p>
+  </section>
+
+  <!-- ===================== CH 3 — HALLSTATT ===================== -->
+  <section class="chapter">
+    <div class="num">Chapter Three · Hallstatt</div>
+    <h2>The day nothing went to plan</h2>
+    <div class="sub">The salt mine was shut. The lanes were packed. And it was still the best morning we'd had.</div>
+
+    <p class="lead">We woke at five o'clock — all of us, even the children, and for once wide awake and clear-headed. The jet lag that had dragged at us since Beijing had simply lifted in the night, as though the castle had taken it.</p>
+
+    <p>We were at the breakfast buffet a quarter of an hour before it opened, and when it did we fell on it happily: cheese and ham, salads and dips, fruit juice and cereal, far more than we could finish. It was so generous it would carry us, as it turned out, clean through the day. Full and awake, we drove out to Hallstatt and reached it around half past ten, early enough that the fierce midday heat hadn't yet arrived.</p>
+
+    <p>And then the mountain turned us down. The salt mine — the oldest in the world, the thing we'd come for — was closed. So was the Skywalk viewpoint above it. We made one more subtraction by choice: the Bone House, the little chapel of painted skulls, felt a step too far for a four-year-old, so we spared Avin the crypt. Hallstatt, meanwhile, was doing what Hallstatt does — the narrow lanes ran shoulder to shoulder, one of the most crowded small places on earth.</p>
+
+    <p>So we let the plan go and took the village on its own gentler terms. We walked the waterfront, and then we took a boat out onto the Hallstättersee — which turns out to be the finest way to see the place at all: from the water, in slow motion, the pastel houses and the church spire stacking up the cliff behind. We never ate in Hallstatt; that enormous breakfast stayed with us all day. But on the drive back we finally tried the dish Austria is famous for — a proper Wiener Schnitzel, golden and thin and bigger than its plate.</p>
+
+    <figure class="photo bleed">
+      <img src="../images/austria/hallstatt-postcard-railing.jpg" alt="A HALLSTATT postcard held up against the real summer lake and village">
+      <figcaption>Someone had a postcard of this exact view under winter snow. We held it up against the summer lake — same church, same cliff — and took a picture of the picture.</figcaption>
+    </figure>
+
+    <p>The children spent the morning behind their own little toy cameras — Aviann's a bright plastic pink, the boys' slung on lanyards around their necks — photographing a version of the day only they will ever have seen. It was not the day we had planned. With the salt mine shut, it was a better one.</p>
+
+    <div class="side">
+      <div class="h">Would We Go Back?</div>
+      <p>Yes — and we already know what for. The Salzwelten salt mine, and the Skywalk panorama above the lake: both closed the morning we came, and both, as far as this family is concerned, still waiting for us.</p>
+    </div>
+  </section>
+
+  <!-- ===================== CH 4 — VIENNA ===================== -->
+  <section class="chapter">
+    <div class="num">Chapter Four · Vienna</div>
+    <h2>Four o'clock at Schönbrunn</h2>
+    <div class="sub">A detour into memory, a palace against the clock, and a cathedral that left us with nothing to say.</div>
+
+    <p class="lead">We left Prague at eight in the morning and pointed the car south — not by the fastest road, but by the one that ran through Brno, because twelve years ago Avi had come to that city once for work, and wanted to stand in its streets again before we grew any older.</p>
+
+    <p>That is the kind of detour a family makes and a guidebook never would: kilometres added to a long driving day for the sake of a memory. From Brno we carried on to Vienna, and it was already four o'clock by the time we passed under the gates of Schönbrunn. Four o'clock bought us the palace but not its gardens. We spent two hours indoors instead, room after gilded room — the Great Gallery where the children tipped their heads right back to stare up at the painted ceiling — and stepped out again at six with the light already softening. The famous gardens we saw only from the terrace, stretching away to the Gloriette on its ridge. We left the climb for next time.</p>
+
+    <figure class="photo bleed">
+      <img src="../images/austria/schoenbrunn/private-salon.jpg" alt="A private salon inside Schönbrunn with portraits of Franz Joseph and Empress Elisabeth on the wall">
+      <figcaption>Inside Schönbrunn, among the family portraits: Franz Joseph, and his Sisi. Her story walked out of the palace with us and into the evening.</figcaption>
+    </figure>
+
+    <p>Inside those rooms we met the story that would follow us for the rest of the day — Emperor Franz Joseph and Elisabeth, the reluctant young empress the whole country still calls Sisi. There is a neatness to it that Lana noticed at once: one woman's story making Austria vivid for her here, just as another woman's story had in Salzburg four days before.</p>
+
+    <p>In the evening we walked into the old town toward the Stephansdom, past a horse-drawn fiaker, the State Opera, the green-and-gold front of the Secession. And then we went inside the cathedral, and the day ran out of words. <em class="q">"Honestly, I had no words,"</em> is all Avi could say about it afterwards — the dark Gothic height of it, the hush, the great tiled roof we'd seen catching the sun from outside. Some places you describe. That one you just stand in.</p>
+
+    <figure class="photo">
+      <img src="../images/austria/stephansdom-tower-roof.jpg" alt="The south tower and famous zig-zag tiled roof of St Stephen's Cathedral in Vienna">
+      <figcaption>The Steffl and its zig-zag roof. We'd been photographing it from the square all evening; inside, nobody reached for a camera.</figcaption>
+    </figure>
+
+    <div class="pq">Prague or Vienna? One a beauty you stumble on; the other a beauty built on purpose. We never did settle it — and decided a family's heart is big enough for both.</div>
+  </section>
+
+  <!-- ===================== CLOSING ===================== -->
+  <section class="chapter">
+    <div class="num">Reflections</div>
+    <h2>What we carried out</h2>
+
+    <p>Austria is small — you can drive its width in an afternoon — and it kept surprising us anyway. What we'll carry home isn't the thing we planned for in any of the three cities. It's Lana at a garden gate she'd waited thirty years to reach. It's the shimmer of the Hallstättersee from a little boat, on the morning the mine was shut. And it's a cathedral in Vienna that left two grown adults with nothing to say.</p>
+
+    <div class="side">
+      <div class="h">Worth Remembering</div>
+      <ul>
+        <li><strong>Our favourite moment —</strong> the Mirabell gate, Lana pointing the children up at the fortress, finishing a sentence she'd started as a six-year-old.</li>
+        <li><strong>The hardest —</strong> that first night: shops shut at six, dinner nearly lost, and the long haul up a liftless castle in the dark.</li>
+        <li><strong>If we come back —</strong> the salt mine and the panorama we never got into. We owe Hallstatt a second visit.</li>
+      </ul>
+    </div>
+
+    <p>The postcard is still in a bag somewhere — the winter Hallstatt we held up against the summer one. A picture of a picture, of a place we'll be back to finish properly. That feels about right for a family that drove an hour out of its way just to stand in a street Avi once knew.</p>
+
+    <div class="endnote">
+      — written from our notes and our own photographs
+      <div class="sig">Avinesh, Lana, Avisha, Aviann & Avin Munasinghe</div>
+    </div>
+  </section>
+
+</div>
+
+<footer>Munasinghe-Fernando Travel · Austria · No. 03 of 14 · The Memoir Edition</footer>
+
+</body>
+</html>
