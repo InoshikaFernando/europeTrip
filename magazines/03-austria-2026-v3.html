@@ -349,11 +349,30 @@
   .person .nm{font-family:'Fraunces',serif; font-weight:600; font-size:21px; color:var(--ink); margin-bottom:3px;}
   .person .nm span{font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--blue); margin-left:7px; white-space:nowrap;}
   .person p{margin:0; font-family:'Spectral',serif; font-size:15px; line-height:1.55; color:var(--ink);}
-  .whoweare .famphoto{margin:14px 0 6px;}
-  .whoweare .famphoto img{max-height:78mm;}
+  .whoweare .famphoto{margin:10px 0 4px;}
+  .whoweare .famphoto img{max-height:60mm;}
   .letter{max-width:150mm; margin:4px auto 0;}
   .letter p{font-family:'Spectral',serif; font-size:17px; line-height:1.72; color:var(--ink); margin:0 0 13px;}
   .letter p.sign{font-family:'Fraunces',serif; font-style:italic; font-size:16px; color:var(--blue); text-align:right; margin-top:14px;}
+  .glance{max-width:154mm; margin:7mm auto 0; border-top:2px solid var(--gold); padding-top:12px; break-inside:avoid;}
+  .glance-grid > div{break-inside:avoid;}
+  .glance-h{font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--blue); text-align:center; margin-bottom:13px;}
+  .glance-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:17px;}
+  .glance .yr{font-family:'JetBrains Mono',monospace; font-size:14px; font-weight:700; color:#a02828;}
+  .glance .gd{font-family:'Spectral',serif; font-size:11px; line-height:1.45; color:var(--ink); margin-top:5px;}
+  @media (max-width:800px){ .glance-grid{grid-template-columns:1fr 1fr;} }
+  .toc{max-width:150mm; margin:10mm auto 0;}
+  .toc-h{font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--blue); margin-bottom:6px; border-bottom:2px solid var(--gold); padding-bottom:9px;}
+  .toc-list{list-style:none; margin:0; padding:0;}
+  .toc-list li{padding:10px 2px; border-bottom:1px solid var(--line);}
+  .toc-nm{font-family:'Fraunces',serif; font-weight:600; font-size:18px; color:var(--ink);}
+  .toc-sub{font-family:'Spectral',serif; font-style:italic; font-size:15px; color:var(--muted);}
+  .glancebox{background:var(--paper2); border-left:4px solid var(--blue); border-radius:3px; padding:18px 22px; margin:30px 0; break-inside:avoid;}
+  .glancebox .h{font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--blue); margin-bottom:11px;}
+  .glancebox ul{margin:0; padding:0; list-style:none;}
+  .glancebox li{font-family:'Spectral',serif; font-size:15px; line-height:1.5; color:var(--ink); margin:0 0 8px;}
+  .glancebox li:last-child{margin-bottom:0;}
+  .glancebox li b{font-family:'JetBrains Mono',monospace; font-size:9.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#a02828; margin-right:9px;}
   @media (max-width:800px){ .roster{grid-template-columns:1fr;} }
 
   .pq{font-family:'Fraunces',serif; font-style:italic; font-weight:500; font-size:clamp(23px,4.6vw,30px); line-height:1.32; color:var(--blue); text-align:center; margin:40px 0; padding:22px 10px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
@@ -392,6 +411,7 @@
     .chapter{page-break-before:always;}
     .opener + .chapter{page-break-before:avoid;}
     .whoweare{page-break-after:always;}
+    .opener{page-break-after:always;}
     .roster{grid-template-columns:1fr 1fr;}
     figure.photo, .side, .pq, .duo, .sxs, .pair{break-inside:avoid;}
     .chapter .num, .chapter h2, .chapter .sub{break-after:avoid;}
@@ -455,6 +475,16 @@
       <p>So these pages aren't a guidebook. They're ours: what we actually saw, what went wrong, what the children said, and the small moments we never want to forget. Told, this time, in my words.</p>
       <p class="sign">— Inoshi, for all five of us · 2026</p>
     </div>
+
+    <div class="glance">
+      <div class="glance-h">Austria · a thousand years, at a glance</div>
+      <div class="glance-grid">
+        <div><div class="yr">996 AD</div><div class="gd">The name <em>Ostarrîchi</em> — the eastern realm — is written down for the first time.</div></div>
+        <div><div class="yr">1282–1918</div><div class="gd">The House of Habsburg rules from Vienna for more than six hundred years.</div></div>
+        <div><div class="yr">1918</div><div class="gd">The Republic of Austria is born from the empire's fall.</div></div>
+        <div><div class="yr">Our leg</div><div class="gd">Five days — Salzburg, a hilltop castle, Hallstatt's lake, and imperial Vienna.</div></div>
+      </div>
+    </div>
   </section>
 
   <!-- ===================== OPENER ===================== -->
@@ -464,6 +494,17 @@
     <h1>Three cities, small enough to drive between,<br>large enough to remember.</h1>
     <p>We came into Austria by road from Bavaria and left it five days later through Brno on the way to Vienna. In between were a lake village the whole world photographs, an evening cathedral that stopped us mid-sentence, and — first — a garden I had been waiting thirty years to stand in. This is what actually happened.</p>
     <div class="rule"></div>
+
+    <div class="toc">
+      <div class="toc-h">In this issue</div>
+      <ul class="toc-list">
+        <li><span class="toc-nm">Salzburg</span> <span class="toc-sub">— The girl who played Maria</span></li>
+        <li><span class="toc-nm">Burg Altpernstein</span> <span class="toc-sub">— A closed city, and a castle with no lift</span></li>
+        <li><span class="toc-nm">Hallstatt</span> <span class="toc-sub">— The day nothing went to plan</span></li>
+        <li><span class="toc-nm">Vienna</span> <span class="toc-sub">— Four o'clock at Schönbrunn</span></li>
+        <li><span class="toc-nm">Reflections</span> <span class="toc-sub">— What we carried out</span></li>
+      </ul>
+    </div>
   </section>
 
   <!-- ===================== CH 1 — SALZBURG ===================== -->
@@ -540,6 +581,16 @@
       <div class="h">Travel Reality</div>
       <p>We saw the fortress only from the valley floor. We passed Mozart's front door without going in. We were two hours behind before we'd really begun. None of it mattered: the garden was the whole point, and the garden we reached.</p>
     </div>
+
+    <div class="glancebox">
+      <div class="h">Salzburg · at a glance</div>
+      <ul>
+        <li><b>Born here</b> Mozart, in 1756, in a house on the Getreidegasse.</li>
+        <li><b>On screen</b> <em>The Sound of Music</em> was filmed across the city in the 1960s.</li>
+        <li><b>Protected</b> The old town is a UNESCO World Heritage site.</li>
+        <li><b>Us</b> Half a day, on tired legs and two hours behind — and in love with it anyway.</li>
+      </ul>
+    </div>
   </section>
 
   <!-- ===================== CH 2 — THE FIRST NIGHT ===================== -->
@@ -568,6 +619,16 @@
     </figure>
 
     <p>What we didn't yet know was that the bath would do more than wash off a long day. It would hand us the next morning completely new.</p>
+
+    <div class="glancebox">
+      <div class="h">Burg Altpernstein · at a glance</div>
+      <ul>
+        <li><b>What</b> A medieval hilltop castle in Upper Austria, parts of it some 800 years old.</li>
+        <li><b>Now</b> A guesthouse — you can sleep inside the walls, as we did.</li>
+        <li><b>No lift</b> Three floors, every bag, by hand.</li>
+        <li><b>Us</b> One night, after the shops shut at six and dinner was nearly lost.</li>
+      </ul>
+    </div>
   </section>
 
   <!-- ===================== CH 3 — HALLSTATT ===================== -->
@@ -676,6 +737,16 @@
     <div class="side">
       <div class="h">Would We Go Back?</div>
       <p>Yes — and we already know what for. The Salzwelten salt mine, and the Skywalk panorama above the lake: both closed the morning we came, and both, as far as this family is concerned, still waiting for us.</p>
+    </div>
+
+    <div class="glancebox">
+      <div class="h">Hallstatt · at a glance</div>
+      <ul>
+        <li><b>Ancient</b> Salt has been mined above the village for some 7,000 years — one of the oldest mines on earth.</li>
+        <li><b>Protected</b> A UNESCO World Heritage site since 1997.</li>
+        <li><b>Tiny</b> Around 800 residents — and one of the most photographed villages anywhere.</li>
+        <li><b>Us</b> One morning: the salt mine shut, the lake perfect, a boat all to ourselves.</li>
+      </ul>
     </div>
   </section>
 
@@ -806,6 +877,16 @@
         <img src="../images/austria/vienna-stephansdom-family.jpg" alt="The family in front of St Stephen's Cathedral in the evening light">
         <figcaption>The five of us in the square below the Steffl, the last light on the stone — our evening in Vienna, before the long question walked home with us.</figcaption>
       </figure>
+    </div>
+
+    <div class="glancebox">
+      <div class="h">Vienna · at a glance</div>
+      <ul>
+        <li><b>Schönbrunn</b> 1,441 rooms — Maria Theresa's summer palace.</li>
+        <li><b>Stephansdom</b> Some 700 years old, its roof laid with around 230,000 glazed tiles.</li>
+        <li><b>Imperial</b> Capital of the Habsburgs for more than six hundred years.</li>
+        <li><b>Us</b> Four o'clock to dusk — palace, cathedral, and a question we carried home.</li>
+      </ul>
     </div>
 
     <div class="pq">Prague or Vienna? One a beauty you stumble on; the other a beauty built on purpose. We never did settle it — and decided a family's heart is big enough for both.</div>
