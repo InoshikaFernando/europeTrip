@@ -376,8 +376,6 @@
     .cover .bg{background-size:cover; background-position:72% top;}
     .wrap{width:auto; box-shadow:none;}
     .opener,.chapter{width:auto; margin:0; box-shadow:none; padding:0 0 4mm;}
-    .chapter{page-break-before:always;}
-    .opener + .chapter{page-break-before:avoid;}
     figure.photo, .side, .pq, .duo, .sxs, .pair{break-inside:avoid;}
     .chapter .num, .chapter h2, .chapter .sub{break-after:avoid;}
     /* Pack pages: cap photo height so a photo + text share a page instead of
@@ -389,11 +387,11 @@
     .duo img{max-height:85mm;}
     /* keep the two-column layouts in print (A4 width can trip the mobile breakpoint) */
     .duo{grid-template-columns:1fr 1fr;}
-    .pair{grid-template-columns:1fr 1fr; gap:6mm; margin:6mm 0;}
-    .pair figure.photo img{max-height:112mm;}
-    .sxs{grid-template-columns:minmax(0,46%) 1fr; gap:8mm; margin:6mm 0;}
+    .pair{grid-template-columns:1fr 1fr; gap:6mm; margin:5mm 0;}
+    .pair figure.photo img{max-height:86mm;}
+    .sxs{grid-template-columns:minmax(0,46%) 1fr; gap:8mm; margin:5mm 0;}
     .sxs.img-right{grid-template-columns:1fr minmax(0,46%);}
-    .sxs figure.photo img{max-height:104mm;}
+    .sxs figure.photo img{max-height:86mm;}
     figure.photo figcaption, .duo figcaption{font-size:10.5px; line-height:1.42; margin-top:5px;}
     .chapter p{margin:0 0 10px;}
     footer{padding:10mm 0 0; border:0;}
@@ -555,8 +553,8 @@
 
     <div class="sxs">
     <figure class="photo">
-      <img src="../images/austria/hallstatt-avin-stroller.jpg" alt="Avin sitting in the stroller on the lakeside promenade, the church spire and mountains rising behind him">
-      <figcaption>Avin back in the stroller on the waterfront path — the church spire over his shoulder, the lake beside him. Tired legs, best seat in the village.</figcaption>
+      <img src="../images/austria/hallstatt-boat-family.jpg" alt="The family on a small boat on the Hallstättersee, the village behind them">
+      <figcaption>Out on the Hallstättersee — the finest way to see the village, pulling slowly into frame from the water.</figcaption>
     </figure>
       <div class="col">
     <p>So we let the plan go and took the village on its own gentler terms. We walked the waterfront, and then we took a boat out onto the Hallstättersee — which turns out to be the finest way to see the place at all: from the water, in slow motion, the pastel houses and the church spire stacking up the cliff behind. We never ate in Hallstatt; that enormous breakfast stayed with us all day. But on the drive back we finally tried the dish Austria is famous for — a proper Wiener Schnitzel, golden and thin and bigger than its plate.</p>
@@ -603,8 +601,8 @@
         <figcaption>The stream that runs down through the village — so clear you could count the stones on the bed. Exactly the green and blue I'd always pictured.</figcaption>
       </figure>
       <figure class="photo">
-        <img src="../images/austria/hallstatt-boat-family.jpg" alt="The family on a small boat on the Hallstättersee, the village behind them">
-        <figcaption>Out on the Hallstättersee — the finest way to see the village, pulling slowly into frame from the water.</figcaption>
+        <img src="../images/austria/hallstatt-avin-stroller.jpg" alt="Avin sitting in the stroller on the lakeside promenade, the church spire and mountains rising behind him">
+        <figcaption>Avin back in the stroller on the waterfront path — the church spire over his shoulder, the lake beside him. Tired legs, best seat in the village.</figcaption>
       </figure>
     </div>
 
