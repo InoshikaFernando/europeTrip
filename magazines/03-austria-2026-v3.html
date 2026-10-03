@@ -362,6 +362,15 @@
     .opener,.chapter{width:auto; margin:0; box-shadow:none; padding:0 0 4mm;}
     figure.photo, .side, .pq, .duo{break-inside:avoid;}
     .chapter .num, .chapter h2, .chapter .sub{break-after:avoid;}
+    /* Pack pages: cap photo height so a photo + text share a page instead of
+       each portrait orphaning onto its own near-empty sheet. */
+    figure.photo{margin:5mm 0;}
+    figure.photo img{max-height:92mm;}
+    figure.photo.bleed img{max-height:104mm;}
+    .duo{margin:5mm 0; gap:9px;}
+    .duo img{max-height:85mm;}
+    figure.photo figcaption, .duo figcaption{font-size:10.5px; line-height:1.42; margin-top:5px;}
+    .chapter p{margin:0 0 10px;}
     footer{padding:10mm 0 0; border:0;}
   }
 </style>
