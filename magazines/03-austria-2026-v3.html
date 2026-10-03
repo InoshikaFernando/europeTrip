@@ -329,6 +329,14 @@
   .duo figure{margin:0;} .duo img{width:100%; height:100%; object-fit:cover; border-radius:3px; box-shadow:0 8px 24px rgba(60,45,25,.2);}
   .duo figcaption{grid-column:1 / -1; font-family:'Spectral',serif; font-style:italic; font-size:14px; color:var(--muted); padding-left:14px; border-left:2px solid var(--gold);}
 
+  /* photo on one side, text beside it — fills the space next to a portrait */
+  .sxs{display:grid; grid-template-columns:minmax(0,46%) 1fr; gap:26px; align-items:center; margin:30px 0;}
+  .sxs.img-right{grid-template-columns:1fr minmax(0,46%);}
+  .sxs figure.photo{margin:0; text-align:center;}
+  .sxs figure.photo img{width:100%; max-width:100%; max-height:none; margin:0;}
+  .sxs .col > :first-child{margin-top:0;}
+  .sxs .col > :last-child{margin-bottom:0;}
+
   .pq{font-family:'Fraunces',serif; font-style:italic; font-weight:500; font-size:clamp(23px,4.6vw,30px); line-height:1.32; color:var(--blue); text-align:center; margin:40px 0; padding:22px 10px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
 
   .side{background:var(--paper2); border-left:4px solid var(--gold); border-radius:3px; padding:20px 22px; margin:36px 0;}
@@ -350,6 +358,7 @@
     figure.photo.bleed figcaption{margin:9px 20px 0;}
     .chapter p.lead:first-letter{font-size:52px;}
     .duo{grid-template-columns:1fr;}
+    .sxs, .sxs.img-right{grid-template-columns:1fr; gap:10px;}
   }
 
   /* ---------- Print / Save-as-PDF: clean A4 pages ---------- */
@@ -360,7 +369,7 @@
     .cover .bg{background-size:cover; background-position:72% top;}
     .wrap{width:auto; box-shadow:none;}
     .opener,.chapter{width:auto; margin:0; box-shadow:none; padding:0 0 4mm;}
-    figure.photo, .side, .pq, .duo{break-inside:avoid;}
+    figure.photo, .side, .pq, .duo, .sxs{break-inside:avoid;}
     .chapter .num, .chapter h2, .chapter .sub{break-after:avoid;}
     /* Pack pages: cap photo height so a photo + text share a page instead of
        each portrait orphaning onto its own near-empty sheet. */
@@ -369,6 +378,11 @@
     figure.photo.bleed img{max-height:104mm;}
     .duo{margin:5mm 0; gap:9px;}
     .duo img{max-height:85mm;}
+    /* keep the two-column layouts in print (A4 width can trip the mobile breakpoint) */
+    .duo{grid-template-columns:1fr 1fr;}
+    .sxs{grid-template-columns:minmax(0,46%) 1fr; gap:8mm; margin:6mm 0;}
+    .sxs.img-right{grid-template-columns:1fr minmax(0,46%);}
+    .sxs figure.photo img{max-height:104mm;}
     figure.photo figcaption, .duo figcaption{font-size:10.5px; line-height:1.42; margin-top:5px;}
     .chapter p{margin:0 0 10px;}
     footer{padding:10mm 0 0; border:0;}
@@ -431,12 +445,15 @@
 
     <p>We never climbed to the Hohensalzburg itself; we only saw it from below. Mozart's birthplace stayed a doorway we walked past without stopping. We were already running two hours behind, with a church to reach before the day was gone, so we wandered the streets we could and let that be enough. It was hot — the kind of heat that makes everything an effort — and nothing in the world feels better on a day like that than a cup of ice-cream. So we bought one each for three weary children. After the morning they'd given us, they'd earned it. Not a checklist — a stolen hour in the one place I had waited my whole life to see.</p>
 
-    <p>We found the ice-cream down one of the narrow old-town lanes — and here the lanes really are narrow. Salzburg's old town is wedged onto a thin strip of flat ground between the Mönchsberg cliff on one side and the Salzach river on the other, with nowhere to spread outward. So the medieval city grew upward and inward instead: tall houses leaning close together, the streets kept narrow, the sky a bright ribbon far overhead. We wheeled Avin down the middle of one of them, his cup held carefully in both hands.</p>
-
-    <figure class="photo">
-      <img src="../images/austria/salzburg-narrow-lane-icecream.jpg" alt="Avin in the stroller with a cup of ice-cream in a narrow Salzburg old-town lane, tall houses on either side and a church tower at the far end">
-      <figcaption>Avin and his ice-cream, wheeled down one of the narrow lanes — the tall houses pressing close, a church tower marking the far end.</figcaption>
-    </figure>
+    <div class="sxs">
+      <figure class="photo">
+        <img src="../images/austria/salzburg-narrow-lane-icecream.jpg" alt="Avin in the stroller with a cup of ice-cream in a narrow Salzburg old-town lane, tall houses on either side and a church tower at the far end">
+        <figcaption>Avin and his ice-cream, wheeled down one of the narrow lanes — the tall houses pressing close, a church tower marking the far end.</figcaption>
+      </figure>
+      <div class="col">
+        <p>We found the ice-cream down one of the narrow old-town lanes — and here the lanes really are narrow. Salzburg's old town is wedged onto a thin strip of flat ground between the Mönchsberg cliff on one side and the Salzach river on the other, with nowhere to spread outward. So the medieval city grew upward and inward instead: tall houses leaning close together, the streets kept narrow, the sky a bright ribbon far overhead. We wheeled Avin down the middle of one of them, his cup held carefully in both hands.</p>
+      </div>
+    </div>
 
     <figure class="photo">
       <img src="../images/austria/salzburg-getreidegasse.jpg" alt="Getreidegasse, Salzburg's old-town shopping street, lined with wrought-iron guild signs">
