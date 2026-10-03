@@ -154,6 +154,17 @@ clean when saved as PDF. Copy the CSS from `03-austria-2026-v3.html`. Key points
   `page.get_pixmap(dpi=60)`) and measure ink-per-page / where the bottom content ends; flag
   any page under ~9% ink (empty) or ending above ~62% (big bottom gap), and build a contact
   sheet to eyeball it. Script pattern kept in the session scratchpad.
+- **Side-by-side photo + text (`.sxs`) — don't leave a portrait centered with dead space on
+  both sides.** A `.sxs` grid puts a portrait photo on one side (~46%) and real body text on
+  the other, filling the gap (see the Salzburg ice-cream spread in `03-austria-2026-v3.html`).
+  Author it as `<div class="sxs"><figure class="photo">…</figure><div class="col"><p>…</p></div></div>`;
+  add `.img-right` to flip the photo to the right. Two caveats: (1) the text beside it must be
+  the family's **real** prose moved next to the photo — never invented filler to pad the
+  column; if a photo has no adjacent text (only another photo or a sidebar), leave it centered
+  or ask for a real line. (2) The `@media print` block must **re-assert** the two-column grid
+  (`.sxs{grid-template-columns:minmax(0,46%) 1fr}` and `.duo{grid-template-columns:1fr 1fr}`),
+  because A4's ~794px width trips the `max-width:800px` mobile breakpoint and would otherwise
+  collapse both to one column in the PDF. Mobile still collapses to a single column.
 
 ---
 
