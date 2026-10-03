@@ -343,6 +343,16 @@
   .pair figure.photo img{width:100%; max-width:100%; max-height:none; margin:0;}
   .pair figure.photo figcaption{max-width:none;}
 
+  /* Who we are — family roster */
+  .roster{display:grid; grid-template-columns:1fr 1fr; gap:16px 32px; margin-top:10px;}
+  .person{break-inside:avoid;}
+  .person .nm{font-family:'Fraunces',serif; font-weight:600; font-size:21px; color:var(--ink); margin-bottom:3px;}
+  .person .nm span{font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--blue); margin-left:7px; white-space:nowrap;}
+  .person p{margin:0; font-family:'Spectral',serif; font-size:15px; line-height:1.55; color:var(--ink);}
+  .whoweare .famphoto{margin:14px 0 6px;}
+  .whoweare .famphoto img{max-height:72mm;}
+  @media (max-width:800px){ .roster{grid-template-columns:1fr;} }
+
   .pq{font-family:'Fraunces',serif; font-style:italic; font-weight:500; font-size:clamp(23px,4.6vw,30px); line-height:1.32; color:var(--blue); text-align:center; margin:40px 0; padding:22px 10px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
 
   .side{background:var(--paper2); border-left:4px solid var(--gold); border-radius:3px; padding:20px 22px; margin:36px 0;}
@@ -378,6 +388,8 @@
     .opener,.chapter{width:auto; margin:0; box-shadow:none; padding:0 0 4mm;}
     .chapter{page-break-before:always;}
     .opener + .chapter{page-break-before:avoid;}
+    .whoweare{page-break-after:always;}
+    .roster{grid-template-columns:1fr 1fr;}
     figure.photo, .side, .pq, .duo, .sxs, .pair{break-inside:avoid;}
     .chapter .num, .chapter h2, .chapter .sub{break-after:avoid;}
     /* Pack pages: cap photo height so a photo + text share a page instead of
@@ -422,6 +434,41 @@
 </header>
 
 <div class="wrap">
+
+  <!-- ===================== WHO WE ARE ===================== -->
+  <section class="chapter whoweare">
+    <div class="num">Who we are</div>
+    <h2>The Munasinghe-Fernando family</h2>
+    <div class="sub">Five of us, one small car, and a stretch of Europe we'd been dreaming of.</div>
+
+    <figure class="photo famphoto">
+      <img src="../images/austria/schoenbrunn-family-facade.jpg" alt="The five of the Munasinghe-Fernando family together, grinning in a palace forecourt">
+      <figcaption>The five of us — the ones these pages belong to.</figcaption>
+    </figure>
+
+    <div class="roster">
+      <div class="person">
+        <div class="nm">Avinesh <span>"Avi" · Dad</span></div>
+        <p>The one who added an hour to a long driving day just to walk through Brno again, a city he'd known years before. Not a man of many words — and the Stephansdom took even those: <em>"Honestly, I had no words."</em></p>
+      </div>
+      <div class="person">
+        <div class="nm">Inoshi <span>Mum</span></div>
+        <p>These pages are hers — the whole trip told in her words. She grew up on the far side of the world performing <em>The Sound of Music</em>, always Maria, already, in her head, in Austria.</p>
+      </div>
+      <div class="person">
+        <div class="nm">Avisha <span>11</span></div>
+        <p>Rarely seen without a camera. Filmed every gilded ceiling in Schönbrunn from about four feet off the ground, already planning the YouTube channel.</p>
+      </div>
+      <div class="person">
+        <div class="nm">Aviann <span>8</span></div>
+        <p>A bright-pink toy camera and the trip's most honest reviewer — ask her about the smell of Vienna's horse-drawn cabs.</p>
+      </div>
+      <div class="person">
+        <div class="nm">Avin <span>4</span></div>
+        <p>The youngest, and often the happiest — usually in the stroller with an ice-cream held in both hands, or up on Dad's shoulders, taking it all in from above the crowd.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- ===================== OPENER ===================== -->
   <section class="opener">
