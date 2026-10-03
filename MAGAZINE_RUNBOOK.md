@@ -35,15 +35,20 @@ This is why most issues can't be written yet: they need the family's real materi
 
 ## 2. Voice (the Austria v3 standard)
 
-Write it as a **family memoir in the first-person-plural "we"** — the shared voice of
-the whole family, so that when the children read it in 25 years they feel it is *their
-own* memory, not a report about a trip they appear in.
+Write it as a **first-person family memoir, narrated by Inoshi (the mum)** — carry a
+small **"told in Inoshi's words"** byline on the opener. She speaks as **"I"**; the
+family is **"we"**; Avinesh and the children are named. It stays a *shared* story (the
+"we" keeps the children inside it, so reading it in 25 years they feel it is their own
+memory), but the telling voice is one person — intimate, not a detached report.
 
-- **"We"** for everything the family did together.
-- **Third person for a parent's personal back-story** only where it is specifically
-  theirs (e.g. Inoshi's lifelong *Sound of Music* story is told *about* her — "Inoshi…
-  she…"), then hand back to "we". Warm it with possessives ("our children", "the two
-  of us"), never "the children" from a distance.
+- **"I / my"** for Inoshi herself and her own back-story (e.g. the *Sound of Music*
+  childhood: *"When I was six or seven, my sister and I used to perform…"*).
+- **"We / our"** for everything the family did together ("our children", "the two of
+  us") — never "the children" from a distance.
+- Name **Avinesh** and the kids; quote them in their own words when real.
+- If a different issue is genuinely better told by someone else, keep the same
+  first-person-narrator principle and state whose voice it is in the byline — but default
+  to Inoshi for consistency across the series.
 - Preserve each child **as they are at this age** — real words, jokes, complaints,
   boredom, what they noticed. A child's one true line can carry a whole page.
 - Keep the **imperfect moments** (closed attractions, shut shops, tired legs, the

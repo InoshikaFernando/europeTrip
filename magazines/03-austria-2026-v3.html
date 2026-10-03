@@ -36,14 +36,15 @@
   .cover .cr{font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.82); margin-top:14px;}
 
   /* ---------- Reading column ---------- */
-  .wrap{width:210mm; margin:0 auto; padding:0;}
-  .opener{background:#fff; padding:20mm 22mm 16mm; margin:0 auto 16px; box-shadow:0 2px 16px rgba(0,0,0,.35);}
+  .wrap{width:210mm; margin:0 auto; background:#fff; box-shadow:0 2px 20px rgba(0,0,0,.3);}
+  .opener{padding:24mm 24mm 4mm;}
   .opener .k{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--blue);}
   .opener h1{font-family:'Fraunces',serif; font-weight:600; font-size:30px; line-height:1.15; margin:12px 0 0;}
   .opener p{color:var(--muted); font-style:italic; font-size:19px; margin:14px 0 0;}
+  .opener .byline{font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-top:16px;}
   .rule{width:54px; height:3px; background:var(--gold); margin:34px 0;}
 
-  .chapter{background:#fff; padding:20mm 22mm; margin:0 auto 16px; box-shadow:0 2px 16px rgba(0,0,0,.35);}
+  .chapter{padding:7mm 24mm 4mm;}
   .chapter .num{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--blue); margin-bottom:10px;}
   .chapter h2{font-family:'Fraunces',serif; font-weight:700; font-size:clamp(34px,6vw,46px); line-height:1.02; letter-spacing:-.015em; margin:0;}
   .chapter .sub{font-family:'Spectral',serif; font-style:italic; font-size:21px; line-height:1.4; color:var(--muted); margin:16px 0 4px;}
@@ -51,12 +52,10 @@
   .chapter p.lead:first-letter{font-family:'Fraunces',serif; font-weight:700; font-size:62px; line-height:.72; float:left; margin:8px 10px 0 0; color:var(--blue);}
   em.q{font-style:italic;}
 
-  figure.photo{margin:34px 0; }
-  figure.photo.bleed{margin-left:-22mm; margin-right:-22mm;}
-  figure.photo img{width:100%; border-radius:3px; box-shadow:0 10px 34px rgba(60,45,25,.22);}
-  figure.photo.bleed img{border-radius:0; box-shadow:none;}
-  figure.photo figcaption{font-family:'Spectral',serif; font-style:italic; font-size:13.5px; line-height:1.5; color:var(--muted); margin-top:9px; padding-left:14px; border-left:2px solid var(--gold);}
-  figure.photo.bleed figcaption{margin:9px 22mm 0;}
+  figure.photo{margin:22px 0; text-align:center;}
+  figure.photo.bleed{margin-left:0; margin-right:0;}
+  figure.photo img{width:auto; max-width:100%; max-height:138mm; margin:0 auto; border-radius:3px; box-shadow:0 8px 26px rgba(60,45,25,.2);}
+  figure.photo figcaption{font-family:'Spectral',serif; font-style:italic; font-size:13px; line-height:1.5; color:var(--muted); margin:9px auto 0; max-width:150mm; padding-left:14px; border-left:2px solid var(--gold); text-align:left;}
   .duo{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:34px 0;}
   .duo figure{margin:0;} .duo img{width:100%; height:100%; object-fit:cover; border-radius:3px; box-shadow:0 8px 24px rgba(60,45,25,.2);}
   .duo figcaption{grid-column:1 / -1; font-family:'Spectral',serif; font-style:italic; font-size:14px; color:var(--muted); padding-left:14px; border-left:2px solid var(--gold);}
@@ -85,17 +84,16 @@
   }
 
   /* ---------- Print / Save-as-PDF: clean A4 pages ---------- */
-  @page{ size:A4; margin:0; }
+  @page{ size:A4; margin:16mm; }
   @media print{
     body{background:#fff; padding:0;}
-    .cover{width:auto; height:297mm; margin:0; box-shadow:none; page-break-after:always;}
+    .cover{width:auto; height:262mm; margin:0; box-shadow:none; page-break-after:always;}
     .cover .bg{background-size:cover; background-position:72% top;}
-    .wrap{width:auto;}
-    .opener,.chapter{width:auto; margin:0; box-shadow:none; padding:18mm 16mm; page-break-before:always;}
-    .opener{page-break-before:avoid;}
-    figure.photo, .side, .pq, .duo, .endnote{break-inside:avoid;}
-    .chapter h2{break-after:avoid;}
-    footer{page-break-before:avoid; padding:16px 0; border:0;}
+    .wrap{width:auto; box-shadow:none;}
+    .opener,.chapter{width:auto; margin:0; box-shadow:none; padding:0 0 4mm;}
+    figure.photo, .side, .pq, .duo{break-inside:avoid;}
+    .chapter .num, .chapter h2, .chapter .sub{break-after:avoid;}
+    footer{padding:10mm 0 0; border:0;}
   }
 </style>
 </head>
@@ -126,7 +124,8 @@
   <section class="opener">
     <div class="k">Austria · 11–15 July 2026</div>
     <h1>Three cities, small enough to drive between,<br>large enough to remember.</h1>
-    <p>We came into Austria by road from Bavaria and left it five days later through Brno on the way to Vienna. In between were a lake village the whole world photographs, an evening cathedral that stopped us mid-sentence, and — first — a garden one of us had been waiting thirty years to stand in. This is what actually happened.</p>
+    <p>We came into Austria by road from Bavaria and left it five days later through Brno on the way to Vienna. In between were a lake village the whole world photographs, an evening cathedral that stopped us mid-sentence, and — first — a garden I had been waiting thirty years to stand in. This is what actually happened.</p>
+    <div class="byline">A family memoir — told in Inoshi's words</div>
     <div class="rule"></div>
   </section>
 
@@ -134,25 +133,25 @@
   <section class="chapter">
     <div class="num">Chapter One · Salzburg</div>
     <h2>The girl who played Maria</h2>
-    <div class="sub">Thirty years of a film she knew by heart — and then the real garden gate.</div>
+    <div class="sub">Thirty years of a film I knew by heart — and then the real garden gate.</div>
 
-    <p class="lead">At the top of the Mirabell steps, Inoshi lifted her arm and pointed up at the fortress on its hill, and for a moment she wasn't a mother of three in the midday heat — she was a girl again, in a living room on the other side of the world, acting out a film she had watched more than a hundred times.</p>
+    <p class="lead">At the top of the Mirabell steps, I lifted my arm and pointed up at the fortress on its hill, and for a moment I wasn't a mother of three in the midday heat — I was a girl again, in a living room on the other side of the world, acting out a film I had watched more than a hundred times.</p>
 
-    <p>When she was six or seven, she and her sister used to perform <em>The Sound of Music</em> for hours. Inoshi was always Maria; her sister was Liesl; a row of dolls stood in for the rest of the von Trapp children. She knew every song. And every single time, in her head, she was already here — already in Austria. <em class="q">"Every time, I was in Austria in my mind,"</em> she says. To arrive in the real Salzburg now, decades later, with a husband beside her and three children of her own, was a dream she had never quite dared to dream aloud.</p>
+    <p>When I was six or seven, my sister and I used to perform <em>The Sound of Music</em> for hours. I was always Maria; she was Liesl; a row of dolls stood in for the rest of the von Trapp children. I knew every song. And every single time, in my head, I was already here — already in Austria. <em class="q">Every time, I was in Austria in my mind.</em> To arrive in the real Salzburg now, decades later, with my husband beside me and three children of my own, was a dream I had never quite dared to dream aloud.</p>
 
     <figure class="photo bleed">
       <img src="../images/austria/salzburg-mirabell-gate-fortress.jpg" alt="Inoshi and the children at the top of the Mirabell garden steps, pointing up to the Hohensalzburg Fortress">
-      <figcaption>The top of the Mirabell steps — the "Do-Re-Mi" gate. She has pointed up at that fortress a hundred times on a screen. This time her own children followed her finger.</figcaption>
+      <figcaption>The top of the Mirabell steps — the "Do-Re-Mi" gate. I had pointed up at that fortress a hundred times on a screen; this time my own children followed my finger.</figcaption>
     </figure>
 
-    <p>The truth is we did Salzburg on tired legs. It was already noon when we reached the city — behind us were Beijing, a red-eye flight and a morning in Munich — and Aviann, eight years old, was flagging hardest. So we kept it gentle. We walked into the Mirabell Gardens, to the Pegasus fountain and the beds where Maria and the children once skipped and sang, and there Inoshi did the small things she had only ever pretended: the little splash at the fountain, the pause at the garden gate, the moves she had copied as a girl. This time the water was real and our children were the ones watching.</p>
+    <p>The truth is we did Salzburg on tired legs. It was already noon when we reached the city — behind us were Beijing, a red-eye flight and a morning in Munich — and Aviann, eight years old, was flagging hardest. So we kept it gentle. We walked into the Mirabell Gardens, to the Pegasus fountain and the beds where Maria and the children once skipped and sang, and there I did the small things I had only ever pretended: the little splash at the fountain, the pause at the garden gate, the moves I had copied as a girl. This time the water was real and our children were the ones watching.</p>
 
     <figure class="photo">
       <img src="../images/austria/salzburg-mirabell-pegasus.jpg" alt="The Pegasus fountain and reclining stone lions in the Mirabell Gardens">
       <figcaption>The Pegasus fountain, flanked by its two sleeping lions — the spot the film made famous, quieter in life than on screen.</figcaption>
     </figure>
 
-    <p>We never climbed to the Hohensalzburg itself; we only saw it from below. Mozart's birthplace stayed a doorway we walked past without stopping. We were already running two hours behind, with a church to reach before the day was gone, so we wandered the streets we could, bought ice-cream for three weary children, and let that be enough. Not a checklist — a stolen hour in the one place Inoshi had waited her whole life to see.</p>
+    <p>We never climbed to the Hohensalzburg itself; we only saw it from below. Mozart's birthplace stayed a doorway we walked past without stopping. We were already running two hours behind, with a church to reach before the day was gone, so we wandered the streets we could, bought ice-cream for three weary children, and let that be enough. Not a checklist — a stolen hour in the one place I had waited my whole life to see.</p>
 
     <div class="side">
       <div class="h">Travel Reality</div>
@@ -222,9 +221,9 @@
       <figcaption>Inside Schönbrunn, among the family portraits: Franz Joseph, and his Sisi. Her story walked out of the palace with us and into the evening.</figcaption>
     </figure>
 
-    <p>Inside those rooms we met the story that would follow us for the rest of the day — Emperor Franz Joseph and Elisabeth, the reluctant young empress the whole country still calls Sisi. There is a neatness to it that Inoshi noticed at once: one woman's story making Austria vivid for her here, just as another woman's story had in Salzburg four days before.</p>
+    <p>Inside those rooms we met the story that would follow us for the rest of the day — Emperor Franz Joseph and Elisabeth, the reluctant young empress the whole country still calls Sisi. There is a neatness to it that I noticed at once: one woman's story making Austria vivid for me here, just as another woman's story had in Salzburg four days before.</p>
 
-    <p>In the evening we walked into the old town toward the Stephansdom, past a horse-drawn fiaker, the State Opera, the green-and-gold front of the Secession. And then we went inside the cathedral, and the day ran out of words. <em class="q">"Honestly, I had no words,"</em> is all Avi could say about it afterwards — the dark Gothic height of it, the hush, the great tiled roof we'd seen catching the sun from outside. Some places you describe. That one you just stand in.</p>
+    <p>In the evening we walked into the old town toward the Stephansdom, past a horse-drawn fiaker, the State Opera, the green-and-gold front of the Secession. And then we went inside the cathedral, and the day ran out of words. <em class="q">Honestly, I had no words</em> — the dark Gothic height of it, the hush, the great tiled roof we'd seen catching the sun from outside. Some places you describe. That one you just stand in.</p>
 
     <figure class="photo">
       <img src="../images/austria/stephansdom-tower-roof.jpg" alt="The south tower and famous zig-zag tiled roof of St Stephen's Cathedral in Vienna">
@@ -239,12 +238,12 @@
     <div class="num">Reflections</div>
     <h2>What we carried out</h2>
 
-    <p>Austria is small — you can drive its width in an afternoon — and it kept surprising us anyway. What we'll carry home isn't the thing we planned for in any of the three cities. It's Inoshi at a garden gate she'd waited thirty years to reach. It's the shimmer of the Hallstättersee from a little boat, on the morning the mine was shut. And it's a cathedral in Vienna that left the two of us with nothing to say.</p>
+    <p>Austria is small — you can drive its width in an afternoon — and it kept surprising us anyway. What we'll carry home isn't the thing we planned for in any of the three cities. It's me at a garden gate I'd waited thirty years to reach. It's the shimmer of the Hallstättersee from a little boat, on the morning the mine was shut. And it's a cathedral in Vienna that left the two of us with nothing to say.</p>
 
     <div class="side">
       <div class="h">Worth Remembering</div>
       <ul>
-        <li><strong>Our favourite moment —</strong> the Mirabell gate, Inoshi pointing the children up at the fortress, finishing a sentence she'd started as a six-year-old.</li>
+        <li><strong>Our favourite moment —</strong> the Mirabell gate, pointing our children up at the fortress, finishing a sentence I'd started as a six-year-old.</li>
         <li><strong>The hardest —</strong> that first night: shops shut at six, dinner nearly lost, and the long haul up a liftless castle in the dark.</li>
         <li><strong>If we come back —</strong> the salt mine and the panorama we never got into. We owe Hallstatt a second visit.</li>
       </ul>
