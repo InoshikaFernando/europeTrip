@@ -69,8 +69,22 @@ or ask. These asides are precious precisely because they're real: one true line 
 - **Don't write an itinerary.** Open each chapter *inside a moment*; give big moments a
   paragraph and small ones a sentence; end on something specific (an image, a line),
   never "a day we'll cherish forever".
-- Real quotes only. Austria's two so far: Inoshi — *"Every time, I was in Austria in my
-  mind"*; Avinesh at the Stephansdom — *"Honestly, I had no words."*
+- Real quotes only. Austria's, as recorded: Inoshi — *"Every time, I was in Austria in my
+  mind"*; Avinesh at the Stephansdom — *"Honestly, I had no words."*; Aviann (8), on the
+  fiaker horses on the Graben — *"What is that disgusting smell?"*. Inoshi's own felt lines
+  carry the same weight as spoken quotes: her *confidence* at the Residenzbrunnen
+  (confident to see the trip through with her "three little musketeers") and her
+  *thanksgiving* at the Pestsäule ("a chance to say thank you, God, for the experience").
+- **History is allowed — facts are not invention.** You MAY state accurate, verifiable
+  history/geography tied to what the family stood in front of, even when they didn't
+  remark on it (why Salzburg's lanes are narrow — pinched between the Mönchsberg and the
+  Salzach; Maria Theresa built Schönbrunn; the Pestsäule was Leopold I's thanks-offering
+  after the 1679 plague). Keep it light, one or two sentences, tied to the photo/moment —
+  never a Wikipedia block. The #1 rule bans inventing the *family's* experience, not
+  stating true context. If unsure a fact is right, leave it out or flag it.
+- **Don't guess which place a photo shows.** If an interior/landmark is ambiguous (e.g.
+  Schönbrunn vs the Belvedere), confirm with the family before captioning — a confident
+  wrong label is worse than asking.
 
 Full brief (the long version this distils) lives in the project history; this section is
 the operative summary.
@@ -129,6 +143,17 @@ clean when saved as PDF. Copy the CSS from `03-austria-2026-v3.html`. Key points
   }
   ```
 - Mobile: a `@media (max-width:800px)` block drops the sheets to full width.
+- **Pack the PDF — no half-empty pages.** On screen, photos can be tall (`max-height:138mm`).
+  But in the *print* block that height + `break-inside:avoid` orphans each portrait onto its
+  own near-empty A4 sheet. So the `@media print` block caps photos smaller so a photo and
+  text share a page: `figure.photo img{max-height:92mm}`, `figure.photo.bleed img{104mm}`,
+  `.duo img{85mm}`, with `figure.photo{margin:5mm 0}` and ~10.5px captions. Copy these from
+  `03-austria-2026-v3.html`. (Austria went 36 → 23 pages with this; later grew to 27 as
+  more real photos were added — that's fine.)
+- **Verify page density before shipping.** Rasterise the PDF (PyMuPDF: `pymupdf.open(pdf)`,
+  `page.get_pixmap(dpi=60)`) and measure ink-per-page / where the bottom content ends; flag
+  any page under ~9% ink (empty) or ending above ~62% (big bottom gap), and build a contact
+  sheet to eyeball it. Script pattern kept in the session scratchpad.
 
 ---
 
@@ -161,7 +186,22 @@ the photo**, title at the foot. Copy from `03-austria-2026-v3.html` / `-v2.html`
   don't describe the pixels.
 - **Uploads arriving preview-only?** Recover from the session transcript: base64 image
   blocks in `~/.claude/projects/-home-user-europeTrip/<SESSION>.jsonl`, decode, dedupe by
-  md5. (Script kept in the session scratchpad.)
+  md5. (`extract.py` kept in the session scratchpad.) Note the transcript also holds images
+  you *viewed* with Read, so index order ≠ send order — identify by content (a montage
+  helps), not position.
+- **Curate — you are the editor, not a dumping ground.** When the family sends many photos
+  (a whole city at once), use the genuinely new/better ones and **skip near-duplicates** of
+  what a chapter already shows. One real *moment* = about one photo. A new scene, a face not
+  yet shown, or a true story beat earns a place; a third gilded hall or fifth lake view does
+  not. Say plainly which you used and which you held, and offer to swap — don't silently
+  bloat the chapter. Prefer **upgrading** an existing weak photo over adding a duplicate.
+- **`.duo` crops (`object-fit:cover`) — never put a face in one.** Face photos go in full,
+  uncropped `figure.photo`; reserve `.duo` two-ups for scenics/architecture with no family
+  faces.
+- **Big folders (GBs): go local.** Don't upload multi-GB archives to a cloud session (disk +
+  upload limits). Either the family sends per-city batches in chat (works well), or run a
+  local Claude Code session pointed at the folder, following this runbook, committing only
+  the resized copies — not the originals.
 
 ---
 
@@ -185,7 +225,9 @@ the photo**, title at the foot. Copy from `03-austria-2026-v3.html` / `-v2.html`
 
 ## 8. Rollout status
 
-- ✅ **03 · Austria** — full memoir (v3) in this style. Reference implementation.
+- ✅ **03 · Austria** — complete memoir (v3), built from the family's real photos and words
+  across all four chapters (Salzburg, Burg Altpernstein, Hallstatt, Vienna). **This is the
+  reference implementation — when in doubt, copy it.**
 - ▶️ **Next:** issues that already have real family material (China has the most) get
   converted to this memoir format one at a time. Each needs the family's real notes/
   photos before it can be written — see §1.
