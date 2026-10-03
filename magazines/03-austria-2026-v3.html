@@ -376,6 +376,8 @@
     .cover .bg{background-size:cover; background-position:72% top;}
     .wrap{width:auto; box-shadow:none;}
     .opener,.chapter{width:auto; margin:0; box-shadow:none; padding:0 0 4mm;}
+    .chapter{page-break-before:always;}
+    .opener + .chapter{page-break-before:avoid;}
     figure.photo, .side, .pq, .duo, .sxs, .pair{break-inside:avoid;}
     .chapter .num, .chapter h2, .chapter .sub{break-after:avoid;}
     /* Pack pages: cap photo height so a photo + text share a page instead of
