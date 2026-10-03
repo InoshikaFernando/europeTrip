@@ -390,10 +390,10 @@
     /* keep the two-column layouts in print (A4 width can trip the mobile breakpoint) */
     .duo{grid-template-columns:1fr 1fr;}
     .pair{grid-template-columns:1fr 1fr; gap:6mm; margin:5mm 0;}
-    .pair figure.photo img{width:100%; height:auto; max-height:none;}
+    .pair figure.photo img{width:auto; height:auto; max-width:100%; max-height:90mm;}
     .sxs{grid-template-columns:minmax(0,46%) 1fr; gap:8mm; margin:5mm 0;}
     .sxs.img-right{grid-template-columns:1fr minmax(0,46%);}
-    .sxs figure.photo img{width:100%; height:auto; max-height:none;}
+    .sxs figure.photo img{width:auto; height:auto; max-width:100%; max-height:90mm;}
     figure.photo figcaption, .duo figcaption{font-size:10.5px; line-height:1.42; margin-top:5px;}
     .chapter p{margin:0 0 10px;}
     footer{padding:10mm 0 0; border:0;}
@@ -754,6 +754,7 @@
 
     <div class="sxs img-right">
       <div class="col">
+    <p>Everyone in Vienna calls it the Steffl, the way a family shortens a name it loves, and its roof is like nothing we'd seen anywhere else — close to a quarter of a million glazed tiles laid in bright zig-zags of green and gold, and worked, across one great slope, into the double-headed eagle of the old empire. We'd been tilting our heads back and photographing it from the square all evening.</p>
     <p>And then we went inside the cathedral, and the day ran out of words. <em class="q">Honestly, I had no words</em> — the dark Gothic height of it, the hush, the great tiled roof we'd seen catching the sun from outside. Some places you describe. That one you just stand in.</p>
       </div>
     <figure class="photo">
