@@ -49,6 +49,15 @@ memory), but the telling voice is one person — intimate, not a detached report
 - If a different issue is genuinely better told by someone else, keep the same
   first-person-narrator principle and state whose voice it is in the byline — but default
   to Inoshi for consistency across the series.
+
+**Attributed child points of view.** A moment that truly belongs to a child may be told
+in *that child's own* first person — clearly labelled so the reader knows the voice has
+handed over (a small kicker/mini-heading like *Avisha · 11* or *In Aviann's words*, or a
+boxed aside). Switch the "I" to the child for that block, then return to Inoshi. Use it
+**only for a moment the child actually lived or said** — never invent a child's words,
+thoughts or feelings. If you don't have the child's real line for a moment, leave it out
+or ask. These asides are precious precisely because they're real: one true line from a
+4-, 8- or 11-year-old is worth more than a paragraph written *for* them.
 - Preserve each child **as they are at this age** — real words, jokes, complaints,
   boredom, what they noticed. A child's one true line can carry a whole page.
 - Keep the **imperfect moments** (closed attractions, shut shops, tired legs, the
