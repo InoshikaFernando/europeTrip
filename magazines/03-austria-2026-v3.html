@@ -337,6 +337,12 @@
   .sxs .col > :first-child{margin-top:0;}
   .sxs .col > :last-child{margin-bottom:0;}
 
+  /* two portraits side by side, UNCROPPED (fills the row without cutting faces) */
+  .pair{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:30px 0; align-items:center;}
+  .pair figure.photo{margin:0;}
+  .pair figure.photo img{width:100%; max-width:100%; max-height:none; margin:0;}
+  .pair figure.photo figcaption{max-width:none;}
+
   .pq{font-family:'Fraunces',serif; font-style:italic; font-weight:500; font-size:clamp(23px,4.6vw,30px); line-height:1.32; color:var(--blue); text-align:center; margin:40px 0; padding:22px 10px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
 
   .side{background:var(--paper2); border-left:4px solid var(--gold); border-radius:3px; padding:20px 22px; margin:36px 0;}
@@ -359,6 +365,7 @@
     .chapter p.lead:first-letter{font-size:52px;}
     .duo{grid-template-columns:1fr;}
     .sxs, .sxs.img-right{grid-template-columns:1fr; gap:10px;}
+    .pair{grid-template-columns:1fr;}
   }
 
   /* ---------- Print / Save-as-PDF: clean A4 pages ---------- */
@@ -369,7 +376,9 @@
     .cover .bg{background-size:cover; background-position:72% top;}
     .wrap{width:auto; box-shadow:none;}
     .opener,.chapter{width:auto; margin:0; box-shadow:none; padding:0 0 4mm;}
-    figure.photo, .side, .pq, .duo, .sxs{break-inside:avoid;}
+    .chapter{page-break-before:always;}
+    .opener + .chapter{page-break-before:avoid;}
+    figure.photo, .side, .pq, .duo, .sxs, .pair{break-inside:avoid;}
     .chapter .num, .chapter h2, .chapter .sub{break-after:avoid;}
     /* Pack pages: cap photo height so a photo + text share a page instead of
        each portrait orphaning onto its own near-empty sheet. */
@@ -380,6 +389,8 @@
     .duo img{max-height:85mm;}
     /* keep the two-column layouts in print (A4 width can trip the mobile breakpoint) */
     .duo{grid-template-columns:1fr 1fr;}
+    .pair{grid-template-columns:1fr 1fr; gap:6mm; margin:6mm 0;}
+    .pair figure.photo img{max-height:112mm;}
     .sxs{grid-template-columns:minmax(0,46%) 1fr; gap:8mm; margin:6mm 0;}
     .sxs.img-right{grid-template-columns:1fr minmax(0,46%);}
     .sxs figure.photo img{max-height:104mm;}
@@ -429,12 +440,15 @@
 
     <p class="lead">At the top of the Mirabell steps, I lifted my arm and pointed up at the fortress on its hill, and for a moment I wasn't a mother of three in the midday heat — I was a girl again, in a living room on the other side of the world, acting out a film I had watched more than a hundred times.</p>
 
-    <p>When I was six or seven, my sister and I used to perform <em>The Sound of Music</em> for hours. I was always Maria; she was Liesl; a row of dolls stood in for the rest of the von Trapp children. I knew every song. And every single time, in my head, I was already here — already in Austria. <em class="q">Every time, I was in Austria in my mind.</em> To arrive in the real Salzburg now, decades later, with my husband beside me and three children of my own, was a dream I had never quite dared to dream aloud.</p>
-
-    <figure class="photo bleed">
-      <img src="../images/austria/salzburg-mirabell-gate-fortress.jpg" alt="Inoshi and the children at the top of the Mirabell garden steps, pointing up to the Hohensalzburg Fortress">
-      <figcaption>The top of the Mirabell steps — the "Do-Re-Mi" gate. I had pointed up at that fortress a hundred times on a screen; this time my own children followed my finger.</figcaption>
-    </figure>
+    <div class="sxs">
+      <figure class="photo">
+        <img src="../images/austria/salzburg-mirabell-gate-fortress.jpg" alt="Inoshi and the children at the top of the Mirabell garden steps, pointing up to the Hohensalzburg Fortress">
+        <figcaption>The top of the Mirabell steps — the "Do-Re-Mi" gate. I had pointed up at that fortress a hundred times on a screen; this time my own children followed my finger.</figcaption>
+      </figure>
+      <div class="col">
+        <p>When I was six or seven, my sister and I used to perform <em>The Sound of Music</em> for hours. I was always Maria; she was Liesl; a row of dolls stood in for the rest of the von Trapp children. I knew every song. And every single time, in my head, I was already here — already in Austria. <em class="q">Every time, I was in Austria in my mind.</em> To arrive in the real Salzburg now, decades later, with my husband beside me and three children of my own, was a dream I had never quite dared to dream aloud.</p>
+      </div>
+    </div>
 
     <div class="sxs img-right">
       <div class="col">
@@ -448,35 +462,31 @@
 
     <p>We never climbed to the Hohensalzburg itself; we only saw it from below. Mozart's birthplace stayed a doorway we walked past without stopping. We were already running two hours behind, with a church to reach before the day was gone, so we wandered the streets we could and let that be enough. It was hot — the kind of heat that makes everything an effort — and nothing in the world feels better on a day like that than a cup of ice-cream. So we bought one each for three weary children. After the morning they'd given us, they'd earned it. Not a checklist — a stolen hour in the one place I had waited my whole life to see.</p>
 
-    <div class="sxs">
+    <p>We found the ice-cream down one of the narrow old-town lanes — and here the lanes really are narrow. Salzburg's old town is wedged onto a thin strip of flat ground between the Mönchsberg cliff on one side and the Salzach river on the other, with nowhere to spread outward. So the medieval city grew upward and inward instead: tall houses leaning close together, the streets kept narrow, the sky a bright ribbon far overhead. We wheeled Avin down the middle of one of them, his cup held carefully in both hands.</p>
+
+    <div class="pair">
       <figure class="photo">
         <img src="../images/austria/salzburg-narrow-lane-icecream.jpg" alt="Avin in the stroller with a cup of ice-cream in a narrow Salzburg old-town lane, tall houses on either side and a church tower at the far end">
         <figcaption>Avin and his ice-cream, wheeled down one of the narrow lanes — the tall houses pressing close, a church tower marking the far end.</figcaption>
       </figure>
-      <div class="col">
-        <p>We found the ice-cream down one of the narrow old-town lanes — and here the lanes really are narrow. Salzburg's old town is wedged onto a thin strip of flat ground between the Mönchsberg cliff on one side and the Salzach river on the other, with nowhere to spread outward. So the medieval city grew upward and inward instead: tall houses leaning close together, the streets kept narrow, the sky a bright ribbon far overhead. We wheeled Avin down the middle of one of them, his cup held carefully in both hands.</p>
-      </div>
+      <figure class="photo">
+        <img src="../images/austria/salzburg-getreidegasse.jpg" alt="Getreidegasse, Salzburg's old-town shopping street, lined with wrought-iron guild signs">
+        <figcaption>Getreidegasse — the most famous of those lanes, every shopfront still marked by its old wrought-iron guild sign.</figcaption>
+      </figure>
     </div>
 
-    <figure class="photo">
-      <img src="../images/austria/salzburg-getreidegasse.jpg" alt="Getreidegasse, Salzburg's old-town shopping street, lined with wrought-iron guild signs">
-      <figcaption>Getreidegasse — the most famous of those lanes, every shopfront still marked by its old wrought-iron guild sign.</figcaption>
-    </figure>
-
-    <div class="sxs img-right">
-      <div class="col">
     <p>And there was the Residenzbrunnen, the grand horse-fountain in the old town — and in the film, this is the one Maria splashes as she sings that she has confidence. Standing in front of it now, I found that I did too. Confident I could see this whole trip through, with my three little musketeers beside me.</p>
-      </div>
-    <figure class="photo">
-      <img src="../images/austria/salzburg-residenzbrunnen.jpg" alt="The Residenzbrunnen, Salzburg's grand Baroque horse-fountain in the old town square">
-      <figcaption>The Residenzbrunnen — the fountain Maria splashes in the film as she sings <em>I Have Confidence</em>. I stood where she stood and felt it too.</figcaption>
-    </figure>
-    </div>
 
-    <figure class="photo">
-      <img src="../images/austria/salzburg-fountain-kids.jpg" alt="Avisha and Aviann clambering on the edge of the Residenzbrunnen, the Glockenspiel tower of the Neue Residenz rising behind them">
-      <figcaption>Two of my three musketeers couldn't walk past it without climbing on — the rearing stone horses below them, the Glockenspiel tower keeping time behind.</figcaption>
-    </figure>
+    <div class="pair">
+      <figure class="photo">
+        <img src="../images/austria/salzburg-residenzbrunnen.jpg" alt="The Residenzbrunnen, Salzburg's grand Baroque horse-fountain in the old town square">
+        <figcaption>The Residenzbrunnen — the fountain Maria splashes in the film as she sings <em>I Have Confidence</em>. I stood where she stood and felt it too.</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="../images/austria/salzburg-fountain-kids.jpg" alt="Avisha and Aviann clambering on the edge of the Residenzbrunnen, the Glockenspiel tower of the Neue Residenz rising behind them">
+        <figcaption>Two of my three musketeers couldn't walk past it without climbing on — the rearing stone horses below them, the Glockenspiel tower keeping time behind.</figcaption>
+      </figure>
+    </div>
 
     <div class="side">
       <div class="h">Travel Reality</div>
@@ -494,14 +504,17 @@
 
     <p>It was Saturday, and in Austria the shops close at six. Our plan to buy groceries for dinner had expired two hours earlier, while we were still in the pews — a detail nobody tells you until a tired family with three hungry children is standing on a quiet street at dusk. We found a restaurant just before it, too, closed for the night, and ordered pizza and pasta almost at the door. It cost more than the supermarket dinner we'd planned. After the day we'd had, nobody was complaining.</p>
 
-    <p>Then, at last, the castle. We were staying at Burg Altpernstein, a genuine hilltop fortress — and a genuine fortress, it turns out, has no elevator. We carried the heavy bags up to the third floor by stair, breath by breath, and found we couldn't even mind: you don't keep a castle's medieval soul by drilling a lift shaft through the middle of it. A hot bath washed the long day away, and we fell into bed more tired than we had been at any point on the trip.</p>
+    <div class="sxs">
+      <figure class="photo">
+        <img src="../images/austria/altpernstein-castle-full.jpg" alt="Burg Altpernstein, a tall grey medieval castle on its rock, reached by a stone arched bridge">
+        <figcaption>Burg Altpernstein. Our room was up on the third floor — and so, eventually, breath by breath, were all of the bags.</figcaption>
+      </figure>
+      <div class="col">
+        <p>Then, at last, the castle. We were staying at Burg Altpernstein, a genuine hilltop fortress — and a genuine fortress, it turns out, has no elevator. We carried the heavy bags up to the third floor by stair, breath by breath, and found we couldn't even mind: you don't keep a castle's medieval soul by drilling a lift shaft through the middle of it. A hot bath washed the long day away, and we fell into bed more tired than we had been at any point on the trip.</p>
+      </div>
+    </div>
 
     <figure class="photo bleed">
-      <img src="../images/austria/altpernstein-castle-full.jpg" alt="Burg Altpernstein, a tall grey medieval castle on its rock, reached by a stone arched bridge">
-      <figcaption>Burg Altpernstein. Our room was up on the third floor — and so, eventually, breath by breath, were all of the bags.</figcaption>
-    </figure>
-
-    <figure class="photo">
       <img src="../images/austria/altpernstein-valley-view.jpg" alt="The green valley and hills seen from Burg Altpernstein's height">
       <figcaption>What the climb bought us: the valley falling away below the castle, the reward for every stair.</figcaption>
     </figure>
@@ -517,20 +530,18 @@
 
     <p class="lead">We woke at five o'clock — all of us, even the children, and for once wide awake and clear-headed. The jet lag that had dragged at us since Beijing had simply lifted in the night, as though the castle had taken it.</p>
 
-    <div class="sxs">
-    <figure class="photo">
-      <img src="../images/austria/altpernstein-breakfast.jpg" alt="The castle breakfast table at Altpernstein, the green valley through an arched window">
-      <figcaption>The breakfast that carried us all day — laid out at the castle, the valley framed in the arched window behind.</figcaption>
-    </figure>
-      <div class="col">
     <p>We were at the breakfast buffet a quarter of an hour before it opened, and when it did we fell on it happily: cheese and ham, salads and dips, fruit juice and cereal, far more than we could finish. It was so generous it would carry us, as it turned out, clean through the day. Full and awake, we drove out to Hallstatt and reached it around half past ten, early enough that the fierce midday heat hadn't yet arrived.</p>
-      </div>
-    </div>
 
-    <figure class="photo">
-      <img src="../images/austria/hallstatt-drive-autobahn.jpg" alt="The view through the windscreen on the autobahn to Hallstatt, grey Alpine peaks rising ahead above the road">
-      <figcaption>On the road to Hallstatt — the Salzkammergut peaks rising straight ahead through the windscreen, pulling us in.</figcaption>
-    </figure>
+    <div class="pair">
+      <figure class="photo">
+        <img src="../images/austria/altpernstein-breakfast.jpg" alt="The castle breakfast table at Altpernstein, the green valley through an arched window">
+        <figcaption>The breakfast that carried us all day — laid out at the castle, the valley framed in the arched window behind.</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="../images/austria/hallstatt-drive-autobahn.jpg" alt="The view through the windscreen on the autobahn to Hallstatt, grey Alpine peaks rising ahead above the road">
+        <figcaption>On the road to Hallstatt — the Salzkammergut peaks rising straight ahead through the windscreen, pulling us in.</figcaption>
+      </figure>
+    </div>
 
     <div class="sxs img-right">
       <div class="col">
@@ -573,30 +584,29 @@
     </figure>
     </div>
 
-    <figure class="photo">
-      <img src="../images/austria/hallstatt-avin-camera.jpg" alt="Avin in his blue hat holding his teal toy camera up to the Hallstatt lake and village">
-      <figcaption>Avin lining up his own shot with the teal camera — four years old, photographing the same lake we were, from somewhere around our elbows.</figcaption>
-    </figure>
-
-    <figure class="photo">
-      <img src="../images/austria/hallstatt-classic-view.jpg" alt="The classic view of Hallstatt — pastel houses and church spire stacked up the cliff above the lake">
-      <figcaption>The view a thousand postcards are made of — and, for one morning, ours to stand in.</figcaption>
-    </figure>
-
-    <div class="sxs">
-    <figure class="photo">
-      <img src="../images/austria/hallstatt-clear-stream.jpg" alt="A clear, shallow mountain stream running between green banks and wooden houses in Hallstatt, the pebbled bed visible through the water">
-      <figcaption>The stream that runs down through the village — so clear you could count the stones on the bed. Exactly the green and blue I'd always pictured.</figcaption>
-    </figure>
-      <div class="col">
-    <p>And Hallstatt gave me something I hadn't expected. Long before we ever came, I had carried a picture of Europe in my head — calm, and green, and blue. That isn't really Europe, as it turns out; most of it is busier and grander than that. But Hallstatt never broke that picture. It was exactly the Europe I had imagined: green and blue, and quiet, and still.</p>
-      </div>
+    <div class="pair">
+      <figure class="photo">
+        <img src="../images/austria/hallstatt-avin-camera.jpg" alt="Avin in his blue hat holding his teal toy camera up to the Hallstatt lake and village">
+        <figcaption>Avin lining up his own shot with the teal camera — four years old, photographing the same lake we were, from somewhere around our elbows.</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="../images/austria/hallstatt-classic-view.jpg" alt="The classic view of Hallstatt — pastel houses and church spire stacked up the cliff above the lake">
+        <figcaption>The view a thousand postcards are made of — and, for one morning, ours to stand in.</figcaption>
+      </figure>
     </div>
 
-    <figure class="photo">
-      <img src="../images/austria/hallstatt-boat-family.jpg" alt="The family on a small boat on the Hallstättersee, the village behind them">
-      <figcaption>Out on the Hallstättersee — the finest way to see the village, pulling slowly into frame from the water.</figcaption>
-    </figure>
+    <p>And Hallstatt gave me something I hadn't expected. Long before we ever came, I had carried a picture of Europe in my head — calm, and green, and blue. That isn't really Europe, as it turns out; most of it is busier and grander than that. But Hallstatt never broke that picture. It was exactly the Europe I had imagined: green and blue, and quiet, and still.</p>
+
+    <div class="pair">
+      <figure class="photo">
+        <img src="../images/austria/hallstatt-clear-stream.jpg" alt="A clear, shallow mountain stream running between green banks and wooden houses in Hallstatt, the pebbled bed visible through the water">
+        <figcaption>The stream that runs down through the village — so clear you could count the stones on the bed. Exactly the green and blue I'd always pictured.</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="../images/austria/hallstatt-boat-family.jpg" alt="The family on a small boat on the Hallstättersee, the village behind them">
+        <figcaption>Out on the Hallstättersee — the finest way to see the village, pulling slowly into frame from the water.</figcaption>
+      </figure>
+    </div>
 
     <div class="duo">
       <figure><img src="../images/austria/hallstatt-waterfall.jpg" alt="A thin waterfall falling down the cliff face behind Hallstatt's rooftops, seen from the lake"></figure>
@@ -604,15 +614,16 @@
       <figcaption>From the water the whole village opened up — a thin waterfall threading down the cliff behind the roofs, the lake running green and still out to the mountains.</figcaption>
     </div>
 
-    <figure class="photo">
-      <img src="../images/austria/hallstatt-schnitzel-plate.jpg" alt="A close view of a golden Wiener Schnitzel with crinkle-cut chips, a tomato wedge and a slice of lemon, overhanging the edge of the plate">
-      <figcaption>Golden, thin and crisp, hanging off both sides of the plate — a proper Wiener Schnitzel at last, with a wedge of lemon to squeeze over.</figcaption>
-    </figure>
-
-    <figure class="photo">
-      <img src="../images/austria/schnitzel-lunch-family.jpg" alt="The family around a table with a golden Wiener Schnitzel and fries">
-      <figcaption>The dish we'd crossed a continent for, finally — and all of us around the table on the drive back, before the last push to Vienna.</figcaption>
-    </figure>
+    <div class="pair">
+      <figure class="photo">
+        <img src="../images/austria/hallstatt-schnitzel-plate.jpg" alt="A close view of a golden Wiener Schnitzel with crinkle-cut chips, a tomato wedge and a slice of lemon, overhanging the edge of the plate">
+        <figcaption>Golden, thin and crisp, hanging off both sides of the plate — a proper Wiener Schnitzel at last, with a wedge of lemon to squeeze over.</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="../images/austria/schnitzel-lunch-family.jpg" alt="The family around a table with a golden Wiener Schnitzel and fries">
+        <figcaption>The dish we'd crossed a continent for, finally — and all of us around the table on the drive back, before the last push to Vienna.</figcaption>
+      </figure>
+    </div>
 
     <div class="side">
       <div class="h">Would We Go Back?</div>
@@ -630,20 +641,18 @@
 
     <p>That is the kind of detour a family makes and a guidebook never would: kilometres added to a long driving day for the sake of a memory. From Brno we carried on to Vienna, and it was already four o'clock by the time we passed under the gates of Schönbrunn. Four o'clock bought us the palace but not its gardens. We spent two hours indoors instead, room after gilded room — the Great Gallery where the children tipped their heads right back to stare up at the painted ceiling — and stepped out again at six with the light already softening. The famous gardens we saw only from the terrace, stretching away to the Gloriette on its ridge. We left the climb for next time.</p>
 
-    <div class="sxs img-right">
-      <div class="col">
     <p>Schönbrunn was the first palace any of us had ever set foot in, and even at a half-run its long butter-yellow front stopped us in the forecourt. There was really only one word for it, and all five of us were thinking the same one: wow.</p>
-      </div>
-    <figure class="photo">
-      <img src="../images/austria/schoenbrunn-family-facade.jpg" alt="The family's selfie in the Schönbrunn forecourt, the long yellow palace behind them, Inoshi holding a Schönbrunn postcard">
-      <figcaption>The five of us in the forecourt of our first European palace — the grin on every face says the rest.</figcaption>
-    </figure>
-    </div>
 
-    <figure class="photo">
-      <img src="../images/austria/schoenbrunn-postcard-vs-real.jpg" alt="A Schönbrunn postcard held up against the real palace facade, the Gloriette on the hill behind">
-      <figcaption>Postcard against the real thing again — the Gloriette crowning the hill on the card, the one view we ran out of time to climb to.</figcaption>
-    </figure>
+    <div class="pair">
+      <figure class="photo">
+        <img src="../images/austria/schoenbrunn-family-facade.jpg" alt="The family's selfie in the Schönbrunn forecourt, the long yellow palace behind them, Inoshi holding a Schönbrunn postcard">
+        <figcaption>The five of us in the forecourt of our first European palace — the grin on every face says the rest.</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="../images/austria/schoenbrunn-postcard-vs-real.jpg" alt="A Schönbrunn postcard held up against the real palace facade, the Gloriette on the hill behind">
+        <figcaption>Postcard against the real thing again — the Gloriette crowning the hill on the card, the one view we ran out of time to climb to.</figcaption>
+      </figure>
+    </div>
 
     <div class="sxs">
     <figure class="photo">
@@ -655,27 +664,31 @@
       </div>
     </div>
 
-    <figure class="photo">
-      <img src="../images/austria/schoenbrunn-kids-gallery.jpg" alt="Avisha and Aviann standing in the Great Gallery, heads tipped back to look at the painted ceiling">
-      <figcaption>Avisha and Aviann in the middle of the Great Gallery, heads tipped right back — and both filming every gilded inch of it.</figcaption>
-    </figure>
-
-    <figure class="photo">
-      <img src="../images/austria/schoenbrunn-ceiling-fresco.jpg" alt="A grand Baroque ceiling fresco at Schönbrunn — figures, horses and sky painted across the vault">
-      <figcaption>What they were filming: a whole painted sky overhead, gods and clouds and horses tumbling across the vault.</figcaption>
-    </figure>
+    <div class="pair">
+      <figure class="photo">
+        <img src="../images/austria/schoenbrunn-kids-gallery.jpg" alt="Avisha and Aviann standing in the Great Gallery, heads tipped back to look at the painted ceiling">
+        <figcaption>Avisha and Aviann in the middle of the Great Gallery, heads tipped right back — and both filming every gilded inch of it.</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="../images/austria/schoenbrunn-ceiling-fresco.jpg" alt="A grand Baroque ceiling fresco at Schönbrunn — figures, horses and sky painted across the vault">
+        <figcaption>What they were filming: a whole painted sky overhead, gods and clouds and horses tumbling across the vault.</figcaption>
+      </figure>
+    </div>
 
     <div class="side">
       <div class="h">The Kids</div>
       <p>Avisha (11) and Aviann (8) documented the entire palace on their little toy cameras — Avisha most of all, already dreaming up the YouTube channel he wants to make. Between them they captured a Schönbrunn no guidebook has: every chandelier, every ceiling, every gilded door, filmed from about four feet off the ground.</p>
     </div>
 
-    <figure class="photo bleed">
-      <img src="../images/austria/schoenbrunn/private-salon.jpg" alt="A private salon inside Schönbrunn with portraits of Franz Joseph and Empress Elisabeth on the wall">
-      <figcaption>Inside Schönbrunn, among the family portraits: Franz Joseph, and his Sisi. Her story walked out of the palace with us and into the evening.</figcaption>
-    </figure>
-
-    <p>What stays with me, though, isn't any single treasure in those rooms — it's the size of them. Hall after gilded hall, walled in mirrors and crystal, each one seeming grander than the last, and so vast you could only guess they were built for one thing: music, and hundreds of guests, and dancing. We were right. The largest were the palace's ballrooms, where the court once danced until dawn — and where, long after the Habsburgs were gone, the powers of Europe waltzed their way through the Congress of Vienna.</p>
+    <div class="sxs">
+      <figure class="photo">
+        <img src="../images/austria/schoenbrunn/private-salon.jpg" alt="A private salon inside Schönbrunn with portraits of Franz Joseph and Empress Elisabeth on the wall">
+        <figcaption>Inside Schönbrunn, among the family portraits: Franz Joseph, and his Sisi. Her story walked out of the palace with us and into the evening.</figcaption>
+      </figure>
+      <div class="col">
+        <p>What stays with me, though, isn't any single treasure in those rooms — it's the size of them. Hall after gilded hall, walled in mirrors and crystal, each one seeming grander than the last, and so vast you could only guess they were built for one thing: music, and hundreds of guests, and dancing. We were right. The largest were the palace's ballrooms, where the court once danced until dawn — and where, long after the Habsburgs were gone, the powers of Europe waltzed their way through the Congress of Vienna.</p>
+      </div>
+    </div>
 
     <div class="sxs img-right">
       <div class="col">
@@ -687,26 +700,30 @@
     </figure>
     </div>
 
-    <figure class="photo">
-      <img src="../images/austria/schoenbrunn-ceremonial-hall.jpg" alt="A grand Schönbrunn gallery with a painted oval ceiling, a crystal chandelier and mirrored walls">
-      <figcaption>The kind of room we couldn't stop staring at — a gilded gallery under a painted sky, built for the court's balls.</figcaption>
-    </figure>
+    <div class="pair">
+      <figure class="photo">
+        <img src="../images/austria/schoenbrunn-ceremonial-hall.jpg" alt="A grand Schönbrunn gallery with a painted oval ceiling, a crystal chandelier and mirrored walls">
+        <figcaption>The kind of room we couldn't stop staring at — a gilded gallery under a painted sky, built for the court's balls.</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="../images/austria/schoenbrunn-mirror-salon.jpg" alt="An ornate Schönbrunn salon lined with gilt-framed mirrors and crystal chandeliers">
+        <figcaption>Mirror upon mirror, crystal upon crystal — one salon holding more gold than a whole street back home.</figcaption>
+      </figure>
+    </div>
 
-    <figure class="photo">
-      <img src="../images/austria/schoenbrunn-mirror-salon.jpg" alt="An ornate Schönbrunn salon lined with gilt-framed mirrors and crystal chandeliers">
-      <figcaption>Mirror upon mirror, crystal upon crystal — one salon holding more gold than a whole street back home.</figcaption>
-    </figure>
-
-    <figure class="photo">
-      <img src="../images/austria/schoenbrunn-red-salon.jpg" alt="A red-carpeted Schönbrunn hall with two crystal chandeliers and a portrait of Maria Theresa's children">
-      <figcaption>Another enormous hall, almost bare but for two chandeliers and a portrait of Maria Theresa's children — a room made simply to be filled.</figcaption>
-    </figure>
-
-    <p>Inside those rooms we met the story that would follow us for the rest of the day — Emperor Franz Joseph and Elisabeth, the reluctant young empress the whole country still calls Sisi. There is a neatness to it that I noticed at once: one woman's story making Austria vivid for me here, just as another woman's story had in Salzburg four days before.</p>
+    <div class="sxs img-right">
+      <div class="col">
+        <p>Inside those rooms we met the story that would follow us for the rest of the day — Emperor Franz Joseph and Elisabeth, the reluctant young empress the whole country still calls Sisi. There is a neatness to it that I noticed at once: one woman's story making Austria vivid for me here, just as another woman's story had in Salzburg four days before.</p>
+      </div>
+      <figure class="photo">
+        <img src="../images/austria/schoenbrunn-red-salon.jpg" alt="A red-carpeted Schönbrunn hall with two crystal chandeliers and a portrait of Maria Theresa's children">
+        <figcaption>Another enormous hall, almost bare but for two chandeliers and a portrait of Maria Theresa's children — a room made simply to be filled.</figcaption>
+      </figure>
+    </div>
 
     <p>By the evening Avin had his stroller back — reunited with it at the car, and very pleased with himself after a whole palace spent on his father's shoulders. We walked into the old town toward the Stephansdom, past the State Opera, the green-and-gold front of the Secession, and the horse-drawn fiaker cabs waiting in their long row. With that many horses, every so often the evening carried a certain reminder — and Aviann, eight years old, put the question to half the Graben: <em class="q">"What is that disgusting smell?"</em></p>
 
-    <figure class="photo">
+    <figure class="photo bleed">
       <img src="../images/austria/vienna-opera-walk.jpg" alt="The children walking past the arcaded facade of the Vienna State Opera in the evening, Aviann pushing Avin in his stroller">
       <figcaption>Making our way past the State Opera in the evening light — Avin back in his stroller, the children leading the way down the Ring.</figcaption>
     </figure>
@@ -731,15 +748,16 @@
     </figure>
     </div>
 
-    <figure class="photo">
-      <img src="../images/austria/stephansdom-interior-nave.jpg" alt="The soaring Gothic nave inside St Stephen's Cathedral, Vienna">
-      <figcaption>Inside: the dark Gothic height that took the words out of us.</figcaption>
-    </figure>
-
-    <figure class="photo">
-      <img src="../images/austria/vienna-stephansdom-family.jpg" alt="The family in front of St Stephen's Cathedral in the evening light">
-      <figcaption>The five of us in the square below the Steffl, the last light on the stone — our evening in Vienna, before the long question walked home with us.</figcaption>
-    </figure>
+    <div class="pair">
+      <figure class="photo">
+        <img src="../images/austria/stephansdom-interior-nave.jpg" alt="The soaring Gothic nave inside St Stephen's Cathedral, Vienna">
+        <figcaption>Inside: the dark Gothic height that took the words out of us.</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="../images/austria/vienna-stephansdom-family.jpg" alt="The family in front of St Stephen's Cathedral in the evening light">
+        <figcaption>The five of us in the square below the Steffl, the last light on the stone — our evening in Vienna, before the long question walked home with us.</figcaption>
+      </figure>
+    </div>
 
     <div class="pq">Prague or Vienna? One a beauty you stumble on; the other a beauty built on purpose. We never did settle it — and decided a family's heart is big enough for both.</div>
   </section>
