@@ -103,8 +103,14 @@ clean when saved as PDF. Copy the CSS from `03-austria-2026-v3.html`. Key points
 - `body{ background:#9a9fa5; padding:22px 0; }` — grey viewer backdrop.
 - Each section (`.opener`, `.chapter`) is a **white sheet**: `width:210mm; margin:0 auto
   16px; padding:20mm 22mm; background:#fff; box-shadow:0 2px 16px rgba(0,0,0,.35);`.
-- **Fonts** (Google Fonts): `Fraunces` (display/headings + drop cap), `Spectral` (body,
-  italic decks/captions), `JetBrains Mono` (kickers, labels, credit).
+- **Fonts:** `Fraunces` (display/headings + drop cap), `Spectral` (body, italic
+  decks/captions), `JetBrains Mono` (kickers, labels, credit). **Self-host them**
+  (`magazines/fonts/*.woff2`, inlined `@font-face`), do NOT rely on a Google Fonts
+  `<link>` — the PDF generator can't fetch Google Fonts and will silently fall back to a
+  Times clone ("Liberation Serif"), which looks wrong. Reuse the files already in
+  `magazines/fonts/`. After generating a PDF, verify with
+  `strings file.pdf | grep BaseFont` — you should see Fraunces/Spectral/JetBrains, never
+  Liberation/DejaVu.
 - **Accent palette** is per-country (Austria: blue `#28508c`, gold `#b1812c`, ink
   `#2c2522`). Each new issue sets its own `:root` palette; keep the structure identical.
 - **Full-bleed photo** inside a sheet: `figure.photo.bleed{ margin-left:-22mm;
