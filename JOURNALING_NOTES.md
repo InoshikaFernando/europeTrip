@@ -4,7 +4,7 @@
 > travel-journaling project instantly. NOT part of the published magazines.
 > To resume in a new session, say: *"Read JOURNALING_NOTES.md and let's continue."*
 
-_Last updated: **Austria (Issue 02) FINALIZED & merged to main — real photo album + real cover.** Family streamed their full Austria album (~35 photos, recovered via transcript-base64 method → `images/austria/`). DONE: gave Salzburg / First Night (Burg Altpernstein) / Hallstatt their real uncropped photo heroes (replaced TBD placeholders); **rebuilt the imagined "Tastes of Austria" food page** (fake Figlmüller/Sacher cards, which were also CLIPPING) into a real schnitzel-lunch feature; added two photo spreads — **"At the garden gate"** (Salzburg: Lana + kids at the Mirabell steps pointing to the fortress) and **"The most photographed village"** (Hallstatt railing); **rewrote the last imagined page "Habsburg Forever"** into the real Schönbrunn day (confirmed by user: only Schönbrunn — NO Hofburg; arrived 4pm, state rooms till 6; NO Gloriette/gardens/concert), hero = the private-salon shot with Franz Joseph & Sisi portraits; **Reflections** now truthful (real "if we come back" = the salt mine + panorama they missed as both were closed; removed the fabricated 60m-slide/funicular; favourite=Mirabell gate, hardest=liftless-castle first night — true placeholders, user may reword); **real COVER** = Stephansdom family selfie (`cover.jpg`, masthead moved to top, gradient so faces stay clear); fixed cover + welcome + back-cover blurbs to match reality. All 23 pages screenshot-verified non-clipping. Austria has NO imagined content left. HELD unplaced Austria photos for optional extra spreads: Salzburg Residenzbrunnen/Getreidegasse/Residenz-facade/Do-Re-Mi-avenue/horse-fountain/family-cathedral(tilted); Hallstatt boat/market-square/postcard-vs-real/street/viewpoint; castle exterior-selfie/breakfast/valley-view; autobahn._
+_Last updated: **Austria (Issue 02) FINALIZED & merged to main — real photo album + real cover.** Family streamed their full Austria album (~35 photos, recovered via transcript-base64 method → `images/austria/`). DONE: gave Salzburg / First Night (Burg Altpernstein) / Hallstatt their real uncropped photo heroes (replaced TBD placeholders); **rebuilt the imagined "Tastes of Austria" food page** (fake Figlmüller/Sacher cards, which were also CLIPPING) into a real schnitzel-lunch feature; added two photo spreads — **"At the garden gate"** (Salzburg: Inoshi + kids at the Mirabell steps pointing to the fortress) and **"The most photographed village"** (Hallstatt railing); **rewrote the last imagined page "Habsburg Forever"** into the real Schönbrunn day (confirmed by user: only Schönbrunn — NO Hofburg; arrived 4pm, state rooms till 6; NO Gloriette/gardens/concert), hero = the private-salon shot with Franz Joseph & Sisi portraits; **Reflections** now truthful (real "if we come back" = the salt mine + panorama they missed as both were closed; removed the fabricated 60m-slide/funicular; favourite=Mirabell gate, hardest=liftless-castle first night — true placeholders, user may reword); **real COVER** = Stephansdom family selfie (`cover.jpg`, masthead moved to top, gradient so faces stay clear); fixed cover + welcome + back-cover blurbs to match reality. All 23 pages screenshot-verified non-clipping. Austria has NO imagined content left. HELD unplaced Austria photos for optional extra spreads: Salzburg Residenzbrunnen/Getreidegasse/Residenz-facade/Do-Re-Mi-avenue/horse-fountain/family-cathedral(tilted); Hallstatt boat/market-square/postcard-vs-real/street/viewpoint; castle exterior-selfie/breakfast/valley-view; autobahn._
 
 _Earlier: Prague **food + late-album redesign**. Built a reusable magazine photo-collage layout (`.mag-collage` / `.cl-*`) and used it for a 2-page "Tastes of Bohemia" street-food feature (trdelník, tornado potato, family eating), a Mucha-window feature, an Old Jewish Cemetery page, and a Winged Lion (RAF) memorial page — all with rich historical captions. Filled the empty "Road to Prague" page with the trdelník-through-a-street photo. Uploads still preview-only → used transcript extraction again._
 
@@ -27,8 +27,8 @@ warm magazine-editorial tone.
 
 ## The family (the Munasinghe-Fernandos)
 
-- **Avinesh** ("Avi") — dad · **Lana** — mum (parents; magazine sign-offs read "Avinesh, Lana, Avisha, Aviann & Avin Munasinghe-Fernando").
-  - NOTE: his **full legal name is "Navin Avinesh Welikala Munasinghe-Fernando"** — he *goes by* Avinesh/Avi (the kids' names all echo it: Avinesh → Avisha, Aviann, Avin). Magazines use **Avinesh** (family voice); the **`day_*.html` booking/logistics pages keep the legal "Navin …"** on tickets/licence/hotel so they match his documents — do NOT change those. (Corrected across all 14 issues this session per Lana's confirmation.)
+- **Avinesh** ("Avi") — dad · **Inoshi** — mum (parents; magazine sign-offs read "Avinesh, Inoshi, Avisha, Aviann & Avin Munasinghe-Fernando").
+  - NOTE: his **full legal name is "Navin Avinesh Welikala Munasinghe-Fernando"** — he *goes by* Avinesh/Avi (the kids' names all echo it: Avinesh → Avisha, Aviann, Avin). Magazines use **Avinesh** (family voice); the **`day_*.html` booking/logistics pages keep the legal "Navin …"** on tickets/licence/hotel so they match his documents — do NOT change those. (Corrected across all 14 issues this session per Inoshi's confirmation.)
 - **Avisha** — 11, **boy**
 - **Aviann** — 8, **girl**
 - **Avin** — 4, **boy**
@@ -198,7 +198,7 @@ warm magazine-editorial tone.
   (min-height grows silently; see MAGAZINE_REVIEW_NOTES rule 7). Issue stable at 15 pages, all
   ≤295mm. **Still open:** confirm the Baroque church interior's name (looks like St Peter's).
 - **Issue 02 Austria — IN PROGRESS.** Added "The Journey" recap page (Ch.2, route rail) +
-  a real, deeply personal Salzburg spread. **Lana's Sound of Music story** is the heart of it:
+  a real, deeply personal Salzburg spread. **Inoshi's Sound of Music story** is the heart of it:
   favourite childhood film, played Maria (sister as Liesl, dolls for the other kids), watched
   it 100+ times ("every time I was in Austria in my mind"), and after 30 years did the fountain
   splash + stood at the garden gate for real with her own kids watching. Real visit was a rushed
@@ -391,14 +391,14 @@ Sisi's elder sister Helene but chose 15-yr-old Sisi at Bad Ischl in 1853; her fr
 melancholy life at court; assassinated in Geneva 1898). This is the storyline of **Schönbrunn
 Palace** and the **Hofburg / Sisi Museum** audio tours — CONFIRM which venue they heard it at.
 This makes the **Vienna page (Issue 02 Austria) REAL at last** — replace the imagined placeholder
-with the Sisi story as its heart (echoes Lana's Sound-of-Music thread: another woman's story that
+with the Sisi story as its heart (echoes Inoshi's Sound-of-Music thread: another woman's story that
 Austria makes vivid). NB spelling: "Sisi" (Austrian) not "Sissi" (the films).
 **VENUE CONFIRMED = Schönbrunn Palace** (they photographed the palace's history boards).
 **DONE THIS SESSION — 3 new history pages added to Issue 02 (magazines/02-austria-2026.html),
 after the existing imagined "Habsburg Forever" Vienna page (folio 05), all screenshot-verified
 non-clipping:** (1) **"The emperor who chose the wrong sister"** — the Franz Joseph & Sisi love
 story (Bad Ischl 1853, the rigid court, Hungary/1867 Compromise, Mayerling 1889, Geneva 1898,
-68-yr reign; ties to Lana's Sound-of-Music thread). (2) **"Echoes of a Monarchy"** — a photo
+68-yr reign; ties to Inoshi's Sound-of-Music thread). (2) **"Echoes of a Monarchy"** — a photo
 page showing their own (uncropped) shot of the Schönbrunn timeline/empire-map board
 (`images/austria/schoenbrunn-panel-echoes-map.jpg`); added a new `.sp-photo` CSS class to this
 issue for uncropped `<img>` photos. (3) **"The autumn Vienna stopped an empire"** — the 1529
