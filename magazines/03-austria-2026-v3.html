@@ -17,16 +17,23 @@
   body{background:#9a9fa5; color:var(--ink); font-family:'Spectral',Georgia,serif; font-size:16.5px; line-height:1.72; -webkit-font-smoothing:antialiased; padding:22px 0;}
   img{max-width:100%; display:block;}
 
-  /* ---------- Cover ---------- */
-  .cover{position:relative; overflow:hidden; background:#10171c; width:210mm; margin:0 auto 16px; box-shadow:0 2px 16px rgba(0,0,0,.35);}
-  .cover img.ph{width:100%; display:block;}
-  .cover .sc{position:absolute; top:0; left:0; right:0; height:66%; background:linear-gradient(180deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,.3) 32%, rgba(0,0,0,0) 100%); pointer-events:none;}
-  .cover .in{position:absolute; top:0; left:0; right:0; padding:5.5vh 2rem 0; display:flex; flex-direction:column; align-items:center; color:#fff; text-align:center;}
-  .cover .mast{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.34em; text-transform:uppercase; color:rgba(255,255,255,.92);}
-  .cover .mast span{display:block; font-size:8.5px; letter-spacing:.3em; color:rgba(255,255,255,.74); margin-top:6px;}
-  .cover .ttl{font-family:'Fraunces',serif; font-weight:700; font-size:clamp(58px,12vw,120px); line-height:.9; letter-spacing:-.02em; margin-top:2.5vh; text-shadow:0 2px 30px rgba(0,0,0,.55);}
-  .cover .ded{font-family:'Spectral',serif; font-style:italic; font-size:clamp(15px,2.5vw,21px); line-height:1.5; color:rgba(255,255,255,.95); max-width:30ch; margin:12px auto 0; text-shadow:0 1px 10px rgba(0,0,0,.75);}
-  .cover .cr{font-family:'JetBrains Mono',monospace; font-size:9.5px; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.85); margin-top:16px; text-shadow:0 1px 8px rgba(0,0,0,.8);}
+  /* ---------- Cover (V2 style: full-bleed selfie + floating city cards) ---------- */
+  .cover{position:relative; width:210mm; height:297mm; margin:0 auto 16px; overflow:hidden; background:#10171c; box-shadow:0 2px 16px rgba(0,0,0,.35);}
+  .cover .bg{position:absolute; inset:0; background-size:100% auto; background-position:center top; background-repeat:no-repeat;}
+  .cover .sc{position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.08) 20%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 60%, rgba(0,0,0,.5) 82%, rgba(0,0,0,.92) 100%); pointer-events:none;}
+  .cover .citystrip{position:absolute; top:13mm; right:8mm; width:37mm; display:flex; flex-direction:column; gap:4mm; z-index:3;}
+  .cover .citystrip figure{margin:0; background:#fff; border:2px solid rgba(255,255,255,.95); border-radius:5px; overflow:hidden; box-shadow:0 8px 22px rgba(0,0,0,.55);}
+  .cover .citystrip img{width:100%; height:auto; display:block;}
+  .cover .citystrip figcaption{font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; text-transform:uppercase; text-align:center; color:#17293c; padding:5px 0 6px;}
+  .cover .in{position:absolute; inset:0; padding:15mm 16mm 14mm; display:flex; flex-direction:column; color:#fff;}
+  .cover .mast{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.92); text-align:center; text-shadow:0 1px 10px rgba(0,0,0,.6);}
+  .cover .mast span{display:block; font-size:8px; letter-spacing:.28em; color:rgba(255,255,255,.72); margin-top:5px;}
+  .cover .hair{width:60px; height:2px; background:#fff; opacity:.85; margin:10px auto 0;}
+  .cover .ttl{font-family:'Fraunces',serif; font-weight:700; font-size:92px; line-height:.9; letter-spacing:-.02em; margin-top:auto; text-shadow:0 2px 26px rgba(0,0,0,.55);}
+  .cover .ded{font-family:'Spectral',serif; font-style:italic; font-size:18px; line-height:1.4; max-width:62%; margin-top:10px; color:rgba(255,255,255,.95); text-shadow:0 1px 10px rgba(0,0,0,.7);}
+  .cover .teasers{display:flex; gap:9px; flex-wrap:wrap; margin-top:16px;}
+  .cover .teasers span{font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:#fff; border:1px solid rgba(255,255,255,.5); border-radius:100px; padding:5px 11px;}
+  .cover .cr{font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.82); margin-top:14px;}
 
   /* ---------- Reading column ---------- */
   .wrap{width:210mm; margin:0 auto; padding:0;}
@@ -82,7 +89,7 @@
   @media print{
     body{background:#fff; padding:0;}
     .cover{width:auto; height:297mm; margin:0; box-shadow:none; page-break-after:always;}
-    .cover img.ph{height:297mm; object-fit:cover; object-position:72% 42%;}
+    .cover .bg{background-size:cover; background-position:72% top;}
     .wrap{width:auto;}
     .opener,.chapter{width:auto; margin:0; box-shadow:none; padding:18mm 16mm; page-break-before:always;}
     .opener{page-break-before:avoid;}
@@ -96,12 +103,19 @@
 
 <!-- ===================== COVER ===================== -->
 <header class="cover">
-  <img class="ph" src="../images/austria/hallstatt-family-railing.jpg" alt="The Munasinghe-Fernando family at the Hallstatt lakeshore, the village and mountains behind">
+  <div class="bg" style="background-image:url('../images/austria/hallstatt-family-railing.jpg');"></div>
   <div class="sc"></div>
+  <div class="citystrip">
+    <figure><img src="../images/austria/hallstatt-boat-family.jpg" alt="The family on the Hallstättersee"><figcaption>Hallstatt</figcaption></figure>
+    <figure><img src="../images/austria/salzburg-family-cathedral.jpg" alt="The family in Salzburg's old town"><figcaption>Salzburg</figcaption></figure>
+    <figure><img src="../images/austria/vienna-schoenbrunn-family.jpg" alt="The family at Schönbrunn in Vienna"><figcaption>Vienna</figcaption></figure>
+  </div>
   <div class="in">
     <div class="mast">Munasinghe-Fernando Travel<span>No. 03 of 14 · Europe 2026 · The Memoir Edition</span></div>
+    <div class="hair"></div>
     <div class="ttl">Austria</div>
     <div class="ded">Five days, three cities, and a small country that kept catching us off guard.</div>
+    <div class="teasers"><span>The Sound of Music, for real</span><span>Hallstatt from the water</span><span>Inside Schönbrunn</span></div>
     <div class="cr">The Munasinghe-Fernando Family · 11–15 July 2026</div>
   </div>
 </header>
