@@ -167,7 +167,11 @@ the photo**, title at the foot. Copy from `03-austria-2026-v3.html` / `-v2.html`
 
 ## 7. Build & publish
 
-- Files: `magazines/NN-country-YYYY.html`. Austria memoir = `03-austria-2026-v3.html`.
+- **Start every new issue by copying `magazines/_TEMPLATE-issue.html`** — it carries the
+  whole format (self-hosted fonts, cover, A4 sheets, print CSS) with `{{PLACEHOLDERS}}`
+  and inline instructions. Fill it in; don't rebuild from scratch.
+- Files: `magazines/NN-country-YYYY.html`. Austria memoir = `03-austria-2026-v3.html`
+  (the worked reference example).
 - **Verify before pushing:** render each page headless (Playwright at
   `/opt/node22/lib/node_modules/playwright`, Chromium at
   `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`); screenshot every page/sheet and
