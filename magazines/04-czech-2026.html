@@ -1,818 +1,675 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="UTF-8">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Munasinghe-Fernando Travel Magazine · CZECH REPUBLIC Issue · July 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<title>Czechia · Munasinghe-Fernando Travel Magazine (No. 04 · the memoir)</title>
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-@page { size:A4 portrait; margin:0; }
-html, body { font-family:'Plus Jakarta Sans', sans-serif; background:#222; color:#1a1a1a; }
-body { padding:20px; }
-.mag-page { width:210mm; min-height:295mm; background:#fefcf7; margin:14px auto; box-shadow:0 8px 32px rgba(0,0,0,0.25); position:relative; overflow:hidden; page-break-after:always; break-after:page; }
-.mag-page:last-child { page-break-after:auto; }
-.mag-cover { background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.7) 100%), url('../images/day-05/03-charles-bridge.jpg') center/cover #3a0808; color:white; display:flex; flex-direction:column; padding:18mm 16mm; position:relative; }
-.mag-cover::before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 20% 80%, #32543740, transparent 50%); pointer-events:none; }
-.cv-issue { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:rgba(255,255,255,0.85); margin-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:4px; display:flex; justify-content:space-between; }
-.cv-flag { font-size:14px; }
-.cv-brand { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:18px; color:rgba(255,255,255,0.95); letter-spacing:0.05em; margin-bottom:auto; }
-.cv-title { font-family:'Fraunces', serif; font-weight:700; font-size:96px; line-height:0.9; color:white; margin-bottom:6px; letter-spacing:-0.02em; text-shadow:2px 4px 12px rgba(0,0,0,0.4); }
-.cv-sub { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:24px; color:rgba(255,255,255,0.95); margin-bottom:24px; text-shadow:1px 2px 8px rgba(0,0,0,0.5); }
-.cv-tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
-.cv-tag { background:rgba(255,255,255,0.15); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.3); border-radius:100px; padding:5px 14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.15em; text-transform:uppercase; }
-.cv-features { font-family:'Fraunces', serif; font-size:14px; line-height:1.6; color:rgba(255,255,255,0.9); border-top:1px solid rgba(255,255,255,0.3); padding-top:12px; margin-top:8px; }
-.cv-features b { font-weight:700; color:#f0d68c; }
-.cv-meta { position:absolute; bottom:14mm; right:16mm; text-align:right; font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; color:rgba(255,255,255,0.7); }
-.mag-welcome { padding:22mm 18mm; }
-.wl-num { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:14px; color:#6e1313; margin-bottom:4px; }
-.wl-title { font-family:'Fraunces', serif; font-weight:700; font-size:56px; line-height:1; color:#1a1a1a; margin-bottom:24px; letter-spacing:-0.02em; }
-.wl-divider { width:60px; height:3px; background:#325437; margin-bottom:24px; }
-.wl-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; column-count:2; column-gap:14mm; column-rule:1px solid #e8d6a8; color:#3d3024; max-width:100%; margin-bottom:24mm; }
-.wl-body p { margin-bottom:10px; text-align:justify; }
-.wl-body p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:62px; float:left; line-height:0.9; padding:2px 8px 0 0; color:#6e1313; }
-.toc-title { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#6e1313; border-bottom:2px solid #6e1313; padding-bottom:8px; margin-bottom:14px; }
-.toc-list { list-style:none; column-count:2; column-gap:14mm; font-family:'Fraunces', serif; font-size:13px; line-height:1.8; }
-.toc-list li { display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px dotted #32543740; padding:4px 0; break-inside:avoid; }
-.toc-list .toc-name { font-style:italic; }
-.toc-list .toc-page { font-family:'JetBrains Mono', monospace; font-size:10px; color:#8b6914; font-weight:700; }
-.mag-spread { padding:14mm 16mm; display:flex; flex-direction:column; }
-.sp-eyebrow { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#6e1313; margin-bottom:8px; }
-.sp-headline { font-family:'Fraunces', serif; font-weight:700; font-size:38px; line-height:0.95; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.01em; }
-.sp-deck { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:15px; line-height:1.4; color:#5a4a3a; margin-bottom:10px; max-width:92%; }
-.sp-meta { display:flex; gap:14px; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; border-top:1px solid #325437; padding-top:8px; margin-bottom:14px; }
-.sp-hero { width:100%; height:64mm; background:#e8dcc0; background-size:cover; background-position:center; margin-bottom:6px; position:relative; border-radius:2px; }
-.sp-hero .ph-name { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:repeating-linear-gradient(45deg,#e8dcc0 0 10px,#ddd1b3 10px 20px); font-family:'JetBrains Mono', monospace; font-size:10px; color:#8b6914; }
-.sp-hero .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
-.sp-caption { font-family:'Fraunces', serif; font-style:italic; font-size:9.5px; color:#5a4a3a; margin-bottom:10px; padding-left:12px; border-left:2px solid #325437; }
-.sp-cols { column-count:2; column-gap:10mm; column-rule:0; }
-.sp-cols p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; margin-bottom:7px; }
-.sp-cols p:first-child::first-letter { font-family:'Fraunces', serif; font-weight:700; font-size:38px; float:left; line-height:0.9; padding:2px 6px 0 0; color:#6e1313; }
-.sp-quote { break-inside:avoid; font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:14px; line-height:1.4; color:#6e1313; text-align:center; padding:10px 12px; border-top:1px solid #325437; border-bottom:1px solid #325437; margin:10px 0; }
-.sp-quote::before, .sp-quote::after { content:'"'; font-size:30px; line-height:0; vertical-align:-12px; color:#325437; padding:0 3px; }
-.mag-duo { padding:14mm 16mm; display:flex; flex-direction:column; gap:6mm; }
-.duo-row { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
-.duo-row.alt { grid-template-columns:2fr 1fr; }
-.duo-photo { background:#e8dcc0; aspect-ratio:4/5; position:relative; border-radius:2px; overflow:hidden; background-size:cover; background-position:center; }
-.duo-photo.wide { aspect-ratio:16/10; }
-.duo-photo .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; }
-.duo-photo > .ph-name { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; background:repeating-linear-gradient(45deg, #e8dcc0 0 8px, #ddd1b3 8px 16px); font-family:'JetBrains Mono', monospace; font-size:8px; color:#8b6914; text-align:center; padding:8px; gap:4px; }
-.duo-text { display:flex; flex-direction:column; justify-content:center; padding:0 4mm; }
-.duo-text h3 { font-family:'Fraunces', serif; font-weight:700; font-size:28px; line-height:1; color:#1a1a1a; margin-bottom:8px; }
-.duo-text p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.55; color:#3d3024; text-align:justify; }
-.duo-text .kicker { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.3em; text-transform:uppercase; color:#6e1313; margin-bottom:6px; }
-.mag-food { padding:18mm 16mm; }
-.fd-headline { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.02em; }
-.fd-headline em { font-style:italic; font-weight:400; color:#6e1313; }
-.fd-deck { font-family:'Fraunces', serif; font-style:italic; font-size:16px; color:#5a4a3a; margin-bottom:18px; border-bottom:2px solid #325437; padding-bottom:14px; }
-.fd-grid { display:grid; grid-template-columns:1fr 1fr; gap:8mm; }
-.fd-card { background:#fff8ec; border:1px solid #e8d6a8; border-radius:4px; overflow:hidden; }
-.fd-card .fd-img { width:100%; aspect-ratio:5/3; background:#e8dcc0; position:relative; display:flex; align-items:center; justify-content:center; background-image:repeating-linear-gradient(45deg, #e8dcc0 0 8px, #ddd1b3 8px 16px); }
-.fd-card .fd-img .ph { font-family:'JetBrains Mono', monospace; font-size:8px; color:#8b6914; text-align:center; padding:8px; }
-.fd-card .fd-body { padding:10px 14px 14px; }
-.fd-card .fd-num { font-family:'Fraunces', serif; font-weight:300; font-style:italic; font-size:22px; color:#6e1313; line-height:1; }
-.fd-card .fd-name { font-family:'Fraunces', serif; font-weight:700; font-size:18px; line-height:1.1; color:#1a1a1a; margin:4px 0 6px; }
-.fd-card .fd-desc { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.5; color:#5a4a3a; margin-bottom:5px; }
-.fd-card .fd-where { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.15em; color:#8b6914; text-transform:uppercase; }
-.mag-reflection { background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%); padding:24mm 22mm; display:flex; flex-direction:column; }
-.rf-eyebrow { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#6e1313; margin-bottom:8px; }
-.rf-headline { font-family:'Fraunces', serif; font-weight:700; font-size:54px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
-.rf-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; color:#3d3024; margin-bottom:24px; max-width:85%; }
-.rf-body p { margin-bottom:12px; }
-.rf-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:6mm; margin-bottom:16px; }
-.rf-card { background:rgba(255,255,255,0.6); padding:14px 16px; border-left:3px solid #6e1313; }
-.rf-card .rf-label { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#6e1313; margin-bottom:4px; }
-.rf-card .rf-value { font-family:'Fraunces', serif; font-size:13px; line-height:1.4; color:#3d3024; }
-.rf-signoff { margin-top:auto; padding-top:18mm; font-family:'Fraunces', serif; font-style:italic; font-size:13px; color:#6e1313; text-align:right; }
-.mag-back { background: linear-gradient(0deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.25) 100%), url('../images/hungary/buda-hill-night-2.jpg') center/cover #1a1030; color:white; display:flex; flex-direction:column; justify-content:flex-end; padding:24mm 20mm; }
-.bc-next { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:6px; }
-.bc-country { font-family:'Fraunces', serif; font-weight:700; font-size:64px; line-height:0.9; color:white; margin-bottom:8px; }
-.bc-tagline { font-family:'Fraunces', serif; font-style:italic; font-size:18px; color:rgba(255,255,255,0.9); border-top:1px solid rgba(255,255,255,0.4); padding-top:14px; margin-bottom:12px; max-width:70%; }
-.bc-mag { position:absolute; top:20mm; left:20mm; font-family:'Fraunces', serif; font-style:italic; font-weight:300; font-size:16px; color:rgba(255,255,255,0.9); letter-spacing:0.05em; }
-.bc-issue { position:absolute; top:20mm; right:20mm; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; color:rgba(255,255,255,0.7); }
-.mag-page .folio { position:absolute; bottom:4mm; left:0; right:0; text-align:center; font-family:'Fraunces', serif; font-style:italic; font-size:8.5px; color:#8b6914; }
-/* THE JOURNEY / STORY SO FAR */
-.mag-journey { background:linear-gradient(135deg, #fff4e6 0%, #ffe4c4 100%); padding:24mm 22mm; display:flex; flex-direction:column; }
-.jr-eyebrow { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:#6e1313; margin-bottom:8px; }
-.jr-headline { font-family:'Fraunces', serif; font-weight:700; font-size:52px; line-height:0.95; color:#1a1a1a; margin-bottom:18px; letter-spacing:-0.02em; }
-.jr-body { font-family:'Fraunces', serif; font-size:14px; line-height:1.7; color:#3d3024; margin-bottom:22px; max-width:92%; }
-.jr-body p { margin-bottom:12px; }
-.jr-railtitle { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.28em; text-transform:uppercase; color:#6e1313; border-bottom:1px solid #325437; padding-bottom:8px; margin-bottom:14px; }
-.jr-rail { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:18px; }
-.jr-stop { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.04em; color:#a8926a; padding:5px 11px; border:1px solid #e8d6a8; border-radius:100px; background:rgba(255,255,255,0.35); white-space:nowrap; }
-.jr-stop .jr-n { font-weight:700; color:#8b6914; margin-right:3px; }
-.jr-stop.done { color:#5a4a3a; border-color:rgba(50,84,55,0.5); }
-.jr-stop.done .jr-n { color:#6e1313; }
-.jr-stop.here { color:#fff; background:#6e1313; border-color:#6e1313; font-weight:700; }
-.jr-stop.here .jr-n { color:#f0d68c; }
-.jr-today { font-family:'Fraunces', serif; font-style:italic; font-size:15px; line-height:1.5; color:#6e1313; margin-top:auto; padding-top:10mm; border-top:1px solid #325437; }
-/* FULL PHOTO (uncropped, whole frame shown) */
-.sp-photo { width:100%; margin-bottom:6px; position:relative; text-align:center; line-height:0; }
-.sp-photo img { max-width:100%; max-height:150mm; display:inline-block; border-radius:2px; vertical-align:bottom; }
-.sp-photo .ph-info { position:absolute; bottom:6px; right:8px; background:rgba(0,0,0,0.55); color:white; font-family:'JetBrains Mono', monospace; font-size:7px; padding:3px 6px; border-radius:2px; letter-spacing:0.1em; line-height:1.2; }
-/* MAGAZINE PHOTO COLLAGE — asymmetric editorial, varied sizes, rich captions */
-.mag-collage { padding:10mm 13mm; display:flex; flex-direction:column; }
-.cl-eyebrow { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#6e1313; margin-bottom:7px; }
-.cl-headline { font-family:'Fraunces', serif; font-weight:700; font-size:40px; line-height:0.92; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.015em; }
-.cl-headline em { font-style:italic; font-weight:400; color:#6e1313; }
-.cl-deck { font-family:'Fraunces', serif; font-style:italic; font-size:13px; line-height:1.4; color:#5a4a3a; margin-bottom:9px; max-width:94%; border-bottom:2px solid #325437; padding-bottom:8px; }
-.cl-grid { display:grid; grid-template-columns:repeat(12,1fr); gap:4mm; flex:1; min-height:0; max-height:232mm; }
-.cl-fig { position:relative; overflow:hidden; border-radius:2px; background:#e8dcc0; min-height:0; }
-.cl-fig img { width:100%; height:100%; object-fit:cover; display:block; }
-.cl-fig .ph-info { position:absolute; bottom:5px; right:6px; background:rgba(0,0,0,0.5); color:#fff; font-family:'JetBrains Mono', monospace; font-size:6.5px; padding:2px 5px; border-radius:2px; letter-spacing:0.08em; z-index:2; }
-/* caption laid over the bottom of a photo */
-.cl-over { position:absolute; left:0; right:0; bottom:0; padding:16px 12px 9px; background:linear-gradient(0deg, rgba(20,8,8,0.82) 0%, rgba(20,8,8,0.35) 55%, rgba(20,8,8,0) 100%); color:#fff; z-index:1; }
-.cl-over .cl-t { font-family:'Fraunces', serif; font-weight:700; font-size:15px; line-height:1.02; margin-bottom:3px; }
-.cl-over .cl-t em { font-style:italic; font-weight:400; color:#f0d68c; }
-.cl-over .cl-d { font-family:'Fraunces', serif; font-size:8.8px; line-height:1.42; color:rgba(255,255,255,0.92); }
-/* text tile — a caption card that lives in the grid like a photo */
-.cl-note { background:#fff8ec; border:1px solid #e8d6a8; border-left:3px solid #6e1313; border-radius:2px; padding:11px 13px; display:flex; flex-direction:column; justify-content:flex-start; overflow:hidden; min-height:0; }
-.cl-note.green { border-left-color:#325437; }
-.cl-note .cl-k { font-family:'JetBrains Mono', monospace; font-size:7.5px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; margin-bottom:5px; }
-.cl-note .cl-t { font-family:'Fraunces', serif; font-weight:700; font-size:19px; line-height:0.98; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.01em; }
-.cl-note .cl-t em { font-style:italic; font-weight:400; color:#6e1313; }
-.cl-note .cl-b { font-family:'Fraunces', serif; font-size:9.3px; line-height:1.5; color:#3d3024; }
-.cl-note .cl-b + .cl-b { margin-top:5px; }
-.cl-note .cl-sig { font-family:'JetBrains Mono', monospace; font-size:7px; letter-spacing:0.15em; text-transform:uppercase; color:#8b6914; margin-top:7px; }
-/* editorial sidebar (for single-photo feature pages — no empty boxes) */
-.cl-side { display:flex; flex-direction:column; padding:2px 4px 2px 6px; min-height:0; }
-.cl-side .cl-k { font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; margin-bottom:7px; }
-.cl-side .cl-lead { font-family:'Fraunces', serif; font-weight:700; font-size:23px; line-height:1; color:#1a1a1a; margin-bottom:10px; letter-spacing:-0.01em; }
-.cl-side .cl-lead em { font-style:italic; font-weight:400; color:#6e1313; }
-.cl-side p { font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; margin-bottom:9px; }
-.cl-side p b { color:#1a1a1a; }
-.cl-accent { margin-top:auto; background:#fff8ec; border-left:3px solid #6e1313; border-radius:2px; padding:11px 13px; }
-.cl-accent.green { border-left-color:#325437; }
-.cl-accent .cl-k { font-family:'JetBrains Mono', monospace; font-size:7.5px; letter-spacing:0.2em; text-transform:uppercase; color:#8b6914; margin-bottom:5px; }
-.cl-accent .cl-b { font-family:'Fraunces', serif; font-size:9.3px; line-height:1.5; color:#3d3024; }
-.cl-accent .cl-quote { font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:15px; line-height:1.25; color:#6e1313; margin-bottom:5px; }
-.cl-accent .cl-quote em { color:#1a1a1a; }
-.cl-accent .cl-sig { font-family:'JetBrains Mono', monospace; font-size:7px; letter-spacing:0.15em; text-transform:uppercase; color:#8b6914; }
-/* grid span utilities */
-.col-3{grid-column:span 3}.col-4{grid-column:span 4}.col-5{grid-column:span 5}.col-6{grid-column:span 6}.col-7{grid-column:span 7}.col-8{grid-column:span 8}.col-9{grid-column:span 9}.col-12{grid-column:span 12}
-.row-1{grid-row:span 1}.row-2{grid-row:span 2}.row-3{grid-row:span 3}.row-4{grid-row:span 4}
-/* PHOTO ESSAY — masonry columns, whole frames shown, connected captions */
-.mag-photoessay { padding:14mm 16mm; display:flex; flex-direction:column; }
-.pe-eyebrow { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#6e1313; margin-bottom:8px; }
-.pe-headline { font-family:'Fraunces', serif; font-weight:700; font-size:38px; line-height:0.95; color:#1a1a1a; margin-bottom:6px; letter-spacing:-0.01em; }
-.pe-headline em { font-style:italic; font-weight:400; color:#6e1313; }
-.pe-deck { font-family:'Fraunces', serif; font-style:italic; font-weight:400; font-size:14px; line-height:1.4; color:#5a4a3a; margin-bottom:12px; max-width:94%; border-bottom:2px solid #325437; padding-bottom:10px; }
-.mag-essay { column-count:3; column-gap:5mm; margin-top:4px; }
-.mag-essay .essay-item { break-inside:avoid; margin:0 0 5mm; }
-.mag-essay .essay-item img { width:100%; height:auto; display:block; border-radius:2px; background:#0e0e0e; }
-.mag-essay .essay-cap { font-family:'Fraunces', serif; font-size:8px; line-height:1.4; color:#5a4a3a; margin-top:4px; }
-.mag-essay .essay-lead { column-span:all; margin-bottom:6mm; }
-.mag-essay .essay-lead .essay-cap { font-size:11px; font-style:italic; color:#3d3024; text-align:center; }
-@media print { .mag-essay { column-count:3; } }
-/* ===== FEATURE-LED EDITORIAL SYSTEM ===== */
-.mag-lead { display:grid; grid-template-columns:1.6fr 1fr; gap:8mm; align-items:end; margin:6px 0 7mm; }
-.mag-lead .ll-feat { margin:0; position:relative; overflow:hidden; border-radius:3px; }
-.mag-lead .ll-feat img { width:100%; height:88mm; object-fit:cover; display:block; }
-.mag-lead .ll-col { display:flex; flex-direction:column; padding-bottom:3mm; }
-.mag-lead .ll-kick { font-family:'JetBrains Mono',monospace; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#6e1313; display:block; margin-bottom:10px; }
-.mag-lead .ll-intro { font-family:'Fraunces',serif; font-style:italic; font-size:14px; line-height:1.62; color:#3d3024; }
-.ed-two, .ed-grid3, .ed-grid4, .ed-land { display:grid; margin-top:8px; }
-.ed-two { grid-template-columns:repeat(2,1fr); gap:6mm; }
-.ed-grid3 { grid-template-columns:repeat(3,1fr); gap:5mm; }
-.ed-grid4 { grid-template-columns:repeat(4,1fr); gap:4mm; }
-.ed-land { grid-template-columns:repeat(2,1fr); gap:6mm; }
-.ed-two figure, .ed-grid3 figure, .ed-grid4 figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; aspect-ratio:3/4; }
-.ed-land figure { margin:0; position:relative; overflow:hidden; border-radius:3px; background:#0e0e0e; aspect-ratio:4/3; }
-.ed-two img, .ed-grid3 img, .ed-grid4 img, .ed-land img { width:100%; height:100%; object-fit:cover; display:block; }
-.ed-cap-ov { position:absolute; left:0; right:0; bottom:0; padding:22px 11px 9px; background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.35) 55%, transparent); color:#fff; font-family:'Fraunces',serif; font-size:9px; line-height:1.4; }
-.ed-grid3 .ed-cap-ov { padding:16px 8px 6px; font-size:8px; line-height:1.3; }
-.ed-grid4 .ed-cap-ov { padding:14px 6px 5px; font-size:7px; line-height:1.25; }
-.ed-cap-ov strong { color:#f0d68c; font-weight:700; }
-.mag-lead .ll-feat .ed-cap-ov { padding:26px 14px 12px; font-size:10px; line-height:1.45; }
-@media print { *, *::before, *::after { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; } body { background:white; padding:0; margin:0; } .mag-page { margin:0 !important; box-shadow:none !important; } }
-</style></head>
+/* self-hosted fonts (PDF-safe) */
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/f00.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/f01.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/f02.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/f03.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/f04.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/f05.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/f03.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/f04.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/f05.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/f06.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/f07.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/f08.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/f09.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/f10.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/f11.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Spectral';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/f12.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Spectral';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/f13.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Spectral';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/f14.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Spectral';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/f15.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/f16.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/f17.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/f18.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/f19.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/f20.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/f21.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/f22.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/f23.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/f24.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/f25.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/f26.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+  :root{
+    --ink:#2c2522; --paper:#f7f2e8; --paper2:#efe7d6;
+    --blue:#8a2231; --gold:#9c7320; --muted:#6f6353; --line:#e4d9c4;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:#9a9fa5; color:var(--ink); font-family:'Spectral',Georgia,serif; font-size:16.5px; line-height:1.72; -webkit-font-smoothing:antialiased; padding:22px 0;}
+  img{max-width:100%; display:block;}
+
+  /* ---------- Cover (V2 style: full-bleed selfie + floating city cards) ---------- */
+  .cover{position:relative; width:210mm; height:297mm; margin:0 auto 16px; overflow:hidden; background:#10171c; box-shadow:0 2px 16px rgba(0,0,0,.35);}
+  .cover .bg{position:absolute; inset:0; background-size:100% auto; background-position:center top; background-repeat:no-repeat;}
+  .cover .sc{position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.08) 20%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 60%, rgba(0,0,0,.5) 82%, rgba(0,0,0,.92) 100%); pointer-events:none;}
+  .cover .citystrip{position:absolute; top:13mm; right:8mm; width:37mm; display:flex; flex-direction:column; gap:4mm; z-index:3;}
+  .cover .citystrip figure{margin:0; background:#fff; border:2px solid rgba(255,255,255,.95); border-radius:5px; overflow:hidden; box-shadow:0 8px 22px rgba(0,0,0,.55);}
+  .cover .citystrip img{width:100%; height:auto; display:block;}
+  .cover .citystrip figcaption{font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; text-transform:uppercase; text-align:center; color:#17293c; padding:5px 0 6px;}
+  .cover .in{position:absolute; inset:0; padding:15mm 16mm 14mm; display:flex; flex-direction:column; color:#fff;}
+  .cover .mast{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,.92); text-align:center; text-shadow:0 1px 10px rgba(0,0,0,.6);}
+  .cover .mast span{display:block; font-size:8px; letter-spacing:.28em; color:rgba(255,255,255,.72); margin-top:5px;}
+  .cover .hair{width:60px; height:2px; background:#fff; opacity:.85; margin:10px auto 0;}
+  .cover .ttl{font-family:'Fraunces',serif; font-weight:700; font-size:92px; line-height:.9; letter-spacing:-.02em; margin-top:auto; text-shadow:0 2px 26px rgba(0,0,0,.55);}
+  .cover .ded{font-family:'Spectral',serif; font-style:italic; font-size:18px; line-height:1.4; max-width:62%; margin-top:10px; color:rgba(255,255,255,.95); text-shadow:0 1px 10px rgba(0,0,0,.7);}
+  .cover .teasers{display:flex; gap:9px; flex-wrap:wrap; margin-top:16px;}
+  .cover .teasers span{font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:#fff; border:1px solid rgba(255,255,255,.5); border-radius:100px; padding:5px 11px;}
+  .cover .cr{font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.82); margin-top:14px;}
+
+  /* ---------- Reading column ---------- */
+  .wrap{width:210mm; margin:0 auto; background:#fff; box-shadow:0 2px 20px rgba(0,0,0,.3);}
+  .opener{padding:24mm 24mm 4mm;}
+  .opener .k{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--blue);}
+  .opener h1{font-family:'Fraunces',serif; font-weight:600; font-size:30px; line-height:1.15; margin:12px 0 0;}
+  .opener p{color:var(--muted); font-style:italic; font-size:19px; margin:14px 0 0;}
+  .opener .byline{font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin:7px 0 2px;}
+  .rule{width:54px; height:3px; background:var(--gold); margin:34px 0;}
+
+  .chapter{padding:7mm 24mm 4mm;}
+  .chapter .num{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--blue); margin-bottom:10px;}
+  .chapter h2{font-family:'Fraunces',serif; font-weight:700; font-size:clamp(34px,6vw,46px); line-height:1.02; letter-spacing:-.015em; margin:0;}
+  .chapter .sub{font-family:'Spectral',serif; font-style:italic; font-size:21px; line-height:1.4; color:var(--muted); margin:16px 0 4px;}
+  .chapter p{margin:20px 0;}
+  .chapter p.lead:first-letter{font-family:'Fraunces',serif; font-weight:700; font-size:62px; line-height:.72; float:left; margin:8px 10px 0 0; color:var(--blue);}
+  em.q{font-style:italic;}
+
+  figure.photo{margin:22px 0; text-align:center;}
+  figure.photo.bleed{margin-left:0; margin-right:0;}
+  figure.photo img{width:auto; max-width:100%; max-height:138mm; margin:0 auto; border-radius:3px; box-shadow:0 8px 26px rgba(60,45,25,.2);}
+  figure.photo figcaption{font-family:'Spectral',serif; font-style:italic; font-size:13px; line-height:1.5; color:var(--muted); margin:9px auto 0; max-width:150mm; padding-left:14px; border-left:2px solid var(--gold); text-align:left;}
+  .duo{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:34px 0;}
+  .duo figure{margin:0;} .duo img{width:100%; height:100%; object-fit:cover; border-radius:3px; box-shadow:0 8px 24px rgba(60,45,25,.2);}
+  .duo figcaption{grid-column:1 / -1; font-family:'Spectral',serif; font-style:italic; font-size:14px; color:var(--muted); padding-left:14px; border-left:2px solid var(--gold);}
+
+  .pq{font-family:'Fraunces',serif; font-style:italic; font-weight:500; font-size:clamp(23px,4.6vw,30px); line-height:1.32; color:var(--blue); text-align:center; margin:40px 0; padding:22px 10px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+
+  .side{background:var(--paper2); border-left:4px solid var(--gold); border-radius:3px; padding:20px 22px; margin:36px 0;}
+  .side .h{font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--blue); margin-bottom:10px;}
+  .side p{margin:0 0 10px; font-size:16.5px; line-height:1.65;}
+  .side p:last-child{margin-bottom:0;}
+  .side ul{margin:0; padding-left:18px;} .side li{margin:6px 0; font-size:16.5px; line-height:1.6;}
+
+  .endnote{margin:60px 0 40px; text-align:center; font-family:'Spectral',serif; font-style:italic; color:var(--muted); font-size:16px;}
+  .endnote .sig{font-family:'Fraunces',serif; font-style:italic; font-size:19px; color:var(--ink); margin-top:8px;}
+
+  footer{border-top:1px solid var(--line); margin-top:30px; padding:26px 0 70px; text-align:center; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted);}
+
+  @media (max-width:800px){
+    body{padding:0; font-size:16px;}
+    .cover,.wrap,.opener,.chapter{width:auto; max-width:100%; margin:0 0 10px; box-shadow:none;}
+    .opener,.chapter{padding:26px 20px;}
+    figure.photo.bleed{margin-left:-20px; margin-right:-20px;}
+    figure.photo.bleed figcaption{margin:9px 20px 0;}
+    .chapter p.lead:first-letter{font-size:52px;}
+    .duo{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Print / Save-as-PDF: clean A4 pages ---------- */
+  @page{ size:A4; margin:16mm; }
+  @media print{
+    body{background:#fff; padding:0;}
+    .cover{width:auto; height:262mm; margin:0; box-shadow:none; page-break-after:always;}
+    .cover .bg{background-size:cover; background-position:72% top;}
+    .wrap{width:auto; box-shadow:none;}
+    .opener,.chapter{width:auto; margin:0; box-shadow:none; padding:0 0 4mm;}
+    figure.photo, .side, .pq, .duo{break-inside:avoid;}
+    .chapter .num, .chapter h2, .chapter .sub{break-after:avoid;}
+    /* Pack pages: cap photo height so a photo + text share a page instead of
+       each portrait orphaning onto its own near-empty sheet. */
+    figure.photo{margin:5mm 0;}
+    figure.photo img{max-height:92mm;}
+    figure.photo.bleed img{max-height:104mm;}
+    .duo{margin:5mm 0; gap:9px;}
+    .duo img{max-height:85mm;}
+    figure.photo figcaption, .duo figcaption{font-size:10.5px; line-height:1.42; margin-top:5px;}
+    .chapter p{margin:0 0 10px;}
+    footer{padding:10mm 0 0; border:0;}
+  }
+</style>
+</head>
 <body>
 
-<div class="mag-page mag-cover" style="background:linear-gradient(180deg, rgba(0,0,0,0.74) 0%, rgba(0,0,0,0.36) 24%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.2) 100%), url('../images/day-06/12-st-vitus-family.jpg') center 42%/cover; justify-content:flex-start;">
-  <div class="cv-issue"><span>Issue 04 · 2026</span><span class="cv-flag">🇨🇿 CZECH REPUBLIC</span></div>
-  <div class="cv-brand" style="margin-bottom:14px;">Munasinghe-Fernando Travel Magazine</div>
-  <div>
-    <div class="cv-title">CZECH<br>REPUBLIC</div>
-    <div class="cv-sub">Prague · A castle, a bridge, a velvet revolution</div>
-    <div class="cv-tags">
-      <span class="cv-tag">★ 1,200 Years of History</span>
-      <span class="cv-tag">🏰 Prague Castle</span>
-      <span class="cv-tag">🌉 Charles Bridge</span>
-    </div>
+<!-- ===================== COVER ===================== -->
+<header class="cover">
+  <div class="bg" style="background-image:url('../images/day-06/14-family-castle-viewpoint.jpg'); background-size:cover; background-position:center 45%;"></div>
+  <div class="sc"></div>
+  <div class="citystrip">
+    <figure><img src="../images/day-05/03-charles-bridge.jpg" alt="The Charles Bridge over the Vltava"><figcaption>Charles Bridge</figcaption></figure>
+    <figure><img src="../images/day-06/38-st-vitus-courtyard.jpg" alt="St Vitus Cathedral over the castle courtyard"><figcaption>St Vitus</figcaption></figure>
+    <figure><img src="../images/day-05/12-astronomical-clock-family.jpg" alt="The Prague Astronomical Clock"><figcaption>The Orloj</figcaption></figure>
   </div>
-  <div class="cv-meta">Munasinghe-Fernando Family · Prague · 13–14 Jul 2026</div>
-</div>
+  <div class="in">
+    <div class="mast">Munasinghe-Fernando Travel<span>No. 04 of 14 · Europe 2026 · The Memoir Edition</span></div>
+    <div class="hair"></div>
+    <div class="ttl">Czechia</div>
+    <div class="ded">One city, two days, and a thousand years the war somehow forgot to destroy.</div>
+    <div class="teasers"><span>The castle &amp; St Vitus</span><span>The bridge before the crowds</span><span>A clock that walks</span></div>
+    <div class="cr">The Munasinghe-Fernando Family · Prague · 13–14 July 2026</div>
+  </div>
+</header>
 
-<div class="mag-page mag-welcome">
-  <div class="wl-num">No. 04 · A Letter from the Road</div>
-  <div class="wl-title">Who we are,<br>why we travel.</div>
-  <div class="wl-divider"></div>
-  <div style="text-align:center; margin:2mm 0 10mm;"><img src="../images/day-06/14-family-castle-viewpoint.jpg" alt="The Munasinghe-Fernando family of five at a castle viewpoint above Prague, the red roofs and green church domes of Malá Strana spread out below them." style="max-height:112mm; max-width:78%; object-fit:contain; border-radius:4px;"></div>
-  <div class="wl-body">
-    <p>We're the Munasinghe-Fernandos — two parents and three children who love to see the world <em>together</em>. My husband and I share one dream: to travel to as many countries as we possibly can, as a family.</p>
-    <p>It's never easy — booking flights, trains and rooms for five is its own small adventure, and we know we can't reach everywhere. But from every country we do get to, we try our very best to see as much as we can. This magazine is where we keep all of it.</p>
-    <p style="font-style:italic; color:#6e1313; text-align:right; margin-top:14px;">— The Munasinghe-Fernandos, 2026</p>
-  </div>
-</div>
+<div class="wrap">
 
-<div class="mag-page mag-welcome">
-  <div class="wl-num">No. 04 · Welcome</div>
-  <div class="wl-title">Welcome to<br>the City of a<br>Hundred Spires.</div>
-  <div class="wl-divider"></div>
-  <div class="wl-body">
-    <p>Prague survived. That's the line we kept coming back to. It came through the Hussite wars, the Thirty Years' War, Nazi occupation and communist rule — and, most remarkably, escaped the wave of Allied bombing that flattened so much of Central Europe in 1945. To walk its cobblestones is to walk through one of the few great European capitals that still looks much as it did three centuries ago.</p>
-    <p>For two summer days we lived inside that surviving city, in an apartment overlooking the Old Town, close to the Vltava that splits Prague in two. Our best hours came early: cobblestone walks before breakfast, when the Charles Bridge stood almost empty and the river mist made ghosts of its stone saints.</p>
-    <p>A word on where we are: this is <b>Bohemia</b>. Prague has been the seat of the Bohemian kings for over a thousand years, ruled from the castle on the hill. Its golden age came under <b>Charles IV</b> in the 1300s — King of Bohemia and Holy Roman Emperor — who made the city his imperial capital and raised the very things we had come to see: the Charles Bridge, St. Vitus Cathedral, and the university that still bears his name. Bohemia is the land; Prague is, and always has been, its crown.</p>
-  </div>
-  <div class="toc-title">In this issue</div>
-  <ul class="toc-list">
-    <li><span class="toc-name">A Letter from the Road</span><span class="toc-page">02</span></li>
-    <li><span class="toc-name">Welcome — The City of Spires</span><span class="toc-page">03</span></li>
-    <li><span class="toc-name">The Journey So Far</span><span class="toc-page">04</span></li>
-    <li><span class="toc-name">The Road to Prague</span><span class="toc-page">05</span></li>
-    <li><span class="toc-name">Prague Castle & St. Vitus</span><span class="toc-page">06</span></li>
-    <li><span class="toc-name">Around the Castle</span><span class="toc-page">11</span></li>
-    <li><span class="toc-name">Charles Bridge & the Saints</span><span class="toc-page">17</span></li>
-    <li><span class="toc-name">The Astronomical Clock</span><span class="toc-page">19</span></li>
-    <li><span class="toc-name">The Old Town & Its Churches</span><span class="toc-page">21</span></li>
-    <li><span class="toc-name">Josefov — the Jewish Quarter</span><span class="toc-page">28</span></li>
-    <li><span class="toc-name">Down from the Castle</span><span class="toc-page">31</span></li>
-    <li><span class="toc-name">Reflections + What's Next</span><span class="toc-page">32</span></li>
-  </ul>
-</div>
+  <!-- ===================== OPENER ===================== -->
+  <section class="opener">
+    <div class="k">Czechia · 13–14 July 2026</div>
+    <div class="byline">A family memoir — told in Inoshi's words</div>
+    <h1>One city, two days,<br>and a thousand years the war spared.</h1>
+    <p>We crossed our first European land border at dawn — out of a hilltop Austrian castle and north into Bohemia — and spent two days inside the single city the whole country seems to fold into: Prague, the city of a hundred spires. A castle above the river, a bridge full of saints, a clock six centuries old. Our best hours came early, before the crowds woke. This is what actually happened.</p>
+    <div class="rule"></div>
+  </section>
 
-<div class="mag-page mag-journey">
-  <div class="jr-eyebrow">The Journey · Chapter Three</div>
-  <div class="jr-headline">Across a border,<br>into Bohemia.</div>
-  <div class="jr-body">
-    <p>The story so far: we began at the Great Wall and the Forbidden City in Beijing, flew west into a jet-lagged first day in Munich, then climbed into the Austrian Alps — Salzburg's Sound of Music garden, the lake at Hallstatt, and two nights in a hilltop castle.</p>
-    <p>Now we cross our first European land border. Czechia is our third chapter, and it is really one shining city: Prague, the City of a Hundred Spires — Charles Bridge at dawn, a castle above the river, and an astronomical clock that has kept time since 1410. This page rides at the front of every issue: where we've been, where we are, and where we're headed next.</p>
-  </div>
-  <div class="jr-railtitle">The Route · 14 Countries · 33 Cities · 30 Nights</div>
-  <div class="jr-rail">
-    <div class="jr-stop done"><span class="jr-n">01</span>China ✓</div>
-    <div class="jr-stop done"><span class="jr-n">02</span>Austria ✓</div>
-    <div class="jr-stop here"><span class="jr-n">03</span>Czechia ★</div>
-    <div class="jr-stop"><span class="jr-n">04</span>Hungary</div>
-    <div class="jr-stop"><span class="jr-n">05</span>Italy</div>
-    <div class="jr-stop"><span class="jr-n">06</span>Switzerland</div>
-    <div class="jr-stop"><span class="jr-n">07</span>Germany</div>
-    <div class="jr-stop"><span class="jr-n">08</span>France</div>
-    <div class="jr-stop"><span class="jr-n">09</span>Netherlands</div>
-    <div class="jr-stop"><span class="jr-n">10</span>Belgium</div>
-    <div class="jr-stop"><span class="jr-n">11</span>Denmark</div>
-    <div class="jr-stop"><span class="jr-n">12</span>Sweden</div>
-    <div class="jr-stop"><span class="jr-n">13</span>Vatican</div>
-    <div class="jr-stop"><span class="jr-n">⌂</span>Home</div>
-  </div>
-  <div class="jr-today">Today — Czechia: a dawn drive out of Austria, and two days in Prague ahead.</div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · The Journey —</div>
-</div>
+  <!-- ===================== CH 1 — PRAGUE CASTLE ===================== -->
+  <section class="chapter">
+    <div class="num">Chapter One · Prague Castle</div>
+    <h2>The hill that outlived everything</h2>
+    <div class="sub">A thousand years of Bohemian kings — and, to our surprise, it was the cathedrals, not the fortress, that took the words out of us.</div>
 
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">ON THE ROAD · AUSTRIA → PRAGUE · DAY 3</div>
-  <div class="sp-headline">Dawn, one last breakfast,<br>and north to Prague.</div>
-  <div class="sp-deck">Day three began the way the last two had — everyone awake at five, and that magnificent castle breakfast — before we said goodbye to Burg Altpernstein and pointed the car north.</div>
-  <div class="sp-meta"><span>Mon 13 Jul 2026</span><span>Burg Altpernstein → Prague</span><span>Farewell to the castle</span></div>
-  <div class="sp-cols">
-    <p>By the third morning it had become a rhythm: awake at five, all of us, the children as bright as the adults, and down to that extraordinary breakfast — cheese and ham, fruit and cereal, more than we could carry — one last time. Then we hauled the bags back down the castle's lift-less stairs, loaded the car, and said our goodbyes to Burg Altpernstein, the hilltop fortress that had been our first European home.</p>
-    <div class="sp-quote">Three mornings in a castle, three five-o'clock starts, and one breakfast we will miss for the rest of the trip.</div>
-    <p>And then we drove north. Austria fell away behind us — its lakes, its salt villages, its Sound of Music hills — and the road pointed toward Bohemia and Prague: the city of a hundred spires, two days of cobblestones and Gothic towers waiting at the end of it. The children settled happily into their beloved car seats. The next chapter had begun.</p>
-  </div>
-  <div class="sp-photo" style="margin-top:6mm;">
-    <img src="../images/day-06/16-family-portrait-mountain.jpg" alt="The Munasinghe-Fernando family together at Burg Altpernstein, just before leaving Austria for Prague" style="max-height:122mm;">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">The five of us at Burg Altpernstein, squeezed in for one photograph before we packed the car — Avinesh, Inoshi, Avisha, Aviann and Avin, the road to Prague ahead of us.</div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · The Road —</div>
-</div>
+    <p class="lead">The third morning had become a rhythm by now: awake at five, all of us, the children as bright as the adults, down to that enormous castle breakfast one last time, and then the bags hauled back down the lift-less stairs and into the car. We said goodbye to Burg Altpernstein, pointed north, and watched Austria fall away behind us — lakes and salt villages and <em>Sound of Music</em> hills — until the road tipped us over a border and into Bohemia.</p>
 
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">PRAGUE CASTLE · DAY 3 · IN OUR OWN WORDS</div>
-  <div class="sp-headline">The castle, the cathedral,<br>and a little train.</div>
-  <div style="margin:2px 0 12px; border-left:3px solid #a02828; padding:4px 0 4px 10px;">
-    <div style="font-family:'Fraunces', serif; font-weight:700; font-size:16px; color:#1a1a1a; margin-bottom:4px;">First, a thousand years on the hill</div>
-    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify;">Founded around the year 880 by the <strong>Přemyslid</strong> dukes, Prague Castle has grown for more than a millennium into the largest coherent castle complex in the world — some seventy thousand square metres of palaces, churches and courtyards, still the official seat of the Czech head of state. At its heart soars <strong>St. Vitus Cathedral</strong>, begun in 1344 on the order of <strong>Charles IV</strong> and not completed until 1929, a span of nearly six hundred years written into a single building.</div>
-    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify; margin-top:6px;">For a thousand years this hill has been the crown of Bohemia — and on our first Prague afternoon, tired legs and all, we set out to climb it.</div>
-  </div>
-  <div class="sp-deck">When small legs gave out, a mini tourist train carried us round the sights, narrating the city in English as it went — and it was the cathedrals, not the fortress, that stopped us in our tracks.</div>
-  <div class="sp-meta"><span>Mon 13 Jul 2026</span><span>Pražský hrad + St. Vitus</span><span>Afternoon · foot + mini-train</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/38-st-vitus-courtyard.jpg" alt="St. Vitus Cathedral rising over the Third Courtyard of Prague Castle, the family crossing the square below" style="max-height:92mm;">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">St. Vitus Cathedral from the Third Courtyard — six hundred years of Gothic stonework soaring over the square, its golden mosaic of the Last Judgement catching the afternoon sun. Our three are down in the crowd crossing below: Aviann in her white dress and hat, the boys wheeling the stroller.</div>
-  <div class="sp-cols">
-    <p>We made for the hill and Prague Castle — at seventy thousand square metres, the largest castle complex on earth, a thousand years of Bohemian kings gathered around the soaring spires of St. Vitus Cathedral. We walked its courtyards and stepped inside its great churches — the cathedral, and St. George's Basilica beside it — the children's necks tipped all the way back to take in the stained glass. And here was the surprise: for all the castle's fame, it was the cathedrals that took our breath away. Grander than the fortress that holds them, they felt like the true crown of the hill.</p>
-    <div class="sp-quote">When small legs give out, a little train and an English guide can save the whole afternoon.</div>
-    <p>Three small pairs of legs can only climb so far, so when the tiredness set in we found the perfect rescue: a little tourist train on rubber wheels that carried us gently round the sights and explained everything in English as it went. And a tip we worked out the hard way — in Prague you buy your tram ticket on board the tram itself, and, to our delight, the children travelled free.</p>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · The Castle —</div>
-</div>
+    <p>Prague gave us tired legs before it gave us anything else. We reached the city in the afternoon and climbed straight for the hill and the castle — and three small pairs of legs can only climb so far. The rescue, when the tiredness set in, was a little tourist train on rubber wheels that carried us gently round the sights and explained everything in English as it went. (A thing we worked out the hard way, and pass on: in Prague you buy your tram ticket on board the tram itself — and, to our delight, the children travelled free.)</p>
 
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">PRAGUE CASTLE · INSIDE ST. VITUS CATHEDRAL</div>
-  <div class="sp-headline">The ceiling simply<br>leaves you.</div>
-  <div class="sp-deck">Step inside St. Vitus and you lose the top of it — pillars soaring up into a ribbed stone vault, and away at the far end the rose window glowing above the silver organ.</div>
-  <div class="sp-meta"><span>Mon 13 Jul 2026</span><span>Katedrála sv. Víta · interior</span><span>Begun 1344 · finished 1929</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/39-st-vitus-nave-vault.jpg" alt="The soaring nave of St. Vitus Cathedral, its ribbed stone vault rising overhead toward the distant rose window and organ" style="max-height:132mm;">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">The full length of the nave — clustered pillars rising into a ribbed vault that runs away into shadow, and at the west end, small with distance, the great rose window above the bright pipes of the organ. This, we decided, was the most beautiful room in all of Prague.</div>
-  <div class="sp-cols">
-    <p>We had marvelled at the castle and loved St. George's, but it was inside St. Vitus that the children went quiet. The cathedral is vast — pillars rising higher than seems possible into a ribbed stone ceiling lost in shadow — and the eye is pulled all the way down the nave to a rose window more than ten metres wide, throwing pools of red and blue and violet light onto the gleaming ranks of the organ below.</p>
-    <div class="sp-quote">The pillars simply rise into the dark, and the whole west wall turns to coloured light.</div>
-    <p>Standing in the middle of it, you can feel every one of the six centuries it took to raise — and understand why the children forgot, for a moment, to fidget. From the square below we had no way to picture this; inside, it simply swallowed us whole.</p>
-  </div>
-  <div style="margin-top:16px; border-top:2px solid #6e1313; padding-top:12px;">
-    <div style="font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.28em; text-transform:uppercase; color:#6e1313; margin-bottom:9px;">Stone, not paint · two ways to roof a cathedral</div>
-    <div style="font-family:'Fraunces',serif; font-size:11px; line-height:1.55; color:#3d3024;">What soars overhead here is a <strong>Gothic rib vault</strong> — the ceiling held up, and made beautiful, by stone itself. The pointed arch and the ribbed vault were a French invention of the twelfth century that let cathedrals climb far higher and lighter than Rome had ever built; the masons of Prague, led by the young <strong>Peter Parler</strong>, turned that engineering into stone lace. It is the north's great answer to a very different southern art — for a ceiling that is a <em>painting</em>, a whole sky opened overhead in fresco, no one has ever matched Italy.</div>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · Inside St. Vitus —</div>
-</div>
-
-<div class="mag-page mag-collage">
-  <div class="cl-eyebrow">PRAGUE CASTLE · ST. VITUS · THE MUCHA WINDOW</div>
-  <div class="cl-headline">Painted light,<br>by <em>Alfons Mucha.</em></div>
-  <div class="cl-deck">Among the cathedral's stone-old windows hangs one that glows differently — the only stained glass the great master of Art Nouveau ever made.</div>
-  <div class="cl-grid" style="grid-template-rows:1fr;">
-    <figure class="cl-fig col-7">
-      <img src="../images/day-06/34-st-vitus-mucha-window.jpg" alt="The Alfons Mucha stained-glass window in St. Vitus Cathedral, glowing in reds, blues and golds" style="object-position:center 28%;">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-      <figcaption class="cl-over"><div class="cl-t">The Mucha Window, <em>1931</em></div><div class="cl-d">At the centre kneel the boy St. Wenceslas and his grandmother, St. Ludmila, in a blaze of Mucha's colour.</div></figcaption>
+    <figure class="photo bleed">
+      <img src="../images/day-06/38-st-vitus-courtyard.jpg" alt="St Vitus Cathedral rising over the Third Courtyard of Prague Castle, the family crossing the square below">
+      <figcaption>St Vitus from the Third Courtyard — six hundred years of Gothic stonework over the square, its golden Last-Judgement mosaic catching the afternoon. Somewhere in the crowd crossing below are our three: Aviann in her white hat, the boys wheeling the empty stroller.</figcaption>
     </figure>
-    <div class="cl-side col-5">
-      <div class="cl-k">What you are looking at</div>
-      <div class="cl-lead">Not glass, but <em>a painting</em> in glass.</div>
-      <p>Where the rest of St. Vitus is filled with medieval leaded glass, <b>Alfons Mucha</b> — Bohemia's most famous painter, the master whose posters defined Art Nouveau in Paris — <em>painted</em> his design straight onto the glass in 1931, in the same glowing, sinuous line.</p>
-      <p>Around the two central saints swirl scenes from the lives of <b>Cyril and Methodius</b>, the brothers who brought Christianity — and the first written alphabet — to the Slavs. It remains the only stained-glass window Mucha ever made.</p>
-      <div class="cl-accent green">
-        <div class="cl-k">Who paid for it</div>
-        <div class="cl-b">Funded by the <b>Slavia</b> insurance bank — whose emblem, the goddess Slavia, hides in the glass near the figure of Christ.</div>
-      </div>
-    </div>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · The Mucha Window —</div>
-</div>
 
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">INSIDE ST. VITUS · THE SILVER TOMB</div>
-  <div class="sp-headline">Nearly two tonnes<br>of silver.</div>
-  <div class="sp-deck">In a side of the cathedral stands the astonishing silver tomb of St. John of Nepomuk — angels, cherubs and a great draped canopy, all worked in solid silver.</div>
-  <div class="sp-meta"><span>Mon 13 Jul 2026</span><span>Tomb of St. John of Nepomuk</span><span>c. 1736 · ~1.7 tonnes of silver</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/40-st-vitus-nepomuk-silver-tomb.jpg" alt="The baroque silver tomb of St. John of Nepomuk in St. Vitus Cathedral, silver angels holding a draped canopy above the saint's kneeling figure">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">The silver tomb of St. John of Nepomuk — nearly two tonnes of silver worked into angels, cherubs and a great red-and-silver canopy, the saint kneeling on top with the martyr's cross in his arms.</div>
-  <div class="sp-cols">
-    <p>Here rests St. John of Nepomuk — a priest who, in 1393, was thrown from the Charles Bridge into the Vltava on the order of the king. In the cathedral he lies under a canopy of solid silver, borne up by silver angels, the whole monument said to weigh close to two tonnes.</p>
-    <p>It glittered even in the dim light of the aisle. After the honest old stone of St. George's and the soaring grey of the nave, this baroque explosion of silver felt like something out of a treasure-story. We did not yet know we would meet him again the very next morning — out on the bridge itself, at the spot where the children would rub his brass cross for luck.</p>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · The Silver Saint —</div>
-</div>
+    <p>Prague Castle is, on paper, the largest coherent castle complex in the world — some seventy thousand square metres of palaces and churches founded around the year 880 and still, a thousand years on, the seat of the Czech head of state. We walked its courtyards and stepped into its great churches. And here was the surprise none of us saw coming: for all the fortress's fame, it was the <em>churches</em> that stopped us — grander than the walls that hold them, the true crown of the hill.</p>
 
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">INSIDE ST. VITUS · IN BRONZE</div>
-  <div class="sp-headline">Dark bronze<br>under pale stone.</div>
-  <div class="sp-deck">Beneath one of the cathedral's great pointed arches we came upon a bronze group — three robed figures caught mid-gesture, glinting darkly against all that pale Gothic stone.</div>
-  <div class="sp-meta"><span>Mon 13 Jul 2026</span><span>Katedrála sv. Víta · the north aisle</span><span>A bronze memorial group</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/41-st-vitus-bronze-memorial.jpg" alt="A bronze memorial group of three robed figures standing on a plinth beneath a great Gothic arch in St. Vitus Cathedral">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">A bronze memorial group set out in the aisle beneath a soaring Gothic arch — three robed figures, a bishop among them, cast in dark metal that caught what little light reached the stone floor.</div>
-  <div class="sp-cols">
-    <p>For all its silver and coloured glass, some of the most striking things in St. Vitus are the quiet dark ones. This bronze group stands out in the open beneath one of the great arches — three figures worked in metal that had gone almost black with age, so that against the honey-pale stone they seemed to glow from the inside.</p>
-    <p>The children circled it slowly, the way you do when you are not quite sure whether the figures might move. A last, still moment in the cathedral before we stepped back out, blinking, into the courtyard and the afternoon sun.</p>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · In Bronze —</div>
-</div>
+    <p>First, next door to the cathedral, the older and plainer of the two: St George's Basilica. Through a baroque door and back a thousand years — one long Romanesque room of honey-coloured stone, round arches marching two by two toward the raised choir. After the grandeur to come, it was the quiet that the children liked.</p>
 
-<div class="mag-page mag-photoessay">
-  <div class="pe-eyebrow">PRAGUE CASTLE · COURTYARDS & CORNERS</div>
-  <div class="pe-headline">Around the castle,<br>between the <em>churches.</em></div>
-  <div style="display:grid; grid-template-columns:0.85fr 1fr; gap:8mm; align-items:center; margin:2mm 0 6mm;">
-    <figure style="margin:0;"><img src="../images/day-06/24-st-george-nave.jpg" alt="The Romanesque nave of St George's Basilica" style="width:auto; max-width:100%; max-height:104mm; height:auto; display:block; margin:0 auto; border-radius:2px;"><figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:8.4px; line-height:1.34; color:#5a4a3a; margin-top:4px;">From the door, one long room of honey-coloured stone — round-headed <strong>arches</strong> marching two by two toward the raised choir.</figcaption></figure>
-    <div>
-      <span class="ll-kick">Prague Castle · Bazilika sv. Jiří</span>
-      <div class="ll-intro">Through the baroque door and back a thousand years — a bare Romanesque hall of honey-coloured stone, still holding its medieval saints and one very old queen.</div>
-    </div>
-  </div>
-  <div style="display:flex; gap:6mm; justify-content:center; align-items:flex-start;">
-    <figure style="margin:0; width:54mm;"><img src="../images/day-06/25-st-george-apse-frescoes.jpg" alt="Medieval frescoes in the apse" style="width:100%; height:auto; display:block; border-radius:2px;"><figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:8.4px; line-height:1.34; color:#5a4a3a; margin-top:4px;">In the half-dome, medieval <strong>frescoes</strong> of the Heavenly Jerusalem, ghostly but unmistakable after seven centuries.</figcaption></figure>
-    <figure style="margin:0; width:54mm;"><img src="../images/day-06/23-st-ludmila-tomb.jpg" alt="The tomb of St Ludmila" style="width:100%; height:auto; display:block; border-radius:2px;"><figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:8.4px; line-height:1.34; color:#5a4a3a; margin-top:4px;">Under glass lies <strong>St. Ludmila</strong> — the first female saint of the Czech lands, murdered, the story goes, in 921 with her own veil.</figcaption></figure>
-    <figure style="margin:0; width:54mm;"><img src="../images/day-06/26-st-george-adoration-relief.jpg" alt="A carved Adoration of the Magi" style="width:100%; height:auto; display:block; border-radius:2px;"><figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:8.4px; line-height:1.34; color:#5a4a3a; margin-top:4px;">On a stone altar, a carved <strong>Adoration of the Magi</strong> — three kings kneeling with their gifts, worked in dark old wood.</figcaption></figure>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · Inside St. George's —</div>
-</div>
-
-<div class="mag-page mag-photoessay">
-  <div class="pe-eyebrow">PRAGUE CASTLE · THE OLD ROYAL PALACE</div>
-  <div class="pe-headline">The books that<br>ran a <em>kingdom.</em></div>
-  <div class="mag-lead">
-    <figure class="ll-feat">
-      <img src="../images/day-06/27-royal-palace-land-rolls.jpg" loading="eager">
-      <figcaption class="ed-cap-ov">The <strong>Desky zemské</strong>, the Land Rolls — the leather books that held the kingdom's laws and lawsuits, each spine painted with a number and a bright little emblem so a clerk could find it again.</figcaption>
+    <figure class="photo">
+      <img src="../images/day-06/24-st-george-nave.jpg" alt="The Romanesque nave of St George's Basilica, honey-coloured stone and round arches">
+      <figcaption>St George's Basilica — one long room of honey-coloured stone, its round-headed arches far older in feeling than the soaring cathedral beside it.</figcaption>
     </figure>
-    <div class="ll-col">
-      <span class="ll-kick">Prague Castle · Starý královský palác</span>
-      <div class="ll-intro">Beyond the churches lie the government rooms — the seat of the Bohemian kings, where a whole realm's memory was kept in painted books and painted shields.</div>
+
+    <div class="duo">
+      <figure><img src="../images/day-06/25-st-george-apse-frescoes.jpg" alt="Faded medieval frescoes of the Heavenly Jerusalem in the apse half-dome"></figure>
+      <figure><img src="../images/day-06/26-st-george-adoration-relief.jpg" alt="A carved Adoration of the Magi on a stone altar"></figure>
+      <figcaption>In the half-dome, frescoes of the Heavenly Jerusalem, ghostly but unmistakable after seven centuries; on a side altar, a dark carved Adoration of the Magi, three kings kneeling with their gifts.</figcaption>
     </div>
-  </div>
-  <div class="ed-two">
-    <figure><img src="../images/day-06/28-royal-palace-heraldic-wall.jpg" loading="lazy"><figcaption class="ed-cap-ov">Above an old iron-studded door, rows of painted <strong>coats of arms</strong> climb toward the crowned Bohemian lion — every official who ever served here, signed into the plaster.</figcaption></figure>
-    <figure><img src="../images/day-06/29-royal-palace-heraldic-ceiling.jpg" loading="lazy"><figcaption class="ed-cap-ov">Overhead the whole vault is <strong>heraldry</strong> — hundreds of little shields crowding every rib, a riot of red, gold and silver.</figcaption></figure>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · The Old Royal Palace —</div>
-</div>
 
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">THE OLD ROYAL PALACE · THE THRONE</div>
-  <div class="sp-headline">The seat of the<br>Bohemian kings.</div>
-  <div class="sp-deck">At the heart of the palace, beneath a canopy of dark velvet and the silver lion of Bohemia, stands the golden throne itself.</div>
-  <div class="sp-meta"><span>Mon 13 Jul 2026</span><span>Throne Room · Old Royal Palace</span><span>Crown, sceptre & orb of St. Wenceslas</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/32-throne-room.jpg" alt="The golden Gothic throne of the Bohemian kings beneath a velvet canopy and the Bohemian lion">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">The throne room — a slender golden Gothic throne beneath a tall velvet canopy, the silver double-tailed lion of Bohemia on the wall above, and red benches for the court ranged along the light-filled windows.</div>
-  <div class="sp-cols">
-    <p>And so we came to the throne itself: a slim golden chair under a great fall of dark velvet, guarded by the silver double-tailed lion that is the badge of Bohemia. Along the walls ran benches of deep red for the courtiers, and tall leaded windows filled the room with a cool northern light. For a thousand years, this hill had been the seat of kings — and here, at last, was the seat itself.</p>
-    <div class="sp-quote">A slim gold chair, a fall of velvet, and the silver lion of Bohemia — the seat of a thousand years of kings.</div>
-    <p>No king has been crowned here for more than a century, and the room stands quiet now behind its ropes. But in the cool northern light it is easy to people it again — the courtiers on their red benches, the silver lion looking down, and a new king climbing the few low steps to that slim gold chair.</p>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · The Throne —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">THE OLD ROYAL PALACE · THE CROWN JEWELS</div>
-  <div class="sp-headline">A crown behind<br>seven locks.</div>
-  <div class="sp-deck">Beside the throne, behind glass, blazed the coronation regalia of Bohemia — the Crown of St. Wenceslas, the golden sceptre and orb, gold and rubies and old blue sapphires on velvet.</div>
-  <div class="sp-meta"><span>Mon 13 Jul 2026</span><span>Korunovační klenoty</span><span>Crown of St. Wenceslas · 1347</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/33-crown-jewels.jpg" alt="The Bohemian coronation regalia — the jewelled Crown of St. Wenceslas, sceptre and orb — glittering behind glass">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">The Bohemian crown jewels behind glass — the golden Crown of St. Wenceslas thick with rubies, sapphires and pearls, the sceptre and orb beside it. The real set is shown so rarely that most of us only ever meet a faithful copy.</div>
-  <div class="sp-cols">
-    <p>The Crown of St. Wenceslas was made in 1347 for Charles IV, and set with some of the largest sapphires and rubies in Europe. But you cannot simply walk in and see the true jewels: they are locked in a chamber inside St. Vitus behind a door with <b>seven locks</b>, whose seven keys are held by seven different people — the President, the Prime Minister, the Archbishop of Prague among them — and shown to the public only once in a great while.</p>
-    <div class="sp-quote">Seven locks, seven keys, seven keepers — and the crown behind them shown perhaps once in a decade.</div>
-    <p>So the children pressed their noses to the glass and drank in every ruby, imagining the coronations this hilltop has seen. Whether we were looking at the crown itself or its careful twin, it was the closest any of us will likely come to a real king's crown.</p>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · The Crown Jewels —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">CHARLES BRIDGE · DAY 4</div>
-  <div class="sp-headline">The bridge before<br>the crowds wake.</div>
-  <div class="sp-deck">We left early and walked out onto the Charles Bridge to find Prague's most famous crossing almost entirely to ourselves.</div>
-  <div class="sp-meta"><span>Tue 14 Jul 2026</span><span>Charles Bridge · Old Town → Malá Strana</span><span>On the bridge by 8:15am</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-05/06-charles-bridge-family.jpg" alt="The family at the Old Town Bridge Tower, Charles Bridge" style="max-height:104mm;">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">The five of us at the Old Town Bridge Tower — Charles Bridge almost to ourselves, just after eight in the morning.</div>
-  <div class="sp-cols">
-    <p>The secret to the Charles Bridge is simple: go early. By mid-morning its 515 metres run shoulder to shoulder, but get there before the day fills up and it becomes a different place. We left the apartment at eight and were out on the bridge by a quarter past — and to our delight, at that hour it was almost empty. The most famous crossing in Prague, near-deserted: just us, the thirty baroque saints who have guarded it since the 1700s, and the quiet morning. The bridge has stood since 1357; for a little while, it was almost entirely ours.</p>
-    <div class="sp-quote">The city of a hundred spires — best seen from an almost-empty bridge, early, before the crowds wake.</div>
-    <p>We walked its full 515 metres across to the Malá Strana side and back, past the thirty baroque saints, the mist lifting off the Vltava, the towers at each end catching the first real light of the day. By the time we turned back toward the Old Town, the first tour groups were only just arriving. We had beaten them by an hour — and it had been worth every minute of the early start.</p>
-  </div>
-  <div style="margin-top:12px; border-left:3px solid #a02828; padding:4px 0 4px 10px;">
-    <div style="font-family:'Fraunces', serif; font-weight:700; font-size:16px; color:#1a1a1a; margin-bottom:4px;">The city war forgot to destroy</div>
-    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify;">Ask why Prague dazzles where Warsaw, Dresden and Berlin were reduced to rubble, and the answer is a rare stroke of historical luck. While much of Central Europe was flattened by bombing and street fighting, Prague escaped both systematic bombing and a final scorched-earth battle. The result is astonishing: a thousand years of architecture standing shoulder to shoulder — Romanesque cellars beneath Gothic spires, Baroque palaces beside swirling Art Nouveau façades. Walk from the Old Town Square to the Castle and you cross centuries in an afternoon.</div>
-    <div style="font-family:'Fraunces', serif; font-size:10.5px; line-height:1.6; color:#3d3024; text-align:justify; margin-top:6px;">The city owes its grandeur to <strong>Charles IV</strong>, the Bohemian king who became Holy Roman Emperor and made Prague his imperial capital in the 1300s. He founded Charles University, the first in Central Europe, and laid the stone bridge that still bears his name — small wonder poets dubbed it the "City of a Hundred Spires." That continuity held even through 1989, when the peaceful Velvet Revolution toppled communism without shattering a windowpane.</div>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · Charles Bridge —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">CHARLES BRIDGE · THE SAINTS & THE LEGEND</div>
-  <div class="sp-headline">Touch the brass,<br>and you'll come back.</div>
-  <div class="sp-deck">Thirty baroque saints line the Charles Bridge. At one of them we stopped, laid our hands on the worn brass, and made the old wish: that one day we would return to Prague.</div>
-  <div class="sp-meta"><span>Tue 14 Jul 2026</span><span>Statue of St. John of Nepomuk</span><span>Rub the plaque · make a wish</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-05/10-st-john-nepomuk-cross.jpg" alt="The brass plaque and cross marking where St. John of Nepomuk was thrown from Charles Bridge, ringed with love padlocks">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">The brass cross and relief on the parapet — the spot where St. John of Nepomuk was thrown into the Vltava in 1393. Rub the plaque, they say, and you will one day return to Prague. The grille above has quietly filled with lovers' padlocks.</div>
-  <div class="sp-cols">
-    <p>Thirty statues of saints stand along the Charles Bridge, added over the centuries until the crossing became a kind of open-air gallery in stone. The most famous of them marks a dark story: St. John of Nepomuk, a priest thrown from this very bridge into the river in 1393 on the order of the king. The day before, up in St. Vitus, we had stood beside his glittering silver tomb; now here was the very place the story began — a brass plaque and a small cross set into the parapet, polished bright by centuries of hands.</p>
-    <div class="sp-quote">Lay your hand on the brass, make your wish, and one day the city will call you home again.</div>
-    <p>So of course we did. Five hands on the warm brass, one shared wish — that Prague would not be a place we saw only once. Above the plaque the iron grille has slowly filled with padlocks, each one a couple's promise clicked shut and the key thrown into the Vltava. A bridge of saints and secrets, and we left a little of our own hope on it.</p>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · The Bridge Saints —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">OLD TOWN SQUARE · THE ORLOJ</div>
-  <div class="sp-headline">A clock that has kept<br>time since 1410.</div>
-  <div class="sp-deck">From the bridge we walked back into the Old Town Square for the thing everyone comes to see — the Astronomical Clock, striking on the hour.</div>
-  <div class="sp-meta"><span>Tue 14 Jul 2026</span><span>Old Town Hall, Staroměstské náměstí</span><span>The Prague Orloj</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-05/12-astronomical-clock-family.jpg" alt="The Munasinghe-Fernando family in front of the Prague Astronomical Clock on the Old Town Hall tower">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">All five of us beneath the Orloj on the Old Town Hall tower — the oldest astronomical clock in the world still in operation, ticking since 1410.</div>
-  <div class="sp-cols">
-    <p>The Astronomical Clock — the Orloj — has hung on the wall of the Old Town Hall since 1410, which makes it the oldest clock of its kind still working anywhere in the world. It is really three instruments in one: a clock that tells the hour, a golden calendar dial below that turns once a year through the signs of the zodiac, and an astronomical dial that maps the sun and moon against the heavens. Six hundred years of gears, and it still keeps perfect time.</p>
-    <div class="sp-quote">Six hundred years of clockwork — and every hour, on the hour, the Apostles still walk.</div>
-    <p>We joined the crowd on the hour and watched the show. As the bells sounded, two small windows opened and the twelve Apostles paraded across in turn, while beside the dial a skeleton — Death himself — tolled his bell. It is a one-minute performance that has drawn crowds into this square for six centuries; and when it ended, everyone looked up at the same moment, and smiled.</p>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · The Astronomical Clock —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">OLD TOWN SQUARE · ALL FIVE OF US</div>
-  <div class="sp-headline">Five faces,<br>six hundred years.</div>
-  <div class="sp-deck">Selfie stick up, the whole tower behind us — the one photo with all five Munasinghe-Fernandos in it and the Orloj over our shoulders.</div>
-  <div class="sp-meta"><span>Tue 14 Jul 2026</span><span>Staroměstská radnice · the Orloj</span><span>Old Town Hall Tower · 1364</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/42-clock-family-selfie.jpg" alt="A selfie of all five Munasinghe-Fernandos below the Old Town Hall tower, the Astronomical Clock glowing over their shoulders">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">All five of us, squeezed into one frame under the Old Town Hall Tower — Avinesh on the stick, Inoshi in the middle, Avisha in his shades, Aviann laughing under her hat, and Avin just tall enough to sneak into the bottom corner. Behind us, the Orloj and its golden dials.</div>
-  <div class="sp-cols">
-    <p>Getting all five of us into a single photograph is its own small expedition — someone is always blinking, or wandering off, or hiding. But here, in the crush of the square with the great tower rising behind, we managed it: the whole family in one frame, the six-hundred-year-old clock glowing just over our shoulders.</p>
-    <p>The tower itself is older than the clock on it — begun in 1364 — and you can climb it for the view over the whole Old Town. We didn't, this time; the show on the hour and a photograph together were enough. Five faces and six centuries, all in one small square.</p>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · All Five of Us —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">OLD TOWN · PRAGUE · IN OUR OWN WORDS</div>
-  <div class="sp-headline">A city that looks<br>like King's Landing.</div>
-  <div class="sp-deck">Prague's Old Town is majestic in a way a single photograph can't hold — a real-life King's Landing of spires and red roofs, where even the shop windows wear the city's grandeur.</div>
-  <div class="sp-meta"><span>Tue 14 Jul 2026</span><span>Staroměstské náměstí, Old Town</span><span>The most beautiful square we saw</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/13-mala-strana-red-roofs.jpg" alt="A panorama over the red roofs of Malá Strana, the green dome of St. Nicholas rising among them" style="max-height:112mm;">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">The view we kept trying to photograph: a sea of red roofs falling away below the castle, the green dome of St. Nicholas rising among them. This, more than anything, is the "King's Landing" of Prague.</div>
-  <div class="sp-cols">
-    <p>There is a word for Prague's Old Town, and the word is majestic. Standing in the great square, ringed by the twin Gothic spires of the Týn Church, the pastel palaces and the old town hall, I kept thinking of King's Landing — the capital city from Game of Thrones — because that is exactly what Prague looks like: a fantasy capital made real, all towers and turrets and red roofs climbing the hills. Except Prague is not a film set. It has stood, and been loved, and survived, for a thousand years.</p>
-    <div class="sp-quote">Prague looks like King's Landing made real — and no single photograph is ever big enough to hold it.</div>
-    <p>We tried, and failed, to capture it. Every photograph came back smaller than the thing itself; the majesty of Prague simply does not fit inside a phone screen. You have to stand in the middle of it, turn slowly, and let the spires close in around you.</p>
-    <p>And there is another kind of grandeur here too. The Old Town streets are lined with every luxury brand you could name — the shopfronts as polished and stately as the palaces above them, the shopping every bit as majestic as the architecture. A city that looks like a crown, with shops to match.</p>
-  </div>
-  <div style="margin-top:16px; border-top:2px solid #6e1313; padding-top:12px;">
-    <div style="font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.28em; text-transform:uppercase; color:#6e1313; margin-bottom:12px;">Prague · the carved city that survived</div>
-    <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:12px;">
-      <div><div style="font-family:'JetBrains Mono',monospace; font-size:15px; font-weight:700; color:#a02828;">c.870</div><div style="font-family:'Fraunces',serif; font-size:10.5px; line-height:1.4; color:#3d3024; margin-top:4px;">Prague Castle is founded above the river; a thousand years of building begins.</div></div>
-      <div><div style="font-family:'JetBrains Mono',monospace; font-size:15px; font-weight:700; color:#a02828;">1346–78</div><div style="font-family:'Fraunces',serif; font-size:10.5px; line-height:1.4; color:#3d3024; margin-top:4px;">Charles IV makes Prague a Gothic imperial capital — the cathedral, the bridge, the New Town.</div></div>
-      <div><div style="font-family:'JetBrains Mono',monospace; font-size:15px; font-weight:700; color:#a02828;">1500s</div><div style="font-family:'Fraunces',serif; font-size:10.5px; line-height:1.4; color:#3d3024; margin-top:4px;">Renaissance <em>sgraffito</em> — patterns scratched into wall plaster — sheathes the facades.</div></div>
-      <div><div style="font-family:'JetBrains Mono',monospace; font-size:15px; font-weight:700; color:#a02828;">1945</div><div style="font-family:'Fraunces',serif; font-size:10.5px; line-height:1.4; color:#3d3024; margin-top:4px;">The old core comes through the war largely intact — spared the mass bombing that flattened Dresden and Warsaw.</div></div>
-      <div><div style="font-family:'JetBrains Mono',monospace; font-size:15px; font-weight:700; color:#a02828;">1992</div><div style="font-family:'Fraunces',serif; font-size:10.5px; line-height:1.4; color:#3d3024; margin-top:4px;">The layered Old Town — Gothic, Renaissance, Baroque — becomes a UNESCO World Heritage Site.</div></div>
-    </div>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · Old Town —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">OLD TOWN · THE STREETS</div>
-  <div class="sp-headline">Down cobbled lanes,<br>hand in hand.</div>
-  <div class="sp-deck">Away from the great square, the Old Town narrows into cobbled lanes — polished shopfronts on one side, a pair of green church domes always waiting at the far end.</div>
-  <div class="sp-meta"><span>Tue 14 Jul 2026</span><span>Old Town lanes, Prague</span><span>Cobbles, shops & spires</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/17-old-town-street-walk.jpg" alt="Inoshi and Aviann walking hand in hand down a cobbled Old Town lane, the boys following with the stroller">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">Walking the lanes near the Klementinum — Inoshi and Aviann in front, the boys bringing the stroller behind, and the green towers of St. Salvator rising at the end of the street.</div>
-  <div class="sp-cols">
-    <p>The grandeur of Prague does not stop at the square. Its side streets are lined with names you would find on the smartest avenue in any capital — and, tucked among them, the Czech shops we came to love, like Manufaktura with its window full of beer cosmetics and honey soap. Every lane is cobbled, every corner turns up another spire, and at the end of almost every street a pair of green baroque domes seems to be waiting for you.</p>
-    <p>We walked slowly, in no hurry, the children's hats bobbing along the shopfronts. There are cities you march through and cities you drift through. Prague, we decided, is one to drift.</p>
-  </div>
-  <div style="margin-top:16px; border-top:2px solid #6e1313; padding-top:12px;">
-    <div style="font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.28em; text-transform:uppercase; color:#6e1313; margin-bottom:9px;">Why the lanes run so narrow</div>
-    <div style="font-family:'Fraunces',serif; font-size:11px; line-height:1.55; color:#3d3024;">Not for the heat — that trick belongs to far hotter cities. Prague's Old Town was simply never <strong>planned</strong>: it grew lane by lane through the Middle Ages, following old market paths and the tight property lines of a <strong>walled town</strong> where every foot of land was dear. Stranger still, the ground itself was <strong>raised</strong> — in the thirteenth century, to escape the Vltava's floods, the townsfolk lifted the streets several metres, burying the Romanesque houses whose ground floors survive today as cellars. The medieval city, quite literally, lies beneath your feet.</div>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · The Streets —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">OLD TOWN SQUARE · THE TÝN CHURCH</div>
-  <div class="sp-headline">Two towers of<br>black and gold.</div>
-  <div class="sp-deck">Above the whole Old Town Square rise the twin Gothic towers of the Church of Our Lady before Týn — the picture-book spires that put the "hundred" in the city of a hundred spires.</div>
-  <div class="sp-meta"><span>Tue 14 Jul 2026</span><span>Kostel Matky Boží před Týnem</span><span>Doors open at 10am</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/20-tyn-church.jpg" alt="The twin Gothic spires of the Church of Our Lady before Týn above the Old Town Square">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">The Týn Church over the rooftops of the square — two towers eighty metres high, each crowned with a cluster of golden-tipped turrets. Between them, a golden image of the Virgin catches the morning light.</div>
-  <div class="sp-cols">
-    <p>You cannot photograph the Old Town Square without them: the two great towers of the Týn Church, black and bristling with turrets, rising eighty metres over the pastel houses. For centuries this was the main church of the Old Town, and once the great church of the Hussites — the Czech reformers who shook all of Europe a hundred years before Luther.</p>
-    <p>The doors, we learned, open only at ten in the morning, so we admired it the way most of Prague always has — from below, in the square, heads tilted all the way back. Some buildings you go inside; this one you simply stand beneath.</p>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · The Týn Church —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">OLD TOWN SQUARE · THE TÝN TOWERS</div>
-  <div class="sp-headline">Closer, and<br>stranger still.</div>
-  <div class="sp-deck">A closer look at the Týn towers — not one point each but a whole crown of little turrets, spiky and dark against the sky, like something from a fairy tale.</div>
-  <div class="sp-meta"><span>Tue 14 Jul 2026</span><span>Kostel Matky Boží před Týnem</span><span>Towers · 15th century</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/21-tyn-church-closeup.jpg" alt="A close view of the twin Gothic towers of the Týn Church, each ringed with a crown of smaller pinnacles">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">The Týn towers close up — each great spire ringed by four smaller ones, gold-tipped and bristling, so that the whole thing looks less built than grown, sharp and dark over the pastel square.</div>
-  <div class="sp-cols">
-    <p>From across the square the towers are handsome; up close they are almost alarming — each main spire surrounded by a ring of four smaller pinnacles, every one tipped with gold, the whole cluster black and spiky against the summer cloud. The children decided at once that this was where a wizard would live.</p>
-    <p>They are not quite a matching pair, either: look closely and one tower is a touch broader than the other — the "Adam and Eve" towers, the Czechs call them. Six hundred years old, and still the strangest, most storybook thing on the whole Old Town Square.</p>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · The Týn Towers —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">OLD TOWN SQUARE · ST. NICHOLAS CHURCH</div>
-  <div class="sp-headline">White walls, and<br>a chandelier of glass.</div>
-  <div class="sp-deck">This one we did step inside — St. Nicholas on the Old Town Square, white and gold and hushed, with a crown of Bohemian crystal hanging in the middle of it all.</div>
-  <div class="sp-meta"><span>Tue 14 Jul 2026</span><span>Kostel svatého Mikuláše</span><span>Baroque · glass chandelier</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/18-st-nicholas-interior.jpg" alt="The baroque interior of St. Nicholas Church, Old Town Square, with its great crystal chandelier">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">Inside St. Nicholas — white baroque plasterwork and ceiling frescoes, and the great crown-shaped chandelier of Bohemian glass hanging at the very centre. Aviann stood quite still, looking up.</div>
-  <div class="sp-cols">
-    <p>After the Týn towers we crossed the square to the other great church on it — St. Nicholas, all curves and white stone on the outside, and inside a cool, bright hush that stopped even the children in their tracks. The whole ceiling is one sweep of frescoes and gilded plaster, and hanging from the middle of it is an enormous crown-shaped chandelier of Bohemian crystal, glittering in the dim light.</p>
-    <p>We stood a while at the back, out of the heat of the square, and let the quiet settle. Two churches face each other across the Old Town Square, and between the Gothic spires and this baroque crown of glass, it is hard to say which stops you more.</p>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · St. Nicholas —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">OLD TOWN SQUARE · ST. NICHOLAS, OUTSIDE</div>
-  <div class="sp-headline">Two green domes<br>over the square.</div>
-  <div class="sp-deck">From the square, St. Nicholas is all baroque swagger — a white stone front between two towers capped with green copper domes, bright against a hot blue sky.</div>
-  <div class="sp-meta"><span>Tue 14 Jul 2026</span><span>Kostel svatého Mikuláše</span><span>Baroque · finished 1735</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/19-st-nicholas-exterior.jpg" alt="The white baroque west front of St. Nicholas Church on the Old Town Square, its two towers capped with green copper domes">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">The west front of St. Nicholas on the Old Town Square — curving white baroque stone, statues along the parapet, and two towers topped with domes of weathered green copper, sharp against the July sky.</div>
-  <div class="sp-cols">
-    <p>Before we ever went in, we stood and looked up at the outside: a great sweep of white stone, all curves and columns and saints ranged along the roofline, finished in 1735 by the same family of architects who gave Prague half its baroque churches. The two green copper domes have gone the soft blue-green of old coins.</p>
-    <p>It is the kind of front that was built to stop you in the street — and it still does. We crossed the square toward it out of the heat, the children counting the statues along the top, before we ever thought to try the door.</p>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · St. Nicholas, Outside —</div>
-</div>
-
-<div class="mag-page mag-collage">
-  <div class="cl-eyebrow">PRAGUE · KLÁROV · A MEMORIAL BY THE RIVER</div>
-  <div class="cl-headline">The lion that<br><em>flew for Britain.</em></div>
-  <div class="cl-deck">Near the river stands a bronze lion with an airman's wings — Prague's thank-you to the men who slipped out of an occupied country to fight in the skies over England.</div>
-  <div class="cl-grid" style="grid-template-rows:1fr;">
-    <figure class="cl-fig col-7">
-      <img src="../images/day-06/36-winged-lion-memorial.jpg" alt="The bronze Winged Lion Memorial in Prague, honouring Czechoslovak RAF airmen, with a wreath at its base" style="object-position:center 38%;">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-      <figcaption class="cl-over"><div class="cl-t">The Winged Lion</div><div class="cl-d">A two-metre bronze on a granite base shaped, from above, like the roundel of the Czechoslovak Air Force.</div></figcaption>
+    <figure class="photo">
+      <img src="../images/day-06/23-st-ludmila-tomb.jpg" alt="The tomb of St Ludmila under glass in St George's Basilica">
+      <figcaption>Under glass lies St Ludmila — the first female saint of the Czech lands, murdered, the story goes, in 921 with her own veil. Grandmother, as it happens, to the boy-saint we would meet an hour later in a blaze of coloured glass.</figcaption>
     </figure>
-    <div class="cl-side col-5">
-      <div class="cl-k">So few, so much owed</div>
-      <div class="cl-lead">They fought for a country that later <em>jailed them.</em></div>
-      <p>Some <b>2,500 Czechoslovak airmen</b> fled the German occupation and made their way to Britain, where they flew with the RAF through the Battle of Britain and the long war that followed.</p>
-      <p>Many paid twice for their courage — honoured in London, then imprisoned at home after 1948 for having served in the West. This memorial, funded by Prague's British community, was unveiled in 2014; its sculptor, <b>Colin Spofforth</b>, is an Englishman.</p>
-      <div class="cl-accent">
-        <div class="cl-quote">"So much owed by so many <em>to so few.</em>"</div>
-        <div class="cl-sig">— Winston Churchill, 1940</div>
-      </div>
-    </div>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · The Winged Lion —</div>
-</div>
 
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">JEWISH QUARTER · JOSEFOV · IN OUR OWN WORDS</div>
-  <div class="sp-headline">I couldn't get<br>enough of this city.</div>
-  <div class="sp-deck">By half past three I was back in the room — and it wasn't enough. Prague had got under my skin, so we went out again, all of us, and walked the old Jewish Quarter.</div>
-  <div class="sp-meta"><span>Tue 14 Jul 2026</span><span>Josefov, Prague</span><span>3:30pm · a second walk</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/08-old-town-street.jpg" alt="A Josefov street of sand-gold façades">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">A Josefov street of yellow, sand-gold walls — the colours that, for a moment, carried me all the way back to Saudi Arabia.</div>
-  <div class="sp-cols">
-    <p>It was half past three when we got back to the room, and I found I was not ready to be finished with Prague. The city had got under my skin. So we went out again, the whole family, and walked — into Josefov, the old Jewish Quarter, one of the oldest and best-preserved in Europe, its synagogues and ancient cemetery folded into a handful of narrow, remarkable streets.</p>
-    <div class="sp-quote">A wall the colour of sand, in the middle of Europe — and suddenly I was a child in Saudi Arabia again.</div>
-    <p>And there, unexpectedly, the city handed me a memory. Walking those streets I was somewhere else entirely — back in Saudi Arabia, where I spent part of my childhood. It was the colours that did it: the yellow walls, the warm sand tones of the stone glowing in the afternoon light, so like the country of my younger years.</p>
-    <p>That is the strange gift of travel — how a wall the colour of sand, on a street you have never walked before, can hand you back your own childhood. We had come out for a little more of Prague. Prague gave me Saudi Arabia instead.</p>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · Josefov —</div>
-</div>
+    <p>And then St Vitus, and the day quietly ran out of words. The cathedral was begun in 1344 on the order of Charles IV and not finished until 1929 — nearly six hundred years written into one building — and stepping inside, you lose the top of it. Pillars rise higher than seems possible into a ribbed stone vault that runs off into shadow, and the eye is pulled the whole length of the nave to a rose window more than ten metres wide, throwing pools of red and blue and violet onto the gleaming ranks of the organ below. This, we all decided, was the most beautiful room in Prague. It is where the children went quiet.</p>
 
-<div class="mag-page mag-collage">
-  <div class="cl-eyebrow">JOSEFOV · THE OLD JEWISH CEMETERY</div>
-  <div class="cl-headline">Twelve thousand stones,<br><em>and no more room.</em></div>
-  <div class="cl-deck">Folded between the synagogues lies the oldest Jewish cemetery in Europe — where, forbidden to spread outward, the dead were laid in layer upon layer for three hundred years.</div>
-  <div style="display:grid; grid-template-columns:1.15fr 1fr; gap:9mm; align-items:center; margin:4mm 0 7mm;">
-    <figure style="margin:0;"><img src="../images/day-06/35-old-jewish-cemetery.jpg" alt="The crowded old tombstones of the Old Jewish Cemetery in Prague" style="width:auto; max-width:100%; max-height:96mm; height:auto; display:block; margin:0 auto; border-radius:2px;"><figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:8.6px; line-height:1.35; color:#5a4a3a; margin-top:5px;"><b>Starý židovský hřbitov</b> — tombstones crowding shoulder to shoulder, leaning into one another after six centuries under the trees.</figcaption></figure>
-    <div>
-      <div class="cl-k">Layer upon layer</div>
-      <div class="cl-lead" style="margin-bottom:8px;">Buried <em>twelve deep.</em></div>
-      <p style="font-family:'Fraunces',serif; font-size:11px; line-height:1.6; color:#3d3024; margin:0;">In use from about <b>1439 until 1787</b> and never allowed to grow, it holds perhaps 12,000 visible stones — but as many as <b>100,000</b> people are thought to lie below, buried up to twelve deep as each generation raised the earth and set the old headstones higher.</p>
-    </div>
-  </div>
-  <div style="display:grid; grid-template-columns:1fr 1.15fr; gap:9mm; align-items:center;">
-    <div>
-      <p style="font-family:'Fraunces',serif; font-size:11px; line-height:1.6; color:#3d3024; margin:0;">Among them rests <b>Rabbi Judah Loew</b>, the sixteenth-century scholar bound forever to the legend of the <em>Golem of Prague</em> — the clay man said to have been shaped from the banks of the Vltava to guard the ghetto.</p>
-    </div>
-    <figure style="margin:0;"><img src="../images/day-06/37-old-jewish-cemetery-gate.jpg" alt="The wrought-iron gate to the Old Jewish Cemetery" style="width:auto; max-width:100%; max-height:96mm; height:auto; display:block; margin:0 auto; border-radius:2px;"><figcaption style="font-family:'Fraunces',serif; font-style:italic; font-size:8.6px; line-height:1.35; color:#5a4a3a; margin-top:5px;"><b>The gate</b> — an iron entrance off Josefov's lanes, the old stones waiting just beyond.</figcaption></figure>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · The Old Jewish Cemetery —</div>
-</div>
-
-<div class="mag-page mag-spread">
-  <div class="sp-eyebrow">JOSEFOV · THE JEWISH TOWN HALL</div>
-  <div class="sp-headline">A clock that runs<br>the wrong way.</div>
-  <div class="sp-deck">In the heart of Josefov stands a pink baroque town hall with two clocks — and the lower one, with its Hebrew figures, turns its hands backwards.</div>
-  <div class="sp-meta"><span>Tue 14 Jul 2026</span><span>Židovská radnice · Jewish Town Hall</span><span>The anticlockwise Hebrew clock</span></div>
-  <div class="sp-photo">
-    <img src="../images/day-06/15-jewish-town-hall.jpg" alt="The pink baroque Jewish Town Hall in Josefov with its Hebrew clock">
-    <div class="ph-info">Photo · Munasinghe-Fernando</div>
-  </div>
-  <div class="sp-caption">The Jewish Town Hall in Josefov — rose-pink walls and a little black tower. High up sits an ordinary Roman-numeral clock; below it, the famous Hebrew clock whose golden hands run anticlockwise.</div>
-  <div class="sp-cols">
-    <p>Of everything in the old Jewish Quarter, the thing the children will not forget is the clock. The Jewish Town Hall — a pretty rose-coloured building beside the oldest working synagogue in Europe — carries two of them. The upper clock has Roman numerals and behaves itself. The lower clock is marked with Hebrew letters, and because Hebrew is read from right to left, its hands turn the other way: anticlockwise, backwards, the wrong way round.</p>
-    <p>We stood and watched it for a while, quietly delighted. A whole quarter that has survived everything history could throw at it, keeping its own time, in its own direction, exactly as it always has.</p>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · The Jewish Town Hall —</div>
-</div>
-
-<div class="mag-page mag-collage">
-  <div class="cl-eyebrow">PRAGUE CASTLE · THE WALK DOWN</div>
-  <div class="cl-headline">Down from the castle,<br><em>we grazed.</em></div>
-  <div class="cl-deck">We never sat down to a Czech feast — we ate on our feet on the walk down from the castle, one trdelník and one spiral potato passed hand to hand until nothing was left but sticky fingers and sugar round three small mouths.</div>
-  <div class="cl-grid" style="grid-template-rows:repeat(4,minmax(0,1fr));">
-    <figure class="cl-fig col-7 row-4">
-      <img src="../images/czech/food-family-selfie.jpg" alt="The family together with ice creams and a tornado potato on the castle hill" style="object-position:center 48%;">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-      <figcaption class="cl-over"><div class="cl-t">All five, <em>mid-bite</em></div><div class="cl-d">No table, no cutlery — just the whole family leaning in on the castle hill, ice creams and a potato tower between us.</div></figcaption>
+    <figure class="photo bleed">
+      <img src="../images/day-06/39-st-vitus-nave-vault.jpg" alt="The soaring nave of St Vitus Cathedral, its ribbed stone vault rising toward the distant rose window and organ">
+      <figcaption>The full length of the nave — clustered pillars climbing into a vault lost in shadow, and far at the west end, small with distance, the great rose window above the bright pipes of the organ.</figcaption>
     </figure>
-    <figure class="cl-fig col-5 row-2">
-      <img src="../images/czech/tornado-potato-kids.jpg" alt="The children on the castle steps between two tall spiral potatoes" style="object-position:center 42%;">
-      <div class="ph-info">Photo · Munasinghe-Fernando</div>
-      <figcaption class="cl-over"><div class="cl-t">Towers of potato</div><div class="cl-d">A fried spiral taller than the four-year-old, a whole potato on each stick.</div></figcaption>
+
+    <div class="pq">The pillars rise into the dark, the whole west wall turns to coloured light — and three restless children forget, for a minute, to fidget.</div>
+
+    <div class="side">
+      <div class="h">Stone, not paint</div>
+      <p>What soars overhead here is a <strong>Gothic rib vault</strong> — the ceiling held up, and made beautiful, by stone itself. The pointed arch and the ribbed vault were a twelfth-century French invention that let cathedrals climb far higher and lighter than Rome had ever built; the masons of Prague, led by the young <strong>Peter Parler</strong>, turned that engineering into stone lace. It is the north's great answer to a very different southern art — for a ceiling that is a <em>painting</em>, a whole sky opened overhead in fresco, no one has ever matched Italy.</p>
+    </div>
+
+    <figure class="photo">
+      <img src="../images/day-06/34-st-vitus-mucha-window.jpg" alt="The Alfons Mucha stained-glass window in St Vitus, glowing in reds, blues and golds">
+      <figcaption>The Mucha window, 1931 — the only stained glass the great Art Nouveau master ever made. He <em>painted</em> his design straight onto it. At its heart the boy St Wenceslas kneels with his grandmother St Ludmila; around them, the brothers Cyril and Methodius, who gave the Slavs their first alphabet.</figcaption>
     </figure>
-    <div class="cl-note col-5 row-2">
-      <div class="cl-k">What we were really eating</div>
-      <div class="cl-b">The <b>trdelník</b> is sold everywhere as "old Bohemian," but it really belongs to the Transylvanian <em>kürtőskalács</em> — dough wound round a spit (a <em>trdlo</em>), grilled and rolled in cinnamon sugar; the ice-cream filling is a modern tourist twist. The <b>spiral potato</b> travelled further still — Korean street food, now on Prague's lanes.</div>
+
+    <figure class="photo">
+      <img src="../images/day-06/40-st-vitus-nepomuk-silver-tomb.jpg" alt="The baroque silver tomb of St John of Nepomuk, silver angels holding a draped canopy">
+      <figcaption>The silver tomb of St John of Nepomuk — close to two tonnes of worked silver, angels bearing up a great red-and-silver canopy. A priest thrown from the Charles Bridge into the Vltava in 1393; we did not yet know we would stand on the very spot the next morning.</figcaption>
+    </figure>
+
+    <figure class="photo">
+      <img src="../images/day-06/41-st-vitus-bronze-memorial.jpg" alt="A bronze memorial group of three robed figures beneath a Gothic arch in St Vitus">
+      <figcaption>A bronze memorial group out in the aisle, gone almost black with age against the honey-pale stone. The children circled it slowly — the way you do when you are not quite sure the figures won't move.</figcaption>
+    </figure>
+
+    <p>Beyond the churches lie the government rooms — the Old Royal Palace, where for centuries a whole kingdom's memory was kept in painted books and painted shields. We found the Land Rolls, the <em>Desky zemské</em>: leather volumes that held Bohemia's laws and lawsuits, each spine marked with a number and a bright little badge so a clerk could pull the right one down again.</p>
+
+    <figure class="photo">
+      <img src="../images/day-06/27-royal-palace-land-rolls.jpg" alt="The Desky zemské, the painted leather Land Rolls of the Bohemian kingdom">
+      <figcaption>The Land Rolls — a kingdom's laws and lawsuits bound in leather, each spine painted with its own number and emblem. A medieval filing system, and a beautiful one.</figcaption>
+    </figure>
+
+    <div class="duo">
+      <figure><img src="../images/day-06/28-royal-palace-heraldic-wall.jpg" alt="Painted coats of arms climbing a wall toward the crowned Bohemian lion"></figure>
+      <figure><img src="../images/day-06/29-royal-palace-heraldic-ceiling.jpg" alt="A vaulted ceiling crowded with hundreds of painted heraldic shields"></figure>
+      <figcaption>Above an old iron-studded door, painted coats of arms climb toward the crowned Bohemian lion — every official who served here, signed into the plaster; overhead, the whole vault is heraldry, a riot of red and gold and silver.</figcaption>
     </div>
-  </div>
-  <div class="folio">— Issue 04 · CZECH REPUBLIC · Down from the castle —</div>
+
+    <p>And so to the throne itself: a slim gold Gothic chair under a fall of dark velvet, guarded by the silver double-tailed lion that is the badge of Bohemia, with benches of deep red for a court that has not sat for more than a century. For a thousand years this hill had been the seat of kings — and here, at last, was the seat.</p>
+
+    <figure class="photo">
+      <img src="../images/day-06/32-throne-room.jpg" alt="The golden Gothic throne of the Bohemian kings beneath a velvet canopy and the silver Bohemian lion">
+      <figcaption>The throne room — a slender gold chair beneath a tall velvet canopy, the silver double-tailed lion of Bohemia on the wall above, and the court's red benches ranged along the cool, light-filled windows.</figcaption>
+    </figure>
+
+    <figure class="photo">
+      <img src="../images/day-06/33-crown-jewels.jpg" alt="The Bohemian coronation regalia — the jewelled Crown of St Wenceslas, sceptre and orb — behind glass">
+      <figcaption>The coronation regalia behind glass — the Crown of St Wenceslas, made for Charles IV in 1347 and thick with rubies and old blue sapphires. The true crown lives behind a door with <em>seven</em> locks, whose seven keys are held by seven different people, and is shown perhaps once in a decade; three small noses pressed to the glass all the same.</figcaption>
+    </figure>
+
+    <p>By the time we came down off the hill, everyone was hungry — and we never did sit down to a proper Czech feast. We grazed instead, on our feet, on the long walk down: one <em>trdelník</em> and one spiral potato passed hand to hand until there was nothing left but sticky fingers and sugar round three small mouths.</p>
+
+    <figure class="photo">
+      <img src="../images/czech/food-family-selfie.jpg" alt="The family leaning in together with ice creams and a spiral potato on the walk down from the castle">
+      <figcaption>No table, no cutlery — just the five of us leaning into one frame on the castle hill, ice-creams and a potato-tower between us. Dinner, Prague-style.</figcaption>
+    </figure>
+
+    <figure class="photo">
+      <img src="../images/czech/tornado-potato-kids.jpg" alt="The children between two tall spiral potatoes on sticks">
+      <figcaption>A fried spiral potato taller than the four-year-old — a whole potato wound onto each stick, and three sets of hands that could not wait.</figcaption>
+    </figure>
+
+    <div class="side">
+      <div class="h">What we were really eating</div>
+      <p>The <strong>trdelník</strong> is sold on every Prague corner as "old Bohemian," but it really belongs to the Transylvanian <em>kürtőskalács</em> — a ribbon of dough wound round a spit, grilled and rolled in cinnamon sugar; the ice-cream stuffed inside is a modern tourist flourish. The <strong>spiral potato</strong> travelled further still: Korean street food, now somehow a fixture of the Prague lanes. We ate both, happily, and asked no questions until later.</p>
+    </div>
+  </section>
+
+  <!-- ===================== CH 2 — CHARLES BRIDGE ===================== -->
+  <section class="chapter">
+    <div class="num">Chapter Two · Charles Bridge</div>
+    <h2>The bridge before the crowds wake</h2>
+    <div class="sub">Prague's most famous crossing, 515 metres of baroque saints — and for one early hour, very nearly ours alone.</div>
+
+    <p class="lead">The secret to the Charles Bridge is simple: go early. By mid-morning its 515 metres run shoulder to shoulder; but leave before the day fills up and it becomes a different place entirely. We left the apartment at eight and were out on the bridge by a quarter past — and to our delight, at that hour it was almost empty.</p>
+
+    <p>The most famous crossing in Prague, near-deserted: just us, the thirty baroque saints who have guarded the parapets since the 1700s, the mist lifting off the Vltava, and the towers at each end catching the first real light. The bridge has stood since 1357. For a little while that morning, it was almost entirely ours. By the time we turned back toward the Old Town, the first tour groups were only arriving — we had beaten them by an hour, and it was worth every minute of the early start.</p>
+
+    <figure class="photo">
+      <img src="../images/day-05/06-charles-bridge-family.jpg" alt="The family at the Old Town Bridge Tower on the Charles Bridge, early morning">
+      <figcaption>The five of us at the Old Town Bridge Tower, a little past eight — the most famous crossing in Prague very nearly to ourselves.</figcaption>
+    </figure>
+
+    <figure class="photo bleed">
+      <img src="../images/day-05/03-charles-bridge.jpg" alt="The Charles Bridge and its towers over the Vltava in the morning">
+      <figcaption>Five hundred and fifteen metres of saints and morning mist, the Old Town tower at the far end. An hour later this same stone would be packed; for now, it belonged to the early risers.</figcaption>
+    </figure>
+
+    <p>Halfway across we stopped at the one saint everyone comes to find. The day before, up in St Vitus, we had stood beside the glittering silver tomb of St John of Nepomuk; now here was the very spot the story began — a brass cross and a worn relief set into the parapet, marking where he was thrown into the river in 1393. Rub the brass, they say, and one day Prague will call you home again.</p>
+
+    <figure class="photo">
+      <img src="../images/day-05/10-st-john-nepomuk-cross.jpg" alt="The brass cross and plaque on Charles Bridge marking where St John of Nepomuk was thrown into the Vltava, ringed with love padlocks">
+      <figcaption>The brass cross on the parapet — the spot where Nepomuk went into the Vltava in 1393, polished bright by centuries of hands. Five of ours went onto the warm brass, and one shared wish: that Prague would not be a place we saw only once. The grille above has filled, lock by lock, with other people's promises.</figcaption>
+    </figure>
+
+    <div class="side">
+      <div class="h">The city war forgot</div>
+      <p>Ask why Prague dazzles where Dresden, Warsaw and Berlin were reduced to rubble, and the answer is a rare stroke of historical luck: it escaped both the systematic bombing and the final scorched-earth battle that flattened so much of Central Europe. The result is a thousand years of architecture standing shoulder to shoulder — Romanesque cellars beneath Gothic spires, baroque palaces beside swirling Art Nouveau fronts. Much of that grandeur is owed to <strong>Charles IV</strong>, the Bohemian king and Holy Roman Emperor who made Prague his imperial capital in the 1300s, founded Central Europe's first university, and laid the stone bridge that still bears his name. The continuity held even through 1989, when the peaceful Velvet Revolution ended communism without shattering a windowpane.</p>
+    </div>
+
+    <figure class="photo">
+      <img src="../images/day-06/36-winged-lion-memorial.jpg" alt="The bronze Winged Lion Memorial in Prague, honouring Czechoslovak RAF airmen, a wreath at its base">
+      <figcaption>On the Malá Strana side, a bronze lion with an airman's wings — Prague's thank-you to the 2,500 Czechoslovak pilots who slipped out of an occupied country to fly with the RAF, were honoured in London, and then jailed at home after 1948 for having served in the West. The base, seen from above, is the roundel of their air force. "So much owed by so many to so few."</figcaption>
+    </figure>
+  </section>
+
+  <!-- ===================== CH 3 — THE OLD TOWN ===================== -->
+  <section class="chapter">
+    <div class="num">Chapter Three · The Old Town</div>
+    <h2>A city that looks like King's Landing</h2>
+    <div class="sub">A clock that has walked on the hour since 1410, a square too majestic to photograph, and lanes you don't march through but drift.</div>
+
+    <p class="lead">From the bridge we walked back into the Old Town Square for the thing everyone comes to see: the Astronomical Clock — the Orloj — which has hung on the wall of the Old Town Hall since 1410, making it the oldest clock of its kind still working anywhere on earth.</p>
+
+    <p>It is really three instruments in one: a clock for the hour, a golden calendar dial that turns once a year through the signs of the zodiac, and an astronomical dial that maps the sun and moon against the heavens. Six hundred years of gears, and it still keeps perfect time. We joined the crowd on the hour and watched the show — two small windows opening, the twelve Apostles parading across in turn while beside the dial a skeleton, Death himself, tolled his bell. A one-minute performance that has drawn this square together for six centuries; when it ended, everyone looked up at the same moment, and smiled.</p>
+
+    <figure class="photo">
+      <img src="../images/day-05/12-astronomical-clock-family.jpg" alt="The family in front of the Prague Astronomical Clock on the Old Town Hall tower">
+      <figcaption>All five of us beneath the Orloj — the oldest working astronomical clock in the world, ticking since 1410, with every hour still bringing out the Apostles.</figcaption>
+    </figure>
+
+    <div class="pq">Six hundred years of clockwork — and still, every hour on the hour, the Apostles walk and the whole square looks up at once.</div>
+
+    <figure class="photo">
+      <img src="../images/day-06/42-clock-family-selfie.jpg" alt="A selfie of all five Munasinghe-Fernandos below the Old Town Hall tower, the Astronomical Clock glowing over their shoulders">
+      <figcaption>Getting all five of us into one frame is its own small expedition — someone is always blinking, or wandering off. Here we managed it: Avinesh on the stick, Avisha in his shades, Aviann laughing under her hat, Avin just tall enough to sneak into the corner, and the six-hundred-year-old clock glowing over our shoulders. The tower behind is older still — begun in 1364.</figcaption>
+    </figure>
+
+    <p>There is a word for Prague's Old Town, and the word is <em>majestic</em>. Standing in the great square, ringed by the twin Gothic spires of the Týn Church and the pastel palaces, I kept thinking of King's Landing — the capital from <em>Game of Thrones</em> — because that is exactly what Prague looks like: a fantasy city made real, all towers and turrets and red roofs climbing the hills. Except Prague is not a film set. It has stood, and been loved, and survived, for a thousand years.</p>
+
+    <figure class="photo bleed">
+      <img src="../images/day-06/13-mala-strana-red-roofs.jpg" alt="A panorama over the red roofs of Malá Strana, the green dome of St Nicholas rising among them">
+      <figcaption>The view we kept trying, and failing, to photograph: a sea of red roofs falling away below the castle, the green dome of St Nicholas rising among them. This, more than anything, is the King's Landing of Prague.</figcaption>
+    </figure>
+
+    <p>We tried, and failed, to capture it — every photograph came back smaller than the thing itself. You have to stand in the middle of it, turn slowly, and let the spires close in around you. And there is a second kind of grandeur here: the Old Town streets are lined with every luxury name you could think of, the shopfronts as polished and stately as the palaces above them — and tucked among them the Czech shops we came to love, like Manufaktura, its window full of beer cosmetics and honey soap.</p>
+
+    <figure class="photo">
+      <img src="../images/day-06/17-old-town-street-walk.jpg" alt="Inoshi and Aviann walking hand in hand down a cobbled Old Town lane, the boys following with the stroller">
+      <figcaption>Walking the lanes near the Klementinum — Aviann's hand in mine, the boys bringing the stroller behind, and the green towers of St Salvator waiting at the end of the street. There are cities you march through and cities you drift through; Prague is one to drift.</figcaption>
+    </figure>
+
+    <div class="side">
+      <div class="h">Why the lanes run so narrow</div>
+      <p>Not for the heat — that trick belongs to far hotter cities. Prague's Old Town was simply never <strong>planned</strong>: it grew lane by lane through the Middle Ages, following old market paths and the tight property lines of a walled town where every foot of land was dear. Stranger still, the ground itself was <strong>raised</strong> — in the thirteenth century, to escape the Vltava's floods, the townsfolk lifted the streets several metres, burying the Romanesque houses whose ground floors survive today as cellars. The medieval city, quite literally, lies beneath your feet.</p>
+    </div>
+
+    <figure class="photo">
+      <img src="../images/day-06/20-tyn-church.jpg" alt="The twin Gothic spires of the Church of Our Lady before Týn above the Old Town Square">
+      <figcaption>The Týn Church over the rooftops — two towers eighty metres high, each crowned with a cluster of golden-tipped turrets. The doors open only at ten in the morning, so we did what most of Prague always has: stood beneath, and tipped our heads all the way back.</figcaption>
+    </figure>
+
+    <div class="duo">
+      <figure><img src="../images/day-06/21-tyn-church-closeup.jpg" alt="A close view of the twin Gothic towers of the Týn Church, each ringed with smaller pinnacles"></figure>
+      <figure><img src="../images/day-06/19-st-nicholas-exterior.jpg" alt="The white baroque west front of St Nicholas Church, its two towers capped with green copper domes"></figure>
+      <figcaption>Up close the Týn towers look less built than grown — the Czechs call them Adam and Eve, one a touch broader than the other. Across the square, the white baroque front of St Nicholas and its two green copper domes, gone the soft blue-green of old coins, finished in 1735.</figcaption>
+    </div>
+
+    <figure class="photo">
+      <img src="../images/day-06/18-st-nicholas-interior.jpg" alt="The baroque interior of St Nicholas Church, Old Town Square, with its great crystal chandelier">
+      <figcaption>Inside St Nicholas: white plaster and a painted ceiling, and hanging dead-centre, a great crown-shaped chandelier of Bohemian crystal. Aviann stood quite still underneath it, looking up.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ===================== CH 4 — JOSEFOV ===================== -->
+  <section class="chapter">
+    <div class="num">Chapter Four · Josefov</div>
+    <h2>The city I couldn't leave</h2>
+    <div class="sub">A second walk I hadn't planned — into the old Jewish Quarter, where a wall the colour of sand handed me back my own childhood.</div>
+
+    <p class="lead">It was half past three when we got back to the room, and I found I was not ready to be finished with Prague. The city had got under my skin. So we went out again, the whole family, and walked — into Josefov, the old Jewish Quarter, one of the oldest and best-preserved in Europe, its synagogues and ancient cemetery folded into a handful of narrow, remarkable streets.</p>
+
+    <p>And there, unexpectedly, the city handed me a memory. Walking those streets I was suddenly somewhere else entirely — back in Saudi Arabia, where I spent part of my childhood. It was the colours that did it: the yellow walls, the warm sand tones of the stone glowing in the afternoon light, so like the country of my younger years. That is the strange gift of travel — how a wall the colour of sand, on a street you have never walked before, can hand you back your own beginnings.</p>
+
+    <figure class="photo">
+      <img src="../images/day-06/08-old-town-street.jpg" alt="A Josefov street of sand-gold façades in the afternoon light">
+      <figcaption>A Josefov street of yellow, sand-gold walls — the colour that, for a moment, carried me all the way back to a childhood in Saudi Arabia. We had come out for a little more of Prague; Prague gave me Saudi Arabia instead.</figcaption>
+    </figure>
+
+    <div class="pq">A wall the colour of sand, in the middle of Europe — and suddenly I was a child in Saudi Arabia again.</div>
+
+    <div class="duo">
+      <figure><img src="../images/day-06/35-old-jewish-cemetery.jpg" alt="The crowded old tombstones of the Old Jewish Cemetery in Prague, leaning together under trees"></figure>
+      <figure><img src="../images/day-06/37-old-jewish-cemetery-gate.jpg" alt="The wrought-iron gate to the Old Jewish Cemetery"></figure>
+      <figcaption>The oldest Jewish cemetery in Europe: perhaps 12,000 stones leaning shoulder to shoulder, and as many as 100,000 people laid below — buried up to twelve deep, in use from 1439 until 1787, as each generation raised the earth and set the old headstones higher. Among them rests Rabbi Judah Loew, bound forever to the legend of the Golem, the clay man said to have been shaped from the banks of the Vltava to guard the ghetto.</figcaption>
+    </div>
+
+    <figure class="photo">
+      <img src="../images/day-06/15-jewish-town-hall.jpg" alt="The pink baroque Jewish Town Hall in Josefov with its Hebrew clock">
+      <figcaption>The rose-pink Jewish Town Hall carries two clocks. The upper one, with Roman numerals, behaves itself; the lower, marked in Hebrew letters, runs its golden hands the other way — anticlockwise, backwards, because Hebrew is read right to left. Of everything in Josefov, this is the thing the children will not forget.</figcaption>
+    </figure>
+
+    <p>We stood and watched it a while, quietly delighted. A whole quarter that has survived everything history could throw at it, keeping its own time, in its own direction, exactly as it always has.</p>
+  </section>
+
+  <!-- ===================== CLOSING ===================== -->
+  <section class="chapter">
+    <div class="num">Reflections</div>
+    <h2>What we carried out</h2>
+
+    <p>What we will remember most about Prague is the detail. We loved the cathedral above everything — but it was never alone: every building around it was carved and moulded and ornamented with a thousand small things, as though no surface in the whole city was ever allowed to be plain. A city that looks like a crown, and rewards you for looking closer.</p>
+
+    <p>And Prague taught us a lesson we carried for the rest of the trip: in a July heatwave, you start early. Reach the sights by first light and by one o'clock you have covered almost everything — and beaten both the sun and the crowds. When we crossed the Charles Bridge at a quarter past eight it was nearly empty; the evening before, that same bridge had run shoulder to shoulder. Early is everything.</p>
+
+    <div class="side">
+      <div class="h">Worth Remembering</div>
+      <ul>
+        <li><strong>Our favourite —</strong> St Vitus, and the endless carving on every building around it. Nothing in Prague was ever plain.</li>
+        <li><strong>The hardest —</strong> the July heat, and small legs on the castle hill. The trick we learned: start at dawn, and by one o'clock you've seen almost everything.</li>
+        <li><strong>If we come back —</strong> a cooler month, the river cruise we let go this time, and maybe a proper medieval dinner.</li>
+      </ul>
+    </div>
+
+    <p>We rubbed the brass on the Charles Bridge and made the old wish — that Prague would not be a place we saw only once. A family that leaves a little of its hope locked onto a bridge fully intends to come back for it. Until then, the city of a hundred spires keeps our place.</p>
+
+    <div class="endnote">
+      — written from our notes and our own photographs
+      <div class="sig">Avinesh, Inoshi, Avisha, Aviann &amp; Avin Munasinghe-Fernando</div>
+    </div>
+  </section>
+
 </div>
 
-<div class="mag-page mag-reflection">
-  <div class="rf-eyebrow">REFLECTIONS · CZECH REPUBLIC</div>
-  <div class="rf-headline">A city carved<br>in a thousand<br>tiny details.</div>
-  <div class="rf-body">
-    <p>What we will remember most about Prague is the detail. We loved the cathedral above everything — but it was not alone: every building around it was carved and moulded and ornamented with a thousand small details, as though no surface in the whole city was ever allowed to be plain.</p>
-    <p>And Prague taught us a lesson we would carry for the rest of the trip: in a July heatwave, you start early. Reach the sights by first light and by one o'clock you have covered almost everything — and beaten both the sun and the crowds. When we crossed the Charles Bridge at a quarter past eight it was nearly empty; the night before, that same bridge had been shoulder to shoulder. Early is everything.</p>
-  </div>
-  <div class="rf-grid">
-    <div class="rf-card">
-      <div class="rf-label">Favourite moment</div>
-      <div class="rf-value">The cathedral — and the endless carving on every building around it. Nothing in Prague was ever plain.</div>
-    </div>
-    <div class="rf-card">
-      <div class="rf-label">Hardest moment</div>
-      <div class="rf-value">The July heat. The trick we learned: start at dawn, and by 1pm you have seen almost everything.</div>
-    </div>
-    <div class="rf-card">
-      <div class="rf-label">If we come back…</div>
-      <div class="rf-value">A cooler month, the river cruise we let go this time — and maybe a medieval dinner.</div>
-    </div>
-  </div>
-  <div class="rf-signoff">— Avinesh, Inoshi, Avisha, Aviann & Avin Munasinghe-Fernando<br>Prague · 13–14 July 2026</div>
-</div>
+<footer>Munasinghe-Fernando Travel · Czechia · No. 04 of 14 · The Memoir Edition</footer>
 
-<div class="mag-page mag-back" style="background:linear-gradient(0deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.32) 55%, rgba(0,0,0,0.3) 100%), url('../images/hungary/buda-hill-night-2.jpg') center/cover #1a1030;">
-  <div class="bc-mag">Munasinghe-Fernando Travel Magazine</div>
-  <div class="bc-issue">No. 04 of 14 · Europe 2026</div>
-  <div class="bc-next">★ NEXT ISSUE ★</div>
-  <div class="bc-country">HUNGARY</div>
-  <div class="bc-tagline">Two cities on a river — Buda above, Pest below — joined by a chain bridge in 1849.</div>
-</div>
-
-<style>
-/* Mobile: scale the A4 pages to fit the screen width (for direct web/GitHub Pages viewing) */
-@media (max-width: 840px){
-  body { padding:0 !important; background:#111; }
-  .mag-page { margin:0 auto 10px !important; box-shadow:none !important; }
-}
-</style>
-<script>
-(function(){
-  var PAGE_PX = 793.7; /* 210mm at 96dpi */
-  function fit(){
-    var vw = document.documentElement.clientWidth || window.innerWidth;
-    var z = Math.min(1, vw / PAGE_PX);
-    var pages = document.querySelectorAll('.mag-page');
-    for (var i=0;i<pages.length;i++){ pages[i].style.zoom = z; }
-  }
-  window.addEventListener('resize', fit);
-  window.addEventListener('orientationchange', fit);
-  fit();
-})();
-</script>
-</body></html>
+</body>
+</html>
