@@ -19,6 +19,12 @@
 
 - Brand / masthead: **"Munasinghe-Fernando Travel"**. Family sign-off: **"Avinesh, Inoshi, Avisha, Aviann & Avin Munasinghe-Fernando"**.
 - Spelling: **NZ/British** (colour, favourite, honour, metre…).
+- **Punctuation — no dashes.** The family reads the em dash (—) as "AI-generated", so the
+  house style uses **none**. Replace every em dash with a plain **spaced hyphen** ( - ) for
+  sentence breaks, and every en dash in a range with a plain hyphen (`11-15 July`,
+  `1282-1918`). Never `—`, never `–`. After any edit, confirm none slipped back in: the
+  counts of `—` and `–` in the file must both be **0** (quick Python:
+  `s.count('—')`, `s.count('–')`).
 
 ---
 
@@ -85,6 +91,12 @@ or ask. These asides are precious precisely because they're real: one true line 
 - **Don't guess which place a photo shows.** If an interior/landmark is ambiguous (e.g.
   Schönbrunn vs the Belvedere), confirm with the family before captioning — a confident
   wrong label is worse than asking.
+- **Get the real route right, and place the emotional beats by it.** Confirm the actual
+  travel order and let it drive the story. Austria's leg ran Hallstatt → the Czech Republic
+  → *back* to Vienna, which is exactly why leaving for Czechia was only a light **"see you
+  soon"** (said at the end of Hallstatt) while Vienna — the last Austrian stop — carried the
+  **proper goodbye**. Fix any caption or line that contradicts the true route (a schnitzel
+  caption once said "before the last push to Vienna" when the drive was actually to Czechia).
 
 Full brief (the long version this distils) lives in the project history; this section is
 the operative summary.
@@ -94,10 +106,18 @@ the operative summary.
 ## 3. Structure of an issue
 
 1. **Cover** (see §5).
-2. **Opener** — kicker, a two-line headline, an italic lede framing the leg. No facts-dump.
-3. **Chapters** — one per place / major experience. Each: `Chapter N · Place`,
-   a title, an italic subtitle, the narrative, 1–3 photos, and an optional sidebar.
-4. **Reflections** — what we carried out; a *Worth Remembering* box (favourite / hardest
+2. **Who we are / why we travel** — a short first-person **letter** (the family's real
+   reason for travelling, carried over from v1: *"My husband and I share one dream — to
+   travel to as many countries as we possibly can, as a family…"*) plus a light
+   **"a thousand years at a glance"** country timeline (e.g. 996 AD Ostarrîchi / 1282-1918
+   Habsburg / 1918 Republic / *Our leg*; note the hyphen in the range, per §0). This is the family's own framing, not a roster of
+   names — don't replace it with a name list.
+3. **Opener** — kicker, a two-line headline, an italic lede framing the leg. No facts-dump.
+   Follow it with a short **"In this issue"** table of contents (chapter + one-line teaser).
+4. **Chapters** — one per place / major experience. Each: `Chapter N · Place`,
+   a title, an italic subtitle, the narrative, its photos, an optional sidebar, and a
+   per-city **"· at a glance"** fact box (3–4 true facts + an *Us* line) to close it.
+5. **Reflections** — what we carried out; a *Worth Remembering* box (favourite / hardest
    / if-we-come-back), family sign-off.
 
 **Sidebars** (use only where they genuinely fit — don't force the same ones):
@@ -165,6 +185,19 @@ clean when saved as PDF. Copy the CSS from `03-austria-2026-v3.html`. Key points
   (`.sxs{grid-template-columns:minmax(0,46%) 1fr}` and `.duo{grid-template-columns:1fr 1fr}`),
   because A4's ~794px width trips the `max-width:800px` mobile breakpoint and would otherwise
   collapse both to one column in the PDF. Mobile still collapses to a single column.
+- **Aspect-preserve every sized photo — the stretch bug.** `width:100%` *together with* a
+  `max-height` **distorts** the image (it forces a non-native box, so faces and buildings
+  look stretched). Always size as `width:auto; max-width:100%; max-height:Xmm; height:auto;`
+  so the photo scales on its own ratio. Applies everywhere a cap is set — `.sxs`, `.pair`,
+  `.duo`, and the `@media print` block. If a photo looks "stretched", this is why.
+- **`.pair` vs `.duo` — know which crops.** `.pair` shows two photos side by side **whole /
+  uncropped** — use it for two portraits, including anything with faces. `.duo` is a two-up
+  that **crops** via `object-fit:cover` — scenics / architecture only, **never a face**.
+  Both need their grid re-asserted in `@media print` (see above).
+- **Prefer side-by-side (photo *with* its story) over a gallery.** When a photo has a real
+  line of prose that belongs to it, lay them out as `.sxs` rather than stacking photos into
+  `.pair`/`.duo` blocks. Galleries are the fallback for photos that only have a factual
+  caption; the family prefers the photo sitting beside its story.
 
 ---
 
@@ -209,6 +242,17 @@ the photo**, title at the foot. Copy from `03-austria-2026-v3.html` / `-v2.html`
 - **`.duo` crops (`object-fit:cover`) — never put a face in one.** Face photos go in full,
   uncropped `figure.photo`; reserve `.duo` two-ups for scenics/architecture with no family
   faces.
+- **Group photos by the real moment / activity.** Place each photo with the passage that
+  tells *where and when it was actually taken* — walking photos beside the walking story,
+  boat-ride photos beside the boat story. Don't let a view shot from the boat sit next to a
+  street scene just because they're adjacent in the file. If you're unsure which activity a
+  photo belongs to, ask the family — they'll say "those two are the boat ride, these two are
+  the village walk", and that's the grouping.
+- **Fill a short page with a real memory, never filler.** When a page ends high (big bottom
+  gap), the fix is to ask the family for the true line or story that belongs there, or to
+  move a real photo in — *not* to pad the column with invented prose. (The Vienna hotel saga
+  — the 9pm check-in and the car watched from the window — was a real memory that filled a
+  gap perfectly.) A small blank is always better than a fabrication; see §1.
 - **Big folders (GBs): go local.** Don't upload multi-GB archives to a cloud session (disk +
   upload limits). Either the family sends per-city batches in chat (works well), or run a
   local Claude Code session pointed at the folder, following this runbook, committing only
@@ -237,8 +281,12 @@ the photo**, title at the foot. Copy from `03-austria-2026-v3.html` / `-v2.html`
 ## 8. Rollout status
 
 - ✅ **03 · Austria** — complete memoir (v3), built from the family's real photos and words
-  across all four chapters (Salzburg, Burg Altpernstein, Hallstatt, Vienna). **This is the
-  reference implementation — when in doubt, copy it.**
+  across all four chapters (Salzburg, Burg Altpernstein, Hallstatt, Vienna). Now carries the
+  full front matter (why-we-travel letter, timeline, TOC, per-city at-a-glance), photos
+  grouped by activity, the split Hallstatt/Vienna farewell, the Vienna evening walk (fiaker,
+  Marc Anton, Ring fountains), the pink bunny + food-market dinner, and the hotel saga — all
+  side-by-side where a real line exists, and **no typographic dashes**. ~26 A4 pages.
+  **This is the reference implementation — when in doubt, copy it.**
 - ▶️ **Next:** issues that already have real family material (China has the most) get
   converted to this memoir format one at a time. Each needs the family's real notes/
   photos before it can be written — see §1.
