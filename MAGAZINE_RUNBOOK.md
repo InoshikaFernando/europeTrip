@@ -97,6 +97,23 @@ or ask. These asides are precious precisely because they're real: one true line 
   soon"** (said at the end of Hallstatt) while Vienna — the last Austrian stop — carried the
   **proper goodbye**. Fix any caption or line that contradicts the true route (a schnitzel
   caption once said "before the last push to Vienna" when the drive was actually to Czechia).
+- **"Describe more" = deepen the real, don't invent more.** When the family asks you to extend
+  a thin passage, the material is (a) richer *description* of what they actually saw and (b)
+  accurate *history* tied to it — never new events or feelings. So the Schönbrunn halls gained
+  a six-year-old Mozart playing for Maria Theresa in 1762 (which also ties Vienna back to
+  Salzburg), Marie Antoinette's childhood summers, Franz Joseph born and died in those walls,
+  and Sisi's real story; the Vienna walk gained the Ringstrasse's origin; the cathedral gained
+  its eight centuries and the 1945 fire. History is a legitimate way to fill a short page
+  (per the "facts are not invention" rule above) — keep it light, tied to a photo/moment, and
+  **cross-reference across chapters** where it's true (Mozart, Maria Theresa, the recurring
+  "garden I waited thirty years for").
+- **Verify the trip's own facts with the family — dates, day-counts, route.** Don't carry a
+  figure forward unchecked. "Five days" first read off a date span (11–15 July); the family's
+  real itinerary was *into Austria the 11th, across to Prague the 13th, back to Vienna the
+  15th, out the 16th* — five days **on Austrian soil** (11, 12, 13, 15, 16; the 14th was
+  Prague) across an **11–16** span. Count days on the ground, not just end-minus-start, and
+  keep every interlocking time reference consistent (e.g. "Salzburg four days before Vienna"
+  = the 11th → the 15th). When a number or route is load-bearing, confirm it rather than infer.
 
 Full brief (the long version this distils) lives in the project history; this section is
 the operative summary.
@@ -198,6 +215,28 @@ clean when saved as PDF. Copy the CSS from `03-austria-2026-v3.html`. Key points
   line of prose that belongs to it, lay them out as `.sxs` rather than stacking photos into
   `.pair`/`.duo` blocks. Galleries are the fallback for photos that only have a factual
   caption; the family prefers the photo sitting beside its story.
+- **Orphaned "at a glance" boxes (and other unbreakable blocks).** A per-city glance box or
+  sidebar has `break-inside:avoid`, so when the chapter's previous page is ~full it jumps to
+  its own sheet and sits alone above a near-empty page. Best fix: **close the chapter with a
+  real, not-yet-shown photo placed just above the box** (a family shot works beautifully),
+  given a taller `.closer` treatment (`@media print{ figure.photo.closer img{max-height:155mm} }`)
+  so photo + box fill the page as an intended close. Tightening inter-block margins alone
+  (box/figure margins) usually won't reclaim enough. **Don't just drop a lone photo earlier
+  in the chapter to "use up" space** — it shoves the box down and re-orphans it (tested: it
+  added a new near-empty page). Re-measure after any such change.
+- **Page-bottom gap ≠ sparse column.** Two different problems: (a) a `.sxs` text column that
+  looks empty beside a tall photo — fix by filling the *column* with more real words (the row
+  is `max(photo, text)`, so text up to the photo's height is "free"); (b) white at the *foot
+  of the page* — that's pagination (the next block flowed on), and is only closed by adding a
+  full-width block after the last element, letting the column text exceed the photo height, or
+  accepting it. Don't expect column text to fill a page-bottom gap.
+- **Never strand a full-width paragraph between two unbreakable spreads.** A lone `<p>` sitting
+  between two `.sxs`/`.pair` blocks can leave the first page half-empty when the second spread
+  jumps to the next page. Reorder so the two spreads sit together and the prose flows after
+  them (this fixed a 50%-empty Schönbrunn page).
+- **A lone centered photo on a text page** (e.g. the family shot on the who-we-are letter)
+  leaves wide blank margins either side. Move it into a `.sxs` beside the opening paragraph of
+  the text — the margins fill with words and the photo reads larger, no extra height.
 
 ---
 
@@ -253,6 +292,12 @@ the photo**, title at the foot. Copy from `03-austria-2026-v3.html` / `-v2.html`
   move a real photo in — *not* to pad the column with invented prose. (The Vienna hotel saga
   — the 9pm check-in and the car watched from the window — was a real memory that filled a
   gap perfectly.) A small blank is always better than a fabrication; see §1.
+- **Chapter-closer photo.** A genuinely good, not-yet-shown family photo placed above a
+  chapter's closing fact box (see the orphan fix in §4) is real editing, not filler — it turns
+  an 85%-white page into a proper close. Keep its caption factual, and **neutral on who's in
+  frame if you can't be sure** from a low-res proof (don't assert "Avinesh and the three" when
+  Inoshi might be in it and not behind the camera — miscounting the family is exactly the kind
+  of small wrong detail this family notices).
 - **Big folders (GBs): go local.** Don't upload multi-GB archives to a cloud session (disk +
   upload limits). Either the family sends per-city batches in chat (works well), or run a
   local Claude Code session pointed at the folder, following this runbook, committing only
@@ -272,8 +317,19 @@ the photo**, title at the foot. Copy from `03-austria-2026-v3.html` / `-v2.html`
   `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`); screenshot every page/sheet and
   check nothing clips or crops a face.
 - **PDF:** `page.pdf({ format:'A4', printBackground:true, preferCSSPageSize:true })`.
+- **Per-change checklist (run every time before pushing):** (1) dash count — `—` and
+  `–` both **0** (§0); (2) regenerate the PDF; (3) fonts embedded — `strings … | grep -i
+  basefont` shows Fraunces/Spectral/JetBrains, never Liberation/DejaVu; (4) page count as
+  expected; (5) rasterise and scan page-bottom % for new gaps; (6) render the changed pages
+  and eyeball them (no stretch, no orphan, faces intact). Then commit + push.
+- **Reviewing with the family: one contact sheet.** They review on a phone, page by page, and
+  circle gaps. Give them a single all-pages grid to scan: render each PDF page with PyMuPDF
+  (`get_pixmap(dpi=55)`), montage into a labelled `p1…pN` grid with PIL, send as one image.
+  Fastest way for them to point at exactly what to fix.
 - Commit → push branch → fast-forward into **main** (GitHub Pages rebuilds). `main` is
-  shared/edited by others, so always `git fetch origin main` and re-sync before pushing.
+  shared/edited by others, so always `git fetch origin main` and re-sync before pushing. Push
+  the same commit to **both** `HEAD:main` and the working branch, with retry/backoff on
+  network errors. Send the updated PDF (or the changed-page renders) after each round.
 - Live URL: `https://inoshikafernando.github.io/europeTrip/magazines/NN-country-YYYY.html`.
 
 ---
@@ -285,8 +341,12 @@ the photo**, title at the foot. Copy from `03-austria-2026-v3.html` / `-v2.html`
   full front matter (why-we-travel letter, timeline, TOC, per-city at-a-glance), photos
   grouped by activity, the split Hallstatt/Vienna farewell, the Vienna evening walk (fiaker,
   Marc Anton, Ring fountains), the pink bunny + food-market dinner, and the hotel saga — all
-  side-by-side where a real line exists, and **no typographic dashes**. ~26 A4 pages.
-  **This is the reference implementation — when in doubt, copy it.**
+  side-by-side where a real line exists, and **no typographic dashes**. Later polish filled the
+  last gaps with the family's own memories and accurate history (castle room, flowers, Aviann's
+  first camera, "how classy", Mozart/Marie Antoinette/Franz Joseph/Sisi, the Ringstrasse and
+  Stephansdom), fixed the orphaned chapter-closing boxes with real family photos, and corrected
+  the dates/route (11–16 July, five days on Austrian soil with a Prague day between). 26 A4
+  pages. **This is the reference implementation — when in doubt, copy it.**
 - ▶️ **Next:** issues that already have real family material (China has the most) get
   converted to this memoir format one at a time. Each needs the family's real notes/
   photos before it can be written — see §1.
