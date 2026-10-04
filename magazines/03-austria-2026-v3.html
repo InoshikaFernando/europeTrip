@@ -430,7 +430,17 @@
     .sxs.img-right{grid-template-columns:1fr minmax(0,46%);}
     .sxs figure.photo img{width:auto; height:auto; max-width:100%; max-height:90mm;}
     figure.photo figcaption, .duo figcaption{font-size:10.5px; line-height:1.42; margin-top:5px;}
-    .chapter p{margin:0 0 10px;}
+    .chapter p{margin:0 0 9px;}
+    /* Tighten spacing between blocks (not the photos) so trailing boxes rejoin
+       the previous page instead of orphaning onto a near-empty sheet. */
+    figure.photo{margin:4mm 0;}
+    .duo, .pair, .sxs{margin:4mm 0;}
+    .glancebox{margin:5mm 0; padding:13px 20px;}
+    /* a chapter-closing photo may run taller to fill the final page with the glance box */
+    figure.photo.closer img{max-height:155mm;}
+    .side{margin:5mm 0; padding:15px 20px;}
+    .glance{margin:5mm auto 0; padding-top:9px;}
+    .pq{margin:7mm 0; padding:16px 10px;}
     footer{padding:10mm 0 0; border:0;}
   }
 </style>
@@ -581,6 +591,11 @@
       <div class="h">Travel Reality</div>
       <p>We saw the fortress only from the valley floor. We passed Mozart's front door without going in. We were two hours behind before we'd really begun. None of it mattered: the garden was the whole point, and the garden we reached.</p>
     </div>
+
+    <figure class="photo closer">
+      <img src="../images/austria/salzburg-mirabell-mum-daughter.jpg" alt="Inoshi and Aviann together in the Mirabell Gardens, Inoshi in a wide white sun hat with an arm around Aviann, the Hohensalzburg fortress on its hill hazy behind them">
+      <figcaption>Inoshi and Aviann in the Mirabell Gardens - mother and daughter in the very place Inoshi had carried in her head since she was a girl.</figcaption>
+    </figure>
 
     <div class="glancebox">
       <div class="h">Salzburg · at a glance</div>
@@ -746,6 +761,11 @@
       <div class="h">Would We Go Back?</div>
       <p>Yes - and we already know what for. The Salzwelten salt mine, and the Skywalk panorama above the lake: both closed the morning we came, and both, as far as this family is concerned, still waiting for us.</p>
     </div>
+
+    <figure class="photo closer">
+      <img src="../images/austria/hallstatt-viewpoint-family.jpg" alt="The family at a lakeside railing in Hallstatt, the Hallstättersee and green mountains stretching away behind them">
+      <figcaption>One last look from the lake rail before we left - the green-and-blue Hallstatt stretching away behind us, exactly the Europe we'd come hoping to find.</figcaption>
+    </figure>
 
     <div class="glancebox">
       <div class="h">Hallstatt · at a glance</div>
