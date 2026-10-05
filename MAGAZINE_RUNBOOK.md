@@ -347,6 +347,15 @@ the photo**, title at the foot. Copy from `03-austria-2026-v3.html` / `-v2.html`
   Stephansdom), fixed the orphaned chapter-closing boxes with real family photos, and corrected
   the dates/route (11–16 July, five days on Austrian soil with a Prague day between). 26 A4
   pages. **This is the reference implementation — when in doubt, copy it.**
+- 🟡 **05 · Hungary** - memoir draft written (`magazines/05-hungary-2026-v2.html`, 19 A4 pages), converted
+  from the live-built spread issue (`05-hungary-2026.html`, kept). Five chapters (St Stephen's, Fisherman's
+  Bastion, Matthias Church, Buda Castle, the Danube) + reflections, built only from the family's recorded
+  facts (parked in Pest, Chain Bridge on foot, funicular, Avin to the top of the dome, stroller up the
+  Bastion steps, kids' own cameras, three lángos, 8:30 glass-roofed cruise, 21,000 steps / Avin 5 km) plus
+  accurate history, cross-referenced to Austria (Maria Theresa, Sisi, Schönbrunn). The old issue's filler
+  ("the children went quiet", "liked the lions best") was dropped as unverified. Cover: two cards only (a
+  third covered Inoshi's face). **Needs from the family:** Inoshi's own felt lines and any real child
+  quotes for each chapter; confirm the hotel night and that Buda Castle was the last stop on the hill.
 - ▶️ **Next:** issues that already have real family material (China has the most) get
   converted to this memoir format one at a time. Each needs the family's real notes/
   photos before it can be written — see §1.
