@@ -388,6 +388,22 @@
 
   footer{border-top:1px solid var(--line); margin-top:30px; padding:26px 0 70px; text-align:center; font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted);}
 
+  /* THE JOURNEY / route tracker - rides at the front of every issue */
+  .journey{background:linear-gradient(135deg,#fff4e6 0%,#ffe9cf 100%); display:flex; flex-direction:column; min-height:246mm;}
+  .journey .jr-eyebrow{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); margin-bottom:10px;}
+  .journey .jr-headline{font-family:'Fraunces',serif; font-weight:700; font-size:clamp(34px,6vw,52px); line-height:.98; letter-spacing:-.02em; color:var(--ink); margin:0 0 20px;}
+  .journey .jr-body{max-width:152mm;}
+  .journey .jr-body p{font-family:'Spectral',serif; font-size:16.5px; line-height:1.7; color:#3d3024; margin:0 0 13px;}
+  .journey .jr-railtitle{font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--blue); border-bottom:2px solid var(--gold); padding-bottom:9px; margin:24px 0 15px;}
+  .journey .jr-rail{display:flex; flex-wrap:wrap; gap:8px;}
+  .journey .jr-stop{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.03em; color:#a8926a; padding:6px 13px; border:1px solid #e8d6a8; border-radius:100px; background:rgba(255,255,255,.45); white-space:nowrap;}
+  .journey .jr-stop .jr-n{font-weight:700; color:#8b6914; margin-right:4px;}
+  .journey .jr-stop.done{color:#5a4a3a; border-color:rgba(40,80,140,.45);}
+  .journey .jr-stop.done .jr-n{color:var(--blue);}
+  .journey .jr-stop.here{color:#fff; background:var(--blue); border-color:var(--blue); font-weight:700;}
+  .journey .jr-stop.here .jr-n{color:#f0d68c;}
+  .journey .jr-today{font-family:'Spectral',serif; font-style:italic; font-size:16px; line-height:1.5; color:var(--blue); margin-top:auto; padding-top:16px; border-top:1px solid var(--gold);}
+
   @media (max-width:800px){
     body{padding:0; font-size:16px;}
     .cover,.wrap,.opener,.chapter{width:auto; max-width:100%; margin:0 0 10px; box-shadow:none;}
@@ -467,6 +483,34 @@
 </header>
 
 <div class="wrap">
+
+  <!-- ===================== THE JOURNEY (route tracker) ===================== -->
+  <section class="chapter journey">
+    <div class="jr-eyebrow">The Journey · Chapter Two</div>
+    <h2 class="jr-headline">West, into<br>the Alps.</h2>
+    <div class="jr-body">
+      <p>The story so far: we began at the Great Wall and the Forbidden City in Beijing, where the children got their first taste of how old and how vast the world can be - before a red-eye west carried us into Europe and a jet-lagged first day in Munich.</p>
+      <p>Austria is our second chapter, and our first real stop in Europe: Salzburg, where I finally stood in the Sound of Music gardens I'd dreamed of since I was a girl; two nights in an 800-year-old hilltop castle; the impossible green-and-blue of Hallstatt; and imperial Vienna to finish. This page rides at the front of every issue - where we've been, where we are, and where we're headed next.</p>
+    </div>
+    <div class="jr-railtitle">The Route · 14 Countries · 33 Cities · 30 Nights</div>
+    <div class="jr-rail">
+      <div class="jr-stop done"><span class="jr-n">01</span>China ✓</div>
+      <div class="jr-stop here"><span class="jr-n">02</span>Austria ★</div>
+      <div class="jr-stop"><span class="jr-n">03</span>Czechia</div>
+      <div class="jr-stop"><span class="jr-n">04</span>Hungary</div>
+      <div class="jr-stop"><span class="jr-n">05</span>Italy</div>
+      <div class="jr-stop"><span class="jr-n">06</span>Switzerland</div>
+      <div class="jr-stop"><span class="jr-n">07</span>Germany</div>
+      <div class="jr-stop"><span class="jr-n">08</span>France</div>
+      <div class="jr-stop"><span class="jr-n">09</span>Netherlands</div>
+      <div class="jr-stop"><span class="jr-n">10</span>Belgium</div>
+      <div class="jr-stop"><span class="jr-n">11</span>Denmark</div>
+      <div class="jr-stop"><span class="jr-n">12</span>Sweden</div>
+      <div class="jr-stop"><span class="jr-n">13</span>Vatican</div>
+      <div class="jr-stop"><span class="jr-n">⌂</span>Home</div>
+    </div>
+    <div class="jr-today">Today - Austria: our first European country, five days from Salzburg to Vienna, with a run to Prague in between.</div>
+  </section>
 
   <!-- ===================== WHO WE ARE ===================== -->
   <section class="chapter whoweare">

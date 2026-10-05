@@ -123,7 +123,18 @@ the operative summary.
 ## 3. Structure of an issue
 
 1. **Cover** (see §5).
-2. **Who we are / why we travel** — a short first-person **letter** (the family's real
+2. **The Journey / route tracker** — a recurring page that **rides at the front of EVERY
+   issue** (easy to forget when rebuilding front matter — don't). A cream sheet with an
+   eyebrow `The Journey · Chapter N`, a short headline, a two-paragraph *story so far →
+   now*, and the whole trip as pill **route chips** (`01 China ✓` done / `02 Austria ★`
+   here / the rest plain) under `The Route · 14 Countries · 33 Cities · 30 Nights`, with a
+   `Today — <country>:` line anchored at the foot (`margin-top:auto`). Chapter number and
+   the `done ✓ / here ★` markers advance per issue; keep the route order consistent across
+   issues (it's the travel order, which differs from the issue file numbers). The v3 Austria
+   memoir recreates it in the memoir's own design (`.journey` on a `.chapter` sheet, Austria
+   blue/gold); the older issues use the v1 `.mag-journey`. The ✓ ★ ⌂ glyphs fall back to
+   DejaVu (they're not in the JetBrains subset) — that's fine, it's symbols only, not body text.
+3. **Who we are / why we travel** — a short first-person **letter** (the family's real
    reason for travelling, carried over from v1: *"My husband and I share one dream — to
    travel to as many countries as we possibly can, as a family…"*) plus a light
    **"a thousand years at a glance"** country timeline (e.g. 996 AD Ostarrîchi / 1282-1918
