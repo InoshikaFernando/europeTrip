@@ -267,6 +267,20 @@ the photo**, title at the foot. Copy from `03-austria-2026-v3.html` / `-v2.html`
 - Masthead centred at top; **country title** (`Fraunces`, ~92px) pinned to the bottom
   (`margin-top:auto`); italic deck; pill **teasers**; family + dates credit.
 
+**Back cover — a full-bleed PHOTO (house standard for every issue).** The back is NOT a plain
+panel; it is a **scenic photo of the country** (iconic, ideally no faces — Austria uses the
+classic Hallstatt lake-village view), with a top-and-bottom dark **scrim** for legibility and,
+over it: the **masthead** at the top, and at the foot a short real **pull-quote** (a line from
+the issue), the three **teasers**, and the **family sign-off + dates**. Front and back are both
+photographic. (Built for Austria in the Lulu wrap; apply the same to each issue when it prints.)
+
+**Print / Lulu cover wrap.** For a printed hardcover/paperback the cover is ONE wrap PDF =
+back (left) + spine + front (right), sized to **Lulu's exact per-project spec** (Austria, 26pp:
+426.47 × 303.28 mm; spine ~0 at that page count). Build it as an HTML page at that size (front
+= the rendered front-cover image on the right, the photo back on the left), then **flatten to a
+font-free PDF at the exact size** (render 300 DPI → one image on an exact-size page). See §7 for
+why flattening is required (Chromium emits Fraunces as Type3 fonts that print preflights reject).
+
 ---
 
 ## 6. Photos
@@ -342,6 +356,23 @@ the photo**, title at the foot. Copy from `03-austria-2026-v3.html` / `-v2.html`
   the same commit to **both** `HEAD:main` and the working branch, with retry/backoff on
   network errors. Send the updated PDF (or the changed-page renders) after each round.
 - Live URL: `https://inoshikafernando.github.io/europeTrip/magazines/NN-country-YYYY.html`.
+
+**Print prep (physical book — Lulu/Blurb).** The screen/A4 PDF is NOT print-ready; three fixes:
+1. **Fonts.** Chromium emits Fraunces (and some Spectral) as **Type3** glyph procedures, which
+   print preflights reject as "non-embedded". Fix by **flattening every page to a 300 DPI image**
+   (PyMuPDF `get_pixmap(dpi=300)` → rebuild PDF; PIL's PDF writer is the most upload-compatible,
+   and keep files well under the chat 30 MB send limit, ~q82). Result has **no fonts** at all.
+2. **Bleed.** Full-bleed photos/backgrounds must run 0.125"(3.175mm) past the trim. The A4 design
+   stops at the trim (every page gets a white frame from `@page margin`). Re-render a print
+   variant: `@page{ size:216.35mm 303.35mm; margin:0 }`, `.opener,.chapter{padding:19mm 19mm 16mm}`
+   (text ≥0.5" inside trim), `figure.photo.bleed{margin:-19mm}`, `.journey{min-height:303.35mm}`
+   so the cream fills the page, and **drop the cover** (it goes on the wrap). Keep the variant HTML
+   **inside `magazines/`** so `../images` and `fonts/` resolve, and delete it after.
+3. **Size/pages.** Match the printer's exact page size; A4 fits **Lulu** (Blurb has no A4). Pad to
+   the binding's required count if asked.
+   Deliver two files: flattened **interior** (bleed, cover removed) and the flattened **cover wrap**
+   (§5). Both font-free, exact size.
+- Live URL stays the HTML on GitHub Pages; the print PDFs are build artifacts, not committed.
 
 ---
 
