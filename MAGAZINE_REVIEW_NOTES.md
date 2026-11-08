@@ -226,7 +226,19 @@ fix what applies, publish to `main`, then report so the user can manually verify
   cross-reference line pointing to the earlier issue, and list everything on a
   top-level **`magazines/index.html`** (build it when the 2nd trip starts).
 
-## 26. Same frame on every page + NO wasted whitespace (within a page, not just the foot)
+## 26. Match the Austria layout on every page + NO wasted whitespace (within a page, not just the foot)
+- **The Austria v3 issue (`magazines/03-austria-2026-v3.html`) is the CANONICAL layout.**
+  Every issue must look like it: the same block system (`.sxs` photo-with-story,
+  `.pair` two uncropped photos, `.duo` two cropped faceless scenics, `.bleed`/full-width
+  hero, `.trio`, `.glancebox`, `.side`), the same type styling, the same photo sizing, the
+  same column discipline. When in doubt, open Austria and copy exactly. Do not invent a new
+  layout device for one issue.
+- **The Austria column discipline (this is what keeps it clean).** A `.sxs` is only for a
+  photo that has **enough real family prose to fill the column to roughly the photo's
+  height**. If the text is short, do NOT leave it in a side-by-side (it floats with a blank
+  band) - instead make a **landscape** photo **full-width with the text below**, or group
+  **portraits** into a `.pair`/`.trio` (equal heights, no gap). Never pad with invented text
+  to fill a column (rule 1).
 - **Consistent frame & styling.** Every content page uses the **same border/margin**
   (the A4 `@page` margin) and the **same issue styles** — fonts, accent palette, gold
   rules, caption treatment. The **cover and back cover** are the only full-bleed photo

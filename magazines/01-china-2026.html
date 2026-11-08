@@ -330,7 +330,7 @@
   .duo figcaption{grid-column:1 / -1; font-family:'Spectral',serif; font-style:italic; font-size:14px; color:var(--muted); padding-left:14px; border-left:2px solid var(--gold);}
 
   /* photo on one side, text beside it - fills the space next to a portrait */
-  .sxs{display:grid; grid-template-columns:minmax(0,46%) 1fr; gap:26px; align-items:start; margin:30px 0;}
+  .sxs{display:grid; grid-template-columns:minmax(0,46%) 1fr; gap:26px; align-items:center; margin:30px 0;}
   .sxs.img-right{grid-template-columns:1fr minmax(0,46%);}
   .sxs figure.photo{margin:0; text-align:center;}
   .sxs figure.photo img{width:100%; max-width:100%; max-height:none; margin:0;}
@@ -338,7 +338,7 @@
   .sxs .col > :last-child{margin-bottom:0;}
 
   /* two portraits side by side, UNCROPPED (fills the row without cutting faces) */
-  .pair{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:30px 0; align-items:start;}
+  .pair{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:30px 0; align-items:center;}
   .pair figure.photo{margin:0;}
   .pair figure.photo img{width:100%; max-width:100%; max-height:none; margin:0;}
   .pair figure.photo figcaption{max-width:none;}
@@ -701,15 +701,10 @@
       </div>
     </div>
 
-    <div class="pair">
-      <figure class="photo">
-        <img src="../images/china/throne-central-harmony.jpg" alt="The throne of the Hall of Central Harmony inside the Forbidden City">
-        <figcaption>The throne of the Hall of Central Harmony, where the emperor paused to rest and rehearse before the great rites.</figcaption>
-      </figure>
-      <figure class="photo">
-        <img src="../images/china/fc-caisson-ceiling.jpg" alt="A gilded caisson ceiling with a coiled dragon at its centre, high above an imperial throne">
-        <figcaption>Dragons overhead: the gilded ceiling, a coiled dragon set at its very heart, high above the throne.</figcaption>
-      </figure>
+    <div class="duo">
+      <figure><img src="../images/china/throne-central-harmony.jpg" alt="The throne of the Hall of Central Harmony inside the Forbidden City"></figure>
+      <figure><img src="../images/china/fc-caisson-ceiling.jpg" alt="A gilded caisson ceiling with a coiled dragon at its centre, high above an imperial throne"></figure>
+      <figcaption>The throne of the Hall of Central Harmony, and, dragons overhead, the gilded caisson ceiling with its coiled dragon set directly above where the emperor sat.</figcaption>
     </div>
 
     <div class="sxs img-right">
