@@ -330,7 +330,7 @@
   .duo figcaption{grid-column:1 / -1; font-family:'Spectral',serif; font-style:italic; font-size:14px; color:var(--muted); padding-left:14px; border-left:2px solid var(--gold);}
 
   /* photo on one side, text beside it - fills the space next to a portrait */
-  .sxs{display:grid; grid-template-columns:minmax(0,46%) 1fr; gap:26px; align-items:center; margin:30px 0;}
+  .sxs{display:grid; grid-template-columns:minmax(0,46%) 1fr; gap:26px; align-items:start; margin:30px 0;}
   .sxs.img-right{grid-template-columns:1fr minmax(0,46%);}
   .sxs figure.photo{margin:0; text-align:center;}
   .sxs figure.photo img{width:100%; max-width:100%; max-height:none; margin:0;}
@@ -338,7 +338,7 @@
   .sxs .col > :last-child{margin-bottom:0;}
 
   /* two portraits side by side, UNCROPPED (fills the row without cutting faces) */
-  .pair{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:30px 0; align-items:center;}
+  .pair{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:30px 0; align-items:start;}
   .pair figure.photo{margin:0;}
   .pair figure.photo img{width:100%; max-width:100%; max-height:none; margin:0;}
   .pair figure.photo figcaption{max-width:none;}
@@ -618,31 +618,27 @@
 
     <p>To reach the Forbidden City you first cross the largest public square on earth, and on our day it lay grey and glistening under a steady summer rain. Tiananmen, the Gate of Heavenly Peace, is the ceremonial front door to the palace, Chairman Mao's portrait hung between two slogans: long live the People's Republic, and long live the unity of the world's peoples. We posed beneath it in the drizzle, selfie-stick up, five small figures under a very large idea.</p>
 
-    <div class="sxs img-right">
-      <div class="col">
-        <p>The square itself is enormous and, in that weather, nearly empty. Beyond the flags stand the Monument to the People's Heroes and the National Museum, and near them marble reliefs of marching figures, the square's newer, revolutionary chapter, laid out on the same grand axis the emperors once used. We wandered it in our ponchos, five little smudges of blue on all that wet grey stone, and the children thought the whole business of the ponchos tremendously funny.</p>
-      </div>
+    <p>The square itself is enormous and, in that weather, nearly empty. Beyond the flags stand the Monument to the People's Heroes and the National Museum, and near them marble reliefs of marching figures, the square's newer, revolutionary chapter, laid out on the same grand axis the emperors once used. We wandered it in our ponchos, five little smudges of blue on all that wet grey stone, and the children thought the whole business of the ponchos tremendously funny.</p>
+
+    <div class="trio">
       <figure class="photo">
         <img src="../images/china/ponchos-tiananmen-flagpole.jpg" alt="The family in blue ponchos on the vast near-empty Tiananmen Square, the children holding their toy cameras">
-        <figcaption>First ponchos in the rain, five of them, damp but undefeated, the children already working their little cameras on the near-empty square.</figcaption>
+        <figcaption>First ponchos in the rain, damp but undefeated.</figcaption>
       </figure>
-    </div>
-
-    <figure class="photo">
-      <img src="../images/china/heroes-relief.jpg" alt="Marble relief sculpture of marching revolutionary figures on the Monument to the People's Heroes, Tiananmen Square">
-      <figcaption>Those marble reliefs of marching figures, near the Monument - the square's newer, revolutionary chapter, carved onto the same grand axis the emperors once used, and running wet with rain the whole time we stood there.</figcaption>
-    </figure>
-
-    <div class="pair">
       <figure class="photo">
         <img src="../images/china/ponchos-monument.jpg" alt="The family in ponchos by the Monument to the People's Heroes on Tiananmen Square">
-        <figcaption>By the Monument to the People's Heroes, the rain still coming down.</figcaption>
+        <figcaption>By the Monument to the People's Heroes.</figcaption>
       </figure>
       <figure class="photo">
-        <img src="../images/china/ponchos-great-hall-100yuan.jpg" alt="The family in ponchos in front of the Great Hall of the People, holding up a 100-yuan note that shows the same building">
-        <figcaption>In front of the Great Hall of the People, holding up a 100-yuan note: the very building engraved on the back of the note itself.</figcaption>
+        <img src="../images/china/heroes-relief.jpg" alt="Marble relief sculpture of marching revolutionary figures on the Monument to the People's Heroes, Tiananmen Square">
+        <figcaption>The marble reliefs of marching figures.</figcaption>
       </figure>
     </div>
+
+    <figure class="photo bleed">
+      <img src="../images/china/ponchos-great-hall-100yuan.jpg" alt="The family in ponchos in front of the Great Hall of the People, holding up a 100-yuan note that shows the same building">
+      <figcaption>In front of the Great Hall of the People, holding up a 100-yuan note - the very building engraved on the back of the note itself.</figcaption>
+    </figure>
 
     <div class="glancebox">
       <div class="h">Beijing · the arrival, at a glance</div>

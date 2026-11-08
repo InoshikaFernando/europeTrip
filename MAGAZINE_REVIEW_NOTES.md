@@ -225,3 +225,34 @@ fix what applies, publish to `main`, then report so the user can manually verify
   (no collision with the 2026 one). **Link them** with a "We've been here before"
   cross-reference line pointing to the earlier issue, and list everything on a
   top-level **`magazines/index.html`** (build it when the 2nd trip starts).
+
+## 26. Same frame on every page + NO wasted whitespace (within a page, not just the foot)
+- **Consistent frame & styling.** Every content page uses the **same border/margin**
+  (the A4 `@page` margin) and the **same issue styles** — fonts, accent palette, gold
+  rules, caption treatment. The **cover and back cover** are the only full-bleed photo
+  pages; the **journey** page is the one cream sheet (house style). No page is
+  off-pattern — no stray margins, no one-off colours, no page that "looks different".
+- **Blank space includes space BESIDE a photo, not only the page foot.** The page-fill
+  check (`content-ends-at %`) only catches a gap at the *bottom* of a page; it is blind
+  to a blank band *next to* a photo. Those internal blanks are what the family actually
+  notices. Three usual culprits:
+  - **(a) `.sxs` with a tall portrait photo next to short text** — the text floats and
+    leaves a blank band. Set `align-items:start`, and prefer regrouping (below).
+  - **(b) a lone centered portrait photo** — it has blank side-margins. Never leave one:
+    pair it, trio it, or move it into an `.sxs` with text.
+  - **(c) a `.pair`/`.duo` of mismatched heights** (tall portrait beside short landscape)
+    — blank under the short one.
+- **Fixes, in order of preference:** ① group photos of the **same orientation** —
+  portraits together in a `.pair`/`.trio` share one height, no gap; ② make a **landscape**
+  photo **full-width** (`figure.photo`/`.bleed`) with its text as a **full-width
+  paragraph below** (no side column, no side blank); ③ let a **full-width paragraph flow
+  AFTER an unbreakable spread** so it fills the page-foot (don't stack spreads back-to-back
+  with no text between them); ④ `.duo` (which crops via `object-fit:cover`) is for
+  **faceless scenics only**. **Never crop a face to fill** (rule 6/13) — regroup instead.
+- **Verify visually on BOTH screen and PDF.** The on-screen (single long column) and the
+  print (A4-paginated) layouts differ, so a page can look full in one and gappy in the
+  other. Rasterise/screenshot and **eyeball every page for blank bands beside photos** —
+  the numeric fill score is necessary but not sufficient.
+- **Don't fix a gap by over-enlarging photos** (it orphans portraits onto their own near-
+  empty sheet) **or by padding with duplicate photos / invented prose** (rule 1/18).
+  Sweep the print photo-caps to the packing sweet spot, then regroup per the above.
