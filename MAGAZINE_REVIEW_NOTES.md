@@ -239,17 +239,16 @@ fix what applies, publish to `main`, then report so the user can manually verify
   band) - instead make a **landscape** photo **full-width with the text below**, or group
   **portraits** into a `.pair`/`.trio` (equal heights, no gap). Never pad with invented text
   to fill a column (rule 1).
-- **Consistent frame & styling.** Every content page uses the **same border/margin**
-  (the A4 `@page` margin) and the **same issue styles** — fonts, accent palette, gold
-  rules, caption treatment. The **cover and back cover** are the only full-bleed photo
-  pages; the **journey** page is the one cream sheet (house style). No page is
-  off-pattern — no stray margins, no one-off colours, no page that "looks different".
+- **Consistent frame & styling** (see rule 27 for the standalone statement). Every page
+  carries the **same A4 `@page` border/margin** and the **same issue styles** — fonts,
+  accent palette, gold rules, caption treatment. No page is off-pattern.
 - **Blank space includes space BESIDE a photo, not only the page foot.** The page-fill
   check (`content-ends-at %`) only catches a gap at the *bottom* of a page; it is blind
   to a blank band *next to* a photo. Those internal blanks are what the family actually
   notices. Three usual culprits:
   - **(a) `.sxs` with a tall portrait photo next to short text** — the text floats and
-    leaves a blank band. Set `align-items:start`, and prefer regrouping (below).
+    leaves a blank band. Keep Austria's `align-items:center` and **regroup** (below) so the
+    column is full; don't leave short text in a side-by-side.
   - **(b) a lone centered portrait photo** — it has blank side-margins. Never leave one:
     pair it, trio it, or move it into an `.sxs` with text.
   - **(c) a `.pair`/`.duo` of mismatched heights** (tall portrait beside short landscape)
@@ -268,3 +267,27 @@ fix what applies, publish to `main`, then report so the user can manually verify
 - **Don't fix a gap by over-enlarging photos** (it orphans portraits onto their own near-
   empty sheet) **or by padding with duplicate photos / invented prose** (rule 1/18).
   Sweep the print photo-caps to the packing sweet spot, then regroup per the above.
+
+## 27. Every page uses the SAME border and the SAME issue styles
+- **Same border on every page.** Every page of the reading PDF — cover, journey,
+  who-we-are, every chapter, back cover — carries the **identical white frame** that
+  `@page{ size:A4; margin:16mm }` puts around the sheet. No page sets its own margin; no
+  page is wider-bled or more-inset than the others. (The **cover/back cover run full-bleed
+  to the paper edge ONLY in the separate print/Lulu variant** — runbook §7, `@page margin:0`
+  + bleed. In the on-screen HTML and the reading PDF they sit in the same frame as every
+  other page. Don't try to force full-bleed covers into the reading PDF — negative margins
+  don't escape `@page` and just spawn blank/duplicate pages.)
+- **Same styles on every page.** One `:root` accent palette (per country), the same three
+  self-hosted fonts (Fraunces / Spectral / JetBrains Mono), the same kicker / heading /
+  subhead / caption / gold-rule treatments, the same photo radius + shadow, the same
+  side-bar / glance-box / pull-quote styling. No one-off colour, font, size or frame on a
+  single page. The **journey** page is the one **cream** sheet (house style) but uses the
+  identical frame and the identical type styling as the white pages.
+- **Verify by MEASURING, not by eye.** Rasterise the PDF (~100 dpi) and measure the white
+  margin on each side of every page; the left / right / top frame must read the same (≈16mm)
+  on all pages. A differing value = a real border bug to fix. (This also separates a true
+  border difference from a page that merely *ends high* — that is a fill issue, rule 26,
+  not a border one.)
+- Issues are a **set**: the frame, palette structure and styles must be consistent **across
+  issues** too (every country issue is the same template with a different accent colour), so
+  the shelf reads as one magazine. Austria v3 is the reference (rule 26).
