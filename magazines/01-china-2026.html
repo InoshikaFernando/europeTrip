@@ -453,25 +453,30 @@
     .opener + .chapter{page-break-before:avoid;}
     .whoweare{page-break-after:always;}
     .opener{page-break-after:always;}
+    /* distribute the opener so it fills its page */
+    .opener .rule{margin:13mm 0;}
+    .opener .toc{margin-top:15mm;}
+    .opener .glance{margin-top:15mm;}
     .roster{grid-template-columns:1fr 1fr;}
     figure.photo, .side, .pq, .duo, .sxs, .pair, .trio{break-inside:avoid;}
     .chapter .num, .chapter h2, .chapter .sub{break-after:avoid;}
     /* Pack pages: cap photo height so a photo + text share a page instead of
        each portrait orphaning onto its own near-empty sheet. */
     figure.photo{margin:5mm 0;}
-    figure.photo img{max-height:92mm;}
-    figure.photo.bleed img{max-height:104mm;}
+    figure.photo img{max-height:98mm;}
+    figure.photo.bleed img{max-height:110mm;}
     .duo{margin:5mm 0; gap:9px;}
-    .duo img{max-height:85mm;}
+    .duo img{max-height:90mm;}
     /* keep the multi-column layouts in print (A4 width can trip the mobile breakpoint) */
     .duo{grid-template-columns:1fr 1fr;}
     .pair{grid-template-columns:1fr 1fr; gap:6mm; margin:5mm 0;}
-    .pair figure.photo img{width:auto; height:auto; max-width:100%; max-height:90mm;}
+    .pair figure.photo img{width:auto; height:auto; max-width:100%; max-height:96mm;}
     .trio{grid-template-columns:1fr 1fr 1fr; gap:4mm; margin:5mm 0;}
-    .trio figure.photo img{width:auto; height:auto; max-width:100%; max-height:78mm;}
+    .trio figure.photo img{width:auto; height:auto; max-width:100%; max-height:82mm;}
     .sxs{grid-template-columns:minmax(0,46%) 1fr; gap:8mm; margin:5mm 0;}
     .sxs.img-right{grid-template-columns:1fr minmax(0,46%);}
-    .sxs figure.photo img{width:auto; height:auto; max-width:100%; max-height:90mm;}
+    .sxs figure.photo img{width:auto; height:auto; max-width:100%; max-height:96mm;}
+    .journey{min-height:263mm;}
     figure.photo figcaption, .duo figcaption{font-size:10.5px; line-height:1.42; margin-top:5px;}
     .chapter p{margin:0 0 9px;}
     figure.photo{margin:4mm 0;}
@@ -606,15 +611,12 @@
 
     <p>The last lesson came on the road. Google Maps promised the collection point was thirty minutes away. Ninety minutes later we were still crawling through wet Beijing traffic, because Google cannot see China's live congestion at all. It was the Didi app, checked on a hunch, that told us the truth. Rule one, learned before breakfast: in China, trust Didi, not Google. Ponchos on and phones charged, we drove on into the heart of the old empire.</p>
 
-    <div class="sxs">
-      <figure class="photo">
-        <img src="../images/china/tiananmen-family.jpg" alt="All five of the family beneath the Tiananmen gate and Mao's portrait, selfie-stick raised in the drizzle">
-        <figcaption>All five of us beneath Tiananmen, the Gate of Heavenly Peace, selfie-stick up in the drizzle before we joined the queue north into the palace.</figcaption>
-      </figure>
-      <div class="col">
-        <p>To reach the Forbidden City you first cross the largest public square on earth, and on our day it lay grey and glistening under a steady summer rain. Tiananmen, the Gate of Heavenly Peace, is the ceremonial front door to the palace, Chairman Mao's portrait hung between two slogans: long live the People's Republic, and long live the unity of the world's peoples. We posed beneath it in the drizzle, selfie-stick up, five small figures under a very large idea.</p>
-      </div>
-    </div>
+    <figure class="photo bleed">
+      <img src="../images/china/tiananmen-family.jpg" alt="All five of the family beneath the Tiananmen gate and Mao's portrait, selfie-stick raised in the drizzle">
+      <figcaption>All five of us beneath Tiananmen, the Gate of Heavenly Peace, selfie-stick up in the drizzle before we joined the queue north into the palace.</figcaption>
+    </figure>
+
+    <p>To reach the Forbidden City you first cross the largest public square on earth, and on our day it lay grey and glistening under a steady summer rain. Tiananmen, the Gate of Heavenly Peace, is the ceremonial front door to the palace, Chairman Mao's portrait hung between two slogans: long live the People's Republic, and long live the unity of the world's peoples. We posed beneath it in the drizzle, selfie-stick up, five small figures under a very large idea.</p>
 
     <div class="sxs img-right">
       <div class="col">
@@ -626,6 +628,11 @@
       </figure>
     </div>
 
+    <figure class="photo">
+      <img src="../images/china/heroes-relief.jpg" alt="Marble relief sculpture of marching revolutionary figures on the Monument to the People's Heroes, Tiananmen Square">
+      <figcaption>Those marble reliefs of marching figures, near the Monument - the square's newer, revolutionary chapter, carved onto the same grand axis the emperors once used, and running wet with rain the whole time we stood there.</figcaption>
+    </figure>
+
     <div class="pair">
       <figure class="photo">
         <img src="../images/china/ponchos-monument.jpg" alt="The family in ponchos by the Monument to the People's Heroes on Tiananmen Square">
@@ -636,11 +643,6 @@
         <figcaption>In front of the Great Hall of the People, holding up a 100-yuan note: the very building engraved on the back of the note itself.</figcaption>
       </figure>
     </div>
-
-    <figure class="photo">
-      <img src="../images/china/heroes-relief.jpg" alt="Marble relief sculpture of marching revolutionary figures on the Monument to the People's Heroes, Tiananmen Square">
-      <figcaption>The marble reliefs of marching figures near the Monument - the square's newer, revolutionary chapter, carved onto the same grand axis the emperors once used, and running wet with rain the whole time we stood there.</figcaption>
-    </figure>
 
     <div class="glancebox">
       <div class="h">Beijing · the arrival, at a glance</div>
@@ -888,15 +890,12 @@
 
     <p>There was a quiet weight to standing there that I had not expected. Twenty years earlier my own father had made his own journey through China; now, two decades on, his three grandchildren stood here on the oldest stone of all - the same country, the same wonder, one generation between. I thought about that a great deal on the way down.</p>
 
-    <div class="sxs">
-      <figure class="photo">
-        <img src="../images/china/gw-umbrella-street.jpg" alt="The souvenir street at the base of Mutianyu, roofed with a bright canopy of painted parasols">
-        <figcaption>At the bottom the gondola set us down onto a souvenir street roofed with a bright canopy of painted parasols - the last colour of the last morning.</figcaption>
-      </figure>
-      <div class="col">
-        <p>At the bottom the gondola set us down onto a souvenir street roofed with a bright canopy of painted parasols. And that was the Wall: the final wonder of the whole trip, ticked quietly off on the very last morning. We rode the ropeway down, drove back to the airport, boarded the night flight home, and found that the Wall had somehow followed us there, running on behind our eyes long after Beijing had gone dark below the wing.</p>
-      </div>
-    </div>
+    <figure class="photo bleed">
+      <img src="../images/china/gw-umbrella-street.jpg" alt="The souvenir street at the base of Mutianyu, roofed with a bright canopy of painted parasols">
+      <figcaption>At the bottom the gondola set us down onto a souvenir street roofed with a bright canopy of painted parasols - the last colour of the last morning.</figcaption>
+    </figure>
+
+    <p>And that was the Wall: the final wonder of the whole trip, ticked quietly off on the very last morning. We rode the ropeway down, drove back to the airport, boarded the night flight home, and found that the Wall had somehow followed us there, running on behind our eyes long after Beijing had gone dark below the wing.</p>
 
     <div class="side">
       <div class="h">Field Notes · A Mutianyu Day with Kids</div>
